@@ -1,0 +1,30 @@
+@import 'variables.sass'
+
+.missions
+  background-color: $slightOrange
+  padding: 50px
+
+  &__left-side
+    h2
+      margin: 0
+    p
+      line-height: 1.54
+
+  &__right-side
+    .item
+      margin-bottom: 60px
+
+@media only screen and (min-width: 1023px)
+  .missions
+    display: flex
+    padding: 99px 0 200px 99px
+
+    &__left-side
+      flex: 1
+      h2
+        font-size: 34px
+
+    &__right-side
+      display: flex
+      flex: 1
+      justify-content: space-around

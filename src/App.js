@@ -1,11 +1,11 @@
 import React from 'react';
-import Quote from './components/Quote'
+import Home from './components/Home'
 import './App.sass';
 
 function App() {
   return (
     <div className="App">
-      <Quote />
+      <Home />
     </div>
   );
 }

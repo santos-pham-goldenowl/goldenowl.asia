@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../styles/Home.sass';
+import work from '../images/work.png';
+import '../styles/Quote.sass';
 
 class Quote extends Component {
   render() {
@@ -15,7 +16,7 @@ class Quote extends Component {
           </div>
         </div>
         <div className="quote__right-side">
-          <img src="https://miro.medium.com/max/10636/1*KhvhVYWnCIG_8Rho8D2XTg@2x.jpeg" alt="work" />
+          <img src={work} alt="work" />
         </div>
       </section>
     );
