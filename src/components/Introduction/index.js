@@ -1,5 +1,5 @@
 import React from 'react';
-import study from '../../images/study.png';
+import study from '../../assets/images/study.png';
 import './index.sass';
 
 function Introduction() {

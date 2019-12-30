@@ -1,6 +1,6 @@
 import React from 'react';
-import Home from './pages/Home/index'
-import './App.sass';
+import Home from '../Home/index';
+import './index.sass';
 
 function App() {
   return (

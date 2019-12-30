@@ -1,5 +1,5 @@
 import React from 'react';
-import work from '../../images/work.png';
+import work from '../../assets/images/work.png';
 import './index.sass';
 
 function Quote() {

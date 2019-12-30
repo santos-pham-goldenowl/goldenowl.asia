@@ -1,9 +1,9 @@
-import assred from '../images/partner_logos/1.png';
-import finda from '../images/partner_logos/2.png';
-import luxe from '../images/partner_logos/3.png';
-import candy from '../images/partner_logos/4.png';
-import gig from '../images/partner_logos/5.png';
-import mywork from '../images/partner_logos/6.png';
+import assred from '../assets/images/partner_logos/1.png';
+import finda from '../assets/images/partner_logos/2.png';
+import luxe from '../assets/images/partner_logos/3.png';
+import candy from '../assets/images/partner_logos/4.png';
+import gig from '../assets/images/partner_logos/5.png';
+import mywork from '../assets/images/partner_logos/6.png';
 
 const partnersLogo = [
   {
