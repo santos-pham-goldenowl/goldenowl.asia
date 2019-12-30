@@ -1,0 +1,55 @@
+@import '../../styles/variables.sass'
+
+.explore
+  width: 100%
+  background-color: $slightOrange
+  padding-top: 30px
+
+  &__top-content
+    text-align: center
+
+  &__image
+    width: 600px
+    height: auto
+
+  h6
+    font-size: 16px
+
+  &__description
+    font-weight: 700
+    padding: 30px
+
+  &__case-study
+    display: flex
+    align-items: center
+    justify-content: center
+
+@media only screen and (min-width: 767px)
+  .explore
+    &__top-content
+      display: flex
+      justify-content: space-between
+
+@media only screen and (min-width: 1024px)
+  .explore
+    &__top-content
+      display: flex
+      justify-content: space-between
+      padding: 0 100px
+
+    &__image
+      width: 900px
+
+    &__description
+      text-align: left
+      padding: 0 100px
+
+@media only screen and (min-width: 1439px)
+  .explore
+    &__image
+      width: 1240px
+      height: 926px
+
+    &__description
+      font-size: 38px
+      padding-top: 12px

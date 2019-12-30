@@ -12,11 +12,29 @@ img
 
 p, h1, h2, h3
   margin: 0
+  color: $darkGray
 
 @font-face
   src: url("#{$proxima-font-path}/ProximaNova-Regular.otf")
-  font-family: ProximaNova
+  font-family: ProximaNovaRegular
 
 @font-face
-  src: url("#{$mallory-font-path}/Mallory Black.ttf")
-  font-family: Mallory
+  src: url("#{$proxima-font-path}/Proxima Nova Bold.otf")
+  font-family: ProximaNovaBold
+
+@font-face
+  src: url("#{$mallory-font-path}/Mallory Compact Medium.ttf")
+  font-family: MalloryMedium
+
+h1, h2, h3
+  font-family: MalloryMedium
+
+h4, h5, strong
+  font-family: ProximaNovaBold
+
+h6
+  margin: 0
+  font-family: ProximaNovaRegular
+
+p, span
+  font-family: ProximaNovaRegular

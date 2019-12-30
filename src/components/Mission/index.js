@@ -32,7 +32,7 @@ function Missions() {
             <ArrowRight />
           </div>
           <div className="missions__item">
-            <h3>project management</h3>
+            <h3>Project management</h3>
             <ArrowRight />
           </div>
         </div>

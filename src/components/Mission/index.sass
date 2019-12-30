@@ -4,10 +4,12 @@
   background-color: $slightOrange
   padding: 50px
   text-align: left
+  letter-spacing: 0.2px
 
   &__left-side
     h2
       margin: 0
+      padding-bottom: 38px
     p
       line-height: 1.54
       padding-bottom: 30px
@@ -27,7 +29,8 @@
 
     &__left-side
       flex: 1
-      padding-right: 50px
+      padding-right: 100px
+
       h2
         font-size: 34px
       p
@@ -37,8 +40,12 @@
       display: flex
       flex: 1
       justify-content: space-between
-      h3
-        font-size: 26px
 
     &__item
       margin-bottom: 60px
+
+@media only screen and (min-width: 1439px)
+  .missions
+    &__right-side
+      h3
+        font-size: 26px
