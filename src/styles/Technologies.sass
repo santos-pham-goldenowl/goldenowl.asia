@@ -1,0 +1,39 @@
+.technologies
+  padding: 50px 20px
+
+  h2
+    font-size: 34px
+    color: #ffffff
+
+  background-color: #000000
+  img
+    display: inline-block
+    width: 71px
+    height: 80px
+
+  &__grid
+    padding-top: 50px
+    display: grid
+    justify-content: space-between
+    grid-template: repeat(8, auto) / repeat(3, auto)
+    grid-gap: 20px
+
+@media only screen and (min-width: 767px)
+  .technologies
+    padding: 50px
+
+    &__grid
+      display: grid
+      justify-content: space-between
+      grid-template: repeat(6, auto) / repeat(4, auto)
+      grid-gap: 50px
+
+@media only screen and (min-width: 1439px)
+  .technologies
+    padding: 50px 100px
+
+    &__grid
+      display: grid
+      justify-content: space-between
+      grid-template: repeat(4, auto) / repeat(6, auto)
+      grid-gap: 115px

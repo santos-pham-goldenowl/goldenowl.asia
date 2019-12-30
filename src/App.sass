@@ -1,0 +1,22 @@
+@import './styles/variables.sass'
+$proxima-font-path: "./fonts/proxima"
+$mallory-font-path: "./fonts/mallory"
+
+.App
+  position: absolute
+  text-align: center
+  color: $darkGray
+
+img
+  object-fit: contain
+
+p, h1, h2, h3
+  margin: 0
+
+@font-face
+  src: url("#{$proxima-font-path}/ProximaNova-Regular.otf")
+  font-family: ProximaNova
+
+@font-face
+  src: url("#{$mallory-font-path}/Mallory Black.ttf")
+  font-family: Mallory
