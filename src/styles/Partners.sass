@@ -1,0 +1,29 @@
+.partners
+  padding: 50px 20px
+
+  img
+    width: 99px
+    height: 26px
+
+  &__grid
+    padding-top: 30px
+    display: grid
+    grid-template: repeat(2, auto) / repeat(3, auto)
+    justify-content: space-between
+    grid-row-gap: 30px
+    grid-column-gap: 10px
+
+@media only screen and (min-width: 767px)
+  .partners
+    img
+      width: 126px
+      height: 26px
+
+@media only screen and (min-width: 1439px)
+  .partners
+    padding: 50px 100px
+
+    &__grid
+      display: grid
+      grid-template-columns: repeat(6, auto)
+      justify-content: space-between
