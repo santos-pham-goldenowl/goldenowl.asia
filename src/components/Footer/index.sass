@@ -1,0 +1,85 @@
+@import '../../styles/variables.sass'
+
+.footer
+  background-color: $solidGray
+  font-family: ProximaNovaRegular
+  padding: 50px
+
+  &__logo-wrapper
+    padding-right: 50px
+
+  a
+    display: block
+    padding: 10px 0
+    color: $lightGray
+    letter-spacing: 0.2px
+    font-size: 20px
+    white-space: nowrap
+
+  h3
+    color: $white
+    font-size: 20px
+    padding-bottom: 20px
+    padding-top: 20px
+    letter-spacing: 0.2px
+
+  &__phone
+    color: $white
+
+  &__email
+    color: $yellow
+
+  &__copyright
+    padding-top: 50px
+
+    p
+      font-size: 16px
+      color: $white
+
+  &__social-icon
+    width: 16px
+    height: 16px
+    margin-left: 20px
+
+  &__contact
+    display: flex
+    flex-direction: column
+    padding-top: 20px
+
+@media only screen and (min-width: 1023px)
+  .footer
+    &__main-content
+      display: flex
+      align-items: flex-start
+
+    &__logo-wrapper
+      flex: 1
+      display: flex
+      justify-content: flex-start
+
+    &__flex-container
+      flex: 2
+      display: flex
+      > div
+        text-align: left
+      > div:not(:nth-child(4))
+        padding-right: 50px
+
+    &__contact
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      padding-top: 50px
+      border-bottom: 1px solid $smokeWhite
+      padding-bottom: 50px
+      span
+        padding-right: 50px
+
+    &__copyright
+      display: flex
+      justify-content: space-between
+      text-align: left
+
+@media only screen and (min-width: 1439px)
+  .footer
+    padding: 50px 100px
