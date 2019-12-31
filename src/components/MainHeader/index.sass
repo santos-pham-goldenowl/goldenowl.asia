@@ -1,0 +1,105 @@
+@import '../../styles/variables.sass'
+
+.main-header
+  background-color: $slightOrange
+  padding: 30px
+
+  &__logo-wrapper
+    display: flex
+    align-items: center
+
+  &__golden-text
+    color: $darkYellow
+    padding-top: 22px
+
+  &__owl-text
+    color: $black
+    padding-top: 22px
+
+  &__hamburger
+    display: flex
+    flex-direction: column
+    justify-content: center
+    span
+      display: block
+      width: 30px
+      height: 5px
+      background-color: $darkGray
+      margin-bottom: 5px
+      z-index: 31
+
+  &__flex-container
+    display: none
+
+  &__flex-container-show
+    display: block
+    z-index: 31
+    padding: 0
+
+  &__flex-item
+    text-align: left
+    padding: 10px
+
+  &__right-side-show
+    display: flex
+    flex-direction: flex-start
+
+  &__left-side
+    display: flex
+    justify-content: space-between
+
+  &__left-side-show
+    display: flex
+    justify-content: space-between
+
+    span:first-child
+      display: none
+
+    span:nth-child(2)
+      position: relative
+      transform: rotate(45deg)
+      top: 20px
+
+    span:nth-child(3)
+      position: relative
+      top: 10px
+      transform: rotate(-45deg)
+
+@media only screen and (min-width: 1023px)
+  .main-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 50px 100px
+
+    &__hamburger
+      display: none
+
+    &__left-side
+      display: flex
+      flex: 1
+      justify-content: flex-start
+
+    &__right-side
+      display: flex
+      flex: 2
+      justify-content: flex-end
+
+    &__flex-container
+      display: flex
+      justify-content: space-between
+      width: 100%
+
+    &__flex-item
+      flex: 1
+      white-space: nowrap
+      font-size: 14px
+      text-align: center
+
+@media only screen and (min-width: 1439px)
+  .main-header
+    &__left-side
+      flex: 2
+
+    &__right-side
+      flex: 1

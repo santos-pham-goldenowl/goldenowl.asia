@@ -9,10 +9,12 @@ import Contact from '../../components/Contact/index';
 import Partners from '../../components/Partners/index';
 import Technologies from '../../components/Technologies/index';
 import Explore from '../../components/Explore/index';
+import MainHeader from '../../components/MainHeader/index';
 
 function Home() {
   return (
     <section>
+      <MainHeader />
       <Quote />
       <Missions />
       <Introduction />
