@@ -10,6 +10,7 @@ import Partners from '../../components/Partners/index';
 import Technologies from '../../components/Technologies/index';
 import Explore from '../../components/Explore/index';
 import MainHeader from '../../components/MainHeader/index';
+import Footer from '../../components/Footer/index';
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
       <Technologies />
       <Contact />
       <Explore />
+      <Footer />
     </section>
   );
 }
