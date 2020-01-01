@@ -1,7 +1,7 @@
 @import '../../styles/variables.sass'
 
 .introduction
-  padding: 100px 30px
+  padding: 100px 0
   text-align: left
   h2
     padding-bottom: 20px
@@ -17,10 +17,14 @@
     line-height: 30px
     padding-top: 20px
 
+  &__right-side
+    padding-left: 30px
+    padding-rightt: 30px
+
 @media only screen and (min-width: 1023px)
   .introduction
     display: flex
-    padding: 100px 95px 100px 0
+    padding: 100px 50px 100px 0
     text-align: left
 
     h2
@@ -43,6 +47,7 @@
 
 @media only screen and (min-width: 1439px)
   .introduction
+    padding: 100px 95px 100px 0
     &__text
       font-size: 26px
       line-height: 40px
