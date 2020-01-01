@@ -1,0 +1,33 @@
+@import '../../styles/variables.sass'
+
+.sub-header
+  background-color: $slightOrange
+  padding: 0 100px
+  display: flex
+  justify-content: flex-end
+  position: relative
+
+  &__service
+    position: fixed
+
+  &__services
+    position: absolute
+    top: 50px
+    right: 208px
+    padding-left: 30px
+
+  h4:not(:last-child)
+    padding-right: 50px
+
+  img
+    margin-right: 10px
+
+  &__services
+    background-color: $white
+    width: 350px
+
+  &__sevice
+    display: flex
+
+@media only screen and (min-width: 1023px)
+  .sub-header
