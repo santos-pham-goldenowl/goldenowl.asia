@@ -1,0 +1,49 @@
+@import '../../styles/variables.sass'
+
+.carousel
+  display: flex
+  align-items: center
+  padding: 100px 30px
+  flex-direction: column
+
+  &__images-container
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: space-between
+    padding: 30px 0
+
+  &__active
+    background: red
+
+  img
+    width: 126px
+    height: 26px
+
+  &__arrow
+    width: 15px
+    height: 15px
+    border-top: 1px solid $smokeGray
+    border-right: 1px solid $smokeGray
+    left: 33px
+    top: -3px
+    bottom: 0
+
+  &__arrow-right
+    transform: rotate(45deg)
+
+  &__arrow-left
+    transform: rotate(220deg)
+
+@media only screen and (min-width: 1023px)
+  .carousel
+    padding: 100px 50px
+
+    &__flex-container
+      display: flex
+      width: 100%
+      justify-content: space-between
+
+@media only screen and (min-width: 1439px)
+  .carousel
+    padding: 100px 100px

@@ -1,0 +1,62 @@
+@import '../../styles/variables.sass'
+
+.auto-carousel
+  padding: 30px
+  h2
+    padding-bottom: 20px
+
+  &__client-wrapper
+    justify-content: flex-start
+    align-items: center
+    padding-bottom: 30px
+    padding-top: 20px
+    display: flex
+
+    img
+      width: 85px
+      height: 85px
+      border-radius: 50%
+      object-fit: cover
+      margin-right: 20px
+
+  &__circle
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background: $yellow
+    display: inline-block
+    margin-right: 10px
+
+  &__active
+    width: 30px
+    border-radius: 20px
+
+@media only screen and (min-width: 1023px)
+  .auto-carousel
+    padding: 0 100px
+
+    &__items-wrapper
+      padding-bottom: 50px
+      border-bottom: 1px solid $slightGray
+
+    &__main-content
+      display: flex
+
+    &__flex-item
+      padding-top: 50px
+
+      &:nth-child(2)
+        padding-left: 50px
+        padding-right: 50px
+
+    &__client-wrapper
+      display: flex
+      align-items: center
+      padding-top: 20px
+
+      img
+        width: 85px
+        height: 85px
+        border-radius: 50%
+        object-fit: cover
+        margin-right: 20px

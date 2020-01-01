@@ -6,11 +6,15 @@ import CompanyQuality from '../../components/CompanyQualities/index';
 import Achieves from '../../components/Achieves/index';
 import Feedback from '../../components/Feedback/index';
 import Contact from '../../components/Contact/index';
-import Partners from '../../components/Partners/index';
 import Technologies from '../../components/Technologies/index';
 import Explore from '../../components/Explore/index';
 import MainHeader from '../../components/MainHeader/index';
 import Footer from '../../components/Footer/index';
+import SliderCarousel from '../../components/SliderCarousel/index';
+import AutoCarousel from '../../components/AutoCarousel/index';
+
+import partnersLogo from '../../utils/PartnersLogo';
+import feedback from '../../utils/Feedback';
 
 function Home() {
   return (
@@ -21,8 +25,8 @@ function Home() {
       <Introduction />
       <CompanyQuality />
       <Achieves />
-      <Feedback />
-      <Partners />
+      <AutoCarousel content={feedback} />
+      <SliderCarousel images={partnersLogo} />
       <Technologies />
       <Contact />
       <Explore />
