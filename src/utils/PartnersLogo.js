@@ -30,6 +30,18 @@ const partnersLogo = [
     name: 'assured',
     url: mywork
   },
+  {
+    name: 'finda',
+    url: finda
+  },
+  {
+    name: 'finda',
+    url: finda
+  },
+  {
+    name: 'finda',
+    url: finda
+  },
 ]
 
 export default partnersLogo;
