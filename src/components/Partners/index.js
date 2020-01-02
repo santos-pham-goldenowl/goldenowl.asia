@@ -1,4 +1,5 @@
 import React from 'react';
+import SlideCarousel from '../SlideCarousel/index';
 import partnersLogo from '../../utils/PartnersLogo';
 import './index.sass';
 
@@ -8,11 +9,9 @@ function Partners() {
       <h2>
         We partner with the world's best
       </h2>
-      <div className="partners__grid">
-        {partnersLogo.map((logo, index) => <img key={index} src={logo.url} alt={logo.name} />)}
-      </div>
+      <SlideCarousel content={partnersLogo} />
     </section>
-  )
+  );
 }
 
 export default Partners;
