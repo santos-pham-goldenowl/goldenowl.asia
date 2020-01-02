@@ -5,29 +5,24 @@
   padding: 0 100px
   display: flex
   justify-content: flex-end
+  align-items: center
   position: relative
+  font-size: 14px
+  font-family: ProximaNovaBold
 
-  &__service
-    position: fixed
+  h4
+    letter-spacing: .5px
+    margin-top: 0
+    margin-bottom: 0
 
-  &__services
-    position: absolute
-    top: 50px
-    right: 208px
-    padding-left: 30px
+  &__title
+    padding-right: 45px
 
-  h4:not(:last-child)
-    padding-right: 50px
-
-  img
-    margin-right: 10px
-
-  &__services
-    background-color: $white
-    width: 350px
-
-  &__sevice
+  &__contact-wrapper
     display: flex
+    align-items: center
+    background-color: $yellow
+    padding: 10px 15px
 
-@media only screen and (min-width: 1023px)
-  .sub-header
+  &__contact-title
+    white-space: nowrap

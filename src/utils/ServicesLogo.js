@@ -8,22 +8,27 @@ const servicesLogo = [
   {
     name: 'Web development',
     url: web,
+    description: 'Lorem ipsum dolor sit amet, te albucius'
   },
   {
     name: 'Mobile development',
     url: phone,
+    description: 'Lorem ipsum dolor sit amet, te albucius'
   },
   {
     name: 'UX UI Design',
     url: circle,
+    description: 'Lorem ipsum dolor sit amet, te albucius'
   },
   {
     name: 'Project management',
     url: note,
+    description: 'Lorem ipsum dolor sit amet, te albucius'
   },
   {
     name: 'Development team',
     url: flag,
+    description: 'Lorem ipsum dolor sit amet, te albucius'
   }
 ]
 

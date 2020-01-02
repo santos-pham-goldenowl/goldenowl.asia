@@ -1,46 +1,26 @@
-import React, { Component } from 'react';
-import servicesLogo from '../../utils/ServicesLogo';
+import React from 'react';
+import Services from '../SubHeaderServices/index';
+import Technology from '../SubHeaderTechnology/index';
+import ArrowRight from '../ArrowRight/index';
 import './index.sass';
 
-class SubHeader extends Component {
-
-  state = {
-    showServices: false
-  }
-
-  handleServices = () => {
-    this.setState({
-      showServices: !this.state.showServices
-    })
-  }
-
-  render() {
-    let servicesNode = null;
-    if(this.state.showServices) {
-      servicesNode = (
-        <div className="sub-header__services">
-          {servicesLogo.map(logo => {
-            return (
-              <div className="sub-header__sevice">
-                <img src={logo.url} alt={logo.name} />
-                <h4>{logo.name}</h4>
-              </div>
-            );
-          })}
-        </div>
-      );
-    }
-    return (
-      <header className="sub-header">
+const SubHeader = () => {
+  return (
+    <header className="sub-header">
+      <div className="sub-header__title">
         <h4>Home</h4>
-        <h4 onClick={this.handleServices}>Services</h4>
-        {servicesNode}
-        <h4>Technology</h4>
+      </div>
+      <Services />
+      <Technology />
+      <div className="sub-header__title">
         <h4>Testimonial</h4>
-        <h4>Contact us</h4>
-      </header>
-    );
-  }
+      </div>
+      <div className="sub-header__contact-wrapper">
+        <h4 className="sub-header__contact-title">Contact us</h4>
+        <ArrowRight width="20px" left="21px" />
+      </div>
+    </header>
+  );
 }
 
 export default SubHeader;
