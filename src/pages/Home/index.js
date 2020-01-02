@@ -10,14 +10,19 @@ import Partners from '../../components/Partners/index';
 import Technologies from '../../components/Technologies/index';
 import Explore from '../../components/Explore/index';
 import MainHeader from '../../components/MainHeader/index';
+import SubHeader from '../../components/SubHeader/index';
 import Footer from '../../components/Footer/index';
+import './index.sass';
+import bg from '../../assets/images/bg_2.png';
 
 function Home() {
   return (
-    <section>
+    <section className="home">
       <MainHeader />
+      <SubHeader />
       <Quote />
       <Missions />
+      <img className="home__wavy-bg" src={bg} alt="wavy-background" />
       <Introduction />
       <CompanyQuality />
       <Achieves />

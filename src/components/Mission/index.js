@@ -15,25 +15,25 @@ function Missions() {
         <div>
           <div className="missions__item">
             <h3>Web development</h3>
-            <ArrowRight />
+            <ArrowRight width="33px" left="33px" />
           </div>
           <div className="missions__item">
             <h3>UX UI design</h3>
-            <ArrowRight />
+            <ArrowRight width="33px" left="33px" />
           </div>
           <div className="missions__item">
             <h3>Development team</h3>
-            <ArrowRight />
+            <ArrowRight width="33px" left="33px" />
           </div>
         </div>
         <div>
           <div className="missions__item">
             <h3>Mobile development</h3>
-            <ArrowRight />
+            <ArrowRight width="33px" left="33px" />
           </div>
           <div className="missions__item">
             <h3>Project management</h3>
-            <ArrowRight />
+            <ArrowRight width="33px" left="33px" />
           </div>
         </div>
       </div>

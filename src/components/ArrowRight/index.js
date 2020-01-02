@@ -1,11 +1,11 @@
 import React from 'react';
 import './index.sass';
 
-function ArrowRight() {
+function ArrowRight(props) {
   return (
     <section className="arrow-wrapper">
-      <div className="arrow arrow-right"></div>
-      <div className="line"></div>
+      <div className="arrow arrow-right" style={{left: props.left}}></div>
+      <div className="line" style={{width: props.width}}></div>
     </section>
   );
 }

@@ -4,15 +4,15 @@ import linkedin from '../assets/images/linkedin-in-brands.svg';
 
 const socialIcons = [
   {
-    name: facebook,
+    name: 'facebook',
     url: facebook
   },
   {
-    name: instagram,
+    name: 'instagram',
     url: instagram
   },
   {
-    name: linkedin,
+    name: 'linkedin',
     url: linkedin
   }
 ]
