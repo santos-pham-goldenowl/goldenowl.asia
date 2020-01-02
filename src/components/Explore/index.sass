@@ -26,23 +26,34 @@
 
 @media only screen and (min-width: 767px)
   .explore
-    &__top-content
-      display: flex
-      justify-content: space-between
 
-@media only screen and (min-width: 1024px)
-  .explore
     &__top-content
       display: flex
       justify-content: space-between
-      padding: 0 100px
+      padding: 0 50px
+
+    &__description
+      text-align: left
+      padding-left: 50px
+      padding-right: 50px
+
+@media only screen and (min-width: 1023px)
+  .explore
+    padding-top: 80px
+
+    &__image
+      padding-top: 50px
+
+    &__top-content
+      display: flex
+      justify-content: space-between
+      padding: 0 50px
 
     &__image
       width: 900px
 
     &__description
-      text-align: left
-      padding: 0 100px
+      padding: 0 50px
 
 @media only screen and (min-width: 1439px)
   .explore
