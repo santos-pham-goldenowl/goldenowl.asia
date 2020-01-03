@@ -99,12 +99,12 @@
       justify-content: space-between
       width: 100%
 
-    &__flex-item
+    &__flex-item:not(:last-child)
       white-space: nowrap
       font-size: 14px
       text-align: center
       padding-bottom: 0
-      padding-right: 10px
+      padding-right: 18px
 
 @media only screen and (min-width: 1439px)
   .main-header
@@ -114,5 +114,5 @@
     &__right-side
       flex: 1
 
-    &__flex-item
-      padding-right: 0
+    &__flex-item:not(:last-child)
+      padding-right: 22px

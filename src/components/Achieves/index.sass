@@ -5,19 +5,19 @@
 
   &__main-content
     padding-top: 50px
+    display: grid
+    grid-template: repeat(2, auto) / repeat(2, auto)
 
   &__item-flex
     padding-bottom: 30px
     flex: 1
 
-@media only screen and (min-width: 767px)
+@media only screen and (min-width: 1023px)
   .achieves
     &__main-content
       display: flex
       justify-content: space-between
 
-@media only screen and (min-width: 1023px)
-  .achieves
     padding: 80px 100px
 
     h1
