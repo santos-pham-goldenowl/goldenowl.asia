@@ -5,6 +5,7 @@
 
   h1
     padding-right: 30px
+    padding-top: 30px
 
   &__right-side
     img
@@ -27,7 +28,7 @@
 
 @media only screen and (min-width: 1024px)
   .quote
-    padding: 99px 0 99px 99px
+    padding: 99px 0 99px 80px
     display: flex
 
     &__left-side
@@ -39,9 +40,12 @@
       font-size: 26px
 
     &__right-side
-      flex: 2
+      flex: 1
+      display: flex
+      justify-content: flex-end
       img
-        height: auto
+        width: 500px
+        height: 355px
 
     &__content
       line-height: 1.3
@@ -55,3 +59,8 @@
   .quote
     &__content
       font-size: 50px
+
+    &__right-side
+      img
+        width: 647px
+        height: auto
