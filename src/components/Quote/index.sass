@@ -5,6 +5,7 @@
 
   h1
     padding-top: 50px
+    letter-spacing: 0.5px
 
   &__right-side
     img
@@ -23,7 +24,7 @@
   &__left-side
     padding: 0 30px 30px 30px
 
-@media only screen and (min-width: 1024px)
+@media only screen and (min-width: 1023px)
   .quote
     padding: 99px 0 99px 99px
     display: flex
@@ -35,6 +36,8 @@
       flex: 1
       padding-right: 0
       padding-left: 0
+      position: relative
+      top: 30px
 
     &__author
       font-size: 26px
@@ -58,8 +61,11 @@
 @media only screen and (min-width: 1439px)
   .quote
     &__content
-      width: 510px
+      width: 450px
       font-size: 50px
+
+    &__author
+      width: 450px
 
     &__right-side
       img
