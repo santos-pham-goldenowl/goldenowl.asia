@@ -12,9 +12,7 @@ a
   text-decoration: none
 
 .App
-  display: flex
-  justify-content: center
-  margin: 0 auto
+  position: absolute
   text-align: center
   color: $darkGray
 
@@ -85,3 +83,12 @@ p, span
 .arrow-down
   height: 10px
   margin-left: 5px
+
+@media only screen and (min-width: 1500px)
+  .App
+    display: flex
+    justify-content: center
+    margin: 0 auto
+
+  .home
+    max-width: 1500px
