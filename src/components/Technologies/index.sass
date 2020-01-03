@@ -1,8 +1,13 @@
+@import '../../styles/variables.sass'
+
 .technologies
   padding: 50px 20px
 
+  &__view-all
+    font-family: ProximaNovaRegular
+
   h2
-    font-size: 34px
+    font-size: 26px
     color: #ffffff
 
   background-color: #000000
@@ -38,9 +43,19 @@
     &__grid
       grid-gap: 80px
 
+    &__view-all
+      padding-top: 100px
+      padding-bottom: 50px
+      color: $white
+      letter-spacing: 0.5px
+      font-size: 24px
+
 @media only screen and (min-width: 1439px)
   .technologies
     padding: 50px 100px
+
+    h2
+      font-size: 34px
 
     img
       display: inline-block
