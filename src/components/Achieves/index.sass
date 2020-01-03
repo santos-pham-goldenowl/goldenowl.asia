@@ -1,7 +1,10 @@
 .achieves
-  padding: 80px 30px
+  padding: 50px 30px
   background-color: #f8f8f8
   margin-bottom: 100px
+
+  h1
+    padding-bottom: 10px
 
   &__main-content
     padding-top: 50px
@@ -9,7 +12,6 @@
     grid-template: repeat(2, auto) / repeat(2, auto)
 
   &__item-flex
-    padding-bottom: 30px
     flex: 1
 
 @media only screen and (min-width: 1023px)
@@ -24,11 +26,17 @@
       font-size: 34px
 
     p
-      font-size: 16px
+      font-size: 20px
+
+    &__item-flex
+      p
+        font-size: 16px
 
 @media only screen and (min-width: 1439px)
   .achieves
     h1
-      font-size: 45px
-    p
-      font-size: 20px
+      font-size: 40px
+
+    &__item-flex
+      p
+        font-size: 18px
