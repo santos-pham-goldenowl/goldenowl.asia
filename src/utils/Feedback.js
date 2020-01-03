@@ -1,62 +1,78 @@
+import f1 from '../assets/images/raja_1.png';
+import f2 from '../assets/images/raja_2.png';
+import f3 from '../assets/images/raja.png';
+
 const feedback = [
   {
-    name: 'Thanh Thanh',
-    url: 'https://media.pitchfork.com/photos/5dcec0b34aba6d0009f18c79/2:1/w_790/Taylor-Swift.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f1,
     content: 'Hello Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://ih0.redbubble.net/image.235480443.1466/flat,1000x1000,075,f.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f2,
     content: 'Hola Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'http://s6.favim.com/orig/65/beautiful-blue-eyes-cat-cat.-blue-eyes-Favim.com-597974.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f3,
     content: 'Hi Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/blue-eyes-gray-cat-stefan-banica.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f1,
     content: 'Liu Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://media.pitchfork.com/photos/5dcec0b34aba6d0009f18c79/2:1/w_790/Taylor-Swift.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f2,
     content: 'Hello Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://ih0.redbubble.net/image.235480443.1466/flat,1000x1000,075,f.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f3,
     content: 'Hola Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'http://s6.favim.com/orig/65/beautiful-blue-eyes-cat-cat.-blue-eyes-Favim.com-597974.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f1,
     content: 'Hi Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/blue-eyes-gray-cat-stefan-banica.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f2,
     content: 'Liu Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://media.pitchfork.com/photos/5dcec0b34aba6d0009f18c79/2:1/w_790/Taylor-Swift.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f3,
     content: 'Hello Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://ih0.redbubble.net/image.235480443.1466/flat,1000x1000,075,f.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f1,
     content: 'Hola Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'http://s6.favim.com/orig/65/beautiful-blue-eyes-cat-cat.-blue-eyes-Favim.com-597974.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f2,
     content: 'Hi Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
   {
-    name: 'Thanh Thanh',
-    url: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/blue-eyes-gray-cat-stefan-banica.jpg',
+    name: 'Raja',
+    idea: 'Idea burn',
+    url: f3,
     content: 'Liu Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo'
   },
 ]

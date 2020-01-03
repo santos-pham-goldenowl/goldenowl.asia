@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import partnersLogo from '../../utils/PartnersLogo';
+import './index.sass';
 
 const responsive = {
   desktop: {
@@ -47,7 +47,8 @@ const AutoCarousel = (props) => {
           </p>
           <div className="feedback__client-wrapper">
             <img src={c.url} alt="study" />
-            <p>{c.name}</p>
+            <span className="auto-carousel__name">{c.name}</span>
+            <span className="auto-carousel__idea">{c.idea}</span>
           </div>
         </div>
       )
