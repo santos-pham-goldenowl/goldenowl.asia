@@ -3,12 +3,13 @@
 .sub-header
   background-color: $slightOrange
   padding: 0 100px
-  display: flex
+  // display: flex
   justify-content: flex-end
   align-items: center
   position: relative
   font-size: 14px
   font-family: ProximaNovaBold
+  display: none
 
   h4
     letter-spacing: .5px
@@ -26,3 +27,7 @@
 
   &__contact-title
     white-space: nowrap
+
+@media only screen and (min-width: 1023px)
+  .sub-header
+    display: flex
