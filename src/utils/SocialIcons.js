@@ -4,6 +4,10 @@ import linkedin from '../assets/images/linkedin-in-brands.svg';
 
 const socialIcons = [
   {
+    name: 'linkedin',
+    url: linkedin
+  },
+  {
     name: 'facebook',
     url: facebook
   },
@@ -11,10 +15,6 @@ const socialIcons = [
     name: 'instagram',
     url: instagram
   },
-  {
-    name: 'linkedin',
-    url: linkedin
-  }
 ]
 
 export default socialIcons;
