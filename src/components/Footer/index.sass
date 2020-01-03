@@ -12,16 +12,16 @@
     display: block
     padding: 10px 0
     color: $lightGray
-    letter-spacing: 0.2px
-    font-size: 20px
+    letter-spacing: .5px
+    font-size: 18px
     white-space: nowrap
 
   h3
     color: $white
-    font-size: 20px
+    font-size: 18px
     padding-bottom: 20px
     padding-top: 20px
-    letter-spacing: 0.2px
+    letter-spacing: 0.5px
 
   &__phone
     color: $white
@@ -60,8 +60,11 @@
     &__flex-container
       flex: 2
       display: flex
+      justify-content: flex-end
+
       > div
         text-align: left
+
       > div:not(:nth-child(4))
         padding-right: 50px
 
