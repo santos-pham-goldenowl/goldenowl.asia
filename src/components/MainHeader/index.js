@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import go from '../../assets/images/go.png';
+import goldenOwl from '../../assets/images/golden_owl.png';
 import './index.sass';
 
 class MainHeader extends Component {
@@ -18,9 +18,7 @@ class MainHeader extends Component {
       <header className="main-header">
         <div className={!this.state.showMenu ? 'main-header__left-side' : 'main-header__left-side-show'}>
           <div className="main-header__logo-wrapper">
-            <img src={go} alt="company-logo" />
-            <h1 className="main-header__golden-text">GOLDEN</h1>
-            <h1 className="main-header__owl-text">OWL</h1>
+            <img src={goldenOwl} alt="company-logo" />
           </div>
           <div className="main-header__hamburger" onClick={this.handleMenu}>
             <span />
