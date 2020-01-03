@@ -11,7 +11,7 @@ function Explore() {
           <h6>BID4SKILL | FEATURES CASE STUDY</h6>
           <div className="explore__case-study">
             <h6>VIEW ALL CASE STUDY</h6>
-            <ArrowRight />
+            <ArrowRight width="33px" left="33px" />
           </div>
         </div>
         <p className="explore__description">Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludu.</p>
