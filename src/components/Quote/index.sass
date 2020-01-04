@@ -26,7 +26,7 @@
 
 @media only screen and (min-width: 1023px)
   .quote
-    padding: 99px 0 99px 99px
+    padding: 99px 0 99px 50px
     display: flex
 
     h1
@@ -60,6 +60,7 @@
 
 @media only screen and (min-width: 1439px)
   .quote
+    padding: 99px 0 99px 99px
     &__content
       width: 450px
       font-size: 50px
@@ -68,6 +69,13 @@
       width: 450px
 
     &__right-side
+      flex: 2
       img
-        width: 792px
+        width: 100%
         height: auto
+
+    &__text-bold
+      font-size: 26px
+
+    &__author
+      font-size: 26px
