@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Services from '../SubHeaderServices/index';
 import Technology from '../SubHeaderTechnology/index';
 import ArrowRight from '../ArrowRight/index';
@@ -8,7 +9,9 @@ const SubHeader = () => {
   return (
     <header className="sub-header">
       <div className="sub-header__title">
-        <h4>Home</h4>
+        <Link to="/">
+          <h4>Home</h4>
+        </Link>
       </div>
       <Services />
       <Technology />

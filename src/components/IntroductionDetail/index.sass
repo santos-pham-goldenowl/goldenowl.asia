@@ -1,0 +1,37 @@
+.introduction-detail
+  padding: 50px 30px 0 30px
+  img
+    width: 100%
+    margin-top: 20px
+
+@media only screen and (min-width: 1023px)
+  .introduction-detail
+    display: flex
+    padding: 100px
+
+    img
+      margin-top: 0
+
+    &__left-side
+      flex: 1
+      h2
+        font-size: 34px
+        padding-bottom: 30px
+
+    &__right-side
+      flex: 1
+      display: flex
+      justify-content: flex-end
+
+    &__text
+      font-size: 20px
+      line-height: 40px
+      width: 90%
+
+      &:last-child
+        padding-top: 30px
+
+@media only screen and (min-width: 1439px)
+  .introduction-detail
+    &__text
+      font-size: 26px

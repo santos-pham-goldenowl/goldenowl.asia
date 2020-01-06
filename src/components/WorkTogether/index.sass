@@ -1,0 +1,79 @@
+@import '../../styles/variables.sass'
+
+.work
+  padding: 50px 0 0 0
+
+  img
+    width: 100%
+
+  &__six
+    background-color: $slightOrange
+
+  .box
+    padding-top: 20px
+    padding-bottom: 20px
+
+@media only screen and (min-width: 1023px)
+  .work
+    p, h3, h4
+      line-height: 40px
+      font-size: 26px
+
+    .box
+      padding-top: 0
+      padding-bottom: 0
+
+    h3
+      padding-bottom: 20px
+
+    &__top-container
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      grid-template-rows: repeat(4, auto)
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &__one
+      grid-column: 1 / span 4
+
+    &__two
+      grid-column: 1 / span 2
+      align-self: center
+      p, h3
+        width: 70%
+        margin: 0 auto
+
+    &__three
+      grid-column: 3 / span 2
+
+    &__four
+      grid-column: 1 / span 2
+
+    &__five
+      grid-column: 3 / span 2
+      align-self: center
+      p, h3
+        width: 70%
+        margin: 0 auto
+
+    &__six
+      grid-column: 1 / span 4
+      align-self: center
+      padding: 100px 0
+      p, h3
+        width: 70%
+        text-align: center
+        margin: 0 auto
+
+    &__bottom-container
+      display: flex
+      flex-direction: column
+      justify-content: center
+      > div
+        display: flex
+        justify-content: center
+        text-align: center
+        div
+          padding: 50px

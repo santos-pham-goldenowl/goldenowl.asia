@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import goldenOwl from '../../assets/images/golden_owl.png';
 import './index.sass';
 
@@ -28,7 +29,9 @@ class MainHeader extends Component {
         </div>
         <div className={!this.state.showMenu ? 'main-header__right-side' : 'main-header__right-side-show'}>
           <ul className={!this.state.showMenu ? 'main-header__flex-container' : 'main-header__flex-container-show'}>
-            <li className="main-header__flex-item">About Goldern Owl</li>
+            <li className="main-header__flex-item">
+              <Link to="/about">About Goldern Owl</Link>
+            </li>
             <li className="main-header__flex-item">Blog</li>
             <li className="main-header__flex-item">Portflio</li>
             <li className="main-header__flex-item">English</li>
