@@ -19,7 +19,9 @@ class MainHeader extends Component {
       <header className="main-header">
         <div className={!this.state.showMenu ? 'main-header__left-side' : 'main-header__left-side-show'}>
           <div className="main-header__logo-wrapper">
-            <img src={goldenOwl} alt="company-logo" />
+            <Link to="/">
+              <img src={goldenOwl} alt="company-logo" />
+            </Link>
           </div>
           <div className="main-header__hamburger" onClick={this.handleMenu}>
             <span />
