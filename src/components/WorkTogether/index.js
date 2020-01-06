@@ -39,7 +39,7 @@ const Work = () => {
         </div>
       </div>
       <div className="work__bottom-container">
-        <div>
+        <div className="work__flex-item">
           <div>
             <h3>
               Lorem ispum lodor
@@ -65,7 +65,7 @@ const Work = () => {
           </p>
         </div>
         </div>
-        <div>
+        <div className="work__flex-item">
           <div>
             <h3>
               Lorem ispum lodor

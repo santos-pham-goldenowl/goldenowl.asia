@@ -1,7 +1,8 @@
 @import '../../styles/variables.sass'
 
 .work
-  padding: 50px 0 0 0
+  padding: 50px 0
+  border-bottom: 1px solid $slightGray
 
   img
     width: 100%
@@ -13,8 +14,20 @@
     padding-top: 20px
     padding-bottom: 20px
 
+  p
+    line-height: 30px
+
+  &__bottom-container
+    padding-top: 30px
+
+  &__flex-item
+    > div
+      padding-top: 30px
+
 @media only screen and (min-width: 1023px)
   .work
+    padding-bottom: 100px
+
     p, h3
       line-height: 40px
       font-size: 20px
