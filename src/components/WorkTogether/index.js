@@ -41,25 +41,25 @@ const Work = () => {
       <div className="work__bottom-container">
         <div>
           <div>
-            <h4>
+            <h3>
               Lorem ispum lodor
-            </h4>
+            </h3>
             <p>
               Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
             </p>
           </div>
           <div>
-            <h4>
+            <h3>
               Lorem ispum lodor
-            </h4>
+            </h3>
             <p>
               Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
             </p>
           </div>
           <div>
-          <h4>
+          <h3>
             Lorem ispum lodor
-          </h4>
+          </h3>
           <p>
             Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
           </p>
@@ -67,17 +67,17 @@ const Work = () => {
         </div>
         <div>
           <div>
-            <h4>
+            <h3>
               Lorem ispum lodor
-            </h4>
+            </h3>
             <p>
               Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
             </p>
           </div>
           <div>
-            <h4>
+            <h3>
               Lorem ispum lodor
-            </h4>
+            </h3>
             <p>
               Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
             </p>
