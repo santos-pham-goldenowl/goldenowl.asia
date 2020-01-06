@@ -19,16 +19,22 @@
       line-height: 40px
       font-size: 20px
 
+    h2
+      font-size: 34px
+      padding-bottom: 20px
+
+    h3
+      padding-bottom: 20px
+
     .box
       padding-top: 0
       padding-bottom: 0
 
     &__six.box
-      padding-top: 30px
-      padding-bottom: 30px
-
-    h3
-      padding-bottom: 20px
+      padding-top: 50px
+      padding-bottom: 50px
+      h2
+        text-align: center
 
     &__top-container
       display: grid
@@ -45,9 +51,7 @@
     &__two
       grid-column: 1 / span 2
       align-self: center
-      p, h3
-        width: 70%
-        margin: 0 auto
+      padding: 50px
 
     &__three
       grid-column: 3 / span 2
@@ -58,9 +62,7 @@
     &__five
       grid-column: 3 / span 2
       align-self: center
-      p, h3
-        width: 70%
-        margin: 0 auto
+      padding: 50px
 
     &__six
       grid-column: 1 / span 4
@@ -87,3 +89,7 @@
         div
           padding: 0 50px
           max-width: 500px
+@media only screen and (min-width: 1439px)
+  .work
+    &__two, &__five
+      padding: 0 100px

@@ -12,7 +12,7 @@ const Work = () => {
           <img src={coworker} alt="co-worker" />
         </div>
         <div className="work__two box">
-          <h3>Lorem ispum dolor</h3>
+          <h2>Lorem ispum dolor</h2>
           <p>
             Lorem ipsum dolor sit amet, utamur viderer diceret pri ut. Cu purto quas atqui duo, mei vidit nemore detraxit id. Mea ne unum contentiones, ex vim labitur vocibus theophrastus. Rebum pericula ne mea.
           </p>
@@ -24,15 +24,15 @@ const Work = () => {
           <img src={conference} alt="conference" />
         </div>
         <div className="work__five box">
-          <h3>Lorem ispum dolor</h3>
+          <h2>Lorem ispum dolor</h2>
           <p>
             Lorem ipsum dolor sit amet, utamur viderer diceret pri ut. Cu purto quas atqui duo, mei vidit nemore detraxit id. Mea ne unum contentiones, ex vim labitur vocibus theophrastus. Rebum pericula ne mea.
           </p>
         </div>
         <div className="work__six box">
-          <h3>
+          <h2>
             How we work
-          </h3>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, utamur viderer diceret pri ut. Cu purto quas atqui duo, mei vidit nemore detraxit id. Mea ne unum contentiones, ex vim labitur vocibus theophrastus. Rebum pericula ne mea.
           </p>
