@@ -7,9 +7,11 @@ const Home = () => {
   return (
     <section className="home-back">
       <Link to="/">
-        <img src={home} alt="home" />
-        <span>/</span>
-        <p className="home-back__text">About us</p>
+        <div>
+          <img src={home} alt="home" />
+          <span>/</span>
+          <p className="home-back__text">About us</p>
+        </div>
       </Link>
     </section>
   );

@@ -1,8 +1,12 @@
+@import '../../styles/variables.sass'
+
 .home-back
-  a
+  div
     display: flex
-    padding: 0 30px
+    margin: 0 30px
+    padding-bottom: 10px
     align-items: center
+    border-bottom: 1px solid $slightYellow
 
   span
     padding: 5px 2px 0 2px
@@ -12,10 +16,10 @@
 
 @media only screen and (min-width: 1023px)
   .home-back
-    a
-      padding: 0 50px
+    div
+      margin: 0 50px
 
 @media only screen and (min-width: 1439px)
   .home-back
-    a
-      padding: 0 100px
+    div
+      margin: 0 100px
