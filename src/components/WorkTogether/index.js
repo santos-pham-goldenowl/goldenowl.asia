@@ -57,16 +57,6 @@ const Work = () => {
             </p>
           </div>
           <div>
-          <h3>
-            Lorem ispum lodor
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
-          </p>
-        </div>
-        </div>
-        <div className="work__flex-item">
-          <div>
             <h3>
               Lorem ispum lodor
             </h3>
@@ -74,7 +64,17 @@ const Work = () => {
               Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
             </p>
           </div>
-          <div>
+        </div>
+        <div className="work__flex-item">
+          <div className="work__flex-item-last">
+            <h3>
+              Lorem ispum lodor
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
+            </p>
+          </div>
+          <div className="work__flex-item-last">
             <h3>
               Lorem ispum lodor
             </h3>
