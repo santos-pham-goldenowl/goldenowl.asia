@@ -32,10 +32,10 @@ class MainHeader extends Component {
         <div className={!this.state.showMenu ? 'main-header__right-side' : 'main-header__right-side-show'}>
           <ul className={!this.state.showMenu ? 'main-header__flex-container' : 'main-header__flex-container-show'}>
             <li className="main-header__flex-item">
-              <Link to="/about">About Goldern Owl</Link>
+              <Link to="/about">About Golden Owl</Link>
             </li>
             <li className="main-header__flex-item">Blog</li>
-            <li className="main-header__flex-item">Portflio</li>
+            <li className="main-header__flex-item">Portfolio</li>
             <li className="main-header__flex-item">English</li>
           </ul>
         </div>
