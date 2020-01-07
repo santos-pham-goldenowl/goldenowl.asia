@@ -1,0 +1,54 @@
+@import '../../styles/variables.sass'
+
+.technology-description
+  background-color: $slightOrange
+  padding: 50px 30px
+  h1
+    text-transform: uppercase
+    padding-bottom: 10px
+
+  img
+    width: 100%
+
+  &__left-side
+    padding-bottom: 20px
+    line-height: 30px
+
+@media only screen and (min-width: 1023px)
+  .technology-description
+    padding: 100px 0 0 50px
+    display: flex
+    p
+      line-height: 30px
+      font-size: 20px
+
+    p:last-child
+      padding-top: 20px
+
+    h1
+      font-size: 34px
+      padding-bottom: 20px
+
+    &__left-side
+      padding-right: 20px
+      flex: 1
+      padding-right: 50px
+
+    &__right-side
+      flex: 1
+      display: flex
+      justify-content: flex-end
+
+@media only screen and (min-width: 1439px)
+  .technology-description
+    padding: 100px 0 0 100px
+    p
+      line-height: 40px
+      font-size: 26px
+
+    h1
+      font-size: 50px
+      padding-bottom: 40px
+
+    &__left-side
+      padding-right: 100px

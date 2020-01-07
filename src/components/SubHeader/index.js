@@ -14,7 +14,9 @@ const SubHeader = () => {
       </div>
       <Services />
       <div className="sub-header__title">
-        <h4>Technology</h4>
+        <Link to="/technology">
+          <h4>Technology</h4>
+        </Link>
       </div>
       <div className="sub-header__title">
         <h4>Testimonial</h4>
