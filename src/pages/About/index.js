@@ -19,7 +19,7 @@ class About extends Component {
         <div className="about-container__top-wrapper">
           <MainHeader />
           <SubHeader />
-          <Home />
+          <Home pageName="About Us" />
           <AboutUs />
         </div>
         <img class="about-container__wavy-bg" src={about_bg} alt="wavy-bg" />
