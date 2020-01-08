@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import servicesLogo from '../../utils/ServicesLogo';
 import './index.sass';
 import arrowDown from '../../assets/images/chevron-down-solid.svg';
@@ -17,8 +18,8 @@ class Services extends Component {
     if (this.state.showServices) {
       return (
         <section>
-          <div className="services__arrow-wrapper" onClick={this.handleServices}>
-            <h4>Services</h4>
+          <div className="services__arrow-wrapper" onMouseEnter={this.handleServices}>
+            <Link to="/services"><h4>Services</h4></Link>
             <img className="arrow-down" src={arrowDown} alt="arrow-down" />
           </div>
           <div className="services">
@@ -40,8 +41,8 @@ class Services extends Component {
       );
     } else {
       return (
-        <div className="services__arrow-wrapper" onClick={this.handleServices}>
-          <h4>Services</h4>
+        <div className="services__arrow-wrapper" onMouseLeave={this.handleServices}>
+          <Link to="/services"><h4>Services</h4></Link>
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
         </div>
       )
