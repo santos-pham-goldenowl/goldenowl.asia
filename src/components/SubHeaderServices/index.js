@@ -18,8 +18,8 @@ class Services extends Component {
     if (this.state.showServices) {
       return (
         <section>
-          <div className="services__arrow-wrapper" onClick={this.handleServices}>
-            <h4>Services</h4>
+          <div className="services__arrow-wrapper" onMouseEnter={this.handleServices}>
+            <Link to="/services"><h4>Services</h4></Link>
             <img className="arrow-down" src={arrowDown} alt="arrow-down" />
           </div>
           <div className="services">
@@ -43,8 +43,8 @@ class Services extends Component {
       );
     } else {
       return (
-        <div className="services__arrow-wrapper" onClick={this.handleServices}>
-          <h4>Services</h4>
+        <div className="services__arrow-wrapper" onMouseLeave={this.handleServices}>
+          <Link to="/services"><h4>Services</h4></Link>
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
         </div>
       )
