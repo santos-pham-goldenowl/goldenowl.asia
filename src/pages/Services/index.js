@@ -15,7 +15,7 @@ const Services = () => {
     <section className="services-container">
       <MainHeader />
       <SubHeader />
-      <Home />
+      <Home pageName="Services" />
       <ServicesDescription />
       <img className="wavy-bg" src={wavy_bg} alt="wavy_bg" />
       <ServicesDetail />

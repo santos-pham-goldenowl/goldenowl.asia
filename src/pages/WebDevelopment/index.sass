@@ -3,6 +3,15 @@
 .web-development
   padding: 0 30px
 
+  p
+    line-height: 30px
+
+  .main-header, .sub-header
+    background-color: $white
+
+  &__top-content
+    padding-top: 100px
+
   &__web-image
     width: 100%
     margin: 30px 0
@@ -20,9 +29,13 @@
 
   &__paragraph-flex-item
     padding-bottom: 30px
+    p
+      line-height: 30px
 
   &__other-services-container
     padding-top: 50px
+    h2
+      padding-bottom: 30px
 
   &__other-services-flex-item
     display: flex
@@ -36,21 +49,49 @@
   &__logos-flex-container
     border-bottom: 1px solid $slightGray
 
+  &__other-services-flex-container
+    display: flex
+    width: 100%
+    justify-content: space-between
+
+  &__other-services-flex-item
+    flex: 1
+    padding: 20px
+    border-radius: 8px
+    &:nth-child(1), &:nth-child(3)
+      margin-right: 50px
+
 @media only screen and (min-width: 1023px)
   .web-development
     padding: 0
 
-    &__gray-bg
-      background-image: url('../../assets/images/rectangle.svg')
-      background-repeat: no-repeat
-      background-position: 0 220px
-      display: flex
-      flex-direction: column
-      padding-bottom: 200px
+    h1
+      padding-bottom: 0 !important
+
+    h2
+      font-size: 26px
 
     p
       line-height: 30px
       font-size: 20px
+
+    &__gray-bg
+      margin-top: 150px
+      background-image: url(/static/media/rectangle.3e9b4453.svg)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding-bottom: 130px
+
+      img
+        position: relative
+        bottom: 140px
+        padding: 0 50px
+
+    &__gray-bg-text
+      position: relative
+      bottom: 100px
 
     &__other-services-container
       padding-left: 50px
@@ -61,62 +102,69 @@
 
     &__logos-flex-container
       display: flex
-      padding-top: 100px
+      padding-top: 30px
+      padding-bottom: 30px
       margin-left: 50px
       margin-right: 50px
       position: relative
-      bottom: 100px
+      bottom: 80px
       background-color: $white
       p
         flex: 1
+        font-size: 20px !important
+        border-left: 1px solid $slightGray
+        padding-left: 30px
+        padding-right: 30px
 
     &__images-wrapper
       flex: 2
       display: grid
       grid-template: repeat(2, auto) / repeat(4, auto)
-      grid-row-gap: 20px
+      grid-row-gap: 30px
       align-items: center
+      justify-content: space-around
+
+      img:nth-child(4)
+        width: 100px
+
+      img:nth-child(7)
+        width: 55px
 
     &__paragraph-flex-item
       display: flex
-      max-width: 60%
+      width: 60%
       margin: 0 auto
       padding-top: 50px
       h2
-        flex: 1
+        flex: 2
         padding-right: 50px
+        line-height: 40px
+        text-align: right
       p
         flex: 4
+        font-size: 20px !important
 
     &__introduction
       padding-top: 20px
-
-    &__other-services-flex-container
-      display: flex
-      width: 100%
-      justify-content: space-between
-
-    &__other-services-flex-item
-      flex: 1
-      padding: 20px
-      border-radius: 8px
-      &:nth-child(1), &:nth-child(3)
-        margin-right: 50px
+      width: 83%
 
     &__other-services-title
       color: $darkGray
       padding-bottom: 50px
 
-    &__web-image
-      margin: 50px
-      width: initial
-
     &__short-intro
-      max-width: 60%
+      width: 60%
 
     &__single-padding
       padding-left: 50px
       padding-right: 50px
+
+    &__images-wrapper
+      padding-top: 0
+      padding-bottom: 0
+
+    &__paragraph-container
+      padding-top: 0
 
 @media only screen and (min-width: 1439px)
   .web-development
@@ -127,8 +175,9 @@
       line-height: 40px
       font-size: 26px
 
-    &__web-image
-      margin: 100px
+    &__gray-bg
+      img
+        padding: 0 100px
 
     &__logos-flex-container
       margin-left: 100px
@@ -141,3 +190,23 @@
     &__other-services-container
       padding-left: 100px
       padding-right: 100px
+
+    &__paragraph-flex-item
+      h2
+        flex: 1
+
+    &__short-intro
+      width: 73%
+
+    &__images-wrapper
+      img
+        width: 60px
+
+      img:nth-child(4)
+        width: initial
+
+      img:nth-child(7)
+        width: 100px
+
+    &__introduction
+      width: 80%

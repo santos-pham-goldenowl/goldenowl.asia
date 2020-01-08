@@ -1,4 +1,8 @@
 import React from 'react';
+import MainHeader from '../../components/MainHeader/index';
+import SubHeader from '../../components/SubHeader/index';
+import Footer from '../../components/Footer/index';
+import Home from '../../components/Home/index';
 import web from '../../assets/images/web-development.svg';
 import WebDevelopmentData from '../../utils/WebDevelopment';
 import mobileSmall from '../../assets/images/mobile-small.svg';
@@ -10,7 +14,10 @@ import './index.sass';
 const WebDevelopmentContainer = () => {
   return (
     <section className="web-development">
-      <div>
+      <MainHeader />
+      <SubHeader />
+      <Home pageName="Services/Web Development" />
+      <div className="web-development__top-content">
         <div className="web-development__single-padding">
           <h1>
             Lorem ipsum dolor sit ame
@@ -21,7 +28,7 @@ const WebDevelopmentContainer = () => {
         </div>
         <div className="web-development__gray-bg">
           <img className="web-development__web-image" src={web} alt="web development" />
-          <div className="web-development__single-padding">
+          <div className="web-development__single-padding web-development__gray-bg-text">
             <h2>
               Lorem ispum dolor
             </h2>
@@ -49,8 +56,7 @@ const WebDevelopmentContainer = () => {
       <div className="web-development__paragraph-container">
         <div className="web-development__paragraph-flex-item">
           <h2>
-            Lorem ispum
-          dolor
+            Lorem ispum dolor
           </h2>
           <p>
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
@@ -109,6 +115,7 @@ const WebDevelopmentContainer = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 }
