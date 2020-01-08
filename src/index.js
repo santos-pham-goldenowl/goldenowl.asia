@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import App from './pages/App/index';
 import About from './pages/About/index';
+import WebDevelopmentContainer from './pages/WebDevelopment/index';
 import Services from './pages/Services/index';
 import * as serviceWorker from './serviceWorker';
 
@@ -11,6 +12,7 @@ ReactDOM.render(
     <Fragment>
       <Route exact path="/" component={App} />
       <Route path="/about" component={About} />
+      <Route path="/services/web-development" component={WebDevelopmentContainer} />
       <Route path="/services" component={Services} />
     </Fragment>
   </BrowserRouter>, document.getElementById('root'));
