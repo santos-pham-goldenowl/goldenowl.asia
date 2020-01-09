@@ -1,0 +1,212 @@
+@import '../../styles/variables.sass'
+
+.service
+  padding: 0 30px
+
+  p
+    line-height: 30px
+
+  &__grid
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__grid-item
+    margin-bottom: 50px
+    border: 1px solid $slightGray
+    border-radius: 8px
+    width: 300px
+    display: flex
+    align-items: center
+    font-size: 16px
+
+  .main-header, .sub-header
+    background-color: $white
+
+  &__top-content
+    padding-top: 100px
+
+  &__web-image
+    width: 100%
+    margin: 30px 0
+
+  &__images-wrapper
+    padding: 30px 0
+    display: grid
+    grid-template: repeat(2, auto) / repeat(4, auto)
+    grid-row-gap: 20px
+    img
+      width: 40px
+
+  &__paragraph-container
+    padding-top: 50px
+
+  &__paragraph-flex-item
+    padding-bottom: 30px
+    p
+      line-height: 30px
+
+  &__other-services-container
+    padding-top: 50px
+    h2
+      padding-bottom: 30px
+
+  &__logos-flex-container
+    border-bottom: 1px solid $slightGray
+
+@media only screen and (min-width: 700px)
+  .service
+    &__grid
+      display: grid
+      grid-template: repeat(2, auto) / repeat(2, auto)
+
+    &__grid-item
+      display: flex
+      align-items: center
+      padding: 20px
+      width: initial
+      &:nth-child(1), &:nth-child(3)
+        margin-right: 50px
+      img
+        height: 120px
+        width: 150px
+
+@media only screen and (min-width: 1023px)
+  .service
+    padding: 0
+
+    h1
+      padding-bottom: 0 !important
+
+    h2
+      font-size: 26px
+
+    p
+      line-height: 30px
+      font-size: 20px
+
+    &__gray-bg
+      margin-top: 150px
+      background-color: $softGray
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding-bottom: 130px
+
+      img
+        position: relative
+        bottom: 140px
+        padding: 0 50px
+
+    &__gray-bg-text
+      position: relative
+      bottom: 100px
+
+    &__other-services-container
+      padding-left: 50px
+      padding-right: 50px
+
+    &__logo-container
+      display: flex
+
+    &__logos-flex-container
+      display: flex
+      padding-top: 30px
+      padding-bottom: 30px
+      margin-left: 50px
+      margin-right: 50px
+      position: relative
+      bottom: 80px
+      background-color: $white
+      p
+        flex: 1
+        font-size: 20px !important
+        border-left: 1px solid $slightGray
+        padding-left: 30px
+        padding-right: 30px
+
+    &__images-wrapper
+      flex: 2
+      display: grid
+      grid-template: repeat(2, auto) / repeat(4, auto)
+      grid-row-gap: 30px
+      align-items: center
+      justify-content: space-around
+
+    &__paragraph-flex-item
+      display: flex
+      width: 60%
+      margin: 0 auto
+      padding-top: 50px
+      h2
+        flex: 2
+        padding-right: 50px
+        line-height: 40px
+        text-align: right
+      p
+        flex: 4
+        font-size: 20px !important
+
+    &__introduction
+      padding-top: 20px
+      width: 83%
+
+    &__other-services-title
+      color: $darkGray
+      padding-bottom: 50px
+
+    &__short-intro
+      width: 60%
+
+    &__single-padding
+      padding-left: 50px
+      padding-right: 50px
+
+    &__images-wrapper
+      padding-top: 0
+      padding-bottom: 0
+
+    &__paragraph-container
+      padding-top: 0
+
+@media only screen and (min-width: 1400px)
+  .service
+    h1
+      font-size: 50px
+
+    p
+      line-height: 40px
+      font-size: 26px
+
+    &__gray-bg
+      img
+        padding: 0 100px
+
+    &__logos-flex-container
+      margin-left: 100px
+      margin-right: 100px
+
+    &__single-padding
+      padding-left: 100px
+      padding-right: 100px
+
+    &__other-services-container
+      padding-left: 100px
+      padding-right: 100px
+
+    &__paragraph-flex-item
+      h2
+        flex: 1
+
+    &__short-intro
+      width: 73%
+
+    &__images-wrapper
+      padding-right: 30px
+      grid-template: repeat(2, auto) / repeat(4, 70px)
+      img
+        width: 100%
+
+    &__introduction
+      width: 80%
