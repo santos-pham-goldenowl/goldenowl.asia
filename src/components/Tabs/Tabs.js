@@ -6,7 +6,7 @@ class Tabs extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: ''
+      selected: 'tab1'
     }
   }
 

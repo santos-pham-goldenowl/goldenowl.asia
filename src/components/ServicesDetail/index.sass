@@ -1,0 +1,69 @@
+@import '../../styles/variables.sass'
+
+.services-detail
+  p
+    line-height: 30px
+
+  &__flex-item
+    h3
+      padding-top: 30px
+
+  &__paragraphs
+    > div
+      padding-top: 30px
+
+@media only screen and (min-width: 1023px)
+  .services-detail
+    &__main-content
+      padding: 50px
+
+    &__top-content
+      display: flex
+      justify-content: center
+      padding-bottom: 100px
+
+    &__bottom-content
+      display: flex
+      justify-content: center
+
+    &__flex-item
+      max-width: 350px
+      display: flex
+      flex-direction: column
+
+      &:nth-child(2)
+        padding: 0 50px
+      img
+        height: 300px
+
+      h3
+        padding-top: 20px
+        padding-bottom: 10px
+
+    &__paragraphs
+      padding-top: 100px
+      padding-bottom: 100px
+      display: flex
+      background-color: $softGray
+      align-items: center
+      > div
+        background-color: $white
+        margin-left: 50px
+        margin-right: 50px
+        padding: 50px
+        text-align: center
+
+        h3
+          padding-bottom: 10px
+
+@media only screen and (min-width: 1439px)
+  .services-detail
+    padding-top: 100px
+
+    &__flex-item
+      max-width: 450px
+
+    &__paragraphs
+      > div
+        margin-left: 100px
+        margin-right: 100px

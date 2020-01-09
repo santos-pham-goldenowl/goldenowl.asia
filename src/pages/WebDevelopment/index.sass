@@ -1,0 +1,143 @@
+@import '../../styles/variables.sass'
+
+.web-development
+  padding: 0 30px
+
+  &__web-image
+    width: 100%
+    margin: 30px 0
+
+  &__images-wrapper
+    padding: 30px 0
+    display: grid
+    grid-template: repeat(2, auto) / repeat(4, auto)
+    grid-row-gap: 20px
+    img
+      width: 40px
+
+  &__paragraph-container
+    padding-top: 50px
+
+  &__paragraph-flex-item
+    padding-bottom: 30px
+
+  &__other-services-container
+    padding-top: 50px
+
+  &__other-services-flex-item
+    display: flex
+    align-items: center
+    padding-top: 30px
+    border: 1px solid $slightGray
+    margin-bottom: 50px
+    img
+      width: 120px
+
+  &__logos-flex-container
+    border-bottom: 1px solid $slightGray
+
+@media only screen and (min-width: 1023px)
+  .web-development
+    padding: 0
+
+    &__gray-bg
+      background-image: url('../../assets/images/rectangle.svg')
+      background-repeat: no-repeat
+      background-position: 0 220px
+      display: flex
+      flex-direction: column
+      padding-bottom: 200px
+
+    p
+      line-height: 30px
+      font-size: 20px
+
+    &__other-services-container
+      padding-left: 50px
+      padding-right: 50px
+
+    &__logo-container
+      display: flex
+
+    &__logos-flex-container
+      display: flex
+      padding-top: 100px
+      margin-left: 50px
+      margin-right: 50px
+      position: relative
+      bottom: 100px
+      background-color: $white
+      p
+        flex: 1
+
+    &__images-wrapper
+      flex: 2
+      display: grid
+      grid-template: repeat(2, auto) / repeat(4, auto)
+      grid-row-gap: 20px
+      align-items: center
+
+    &__paragraph-flex-item
+      display: flex
+      max-width: 60%
+      margin: 0 auto
+      padding-top: 50px
+      h2
+        flex: 1
+        padding-right: 50px
+      p
+        flex: 4
+
+    &__introduction
+      padding-top: 20px
+
+    &__other-services-flex-container
+      display: flex
+      width: 100%
+      justify-content: space-between
+
+    &__other-services-flex-item
+      flex: 1
+      padding: 20px
+      border-radius: 8px
+      &:nth-child(1), &:nth-child(3)
+        margin-right: 50px
+
+    &__other-services-title
+      color: $darkGray
+      padding-bottom: 50px
+
+    &__web-image
+      margin: 50px
+      width: initial
+
+    &__short-intro
+      max-width: 60%
+
+    &__single-padding
+      padding-left: 50px
+      padding-right: 50px
+
+@media only screen and (min-width: 1439px)
+  .web-development
+    h1
+      font-size: 50px
+
+    p
+      line-height: 40px
+      font-size: 26px
+
+    &__web-image
+      margin: 100px
+
+    &__logos-flex-container
+      margin-left: 100px
+      margin-right: 100px
+
+    &__single-padding
+      padding-left: 100px
+      padding-right: 100px
+
+    &__other-services-container
+      padding-left: 100px
+      padding-right: 100px

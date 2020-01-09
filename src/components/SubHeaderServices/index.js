@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import servicesLogo from '../../utils/ServicesLogo';
+import { Link } from 'react-router-dom';
+import ServicesData from '../../utils/Services';
 import './index.sass';
 import arrowDown from '../../assets/images/chevron-down-solid.svg';
 
@@ -17,22 +18,24 @@ class Services extends Component {
     if (this.state.showServices) {
       return (
         <section>
-          <div className="services__arrow-wrapper" onClick={this.handleServices}>
-            <h4>Services</h4>
+          <div className="services__arrow-wrapper" onMouseEnter={this.handleServices}>
+            <Link to="/services"><h4>Services</h4></Link>
             <img className="arrow-down" src={arrowDown} alt="arrow-down" />
           </div>
           <div className="services">
-            {servicesLogo.map(service => {
+            {ServicesData.map(service => {
               return (
-                <div className="services__service">
-                  <div className="services__icon-wrapper">
-                    <img src={service.url} alt={service.name} />
+                <Link to={`/services/${service.link}`}>
+                  <div className="services__service">
+                    <div className="services__icon-wrapper">
+                      <img src={service.url} alt={service.name} />
+                    </div>
+                    <div className="services__service-description-wrapper">
+                      <h4>{service.name}</h4>
+                      <p className="services__service-description">{service.description}</p>
+                    </div>
                   </div>
-                  <div className="services__service-description-wrapper">
-                    <h4>{service.name}</h4>
-                    <p className="services__service-description">{service.description}</p>
-                  </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -40,8 +43,8 @@ class Services extends Component {
       );
     } else {
       return (
-        <div className="services__arrow-wrapper" onClick={this.handleServices}>
-          <h4>Services</h4>
+        <div className="services__arrow-wrapper" onMouseLeave={this.handleServices}>
+          <Link to="/services"><h4>Services</h4></Link>
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
         </div>
       )
