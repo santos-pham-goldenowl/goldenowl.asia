@@ -6,8 +6,8 @@ class Tabs extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: 'tab1'
-    }
+      selected: 'tab1',
+    };
   }
 
   toogleTab(name) {
@@ -22,7 +22,7 @@ class Tabs extends React.Component {
     ));
 
     const tabContents = children.filter( c => c.type === TabContent).filter(c => (
-      c.props.name == selected
+      c.props.name === selected
     ));
     return (
       <div>
