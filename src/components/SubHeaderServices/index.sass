@@ -3,6 +3,7 @@
 
 .services
   @include dropdown-content(410px, 226px)
+  z-index: 50
 
   h4
     letter-spacing: .5px
@@ -27,7 +28,9 @@
   &__service-description-wrapper
     text-align: left
     letter-spacing: .5px
-    font-size: 14px
+    p
+      font-size: 14px !important
+      line-height: initial !important
 
   &__service
     display: flex

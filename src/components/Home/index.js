@@ -6,13 +6,15 @@ import './index.sass';
 const Home = (props) => {
   return (
     <section className="home-back">
-      <Link to="/">
-        <div>
-          <img src={home} alt="home" />
-          <span>/</span>
-          <p className="home-back__text">{props.pageName}</p>
-        </div>
-      </Link>
+      <div>
+        <Link to="/">
+          <div>
+            <img src={home} alt="home" />
+            <span>/</span>
+          </div>
+        </Link>
+        <p className="home-back__text">{props.pageName}</p>
+      </div>
     </section>
   );
 }

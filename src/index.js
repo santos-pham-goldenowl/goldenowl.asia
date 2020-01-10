@@ -16,6 +16,9 @@ ReactDOM.render(
       <Route path="/technology" component={TechnologyContainer} />
       <Route path="/services/web-development" component={WebDevelopmentContainer} />
       <Route path="/services" component={Services} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/services/web-development" component={WebDevelopmentContainer} />
+      <Route exact path="/services" component={Services} />
     </Fragment>
   </BrowserRouter>, document.getElementById('root'));
 
