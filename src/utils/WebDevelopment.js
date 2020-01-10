@@ -1,10 +1,10 @@
-import html from '../assets/images/html.svg';
-import css3 from '../assets/images/css3.svg';
-import js from '../assets/images/js.svg';
-import amazon from '../assets/images/amazon.svg';
-import objectC from '../assets/images/object-C.svg';
-import arrow from '../assets/images/arrow.svg';
-import php from '../assets/images/php.svg';
+import html from '../assets/images/service_logos/WebDevelopment/html.svg';
+import css3 from '../assets/images/service_logos/WebDevelopment/css3.svg';
+import js from '../assets/images/service_logos/WebDevelopment/js.svg';
+import amazon from '../assets/images/service_logos/WebDevelopment/amazon.svg';
+import objectC from '../assets/images/service_logos/WebDevelopment/object-C.svg';
+import arrow from '../assets/images/service_logos/WebDevelopment/arrow.svg';
+import php from '../assets/images/service_logos/WebDevelopment/php.svg';
 
 const WebDevelopmentData = [
   {
