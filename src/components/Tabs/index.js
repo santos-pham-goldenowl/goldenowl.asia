@@ -7,9 +7,8 @@ import FrontEndTechs from '../../utils/FrontendTechs';
 
 const TabContainer = () => (
   <Tabs>
-    <p>Hello</p>
     <TabHeader for="tab1">
-      <p>Frontend</p>
+      <p>Front - end</p>
     </TabHeader>
     <TabContent name="tab1">
       <section className="frontend-tab">
@@ -33,7 +32,7 @@ const TabContainer = () => (
     </TabContent>
 
     <TabHeader for="tab2">
-      <p>Backend</p>
+      <p>Back - end</p>
     </TabHeader>
     <TabContent name="tab2">
       <p>Back end content</p>
