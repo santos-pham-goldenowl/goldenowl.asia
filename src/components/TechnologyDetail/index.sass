@@ -1,0 +1,77 @@
+@import '../../styles/variables.sass'
+
+.technology-detail
+  padding: 0 30px
+  &__short-description
+    padding: 20px 0
+
+  &__paragraphs
+    > div
+      padding-top: 30px
+      line-height: 30px
+
+@media only screen and (min-width: 1023px)
+  .technology-detail
+    padding: 0
+    margin: 0 auto
+
+    &__title
+      text-align: center
+      font-size: 26px
+
+    &__short-description
+      text-align: center
+      padding: 40px 0
+      font-size: 20px
+      line-height: 30px
+      width: 80%
+      margin: 0 auto
+
+    &__main-content
+      display: flex
+      justify-content: center
+      > p
+        flex: 1
+        display: flex
+        justify-content: center
+        font-size: 20px
+
+    &__paragraphs
+      padding-top: 100px
+      padding-bottom: 100px
+      display: flex
+      background-color: $softGray
+      align-items: center
+      > div
+        background-color: $white
+        padding: 50px
+        text-align: center
+        h3
+          padding-bottom: 10px
+
+      > div:first-child
+        margin-left: 50px
+        margin-right: 25px
+
+      > div:last-child
+        margin-right: 50px
+        margin-left: 25px
+
+@media only screen and (min-width: 1400px)
+  .technology-detail
+    &__title
+      font-size: 34px
+
+    &__paragraphs
+      font-size: 20px
+      > div:first-child
+        margin-left: 100px
+        margin-right: 25px
+
+      > div:last-child
+        margin-right: 100px
+        margin-left: 25px
+
+    &__short-description
+      font-size: 26px
+      line-height: 40px
