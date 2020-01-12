@@ -41,11 +41,8 @@ const Service = (props) => {
       </div>
       <div className="service__logos-flex-container">
         <div className="service__images-wrapper">
-          {props.serviceData.map((image) => {
-            return (
-              <img src={image.url} alt={image.name} />
-            );
-          })}
+          {props.serviceData.map((image) => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} />
+          )}
         </div>
         <p>
           We have more than 50 developers who know the leading website platform like the back of their hand ensure guaranteed digital successs.
@@ -94,7 +91,7 @@ const Service = (props) => {
               return (
                 <div className="service__grid-item">
                   <img src={image.url} />
-                  <h3>{image.title}</h3>
+                  <h3 className="service__grid-item-title">{image.title}</h3>
                 </div>
               )
             })}

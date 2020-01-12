@@ -24,7 +24,7 @@ const WebDevelopmentData = [
     url: amazon
   },
   {
-    name: 'object C',
+    name: 'object-C',
     url: objectC
   },
   {
