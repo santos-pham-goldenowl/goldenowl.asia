@@ -51,7 +51,7 @@ const AutoCarousel = (props) => {
           </p>
           <div className="feedback__client-wrapper">
             <img src={c.url} alt="study" />
-            <span className="auto-carousel__name">{c.name},</span>
+            <span className="auto-carousel__name">{c.name},&nbsp;</span>
             <span className="auto-carousel__idea">{c.idea}</span>
           </div>
         </div>
