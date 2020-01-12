@@ -3,10 +3,6 @@ import MainHeader from '../../components/MainHeader/index';
 import SubHeader from '../../components/SubHeader/index';
 import Home from '../../components/Home/index';
 import Footer from '../../components/Footer/index';
-import mobileSmall from '../../assets/images/service_logos/OtherServices/mobile-small.svg';
-import uiUXSmall from '../../assets/images/service_logos/OtherServices/ui-ux-small.svg';
-import projectMana from '../../assets/images/service_logos/OtherServices/project-mana.svg';
-import developmentTeam from '../../assets/images/service_logos/OtherServices/development-team-small.svg';
 import './index.sass';
 
 const Service = (props) => {
@@ -90,7 +86,7 @@ const Service = (props) => {
             {props.otherServiceImages.map((image) => {
               return (
                 <div className="service__grid-item">
-                  <img src={image.url} />
+                  <img src={image.url} alt={image.name} />
                   <h3 className="service__grid-item-title">{image.title}</h3>
                 </div>
               )

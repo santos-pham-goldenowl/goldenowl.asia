@@ -7,8 +7,6 @@ import AboutUs from '../../components/AboutUs/index';
 import IntroductionDetail from '../../components/IntroductionDetail/index';
 import Work from '../../components/WorkTogether/index';
 import about_bg from '../../assets/images/about_bg.png';
-import home from '../../assets/images/home-icon.png';
-import column from '../../assets/images/column.png';
 import Home from '../../components/Home/index';
 import './index.sass';
 

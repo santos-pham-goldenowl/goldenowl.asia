@@ -39,7 +39,7 @@ const SlideCarousel = (props) => {
     {props.content.map((c, index) => {
       return (
         <div className="slide-image-wrapper" style={{display: "flex", justifyContent: "center"}}>
-          <img className={`logo-${c.name}`} src={c.url} />
+          <img className={`logo-${c.name}`} src={c.url} alt={c.name} />
         </div>
       )
     })}
