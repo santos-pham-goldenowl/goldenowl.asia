@@ -43,7 +43,7 @@ class MainHeader extends Component {
               </li>
               <li className="main-header__flex-item">Blog</li>
               <li className="main-header__flex-item">Portfolio</li>
-              <li className="main-header__flex-item">
+              <li className="main-header__flex-item font-bold">
                 <span>English</span>
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" />
               </li>
@@ -73,7 +73,7 @@ class MainHeader extends Component {
               </li>
               <li className="main-header__flex-item">Blog</li>
               <li className="main-header__flex-item">Portfolio</li>
-              <li className="main-header__flex-item">
+              <li className="main-header__flex-item font-bold">
                 <span>English</span>
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" />
               </li>
