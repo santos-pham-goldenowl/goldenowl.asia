@@ -22,7 +22,7 @@ const UiUxData = [
     url: xd
   },
   {
-    name: 'in vision',
+    name: 'in-vision',
     url: inVision
   },
 ];

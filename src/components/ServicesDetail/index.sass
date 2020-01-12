@@ -39,10 +39,14 @@
       flex-direction: column
       img
         height: 300px
+        transition: transform .2s
+        &:hover
+          transform: scale(1.2)
 
       h3
         padding-top: 40px
         padding-bottom: 10px
+        font-size: 20px
 
       p
         color: $softBlack

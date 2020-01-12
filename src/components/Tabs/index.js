@@ -37,7 +37,7 @@ const TabContainer = () => (
     <TabContent name="tab2">
       <section className="tech-tab">
         <div className="tech-tab__left-side">
-          <h2 className="tab-header-title">Bạck end content</h2>
+          <h2 className="tab-header-title">Back end content</h2>
           <p>
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>

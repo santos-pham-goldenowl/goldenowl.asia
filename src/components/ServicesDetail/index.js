@@ -7,34 +7,22 @@ const ServicesDetail = () => {
     <section className="services-detail">
       <div className="services-detail__main-content">
         <div className="services-detail__top-content">
-          {ServicesDetailContent.topContent.map((c) => {
-            return (
-              <div className="services-detail__flex-item">
-                <img src={c.url} alt={c.title} />
-                <h3>
-                  {c.title}
-                </h3>
-                <p>
-                  {c.content}
-                </p>
-              </div>
-            );
-          })}
+          {ServicesDetailContent.topContent.map((c) => (
+            <div className="services-detail__flex-item">
+              <img src={c.url} alt={c.title} />
+              <h3>{c.title}</h3>
+              <p>{c.content}</p>
+            </div>
+          ))}
         </div>
         <div className="services-detail__bottom-content">
-          {ServicesDetailContent.bottomContent.map((c) => {
-            return (
-              <div className="services-detail__flex-item">
-                <img src={c.url} alt={c.title} />
-                <h3>
-                  {c.title}
-                </h3>
-                <p>
-                  {c.content}
-                </p>
-              </div>
-            );
-          })}
+          {ServicesDetailContent.bottomContent.map((c) => (
+            <div className="services-detail__flex-item">
+              <img src={c.url} alt={c.title} />
+              <h3>{c.title}</h3>
+              <p>{c.content}</p>
+            </div>
+          ))}
         </div>
       </div>
 
