@@ -6,7 +6,7 @@ import './index.sass';
 function Partners() {
   return (
     <section className="partners">
-      <h2>
+      <h2 className="partners__title">
         We partner with the world's best
       </h2>
       <SlideCarousel content={partnersLogo} />

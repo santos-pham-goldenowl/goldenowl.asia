@@ -9,8 +9,9 @@
     padding-bottom: 30px
     color: $white
     letter-spacing: 0.5px
+    display: block
 
-  h2
+  &__title
     font-size: 26px
     color: #ffffff
 
@@ -21,7 +22,6 @@
     height: 60px
 
   &__grid
-    padding-top: 50px
     display: grid
     justify-content: space-around
     grid-template: repeat(6, auto) / repeat(4, auto)
@@ -31,11 +31,10 @@
   .technologies
     padding: 50px
 
-    h2
+    &__title
       padding-bottom: 25px
 
     &__grid
-      display: grid
       justify-content: space-between
       grid-template: repeat(4, auto) / repeat(6, auto)
       grid-gap: 50px
@@ -50,12 +49,13 @@
     &__view-all
       font-size: 20px
 
-@media only screen and (min-width: 1400px)
+@media only screen and (min-width: 1300px)
   .technologies
-    padding: 50px 100px
+    padding: 100px
 
-    h2
+    &__title
       font-size: 34px
+      padding-bottom: 100px
 
     img
       width: 99px
@@ -65,3 +65,8 @@
       justify-content: space-between
       grid-template: repeat(4, auto) / repeat(6, auto)
       grid-gap: 115px
+
+    &__view-all
+      font-size: 24px
+      padding-top: 100px
+      padding-bottom: 0

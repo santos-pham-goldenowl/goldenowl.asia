@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import goldenOwl from '../../assets/images/golden_owl.png';
+import arrowDown from '../../assets/images/chevron-down-solid.svg';
 import './index.sass';
 
 class MainHeader extends Component {
@@ -42,7 +43,10 @@ class MainHeader extends Component {
               </li>
               <li className="main-header__flex-item">Blog</li>
               <li className="main-header__flex-item">Portfolio</li>
-              <li className="main-header__flex-item">English</li>
+              <li className="main-header__flex-item">
+                <span>English</span>
+                <img className="arrow-down" src={arrowDown} alt="arrow-down" />
+              </li>
             </ul>
           </div>
         </header>
@@ -69,7 +73,10 @@ class MainHeader extends Component {
               </li>
               <li className="main-header__flex-item">Blog</li>
               <li className="main-header__flex-item">Portfolio</li>
-              <li className="main-header__flex-item">English</li>
+              <li className="main-header__flex-item">
+                <span>English</span>
+                <img className="arrow-down" src={arrowDown} alt="arrow-down" />
+              </li>
               <li style={{borderBottom: "1px solid #f1e3b9"}}></li>
               <li className="main-header__flex-item" style={{paddingTop: "20px"}}>Services</li>
               <li className="main-header__flex-item">Technology</li>

@@ -2,6 +2,8 @@ import React from 'react';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import './index.sass';
+import leftQuote from '../../assets/images/quote-left-solid.svg';
+import rightQuote from '../../assets/images/quote-right-solid.svg'
 
 const responsive = {
   desktop: {
@@ -43,7 +45,9 @@ const AutoCarousel = (props) => {
       return (
         <div className="auto-carousel" style={{paddingRight: "25px", paddingLeft: "25px", textAlign: "left"}}>
           <p>
+            <img className="quote-icon" src={leftQuote} />
             {c.content}
+            <img className="quote-icon" src={rightQuote} />
           </p>
           <div className="feedback__client-wrapper">
             <img src={c.url} alt="study" />

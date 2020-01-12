@@ -17,7 +17,7 @@ const Service = (props) => {
       <Home pageName={props.pageName} />
       <div className="service__top-content">
         <div className="service__single-padding">
-          <h1>
+          <h1 className="service__title">
             Lorem ipsum dolor sit ame
           </h1>
           <p className="service__introduction service__short-intro">

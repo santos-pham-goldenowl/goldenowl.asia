@@ -36,10 +36,10 @@ const SlideCarousel = (props) => {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >
-    {props.content.map((c) => {
+    {props.content.map((c, index) => {
       return (
         <div className="slide-image-wrapper" style={{display: "flex", justifyContent: "center"}}>
-          <img src={c.url} style={{width: "126px"}} />
+          <img className={`logo-${c.name}`} src={c.url} />
         </div>
       )
     })}

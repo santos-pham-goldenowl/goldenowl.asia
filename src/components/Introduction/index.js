@@ -9,7 +9,7 @@ function Introduction() {
         <img src={study} alt={study} />
       </div>
       <div className="introduction__right-side">
-        <h2>We are Golden Owl</h2>
+        <h2 className="introduction__title">We are Golden Owl</h2>
         <p className="introduction__text">
           The role of Golden Owl Asia starts where Enterprise meets technology. We provide IT solutions that allow our Clients to achieve specific goals and measurable benefits.
         </p>

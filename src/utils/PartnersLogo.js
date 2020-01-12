@@ -27,7 +27,7 @@ const partnersLogo = [
     url: gig
   },
   {
-    name: 'assured',
+    name: 'mywork',
     url: mywork
   },
   {
@@ -35,12 +35,12 @@ const partnersLogo = [
     url: finda
   },
   {
-    name: 'finda',
-    url: finda
+    name: 'candy',
+    url: candy
   },
   {
-    name: 'finda',
-    url: finda
+    name: 'luxe',
+    url: luxe
   },
 ]
 

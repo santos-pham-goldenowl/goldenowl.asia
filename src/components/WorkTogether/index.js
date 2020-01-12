@@ -48,7 +48,7 @@ const Work = () => {
               Lorem ipsum dolor sit amet, ex iusto officiis eos, id iisque luptatum antiopam vix, pro et hinc nominati. Pro illum ubique utroque id, congue dicunt invenire.
             </p>
           </div>
-          <div>
+          <div className="work__flex-item-first">
             <h3>
               Lorem ispum lodor
             </h3>

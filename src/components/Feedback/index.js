@@ -1,15 +1,13 @@
 import React from 'react';
-import './index.sass';
 import AutoCarousel from '../AutoCarousel';
 import feedback from '../../utils/Feedback';
+import './index.sass';
 
-function Feedback() {
-  return (
-    <section className="feedback">
-      <h2>What our clients say</h2>
-      <AutoCarousel content={feedback} />
-    </section>
-  );
-}
+const Feedback = () => (
+  <section className="feedback">
+    <h2 className="feedback__title">What our clients say</h2>
+    <AutoCarousel content={feedback} />
+  </section>
+);
 
 export default Feedback;

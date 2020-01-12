@@ -18,6 +18,7 @@ module.exports = {
       }
     ],
     "max-len": ["error", 120, { "ignoreTemplateLiterals": true }],
-    "no-unused-expressions": ["error", { "allowShortCircuit": true }]
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+    "react/jsx-fragments": ["error", true],
   }
 }

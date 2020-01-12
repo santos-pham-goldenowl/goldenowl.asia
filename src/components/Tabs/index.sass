@@ -21,7 +21,7 @@
 .tab-header-title
   padding-bottom: 10px
 
-.frontend-tab
+.tech-tab
   &__right-side
     display: grid
     grid-template: repeat(4, auto) / repeat(3, auto)
@@ -53,8 +53,17 @@
     p
       padding: 0 40px
 
-  .frontend-tab
+  .tech-tab
     display: flex
+
+    &__logo-wrapper
+      display: flex
+      align-items: center
+      img
+        width: 40px
+        margin-right: 40px
+      p
+        text-transform: capitalize
 
     .tab-header-title
       padding-bottom: 10px
@@ -70,7 +79,7 @@
       display: grid
       grid-template: repeat(2, auto) / repeat(3, auto)
       justify-content: space-between
-      grid-row-gap: 20px
+      grid-row-gap: 60px
       > div
         text-align: center
 
@@ -79,8 +88,8 @@
       padding: 20px
       color: $litleGray
 
-@media only screen and (min-width: 1400px)
-  .frontend-tab
+@media only screen and (min-width: 1300px)
+  .tech-tab
     p
       font-size: 20px
 
@@ -97,3 +106,8 @@
 
   .header-group
     padding-bottom: 40px
+    p
+      font-size: 26px
+
+  .tab-header-title
+    font-size: 36px

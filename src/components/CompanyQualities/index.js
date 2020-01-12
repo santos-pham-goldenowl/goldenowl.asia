@@ -5,7 +5,7 @@ import './index.sass';
 function CompanyQualities() {
   return (
     <section className="qualities">
-      <h2> Why choose us</h2>
+      <h2 className="qualities__title"> Why choose us</h2>
       <div className="qualities__main-content">
         <div className="qualities__items">
           <h4>Golden Owl Asia</h4>

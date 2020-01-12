@@ -19,7 +19,9 @@ class Services extends Component {
       return (
         <section>
           <div className="services__arrow-wrapper" onMouseEnter={this.handleServices}>
-            <Link to="/services"><h4>Services</h4></Link>
+            <Link to="/services">
+              <h4 className="sub-header__text">Services</h4>
+            </Link>
             <img className="arrow-down" src={arrowDown} alt="arrow-down" />
           </div>
           <div className="services">
@@ -44,7 +46,9 @@ class Services extends Component {
     } else {
       return (
         <div className="services__arrow-wrapper" onMouseLeave={this.handleServices}>
-          <Link to="/services"><h4>Services</h4></Link>
+          <Link to="/services">
+            <h4 className="sub-header__text">Services</h4>
+          </Link>
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
         </div>
       )

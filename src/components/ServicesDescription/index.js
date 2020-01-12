@@ -6,11 +6,11 @@ const ServicesDescription = () => {
   return (
     <section className="services-description">
       <div className="services-description__left-side">
-        <h1>Services</h1>
-        <p>
+        <h1 className="services-description__title">Services</h1>
+        <p className="services-description__text">
           Lorem ipsum dolor sit amet, mea denique molestiae at, homero dicunt eripuit ad vel. Nonumy reformidans contentiones eu pro, autem nemore nec ex. An pro accumsan .
         </p>
-        <p>
+        <p className="services-description__text">
           Hinc malorum cu mel, nisl consequat mei an, eos ne zril rationibus. Ut commodo lobortis duo. Pro te tale fuisset, ei omnesque probatus eleifend mei. Civibus indoctum cum ad, sit et expetenda consequat definitiones, sea justo deserunt interpretaris id. In eam blandit hendrerit.
         </p>
       </div>

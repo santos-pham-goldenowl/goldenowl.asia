@@ -11,17 +11,17 @@ const TabContainer = () => (
       <p>Front - end</p>
     </TabHeader>
     <TabContent name="tab1">
-      <section className="frontend-tab">
-        <div className="frontend-tab__left-side">
+      <section className="tech-tab">
+        <div className="tech-tab__left-side">
           <h2 className="tab-header-title">Front end content</h2>
           <p>
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
-        <div className="frontend-tab__right-side">
+        <div className="tech-tab__right-side">
           {FrontEndTechs.map((tech) => {
             return (
-              <div>
+              <div className="tech-tab__logo-wrapper">
                 <img src={tech.url} alt={tech.name} />
                 <p>{tech.name}</p>
               </div>
@@ -35,14 +35,14 @@ const TabContainer = () => (
       <p>Back - end</p>
     </TabHeader>
     <TabContent name="tab2">
-      <section className="frontend-tab">
-        <div className="frontend-tab__left-side">
+      <section className="tech-tab">
+        <div className="tech-tab__left-side">
           <h2 className="tab-header-title">Bạck end content</h2>
           <p>
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
-        <div className="frontend-tab__right-side">
+        <div className="tech-tab__right-side">
           {FrontEndTechs.map((tech) => {
             return (
               <div>
@@ -59,14 +59,14 @@ const TabContainer = () => (
       <p>Mobile stack</p>
     </TabHeader>
     <TabContent name="tab3">
-      <section className="frontend-tab">
-        <div className="frontend-tab__left-side">
+      <section className="tech-tab">
+        <div className="tech-tab__left-side">
           <h2 className="tab-header-title">Mobile stack content</h2>
           <p>
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
-        <div className="frontend-tab__right-side">
+        <div className="tech-tab__right-side">
           {FrontEndTechs.map((tech) => {
             return (
               <div>
@@ -83,14 +83,14 @@ const TabContainer = () => (
       <p>Mobile Platform</p>
     </TabHeader>
     <TabContent name="tab4">
-      <section className="frontend-tab">
-        <div className="frontend-tab__left-side">
+      <section className="tech-tab">
+        <div className="tech-tab__left-side">
           <h2 className="tab-header-title">Mobile platform</h2>
           <p>
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
-        <div className="frontend-tab__right-side">
+        <div className="tech-tab__right-side">
           {FrontEndTechs.map((tech) => {
             return (
               <div>

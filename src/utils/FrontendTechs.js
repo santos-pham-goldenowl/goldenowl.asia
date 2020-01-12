@@ -7,11 +7,11 @@ import angular from '../assets/images/angular.png';
 
 const FrontEndTechs = [
   {
-    name: 'html',
+    name: 'html 5',
     url: html,
   },
   {
-    name: 'css',
+    name: 'css 3',
     url: css,
   },
   {
