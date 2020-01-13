@@ -23,14 +23,14 @@ class Services extends Component {
 
   render() {
     const servicesNode = (
-      <section className="services">
+      <section className="services" onMouseLeave={this.handleServicesOff}>
         <div className="services__arrow-wrapper" onMouseEnter={this.handleServicesOn}>
-          <Link to="/services">
+          <Link className="services__link" to="/services">
             <h4 className="sub-header__text">Services</h4>
           </Link>
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
         </div>
-        <div className="services__items" onMouseLeave={this.handleServicesOff}>
+        <div className="services__items">
           {ServicesData.map(service => {
             return (
               <Link to={`/services/${service.link}`}>

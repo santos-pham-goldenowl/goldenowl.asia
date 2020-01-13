@@ -4,13 +4,25 @@
 .services
 
   &__items
-    @include dropdown-content(410px, 226px)
+    @include dropdown-content(434px, 230px)
     z-index: 50
 
+    &:before
+      content: ""
+      width: 400px
+      height: 350px
+      display: block
+      position: absolute
+      bottom: 150px
+      left: 20px
+      z-index: -1
+
   h4
-    letter-spacing: .5px
     margin-top: 0
     margin-bottom: 0
+
+  &__link
+    z-index: 60
 
   &__arrow-wrapper
     display: flex
@@ -23,17 +35,18 @@
     justify-content: center
     width: 50px
     text-align: left
+    padding-right: 10px
 
   &__service-description-wrapper
     text-align: left
-    letter-spacing: .5px
-    p
-      font-size: 14px !important
-      line-height: initial !important
+    p, h4
+      font-size: 16px !important
+      line-height: 22px !important
 
   &__service
     display: flex
-    padding: 15px
+    padding: 20px 10px
+
     &:hover
       background-color: #fafafa
       border-radius: 6px
