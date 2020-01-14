@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ArrowRight from '../ArrowRight';
 import './index.sass';
 
@@ -13,28 +14,28 @@ function Missions() {
       </div>
       <div className="missions__right-side">
         <div>
-          <div className="missions__item">
+          <Link className="missions__item" to="/services/web-development">
             <h3 className="missions__item-title">Web development</h3>
             <ArrowRight width="33px" left="33px" />
-          </div>
-          <div className="missions__item">
+          </Link>
+          <Link className="missions__item" to="/services/ux-ui">
             <h3 className="missions__item-title">UX UI design</h3>
             <ArrowRight width="33px" left="33px" />
-          </div>
-          <div className="missions__item">
+          </Link>
+          <Link className="missions__item" to="/services/development-team">
             <h3 className="missions__item-title">Development team</h3>
             <ArrowRight width="33px" left="33px" />
-          </div>
+          </Link>
         </div>
         <div>
-          <div className="missions__item">
+          <Link className="missions__item" to="/services/mobile-development">
             <h3 className="missions__item-title">Mobile development</h3>
             <ArrowRight width="33px" left="33px" />
-          </div>
-          <div className="missions__item">
+          </Link>
+          <Link className="missions__item" to="/services/project-management">
             <h3 className="missions__item-title">Project management</h3>
             <ArrowRight width="33px" left="33px" />
-          </div>
+          </Link>
         </div>
       </div>
     </section>

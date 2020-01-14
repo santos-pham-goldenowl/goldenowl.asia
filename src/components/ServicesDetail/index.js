@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './index.sass';
 import ServicesDetailContent from '../../utils/ServicesDetail';
 
@@ -8,20 +9,20 @@ const ServicesDetail = () => {
       <div className="services-detail__main-content">
         <div className="services-detail__top-content">
           {ServicesDetailContent.topContent.map((c) => (
-            <div className="services-detail__flex-item">
+            <Link className="services-detail__flex-item" to={`/services/${c.link}`}>
               <img src={c.url} alt={c.title} />
               <h3>{c.title}</h3>
               <p>{c.content}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="services-detail__bottom-content">
           {ServicesDetailContent.bottomContent.map((c) => (
-            <div className="services-detail__flex-item">
+            <Link className="services-detail__flex-item" to={`/services/${c.link}`}>
               <img src={c.url} alt={c.title} />
               <h3>{c.title}</h3>
               <p>{c.content}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
