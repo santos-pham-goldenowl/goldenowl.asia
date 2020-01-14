@@ -1,8 +1,8 @@
 # <img src='src/assets/images/go.png' width="50" height="50"/> Golden Owl
 ## Project description
-### `Golden Owl company website`
+### Golden Owl company website
 ## Clone or download project
-### `https://github.com/GoldenOwlAsia/goldenowl.asia`
+### https://github.com/GoldenOwlAsia/goldenowl.asia
 ## Run project
 ### `yarn start`
 ### Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
