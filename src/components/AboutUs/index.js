@@ -15,7 +15,7 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="about-us__right-side">
-        <img src={research} alt="research" />
+        <img src={research} alt="research" loading="lazy" />
       </div>
     </section>
   );

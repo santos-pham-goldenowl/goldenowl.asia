@@ -9,7 +9,7 @@ const Work = () => {
     <section className="work">
       <div className="work__top-container">
         <div className="work__one box">
-          <img src={coworker} alt="co-worker" />
+          <img src={coworker} alt="co-worker" loading="lazy" />
         </div>
         <div className="work__two box">
           <h2>Lorem ispum dolor</h2>
@@ -18,10 +18,10 @@ const Work = () => {
           </p>
         </div>
         <div className="work__three box">
-          <img src={discuss} alt="discuss" />
+          <img src={discuss} alt="discuss" loading="lazy" />
         </div>
         <div className="work__four box">
-          <img src={conference} alt="conference" />
+          <img src={conference} alt="conference" loading="lazy"/>
         </div>
         <div className="work__five box">
           <h2>Lorem ispum dolor</h2>
