@@ -1,4 +1,4 @@
-# <img src='src/assets/images/go.png' width="50" height="50"/> Golden Owl
+# <img src='src/assets/images/golden_owl.png' />
 ## Project description
 ### Golden Owl company website
 ## Clone or download project
