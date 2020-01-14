@@ -17,19 +17,17 @@ class TabContainer extends Component {
           <section className="tech-tab">
             <div className="tech-tab__left-side">
               <h2 className="tab-header-title">Front end content</h2>
-              <p>
+              <p className="tech-tab__description">
                 Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
               </p>
             </div>
             <div className="tech-tab__right-side">
-              {FrontEndTechs.map((tech) => {
-                return (
-                  <div className="tech-tab__logo-wrapper">
-                    <img src={tech.url} alt={tech.name} />
-                    <p>{tech.name}</p>
-                  </div>
-                );
-              })}
+              {FrontEndTechs.map((tech) => (
+                <div className="tech-tab__logo-wrapper">
+                  <img src={tech.url} alt={tech.name} />
+                  <p className="tech-tab__logo-name">{tech.name}</p>
+                </div>
+              ))}
             </div>
           </section>
         </TabContent>
@@ -41,19 +39,17 @@ class TabContainer extends Component {
           <section className="tech-tab">
             <div className="tech-tab__left-side">
               <h2 className="tab-header-title">Back end content</h2>
-              <p>
+              <p className="tech-tab__description">
                 Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
               </p>
             </div>
             <div className="tech-tab__right-side">
-              {FrontEndTechs.map((tech) => {
-                return (
-                  <div>
-                    <img src={tech.url} alt={tech.name} />
-                    <p>{tech.name}</p>
-                  </div>
-                );
-              })}
+              {FrontEndTechs.map((tech) => (
+                <div className="tech-tab__logo-wrapper">
+                  <img src={tech.url} alt={tech.name} />
+                  <p>{tech.name}</p>
+                </div>
+              ))}
             </div>
           </section>
         </TabContent>
@@ -65,19 +61,17 @@ class TabContainer extends Component {
           <section className="tech-tab">
             <div className="tech-tab__left-side">
               <h2 className="tab-header-title">Mobile stack content</h2>
-              <p>
+              <p className="tech-tab__description">
                 Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
               </p>
             </div>
             <div className="tech-tab__right-side">
-              {FrontEndTechs.map((tech) => {
-                return (
-                  <div>
-                    <img src={tech.url} alt={tech.name} />
-                    <p>{tech.name}</p>
-                  </div>
-                );
-              })}
+              {FrontEndTechs.map((tech) => (
+                <div className="tech-tab__logo-wrapper">
+                  <img src={tech.url} alt={tech.name} />
+                  <p>{tech.name}</p>
+                </div>
+              ))}
             </div>
           </section>
         </TabContent>
@@ -89,19 +83,17 @@ class TabContainer extends Component {
           <section className="tech-tab">
             <div className="tech-tab__left-side">
               <h2 className="tab-header-title">Mobile platform</h2>
-              <p>
+              <p className="tech-tab__description">
                 Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
               </p>
             </div>
             <div className="tech-tab__right-side">
-              {FrontEndTechs.map((tech) => {
-                return (
-                  <div>
-                    <img src={tech.url} alt={tech.name} />
-                    <p>{tech.name}</p>
-                  </div>
-                );
-              })}
+              {FrontEndTechs.map((tech) => (
+                <div className="tech-tab__logo-wrapper">
+                  <img src={tech.url} alt={tech.name} />
+                  <p>{tech.name}</p>
+                </div>
+              ))}
             </div>
           </section>
         </TabContent>

@@ -1,5 +1,5 @@
 import React from 'react';
-import technology from '../../assets/images/technologyDf.png';
+import technology from '../../assets/images/technology-cover.png';
 import './index.sass';
 
 const TechnologyDescription = () => {
