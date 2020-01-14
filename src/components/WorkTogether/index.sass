@@ -2,7 +2,6 @@
 
 .work
   padding: 50px 0
-  border-bottom: 1px solid $slightGray
 
   img
     width: 100%
@@ -116,8 +115,10 @@
         text-align: center
         justify-content: center
 
-@media only screen and (min-width: 1400px)
+@media only screen and (min-width: 1300px)
   .work
+    padding-bottom: 0
+
     &__bottom-container
       padding-left: 90px
       padding-right: 90px
@@ -128,8 +129,17 @@
         grid-template-columns: repeat(3, auto)
 
     &__two, &__five
-      padding: 0 100px
+      padding: 100px
 
     .box
       p
         font-size: 26px
+
+    &__six.box
+      padding-top: 80px
+      padding-bottom: 80px
+
+    span
+      display: block
+      margin: 80px 100px 0 100px
+      border-bottom: 1px solid $slightGray

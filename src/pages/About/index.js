@@ -7,7 +7,7 @@ import AboutUs from '../../components/AboutUs/index';
 import IntroductionDetail from '../../components/IntroductionDetail/index';
 import Work from '../../components/WorkTogether/index';
 import about_bg from '../../assets/images/about_bg.png';
-import Home from '../../components/Home/index';
+import BreadCrumb from '../../components/BreadCrumb/index';
 import './index.sass';
 
 class About extends Component {
@@ -17,10 +17,12 @@ class About extends Component {
         <div className="about-container__top-wrapper">
           <MainHeader />
           <SubHeader />
-          <Home pageName="About Us" />
+          <BreadCrumb>
+            <p>About</p>
+          </BreadCrumb>
           <AboutUs />
         </div>
-        <img class="about-container__wavy-bg" src={about_bg} alt="wavy-bg" />
+        <img class="about-container__wavy-bg" src={about_bg} alt="wavy-bg" loading="lazy" />
         <IntroductionDetail />
         <Work />
         <Partners />

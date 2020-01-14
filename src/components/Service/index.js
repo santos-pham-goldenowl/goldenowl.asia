@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MainHeader from '../../components/MainHeader/index';
 import SubHeader from '../../components/SubHeader/index';
-import Home from '../../components/Home/index';
+import BreadCrumb from '../../components/BreadCrumb/index';
 import Footer from '../../components/Footer/index';
 import './index.sass';
 
@@ -10,7 +11,10 @@ const Service = (props) => {
     <section className="service">
       <MainHeader />
       <SubHeader />
-      <Home pageName={props.pageName} />
+      <BreadCrumb>
+        <Link to="/services">Services/</Link>
+        <p>{props.pageName}</p>
+      </BreadCrumb>
       <div className="service__top-content">
         <div className="service__single-padding">
           <h1 className="service__title">
@@ -37,7 +41,7 @@ const Service = (props) => {
       </div>
       <div className="service__logos-flex-container">
         <div className="service__images-wrapper">
-          {props.serviceData.map((image) => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} />
+          {props.serviceData.map((image) => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy"/>
           )}
         </div>
         <p>

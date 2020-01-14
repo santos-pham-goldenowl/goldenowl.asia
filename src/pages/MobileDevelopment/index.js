@@ -8,7 +8,7 @@ const MobileDevelopment = () => (
   <Service
     coverImage={coverImage}
     serviceData={MobileDevelopmentData}
-    pageName="Services/Mobile Development"
+    pageName="Mobile Development"
     otherServiceImages={dataOrdered.mobileDevelopment}
   />
 );

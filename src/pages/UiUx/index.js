@@ -8,7 +8,7 @@ const UiUxService = () => (
   <Service
     coverImage={coverImage}
     serviceData={UiUxData}
-    pageName="Services/UX UI design"
+    pageName="UX UI design"
     otherServiceImages={dataOrdered.uiUxDesign}
   />
 );
