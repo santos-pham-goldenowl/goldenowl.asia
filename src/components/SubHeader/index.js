@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Services from '../SubHeaderServices/index';
-import ArrowRight from '../ArrowRight/index';
+import arrowRight from '../../assets/images/arrow-right.svg';
 import './index.sass';
 
 const SubHeader = () => (
@@ -22,7 +22,7 @@ const SubHeader = () => (
     </div>
     <div className="sub-header__contact-wrapper">
       <h4 className="sub-header__contact-title sub-header__text">Contact us</h4>
-      <ArrowRight width="20px" left="21px" />
+      <img className="sub-header__arrow-right" src={arrowRight} alt="arrow-right" />
     </div>
   </header>
 );
