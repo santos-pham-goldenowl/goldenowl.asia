@@ -78,8 +78,12 @@ class MainHeader extends Component {
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
               </li>
               <li style={{borderBottom: "1px solid #f1e3b9"}}></li>
-              <li className="main-header__flex-item" style={{paddingTop: "20px"}}>Services</li>
-              <li className="main-header__flex-item">Technology</li>
+              <li className="main-header__flex-item" style={{paddingTop: "20px"}}>
+                <Link to="/services">Services</Link>
+              </li>
+              <li className="main-header__flex-item">
+                <Link to="/technology">Technology</Link>
+              </li>
               <li className="main-header__flex-item">Testimonial</li>
               <li className="main-header__flex-item">Contact us</li>
             </ul>
