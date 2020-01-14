@@ -3,6 +3,10 @@
 .service
   padding: 0 30px
 
+  .main-header, .home-back
+    padding-left: 0
+    padding-right: 0
+
   p
     line-height: 30px
 
@@ -56,6 +60,7 @@
 
 @media only screen and (min-width: 700px)
   .service
+
     &__grid
       display: grid
       grid-template: repeat(2, auto) / repeat(2, auto)
@@ -79,6 +84,10 @@
 @media only screen and (min-width: 1023px)
   .service
     padding: 0
+
+    .main-header, .home-back
+      padding-left: 50px
+      padding-right: 50px
 
     h1
       padding-bottom: 0 !important
@@ -179,7 +188,9 @@
 
 @media only screen and (min-width: 1300px)
   .service
-
+    .main-header, .home-back
+      padding-left: 100px
+      padding-right: 100px
     p
       line-height: 40px
       font-size: 26px
