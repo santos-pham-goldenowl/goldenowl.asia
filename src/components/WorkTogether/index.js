@@ -84,6 +84,7 @@ const Work = () => {
           </div>
         </div>
       </div>
+      <span />
     </section>
   );
 }
