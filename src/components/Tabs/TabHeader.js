@@ -1,8 +1,22 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 class TabHeader extends React.Component {
 
-  onClick() {
+  static propTypes = {
+    for: PropTypes.string.isRequired
+  }
+
+  state = {
+    active: false
+  }
+
+  static getDerivedStateFromProps(nextProps) {
+    return {
+      active: nextProps.selected == nextProps.for
+    }
+  }
+
+  onClick = (e) => {
     if(this.props.onSelect) {
       this.props.onSelect(this.props.for);
     }
@@ -10,7 +24,7 @@ class TabHeader extends React.Component {
 
   render() {
     return (
-      <div className="header" onClick={this.onClick.bind(this)}>{this.props.children}
+      <div className={`header header-active-${this.state.active}`} onClick={this.onClick}>{this.props.children}
       </div>
     );
   }
