@@ -8,7 +8,7 @@ const ProjectManagementService = () => (
   <Service
     coverImage={coverImage}
     serviceData={ProjectManagementData}
-    pageName="Services/Project Management"
+    pageName="Project Management"
     otherServiceImages={dataOrdered.projectManagement}
   />
 );

@@ -17,7 +17,7 @@ const IntroductionDetail = () => {
         </p>
       </div>
       <div className="introduction-detail__right-side">
-        <img src={working} alt="working" />
+        <img src={working} alt="working" loading="lazy" />
       </div>
     </section>
   );

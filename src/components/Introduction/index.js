@@ -6,7 +6,7 @@ function Introduction() {
   return (
     <section className="introduction">
       <div className="introduction__left-side">
-        <img src={study} alt={study} />
+        <img src={study} alt={study} loading="lazy" />
       </div>
       <div className="introduction__right-side">
         <h2 className="introduction__title">We are Golden Owl</h2>

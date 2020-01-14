@@ -15,7 +15,7 @@ function Quote() {
         </div>
       </div>
       <div className="quote__right-side">
-        <img src={work} alt="work" />
+        <img src={work} alt="work" loading="lazy" />
       </div>
     </section>
   );

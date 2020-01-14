@@ -3,7 +3,7 @@ import MainHeader from '../../components/MainHeader/index';
 import SubHeader from '../../components/SubHeader/index';
 import Footer from '../../components/Footer/index';
 import TechnologyDescription from '../../components/TechnologyDescription/index';
-import Home from '../../components/Home/index';
+import Home from '../../components/BreadCrumb/index';
 import CompanyQualities from '../../components/CompanyQualities/index';
 import TechnologyDetail from '../../components/TechnologyDetail/index';
 import './index.sass';
@@ -14,9 +14,11 @@ const TechnologyContainer = () => {
     <section className="technology-container">
       <MainHeader />
       <SubHeader />
-      <Home pageName="Technology" />
+      <Home>
+        <p>Technology</p>
+      </Home>
       <TechnologyDescription />
-      <img className="wavy-bg" src={wavyBg} alt="wavy-bg" />
+      <img className="wavy-bg" src={wavyBg} alt="wavy-bg" loading="lazy" />
       <CompanyQualities />
       <TechnologyDetail />
       <Footer />

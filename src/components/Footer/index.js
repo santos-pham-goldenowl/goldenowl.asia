@@ -47,7 +47,7 @@ const Footer = () => (
     <div className="footer__copyright">
       <p>Copyright 2019 © Golden Owl Consulting</p>
       <div>
-        {socialIcons.map((icon) => <img src={icon.url} className="footer__social-icon" alt={icon.name} />)}
+        {socialIcons.map((icon) => <img src={icon.url} className="footer__social-icon" alt={icon.name} loading="lazy" />)}
       </div>
     </div>
   </footer>

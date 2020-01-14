@@ -22,7 +22,7 @@ function Home() {
       <SubHeader />
       <Quote />
       <Missions />
-      <img className="home__wavy-bg" src={bg} alt="wavy-background" />
+      <img className="home__wavy-bg" src={bg} alt="wavy-background" loading="lazy" />
       <Introduction />
       <CompanyQuality />
       <Achieves />
