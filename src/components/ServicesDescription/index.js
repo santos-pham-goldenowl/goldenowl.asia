@@ -8,10 +8,7 @@ const ServicesDescription = () => {
       <div className="services-description__left-side">
         <h1 className="services-description__title">Services</h1>
         <p className="services-description__text">
-          Lorem ipsum dolor sit amet, mea denique molestiae at, homero dicunt eripuit ad vel. Nonumy reformidans contentiones eu pro, autem nemore nec ex. An pro accumsan.
-        </p>
-        <p className="services-description__text">
-          Hinc malorum cu mel, nisl consequat mei an, eos ne zril rationibus. Ut commodo lobortis duo. Pro te tale fuisset, ei omnesque probatus eleifend mei. Civibus indoctum cum ad, sit et expetenda consequat definitiones, sea justo deserunt interpretaris id. In eam blandit hendrerit.
+          We provide software solutions, mostly about website and mobile applications for a wide variety of fields, from finance to commerce and so on. We are proud of being very selective and have one of the best full-stacked developer training programs in Ho Chi Minh City.
         </p>
       </div>
       <div className="services-description__right-side">

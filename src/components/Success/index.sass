@@ -1,0 +1,38 @@
+@import '../../styles/variables.sass'
+
+.success
+  padding: 30px
+  background-color: $softGray
+
+  &__map
+    width: 100%
+
+  &__title
+    padding-bottom: 10px
+    padding-top: 30px
+
+@media only screen and (min-width: 1300px)
+  .success
+    padding: 100px
+    // margin-top: 100px
+
+    .flex-box:first-child
+      padding-top: 80px
+
+    &__title
+      padding-top: 80px
+      border-bottom: 4px solid $darkGray
+      padding-bottom: 20px
+
+    &__left-side
+      width: 80%
+
+    &__intro
+      line-height: 40px
+
+    &__paragraph
+      padding-top: 20px
+      line-height: 30px
+
+    &__map
+      margin-top: 60px

@@ -35,6 +35,7 @@ p, h1, h2, h3
 
 h1, h2, h3, h4, h5, h6
   letter-spacing: 0.2px
+  margin: 0
 
 @font-face
   src: url("#{$proxima-font-path}/ProximaNova-Regular.otf")
@@ -55,8 +56,8 @@ h4, h5, strong
   font-family: ProximaNovaBold
 
 h6
-  margin: 0
   font-family: ProximaNovaRegular
+  color: $darkGray
 
 h1
   padding-bottom: 20px
@@ -106,3 +107,62 @@ p, span
 
 .no-scroll
   overflow: hidden
+
+.heading-xl
+  font-size: 34px
+
+.heading-lg
+  font-size: 26px
+  padding-bottom: 20px
+
+.heading-base
+  font-size: 20px
+
+.text-xl
+  font-size: 18px
+
+.heading-small
+  font-size: 24px
+  color: $softBlack
+
+.heading-x-small
+  font-size: 20px
+  color: $softBlack
+
+.text-lg
+  font-size: 16px
+
+@media only screen and (min-width: 1300px)
+  .flex-one
+    flex: 1
+
+  .flex-two
+    flex: 2
+
+  .flex-box
+    display: flex
+
+  .heading-xl
+    font-size: 60px
+
+  .heading-lg
+    font-size: 50px
+    line-height: 1.5
+    padding-bottom: 30px
+
+  .heading-base
+    font-size: 34px
+
+  .heading-small
+    font-size: 24px
+    padding-bottom: 20px
+
+  .heading-x-small
+    font-size: 20px
+    padding-bottom: 12px
+
+  .text-xl
+    font-size: 26px
+
+  .text-lg
+    font-size: 20px
