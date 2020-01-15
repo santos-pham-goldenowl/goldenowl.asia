@@ -4,10 +4,11 @@ import SubHeader from '../../components/SubHeader/index';
 import Footer from '../../components/Footer/index';
 import Partners from '../../components/Partners/index';
 import AboutUs from '../../components/AboutUs/index';
-import IntroductionDetail from '../../components/IntroductionDetail/index';
-import Work from '../../components/WorkTogether/index';
 import about_bg from '../../assets/images/about_bg.png';
 import BreadCrumb from '../../components/BreadCrumb/index';
+import Success from '../../components/Success/index';
+import Develop from '../../components/Develop/index';
+import IntroductionDetail from '../../components/IntroductionDetail/index';
 import './index.sass';
 
 class About extends Component {
@@ -24,7 +25,8 @@ class About extends Component {
         </div>
         <img class="about-container__wavy-bg" src={about_bg} alt="wavy-bg" loading="lazy" />
         <IntroductionDetail />
-        <Work />
+        <Success />
+        <Develop />
         <Partners />
         <Footer />
       </section>

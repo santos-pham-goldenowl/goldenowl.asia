@@ -8,22 +8,27 @@ const data = [
   {
     title: 'Mobile development',
     url: mobileSmall,
+    link: 'mobile-development'
   },
   {
     title: 'UX UI design',
     url: uiUXSmall,
+    link: 'ux-ui'
   },
   {
     title: 'Project management',
     url: projectMana,
+    link: 'project-management'
   },
   {
     title: 'Development team',
     url: developmentTeam,
+    link: 'development-team'
   },
   {
     title: 'Website development',
     url: webSmall,
+    link: 'web-development'
   },
 ];
 

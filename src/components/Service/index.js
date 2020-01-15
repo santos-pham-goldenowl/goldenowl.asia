@@ -89,10 +89,10 @@ const Service = (props) => {
           <div className="service__grid">
             {props.otherServiceImages.map((image) => {
               return (
-                <div className="service__grid-item">
+                <Link className="service__grid-item" to={`/services/${image.link}`}>
                   <img src={image.url} alt={image.name} />
                   <h3 className="service__grid-item-title">{image.title}</h3>
-                </div>
+                </Link>
               )
             })}
           </div>

@@ -10,8 +10,8 @@ function Quote() {
           “If you deprive yourself of offshore development and your competitors do not, you are putting yourself out of business”
         </h1>
         <div className="quote__author">
-          <strong className="quote__text-bold">Lee Kuan Yew - </strong>
-          <span>the first Prime Minister of Singapore.</span>
+          <strong className="quote__text-bold text-xl">Lee Kuan Yew - </strong>
+          <span className="text-xl">the first Prime Minister of Singapore.</span>
         </div>
       </div>
       <div className="quote__right-side">
