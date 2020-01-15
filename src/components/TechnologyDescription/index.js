@@ -6,11 +6,11 @@ const TechnologyDescription = () => {
   return(
     <section className="technology-description">
       <div className="technology-description__left-side">
-        <h1>Technology</h1>
-        <p>
+        <h2 className="heading-lg">Technology</h2>
+        <p className="text-xl">
         Lorem ipsum dolor sit amet, mea denique molestiae at, homero dicunt eripuit ad vel. Nonumy reformidans contentiones eu pro, autem nemore nec ex. An pro accumsan .
         </p>
-        <p>
+        <p className="text-xl">
           Hinc malorum cu mel, nisl consequat mei an, eos ne zril rationibus. Ut commodo lobortis duo. Pro te tale fuisset, ei omnesque probatus eleifend mei. Civibus indoctum cum ad, sit et expetenda consequat definitiones, sea justo deserunt interpretaris id. In eam blandit hendrerit.
         </p>
       </div>

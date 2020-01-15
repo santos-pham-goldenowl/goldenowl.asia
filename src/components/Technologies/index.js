@@ -4,7 +4,7 @@ import './index.sass';
 
 const Technologies = () => (
   <section className="technologies">
-    <h2 className="technologies__title">Technologies we use</h2>
+    <h2 className="technologies__title heading-lg">Technologies we use</h2>
     <div className="technologies__grid">
       {technologiesLogo.map((logo, index) => <img className={`technologies__${logo.name}`} key={index} src={logo.url} alt={logo.name} />)}
     </div>

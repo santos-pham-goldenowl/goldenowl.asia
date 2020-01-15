@@ -5,7 +5,7 @@ import './index.sass';
 
 const Feedback = () => (
   <section className="feedback">
-    <h2 className="feedback__title">What our clients say</h2>
+    <h3 className="heading-base">What our clients say</h3>
     <AutoCarousel content={feedback} />
   </section>
 );

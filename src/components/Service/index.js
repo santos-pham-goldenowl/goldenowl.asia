@@ -17,23 +17,23 @@ const Service = (props) => {
       </BreadCrumb>
       <div className="service__top-content">
         <div className="service__single-padding">
-          <h1 className="service__title">
+          <h1 className="service__title heading-xl">
             Lorem ipsum dolor sit ame
           </h1>
-          <p className="service__introduction service__short-intro">
+          <p className="service__short-intro text-xl">
             Lorem ipsum dolor sit amet, choro feugait sit eu, his purto unum delenit et. Duo ei ridens interesset, no quo volumus dissentias. Vim iisque vidisse vivendum et. Vel ad perpetua consequat, has decore ridens vituperatoribus ut. Duo paulo essent ea.
           </p>
         </div>
         <div className="service__gray-bg">
           <img className="service__web-image" src={props.coverImage} alt="web development" />
           <div className="service__single-padding service__gray-bg-text">
-            <h2>
+            <h3 className="heading-base">
               Lorem ispum dolor
-            </h2>
-            <p className="service__introduction">
+            </h3>
+            <p className="service__introduction text-xl">
               Lorem ipsum dolor sit amet, utamur viderer diceret pri ut. Cu purto quas atqui duo, mei vidit nemore detraxit id. Mea ne unum contentiones, ex vim labitur vocibus theophrastus. Rebum pericula ne mea.
             </p>
-            <p className="service__introduction">
+            <p className="service__introduction text-xl">
               Affert deseruisse definitiones his at. Ex harum singulis convenire vis, vel justo labitur at, per incorrupte liberavisse an. Eam ex perfecto deserunt, duo debitis officiis in, eu
             </p>
           </div>
@@ -44,7 +44,7 @@ const Service = (props) => {
           {props.serviceData.map((image) => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy"/>
           )}
         </div>
-        <p>
+        <p className="text-lg">
           We have more than 50 developers who know the leading website platform like the back of their hand ensure guaranteed digital successs.
         </p>
       </div>
@@ -53,7 +53,7 @@ const Service = (props) => {
           <h2>
             Lorem ispum dolor
           </h2>
-          <p>
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
@@ -62,7 +62,7 @@ const Service = (props) => {
             Lorem ispum
           dolor
           </h2>
-          <p>
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
@@ -71,7 +71,7 @@ const Service = (props) => {
             Lorem ispum
           dolor
           </h2>
-          <p>
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
@@ -80,18 +80,18 @@ const Service = (props) => {
             Lorem ispum
           dolor
           </h2>
-          <p>
+          <p className="text-lg">
             Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
           </p>
         </div>
         <div className="service__other-services-container">
-          <h2 className="service__other-services-title">Other services</h2>
+          <h3 className="service__other-services-title heading-base">Other services</h3>
           <div className="service__grid">
             {props.otherServiceImages.map((image) => {
               return (
                 <Link className="service__grid-item" to={`/services/${image.link}`}>
                   <img src={image.url} alt={image.name} />
-                  <h3 className="service__grid-item-title">{image.title}</h3>
+                  <h4 className="service__grid-item-title heading-small">{image.title}</h4>
                 </Link>
               )
             })}
