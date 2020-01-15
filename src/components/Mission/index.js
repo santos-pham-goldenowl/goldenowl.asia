@@ -7,8 +7,8 @@ function Missions() {
   return (
     <section className="missions">
       <div className="missions__left-side">
-        <h2 className="missions__title">What we do</h2>
-        <p>
+        <h3 className="missions__title heading-base">What we do</h3>
+        <p className="text-xl">
           Lorem ipsum dolor sit amet, natum persequeris vel cu. Nominavi temporibus ad sit. Pri nonumy laudem complectitur ea. Modus eloquentiam id has.
         </p>
       </div>
