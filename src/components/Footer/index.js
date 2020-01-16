@@ -10,7 +10,7 @@ const Footer = () => (
       <div className="footer__logo-wrapper">
         <img src={go} alt="golden-logo" />
       </div>
-      <div className="footer__flex-container">
+      <div className="footer__grid-container">
         <div>
           <h3>COMPANY</h3>
           <a href="#">About Us</a>

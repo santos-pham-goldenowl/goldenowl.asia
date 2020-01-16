@@ -77,8 +77,8 @@ class MainHeader extends Component {
                 <span>English</span>
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
               </li>
-              <li style={{borderBottom: "1px solid #f1e3b9"}}></li>
-              <li className="main-header__flex-item" style={{paddingTop: "20px"}}>
+              <li style={{borderBottom: "1px solid #f1e3b9", marginBottom: "20px"}}></li>
+              <li className="main-header__flex-item">
                 <Link to="/services">Services</Link>
               </li>
               <li className="main-header__flex-item">
@@ -86,6 +86,22 @@ class MainHeader extends Component {
               </li>
               <li className="main-header__flex-item">Testimonial</li>
               <li className="main-header__flex-item">Contact us</li>
+              <li style={{borderBottom: "1px solid #f1e3b9", marginBottom: "20px"}}></li>
+              <li className="main-header__flex-item">
+                <Link to="/services/web-development">Web development</Link>
+              </li>
+              <li className="main-header__flex-item">
+                <Link to="/services/project-management">Project management</Link>
+              </li>
+              <li className="main-header__flex-item">
+                <Link to="/services/mobile-development">Mobile development</Link>
+              </li>
+              <li className="main-header__flex-item">
+                <Link to="/services/ux-ui">UX UI design</Link>
+              </li>
+              <li className="main-header__flex-item">
+                <Link to="/services/development-team">Development team</Link>
+              </li>
             </ul>
           </div>
         </header>
