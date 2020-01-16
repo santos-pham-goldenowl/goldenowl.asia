@@ -5,7 +5,7 @@ import './index.sass';
 const Develop = () => (
   <section className="develop">
     <h2 className="develop__title heading-base">
-      Develop with tools you <br /> already love
+      Develop with tools you already love
     </h2>
     <div className="flex-box">
       <div>
