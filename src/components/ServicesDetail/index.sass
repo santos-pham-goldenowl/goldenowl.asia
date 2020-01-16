@@ -1,19 +1,25 @@
 @import '../../styles/variables.sass'
 
 .services-detail
-  &__main-content
-    padding: 0 30px
 
   p
     line-height: 30px
+
+  &__main-content
+    padding: 0 30px
 
   &__paragraphs
     padding: 0 30px
     > div
       padding-top: 30px
 
+  &__flex-item
+    img
+      height: 264px
+
 @media only screen and (min-width: 1023px)
   .services-detail
+
     &__main-content
       padding: 50px
 
@@ -21,20 +27,19 @@
       display: grid
       grid-template-columns: repeat(3, auto)
       justify-content: space-between
-      grid-gap: 80px
+      grid-gap: 50px
 
     &__bottom-content
       display: grid
-      grid-template-columns: repeat(2, auto)
+      grid-template-columns: repeat(2, 350px)
       justify-content: center
-      grid-gap: 80px
+      grid-gap: 50px
       margin-top: 130px
 
     &__flex-item
       display: flex
       flex-direction: column
       img
-        height: 300px
         transition: transform .2s
         margin-bottom: 40px
         &:hover
@@ -67,11 +72,14 @@
   .services-detail
     padding-top: 100px
 
-    &__main-content
-      padding: 50px 100px 150px 100px
+    &__top-content
+      grid-gap: 80px
 
     &__bottom-content
-      grid-template-columns: repeat(2, 350px)
+      grid-gap: 80px
+
+    &__main-content
+      padding: 50px 100px 150px 100px
 
     &__paragraphs
       padding: 150px 100px
