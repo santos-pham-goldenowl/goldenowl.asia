@@ -6,7 +6,7 @@ import './index.sass';
 const BreadCrumb = (props) => {
   return (
     <section className="breadcrumb">
-      <div>
+      <div className="breadcrumb__content">
         <Link to="/">
           <div>
             <img src={home} alt="home" loading="lazy" />
