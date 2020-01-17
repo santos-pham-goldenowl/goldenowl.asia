@@ -118,12 +118,12 @@ p, span
   padding-bottom: 20px
 
 .heading-small
-  font-size: 18px
+  font-size: 22px
   color: $softBlack
   padding-bottom: 20px
 
 .heading-x-small
-  font-size: 16px
+  font-size: 20px
   color: $softBlack
   padding-bottom: 12px
 
@@ -135,12 +135,22 @@ p, span
   font-size: 18px
   line-height: 30px
 
+.grid-colums-gap-50
+  grid-column-gap: 50px
+
+.grid-gap-20
+  grid-gap: 20px
+
 @media only screen and (min-width: 1023px)
   .flex-box
     display: flex
 
   .flex-one
     flex: 1
+
+  .grid-three-cols
+    display: grid
+    grid-template-columns: repeat(3, auto)
 
 @media only screen and (min-width: 1300px)
   .flex-two
@@ -160,9 +170,6 @@ p, span
 
   .heading-small
     font-size: 24px
-
-  .heading-x-small
-    font-size: 20px
 
   .text-xl
     font-size: 26px

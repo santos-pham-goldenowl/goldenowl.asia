@@ -1,10 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="69.999" height="79.941" viewBox="0 0 69.999 79.941">
-  <g id="Group_8" data-name="Group 8" transform="translate(0 -0.032)">
-    <path id="Fill_1" data-name="Fill 1" d="M34.945,79.941h0L6.5,71.875,0,0H.074L70,.027,63.556,71.82,34.945,79.941Zm.109-73.549.219,67.9,23.014-6.338L63.72,6.392ZM11.821,48.557l.027,8.422,20.53,5.569V15.418H25.417L25.335,52.26Z" transform="translate(0 0.032)" fill="#d4b830"/>
-    <g id="Group_6" data-name="Group 6" transform="translate(11.81 15.454)">
-      <path id="Fill_2" data-name="Fill 2" d="M18.1,46.253c-.9-.274-5.351-1.481-9.883-2.716L0,41.315V37.172c0-4.06,0-4.142.409-4.005.218.082,3.221.905,6.661,1.865l6.252,1.728.055-18.38L13.432,0h6.825V23.373c0,18.572-.055,23.373-.246,23.373-.136-.027-1.01-.247-1.911-.494" transform="translate(0.175 0.187)" fill="#ebebeb"/>
-      <path id="Fill_4" data-name="Fill 4" d="M.027,41.534,0,33.112s8.627,2.442,13.514,3.7L13.6,0h6.962V47.1Z" transform="translate(0.011 0.023)" fill="#ebebeb"/>
+<svg id="_3" data-name="3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H35V39.97H0Z" transform="translate(0 0.016)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Rectangle" fill="none" stroke="#3e403d" stroke-miterlimit="10" stroke-width="1">
+    <rect width="80" height="80" rx="10" stroke="none"/>
+    <rect x="0.5" y="0.5" width="79" height="79" rx="9.5" fill="none"/>
+  </g>
+  <g id="Group_3" data-name="Group 3" transform="translate(23 20)">
+    <path id="Clip_2-2" data-name="Clip 2" d="M0,0H35V39.97H0Z" transform="translate(0 0.016)" fill="none"/>
+    <g id="Group_3-2" data-name="Group 3" clip-path="url(#clip-path)">
+      <path id="Fill_1" data-name="Fill 1" d="M17.472,39.97h0L3.249,35.938,0,0,35,.014l-3.221,35.9L17.473,39.97Zm8.354-18.092h0l-.1,3.4L18.905,27.1l.068,4.17,9.433-2.47L29.348,17.3l-6.962.781V11.933l7.426-.027.3-4.2-11.208.055.15,15.28,6.769-1.165Zm-19.7,2.493c-.13,0-.13.269-.13,2.02v2.071L10.1,29.573l1.116.3.009,0c1.847.5,3.442.937,3.816,1.052.448.122.888.233.956.247a13.964,13.964,0,0,0,.1-2.4c.018-1.684.025-4.461.025-9.284V7.8H12.709l-.028,9.19-.027,9.19-3.126-.864-1.567-.436c-.981-.272-1.69-.469-1.763-.5A.258.258,0,0,0,6.122,24.371Z" transform="translate(0 0.016)" fill="#3e403d"/>
     </g>
-    <path id="Fill_7" data-name="Fill 7" d="M0,67.9V0H28.666L23.233,61.56,0,67.9ZM16.6,37.391h0l-.191,6.8L2.758,47.844l.136,8.339,18.865-4.938,1.884-23.017L9.719,29.793V17.5l14.852-.055.6-8.394-22.414.11.3,30.56L16.6,37.392Z" transform="translate(35.054 6.396)" fill="#fdd83c"/>
   </g>
 </svg>
