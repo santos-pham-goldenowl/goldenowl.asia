@@ -5,7 +5,7 @@ import './index.sass';
 
 const BreadCrumb = (props) => {
   return (
-    <section className="home-back">
+    <section className="breadcrumb">
       <div>
         <Link to="/">
           <div>
@@ -13,7 +13,7 @@ const BreadCrumb = (props) => {
             <span>/</span>
           </div>
         </Link>
-        <div className="home-back__text">{props.children}</div>
+        <div className="breadcrumb__text">{props.children}</div>
       </div>
     </section>
   );
