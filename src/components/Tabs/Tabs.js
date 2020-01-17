@@ -17,7 +17,7 @@ class Tabs extends React.Component {
 
     selected = selected || children.filter(c => c.type === TabHeader)[0].props.for;
 
-    const tabHeaders = children.filter(c => c.type == TabHeader).map((c) => (
+    const tabHeaders = children.filter(c => c.type === TabHeader).map((c) => (
       React.cloneElement(c, {onSelect: this.toogleTab.bind(this), selected})
     ));
 

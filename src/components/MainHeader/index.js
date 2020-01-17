@@ -57,7 +57,7 @@ class MainHeader extends Component {
           <div className='main-header__left-side-show'>
             <div className="main-header__logo-wrapper">
               <Link to="/">
-                <img src={goldenOwl} alt="company-logo" loading="lazy" loading="lazy" />
+                <img src={goldenOwl} alt="company-logo" loading="lazy" />
               </Link>
             </div>
             <div className="main-header__hamburger" onClick={this.handleMenu}>

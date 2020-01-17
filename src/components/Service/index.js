@@ -4,6 +4,8 @@ import MainHeader from '../../components/MainHeader/index';
 import SubHeader from '../../components/SubHeader/index';
 import BreadCrumb from '../../components/BreadCrumb/index';
 import Footer from '../../components/Footer/index';
+import line from '../../assets/images/line.svg';
+import yelllowCopy from '../../assets/images/rectangle-copy.svg';
 import './index.sass';
 
 const Service = (props) => {
@@ -18,84 +20,73 @@ const Service = (props) => {
       <div className="service__top-content">
         <div className="service__single-padding">
           <h1 className="service__title heading-xl">
-            Lorem ipsum dolor sit ame
+            {props.serviceData.pageTitle}
           </h1>
           <p className="service__short-intro text-xl">
-            Lorem ipsum dolor sit amet, choro feugait sit eu, his purto unum delenit et. Duo ei ridens interesset, no quo volumus dissentias. Vim iisque vidisse vivendum et. Vel ad perpetua consequat, has decore ridens vituperatoribus ut. Duo paulo essent ea.
+            {props.serviceData.intro}
           </p>
         </div>
         <div className="service__gray-bg">
           <img className="service__web-image" src={props.coverImage} alt="web development" />
           <div className="service__single-padding service__gray-bg-text">
             <h3 className="heading-base">
-              Lorem ispum dolor
+              {props.serviceData.subTitle}
             </h3>
             <p className="service__introduction text-xl">
-              Lorem ipsum dolor sit amet, utamur viderer diceret pri ut. Cu purto quas atqui duo, mei vidit nemore detraxit id. Mea ne unum contentiones, ex vim labitur vocibus theophrastus. Rebum pericula ne mea.
-            </p>
-            <p className="service__introduction text-xl">
-              Affert deseruisse definitiones his at. Ex harum singulis convenire vis, vel justo labitur at, per incorrupte liberavisse an. Eam ex perfecto deserunt, duo debitis officiis in, eu
+              {props.serviceData.subIntro}
             </p>
           </div>
         </div>
       </div>
-      <div className="service__logos-flex-container">
-        <div className="service__images-wrapper">
-          {props.serviceData.map((image) => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy"/>
+      <div className="service__slogan service__single-padding">
+        <h2 className="heading-lg">{props.serviceData.slogan.title}</h2>
+        <div className="service__slogan-grid">
+          <div className="service__slogan-flex-box">
+            <div>
+              <h3 className="heading-base service__slogan-title">
+                {props.serviceData.slogan.leftContent.title}</h3>
+              <p className="text-xl">{props.serviceData.slogan.leftContent.content}</p>
+            </div>
+            <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}} />
+          </div>
+          <div className="service__slogan-flex-box">
+            <div>
+              <h3 className="heading-base heading-base service__slogan-title">        {props.serviceData.slogan.centerContent.title}
+              </h3>
+              <p className="text-xl">{props.serviceData.slogan.centerContent.content}</p>
+            </div>
+            <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}} />
+          </div>
+          <div className="service__slogan-flex-box">
+            <div>
+              <h3 className="heading-base service__slogan-title">
+                {props.serviceData.slogan.rightContent.title}
+              </h3>
+              <p className="text-xl">{props.serviceData.slogan.rightContent.content}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img className="service__dotted-square" src={yelllowCopy} alt="yellow-copy" />
+      <div className="service__yellow-rectangle flex-box">
+        <div className="flex-two">
+          <h3 className="heading-base">{props.serviceData.achieves.title}</h3>
+          <p className="text-lg">{props.serviceData.achieves.description}</p>
+        </div>
+        <div className="flex-one service__logos-wrapper">
+          {props.serviceData.logos.map((image) => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy"/>
           )}
         </div>
-        <p className="text-lg">
-          We have more than 50 developers who know the leading website platform like the back of their hand ensure guaranteed digital successs.
-        </p>
       </div>
-      <div className="service__paragraph-container">
-        <div className="service__paragraph-flex-item">
-          <h2>
-            Lorem ispum dolor
-          </h2>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
-          </p>
-        </div>
-        <div className="service__paragraph-flex-item">
-          <h2>
-            Lorem ispum
-          dolor
-          </h2>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
-          </p>
-        </div>
-        <div className="service__paragraph-flex-item">
-          <h2>
-            Lorem ispum
-          dolor
-          </h2>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
-          </p>
-        </div>
-        <div className="service__paragraph-flex-item">
-          <h2>
-            Lorem ispum
-          dolor
-          </h2>
-          <p className="text-lg">
-            Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
-          </p>
-        </div>
-        <div className="service__other-services-container">
-          <h3 className="service__other-services-title heading-base">Other services</h3>
-          <div className="service__grid">
-            {props.otherServiceImages.map((image) => {
-              return (
-                <Link className="service__grid-item" to={`/services/${image.link}`}>
-                  <img src={image.url} alt={image.name} />
-                  <h4 className="service__grid-item-title heading-small">{image.title}</h4>
-                </Link>
-              )
-            })}
-          </div>
+      <div className="service__other-services-container service__single-padding">
+        <h3 className="service__other-services-title heading-base">Other services</h3>
+        <div className="service__grid">
+          {props.otherServiceImages.map((image) => (
+            <Link className="service__grid-item" to={`/services/${image.link}`}>
+              <img src={image.url} alt={image.name} />
+              <h4 className="service__grid-item-title heading-small">{image.title}</h4>
+            </Link>
+          ))}
         </div>
       </div>
       <Footer />
