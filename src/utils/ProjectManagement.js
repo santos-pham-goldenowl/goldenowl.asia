@@ -3,8 +3,10 @@ import slack from '../assets/images/service_logos/ProjectManagement/slack.svg';
 import trello from '../assets/images/service_logos/ProjectManagement/trello.svg';
 import fire from '../assets/images/service_logos/ProjectManagement/fire.svg';
 import wave from '../assets/images/service_logos/ProjectManagement/wave.svg';
+import coverImage from '../assets/images/service_logos/ProjectManagement/cover.svg';
 
 const ProjectManagementData = {
+  coverImage: coverImage,
   pageTitle: 'Project management',
   subTitle: 'What makes our project management success',
   intro: 'The success of each project has the vital contribution of a project manager. Golden Owl is proud of having a professional project management team who not only always stays side-by-side to support our development team for a good result but is also a friendly partner to client.',

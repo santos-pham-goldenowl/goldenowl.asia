@@ -19,7 +19,7 @@ ReactDOM.render(
     <Route exact path="/about" component={About} />
     <Route exact path="/services/web-development" component={WebDevelopment} />
     <Route exact path="/services/mobile-development" component={MobileDevelopment} />
-    <Route exact path="/services/ux-ui" component={UiUxService} />
+    <Route exact path="/services/ux-ui-design" component={UiUxService} />
     <Route exact path="/services/project-management" component={ProjectManagementService} />
     <Route exact path="/services/development-team" component={DevelopmentTeam} />
     <Route exact path="/services" component={Services} />

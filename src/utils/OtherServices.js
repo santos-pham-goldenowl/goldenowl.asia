@@ -13,7 +13,7 @@ const data = [
   {
     title: 'UX UI design',
     url: uiUXSmall,
-    link: 'ux-ui'
+    link: 'ux-ui-design'
   },
   {
     title: 'Project management',

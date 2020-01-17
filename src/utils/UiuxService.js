@@ -2,8 +2,10 @@ import ai from '../assets/images/service_logos/UiUx/ai.svg';
 import inVision from '../assets/images/service_logos/UiUx/in-vision.svg';
 import ps from '../assets/images/service_logos/UiUx/ps.svg';
 import sketch from '../assets/images/service_logos/UiUx/sketch.svg';
+import coverImage from '../assets/images/service_logos/UiUx/cover.svg';
 
 const UiUxData = {
+  coverImage: coverImage,
   pageTitle: 'UX UI design',
   subTitle: 'We offer a design services.',
   intro: 'A good user experience is the best glue between a brand and (potential) customers. We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.',

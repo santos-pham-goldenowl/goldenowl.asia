@@ -97,7 +97,7 @@ class MainHeader extends Component {
                 <Link to="/services/mobile-development">Mobile development</Link>
               </li>
               <li className="main-header__flex-item">
-                <Link to="/services/ux-ui">UX UI design</Link>
+                <Link to="/services/ux-ui-design">UX UI design</Link>
               </li>
               <li className="main-header__flex-item">
                 <Link to="/services/development-team">Development team</Link>

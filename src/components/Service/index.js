@@ -27,18 +27,18 @@ const Service = (props) => {
           </p>
         </div>
         <div className="service__gray-bg">
-          <img className="service__web-image" src={props.coverImage} alt="web development" />
+          <img className="service__web-image" src={props.serviceData.coverImage} alt="web development" />
           <div className="service__single-padding service__gray-bg-text">
-            <h3 className="heading-base">
+            <h2 className="heading-lg">
               {props.serviceData.subTitle}
-            </h3>
+            </h2>
             <p className="service__introduction text-xl">
               {props.serviceData.subIntro}
             </p>
           </div>
         </div>
       </div>
-      <div className="service__slogan service__single-padding">
+      <div className="service__slogan">
         <h2 className="heading-lg">{props.serviceData.slogan.title}</h2>
         <div className="service__slogan-grid">
           <div className="service__slogan-flex-box">

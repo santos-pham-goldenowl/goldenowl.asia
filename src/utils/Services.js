@@ -21,7 +21,7 @@ const ServicesData = [
     name: 'UX UI Design',
     url: circle,
     description: 'Lorem ipsum dolor sit amet, te albucius',
-    link: 'ux-ui'
+    link: 'ux-ui-design'
   },
   {
     name: 'Project management',

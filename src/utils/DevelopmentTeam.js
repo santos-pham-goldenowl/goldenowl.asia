@@ -5,11 +5,11 @@ import react from '../assets/images/service_logos/WebDevelopment/react.svg';
 import angular from '../assets/images/service_logos/WebDevelopment/angular.svg';
 import mock from '../assets/images/service_logos/WebDevelopment/mock.svg';
 import plus from '../assets/images/service_logos/WebDevelopment/50plus.svg';
-import coverImage from '../assets/images/service_logos/WebDevelopment/cover.svg';
+import coverImage from '../assets/images/service_logos/DevelopmentTeam/cover.svg';
 
-const WebDevelopmentData = {
+const DevelopmentTeamData= {
   coverImage: coverImage,
-  pageTitle: 'Web development',
+  pageTitle: 'Development Team',
   subTitle: 'What can we bring',
   intro: 'We - Golden Owl is a professional company with great experience in web development from small to big web project in many from many fields such as business, finance, management, etc.',
   subIntro: 'As a professional company, we are able to work on many programming languages for web development. We always update the latest technologies so that we can serve the customer the best solutions.',
@@ -64,4 +64,4 @@ const WebDevelopmentData = {
   ]
 }
 
-export default WebDevelopmentData;
+export default DevelopmentTeamData;

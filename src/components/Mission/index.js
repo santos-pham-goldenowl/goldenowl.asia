@@ -18,7 +18,7 @@ function Missions() {
             <h3 className="missions__item-title">Web development</h3>
             <ArrowRight width="33px" left="33px" />
           </Link>
-          <Link className="missions__item" to="/services/ux-ui">
+          <Link className="missions__item" to="/services/ux-ui-design">
             <h3 className="missions__item-title">UX UI design</h3>
             <ArrowRight width="33px" left="33px" />
           </Link>

@@ -21,7 +21,7 @@ const Footer = () => (
           <h3>SERVICES</h3>
           <Link to="/services/web-development">Web Development</Link>
           <Link to="/services/mobile-development">Mobile Development</Link>
-          <Link to="/services/ux-ui">UX/UI Design</Link>
+          <Link to="/services/ux-ui-design">UX/UI Design</Link>
           <Link to="/services/project-management">Project Management</Link>
           <Link to="/services/development-team">Development Team</Link>
         </div>

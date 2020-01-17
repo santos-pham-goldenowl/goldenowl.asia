@@ -23,7 +23,7 @@ const ServicesDetailContent = {
       title: 'UX/UI design',
       url: service3,
       content: 'Software products must be unique, eye-pleasing and user-friendly. Our UI/ UX designers create brand identity concepts, prototypes, great interfaces, and more.',
-      link: 'ux-ui'
+      link: 'ux-ui-design'
     },
   ],
   bottomContent: [
