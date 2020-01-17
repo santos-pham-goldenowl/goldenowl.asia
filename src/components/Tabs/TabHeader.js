@@ -12,7 +12,7 @@ class TabHeader extends React.Component {
 
   static getDerivedStateFromProps(nextProps) {
     return {
-      active: nextProps.selected == nextProps.for
+      active: nextProps.selected === nextProps.for
     }
   }
 

@@ -67,7 +67,7 @@ const Service = (props) => {
           </div>
         </div>
       </div>
-      <img className="service__dotted-square" src={yelllowCopy} />
+      <img className="service__dotted-square" src={yelllowCopy} alt="yellow-copy" />
       <div className="service__yellow-rectangle flex-box">
         <div className="flex-two">
           <h3 className="heading-base">{props.serviceData.achieves.title}</h3>

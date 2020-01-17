@@ -5,10 +5,6 @@ import react from '../assets/images/service_logos/WebDevelopment/react.svg';
 import angular from '../assets/images/service_logos/WebDevelopment/angular.svg';
 import mock from '../assets/images/service_logos/WebDevelopment/mock.svg';
 import plus from '../assets/images/service_logos/WebDevelopment/50plus.svg';
-import amazon from '../assets/images/service_logos/WebDevelopment/amazon.svg';
-import objectC from '../assets/images/service_logos/WebDevelopment/object-C.svg';
-import arrow from '../assets/images/service_logos/WebDevelopment/arrow.svg';
-import php from '../assets/images/service_logos/WebDevelopment/php.svg';
 
 const WebDevelopmentData = {
   pageTitle: 'Web development',

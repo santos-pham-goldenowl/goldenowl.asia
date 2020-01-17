@@ -2,7 +2,6 @@ import ai from '../assets/images/service_logos/UiUx/ai.svg';
 import inVision from '../assets/images/service_logos/UiUx/in-vision.svg';
 import ps from '../assets/images/service_logos/UiUx/ps.svg';
 import sketch from '../assets/images/service_logos/UiUx/sketch.svg';
-import xd from '../assets/images/service_logos/UiUx/xd.svg';
 
 const UiUxData = {
   pageTitle: 'UX UI design',

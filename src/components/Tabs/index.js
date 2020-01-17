@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import TabContent from './TabContent';
 import TabHeader from './TabHeader';
 import Tabs from './Tabs';
