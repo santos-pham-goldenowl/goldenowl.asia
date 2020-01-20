@@ -115,6 +115,17 @@
   .tab-content-container
     padding-top: 100px
 
+  @keyframes example
+    0%
+      left: 200px
+    25%
+      background-color: yellow
+    50%
+      background-color: blue
+    100%
+      background-color: green
   .header-group
     margin-left: 100px
     margin-right: 100px
+    .header-active-true
+      transition-timing-function: cubic-bezier(0,1,0.35,0)
