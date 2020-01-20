@@ -1,9 +1,9 @@
-import skype from '../assets/images/service_logos/ProjectManagement/skype.svg';
-import slack from '../assets/images/service_logos/ProjectManagement/slack.svg';
-import trello from '../assets/images/service_logos/ProjectManagement/trello.svg';
-import fire from '../assets/images/service_logos/ProjectManagement/fire.svg';
-import wave from '../assets/images/service_logos/ProjectManagement/wave.svg';
-import coverImage from '../assets/images/service_logos/ProjectManagement/cover.svg';
+import skype from '../assets/images/service/ProjectManagement/skype.svg';
+import slack from '../assets/images/service/ProjectManagement/slack.svg';
+import trello from '../assets/images/service/ProjectManagement/trello.svg';
+import fire from '../assets/images/service/ProjectManagement/fire.svg';
+import wave from '../assets/images/service/ProjectManagement/wave.svg';
+import coverImage from '../assets/images/service/ProjectManagement/cover.svg';
 
 const ProjectManagementData = {
   coverImage: coverImage,

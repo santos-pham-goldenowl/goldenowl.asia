@@ -1,8 +1,8 @@
-import ai from '../assets/images/service_logos/UiUx/ai.svg';
-import inVision from '../assets/images/service_logos/UiUx/in-vision.svg';
-import ps from '../assets/images/service_logos/UiUx/ps.svg';
-import sketch from '../assets/images/service_logos/UiUx/sketch.svg';
-import coverImage from '../assets/images/service_logos/UiUx/cover.svg';
+import ai from '../assets/images/service/UiUx/ai.svg';
+import inVision from '../assets/images/service/UiUx/in-vision.svg';
+import ps from '../assets/images/service/UiUx/ps.svg';
+import sketch from '../assets/images/service/UiUx/sketch.svg';
+import coverImage from '../assets/images/service/UiUx/cover.svg';
 
 const UiUxData = {
   coverImage: coverImage,

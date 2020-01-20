@@ -1,8 +1,8 @@
-import mobileSmall from '../assets/images/service_logos/OtherServices/mobile-small.svg';
-import uiUXSmall from '../assets/images/service_logos/OtherServices/ui-ux-small.svg';
-import projectMana from '../assets/images/service_logos/OtherServices/project-mana.svg';
-import developmentTeam from '../assets/images/service_logos/OtherServices/development-team-small.svg';
-import webSmall from '../assets/images/service_logos/OtherServices/web-small.svg';
+import mobileSmall from '../assets/images/service/OtherServices/mobile-small.svg';
+import uiUXSmall from '../assets/images/service/OtherServices/ui-ux-small.svg';
+import projectMana from '../assets/images/service/OtherServices/project-mana.svg';
+import developmentTeam from '../assets/images/service/OtherServices/development-team-small.svg';
+import webSmall from '../assets/images/service/OtherServices/web-small.svg';
 
 const data = [
   {
