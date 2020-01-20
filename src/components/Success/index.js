@@ -5,9 +5,11 @@ import map from '../../assets/images/map.svg';
 const Success = () => (
   <section className="success">
     <div className="flex-box">
-      <h1 className="flex-one success__left-side heading-lg">
-        Lorem ipsum dolor sit amet, libris delenit
-      </h1>
+      <div className="flex-one">
+        <h1 className="heading-lg success__left-side success__main-title">
+          Lorem ipsum dolor sit amet, libris delenit
+        </h1>
+      </div>
       <p className="flex-one success__intro text-xl">
         We pride ourselves on having clients’ satisfaction in the products we built. Our proven experience is deep from 30+ Mobile Applications and 45+ Website projects across 7 countries, including America, the United Kingdom, Malaysia, Australia, Thailand, Indonesia, Singapore, etc.
       </p>
