@@ -8,7 +8,7 @@ const Develop = () => (
       Develop with tools you already love
     </h2>
     <div className="flex-box">
-      <div>
+      <div className="develop__left-side">
         <h3 className="develop__left-side-title heading-base">
           Work with your beloved and familiar language
         </h3>
