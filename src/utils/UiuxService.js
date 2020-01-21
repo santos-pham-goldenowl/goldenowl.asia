@@ -27,7 +27,7 @@ const UiUxData = {
   },
   achieves: {
     title: 'Seamless Integration with popular design tools.',
-    description: 'Lorem ipsum dolor sit amet, at per habeo solet, vidisse graecis periculis eu mei. Ea illum ullamcorper mei. Eos vocibus fabellas tacimates cu, at usu eros discere dissentias. Sea cu oratio aeterno alterum, dicant corpora id vis.'
+    description: 'Design tool plays a very importance role in creating design process. Thanks to tools such as Invision and Adobe Photoshop as well as other ones, amazing designs are produced and published.'
   },
   logos: [
     {
