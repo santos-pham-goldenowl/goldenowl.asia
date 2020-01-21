@@ -19,31 +19,27 @@ const responsive = {
     slidesToSlide: 1
   },
 };
-const SlideCarousel = (props) => {
-  return (
-    <Carousel
-      swipeable={false}
-      draggable={false}
-      showDots={false}
-      responsive={responsive}
-      ssr={true}
-      infinite={true}
-      keyBoardControl={true}
-      customTransition="all .5"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      deviceType={props.deviceType}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-    {props.content.map((c, index) => {
-      return (
-        <div className="slide-image-wrapper" style={{display: "flex", justifyContent: "center"}}>
-          <img className={`logo-${c.name}`} src={c.url} alt={c.name} />
-        </div>
-      )
-    })}
-    </Carousel>
-  );
-}
+const SlideCarousel = props => (
+  <Carousel
+    swipeable={false}
+    draggable={false}
+    showDots={false}
+    responsive={responsive}
+    ssr={true}
+    infinite={true}
+    keyBoardControl={true}
+    customTransition="all .5"
+    transitionDuration={500}
+    containerClass="carousel-container"
+    deviceType={props.deviceType}
+    dotListClass="custom-dot-list-style"
+    itemClass="carousel-item-padding-40-px"
+  >
+  {props.content.map(c => (
+    <div className="slide-image-wrapper" style={{display: "flex", justifyContent: "center"}}>
+      <img className={`logo-${c.name}`} src={c.url} alt={c.name} />
+    </div>
+  ))}
+  </Carousel>
+);
 export default SlideCarousel;

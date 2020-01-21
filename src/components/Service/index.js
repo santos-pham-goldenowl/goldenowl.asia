@@ -8,7 +8,7 @@ import line from '../../assets/images/line.svg';
 import yelllowCopy from '../../assets/images/rectangle-copy.svg';
 import './index.sass';
 
-const Service = (props) => (
+const Service = props => (
   <section className="service">
     <MainHeader />
     <SubHeader />
