@@ -87,6 +87,15 @@
   &__slogan
     padding: 50px 30px 0 30px
 
+  &__grid-item-title
+    font-size: 16px
+
+  &__grid-item
+    img
+      width: 100px
+      object-fit: contain
+      margin-right: 20px
+
 @media only screen and (min-width: 700px)
   .service
     &__grid
@@ -107,7 +116,7 @@
         margin-right: 30px
       img
         height: 120px
-        width: 150px
+        width: 100px
 
     &__yellow-rectangle
       display: flex
@@ -116,6 +125,8 @@
       > div:first-child
         padding-right: 30px
 
+    &__grid-item-title
+      font-size: 18px
 
 @media only screen and (min-width: 1023px)
   .service
@@ -242,7 +253,7 @@
     &__grid-item
       display: flex
       align-items: center
-      padding: 10px
+      padding: 20px
       width: initial
       &:nth-child(1), &:nth-child(3)
         margin-right: 30px
@@ -250,12 +261,14 @@
         height: 120px
         width: 150px
 
+    &__grid-item-title
+      font-size: 22px
+
     &__yellow-rectangle
       display: flex
       padding: 50px
       > div:first-child
         padding-right: 30px
-
 
 @media only screen and (min-width: 1300px)
   .service
@@ -336,3 +349,6 @@
 
     &__gray-bg-text
       bottom: 130px
+
+    &__grid-item-title
+      font-size: 24px

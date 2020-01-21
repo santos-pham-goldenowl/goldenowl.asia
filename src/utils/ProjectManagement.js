@@ -27,7 +27,7 @@ const ProjectManagementData = {
     }
   },
   achieves: {
-    title: 'Lorem ipsum dolor sit amet, at per habeo solet',
+    title: 'Efficient management with management tool',
     description: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc.'
   },
   logos: [
