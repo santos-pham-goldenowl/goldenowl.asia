@@ -30,7 +30,7 @@ const WebDevelopmentData = {
   },
   achieves: {
     title: 'Seamless Integration with 50+ software platforms.',
-    description: 'Lorem ipsum dolor sit amet, at per habeo solet, vidisse graecis periculis eu mei. Ea illum ullamcorper mei. Eos vocibus fabellas tacimates cu, at usu eros discere dissentias. Sea cu oratio aeterno alterum, dicant corpora id vis.'
+    description: 'Our projects are build in many programming languages like Javascript, Ruby on Rails, etc. We know which one is more suitable for your project and make it better than ever.'
   },
   logos: [
     {

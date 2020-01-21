@@ -28,7 +28,7 @@ const ProjectManagementData = {
   },
   achieves: {
     title: 'Lorem ipsum dolor sit amet, at per habeo solet',
-    description: 'Lorem ipsum dolor sit amet, at per habeo solet, vidisse graecis periculis eu mei. Ea illum ullamcorper mei. Eos vocibus fabellas tacimates cu, at usu eros discere dissentias. Sea cu oratio aeterno alterum, dicant corpora id vis.'
+    description: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc.'
   },
   logos: [
     {
