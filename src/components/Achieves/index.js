@@ -4,7 +4,7 @@ import './index.sass';
 const Achieves = () => (
   <section className="achieves">
     <p className="text-lg">
-      Worldwide Cutomer’s base: Singapore, Australia, UK, Hong Kong, the US and more…
+      Worldwide Cutomer’s base: Singapore, Australia, UK, <br/> Hong Kong, the US and more…
     </p>
     <div className="achieves__main-content">
       <div className="achieves__item-flex">
