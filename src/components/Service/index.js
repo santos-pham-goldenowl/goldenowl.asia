@@ -13,7 +13,8 @@ const Service = (props) => (
     <MainHeader />
     <SubHeader />
     <BreadCrumb>
-      <Link to="/services">Services/</Link>
+      <Link to="/services">Services</Link>
+      <span>/</span>
       <p>{props.pageName}</p>
     </BreadCrumb>
     <div className="service__top-content">
