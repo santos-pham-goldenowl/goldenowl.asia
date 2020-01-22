@@ -33,7 +33,6 @@
 
   a
     display: block
-    padding: 10px 0
     color: $darkGray
     font-size: 18px !important
     white-space: nowrap
@@ -64,7 +63,8 @@
 
   &__top-content-wrapper
     background-repeat: no-repeat
-    background-color: #f8f8f8
+    background-color: $softGray
+    padding-top: 50px
 
 @media only screen and (min-width: 767px)
   .footer
@@ -92,6 +92,8 @@
       background-image: url('../../assets/images/Footer/map.svg')
       padding: 150px 50px 80px 50px
       text-align: left
+      background-position: center
+      background-repeat: no-repeat
 
     &__top-content-grid
       width: 100%

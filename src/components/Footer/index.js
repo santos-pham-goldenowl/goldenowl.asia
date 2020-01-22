@@ -51,24 +51,30 @@ const Footer = () => (
       <div className="footer__bottom-grid-container">
         <div>
           <h3 className="footer__bottom-grid-title">Our Services</h3>
-          <Link to="/services/web-development">Web Development</Link>
-          <Link to="/services/mobile-development">Mobile Development</Link>
-          <Link to="/services/ux-ui-design">UX/UI Design</Link>
-          <Link to="/services/project-management">Project Management</Link>
-          <Link to="/services/development-team">Development Team</Link>
+          <div style={{lineHeight: "32px"}}>
+            <Link to="/services/web-development">Web Development</Link>
+            <Link to="/services/mobile-development">Mobile Development</Link>
+            <Link to="/services/ux-ui-design">UX/UI Design</Link>
+            <Link to="/services/project-management">Project Management</Link>
+            <Link to="/services/development-team">Development Team</Link>
+          </div>
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Links</h3>
-          <Link to="/about">About Us</Link>
-          <a href="#">Careers</a>
-          <a href="#">Testimonials</a>
-        </div>
+          <div style={{lineHeight: "32px"}}>
+            <Link to="/about">About Us</Link>
+            <a href="#">Careers</a>
+            <a href="#">Testimonials</a>
+            </div>
+          </div>
         <div>
           <h3 className="footer__bottom-grid-title">Others</h3>
-          <a href="#">Careers</a>
-          <a href="#">Contact Us</a>
-          <a href="#">FAQ</a>
-          <a href="#">Blog</a>
+          <div style={{lineHeight: "32px"}}>
+            <a href="#">Careers</a>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Blog</a>
+          </div>
         </div>
       </div>
     </div>
