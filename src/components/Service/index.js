@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import MainHeader from '../../components/MainHeader/index';
 import SubHeader from '../../components/SubHeader/index';
 import BreadCrumb from '../../components/BreadCrumb/index';
@@ -93,4 +94,8 @@ const Service = props => (
   </section>
 );
 
+Service.propTypes = {
+  otherServiceImages: PropTypes.array,
+  serviceData: PropTypes.object
+}
 export default Service;

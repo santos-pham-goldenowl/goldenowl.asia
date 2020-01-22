@@ -1,24 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import go from '../../assets/images/go.png';
+import PropTypes from 'prop-types';
+import go from '../../assets/images/golden_owl.png';
 import socialIcons from '../../utils/SocialIcons';
 import './index.sass';
 
 const Footer = () => (
   <footer className="footer">
-    <div className="footer__main-content">
-      <div className="footer__logo-wrapper">
-        <img src={go} alt="golden-logo" />
-      </div>
-      <div className="footer__grid-container">
+    <div className="footer__top-content-wrapper">
+      <h4 className="heading-small footer__top-content-title">Area we serve</h4>
+      <div className="footer__top-content-grid">
         <div>
-          <h3>COMPANY</h3>
-          <a href="#">About Us</a>
-          <a href="#">Careers</a>
-          <a href="#">Testimonials</a>
+          <h5 className="heading-x-small">Ho Chi Minh city</h5>
+          <p>MB Bank Building, 538 <br/> Cach Mang Thang Tam Ward 11, District 3</p>
+          <p>justin@goldenowl.asia</p>
+          <p>(+84) 912 878985</p>
         </div>
         <div>
-          <h3>SERVICES</h3>
+          <h5 className="heading-x-small">Ha Noi</h5>
+          <p>02 Le Van Thiem, Nhan Chinh <br/> Thanh Xuan, Ha Noi</p>
+          <p>+(84) 91 287 89 85</p>
+        </div>
+        <div>
+          <h5 className="heading-x-small">London</h5>
+          <p>HERTFORDSHIRE OFFICE <br/> 8 Parkway Porters Wood St Albans</p>
+          <p>0345 456 0522</p>
+        </div>
+        <div>
+          <h5 className="heading-x-small">Sydney</h5>
+          <p>Suite 8, Level 2, 1 Box Road <br/> Taren Point, NSW 2229</p>
+          <p>(02) 8212 4222</p>
+        </div>
+      </div>
+    </div>
+    <div className="footer__bottom-content-wrapper">
+      <div className="footer__logo-wrapper">
+        <div>
+          <img src={go} alt="golden-logo" />
+        </div>
+        <div className="footer__social-icons-wrapper">
+          {socialIcons.map(icon => <img src={icon.url}
+                                        className={`footer__social-icon footer__icon-${icon.name}`}
+                                        alt={icon.name} loading="lazy" />)}
+        </div>
+        <div className="footer__contact">
+          <span className="footer__phone">(+84) 912 878985</span>
+          <span className="footer__email">admin@goldenowl.asia</span>
+        </div>
+      </div>
+      <div className="footer__bottom-grid-container">
+        <div>
+          <h3 className="footer__bottom-grid-title">Our Services</h3>
           <Link to="/services/web-development">Web Development</Link>
           <Link to="/services/mobile-development">Mobile Development</Link>
           <Link to="/services/ux-ui-design">UX/UI Design</Link>
@@ -26,31 +58,28 @@ const Footer = () => (
           <Link to="/services/development-team">Development Team</Link>
         </div>
         <div>
-          <h3>MENU 3</h3>
-          <a href="#">FAQ</a>
-          <a href="#">Blog</a>
-          <a href="#">Lorem ipsum dolor</a>
+          <h3 className="footer__bottom-grid-title">Links</h3>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Testimonials</a>
         </div>
         <div>
-          <h3>CONTACT</h3>
-          <a href="#">Lorem ipsum dolor</a>
-          <a href="#">Lorem ipsum dolor</a>
-          <a href="#">Lorem ipsum dolor</a>
-          <a href="#">Lorem ipsum dolor</a>
+          <h3 className="footer__bottom-grid-title">Others</h3>
+          <a href="#">Careers</a>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+          <a href="#">Blog</a>
         </div>
       </div>
-    </div>
-    <div className="footer__contact">
-      <span className="footer__phone">(+84) 912 878985</span>
-      <span className="footer__email">admin@goldenowl.asia</span>
     </div>
     <div className="footer__copyright">
       <p>Copyright 2019 © Golden Owl Consulting</p>
-      <div>
-        {socialIcons.map((icon) => <img src={icon.url} className="footer__social-icon" alt={icon.name} loading="lazy" />)}
-      </div>
     </div>
   </footer>
 );
+
+Footer.propTypes = {
+  socialIcons: PropTypes.array.isRequired,
+}
 
 export default Footer;
