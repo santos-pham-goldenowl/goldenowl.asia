@@ -59,7 +59,7 @@ const Footer = () => (
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Links</h3>
-          <a href="#">About Us</a>
+          <Link to="/about">About Us</Link>
           <a href="#">Careers</a>
           <a href="#">Testimonials</a>
         </div>
