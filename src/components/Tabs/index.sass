@@ -62,10 +62,11 @@
       display: flex
       align-items: center
       img
+        margin-right: 20px
         width: 40px
-        margin-right: 40px
       p
         text-transform: capitalize
+        font-size: 18px
 
     &__description
       color: $softBlack
@@ -115,17 +116,13 @@
   .tab-content-container
     padding-top: 100px
 
-  @keyframes example
-    0%
-      left: 200px
-    25%
-      background-color: yellow
-    50%
-      background-color: blue
-    100%
-      background-color: green
   .header-group
     margin-left: 100px
     margin-right: 100px
-    .header-active-true
-      transition-timing-function: cubic-bezier(0,1,0.35,0)
+
+  .tech-tab
+    display: flex
+
+    &__logo-wrapper
+      img
+        width: 60px
