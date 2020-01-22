@@ -2,9 +2,17 @@
 @import '../../styles/mixins.sass'
 
 .services
-
   &__items
-    @include dropdown-content(434px, 230px)
+    position: absolute
+    top: 60px
+    padding-left: 30px
+    padding-right: 30px
+    padding-top: 20px
+    padding-bottom: 20px
+    background-color: $white
+    width: 434px
+    border-radius: 10px
+
     z-index: 50
 
     &:before
@@ -16,6 +24,7 @@
       bottom: 150px
       left: 20px
       z-index: -1
+      display: block
   h4
     margin-top: 0
     margin-bottom: 0
@@ -50,3 +59,13 @@
     &:hover
       background-color: #fafafa
       border-radius: 6px
+
+@media only screen and (min-width: 1023px)
+  .services
+    &__items
+      right: 150px
+
+@media only screen and (min-width: 1300px)
+  .services
+    &__items
+      right: 230px

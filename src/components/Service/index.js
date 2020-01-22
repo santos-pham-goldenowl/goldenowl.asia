@@ -43,23 +43,23 @@ const Service = props => (
       <h2 className="heading-lg">{props.serviceData.slogan.title}</h2>
       <div className="service__slogan-grid">
         <div className="service__slogan-flex-box">
-          <div>
+          <div style={{width: "380px"}}>
             <h3 className="heading-base service__slogan-title">
               {props.serviceData.slogan.leftContent.title}</h3>
             <p className="text-xl">{props.serviceData.slogan.leftContent.content}</p>
           </div>
-          <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}} />
         </div>
+        <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}} />
         <div className="service__slogan-flex-box">
-          <div>
-            <h3 className="heading-base heading-base service__slogan-title">        {props.serviceData.slogan.centerContent.title}
+          <div style={{width: "380px"}}>
+            <h3 className="heading-base service__slogan-title">        {props.serviceData.slogan.centerContent.title}
             </h3>
             <p className="text-xl">{props.serviceData.slogan.centerContent.content}</p>
           </div>
-          <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}} />
         </div>
+        <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}}/>
         <div className="service__slogan-flex-box">
-          <div>
+          <div style={{width: "380px"}}>
             <h3 className="heading-base service__slogan-title">
               {props.serviceData.slogan.rightContent.title}
             </h3>
