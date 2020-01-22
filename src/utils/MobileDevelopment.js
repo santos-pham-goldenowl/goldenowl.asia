@@ -10,27 +10,27 @@ import coverImage from '../assets/images/service/MobileDevelopment/cover.svg';
 const MobileDevelopmentData = {
   coverImage: coverImage,
   pageTitle: 'Mobile development',
-  subTitle: 'What can we bring',
-  intro: 'We - Golden Owl is a professional company with great experience in web development from small to big web project in many from many fields such as business, finance, management, etc.',
-  subIntro: 'As a professional company, we are able to work on many programming languages for web development. We always update the latest technologies so that we can serve the customer the best solutions.',
+  subTitle: 'We have a great mobile development team',
+  intro: 'A good application is not only about the unique business but also about great responsive on all kinds of mobiles and tablets. Therefore, having a developer with vast experience and good at creating UX/ UI is a must in a mobile application project.',
+  subIntro: 'Golden Owl, we understand the important role of mobile application in modern life so we have invented ourselves to own a team of dynamic and talented developers who love to work, innovate and develop Mobile application.',
   slogan: {
     title: 'Simple and powerful',
     leftContent: {
-      title: 'Quality',
-      content: 'We have young and active people who are led and instructed by senior developers. Also, we understand technologies so we know how to produce the good and clean code.'
+      title: 'Responsive',
+      content: 'A perfect responsive mobile app always delivers its purposes to client and user in the most positive way.'
     },
     centerContent: {
-      title: 'Productivity',
-      content: 'Beside owning an expert and experienced developer team, we also have good project managers who have good background in management. We know how to control the time and tasks to make it delivery in time.'
+      title: 'Performance',
+      content: 'A mobile app works smoothly with fast speed always gains the affection from users and clients.'
     },
     rightContent: {
-      title: 'Security',
-      content: 'Beside the quality of the code, security is set as importance as well. With experience in deploying many websites, we know how to make your web site is protected from being attacked by bad guys.'
+      title: 'Storage',
+      content: 'The less storage a mobile app takes, the better it is.'
     }
   },
   achieves: {
-    title: 'Seamless Integration with 50+ software platforms.',
-    description: 'Lorem ipsum dolor sit amet, at per habeo solet, vidisse graecis periculis eu mei. Ea illum ullamcorper mei. Eos vocibus fabellas tacimates cu, at usu eros discere dissentias. Sea cu oratio aeterno alterum, dicant corpora id vis.'
+    title: 'Seamless Integration with 50+ mobile platforms.',
+    description: 'Building mobile application projects on operator system Android and iOS has become successful thanks to programming languages such as Notejs, ObjC, etc. They are all play important role in the programming procedure.'
   },
   logos: [
     {

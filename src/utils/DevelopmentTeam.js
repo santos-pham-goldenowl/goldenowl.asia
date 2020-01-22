@@ -10,27 +10,27 @@ import coverImage from '../assets/images/service/DevelopmentTeam/cover.svg';
 const DevelopmentTeamData= {
   coverImage: coverImage,
   pageTitle: 'Development Team',
-  subTitle: 'What can we bring',
-  intro: 'We - Golden Owl is a professional company with great experience in web development from small to big web project in many from many fields such as business, finance, management, etc.',
-  subIntro: 'As a professional company, we are able to work on many programming languages for web development. We always update the latest technologies so that we can serve the customer the best solutions.',
+  subTitle: 'Try our best for client’s satisfaction',
+  intro: 'Development team is one of important elements that makes up the success of any projects. Golden Owl Consulting owns a large number of outstanding developers with large experience in building website as well as application. No matter how complicated client’s idea is, we always try our best to make the best production. We always find the best way to make the work more efficient.',
+  subIntro: 'The process of creating a website or an application may very complex and need the involvement of many developers, but we always find out the best solution to give to client. We make an effort to aim to achieve their satisfaction.',
   slogan: {
     title: 'Simple and powerful',
     leftContent: {
-      title: 'Quality',
-      content: 'We have young and active people who are led and instructed by senior developers. Also, we understand technologies so we know how to produce the good and clean code.'
+      title: 'Responsibility',
+      content: 'Being in time for deadline and ensuring the quality of final production are our priority when working with client.'
     },
     centerContent: {
-      title: 'Productivity',
-      content: 'Beside owning an expert and experienced developer team, we also have good project managers who have good background in management. We know how to control the time and tasks to make it delivery in time.'
+      title: 'Team work',
+      content: 'Corporation makes the project more facilitate, helps people understand each other and brings team members together.'
     },
     rightContent: {
-      title: 'Security',
-      content: 'Beside the quality of the code, security is set as importance as well. With experience in deploying many websites, we know how to make your web site is protected from being attacked by bad guys.'
+      title: 'Great experience',
+      content: 'Developers with great experience in their field increases the success and client’s satisfaction of the project.'
     }
   },
   achieves: {
-    title: 'Seamless Integration with 50+ software platforms.',
-    description: 'Lorem ipsum dolor sit amet, at per habeo solet, vidisse graecis periculis eu mei. Ea illum ullamcorper mei. Eos vocibus fabellas tacimates cu, at usu eros discere dissentias. Sea cu oratio aeterno alterum, dicant corpora id vis.'
+    title: 'We are stronger together',
+    description: 'Each member of the development team has their own strength and ability, they may still not good at some points and that’s why they always try our best to work together and support each other for the common achievement. Working together makes us stronger and growing faster.'
   },
   logos: [
     {
