@@ -6,23 +6,23 @@ import reactNative from '../assets/images/technology/MobileStack/react-native.sv
 
 const MobileStackTechs = [
   {
-    name: 'ios',
+    name: 'iOS',
     url: ios,
   },
   {
-    name: 'android',
+    name: 'Android',
     url: android,
   },
   {
-    name: 'swift',
+    name: 'Swift',
     url: swift,
   },
   {
-    name: 'objectC',
+    name: 'Object C',
     url: objectC,
   },
   {
-    name: 'react native',
+    name: 'React Native',
     url: reactNative
   },
 ]

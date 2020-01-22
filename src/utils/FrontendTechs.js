@@ -7,27 +7,27 @@ import angular from '../assets/images/angular.png';
 
 const FrontEndTechs = [
   {
-    name: 'html 5',
+    name: 'Html 5',
     url: html,
   },
   {
-    name: 'css 3',
+    name: 'Css 3',
     url: css,
   },
   {
-    name: 'javascript',
+    name: 'Javascript',
     url: javascript,
   },
   {
-    name: 'typescript',
+    name: 'Typescript',
     url: typescript,
   },
   {
-    name: 'react',
+    name: 'React',
     url: react,
   },
   {
-    name: 'angular',
+    name: 'Angular',
     url: angular,
   },
 ]

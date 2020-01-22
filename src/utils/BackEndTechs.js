@@ -6,15 +6,15 @@ import java from '../assets/images/technology/BackEnd/java.svg';
 
 const BackEndTechs = [
   {
-    name: 'node',
+    name: 'Node JS',
     url: node,
   },
   {
-    name: 'net',
+    name: '.net',
     url: net,
   },
   {
-    name: 'c#',
+    name: 'C#',
     url: c,
   },
   {
