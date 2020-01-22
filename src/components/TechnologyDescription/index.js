@@ -8,10 +8,10 @@ const TechnologyDescription = () => {
       <div className="technology-description__left-side">
         <h2 className="heading-lg">Technology</h2>
         <p className="text-xl">
-        Lorem ipsum dolor sit amet, mea denique molestiae at, homero dicunt eripuit ad vel. Nonumy reformidans contentiones eu pro, autem nemore nec ex. An pro accumsan .
+          By using many programming languages such as Ruby on Rails, Javascript and PHP and best platforms, we have built lots of incredible projects in a variety of fields and achieve reliability from clients. One way or another we try our best to update the most up-to-date technology to catch up with the acceleration of technology.
         </p>
         <p className="text-xl">
-          Hinc malorum cu mel, nisl consequat mei an, eos ne zril rationibus. Ut commodo lobortis duo. Pro te tale fuisset, ei omnesque probatus eleifend mei. Civibus indoctum cum ad, sit et expetenda consequat definitiones, sea justo deserunt interpretaris id. In eam blandit hendrerit.
+          Using the right, suitable and technology in building a software product is very important because it may affect to inside function as well as the stability. Hence, building a software product requires the developer a wide range of knowledge not only about how to build it but also about how to choose the right technology.
         </p>
       </div>
       <div className="technology-description__right-side">

@@ -1,10 +1,12 @@
-import html from '../assets/images/service/WebDevelopment/html.svg';
-import css3 from '../assets/images/service/WebDevelopment/css3.svg';
-import js from '../assets/images/service/WebDevelopment/js.svg';
-import react from '../assets/images/service/WebDevelopment/react.svg';
-import angular from '../assets/images/service/WebDevelopment/angular.svg';
-import mock from '../assets/images/service/WebDevelopment/mock.svg';
-import plus from '../assets/images/service/WebDevelopment/50plus.svg';
+import rails from '../assets/images/service/MobileDevelopment/rails.svg';
+import rubic from '../assets/images/service/MobileDevelopment/rubic.svg';
+import php from '../assets/images/service/MobileDevelopment/php.svg';
+import swift from '../assets/images/service/MobileDevelopment/swift.svg';
+import reactNative from '../assets/images/service/MobileDevelopment/react-native.svg';
+import objectC from '../assets/images/service/MobileDevelopment/objectC.svg';
+import ios from '../assets/images/service/MobileDevelopment/ios.svg';
+import android from '../assets/images/service/MobileDevelopment/android.svg';
+import plus from '../assets/images/service/MobileDevelopment/plus.svg';
 import coverImage from '../assets/images/service/MobileDevelopment/cover.svg';
 
 const MobileDevelopmentData = {
@@ -34,28 +36,36 @@ const MobileDevelopmentData = {
   },
   logos: [
     {
-      name: 'html',
-      url: html,
+      name: 'rails',
+      url: rails,
     },
     {
-      name: 'css3',
-      url: css3
+      name: 'rubic',
+      url: rubic
     },
     {
-      name: 'js',
-      url: js
+      name: 'php',
+      url: php
     },
     {
-      name: 'react',
-      url: react
+      name: 'swift',
+      url: swift
     },
     {
-      name: 'angular',
-      url: angular
+      name: 'react-native',
+      url: reactNative
     },
     {
-      name: 'mock',
-      url: mock
+      name: 'objectC',
+      url: objectC
+    },
+    {
+      name: 'ios',
+      url: ios
+    },
+    {
+      name: 'android',
+      url: android
     },
     {
       name: '50plus',

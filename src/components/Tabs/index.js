@@ -4,6 +4,8 @@ import TabHeader from './TabHeader';
 import Tabs from './Tabs';
 import './index.sass';
 import FrontEndTechs from '../../utils/FrontendTechs';
+import BackEndTechs from '../../utils/BackEndTechs';
+import MobileStackTechs from '../../utils/MobileTechs';
 
 class TabContainer extends Component {
   render() {
@@ -15,9 +17,9 @@ class TabContainer extends Component {
         <TabContent name="tab1">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Front end content</h2>
+              <h2 className="tab-header-title">Front end</h2>
               <p className="tech-tab__description text-lg">
-                Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
+                By using modern developing website technology, we produce the most high-quality product with high speed and stability of the software.
               </p>
             </div>
             <div className="tech-tab__right-side">
@@ -37,13 +39,13 @@ class TabContainer extends Component {
         <TabContent name="tab2">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Back end content</h2>
+              <h2 className="tab-header-title">Back end</h2>
               <p className="tech-tab__description text-lg">
-                Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
+                Providing and implementing system solutions with the latest technology. We ensure the stability and security.
               </p>
             </div>
             <div className="tech-tab__right-side">
-              {FrontEndTechs.map((tech) => (
+              {BackEndTechs.map((tech) => (
                 <div className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
@@ -59,13 +61,13 @@ class TabContainer extends Component {
         <TabContent name="tab3">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Mobile stack content</h2>
+              <h2 className="tab-header-title">Mobile stack</h2>
               <p className="tech-tab__description text-lg">
-                Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
+                With modern technologies and a team of excel developers, we offer mobile applications solutions across multiple platforms (Androids, ios, etc).
               </p>
             </div>
             <div className="tech-tab__right-side">
-              {FrontEndTechs.map((tech) => (
+              {MobileStackTechs.map((tech) => (
                 <div className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
@@ -76,18 +78,18 @@ class TabContainer extends Component {
         </TabContent>
 
         <TabHeader for="tab4">
-          <p className="text-xl">Mobile Platform</p>
+          <p className="text-xl">Platform</p>
         </TabHeader>
         <TabContent name="tab4">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Mobile platform</h2>
+              <h2 className="tab-header-title">Platform</h2>
               <p className="tech-tab__description text-lg">
-                Lorem ipsum dolor sit amet, exerci audiam rationibus ei ius. At nam altera malorum maiorum, id vero offendit petentium vel. Qui id agam convenire. In dicam reprehendunt his. Singulis scribentur eum eu, mea putent neglegentur te.
+                Having many experienced developers allows us to provide specialized software running on one and even many different platforms with just a single source code.
               </p>
             </div>
             <div className="tech-tab__right-side">
-              {FrontEndTechs.map((tech) => (
+              {MobileStackTechs.map((tech) => (
                 <div className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
