@@ -43,7 +43,7 @@ const Service = props => (
       <h2 className="heading-lg">{props.serviceData.slogan.title}</h2>
       <div className="service__slogan-grid">
         <div className="service__slogan-flex-box">
-          <div style={{width: "380px"}}>
+          <div className="service__slogan-item">
             <h3 className="heading-base service__slogan-title">
               {props.serviceData.slogan.leftContent.title}</h3>
             <p className="text-xl">{props.serviceData.slogan.leftContent.content}</p>
@@ -51,7 +51,7 @@ const Service = props => (
         </div>
         <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}} />
         <div className="service__slogan-flex-box">
-          <div style={{width: "380px"}}>
+          <div className="service__slogan-item">
             <h3 className="heading-base service__slogan-title">        {props.serviceData.slogan.centerContent.title}
             </h3>
             <p className="text-xl">{props.serviceData.slogan.centerContent.content}</p>
@@ -59,7 +59,7 @@ const Service = props => (
         </div>
         <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}}/>
         <div className="service__slogan-flex-box">
-          <div style={{width: "380px"}}>
+          <div className="service__slogan-item">
             <h3 className="heading-base service__slogan-title">
               {props.serviceData.slogan.rightContent.title}
             </h3>
