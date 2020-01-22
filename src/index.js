@@ -15,7 +15,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <BrowserRouter>
     <Route exact path="/" component={App} />
-    <Route path="/technology" component={TechnologyContainer} />
+    <Route path="/technologies" component={TechnologyContainer} />
     <Route exact path="/about" component={About} />
     <Route exact path="/services/web-development" component={WebDevelopment} />
     <Route exact path="/services/mobile-development" component={MobileDevelopment} />

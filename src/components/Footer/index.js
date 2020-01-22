@@ -8,7 +8,7 @@ import './index.sass';
 const Footer = () => (
   <footer className="footer">
     <div className="footer__top-content-wrapper">
-      <h4 className="heading-small footer__top-content-title">Area we serve</h4>
+      <h4 className="heading-small footer__top-content-title">Areas we serve</h4>
       <div className="footer__top-content-grid">
         <div>
           <h5 className="heading-x-small">Ho Chi Minh city</h5>
@@ -23,7 +23,7 @@ const Footer = () => (
         </div>
         <div>
           <h5 className="heading-x-small">London</h5>
-          <p>HERTFORDSHIRE OFFICE <br/> 8 Parkway Porters Wood St Albans</p>
+          <p>HERTFORDSHIRE OFFICE <br/> 8 Parkway Porters Wood <br/> St Albans</p>
           <p>0345 456 0522</p>
         </div>
         <div>
@@ -52,10 +52,10 @@ const Footer = () => (
         <div>
           <h3 className="footer__bottom-grid-title">Our Services</h3>
           <div style={{lineHeight: "32px"}}>
-            <Link to="/services/web-development">Web Development</Link>
-            <Link to="/services/mobile-development">Mobile Development</Link>
-            <Link to="/services/ux-ui-design">UX/UI Design</Link>
-            <Link to="/services/project-management">Project Management</Link>
+            <Link to="/services/web-development">Website development</Link>
+            <Link to="/services/mobile-development">Mobile development</Link>
+            <Link to="/services/ux-ui-design">UX UI design</Link>
+            <Link to="/services/project-management">Project management</Link>
             <Link to="/services/development-team">Development Team</Link>
           </div>
         </div>
@@ -63,10 +63,12 @@ const Footer = () => (
           <h3 className="footer__bottom-grid-title">Links</h3>
           <div style={{lineHeight: "32px"}}>
             <Link to="/about">About Us</Link>
-            <a href="#">Careers</a>
+            <Link to="/services">Services</Link>
+            <Link to="/technologies">Technologiies</Link>
             <a href="#">Testimonials</a>
-            </div>
+            <a href="#">Portfolio</a>
           </div>
+        </div>
         <div>
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div style={{lineHeight: "32px"}}>

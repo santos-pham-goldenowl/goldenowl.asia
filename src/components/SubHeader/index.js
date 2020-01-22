@@ -70,7 +70,7 @@ class SubHeader extends Component {
         </div>
         <div>{this.state.showServices ? servicesNode : buttoNode}</div>
         <div className="sub-header__title">
-          <Link to="/technology">
+          <Link to="/technologies">
             <h4 className="sub-header__text">Technology</h4>
           </Link>
         </div>

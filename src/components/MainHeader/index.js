@@ -82,7 +82,7 @@ class MainHeader extends Component {
                 <Link to="/services">Services</Link>
               </li>
               <li className="main-header__flex-item">
-                <Link to="/technology">Technology</Link>
+                <Link to="/technologies">Technology</Link>
               </li>
               <li className="main-header__flex-item">Testimonial</li>
               <li className="main-header__flex-item">Contact us</li>
