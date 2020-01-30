@@ -10,22 +10,20 @@ import ServicesDetail from '../../components/ServicesDetail';
 import wavy_bg from "../../assets/images/wavy_bg_2.png";
 import './index.sass';
 
-const Services = () => {
-  return (
-    <section className="services-container">
-      <MainHeader />
-      <SubHeader />
-      <Home>
-        <p>Services</p>
-      </Home>
-      <ServicesDescription />
-      <img className="wavy-bg" src={wavy_bg} alt="wavy_bg" loading="lazy" />
-      <ServicesDetail />
-      <Contact />
-      <Explore />
-      <Footer />
-    </section>
-  );
-}
+const Services = () => (
+  <section className="services-container">
+    <MainHeader />
+    <SubHeader />
+    <Home>
+      <p>Services</p>
+    </Home>
+    <ServicesDescription />
+    <img className="wavy-bg" src={wavy_bg} alt="wavy_bg" loading="lazy" />
+    <ServicesDetail />
+    <Contact />
+    <Explore />
+    <Footer />
+  </section>
+);
 
 export default Services;

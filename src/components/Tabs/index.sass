@@ -94,12 +94,14 @@
 
 @media only screen and (min-width: 1300px)
   .tech-tab
-    &__description
-      color: $softBlack
+    display: flex
 
     .tab-header-title
       font-size: 36px
       padding-bottom: 20px
+
+    &__description
+      color: $softBlack
 
     &__left-side
       padding-right: 135px
@@ -117,6 +119,3 @@
   .header-group
     margin-left: 100px
     margin-right: 100px
-
-  .tech-tab
-    display: flex

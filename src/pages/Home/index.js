@@ -15,25 +15,22 @@ import Footer from '../../components/Footer/index';
 import './index.sass';
 import bg from '../../assets/images/bg_2.png';
 
-function Home() {
-  return (
-    <section className="home">
-      <MainHeader />
-      <SubHeader />
-      <Quote />
-      <Missions />
-      <img className="home__wavy-bg" src={bg} alt="wavy-background" loading="lazy" />
-      <Introduction />
-      <CompanyQuality />
-      <Achieves />
-      <Feedback />
-      <Partners />
-      <Technologies />
-      <Contact />
-      <Explore />
-      <Footer />
-    </section>
-  );
-}
-
+const Home = () => (
+  <section className="home">
+    <MainHeader />
+    <SubHeader />
+    <Quote />
+    <Missions />
+    <img className="home__wavy-bg" src={bg} alt="wavy-background" loading="lazy" />
+    <Introduction />
+    <CompanyQuality />
+    <Achieves />
+    <Feedback />
+    <Partners />
+    <Technologies />
+    <Contact />
+    <Explore />
+    <Footer />
+  </section>
+);
 export default Home;

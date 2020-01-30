@@ -2,12 +2,10 @@ import React from 'react';
 import Home from '../Home/index';
 import './index.sass';
 
-function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
-}
+const App = () => (
+  <section className="App">
+    <Home />
+  </section>
+);
 
 export default App;
