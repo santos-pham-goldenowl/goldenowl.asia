@@ -1,0 +1,35 @@
+@import '../../../../styles/variables.sass'
+
+@media only screen and (min-width: 1024px)
+  .missions
+    padding-top: 200px
+    padding-bottom: 182px
+    display: flex
+
+    p
+      padding-bottom: 2.1px
+      font-size: 26px
+      line-height: 1.54
+    
+    &__title
+      font-size: 37px
+      padding-bottom: 2.6vw !important
+
+    &__right-side
+      display: flex
+      flex-grow: 1
+
+    &__item-group
+      &:not(:last-child)
+        padding-right: 70px
+
+    &__item
+      justify-content: flex-start      
+      display: block
+      padding-bottom: 60px
+      &:last-child
+        padding-bottom: 0
+
+    &__item-title
+      font-size: 26px
+      margin-bottom: 19px

@@ -1,160 +1,113 @@
 @import '../../styles/variables.sass'
 
 .footer
-  background-color: $white
-  font-family: ProximaNovaRegular
-  text-align: center
-
-  &__copyright
-    background-color: $warmGray
-    color: $sweetGray
-    font-size: 18px !important
-    padding: 14px
-    text-align: center
-
-  &__bottom-content-wrapper
-    padding: 50px
-
-  &__social-icon
-    margin-right: 20px
-
-  &__icon-linkedin
-    height: 16px
-
-  &__icon-facebook, &__icon-instagram
-    height: 18px
-
-  &__bottom-grid-title
-    color: $darkGray
-    font-size: 18px !important
-    padding-bottom: 8px
-    padding-top: 20px
-    font-family: MalloryMedium
-
-  a
-    display: block
-    color: $darkGray
-    font-size: 18px !important
-    white-space: nowrap
-    font-family: ProximaNovaRegular
-
   &__phone
     color: $darkGray
 
   &__email
     color: $yellow
 
-  &__contact
-    display: flex
-    flex-direction: column
-    padding-top: 20px
-
-  &__social-icons-wrapper
-    padding-top: 35px
-
-  &__top-content-grid
-    font-size: 18px
-    > div
-      padding-bottom: 20px
-      line-height: 30px
-
-  &__top-content-title
-    padding-bottom: 32px !important
-
-  &__top-content-wrapper
-    background-repeat: no-repeat
-    background-color: $softGray
-    padding-top: 50px
-
-@media only screen and (min-width: 767px)
+@media only screen and (min-width: 1024px)
   .footer
+    background-color: $white
+    font-family: ProximaNovaRegular
+    text-align: center
+
+    &__icon-linkedin
+      height: 16px
+
+    &__icon-facebook, &__icon-instagram
+      height: 19px
+
+    &__social-icon
+      margin-right: 20px
+
+    &__top-content-wrapper
+      background-image: url('../../assets/images/Footer/map.svg')
+      padding: 150px 100px 80px 100px
+      text-align: left
+      background-color: $softGray
+      background-position: center
+      background-repeat: no-repeat
+      color: $darkGray
 
     &__logo-wrapper
       text-align: left
       flex: 1
 
-    &__bottom-grid-container
-      display: flex
-      text-align: left
-      justify-content: space-between
-
-    &__contact
-      text-align: left
-      display: flex
-      flex-direction: row
-      align-items: flex-start
-      padding-top: 40px
-      padding-bottom: 40px
-      span
-        padding-right: 50px
-
-    &__top-content-wrapper
-      background-image: url('../../assets/images/Footer/map.svg')
-      padding: 100px 50px 80px 50px
-      text-align: left
-      background-position: center
-      background-repeat: no-repeat
-
-    &__top-content-grid
-      width: 100%
-      background-position: center
-      background-repeat: no-repeat
-      display: grid
-      grid-template-columns: repeat(2, 295px)
-      grid-column-gap: 20px
-      font-size: 18px
-      line-height: 30px
-      text-align: left
-
-    &__bottom-grid-title
-      padding-top: 0
-
-@media only screen and (min-width: 1023px)
-  .footer
-    &__bottom-content-wrapper
-      padding: 50px
-      display: flex
-      align-items: flex-start
-
+    &__top-content-title
+      padding-bottom: 33px !important
+    
     &__logo-wrapper
       flex: 2
       display: flex
       justify-content: flex-start
       flex-direction: column
 
-    &__bottom-grid-container
-      flex: 3
-      justify-content: space-around
-
-    &__email
-      padding-right: 0 !important
-
-    &__top-content-wrapper
-      padding: 150px 50px 80px 50px
-
-    &__top-content-grid
-      grid-template-columns: repeat(4, auto)
-      grid-column-gap: 20px
-
-@media only screen and (min-width: 1300px)
-  .footer
-    &__top-content-wrapper
-      padding: 150px 100px 80px 100px
-
-    &__top-content-grid
-      grid-template-columns: repeat(4, 295px)
-      grid-column-gap: 20px
-      font-size: 18px
+    &__copyright
+      background-color: $warmGray
+      color: $sweetGray
+      text-align: center
+      padding-top: 14px
+      padding-bottom: 14px
+      p
+        font-size: 18px !important
+        line-height: 1.13 !important
+        opacity: 0.4
+      
+    .col-lg-3
+      h5
+        font-size: 20px
+        padding-bottom: 10px
+      p
+        font-size: 18px !important
+        line-height: 1.67 !important
+        
 
     &__bottom-content-wrapper
-      padding: 88px 100px 80px 100px
+      padding: 6.1vw 6.9vw 80px 100px
+      display: flex
+      justify-content: space-around
+      align-items: flex-start
 
+    &__bottom-grid-container
+      display: flex
+      flex: 3
+      text-align: left
+      justify-content: space-around
+      > div
+        padding-bottom: 0
+        a
+          font-size: 19px
+          line-height: 1.78 !important
+    
     a
+      line-height: 1.78
       font-size: 18px !important
+      display: block
+      color: $darkGray
+      white-space: nowrap
+      font-family: ProximaNovaRegular
 
     h3
-      font-size: 20px !important
+      font-size: 1.4vw !important
 
     &__contact
+      padding-top: 40px
+      padding-bottom: 40px
+      text-align: left
+      display: flex
+      flex-direction: row
+      align-items: flex-start
       span
-        font-size: 18px
+        font-size: 19px
+        padding-right: 50px
+
+    &__bottom-grid-title
+      color: $darkGray
+      font-size: 18px !important
+      padding-bottom: 8px
+      font-family: MalloryMedium
+
+    &__social-icons-wrapper
+      padding-top: 34px

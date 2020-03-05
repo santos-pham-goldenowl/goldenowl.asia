@@ -1,32 +1,28 @@
-.introduction-detail
-  padding: 50px 30px
-
-  img
-    width: 100%
-    margin-top: 20px
-
-@media only screen and (min-width: 1023px)
+@media only screen and (min-width: 1024px)
   .introduction-detail
+    padding-top: 120px
     display: flex
-    padding: 50px
+    flex-direction: row
+    height: 920px
 
-    img
-      margin-top: 0
+    h3
+      height: 45px
+      font-size: 34px
+      margin-bottom: 40px
 
-    &__left-side
-      flex: 1
+    .content
+      display: flex
+      flex-direction: column
+      height: 519px
+      p
+        font-size: 26px
+        line-height: 1.54 !important
+        &:last-child
+          margin-top: auto
 
-    &__right-side
-      flex: 1
+    .img-wrapper
       display: flex
       justify-content: flex-end
-
-    &__text
-      width: 90%
-
-      &:last-child
-        padding-top: 30px
-
-@media only screen and (min-width: 1300px)
-  .introduction-detail
-    padding: 120px 100px 150px 100px
+      img
+        width: 539px
+        height: 650px

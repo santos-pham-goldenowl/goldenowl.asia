@@ -1,19 +1,36 @@
 import React from 'react';
+
 import present from '../../assets/images/service_description.png';
+import Bg from '../../assets/images/wavy_bg_2.png';
 import './index.sass';
 
-const ServicesDescription = () => (
-  <section className="services-description">
-    <div className="services-description__left-side">
-      <h2 className="services-description__title heading-lg">Services</h2>
-      <p className="services-description__text text-xl">
-        We provide software solutions, mostly about website and mobile applications for a wide variety of fields, from finance to commerce and so on. We are proud of being very selective and have one of the best full-stacked developer training programs in Ho Chi Minh City.
-      </p>
-    </div>
-    <div className="services-description__right-side">
-      <img src={present} alt="present" />
-    </div>
-  </section>
-);
+const ServicesDescription = () => {
+  const sectionStyle = {
+    backgroundImage: `url(${Bg})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'bottom',
+    backgroundSize: '100vw',
+  };
+
+  return (
+    <section className="services-description" style={sectionStyle}>
+      <div className="row">
+        <div className="col-lg-5">
+          <div className="row">
+            <h2 className="services-description__title">SERVICES</h2>
+          </div>
+          <div className="row">
+            <p className="">
+              We provide software solutions, mostly about website and mobile applications for a wide variety of fields, from finance to commerce and so on. We are proud of being very selective and have one of the best full-stacked developer training programs in Ho Chi Minh City.
+            </p>
+          </div>
+        </div>
+        <div className="col-lg-6 ml-auto">
+          <img src={present} alt="present" />
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default ServicesDescription;

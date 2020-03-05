@@ -6,7 +6,7 @@ import wave from '../assets/images/service/ProjectManagement/wave.svg';
 import coverImage from '../assets/images/service/ProjectManagement/cover.svg';
 
 const ProjectManagementData = {
-  coverImage: coverImage,
+  coverImage,
   pageTitle: 'Project management',
   subTitle: 'What makes our project management success',
   intro: 'The success of each project has the vital contribution of a project manager. Golden Owl is proud of having a professional project management team who not only always stays side-by-side to support our development team for a good result but is also a friendly partner to client.',
@@ -15,20 +15,20 @@ const ProjectManagementData = {
     title: 'Simple and powerful',
     leftContent: {
       title: 'Responsibility',
-      content: 'Our project management team knows what to do, what is need, and is aware of how important their duty is.'
+      content: 'Our project management team knows what to do, what is need, and is aware of how important their duty is.',
     },
     centerContent: {
       title: 'Friendliness',
-      content: 'As a close friend to client as well as developer, our project manager is the one who understand both side and finds out one same language in best way to satisfy both.'
+      content: 'As a close friend to client as well as developer, our project manager is the one who understand both side and finds out one same language in best way to satisfy both.',
     },
     rightContent: {
       title: 'Delivery',
-      content: 'A project manager is not only the one who keeps track and controls any situations of the project but also takes responsibility to deliver message from developer to client and vice versa.'
-    }
+      content: 'A project manager is not only the one who keeps track and controls any situations of the project but also takes responsibility to deliver message from developer to client and vice versa.',
+    },
   },
   achieves: {
     title: 'Efficient management with management tool',
-    description: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc.'
+    description: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc.',
   },
   logos: [
     {
@@ -37,21 +37,21 @@ const ProjectManagementData = {
     },
     {
       name: 'trello',
-      url: trello
+      url: trello,
     },
     {
       name: 'fire',
-      url: fire
+      url: fire,
     },
     {
       name: 'wave',
-      url: wave
+      url: wave,
     },
     {
       name: 'skype',
-      url: skype
+      url: skype,
     },
-  ]
-}
+  ],
+};
 
 export default ProjectManagementData;

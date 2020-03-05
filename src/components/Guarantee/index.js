@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckPoint from '../CheckPoint/index';
+import CheckPoint from '../CheckPoint';
 import './index.sass';
 
 const Guarantee = () => (

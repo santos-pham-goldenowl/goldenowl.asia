@@ -1,36 +1,47 @@
 @import '../../styles/variables.sass'
 
 .success
-  padding: 30px
   background-color: $softGray
 
   &__map
-    margin-top: 30px
     width: 100%
 
   &__title
-    padding-bottom: 10px
-    padding-top: 30px
     border-bottom: 4px solid $darkGray
 
   &__paragraph
     padding-top: 20px
 
-@media only screen and (min-width: 1023px)
+@media only screen and (min-width: 1024px)
   .success
-    &__left-side
-      width: 80%
-
-@media only screen and (min-width: 1300px)
-  .success
-    padding: 115px 100px 100px 100px
-
-    &__title
+    padding-top: 100px
+    padding-bottom: 100px
+    
+    &__sum
       padding-top: 80px
-      padding-bottom: 20px
-
+      .col-lg-6
+        h3
+          font-size: 34px
+          border-bottom : 0.3vw solid $darkGray
+          padding-bottom: 20px
+        p
+          font-size: 20px
+          line-height: 1.5;
+        &:nth-child(2n)
+          padding-right: 0
+        &:nth-child(2n+1)
+          padding-left: 0
+          padding-right: 7.8vw !important
+        &:not(:last-child):not(:nth-last-child(2))
+          padding-bottom: 50px
+    
     &__map
-      margin-top: 60px
-
-    &__main-title
-      width: 76%
+      padding-top: 60px
+    
+    &__main
+      h1
+        font-size: 50px
+      p
+        height: 1100px
+        font-size: 26px
+        line-height: 1.54

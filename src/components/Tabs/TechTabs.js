@@ -17,7 +17,7 @@ class TabContainer extends Component {
         <TabContent name="tab1">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Front end</h2>
+              <h2 className="tab-header-title">Front-end</h2>
               <p className="tech-tab__description text-lg">
                 By using modern developing website technology, we produce the most high-quality product with high speed and stability of the software.
               </p>
@@ -39,7 +39,7 @@ class TabContainer extends Component {
         <TabContent name="tab2">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Back end</h2>
+              <h2 className="tab-header-title">Back-end</h2>
               <p className="tech-tab__description text-lg">
                 Providing and implementing system solutions with the latest technology. We ensure the stability and security.
               </p>

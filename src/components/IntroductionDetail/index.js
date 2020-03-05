@@ -1,21 +1,24 @@
 import React from 'react';
+
 import working from '../../assets/images/working.png';
 import './index.sass';
 
 const IntroductionDetail = () => (
   <section className="introduction-detail">
-    <div className="introduction-detail__left-side">
-      <h3 className="heading-base">
-        We are golden owl
+    <div className="col-lg-6">
+      <h3>
+        We are Golden Owl
       </h3>
-      <p className="introduction-detail__text text-xl">
-        Lorem ipsum dolor sit amet, utamur viderer diceret pri ut. Cu purto quas atqui duo, mei vidit nemore detraxit id. Mea ne unum contentiones, ex vim labitur vocibus theophrastus. Rebum pericula ne mea.
-      </p>
-      <p className="introduction-detail__text text-xl">
-        Affert deseruisse definitiones his at. Ex harum singulis convenire vis, vel justo labitur at, per incorrupte liberavisse an. Eam ex perfecto deserunt, duo debitis officiis in, eu sea verear minimum. Legere audire utroque ei usu. Nostrud percipitur an usu, ex tation nostro probatus mel, duo alia nulla homero id. Nobis omittantur sea te, his ut wisi utinam mandamus.
-      </p>
+      <div className="content">
+        <p>
+          Golden Owl's leading mission is to turn customers' ideas into a useful technological platform for a variety of purposes from trade to company and project management. No matter how big or small your project is, our team here always work with high attention and discipline to bring client a perfect product with high quality of code and security.
+        </p>
+        <p>
+          We pride ourselves on having clients’ satisfaction on products we built. Our experiences are proven by more than 22 Mobile Applications and 38 Websites projects across 6 countries in the world, including the U.K, America, Singapore, etc.
+        </p>
+      </div>
     </div>
-    <div className="introduction-detail__right-side">
+    <div className="col-lg-5 ml-auto img-wrapper">
       <img src={working} alt="working" loading="lazy" />
     </div>
   </section>

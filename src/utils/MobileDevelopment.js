@@ -10,7 +10,7 @@ import plus from '../assets/images/service/MobileDevelopment/plus.svg';
 import coverImage from '../assets/images/service/MobileDevelopment/cover.svg';
 
 const MobileDevelopmentData = {
-  coverImage: coverImage,
+  coverImage,
   pageTitle: 'Mobile development',
   subTitle: 'We have a great mobile development team',
   intro: 'A good application is not only about the unique business but also about great responsive on all kinds of mobiles and tablets. Therefore, having a developer with vast experience and good at creating UX/ UI is a must in a mobile application project.',
@@ -19,20 +19,20 @@ const MobileDevelopmentData = {
     title: 'Simple and powerful',
     leftContent: {
       title: 'Responsive',
-      content: 'A perfect responsive mobile app always delivers its purposes to client and user in the most positive way.'
+      content: 'A perfect responsive mobile app always delivers its purposes to client and user in the most positive way.',
     },
     centerContent: {
       title: 'Performance',
-      content: 'A mobile app works smoothly with fast speed always gains the affection from users and clients.'
+      content: 'A mobile app works smoothly with fast speed always gains the affection from users and clients.',
     },
     rightContent: {
       title: 'Storage',
-      content: 'The less storage a mobile app takes, the better it is.'
-    }
+      content: 'The less storage a mobile app takes, the better it is.',
+    },
   },
   achieves: {
     title: 'Seamless Integration with 50+ mobile platforms.',
-    description: 'Building mobile application projects on operator system Android and iOS has become successful thanks to programming languages such as Notejs, ObjC, etc. They are all play important role in the programming procedure.'
+    description: 'Building mobile application projects on operator system Android and iOS has become successful thanks to programming languages such as Notejs, ObjC, etc. They are all play important role in the programming procedure.',
   },
   logos: [
     {
@@ -41,37 +41,37 @@ const MobileDevelopmentData = {
     },
     {
       name: 'rubic',
-      url: rubic
+      url: rubic,
     },
     {
       name: 'php',
-      url: php
+      url: php,
     },
     {
       name: 'swift',
-      url: swift
+      url: swift,
     },
     {
       name: 'react-native',
-      url: reactNative
+      url: reactNative,
     },
     {
       name: 'objectC',
-      url: objectC
+      url: objectC,
     },
     {
       name: 'ios',
-      url: ios
+      url: ios,
     },
     {
       name: 'android',
-      url: android
+      url: android,
     },
     {
       name: '50plus',
-      url: plus
+      url: plus,
     },
-  ]
-}
+  ],
+};
 
 export default MobileDevelopmentData;

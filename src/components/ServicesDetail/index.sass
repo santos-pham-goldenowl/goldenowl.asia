@@ -2,90 +2,70 @@
 
 .services-detail
 
-  &__main-content
-    padding: 0 30px
-    text-align: center
+@media only screen and (min-width: 1024px)
+  .services-detail
+    padding-top: 150px
+    align-items: start
 
-  &__paragraphs
-    padding: 0 30px
-    > div
-      padding-top: 30px
+    &__links
+      padding-bottom: 150px
+      
+    .col-lg-4
+      padding-top: 130px
+      &:nth-child(3n+1)
+        padding-left: 0 !important
+      &:nth-child(3n)
+        padding-right: 0 !important
+      &:nth-child(1), &:nth-child(2), &:nth-child(3)
+        padding-top: 0
+    
+    .col-lg-6
+      .card
+        text-align: center
+        background-color: $white
+        border: none
+        padding: 4.2vw 50px
+      h4
+        font-size: 24px
+        line-height: 1.25
+      p
+        font-size: 20px
+        line-height: 1.5
+      &:last-child
+        padding-left: 25px
+        h4
+          padding: 0 5vw 1.4vw72px
+      &:first-child
+        padding-right: 25px
+        h4
+          padding: 0 8.1vw 1.4vw 117px
 
-  &__flex-item
-    margin-bottom: 50px
-    display: block
-    img
-      height: 264px
-      margin-bottom: 20px
+    .img-wrapper
+      display: flex
+      justify-content: center
+      -o-object-fit: contain
       object-fit: contain
       width: 100%
-
-@media only screen and (min-width: 1023px)
-  .services-detail
-
-    &__main-content
-      padding: 50px
-
-    &__top-content
-      display: grid
-      grid-template-columns: repeat(3, auto)
-      justify-content: center
-      grid-gap: 50px
-
-    &__bottom-content
-      display: grid
-      grid-template-columns: repeat(2, 350px)
-      justify-content: center
-      grid-gap: 50px
-      margin-top: 130px
-
-    &__flex-item
-      display: flex
-      flex-direction: column
-      margin-bottom: 0
-      text-align: left
-      img
-        transition: transform .2s
-        margin-bottom: 40px
-        &:hover
-          transform: scale(1.1)
-      p
-        color: $softBlack
+      margin-bottom: 40px
 
     &__paragraphs
-      padding: 100px 50px
-      display: flex
-      background-color: $softGray
-      align-items: center
+      padding: 150px 100px !important
+      margin-left: -100px !important
+      margin-right: -100px !important
+      padding
+      background-color: $softGray !important
 
-      > div
-        background-color: $white
-        padding: 50px
-        text-align: center
-
-      > div:first-child
-        margin-right: 25px
-
-      > div:last-child
-        margin-left: 25px
-
-      .heading-small
-        padding-left: 50px
-        padding-right: 50px
-
-@media only screen and (min-width: 1300px)
-  .services-detail
-    padding-top: 100px
-
-    &__top-content
-      grid-gap: 80px
-      grid-template-columns: repeat(3, 350px)
-
-    &__bottom-content
-      grid-gap: 80px
-
-    &__main-content
-      padding: 50px 100px 150px 100px
-
-    &__paragraphs
-      padding: 150px 100px
+    img
+      height: 1120px
+      transition: transform .3s
+      &:hover
+        transform: scale(1.15)
+      &:last-child
+        height: 220px
+    
+    .card-content
+      width: 250px
+      font-size: 20px
+      line-height: 1.5;
+      h5
+        margin-bottom: 13px

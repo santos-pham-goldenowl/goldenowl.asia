@@ -27,7 +27,7 @@ class MainHeader extends Component {
           <div className={!this.state.showMenu ? 'main-header__left-side' : 'main-header__left-side-show'}>
             <div className="main-header__logo-wrapper">
               <Link to="/">
-                <img src={goldenOwl} alt="company-logo" loading="lazy" />
+                <img src={goldenOwl} className="main-header__logo" alt="company-logo" loading="lazy" />
               </Link>
             </div>
             <div className="main-header__hamburger" onClick={this.handleMenu}>
@@ -42,8 +42,8 @@ class MainHeader extends Component {
                 <Link to="/about">About Golden Owl</Link>
               </li>
               <li className="main-header__flex-item">Blog</li>
-              <li className="main-header__flex-item" style={{paddingRight: 0}}>Portfolio</li>
-              <li className="main-header__flex-item font-bold" style={{display: "none"}}>
+              <li className="main-header__flex-item">Portfolio</li>
+              <li className="main-header__flex-item font-bold">
                 <span>English</span>
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
               </li>
@@ -72,7 +72,7 @@ class MainHeader extends Component {
                 <Link to="/about">About Golden Owl</Link>
               </li>
               <li className="main-header__flex-item">Blog</li>
-              <li className="main-header__flex-item" style={{paddingRight: 0}}>Portfolio</li>
+              <li className="main-header__flex-item">Portfolio</li>
               <li className="main-header__flex-item font-bold" style={{display: "none"}}>
                 <span>English</span>
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />

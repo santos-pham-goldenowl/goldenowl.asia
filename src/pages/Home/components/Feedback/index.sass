@@ -1,0 +1,56 @@
+@import '../../../../styles/variables.sass'
+
+.feedback
+  padding-bottom: 30px
+
+  &__title.heading-base
+    padding-bottom: 30px
+
+  &__client-wrapper
+    justify-content: flex-start
+    align-items: center
+    padding-bottom: 50px
+    padding-top: 20px
+    display: flex
+
+    img
+      width: 85px
+      height: 85px
+      border-radius: 50%
+      object-fit: cover
+      margin-right: 20px
+
+@media only screen and (min-width: 1024px)
+  .feedback
+    text-align: center
+    padding: 8.3vw 75px 80px 75px
+
+    &__quote
+      line-height: 70px
+
+    &__title
+      font-size: 34px
+      line-height: 1.6
+      padding-bottom: 2.8vw !important
+
+    &__client-wrapper
+      padding-top: 27px
+    
+    .react-multi-carousel-list
+      max-width: 90vw
+        
+    .react-multi-carousel-dot
+      button
+        width: 10px !important
+        height: 10px !important
+        border-radius: 50% !important
+        background: #eaeaea !important
+        display: inline-block !important
+        margin-right: 10px !important
+        border: none !important
+
+    .react-multi-carousel-dot--active
+      button
+        background: $yellow !important
+        width: 2.1vw !important
+        border-radius: 1.4vw !important    

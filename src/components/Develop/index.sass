@@ -1,46 +1,37 @@
-.develop
-  padding: 30px
+@import '../../styles/variables.sass'
 
+.develop
   &__image
     width: 100%
 
-  &__title
-    padding-bottom: 30px
-
-  &__left-side-title
-    padding-bottom: 30px
-
-@media only screen and (min-width: 1023px)
+@media only screen and (min-width: 1024px)
   .develop
-    padding: 100px 0 100px 50px
+    padding-top: 150px
+    padding-bottom: 69px
+
+    .row
+      margin-top: 100px
+      h3
+        padding-top: 50px
+        font-size: 34px
+      p
+        padding-top: 30px
+        font-size: 26px
+        line-height: 1.54
+      .col-lg-7
+        div, img
+          position: inherit
+          right: 0  
+    
+    .rectangle 
+      width: 814px
+      height: 30px
+      border-radius: 0.4vw;
+      background-color: $softGray;
+
+    &__image
+      width: 815px
 
     &__title
-      padding-bottom: 50px
+      height: 90px
       text-align: center
-
-    &__left-side-title
-      padding-top: 50px
-      paddin-bottom: 0
-
-    &__right-side
-      padding-left: 50px
-
-    &__image
-      width: initial
-      max-width: 500px
-
-@media only screen and (min-width: 1300px)
-  .develop
-    padding: 115px 0 70px 100px
-
-    &__right-side
-      padding-left: 125px
-
-    &__left-side
-      min-width: 400px
-
-    &__image
-      max-width: 815px
-
-    &__title
-      padding-bottom: 100px

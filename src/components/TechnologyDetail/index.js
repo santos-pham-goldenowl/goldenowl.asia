@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './index.sass';
 import TabContainer from '../Tabs/TechTabs';
 
@@ -6,7 +7,11 @@ const TechnologyDetail = () => (
   <section className="technology-detail">
     <h3 className="technology-detail__title heading-base">Techs we use</h3>
     <p className="technology-detail__short-description text-xl">
-      We apply the most modern technology to every single project to make it <br/> become the state of the art.
+      We apply the most modern technology to every single project to make it
+      {' '}
+      <br />
+      {' '}
+become the state of the art.
     </p>
     <TabContainer />
     <div className="technology-detail__paragraphs">

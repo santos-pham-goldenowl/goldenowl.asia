@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import MainHeader from '../../components/MainHeader/index';
-import SubHeader from '../../components/SubHeader/index';
-import BreadCrumb from '../../components/BreadCrumb/index';
-import Footer from '../../components/Footer/index';
+
+import MainHeader from '../MainHeader';
+import SubHeader from '../SubHeader';
+import BreadCrumb from '../BreadCrumb';
+import Footer from '../Footer';
 import line from '../../assets/images/line.svg';
 import yelllowCopy from '../../assets/images/rectangle-copy.svg';
 import './index.sass';
@@ -45,19 +46,23 @@ const Service = props => (
         <div className="service__slogan-flex-box">
           <div className="service__slogan-item">
             <h3 className="heading-base service__slogan-title">
-              {props.serviceData.slogan.leftContent.title}</h3>
+              {props.serviceData.slogan.leftContent.title}
+
+            </h3>
             <p className="text-xl">{props.serviceData.slogan.leftContent.content}</p>
           </div>
         </div>
-        <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}} />
+        <img className="service__line" src={line} alt="line" style={{ margin: '0 25px' }} />
         <div className="service__slogan-flex-box">
           <div className="service__slogan-item">
-            <h3 className="heading-base service__slogan-title">        {props.serviceData.slogan.centerContent.title}
+            <h3 className="heading-base service__slogan-title">
+              {' '}
+              {props.serviceData.slogan.centerContent.title}
             </h3>
             <p className="text-xl">{props.serviceData.slogan.centerContent.content}</p>
           </div>
         </div>
-        <img className="service__line" src={line} alt="line" style={{margin: "0 25px"}}/>
+        <img className="service__line" src={line} alt="line" style={{ margin: '0 25px' }} />
         <div className="service__slogan-flex-box">
           <div className="service__slogan-item">
             <h3 className="heading-base service__slogan-title">
@@ -75,8 +80,7 @@ const Service = props => (
         <p className="text-lg">{props.serviceData.achieves.description}</p>
       </div>
       <div className="flex-one service__logos-wrapper">
-        {props.serviceData.logos.map(image => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy"/>
-        )}
+        {props.serviceData.logos.map(image => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy" />)}
       </div>
     </div>
     <div className="service__other-services-container service__single-padding">
@@ -96,6 +100,6 @@ const Service = props => (
 
 Service.propTypes = {
   otherServiceImages: PropTypes.array,
-  serviceData: PropTypes.object
-}
+  serviceData: PropTypes.object,
+};
 export default Service;

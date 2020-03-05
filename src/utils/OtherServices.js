@@ -4,40 +4,39 @@ import projectMana from '../assets/images/service/OtherServices/project-mana.svg
 import developmentTeam from '../assets/images/service/OtherServices/development-team-small.svg';
 import webSmall from '../assets/images/service/OtherServices/web-small.svg';
 
-const data = [
-  {
-    title: 'Mobile development',
-    url: mobileSmall,
-    link: 'mobile-development'
-  },
-  {
-    title: 'UX UI design',
-    url: uiUXSmall,
-    link: 'ux-ui-design'
-  },
-  {
-    title: 'Project management',
-    url: projectMana,
-    link: 'project-management'
-  },
-  {
-    title: 'Development team',
-    url: developmentTeam,
-    link: 'development-team'
-  },
-  {
-    title: 'Website development',
-    url: webSmall,
-    link: 'web-development'
-  },
-];
+const mobileNav = {
+  title: 'Mobile development',
+  imgUrl: mobileSmall,
+  url: 'mobile-development',
+};
+const uiUxNav = {
+  title: 'UX UI design',
+  imgUrl: uiUXSmall,
+  url: 'ux-ui-design',
+};
+const projectNav = {
+  title: 'Project management',
+  imgUrl: projectMana,
+  url: 'project-management',
+};
+const developNav = {
 
-const dataOrdered = {
-  webDevelopment: [data[0], data[1], data[2], data[3]],
-  mobileDevelopment: [data[4], data[1], data[2], data[3]],
-  projectManagement: [data[4], data[0], data[1], data[3]],
-  developmentTeam: [data[4], data[0], data[1], data[2]],
-  uiUxDesign: [data[4], data[0], data[2], data[3]],
+  title: 'Development team',
+  imgUrl: developmentTeam,
+  url: 'development-team',
+};
+const webNav = {
+  title: 'Website development',
+  imgUrl: webSmall,
+  url: 'web-development',
 };
 
-export default dataOrdered;
+const pageNavs = {
+  webDevelopment: { mobileNav, uiUxNav, projectNav, developNav },
+  mobileDevelopment: { webNav, uiUxNav, projectNav, developNav },
+  projectManagement: { webNav, mobileNav, uiUxNav, developNav },
+  developmentTeam: { webNav, mobileNav, uiUxNav, projectNav },
+  uiUxDesign: { webNav, mobileNav, projectNav, developNav },
+};
+
+export default pageNavs;

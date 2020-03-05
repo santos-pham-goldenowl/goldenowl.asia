@@ -8,40 +8,28 @@ import mywork from '../assets/images/partner/6.png';
 const partnersLogo = [
   {
     name: 'assured',
-    url: assred
+    url: assred,
   },
   {
     name: 'finda',
-    url: finda
+    url: finda,
   },
   {
     name: 'luxe',
-    url: luxe
+    url: luxe,
   },
   {
     name: 'candy',
-    url: candy
+    url: candy,
   },
   {
     name: 'gig',
-    url: gig
+    url: gig,
   },
   {
     name: 'mywork',
-    url: mywork
+    url: mywork,
   },
-  {
-    name: 'finda',
-    url: finda
-  },
-  {
-    name: 'candy',
-    url: candy
-  },
-  {
-    name: 'luxe',
-    url: luxe
-  },
-]
+];
 
 export default partnersLogo;
