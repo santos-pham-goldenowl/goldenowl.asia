@@ -7,14 +7,14 @@ import rightQuote from '../../assets/images/quote-right-solid.svg'
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 2560, min: 1368 },
     items: 3,
     slidesToSlide: 3,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2,
+    breakpoint: { max: 1068, min: 768 },
+    items: 3,
+    slidesToSlide: 3,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -22,6 +22,7 @@ const responsive = {
     slidesToSlide: 1,
   },
 };
+
 const AutoCarousel = props => (
   <Carousel
     swipeable={false}

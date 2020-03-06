@@ -22,10 +22,10 @@ const UiUxData = {
     },
     rightContent: {
       title: 'Interaction design',
-      content: 'We design interactions between users and products. The most important thing is that the user achieves his goal as simply as possible, something we test on the basis of detailed prototypes.',
+      content: 'We design interactions between users and products. The most important thing is that the user archieves his goal as simply as possible, something we test on the basis of detailed prototypes.',
     },
   },
-  achieves: {
+  archieves: {
     title: 'Seamless Integration with popular design tools.',
     description: 'Design tool plays a very importance role in creating design process. Thanks to tools such as Invision and Adobe Photoshop as well as other ones, amazing designs are produced and published.',
   },

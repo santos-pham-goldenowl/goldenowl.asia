@@ -232,7 +232,7 @@ const servicesDetails = {
       },
       right: {
         title: 'Interaction design',
-        content: 'We design interactions between users and products. The most important thing is that the user achieves his goal as simply as possible, something we test on the basis of detailed prototypes.',
+        content: 'We design interactions between users and products. The most important thing is that the user archieves his goal as simply as possible, something we test on the basis of detailed prototypes.',
       },
     },
     fourth: {

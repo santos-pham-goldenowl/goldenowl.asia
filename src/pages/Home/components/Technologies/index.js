@@ -8,7 +8,7 @@ const Technologies = () => (
     <h3 className="technologies__title heading-base">Technologies we use</h3>
     <div className="row">
       {technologiesLogo.map(logo => (
-        <div className="col-lg-2 d-flex">
+        <div className="col-md-2 d-flex">
           <img
             className="technologies__grid-item"
             src={logo.url}

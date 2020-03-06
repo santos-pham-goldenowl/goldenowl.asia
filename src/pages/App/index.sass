@@ -9,23 +9,6 @@ $mallory-font-path: "../../assets/fonts/mallory"
   color: $darkGray
   overflow: hidden
 
-  > section
-    .container-fluid
-      header, .breadcrumb, > section
-        width: 100%
-        padding-left: 100px
-        padding-right: 100px
-
-  [class*='col-']
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
-    &:first-child      
-      padding-left: 0
-    &:last-child
-      padding-right: 0
-
-
 .container-fluid
   &.no-padding
     padding-left: 0px;
@@ -80,3 +63,38 @@ a
 
 li
   list-style-type: none
+
+@media (min-width: 768px) and (max-width: 1367px)
+  .App
+    > section
+      .container-fluid
+        header, .breadcrumb, > section, footer > div
+          width: 100%
+          padding-left: 70px
+          padding-right: 70px
+
+    [class*='col-']
+      padding-left: 7.5px
+      padding-right: 7.5px
+      &:first-child      
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+
+
+@media only screen and (min-width: 1368px)
+  .App
+    > section
+      .container-fluid
+        header, .breadcrumb, > section, footer > div
+          width: 100%
+          padding-left: $desktopPadding
+          padding-right: $desktopPadding
+
+    [class*='col-']
+      padding-left: 10px
+      padding-right: 10px
+      &:first-child      
+        padding-left: 0 !important
+      &:last-child
+        padding-right: 0 !important

@@ -5,7 +5,7 @@ import './index.sass';
 
 const IntroductionDetail = () => (
   <section className="introduction-detail">
-    <div className="col-lg-6">
+    <div className="col-md-6">
       <h3>
         We are Golden Owl
       </h3>
@@ -18,7 +18,7 @@ const IntroductionDetail = () => (
         </p>
       </div>
     </div>
-    <div className="col-lg-5 ml-auto img-wrapper">
+    <div className="col-md-5 ml-auto img-wrapper">
       <img src={working} alt="working" loading="lazy" />
     </div>
   </section>

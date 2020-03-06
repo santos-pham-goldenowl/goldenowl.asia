@@ -14,13 +14,13 @@ const Footer = () => (
         </h4>
       </div>
       <div className="row">
-        <div className="col-lg-3">
+        <div className="col-md-3">
           <h5>Ho Chi Minh City</h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
           <p>justin@goldenowl.asia</p>
           <p>(+84) 912 878985</p>
         </div>
-        <div className="col-lg-3">
+        <div className="col-md-3">
           <h5>Ha Noi</h5>
           <p>
             02 Le Van Thiem, Nhan Chinh
@@ -29,7 +29,7 @@ const Footer = () => (
           </p>
           <p>+(84) 91 287 89 85</p>
         </div>
-        <div className="col-lg-3">
+        <div className="col-md-3">
           <h5>London</h5>
           <p>
             HERTFORDSHIRE OFFICE
@@ -40,7 +40,7 @@ const Footer = () => (
           </p>
           <p>0345 456 0522</p>
         </div>
-        <div className="col-lg-3">
+        <div className="col-md-3">
           <h5>Sydney</h5>
           <p>
             Suite 8, Level 2, 1 Box Road
@@ -53,9 +53,7 @@ const Footer = () => (
     </div>
     <div className="footer__bottom-content-wrapper">
       <div className="footer__logo-wrapper">
-        <div>
           <img src={go} alt="golden-logo" />
-        </div>
         <div className="footer__social-icons-wrapper">
           {socialIcons.map(icon => (
             <img
@@ -66,8 +64,8 @@ const Footer = () => (
             />
           ))}
         </div>
-        <div className="footer__contact row">
-          <span className="col-sm-12 col-xl-5 footer__phone">(+84) 912 878985</span>
+        <div className="footer__contact d-inline-block">
+          <span className="footer__phone">(+84) 912 878985</span>
           <span className="footer__email">admin@goldenowl.asia</span>
         </div>
       </div>

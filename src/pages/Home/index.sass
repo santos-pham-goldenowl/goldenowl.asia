@@ -3,3 +3,13 @@
 .home
   .main-header, .sub-header, .quote
     background-color: $slightOrange
+
+@media (min-width: 768px) and (max-width: 1367px)
+  .home
+    hr
+      width: calc(100% - 140px)
+
+@media only screen and (min-width: 1368px)
+  .home
+    hr
+      width: 1240px

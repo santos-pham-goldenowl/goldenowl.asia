@@ -11,18 +11,17 @@ import Quote from './components/Quote';
 import Missions from './components/Mission';
 import Introduction from './components/Introduction';
 import CompanyQuality from './components/CompanyQualities';
-import Archieves from './components/Achieves';
+import Archieves from './components/Archieves';
 import Feedback from './components/Feedback';
 import Technologies from './components/Technologies';
 import './index.sass';
 
 const Home = () => {
   const hrStyle = {
-    width: '86.1vw',
     height: 0.8,
     border: 'none',
     backgroundColor: '#DCDCDC',
-    margin: '0 6.9vw',
+    margin: '0 auto',
   };
 
   return (

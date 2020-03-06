@@ -76,8 +76,8 @@ const Service = props => (
     <img className="service__dotted-square" src={yelllowCopy} alt="yellow-copy" />
     <div className="service__yellow-rectangle flex-box">
       <div className="flex-two">
-        <h3 className="heading-base">{props.serviceData.achieves.title}</h3>
-        <p className="text-lg">{props.serviceData.achieves.description}</p>
+        <h3 className="heading-base">{props.serviceData.archieves.title}</h3>
+        <p className="text-lg">{props.serviceData.archieves.description}</p>
       </div>
       <div className="flex-one service__logos-wrapper">
         {props.serviceData.logos.map(image => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy" />)}

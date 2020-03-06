@@ -1,40 +1,65 @@
 @import '../../styles/variables.sass'
 
-@media only screen and (min-width: 1024px)
+.explore
+  padding-bottom: 8.3vw
+
+  &__image-wrapper
+    display: flex
+    justify-content: center
+  
+  > div
+    padding: 0 6.9vw 0 10.4vw
+    background-color: $albescentWhite
+    padding-top: 5.5vw
+    padding-bottom: 5.5vw
+    margin: 0
+
+  &__image
+    width: 100%
+
+  &__description
+    font-family: ProximaNovaBold
+    line-height: 1.23
+    padding: 0.9vw 0 4.2vw 0
+    width: calc(57.4% + 120px);
+  
+  &__top-content
+    display: flex
+    justify-content: space-between
+
+  &__case-study
+    display: flex
+
+@media (min-width: 768px) and (max-width: 1368px)
   .explore
     padding-bottom: 120px
-
-    &__image-wrapper
-      display: flex
-      justify-content: center
     
     > div
-      padding: 0 101px 0 150px
-      background-color: $albescentWhite
+      padding: 0 70px 0 105px
       padding-top: 80px
       padding-bottom: 80px
       margin: 0
 
-    &__image
-      width: 100%
+    &__description
+      font-size: 26px !important
+      padding: 12px 0 60px 0
+    
+    h6
+     font-size: 14px
+
+@media only screen and (min-width: 1368px)
+  .explore
+    padding-bottom: 120px
+    
+    > div
+      padding: 0 101px 0 150px
+      padding-top: 80px
+      padding-bottom: 80px
+      margin: 0
 
     &__description
       font-size: 37px
-      font-family: ProximaNovaBold
-      font-weight: normal
-      font-stretch: normal
-      font-style: normal
-      line-height: 1.23
-      letter-spacing: normal
       padding: 12px 0 60px 0
-      width: calc(57.4% + 180px);
     
-    &__top-content
-      display: flex
-      justify-content: space-between
-
     h6
      font-size: 16px
-
-    &__case-study
-      display: flex

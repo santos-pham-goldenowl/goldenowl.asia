@@ -6,19 +6,19 @@ import map from '../../assets/images/map.svg';
 const Success = () => (
   <section className="success">
     <div className="row success__main">
-      <div className="col-lg-6">
+      <div className="col-md-6">
         <h1>
           Our achievement
         </h1>
       </div>
-      <div className="col-lg-6">
+      <div className="col-md-6">
         <p>
           We pride ourselves on having clients’ satisfaction in the products we built. Our proven experience is deep from 30+ Mobile Applications and 45+ Website projects across 7 countries, including America, the United Kingdom, Malaysia, Australia, Thailand, Indonesia, Singapore, etc.
         </p>
       </div>
     </div>
     <div className="row success__sum">
-      <div className="col-lg-6">
+      <div className="col-md-6">
         <h3>
           30+ mobile application
         </h3>
@@ -27,7 +27,7 @@ const Success = () => (
         </p>
       </div>
 
-      <div className="col-lg-6">
+      <div className="col-md-6">
         <h3>
           45+ websites
         </h3>
@@ -35,8 +35,8 @@ const Success = () => (
           We also fulfilled at least 45 websites in many fields like ecommerce, management, etc. Some of them are used by big groups, companies and a large number of users.
         </p>
       </div>
-      <div className="col-lg-6" />
-      <div className="col-lg-6">
+      <div className="col-md-6" />
+      <div className="col-md-6">
         <h3>
         7 countries
         </h3>

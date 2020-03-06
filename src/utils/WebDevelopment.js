@@ -28,7 +28,7 @@ const WebDevelopmentData = {
       content: 'Beside the quality of the code, security is set as importance as well. With experience in deploying many websites, we know how to make your web site is protected from being attacked by bad guys.',
     },
   },
-  achieves: {
+  archieves: {
     title: 'Seamless Integration with 50+ software platforms.',
     description: 'Our projects are build in many programming languages like Javascript, Ruby on Rails, etc. We know which one is more suitable for your project and make it better than ever.',
   },

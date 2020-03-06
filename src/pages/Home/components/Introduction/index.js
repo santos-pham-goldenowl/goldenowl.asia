@@ -4,11 +4,11 @@ import study from '../../../../assets/images/study.png';
 import './index.sass';
 
 const Introduction = () => (
-  <section className="introduction">
-    <div className="col-lg-5 introduction__left-side">
+  <section className="introduction d-flex">
+    <div className="col-md-5 introduction__left-side">
       <img src={study} alt={study} loading="lazy" />
     </div>
-    <div className="col-lg-6 ml-auto">
+    <div className="col-md-6 ml-auto">
       <h3 className="introduction__title">We are Golden Owl</h3>
       <p className="introduction__text">
       The role of Golden Owl Asia starts where Enterprise meets technology. We provide IT solutions that allow our Clients to achieve specific goals and measurable benefits.

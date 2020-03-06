@@ -13,15 +13,15 @@ const Missions = () => {
     backgroundPosition: 'bottom',
   };
   return (
-    <section className="missions" style={sectionStyle}>
-      <div className="col-lg-5">
+    <section className="missions d-flex" style={sectionStyle}>
+      <div className="col-md-5">
         <h3 className="missions__title">What we do</h3>
         <p>
         Lorem ipsum dolor sit amet, natum persequeris vel cu. Nominavi temporibus ad sit. Pri nonumy laudem complectitur ea. Modus eloquentiam id has.
         </p>
       </div>
-      <div className="col-lg-6 ml-auto d-flex">
-        <div className="col-lg-6">
+      <div className="col-md-6 ml-auto d-flex">
+        <div className="col-md-6">
           <Link className="missions__item" to="/services/web-development">
             <h3 className="missions__item-title">Web development</h3>
             <ArrowRight width="33px" left="33px" />
@@ -35,7 +35,7 @@ const Missions = () => {
             <ArrowRight width="33px" left="33px" />
           </Link>
         </div>
-        <div className="col-lg-6">
+        <div className="col-md-6">
           <Link className="missions__item" to="/services/mobile-development">
             <h3 className="missions__item-title">Mobile development</h3>
             <ArrowRight width="33px" left="33px" />

@@ -28,7 +28,7 @@ const DevelopmentTeamData = {
       content: 'Developers with great experience in their field increases the success and client’s satisfaction of the project.',
     },
   },
-  achieves: {
+  archieves: {
     title: 'We are stronger together',
     description: 'Each member of the development team has their own strength and ability, they may still not good at some points and that’s why they always try our best to work together and support each other for the common achievement. Working together makes us stronger and growing faster.',
   },

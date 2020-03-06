@@ -56,24 +56,24 @@ class SubHeader extends Component {
       </div>
     );
     return (
-      <header className="sub-header">
-        <div className="sub-header__title">
+      <header className="sub-header d-flex">
+        <div className="d-flex align-items-center sub-header__button">
           <Link to="/">
             <h4 className="sub-header__text">Home</h4>
           </Link>
         </div>
         <div>{this.state.showServices ? servicesNode : buttoNode}</div>
-        <div className="sub-header__title">
+        <div className="d-flex align-items-center sub-header__button">
           <Link to="/technologies">
             <h4 className="sub-header__text">
               Technology
             </h4>
           </Link>
         </div>
-        <div className="sub-header__title">
+        <div className="d-flex align-items-center sub-header__button">
           <h4 className="sub-header__text">Testimonial</h4>
         </div>
-        <div className="sub-header__contact-wrapper">
+        <div className="sub-header__contact-wrapper d-flex align-items-center justify-content-center">
           <h4 className="sub-header__contact-title sub-header__text">Contact us</h4>
           <img className="sub-header__arrow-right" src={arrowRight} alt="arrow-right" />
         </div>

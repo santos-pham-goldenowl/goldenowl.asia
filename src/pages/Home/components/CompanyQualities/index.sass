@@ -1,42 +1,70 @@
-@media only screen and (min-width: 1024px)
+.qualities
+  padding: 8.3vw 0 8.3vw 0
+  text-align: center
+
+  .check-point-wrapper
+    padding-top: 0.7vw
+
+  &__items
+    text-align: center
+    img
+      max-width: 100%
+      max-height: 12.8vw
+      margin-bottom: 2.8vw
+    h5
+      margin-bottom: 2.1vw
+      font-weight: bold
+    div
+      p
+        width: 100%
+        margin: 0
+        margin-bottom: 2.8vw !important
+      p.bottom-line
+        margin-bottom: 0 !important
+  
+  &__title
+    padding-bottom: 2.8vw !important
+
+@media (min-width: 768px) and (max-width: 1367px)
   .qualities
-    padding-top: 120px
-    padding-bottom: 120px
+    [class*='col-']
+      padding: 0 30px 0 12px
+
+    &__title
+      font-size: 26px
+
+    &__items
+      h5, p
+        font-size: 14px !important
+        line-height: 1.5 !important
+
+
+@media only screen and (min-width: 1368px)
+  .qualities
+    padding: 100px 0 100px 0
 
     .check-point-wrapper
       padding-top: 10px
 
     [class*='col-']
-      padding: 0 30px 0 20px !important
-      &:first-child
-        padding-left: 0 !important
-      &:last-child
-        padding-right: 0 !important
-
-    &__items
-      .heading-x-small
-        margin-bottom: 20px
-        font-size: 20px
-        font-weight: bold
-        line-height: 1.5
-
-    &__main-content
-      display: flex
-      p
-        font-size: 20px
-        line-height: 1.45
+      padding-right: 35px !important
+      padding-left: 15px !important
     
-    &__item-flex
-      display: flex
-      text-align
+    div
       p
-        margin: 0
-        padding-left: 20px
         margin-bottom: 40px !important
-      p.bottom-line
-        margin-bottom: 0 !important
-
+    
     &__title
       font-size: 36px
-      text-align: center
-      padding-bottom: 2.9vw !important
+      padding-bottom: 40px !important
+
+    &__items
+      img        
+        max-height: 167px
+        margin-bottom: 40px
+      h5
+        margin-bottom: 30px
+      h5, p
+        font-size: 20px
+        line-height: 1.5 !important
+

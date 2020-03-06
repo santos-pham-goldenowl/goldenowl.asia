@@ -47,7 +47,7 @@ const SingleService = ({ content }) => {
       {/* <section className="service__slogan">
         <h2 className="heading-lg">Simple and powerful</h2>
         <div className="service__slogan-grid">
-          <div className="col-lg-4">
+          <div className="col-md-4">
             <div className="service__slogan-item">
               <h3 className="heading-base service__slogan-title">
                 {content.third.left.title}
@@ -57,7 +57,7 @@ const SingleService = ({ content }) => {
             </div>
           </div>
           <img className="service__line" src={line} alt="line" style={{ margin: '0 25px' }} />
-          <div className="col-lg-4">
+          <div className="col-md-4">
             <div className="service__slogan-item">
               <h3 className="heading-base service__slogan-title">
                 {content.third.center.title}
@@ -66,7 +66,7 @@ const SingleService = ({ content }) => {
             </div>
           </div>
           <img className="service__line" src={line} alt="line" style={{ margin: '0 25px' }} />
-          <div className="col-lg-4">
+          <div className="col-md-4">
             <div className="service__slogan-item">
               <h3 className="heading-base service__slogan-title">
                 {content.third.right.title}

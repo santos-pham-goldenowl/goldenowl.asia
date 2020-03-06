@@ -26,7 +26,7 @@ const ProjectManagementData = {
       content: 'A project manager is not only the one who keeps track and controls any situations of the project but also takes responsibility to deliver message from developer to client and vice versa.',
     },
   },
-  achieves: {
+  archieves: {
     title: 'Efficient management with management tool',
     description: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc.',
   },

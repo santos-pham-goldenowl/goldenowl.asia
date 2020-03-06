@@ -15,7 +15,7 @@ const ServicesDescription = () => {
   return (
     <section className="services-description" style={sectionStyle}>
       <div className="row">
-        <div className="col-lg-5">
+        <div className="col-md-5">
           <div className="row">
             <h2 className="services-description__title">SERVICES</h2>
           </div>
@@ -25,7 +25,7 @@ const ServicesDescription = () => {
             </p>
           </div>
         </div>
-        <div className="col-lg-6 ml-auto">
+        <div className="col-md-6 ml-auto">
           <img src={present} alt="present" />
         </div>
       </div>
