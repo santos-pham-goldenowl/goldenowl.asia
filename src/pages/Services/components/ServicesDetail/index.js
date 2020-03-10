@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { ServicesDetailContent, ServicesDetailParagraphs } from '../../utils/ServicesDetail'
+import { ServicesDetailContent } from '../../../../utils/ServicesDetail'
 import './index.sass'
-import objectToArray from '../../utils/objectToArray'
+import objectToArray from '../../../../utils/objectToArray'
 
 const ServicesDetail = () => (
   <section className="services-detail">
@@ -15,29 +15,10 @@ const ServicesDetail = () => (
               <img src={content.url} alt={content.key} />
             </div>
             <div className="card-content">
-              <div className="row">
                 <h5>{content.key}</h5>
-              </div>
-              <div className="row">
                 <p>{content.content}</p>
-              </div>
             </div>
           </Link>
-        </div>
-      ))}
-    </div>
-
-    <div className="row services-detail__paragraphs">
-      {objectToArray(ServicesDetailParagraphs).map((paragraph) => (
-        <div className="col-md-6">
-          <div className="card">
-            <div className="row">
-              <h4>{paragraph.key}</h4>
-            </div>
-            <div className="row">
-              <p>{paragraph.content}</p>
-            </div>
-          </div>
         </div>
       ))}
     </div>

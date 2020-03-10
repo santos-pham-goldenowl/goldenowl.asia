@@ -53,18 +53,19 @@ const Footer = () => (
     </div>
     <div className="footer__bottom-content-wrapper">
       <div className="footer__logo-wrapper">
-        <img src={go} alt="golden-logo" />
-        <div className="footer__social-icons-wrapper">
+
+        <img className="d-block" src={go} alt="golden-logo" />
+        <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
           {socialIcons.map((icon) => (
             <img
               src={icon.url}
-              className={`footer__social-icon footer__icon-${icon.name}`}
+              className={`footer__social-icon d-inline-block footer__icon-${icon.name}`}
               alt={icon.name}
               loading="lazy"
             />
           ))}
         </div>
-        <div className="footer__contact row">
+        <div className="footer__contact d-flex">
           <span className="col-sm-12 col-lg-6 footer__phone">(+84) 912 878985</span>
           <span className="col-sm-12 col-lg-6 footer__email">admin@goldenowl.asia</span>
         </div>

@@ -1,0 +1,72 @@
+@import '../../../../styles/variables.sass'
+
+.services-detail
+  align-items: start
+    
+  .col-md-4
+    &:nth-child(3n+1)
+      padding-left: 0 !important
+    &:nth-child(3n)
+      padding-right: 0 !important
+    &:nth-child(1), &:nth-child(2), &:nth-child(3)
+      padding-top: 0
+
+  .img-wrapper
+    display: flex
+    justify-content: center
+    -o-object-fit: contain
+    object-fit: contain
+
+  img
+    transition: transform .3s
+    &:hover
+      transform: scale(1.15)
+  
+  .card-content
+    line-height: 1.5;
+
+@media (min-width: 768px) and (max-width: 1367px)
+  .services-detail
+    padding-top: 10.4vw
+
+    &__links
+      padding-bottom: 10.4vw
+      
+    .col-md-4
+      padding-top: 9vw
+    
+    .img-wrapper
+      margin-bottom: 2.8vw
+
+    img
+      &:last-child
+        height: 15.3vw
+    
+    .card-content
+      width: 24.3vw
+      font-size: 14px
+      h5
+        margin-bottom: 0.9vw
+
+@media only screen and (min-width: 1368px)
+  .services-detail
+    padding-top: 150px
+
+    &__links
+      padding-bottom: 150px
+      
+    .col-md-4
+      padding-top: 130px
+    
+    .img-wrapper
+      margin-bottom: 40px
+
+    img
+      &:last-child
+        height: 220px
+    
+    .card-content
+      width: 350px
+      font-size: 20px
+      h5
+        margin-bottom: 13px
