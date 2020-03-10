@@ -1,5 +1,5 @@
-import React from "react";
-import "./index.sass";
+import React from 'react'
+import './index.sass'
 
 const Archieves = () => (
   <section className="archieves d-block">
@@ -49,6 +49,6 @@ const Archieves = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Archieves;
+export default Archieves

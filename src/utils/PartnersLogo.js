@@ -1,9 +1,9 @@
-import assred from '../assets/images/partner/1.png';
-import finda from '../assets/images/partner/2.png';
-import luxe from '../assets/images/partner/3.png';
-import candy from '../assets/images/partner/4.png';
-import gig from '../assets/images/partner/5.png';
-import mywork from '../assets/images/partner/6.png';
+import assred from '../assets/images/partner/1.png'
+import finda from '../assets/images/partner/2.png'
+import luxe from '../assets/images/partner/3.png'
+import candy from '../assets/images/partner/4.png'
+import gig from '../assets/images/partner/5.png'
+import mywork from '../assets/images/partner/6.png'
 
 const partnersLogo = [
   {
@@ -30,6 +30,6 @@ const partnersLogo = [
     name: 'mywork',
     url: mywork,
   },
-];
+]
 
-export default partnersLogo;
+export default partnersLogo

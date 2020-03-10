@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import present from '../../assets/images/service_description.png';
-import Bg from '../../assets/images/wavy_bg_2.png';
-import './index.sass';
+import present from '../../assets/images/service_description.png'
+import Bg from '../../assets/images/wavy_bg_2.png'
+import './index.sass'
 
 const ServicesDescription = () => {
   const sectionStyle = {
@@ -10,7 +10,7 @@ const ServicesDescription = () => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom',
     backgroundSize: '100vw',
-  };
+  }
 
   return (
     <section className="services-description" style={sectionStyle}>
@@ -30,7 +30,7 @@ const ServicesDescription = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ServicesDescription;
+export default ServicesDescription

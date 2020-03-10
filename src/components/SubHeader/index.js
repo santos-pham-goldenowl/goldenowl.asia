@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import ServicesData from '../../utils/Services';
-import arrowRight from '../../assets/images/arrow-right.svg';
-import arrowDown from '../../assets/images/chevron-down-solid.svg';
-import './index.sass';
-import './service.sass';
+import ServicesData from '../../utils/Services'
+import arrowRight from '../../assets/images/arrow-right.svg'
+import arrowDown from '../../assets/images/chevron-down-solid.svg'
+import './index.sass'
+import './service.sass'
 
 class SubHeader extends Component {
   state = { showServices: false }
@@ -28,7 +28,7 @@ class SubHeader extends Component {
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
         </div>
         <div className="services__items">
-          {ServicesData.map(service => (
+          {ServicesData.map((service) => (
             <Link to={`/services/${service.link}`}>
               <div className="services__service">
                 <div className="services__icon-wrapper">
@@ -43,7 +43,7 @@ class SubHeader extends Component {
           ))}
         </div>
       </div>
-    );
+    )
 
     const buttoNode = (
       <div className="services">
@@ -54,7 +54,7 @@ class SubHeader extends Component {
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
         </div>
       </div>
-    );
+    )
     return (
       <header className="sub-header d-flex">
         <div className="d-flex align-items-center sub-header__button">
@@ -78,8 +78,8 @@ class SubHeader extends Component {
           <img className="sub-header__arrow-right" src={arrowRight} alt="arrow-right" />
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default SubHeader;
+export default SubHeader

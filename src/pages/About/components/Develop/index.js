@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import code from '../../assets/images/code.png';
-import './index.sass';
+import code from '../../../../assets/images/code.png'
+import './index.sass'
 
 const Develop = () => (
   <section className="develop">
@@ -25,6 +25,6 @@ const Develop = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Develop;
+export default Develop

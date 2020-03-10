@@ -1,15 +1,17 @@
 @import '../../styles/variables.sass'
 
 .breadcrumb
-  background-color: transparent !important
+  background-color: transparent
   width: 100%
   padding: 0 30px
+  margin-bottom: 0 !important
 
   &__content
     display: flex
     align-items: center
     border-bottom: 1px solid $slightYellow
     padding-bottom: 10px
+    width: 100%
 
   span
     padding: 5px 10px 0 10px
@@ -19,7 +21,6 @@
     display: flex
     align-items: center
     a, p
-      font-size: 16px
       font-family: ProximaNovaRegular
       white-space: nowrap
 
@@ -27,16 +28,10 @@
   .breadcrumb
     padding-top: 26px !important
     padding-bottom: 0 !important
-    margin-bottom: 0 !important
 
     img
       padding-left: 105px
 
-    &__content
-      width: 100%
-
     &__text
       a, p
         font-size: 16px
-        font-family: ProximaNovaRegular
-        white-space: nowrap

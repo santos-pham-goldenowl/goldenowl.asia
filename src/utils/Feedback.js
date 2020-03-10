@@ -1,6 +1,6 @@
-import f1 from '../assets/images/raja_1.png';
-import f2 from '../assets/images/raja_2.png';
-import f3 from '../assets/images/raja.png';
+import f1 from '../assets/images/raja_1.png'
+import f2 from '../assets/images/raja_2.png'
+import f3 from '../assets/images/raja.png'
 
 const feedback = [
   {
@@ -75,6 +75,6 @@ const feedback = [
     url: f3,
     content: 'Liu Lorem ipsum dolor sit amet, iudico oratio eos ex. Duo ludus invenire ex, eam te lucilius voluptatum inciderint. No quo',
   },
-];
+]
 
-export default feedback;
+export default feedback

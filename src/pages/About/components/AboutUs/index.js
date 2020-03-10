@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import research from '../../assets/images/research.png';
-import bg from '../../assets/images/about_bg.png';
-import './index.sass';
+import research from '../../../../assets/images/research.png'
+import bg from '../../../../assets/images/about_bg.png'
+import './index.sass'
 
 const AboutUs = () => {
   const sectionStyle = {
@@ -10,7 +10,7 @@ const AboutUs = () => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom',
     backgroundSize: '100vw',
-  };
+  }
 
   return (
     <section className="about-us" style={sectionStyle}>
@@ -27,7 +27,7 @@ const AboutUs = () => {
         <img src={research} alt="research" loading="lazy" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs

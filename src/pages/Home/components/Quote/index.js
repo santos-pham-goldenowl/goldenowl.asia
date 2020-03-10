@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import work from '../../../../assets/images/work.png';
-import './index.sass';
+import work from '../../../../assets/images/work.png'
+import './index.sass'
 
 const Quote = () => (
   <section className="quote d-flex">
@@ -18,6 +18,6 @@ const Quote = () => (
       <img src={work} alt="work" loading="lazy" />
     </div>
   </section>
-);
+)
 
-export default Quote;
+export default Quote

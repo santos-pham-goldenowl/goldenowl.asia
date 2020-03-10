@@ -1,23 +1,23 @@
-import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import Home from '../Home';
-import About from '../About';
+import Home from '../Home'
+import About from '../About'
 // import TechnologyContainer from '../Technology';
-import Services from '../Services';
-import './index.sass';
-import singleServiceDetails from '../../utils/SingleServiceDetails';
-import objectToArray from '../../utils/objectToArray';
-import SingleService from '../SingleService';
+import Services from '../Services'
+import './index.sass'
+import singleServiceDetails from '../../utils/SingleServiceDetails'
+import objectToArray from '../../utils/objectToArray'
+import SingleService from '../SingleService'
 
 const App = () => (
   <BrowserRouter>
     <section className="App">
       <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
+      <Route exact path="/about-us" component={About} />
       {/* <Route path="/technologies" component={TechnologyContainer} /> */}
       {
-        objectToArray(singleServiceDetails).map(service => (
+        objectToArray(singleServiceDetails).map((service) => (
           <Route
             exact
             path={`/services/${service.url}`}
@@ -28,6 +28,6 @@ const App = () => (
       <Route exact path="/services" component={Services} />
     </section>
   </BrowserRouter>
-);
+)
 
-export default App;
+export default App

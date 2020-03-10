@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
-import technologiesLogo from '../../../../utils/TechnologiesLogo';
-import './index.sass';
+import technologiesLogo from '../../../../utils/TechnologiesLogo'
+import './index.sass'
 
 const Technologies = () => (
   <section className="technologies">
     <h3 className="technologies__title heading-base">Technologies we use</h3>
     <div className="row">
-      {technologiesLogo.map(logo => (
+      {technologiesLogo.map((logo) => (
         <div className="col-md-2 d-flex">
           <img
             className="technologies__grid-item"
@@ -19,6 +19,6 @@ const Technologies = () => (
     </div>
     <span className="technologies__view-all">View all technologies</span>
   </section>
-);
+)
 
-export default Technologies;
+export default Technologies

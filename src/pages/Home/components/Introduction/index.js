@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import study from '../../../../assets/images/study.png';
-import './index.sass';
+import study from '../../../../assets/images/study.png'
+import './index.sass'
 
 const Introduction = () => (
   <section className="introduction d-flex">
@@ -18,6 +18,6 @@ const Introduction = () => (
       </p>
     </div>
   </section>
-);
+)
 
-export default Introduction;
+export default Introduction

@@ -1,11 +1,11 @@
-import html from '../assets/images/service/WebDevelopment/html.svg';
-import css3 from '../assets/images/service/WebDevelopment/css3.svg';
-import js from '../assets/images/service/WebDevelopment/js.svg';
-import react from '../assets/images/service/WebDevelopment/react.svg';
-import angular from '../assets/images/service/WebDevelopment/angular.svg';
-import mock from '../assets/images/service/WebDevelopment/mock.svg';
-import plus from '../assets/images/service/WebDevelopment/50plus.svg';
-import coverImage from '../assets/images/service/WebDevelopment/cover.svg';
+import html from '../assets/images/service/WebDevelopment/html.svg'
+import css3 from '../assets/images/service/WebDevelopment/css3.svg'
+import js from '../assets/images/service/WebDevelopment/js.svg'
+import react from '../assets/images/service/WebDevelopment/react.svg'
+import angular from '../assets/images/service/WebDevelopment/angular.svg'
+import mock from '../assets/images/service/WebDevelopment/mock.svg'
+import plus from '../assets/images/service/WebDevelopment/50plus.svg'
+import coverImage from '../assets/images/service/WebDevelopment/cover.svg'
 
 const WebDevelopmentData = {
   coverImage,
@@ -62,6 +62,6 @@ const WebDevelopmentData = {
       url: plus,
     },
   ],
-};
+}
 
-export default WebDevelopmentData;
+export default WebDevelopmentData

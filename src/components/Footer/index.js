@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import go from '../../assets/images/golden_owl.png';
-import socialIcons from '../../utils/SocialIcons';
-import './index.sass';
+import go from '../../assets/images/golden_owl.png'
+import socialIcons from '../../utils/SocialIcons'
+import './index.sass'
 
 const Footer = () => (
   <footer className="footer">
@@ -53,9 +53,9 @@ const Footer = () => (
     </div>
     <div className="footer__bottom-content-wrapper">
       <div className="footer__logo-wrapper">
-          <img src={go} alt="golden-logo" />
+        <img src={go} alt="golden-logo" />
         <div className="footer__social-icons-wrapper">
-          {socialIcons.map(icon => (
+          {socialIcons.map((icon) => (
             <img
               src={icon.url}
               className={`footer__social-icon footer__icon-${icon.name}`}
@@ -64,9 +64,9 @@ const Footer = () => (
             />
           ))}
         </div>
-        <div className="footer__contact d-inline-block">
-          <span className="footer__phone">(+84) 912 878985</span>
-          <span className="footer__email">admin@goldenowl.asia</span>
+        <div className="footer__contact row">
+          <span className="col-sm-12 col-lg-6 footer__phone">(+84) 912 878985</span>
+          <span className="col-sm-12 col-lg-6 footer__email">admin@goldenowl.asia</span>
         </div>
       </div>
       <div className="footer__bottom-grid-container">
@@ -83,7 +83,7 @@ const Footer = () => (
         <div>
           <h3 className="footer__bottom-grid-title">Links</h3>
           <div>
-            <Link to="/about">About Us</Link>
+            <Link to="/about-us">About Us</Link>
             <Link to="/services">Services</Link>
             <Link to="/technologies">Technologiies</Link>
             <a href="#">Testimonials</a>
@@ -105,6 +105,6 @@ const Footer = () => (
       <p>Copyright 2019 © Golden Owl Consulting</p>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer

@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import MainHeader from '../../components/MainHeader';
-import SubHeader from '../../components/SubHeader';
-import BreadCrumb from '../../components/BreadCrumb';
-import Footer from '../../components/Footer';
-import './index.sass';
-import objectToArray from '../../utils/objectToArray';
-import yelllowCopy from '../../assets/images/rectangle-copy.svg';
-import line from '../../assets/images/line.svg';
+import MainHeader from '../../components/MainHeader'
+import SubHeader from '../../components/SubHeader'
+import BreadCrumb from '../../components/BreadCrumb'
+import Footer from '../../components/Footer'
+import './index.sass'
+import objectToArray from '../../utils/objectToArray'
+import yelllowCopy from '../../assets/images/rectangle-copy.svg'
+import line from '../../assets/images/line.svg'
 
 const SingleService = ({ content }) => {
-  const { key } = content;
+  const { key } = content
   return (
     <section className="service">
       <MainHeader />
@@ -99,7 +99,7 @@ const SingleService = ({ content }) => {
       </section> */}
       <Footer />
     </section>
-  );
-};
+  )
+}
 
-export default SingleService;
+export default SingleService

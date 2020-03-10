@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import working from '../../assets/images/working.png';
-import './index.sass';
+import working from '../../../../assets/images/working.png'
+import './index.sass'
 
 const IntroductionDetail = () => (
   <section className="introduction-detail">
@@ -22,7 +22,7 @@ const IntroductionDetail = () => (
       <img src={working} alt="working" loading="lazy" />
     </div>
   </section>
-);
+)
 
 
-export default IntroductionDetail;
+export default IntroductionDetail

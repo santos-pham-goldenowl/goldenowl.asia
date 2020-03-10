@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import TabContent from './TabContent';
-import TabHeader from './TabHeader';
-import Tabs from './Tabs';
-import './index.sass';
-import FrontEndTechs from '../../utils/FrontendTechs';
-import BackEndTechs from '../../utils/BackEndTechs';
-import MobileStackTechs from '../../utils/MobileTechs';
+import React, { Component } from 'react'
+
+import TabContent from './TabContent'
+import TabHeader from './TabHeader'
+import Tabs from './Tabs'
+
+import './index.sass'
+import FrontEndTechs from '../../utils/FrontendTechs'
+import BackEndTechs from '../../utils/BackEndTechs'
+import MobileStackTechs from '../../utils/MobileTechs'
 
 class TabContainer extends Component {
   render() {
-    return(
+    return (
       <Tabs>
         <TabHeader for="tab1">
           <p className="text-xl">Front - end</p>
@@ -103,4 +105,4 @@ class TabContainer extends Component {
   }
 }
 
-export default TabContainer;
+export default TabContainer
