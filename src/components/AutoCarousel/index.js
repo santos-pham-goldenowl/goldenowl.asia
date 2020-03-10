@@ -8,12 +8,12 @@ import rightQuote from '../../assets/images/quote-right-solid.svg'
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 2560, min: 1368 },
+    breakpoint: { max: 2560, min: 1366 },
     items: 3,
     slidesToSlide: 3,
   },
   tablet: {
-    breakpoint: { max: 1068, min: 768 },
+    breakpoint: { max: 1365, min: 768 },
     items: 3,
     slidesToSlide: 3,
   },

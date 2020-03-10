@@ -4,12 +4,12 @@ import 'react-multi-carousel/lib/styles.css'
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 2560, min: 1368 },
+    breakpoint: { max: 2560, min: 1366 },
     items: 6,
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1367, min: 768 },
+    breakpoint: { max: 1365, min: 768 },
     items: 5,
     slidesToSlide: 1,
   },
