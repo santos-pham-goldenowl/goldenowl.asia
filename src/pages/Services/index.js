@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import MainHeader from '../../components/MainHeader';
-import SubHeader from '../../components/SubHeader';
-import Footer from '../../components/Footer';
-import Explore from '../../components/Explore';
-import Contact from '../../components/Contact';
-import BreadCrumb from '../../components/BreadCrumb';
-import ServicesDescription from '../../components/ServicesDescription';
-import ServicesDetail from '../../components/ServicesDetail';
-import './index.sass';
+import MainHeader from '../../components/MainHeader'
+import SubHeader from '../../components/SubHeader'
+import Footer from '../../components/Footer'
+import Explore from '../../components/Explore'
+import Contact from '../../components/Contact'
+import BreadCrumb from '../../components/BreadCrumb'
+import ServicesDescription from '../../components/ServicesDescription'
+import ServicesDetail from '../../components/ServicesDetail'
+import './index.sass'
 
 const Services = () => (
   <section className="services-container">
@@ -23,6 +23,6 @@ const Services = () => (
     <Explore />
     <Footer />
   </section>
-);
+)
 
-export default Services;
+export default Services

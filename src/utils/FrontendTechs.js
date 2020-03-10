@@ -1,9 +1,9 @@
-import html from '../assets/images/html.png';
-import css from '../assets/images/css.png';
-import javascript from '../assets/images/javascript.png';
-import react from '../assets/images/react.png';
-import typescript from '../assets/images/typescript.png';
-import angular from '../assets/images/angular.png';
+import html from '../assets/images/html.png'
+import css from '../assets/images/css.png'
+import javascript from '../assets/images/javascript.png'
+import react from '../assets/images/react.png'
+import typescript from '../assets/images/typescript.png'
+import angular from '../assets/images/angular.png'
 
 const FrontEndTechs = [
   {
@@ -32,4 +32,4 @@ const FrontEndTechs = [
   },
 ]
 
-export default FrontEndTechs;
+export default FrontEndTechs

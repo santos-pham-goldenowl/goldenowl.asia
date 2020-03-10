@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import bg from '../../../../assets/images/bg.svg';
-import ArrowRight from '../../../../components/ArrowRight';
-import './index.sass';
+import bg from '../../../../assets/images/bg.svg'
+import ArrowRight from '../../../../components/ArrowRight'
+import './index.sass'
 
 const Missions = () => {
   const sectionStyle = {
@@ -11,7 +11,7 @@ const Missions = () => {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'bottom',
-  };
+  }
   return (
     <section className="missions d-flex" style={sectionStyle}>
       <div className="col-md-5">
@@ -47,7 +47,7 @@ const Missions = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Missions;
+export default Missions

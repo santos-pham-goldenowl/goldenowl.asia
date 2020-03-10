@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import { ServicesDetailContent, ServicesDetailParagraphs } from '../../utils/ServicesDetail';
-import './index.sass';
-import objectToArray from '../../utils/objectToArray';
+import { ServicesDetailContent, ServicesDetailParagraphs } from '../../utils/ServicesDetail'
+import './index.sass'
+import objectToArray from '../../utils/objectToArray'
 
 const ServicesDetail = () => (
   <section className="services-detail">
     <div className="row justify-content-center services-detail__links">
-      {objectToArray(ServicesDetailContent).map(content => (
+      {objectToArray(ServicesDetailContent).map((content) => (
         <div className="col-md-4">
           <Link to={`/services/${content.link}`}>
             <div className="img-wrapper w-100">
@@ -28,7 +28,7 @@ const ServicesDetail = () => (
     </div>
 
     <div className="row services-detail__paragraphs">
-      {objectToArray(ServicesDetailParagraphs).map(paragraph => (
+      {objectToArray(ServicesDetailParagraphs).map((paragraph) => (
         <div className="col-md-6">
           <div className="card">
             <div className="row">
@@ -42,6 +42,6 @@ const ServicesDetail = () => (
       ))}
     </div>
   </section>
-);
+)
 
-export default ServicesDetail;
+export default ServicesDetail

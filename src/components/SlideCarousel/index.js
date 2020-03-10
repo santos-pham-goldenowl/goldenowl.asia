@@ -1,6 +1,6 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React from 'react'
+import Carousel from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
 
 const responsive = {
   desktop: {
@@ -9,18 +9,18 @@ const responsive = {
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1368, min: 768 },
-    items: 6,
+    breakpoint: { max: 1367, min: 768 },
+    items: 5,
     slidesToSlide: 1,
   },
   mobile: {
-    breakpoint: { max: 768, min: 0 },
+    breakpoint: { max: 767, min: 0 },
     items: 1,
     slidesToSlide: 1,
   },
-};
+}
 const SlideCarousel = ({ ...props }) => {
-  const { deviceType, content } = props;
+  const { deviceType, content } = props
 
   return (
     <Carousel
@@ -37,12 +37,12 @@ const SlideCarousel = ({ ...props }) => {
       deviceType={deviceType}
       dotListClass="custom-dot-list-style"
     >
-      {content.map(c => (
+      {content.map((c) => (
         <div className="slide-image-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
           <img className={`logo-${c.name}`} src={c.url} alt={c.name} />
         </div>
       ))}
     </Carousel>
-  );
-};
-export default SlideCarousel;
+  )
+}
+export default SlideCarousel

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import SlideCarousel from '../SlideCarousel';
-import partnersLogo from '../../utils/PartnersLogo';
-import './index.sass';
+import SlideCarousel from '../SlideCarousel'
+import partnersLogo from '../../utils/PartnersLogo'
+import './index.sass'
 
 const Partners = () => (
   <section className="partners">
@@ -11,7 +11,7 @@ const Partners = () => (
     </h3>
     <SlideCarousel content={partnersLogo} />
   </section>
-);
+)
 
 
-export default Partners;
+export default Partners

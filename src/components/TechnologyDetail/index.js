@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import './index.sass';
-import TabContainer from '../Tabs/TechTabs';
+import './index.sass'
+import TabContainer from '../Tabs/TechTabs'
 
 const TechnologyDetail = () => (
   <section className="technology-detail">
@@ -29,7 +29,7 @@ become the state of the art.
       </div>
     </div>
   </section>
-);
+)
 
 
-export default TechnologyDetail;
+export default TechnologyDetail

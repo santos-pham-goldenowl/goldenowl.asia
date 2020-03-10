@@ -1,6 +1,7 @@
-import React from 'react';
-import technology from '../../assets/images/technology-cover.png';
-import './index.sass';
+import React from 'react'
+
+import technology from '../../assets/images/technology-cover.png'
+import './index.sass'
 
 const TechnologyDescription = () => (
   <section className="technology-description">
@@ -17,6 +18,6 @@ const TechnologyDescription = () => (
       <img src={technology} alt="technology description" />
     </div>
   </section>
-);
+)
 
-export default TechnologyDescription;
+export default TechnologyDescription

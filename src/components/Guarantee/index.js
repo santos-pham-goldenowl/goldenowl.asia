@@ -1,6 +1,7 @@
-import React from 'react';
-import CheckPoint from '../CheckPoint';
-import './index.sass';
+import React from 'react'
+
+import CheckPoint from '../CheckPoint'
+import './index.sass'
 
 const Guarantee = () => (
   <section className="guarantee">
@@ -49,6 +50,6 @@ const Guarantee = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Guarantee;
+export default Guarantee

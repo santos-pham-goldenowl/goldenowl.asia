@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-import MainHeader from '../MainHeader';
-import SubHeader from '../SubHeader';
-import BreadCrumb from '../BreadCrumb';
-import Footer from '../Footer';
-import line from '../../assets/images/line.svg';
-import yelllowCopy from '../../assets/images/rectangle-copy.svg';
-import './index.sass';
+import MainHeader from '../MainHeader'
+import SubHeader from '../SubHeader'
+import BreadCrumb from '../BreadCrumb'
+import Footer from '../Footer'
+import line from '../../assets/images/line.svg'
+import yelllowCopy from '../../assets/images/rectangle-copy.svg'
+import './index.sass'
 
-const Service = props => (
+const Service = (props) => (
   <section className="service">
     <MainHeader />
     <SubHeader />
@@ -80,13 +80,13 @@ const Service = props => (
         <p className="text-lg">{props.serviceData.archieves.description}</p>
       </div>
       <div className="flex-one service__logos-wrapper">
-        {props.serviceData.logos.map(image => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy" />)}
+        {props.serviceData.logos.map((image) => <img className={`service__logo-${image.name}`} src={image.url} alt={image.name} loading="lazy" />)}
       </div>
     </div>
     <div className="service__other-services-container service__single-padding">
       <h3 className="service__other-services-title heading-base">Other services</h3>
       <div className="service__grid">
-        {props.otherServiceImages.map(image => (
+        {props.otherServiceImages.map((image) => (
           <Link className="service__grid-item" to={`/services/${image.link}`}>
             <img src={image.url} alt={image.name} />
             <h4 className="service__grid-item-title">{image.title}</h4>
@@ -96,10 +96,10 @@ const Service = props => (
     </div>
     <Footer />
   </section>
-);
+)
 
 Service.propTypes = {
   otherServiceImages: PropTypes.array,
   serviceData: PropTypes.object,
-};
-export default Service;
+}
+export default Service

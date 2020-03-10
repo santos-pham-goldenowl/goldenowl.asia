@@ -1,13 +1,13 @@
-import rails from '../assets/images/service/MobileDevelopment/rails.svg';
-import rubic from '../assets/images/service/MobileDevelopment/rubic.svg';
-import php from '../assets/images/service/MobileDevelopment/php.svg';
-import swift from '../assets/images/service/MobileDevelopment/swift.svg';
-import reactNative from '../assets/images/service/MobileDevelopment/react-native.svg';
-import objectC from '../assets/images/service/MobileDevelopment/objectC.svg';
-import ios from '../assets/images/service/MobileDevelopment/ios.svg';
-import android from '../assets/images/service/MobileDevelopment/android.svg';
-import plus from '../assets/images/service/MobileDevelopment/plus.svg';
-import coverImage from '../assets/images/service/MobileDevelopment/cover.svg';
+import rails from '../assets/images/service/MobileDevelopment/rails.svg'
+import rubic from '../assets/images/service/MobileDevelopment/rubic.svg'
+import php from '../assets/images/service/MobileDevelopment/php.svg'
+import swift from '../assets/images/service/MobileDevelopment/swift.svg'
+import reactNative from '../assets/images/service/MobileDevelopment/react-native.svg'
+import objectC from '../assets/images/service/MobileDevelopment/objectC.svg'
+import ios from '../assets/images/service/MobileDevelopment/ios.svg'
+import android from '../assets/images/service/MobileDevelopment/android.svg'
+import plus from '../assets/images/service/MobileDevelopment/plus.svg'
+import coverImage from '../assets/images/service/MobileDevelopment/cover.svg'
 
 const MobileDevelopmentData = {
   coverImage,
@@ -72,6 +72,6 @@ const MobileDevelopmentData = {
       url: plus,
     },
   ],
-};
+}
 
-export default MobileDevelopmentData;
+export default MobileDevelopmentData

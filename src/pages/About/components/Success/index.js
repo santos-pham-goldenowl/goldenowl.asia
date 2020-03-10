@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import './index.sass';
-import map from '../../assets/images/map.svg';
+import './index.sass'
+import map from '../../../../assets/images/map.svg'
 
 const Success = () => (
   <section className="success">
@@ -47,6 +47,6 @@ const Success = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Success;
+export default Success

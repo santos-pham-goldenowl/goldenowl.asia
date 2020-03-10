@@ -1,9 +1,9 @@
-import skype from '../assets/images/service/ProjectManagement/skype.svg';
-import slack from '../assets/images/service/ProjectManagement/slack.svg';
-import trello from '../assets/images/service/ProjectManagement/trello.svg';
-import fire from '../assets/images/service/ProjectManagement/fire.svg';
-import wave from '../assets/images/service/ProjectManagement/wave.svg';
-import coverImage from '../assets/images/service/ProjectManagement/cover.svg';
+import skype from '../assets/images/service/ProjectManagement/skype.svg'
+import slack from '../assets/images/service/ProjectManagement/slack.svg'
+import trello from '../assets/images/service/ProjectManagement/trello.svg'
+import fire from '../assets/images/service/ProjectManagement/fire.svg'
+import wave from '../assets/images/service/ProjectManagement/wave.svg'
+import coverImage from '../assets/images/service/ProjectManagement/cover.svg'
 
 const ProjectManagementData = {
   coverImage,
@@ -52,6 +52,6 @@ const ProjectManagementData = {
       url: skype,
     },
   ],
-};
+}
 
-export default ProjectManagementData;
+export default ProjectManagementData
