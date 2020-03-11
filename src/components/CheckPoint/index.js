@@ -2,7 +2,7 @@ import React from 'react'
 import './index.sass'
 
 const CheckPoint = () => (
-  <section className="check-point-wrapper">
+  <section className="d-inline-block check-point-wrapper">
     <div className="check-point" />
   </section>
 )

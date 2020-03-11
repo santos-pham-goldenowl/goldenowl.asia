@@ -76,11 +76,6 @@ li
     [class*='col-']
       padding-left: 7.5px
       padding-right: 7.5px
-      &:first-child      
-        padding-left: 0
-      &:last-child
-        padding-right: 0
-
 
 @media only screen and (min-width: 1368px)
   .App
@@ -91,10 +86,10 @@ li
           padding-left: $desktopPadding
           padding-right: $desktopPadding
 
+    .row
+      margin-left: -10px
+      margin-right: -10px
+      
     [class*='col-']
       padding-left: 10px
       padding-right: 10px
-      &:first-child      
-        padding-left: 0 !important
-      &:last-child
-        padding-right: 0 !important

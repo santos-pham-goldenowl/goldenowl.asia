@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from '../Home'
 import About from '../About'
-// import TechnologyContainer from '../Technology';
+import TechnologyContainer from '../Technology';
 import Services from '../Services'
 import './index.sass'
 import singleServiceDetails from '../../utils/SingleServiceDetails'
@@ -15,7 +15,7 @@ const App = () => (
     <section className="App">
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
-      {/* <Route path="/technologies" component={TechnologyContainer} /> */}
+      <Route path="/technologies" component={TechnologyContainer} />
       {
         objectToArray(singleServiceDetails).map((service) => (
           <Route
