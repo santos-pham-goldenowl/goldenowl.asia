@@ -8,7 +8,7 @@ import rightQuote from '../../assets/images/quote-right-solid.svg'
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 2560, min: 1368 },
+    breakpoint: { max: 2560, min: 1366 },
     items: 3,
     slidesToSlide: 3,
   },
@@ -43,7 +43,7 @@ const AutoCarousel = (props) => (
     itemClass="carousel-item-padding-40-px"
   >
     {props.content.map((c) => (
-      <div className="auto-carousel" style={{ paddingRight: '25px', paddingLeft: '25px', textAlign: 'left' }}>
+      <div key={c.name} className="auto-carousel" style={{ paddingRight: '25px', paddingLeft: '25px', textAlign: 'left' }}>
         <p>
           <img className="quote-icon" src={leftQuote} alt="left-double-quote" loading="lazy" />
           {c.content}

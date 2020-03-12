@@ -9,7 +9,7 @@ const ServicesDetail = () => (
   <section className="services-detail">
     <div className="row justify-content-center services-detail__links">
       {objectToArray(ServicesDetailContent).map((content) => (
-        <div className="col-md-4">
+        <div key={content.key} className="col-md-4">
           <Link to={`/services/${content.link}`}>
             <div className="img-wrapper w-100">
               <img src={content.url} alt={content.key} />

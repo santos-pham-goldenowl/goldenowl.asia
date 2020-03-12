@@ -20,12 +20,12 @@ const Testimonials = () => {
         <BreadCrumb>
           <Link to="/testimonials">Testimonials</Link>
         </BreadCrumb>
+        <TestimonialsStats />
+        <StatsSummary />
         {/* to-do: animation */}
         {/* refer: https://styled-components.com/ */}
-        <TestimonialsStats />
-        {/* ---------------- */}
-        <StatsSummary />
         <RunningPanels />
+        {/* ---------------- */}
         <TestimonialsList />
         <Footer />
       </div>

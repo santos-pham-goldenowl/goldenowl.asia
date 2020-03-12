@@ -4,12 +4,12 @@ import 'react-multi-carousel/lib/styles.css'
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 2560, min: 1368 },
+    breakpoint: { max: 2560, min: 1366 },
     items: 6,
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1367, min: 768 },
+    breakpoint: { max: 1365, min: 768 },
     items: 5,
     slidesToSlide: 1,
   },
@@ -38,7 +38,7 @@ const SlideCarousel = ({ ...props }) => {
       dotListClass="custom-dot-list-style"
     >
       {content.map((c) => (
-        <div className="slide-image-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
+        <div key={c.name} className="slide-image-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
           <img className={`logo-${c.name}`} src={c.url} alt={c.name} />
         </div>
       ))}

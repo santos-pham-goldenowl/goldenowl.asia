@@ -10,7 +10,7 @@ const TestimonialsList = () => (
     <h3 className="text-center">Customer’s love</h3>
     {objectToArray(testimonials).map((item, index) =>
       index % 2 === 0 ? (
-        <div className="row testimonials-list__item">
+        <div key={item.key} className="row testimonials-list__item">
           <div className="col-md-6">
             <div>
               <img className="w-100" src={item.avatar} alt="some pic" />
@@ -24,15 +24,17 @@ const TestimonialsList = () => (
               <p>{item.details}</p>
               <img className="logo" src={item.companyLogo} />
               <p className="title">{item.title}</p>
-              <p className="case-study d-flex align-items-center">
-                VIEW CASE STUDY
+              <div className="d-flex align-items-center">
+                <p className="case-study">
+                  VIEW CASE STUDY
+                </p>
                 <ArrowRight width="33px" left="33px" />
-              </p>
+              </div>
             </div>
           </div>
         </div>
       ) : (
-        <div className="row testimonials-list__item">
+        <div key={item.key} className="row testimonials-list__item">
           <div className="ml-auto col-md-6">
             <div>
               <h4>
@@ -41,10 +43,12 @@ const TestimonialsList = () => (
               <p>{item.details}</p>
               <img className="logo" src={item.companyLogo} />
               <p className="title">{item.title}</p>
-              <p className="case-study d-flex align-items-center">
-                VIEW CASE STUDY
+              <div className="d-flex align-items-center">
+                <p className="case-study">
+                  VIEW CASE STUDY
+                </p>
                 <ArrowRight width="33px" left="33px" />
-              </p>
+              </div>
             </div>
           </div>
           <div className="col-md-6 d-flex justify-content-end">

@@ -22,6 +22,7 @@ const App = () => (
         objectToArray(singleServiceDetails).map((service) => (
           <Route
             exact
+            key={service.key}
             path={`/services/${service.url}`}
             component={() => <SingleService content={service} />}
           />

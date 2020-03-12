@@ -6,6 +6,7 @@
   margin-bottom: 0 !important
 
   &__content
+    width: 100%
     display: flex
     align-items: center
     border-bottom: 1px solid $slightYellow
@@ -22,16 +23,25 @@
       font-family: ProximaNovaRegular
       white-space: nowrap
 
-@media only screen and (min-width: 1368px)
+@media (min-width: 768px) and (max-width: 1365px)
+  .breadcrumb
+    padding-top: 18px !important
+    padding-bottom: 0 !important
+
+    img
+      padding-left: 73px
+
+    &__text
+      a, p
+        font-size: 14px
+
+@media only screen and (min-width: 1366px)
   .breadcrumb
     padding-top: 26px !important
     padding-bottom: 0 !important
 
     img
       padding-left: 105px
-
-    &__content
-      width: 100%
 
     &__text
       a, p

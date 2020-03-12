@@ -28,7 +28,7 @@ class SubHeader extends Component {
         </div>
         <div className="services__items">
           {ServicesData.map(service => (
-            <Link to={`/services/${service.link}`}>
+            <Link key={service.link} to={`/services/${service.link}`}>
               <div className="services__service">
                 <div className="services__icon-wrapper">
                   <img src={service.url} alt={service.name} />

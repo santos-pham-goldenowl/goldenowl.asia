@@ -13,7 +13,7 @@ class TabContainer extends Component {
   render() {
     return (
       <Tabs>
-        <TabHeader for="tab1">
+        <TabHeader key="tab1" for="tab1">
           <p className="text-xl">Front - end</p>
         </TabHeader>
         <TabContent name="tab1">
@@ -26,7 +26,7 @@ class TabContainer extends Component {
             </div>
             <div className="tech-tab__right-side">
               {FrontEndTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p className="tech-tab__logo-name">{tech.name}</p>
                 </div>
@@ -35,7 +35,7 @@ class TabContainer extends Component {
           </section>
         </TabContent>
 
-        <TabHeader for="tab2">
+        <TabHeader key="tab2" for="tab2">
           <p className="text-xl">Back - end</p>
         </TabHeader>
         <TabContent name="tab2">
@@ -48,7 +48,7 @@ class TabContainer extends Component {
             </div>
             <div className="tech-tab__right-side">
               {BackEndTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
                 </div>
@@ -57,7 +57,7 @@ class TabContainer extends Component {
           </section>
         </TabContent>
 
-        <TabHeader for="tab3">
+        <TabHeader key="tab3" for="tab3">
           <p className="text-xl">Mobile stack</p>
         </TabHeader>
         <TabContent name="tab3">
@@ -70,7 +70,7 @@ class TabContainer extends Component {
             </div>
             <div className="tech-tab__right-side">
               {MobileStackTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
                 </div>
@@ -79,7 +79,7 @@ class TabContainer extends Component {
           </section>
         </TabContent>
 
-        <TabHeader for="tab4">
+        <TabHeader key="tab4" for="tab4">
           <p className="text-xl">Platform</p>
         </TabHeader>
         <TabContent name="tab4">
@@ -92,7 +92,7 @@ class TabContainer extends Component {
             </div>
             <div className="tech-tab__right-side">
               {MobileStackTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
                 </div>
