@@ -8,11 +8,9 @@ import './index.sass'
 const Footer = () => (
   <footer className="footer">
     <div className="footer__top-content-wrapper">
-      <div className="row">
         <h4 className="heading-small footer__top-content-title">
           Areas we serve
         </h4>
-      </div>
       <div className="row">
         <div className="col-md-3">
           <h5>Ho Chi Minh City</h5>
@@ -65,7 +63,7 @@ const Footer = () => (
             />
           ))}
         </div>
-        <div className="footer__contact d-flex">
+        <div className="footer__contact row">
           <span className="col-sm-12 col-lg-6 footer__phone">(+84) 912 878985</span>
           <span className="col-sm-12 col-lg-6 footer__email">admin@goldenowl.asia</span>
         </div>

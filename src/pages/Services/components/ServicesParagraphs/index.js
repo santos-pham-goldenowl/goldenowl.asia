@@ -5,7 +5,7 @@ import objectToArray from '../../../../utils/objectToArray'
 import './index.sass'
 
 const ServicesParagraphs = () => (
-    <section className="services-paragraphs d-flex">
+    <section className="services-paragraphs row">
       {objectToArray(ServicesDetailParagraphs).map((paragraph) => (
         <div className="col-md-6">
           <div className="card">

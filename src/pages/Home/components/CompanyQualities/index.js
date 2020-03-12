@@ -8,7 +8,7 @@ import companyQuality3 from '../../../../assets/images/qualities/3.png'
 const CompanyQualities = () => (
   <section className="qualities">
     <h3 className="qualities__title"> Why choose us</h3>
-    <div className="d-flex">
+    <div className="row">
       <div className="col-md-4 qualities__items d-block">
         <img src={companyQuality1} alt="Golden Owl Asia" />
         <h5>Golden Owl Asia</h5>
