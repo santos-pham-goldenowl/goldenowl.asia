@@ -4,7 +4,7 @@ import study from '../../../../assets/images/study.png'
 import './index.sass'
 
 const Introduction = () => (
-  <section className="introduction d-flex">
+  <section className="introduction row">
     <div className="col-md-5 introduction__left-side">
       <img src={study} alt={study} loading="lazy" />
     </div>
