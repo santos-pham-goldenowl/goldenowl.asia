@@ -1,10 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import home from '../../assets/images/home-icon.png';
+import './index.sass';
 
-import home from '../../assets/images/home-icon.png'
-import './index.sass'
-
-const BreadCrumb = (props) => (
+const BreadCrumb = props => (
   <section className="breadcrumb">
     <div className="breadcrumb__content">
       <Link to="/">
@@ -18,4 +17,4 @@ const BreadCrumb = (props) => (
   </section>
 )
 
-export default BreadCrumb
+export default BreadCrumb;

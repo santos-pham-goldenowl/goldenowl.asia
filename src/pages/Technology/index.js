@@ -1,28 +1,26 @@
-import React from "react";
-import MainHeader from "../../components/MainHeader";
-import SubHeader from "../../components/SubHeader";
-import Footer from "../../components/Footer";
-import TechnologyDescription from "./components/TechnologyDescription";
-import TechnologyCards from "./components/TechnologyCards";
-import Home from "../../components/BreadCrumb";
-import TechnologyDetail from "./components/TechnologyDetail";
-import Guarantee from "./components/Guarantee";
-import "./index.sass";
+import React from 'react';
+import MainHeader from '../../components/MainHeader/index';
+import SubHeader from '../../components/SubHeader/index';
+import Footer from '../../components/Footer/index';
+import TechnologyDescription from '../../components/TechnologyDescription/index';
+import Home from '../../components/BreadCrumb/index';
+import TechnologyDetail from '../../components/TechnologyDetail/index';
+import Guarantee from '../../components/Guarantee/index';
+import wavyBg from '../../assets/images/wavy_bg_tech.png';
+import './index.sass';
 
 const TechnologyContainer = () => (
   <section className="technology-container">
-    <div className="container-fluid no-padding">
-      <MainHeader />
-      <SubHeader />
-      <Home>
-        <p>Technology</p>
-      </Home>
-      <TechnologyDescription />
-      <Guarantee />
-      <TechnologyDetail />
-      <TechnologyCards />
-      <Footer />
-    </div>
+    <MainHeader />
+    <SubHeader />
+    <Home>
+      <p>Technology</p>
+    </Home>
+    <TechnologyDescription />
+    <img className="wavy-bg" src={wavyBg} alt="wavy-bg" loading="lazy" />
+    <Guarantee />
+    <TechnologyDetail />
+    <Footer />
   </section>
 );
 

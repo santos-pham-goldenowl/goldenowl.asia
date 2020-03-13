@@ -1,10 +1,7 @@
 @import '../../styles/variables.sass'
 
 .breadcrumb
-  width: 100%
   padding: 0 30px
-  margin-bottom: 0 !important
-
   &__content
     display: flex
     align-items: center
@@ -15,24 +12,20 @@
     padding: 5px 10px 0 10px
 
   &__text
-    cursor: pointer
     display: flex
     align-items: center
     a, p
+      font-size: 16px !important
       font-family: ProximaNovaRegular
       white-space: nowrap
 
-@media only screen and (min-width: 1368px)
+@media only screen and (min-width: 1023px)
   .breadcrumb
-    padding-top: 26px !important
-    padding-bottom: 0 !important
+    padding: 0 50px
 
-    img
-      padding-left: 105px
+@media only screen and (min-width: 1300px)
+  .breadcrumb
+    padding: 0 100px
 
     &__content
-      width: 100%
-
-    &__text
-      a, p
-        font-size: 16px
+      padding-top: 40px

@@ -1,0 +1,57 @@
+@import '../../styles/variables.sass'
+
+.introduction
+  padding: 50px 0
+  text-align: left
+
+  &__title
+    padding-top: 50px
+
+  &__left-side
+    flex: 1
+    img
+      width: 100%
+
+  &__right-side
+    padding-left: 30px
+    padding-right: 30px
+
+@media only screen and (min-width: 1023px)
+  .introduction
+    display: flex
+    padding: 0 50px 100px 50px
+    text-align: left
+
+    &__title
+      padding-top: 0
+
+    &__left-side
+      flex: 1
+      padding-right: 50px
+      img
+        width: 100%
+        height: auto
+
+    &__right-side
+      flex: 1
+      padding-left: 0
+      padding-right: 0
+
+    &__text
+      padding-top: 20px
+
+@media only screen and (min-width: 1300px)
+  .introduction
+    padding: 0 95px 0 0
+
+    &__left-side
+      padding-right: 105px
+
+    &__text
+      padding-top: 0
+
+    &__text:last-child
+      padding-top: 38px
+
+    &__right-side
+      padding-top: 20px

@@ -2,36 +2,23 @@
 
 .contact
   text-align: left
-  padding-top: 10.4vw
-  padding-bottom: 9.7vw
+  padding: 50px 30px
+  background-color: $white
 
   &__email
     color: $yellow
+    padding: 12px 0
 
-  h3
-    font-weight: bold
-    line-height: 1.15
-
-  &__phone
-    padding-top: 0.7vw
-    line-height: 1.17
-
-@media (min-width: 768px) and (max-width: 1367px)
+@media only screen and (min-width: 1023px)
   .contact
-    h3
-      font-size: 18px
-    
-    &__phone
-      font-size: 12px
-
-@media only screen and (min-width: 1368px)
-  .contact
-    padding-top: 150px
-    padding-bottom: 140px
+    padding: 100px 50px
 
     h3
       font-size: 26px
 
     &__phone
-      padding-top: 10px
-      font-size: 19px
+      font-size: 18px
+
+@media only screen and (min-width: 1300px)
+  .contact
+    padding: 150px 100px 140px 100px

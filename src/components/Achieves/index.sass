@@ -1,0 +1,28 @@
+.achieves
+  padding: 50px 30px
+  background-color: #f8f8f8
+  margin-bottom: 50px
+
+  &__main-content
+    padding-top: 40px
+    display: grid
+    grid-template: repeat(2, auto) / repeat(2, auto)
+    grid-row-gap: 20px
+
+  &__item-flex
+    flex: 1
+    .heading-lg
+      padding-bottom: 10px !important
+
+@media only screen and (min-width: 1023px)
+  .achieves
+    padding: 80px 50px
+
+    &__main-content
+      display: flex
+      justify-content: space-between
+
+@media only screen and (min-width: 1300px)
+  .achieves
+    padding: 80px 100px 79px 100px
+    margin-bottom: 0

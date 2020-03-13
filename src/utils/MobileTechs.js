@@ -1,8 +1,8 @@
-import ios from '../assets/images/technology/MobileStack/ios.svg'
-import android from '../assets/images/technology/MobileStack/android.svg'
-import swift from '../assets/images/technology/MobileStack/swift.svg'
-import objectC from '../assets/images/technology/MobileStack/objectC.svg'
-import reactNative from '../assets/images/technology/MobileStack/react-native.svg'
+import ios from '../assets/images/technology/MobileStack/ios.svg';
+import android from '../assets/images/technology/MobileStack/android.svg';
+import swift from '../assets/images/technology/MobileStack/swift.svg';
+import objectC from '../assets/images/technology/MobileStack/objectC.svg';
+import reactNative from '../assets/images/technology/MobileStack/react-native.svg';
 
 const MobileStackTechs = [
   {
@@ -23,8 +23,8 @@ const MobileStackTechs = [
   },
   {
     name: 'React Native',
-    url: reactNative,
+    url: reactNative
   },
 ]
 
-export default MobileStackTechs
+export default MobileStackTechs;

@@ -1,0 +1,78 @@
+@import '../../styles/variables.sass'
+
+.technologies
+  padding: 50px 20px
+  background-color: #000000
+  img
+    display: inline-block
+    width: 50px
+    height: 60px
+    object-fit: contain
+
+  &__view-all
+    font-family: ProximaNovaRegular
+    padding-top: 80px
+    padding-bottom: 30px
+    color: $white
+    display: block
+    color: $white
+
+  &__title
+    color: #ffffff !important
+    padding-bottom: 65px !important
+
+  &__grid
+    display: grid
+    justify-content: space-around
+    grid-template: repeat(6, auto) / repeat(4, auto)
+    grid-gap: 20px
+
+@media only screen and (min-width: 767px)
+  .technologies
+    padding: 50px
+
+    &__title
+      padding-bottom: 25px
+
+    &__grid
+      justify-content: space-between
+      grid-template: repeat(4, auto) / repeat(6, auto)
+      grid-gap: 50px
+
+@media only screen and (min-width: 1023px)
+  .technologies
+    img
+      display: inline-block
+      width: 80px
+      height: 70px
+
+    &__view-all
+      font-size: 20px
+
+@media only screen and (min-width: 1300px)
+  .technologies
+    padding: 100px
+
+    &__title
+      padding-bottom: 100px !important
+
+    img
+      width: 99px
+
+    &__a24, &__a15
+      width: 134px !important
+
+    &__a16
+      width: 153px !important
+
+    &__grid
+      display: grid
+      justify-content: space-between
+      grid-template: repeat(4, auto) / repeat(6, auto)
+      grid-row-gap: 115px
+      grid-column-gap: 85px
+
+    &__view-all
+      font-size: 24px
+      padding-top: 100px
+      padding-bottom: 0

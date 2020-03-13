@@ -1,0 +1,32 @@
+@import '../../styles/variables.sass'
+
+.services-description
+  background-color: $slightOrange
+  padding: 50px 30px
+
+  &__title
+    text-transform: uppercase
+
+  img
+    width: 100%
+
+@media only screen and (min-width: 1023px)
+  .services-description
+    padding: 100px 50px
+    display: flex
+
+    &__text
+      padding-right: 50px
+
+    &__left-side
+      flex: 1
+      padding-right: 50px
+
+    &__right-side
+      flex: 1
+      display: flex
+      justify-content: flex-end
+
+@media only screen and (min-width: 1300px)
+  .services-description
+    padding: 100px 0 100px 100px

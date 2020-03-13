@@ -1,10 +1,10 @@
-import React from 'react'
-import './index.sass'
+import React from 'react';
+import './index.sass';
 
 const CheckPoint = () => (
-  <section className="d-inline-block check-point-wrapper">
-    <div className="check-point" />
+  <section className="check-point-wrapper">
+    <div className="check-point"></div>
   </section>
-)
+);
 
-export default CheckPoint
+export default CheckPoint;

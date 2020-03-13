@@ -1,7 +1,7 @@
-import React from 'react'
-import '../Service/index.sass'
+import React from 'react';
+import '../Service/index.sass';
 
-const OtherService = (props) => (
+const OtherService = props => (
   <div className="service__other-services-container">
     <h2 className="service__other-services-title">Other services</h2>
     <div>
@@ -11,6 +11,6 @@ const OtherService = (props) => (
       </div>
     </div>
   </div>
-)
+);
 
-export default OtherService
+export default OtherService;

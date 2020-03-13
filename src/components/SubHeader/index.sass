@@ -1,58 +1,52 @@
 @import '../../styles/variables.sass'
 
 .sub-header
-  padding: 0
+  background-color: $slightOrange
+  padding: 0 100px
   justify-content: flex-end
   align-items: center
   position: relative
   font-size: 14px
   font-family: ProximaNovaBold
   display: none
-
   h4
     margin-top: 0
     margin-bottom: 0
     color: $darkGray
 
+  &__title
+    padding-right: 45px
+
   &__contact-wrapper
+    display: flex
+    align-items: center
     background-color: $yellow
+    padding: 13px 20px
 
   &__contact-title
     white-space: nowrap
 
-@media (min-width: 768px) and (max-width: 1367px)
+  &__arrow-right
+    width: 17px
+    height: 12px
+    margin-left: 20px
+
+@media only screen and (min-width: 1023px)
   .sub-header
-    &__button
-      padding-right: 32px
+    display: flex
+    padding-left: 50px
+    padding-right: 50px
+    height: 50px
 
-    &__text
-      font-size: 13px
-    
-    &__arrow-right
-      width: 12px
-      height: 8.5px
-      margin-left: 14px
-
-    &__contact-wrapper
-      width: 110px
-      height: 34px
-
-
-@media only screen and (min-width: 1368px)
+@media only screen and (min-width: 1300px)
   .sub-header
-    
+    padding-left: 100px
+    padding-right: 100px
+
     &__text
       font-size: 16px
-    
-    &__contact-wrapper
-      width: 155px
-      height: 45px
 
-    &__button
-      padding-right: 45px
-
-    &__arrow-right
-      width: 17px
-      height: 12px
-      margin-left: 20px
-
+    &__title
+      height: 100%
+      display: flex
+      align-items: center

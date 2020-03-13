@@ -1,35 +1,36 @@
-import React, { Component } from 'react'
-
-import MainHeader from '../../components/MainHeader'
-import SubHeader from '../../components/SubHeader'
-import Footer from '../../components/Footer'
-import Partners from '../../components/Partners'
-import AboutUs from './components/AboutUs'
-import BreadCrumb from '../../components/BreadCrumb'
-import Success from './components/Success'
-import Develop from './components/Develop'
-import IntroductionDetail from './components/IntroductionDetail'
-import './index.sass'
+import React, { Component } from 'react';
+import MainHeader from '../../components/MainHeader/index';
+import SubHeader from '../../components/SubHeader/index';
+import Footer from '../../components/Footer/index';
+import Partners from '../../components/Partners/index';
+import AboutUs from '../../components/AboutUs/index';
+import about_bg from '../../assets/images/about_bg.png';
+import BreadCrumb from '../../components/BreadCrumb/index';
+import Success from '../../components/Success/index';
+import Develop from '../../components/Develop/index';
+import IntroductionDetail from '../../components/IntroductionDetail/index';
+import './index.sass';
 
 class About extends Component {
   render() {
-    return (
+    return(
       <section className="about-container">
-        <div className="container-fluid no-padding">
+        <div className="about-container__top-wrapper">
           <MainHeader />
           <SubHeader />
           <BreadCrumb>
             <p>About</p>
           </BreadCrumb>
           <AboutUs />
-          <IntroductionDetail />
-          <Success />
-          <Develop />
-          <Partners />
-          <Footer />
         </div>
+        <img class="about-container__wavy-bg" src={about_bg} alt="wavy-bg" loading="lazy" />
+        <IntroductionDetail />
+        <Success />
+        <Develop />
+        <Partners />
+        <Footer />
       </section>
-    )
+    );
   }
 }
-export default About
+export default About;
