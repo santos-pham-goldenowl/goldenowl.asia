@@ -1,7 +1,8 @@
-import React from 'react';
-import ArrowRight from '../ArrowRight/index';
-import laptop from '../../assets/images/3.png';
-import './index.sass';
+import React from 'react'
+
+import ArrowRight from '../ArrowRight'
+import laptop from '../../assets/images/3.png'
+import './index.sass'
 
 const Explore = () => (
   <section className="explore">
@@ -9,7 +10,7 @@ const Explore = () => (
       <div className="explore__top-content">
         <h6>BID4SKILL | FEATURES CASE STUDY</h6>
         <div className="explore__case-study">
-          <h6>VIEW ALL CASE STUDY</h6>
+          <h6 style={{ paddingRight: 20 }}>VIEW ALL CASE STUDY</h6>
           <ArrowRight width="33px" left="33px" />
         </div>
       </div>
@@ -19,6 +20,6 @@ const Explore = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default Explore;
+export default Explore

@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import TabContent from './TabContent';
-import TabHeader from './TabHeader';
-import Tabs from './Tabs';
-import './index.sass';
-import FrontEndTechs from '../../utils/FrontendTechs';
-import BackEndTechs from '../../utils/BackEndTechs';
-import MobileStackTechs from '../../utils/MobileTechs';
+import React, { Component } from 'react'
+
+import TabContent from './TabContent'
+import TabHeader from './TabHeader'
+import Tabs from './Tabs'
+
+import './index.sass'
+import FrontEndTechs from '../../utils/FrontendTechs'
+import BackEndTechs from '../../utils/BackEndTechs'
+import MobileStackTechs from '../../utils/MobileTechs'
 
 class TabContainer extends Component {
   render() {
-    return(
+    return (
       <Tabs>
         <TabHeader for="tab1">
           <p className="text-xl">Front - end</p>
@@ -17,7 +19,7 @@ class TabContainer extends Component {
         <TabContent name="tab1">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Front end</h2>
+              <h2 className="tab-header-title">Front-end</h2>
               <p className="tech-tab__description text-lg">
                 By using modern developing website technology, we produce the most high-quality product with high speed and stability of the software.
               </p>
@@ -39,7 +41,7 @@ class TabContainer extends Component {
         <TabContent name="tab2">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Back end</h2>
+              <h2 className="tab-header-title">Back-end</h2>
               <p className="tech-tab__description text-lg">
                 Providing and implementing system solutions with the latest technology. We ensure the stability and security.
               </p>
@@ -103,4 +105,4 @@ class TabContainer extends Component {
   }
 }
 
-export default TabContainer;
+export default TabContainer

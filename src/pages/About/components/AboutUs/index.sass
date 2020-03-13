@@ -1,0 +1,61 @@
+@import '../../../../styles/variables.sass'
+
+.about-us
+  display: flex
+  background-color: $slightOrange
+  over-flow: hidden
+
+  &__left-side
+    h2
+      line-height: 1.2
+
+    p
+      line-height: 1.54
+
+  &__right-side
+    overflow: inherit
+    img
+      height: auto
+
+@media (min-width: 768px) and (max-width: 1367px)
+  .about-us
+    padding-top: 8.3px
+    padding-bottom: 13.4vw
+
+    &__left-side
+      h2
+        font-size: 35px
+        margin-bottom: 2.9vw
+
+      p
+        font-size: 18px
+
+    &__right-side
+      padding-left: 8vw !important
+      overflow: inherit
+      img
+        width: 45.3vw
+        height: auto
+    
+@media only screen and (min-width: 1368px)
+  .about-us
+    padding-top: 120px
+    padding-bottom: 193px  
+
+    &__left-side
+      h2
+        font-size: 50px
+        line-height: 1.2
+        margin-bottom: 42px
+
+      p
+        font-size: 26px
+        line-height: 1.54
+
+    &__right-side
+      padding-left: 115px !important
+      overflow: inherit
+      img
+        width: 652px
+        height: auto
+    

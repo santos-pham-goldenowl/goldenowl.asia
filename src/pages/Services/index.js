@@ -1,28 +1,31 @@
-import React from 'react';
-import MainHeader from '../../components/MainHeader/index';
-import SubHeader from '../../components/SubHeader/index';
-import Footer from '../../components/Footer/index';
-import Explore from '../../components/Explore/index';
-import Contact from '../../components/Contact/index';
-import Home from '../../components/BreadCrumb/index';
-import ServicesDescription from '../../components/ServicesDescription';
-import ServicesDetail from '../../components/ServicesDetail';
-import wavy_bg from "../../assets/images/wavy_bg_2.png";
-import './index.sass';
+import React from "react";
+
+import MainHeader from "../../components/MainHeader";
+import SubHeader from "../../components/SubHeader";
+import Footer from "../../components/Footer";
+import Explore from "../../components/Explore";
+import Contact from "../../components/Contact";
+import BreadCrumb from "../../components/BreadCrumb";
+import ServicesDescription from "./components/ServicesDescription";
+import ServicesDetail from "./components/ServicesDetail";
+import "./index.sass";
+import ServicesParagraphs from "./components/ServicesParagraphs";
 
 const Services = () => (
   <section className="services-container">
-    <MainHeader />
-    <SubHeader />
-    <Home>
-      <p>Services</p>
-    </Home>
-    <ServicesDescription />
-    <img className="wavy-bg" src={wavy_bg} alt="wavy_bg" loading="lazy" />
-    <ServicesDetail />
-    <Contact />
-    <Explore />
-    <Footer />
+    <div className="container-fluid no-padding">
+      <MainHeader />
+      <SubHeader />
+      <BreadCrumb>
+        <p>Services</p>
+      </BreadCrumb>
+      <ServicesDescription />
+      <ServicesDetail />
+      <ServicesParagraphs />
+      <Contact />
+      <Explore />
+      <Footer />
+    </div>
   </section>
 );
 

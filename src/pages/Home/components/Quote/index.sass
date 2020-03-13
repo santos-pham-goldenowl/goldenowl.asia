@@ -1,0 +1,53 @@
+@import '../../../../styles/variables.sass'
+
+.quote
+  padding-top: 8.4vw
+
+  &__content
+    font-family: MalloryBold
+    color: $darkGray
+    padding-bottom: 2.6vw
+
+  &__author
+    max-width: 443px
+    font-size: 26px
+    line-height: 1.54
+
+  &__left-side
+    margin-right: 40px
+    padding: 0
+  
+  img
+      object-fit: contain
+      margin-left: 20px
+      margin-top: 8px
+
+@media (min-width: 768px) and (max-width: 1367px)
+  .quote
+  
+    &__content
+      font-size: 36px
+      line-height: 1.4
+    
+    img
+      max-width: calc(100% + 50px)
+    
+    &__author
+      font-size: 18px
+      line-height: 1.55
+
+@media only screen and (min-width: 1368px)
+  .quote
+    padding-top: 121px
+
+    &__content
+      font-size: 54px
+      line-height: 1.3
+    
+    img
+      max-width: calc(100% + 80px)
+    
+    &__author
+      font-size: 26px
+      line-height: 1.54
+

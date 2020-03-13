@@ -1,36 +1,50 @@
-import React from 'react';
-import Quote from '../../components/Quote/index';
-import Missions from '../../components/Mission/index';
-import Introduction from '../../components/Introduction/index';
-import CompanyQuality from '../../components/CompanyQualities/index';
-import Achieves from '../../components/Achieves/index';
-import Feedback from '../../components/Feedback/index';
-import Partners from '../../components/Partners/index';
-import Contact from '../../components/Contact/index';
-import Technologies from '../../components/Technologies/index';
-import Explore from '../../components/Explore/index';
-import MainHeader from '../../components/MainHeader/index';
-import SubHeader from '../../components/SubHeader/index';
-import Footer from '../../components/Footer/index';
-import './index.sass';
-import bg from '../../assets/images/bg_2.png';
+import React from 'react'
 
-const Home = () => (
-  <section className="home">
-    <MainHeader />
-    <SubHeader />
-    <Quote />
-    <Missions />
-    <img className="home__wavy-bg" src={bg} alt="wavy-background" loading="lazy" />
-    <Introduction />
-    <CompanyQuality />
-    <Achieves />
-    <Feedback />
-    <Partners />
-    <Technologies />
-    <Contact />
-    <Explore />
-    <Footer />
-  </section>
-);
-export default Home;
+import MainHeader from '../../components/MainHeader'
+import SubHeader from '../../components/SubHeader'
+import Partners from '../../components/Partners'
+import Contact from '../../components/Contact'
+import Explore from '../../components/Explore'
+import Footer from '../../components/Footer'
+
+import Quote from './components/Quote'
+import Missions from './components/Mission'
+import Introduction from './components/Introduction'
+import CompanyQuality from './components/CompanyQualities'
+import Archieves from './components/Archieves'
+import Feedback from './components/Feedback'
+import Technologies from './components/Technologies'
+import './index.sass'
+
+const Home = () => {
+  const hrStyle = {
+    height: 0.8,
+    border: 'none',
+    backgroundColor: '#DCDCDC',
+    margin: '0 auto',
+  }
+
+  return (
+
+    <section className="home">
+      <div className="container-fluid no-padding">
+        <MainHeader />
+        <SubHeader />
+        <Quote />
+        <Missions />
+        <Introduction />
+        <CompanyQuality />
+        <Archieves />
+        <Feedback />
+        <hr style={hrStyle} />
+        <Partners />
+        <Technologies />
+        <Contact />
+        <Explore />
+        <Footer />
+      </div>
+    </section>
+
+  )
+}
+export default Home

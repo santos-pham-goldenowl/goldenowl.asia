@@ -1,0 +1,44 @@
+@import '../../../../styles/variables.sass'
+
+.introduction
+  padding-top: 8.3vw
+  overflow: inherit
+
+  &__title
+    padding-bottom: 2.9vw
+    padding-top: 0
+
+  &__text
+    padding-top: 0
+    font-family: ProximaNovaRegular
+  
+  img
+    float: right
+
+
+@media (min-width: 768px) and (max-width: 1367px)
+  .introduction
+
+    &__title
+      font-size: 26px
+    
+    p
+      font-size: 18px
+      line-height: 1.55
+
+    img
+      width: calc(100% + 70px)
+
+@media only screen and (min-width: 1368px)
+  .introduction
+    padding-top: 120px
+
+    &__title
+      font-size: 36px
+    
+    p
+      font-size: 26px
+      line-height: 1.54
+
+    img
+      width: calc(100% + 100px)

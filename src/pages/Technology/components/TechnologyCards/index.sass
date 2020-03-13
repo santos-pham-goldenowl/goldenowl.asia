@@ -1,0 +1,41 @@
+@import '../../../../styles/variables.sass'
+
+.technology-cards
+    background-color: $softGray
+
+    &__card
+        background-color: $white
+
+@media (min-width: 768px) and (max-width: 1365px)
+    .technology-cards
+        padding: 10.4vw 0 10.8vw 0
+
+        .row
+            margin-left: -15px !important
+            margin-right: -15px !important
+        
+        [class*='col']
+            padding-left: 15px !important
+            padding-right: 15px !important
+
+        &__card
+            padding: 4.2vw 3.5vw
+            p
+                padding: 1.4vw 0 0 0
+
+@media only screen and (min-width: 1366px)
+  .technology-cards
+    padding: 150px 0 155px 0
+
+    .row
+        margin-left: -25px !important
+        margin-right: -25px !important
+    
+    [class*='col']
+        padding-left: 25px !important
+        padding-right: 25px !important
+
+    &__card
+        padding: 60px 50px
+        p
+            padding: 20px 0 0 0
