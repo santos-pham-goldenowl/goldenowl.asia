@@ -35,7 +35,6 @@
     position: relative
 
   &__dotted-square
-    position: absolute
     height: initial
     display: inline-block
 
@@ -125,15 +124,16 @@
       margin-left: -70px
       padding: 6.9vw 6.9vw 6.9vw 6.9vw
       width: 78.5vw
-      > div:first-child
-        padding-right: 1.4vw
-        h3
-          font-size: 26px
-          padding-bottom: 2.1vw
-        p
-          font-size: 14px
-      > div:last-child
-        padding-left: 1.4vw
+      > div 
+        > div:first-child
+          padding-right: 1.4vw
+          h3
+            font-size: 26px
+            padding-bottom: 2.1vw
+          p
+            font-size: 14px
+        > div:last-child
+          padding-left: 1.4vw
       
     &__logos-wrapper
       img
@@ -209,29 +209,30 @@
         font-size: 26px
 
     &__third-content
-      padding-bottom: 20px
+      padding-top: 20px
 
     &__dotted-square
-      margin-left: -calc(#{$desktopPadding} + 105px)
+      margin-left: -100px
       width: 1150px
-      height: 480px
+      height: 460px
       border-radius: 4px
       border: dashed 1px #e6a143
 
     &__yellow-rectangle
-      margin-left: calc((#{$desktopPadding} + 105px)*-1) !important
+      margin-left: -100px
+      padding-left: 100px
       padding: 100px
-      padding-left: calc(#{$desktopPadding} + 105px)
       width: 1130px
-      > div:first-child
-        padding-right: 20px
-        h3
-          font-size: 34px
-          padding-bottom: 30px
-        p
-          font-size: 20px
-      > div:last-child
-        padding-left: 20px
+      > div
+        > div:first-child
+          padding-right: 20px
+          h3
+            font-size: 34px
+            padding-bottom: 30px
+          p
+            font-size: 20px
+        > div:last-child
+          padding-left: 20px
       
     &__logos-wrapper
       img

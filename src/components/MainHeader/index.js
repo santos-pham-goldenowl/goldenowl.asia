@@ -38,7 +38,9 @@ class MainHeader extends Component {
               <li className="main-header__flex-item">
                 <Link to="/about-us">About Golden Owl</Link>
               </li>
-              <li className="main-header__flex-item">Blog</li>
+              <li className="main-header__flex-item">
+                <Link to="/blog">Blog</Link>
+              </li>
               <li className="main-header__flex-item">Portfolio</li>
               <li className="main-header__flex-item font-bold">
                 <span>English</span>
