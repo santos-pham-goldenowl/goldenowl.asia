@@ -1,30 +1,32 @@
-import React, { Component } from 'react';
-import TabContent from './TabContent';
-import TabHeader from './TabHeader';
-import Tabs from './Tabs';
-import './index.sass';
-import FrontEndTechs from '../../utils/FrontendTechs';
-import BackEndTechs from '../../utils/BackEndTechs';
-import MobileStackTechs from '../../utils/MobileTechs';
+import React, { Component } from 'react'
+
+import TabContent from './TabContent'
+import TabHeader from './TabHeader'
+import Tabs from './Tabs'
+
+import './index.sass'
+import FrontEndTechs from '../../utils/FrontendTechs'
+import BackEndTechs from '../../utils/BackEndTechs'
+import MobileStackTechs from '../../utils/MobileTechs'
 
 class TabContainer extends Component {
   render() {
-    return(
+    return (
       <Tabs>
-        <TabHeader for="tab1">
+        <TabHeader key="tab1" for="tab1">
           <p className="text-xl">Front - end</p>
         </TabHeader>
         <TabContent name="tab1">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Front end</h2>
+              <h2 className="tab-header-title">Front-end</h2>
               <p className="tech-tab__description text-lg">
                 By using modern developing website technology, we produce the most high-quality product with high speed and stability of the software.
               </p>
             </div>
             <div className="tech-tab__right-side">
               {FrontEndTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p className="tech-tab__logo-name">{tech.name}</p>
                 </div>
@@ -33,20 +35,20 @@ class TabContainer extends Component {
           </section>
         </TabContent>
 
-        <TabHeader for="tab2">
+        <TabHeader key="tab2" for="tab2">
           <p className="text-xl">Back - end</p>
         </TabHeader>
         <TabContent name="tab2">
           <section className="tech-tab">
             <div className="tech-tab__left-side">
-              <h2 className="tab-header-title">Back end</h2>
+              <h2 className="tab-header-title">Back-end</h2>
               <p className="tech-tab__description text-lg">
                 Providing and implementing system solutions with the latest technology. We ensure the stability and security.
               </p>
             </div>
             <div className="tech-tab__right-side">
               {BackEndTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
                 </div>
@@ -55,7 +57,7 @@ class TabContainer extends Component {
           </section>
         </TabContent>
 
-        <TabHeader for="tab3">
+        <TabHeader key="tab3" for="tab3">
           <p className="text-xl">Mobile stack</p>
         </TabHeader>
         <TabContent name="tab3">
@@ -68,7 +70,7 @@ class TabContainer extends Component {
             </div>
             <div className="tech-tab__right-side">
               {MobileStackTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
                 </div>
@@ -77,7 +79,7 @@ class TabContainer extends Component {
           </section>
         </TabContent>
 
-        <TabHeader for="tab4">
+        <TabHeader key="tab4" for="tab4">
           <p className="text-xl">Platform</p>
         </TabHeader>
         <TabContent name="tab4">
@@ -90,7 +92,7 @@ class TabContainer extends Component {
             </div>
             <div className="tech-tab__right-side">
               {MobileStackTechs.map((tech) => (
-                <div className="tech-tab__logo-wrapper">
+                <div key={tech.name} className="tech-tab__logo-wrapper">
                   <img src={tech.url} alt={tech.name} />
                   <p>{tech.name}</p>
                 </div>
@@ -103,4 +105,4 @@ class TabContainer extends Component {
   }
 }
 
-export default TabContainer;
+export default TabContainer

@@ -1,0 +1,84 @@
+@import '../../../../styles/variables.sass'
+
+.success
+  background-color: $softGray
+
+  &__map
+    width: 100%
+
+  &__title
+    border-bottom: 4px solid $darkGray
+
+  &__paragraph
+    padding-top: 20px
+
+  &__sum
+    .col-md-6
+      p
+        line-height: 1.5;
+      &:nth-child(2n)
+        padding-right: 0
+      &:nth-child(2n+1)
+        padding-left: 0
+    
+  &__main
+    h1
+      font-size: 50px
+    p
+      line-height: 1.54
+
+@media (min-width: 768px) and (max-width: 1365px)
+  .success
+    padding-top: 6.9vw
+    padding-bottom: 6.9vw
+    
+    &__sum
+      padding-top: 5.6vw
+      .col-md-6
+        h3
+          font-size: 26px
+          border-bottom : 0.3vw solid $darkGray
+          padding-bottom: 1.4vw
+        p
+          font-size: 16px
+        &:nth-child(2n+1)
+          padding-right: 7.8vw
+        &:not(:last-child):not(:nth-last-child(2))
+          padding-bottom: 3.5vw
+    
+    &__map
+      padding-top: 4.2vw
+    
+    &__main
+      h1
+        font-size: 35px
+      p
+        font-size: 18px
+
+@media only screen and (min-width: 1366px)
+  .success
+    padding-top: 100px
+    padding-bottom: 100px
+    
+    &__sum
+      padding-top: 80px
+      .col-md-6
+        h3
+          font-size: 34px
+          border-bottom : 4px solid $darkGray
+          padding-bottom: 20px
+        p
+          font-size: 20px
+        &:nth-child(2n+1)
+          padding-right: 112px
+        &:not(:last-child):not(:nth-last-child(2))
+          padding-bottom: 50px
+    
+    &__map
+      padding-top: 60px
+    
+    &__main
+      h1
+        font-size: 50px
+      p
+        font-size: 26px

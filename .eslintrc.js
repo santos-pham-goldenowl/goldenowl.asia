@@ -1,24 +1,46 @@
 module.exports = {
   "env": {
     "node": true,
-    "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
-  "extends": "airbnb",
+  "globals": {
+    "device": false,
+    "expect": false,
+    "waitFor": false,
+    "element": false,
+    "by": false,
+    "__DEV__": false
+  },
   "parser": "babel-eslint",
+  "plugins": ["react", "jsx-a11y"],
   "rules": {
-    "no-console": "off",
-    "no-debugger": "off",
-    "global-require": "off",
-    "no-restricted-globals": "off",
-    "react/jsx-filename-extension": [
-      "warn",
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ],
-    "max-len": ["error", 120, { "ignoreTemplateLiterals": true }],
-    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
-    "react/jsx-fragments": ["error", true],
-  }
+    "no-unexpected-multiline": "error",
+    "no-use-before-define": [0],
+    "react/jsx-filename-extension": [0],
+    "no-named-export": [0],
+    "react/prop-types": [0],
+    "global-require": [0],
+    "react/prefer-stateless-function": [0],
+    "react/destructuring-assignment": [0],
+    "react/jsx-one-expression-per-line": [0],
+    "react/jsx-no-bind": [0],
+    "object-curly-newline": ["error", { "multiline": true }],
+    "object-property-newline": ["error", {
+      "allowAllPropertiesOnSameLine": true,
+      "allowMultiplePropertiesPerLine": false }],
+    "no-return-assign": [0],
+    "no-nested-ternary": [0],
+    "no-unused-expressions": [0],
+    "react/no-multi-comp": [0],
+    "import/order": ["error", { "groups": ["builtin", "external", "internal", "parent", "sibling", "index"], "newlines-between": "always" }],
+    "import/prefer-default-export": [0],
+    "semi": [2, "never"],
+    "react-native/no-unused-styles": 2,
+    "react-native/split-platform-components": 2,
+    "react-native/no-raw-text": 2,
+    "max-len": ["error", { "code": 150 }],
+    "no-underscore-dangle": [0]
+  },
+  "extends": ["airbnb"]
 }

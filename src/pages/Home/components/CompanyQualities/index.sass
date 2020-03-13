@@ -1,0 +1,70 @@
+.qualities
+  padding: 8.3vw 0 8.3vw 0
+  text-align: center
+
+  .check-point-wrapper
+    padding-top: 0.7vw
+
+  &__items
+    text-align: center
+    img
+      max-width: 100%
+      max-height: 12.8vw
+      margin-bottom: 2.8vw
+    h5
+      margin-bottom: 2.1vw
+      font-weight: bold
+    div
+      p
+        width: 100%
+        margin: 0
+        margin-bottom: 2.8vw !important
+      p.bottom-line
+        margin-bottom: 0 !important
+  
+  &__title
+    padding-bottom: 2.8vw !important
+
+@media (min-width: 768px) and (max-width: 1365px)
+  .qualities
+    [class*='col-']
+      padding: 0 30px 0 12px
+
+    &__title
+      font-size: 26px
+
+    &__items
+      h5, p
+        font-size: 14px !important
+        line-height: 1.5 !important
+
+
+@media only screen and (min-width: 1366px)
+  .qualities
+    padding: 100px 0 100px 0
+
+    .check-point-wrapper
+      padding-top: 10px
+
+    [class*='col-']
+      padding-right: 35px !important
+      padding-left: 15px !important
+    
+    div
+      p
+        margin-bottom: 40px !important
+    
+    &__title
+      font-size: 36px
+      padding-bottom: 40px !important
+
+    &__items
+      img        
+        max-height: 167px
+        margin-bottom: 40px
+      h5
+        margin-bottom: 30px
+      h5, p
+        font-size: 20px
+        line-height: 1.5 !important
+

@@ -1,8 +1,12 @@
 @import '../../styles/variables.sass'
 
 .breadcrumb
+  width: 100%
   padding: 0 30px
+  margin-bottom: 0 !important
+
   &__content
+    width: 100%
     display: flex
     align-items: center
     border-bottom: 1px solid $slightYellow
@@ -12,20 +16,33 @@
     padding: 5px 10px 0 10px
 
   &__text
+    cursor: pointer
     display: flex
     align-items: center
     a, p
-      font-size: 16px !important
       font-family: ProximaNovaRegular
       white-space: nowrap
 
-@media only screen and (min-width: 1023px)
+@media (min-width: 768px) and (max-width: 1365px)
   .breadcrumb
-    padding: 0 50px
+    padding-top: 18px !important
+    padding-bottom: 0 !important
 
-@media only screen and (min-width: 1300px)
+    img
+      padding-left: 73px
+
+    &__text
+      a, p
+        font-size: 14px
+
+@media only screen and (min-width: 1366px)
   .breadcrumb
-    padding: 0 100px
+    padding-top: 26px !important
+    padding-bottom: 0 !important
 
-    &__content
-      padding-top: 40px
+    img
+      padding-left: 105px
+
+    &__text
+      a, p
+        font-size: 16px

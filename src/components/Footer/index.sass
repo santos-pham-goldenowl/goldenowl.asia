@@ -5,150 +5,171 @@
   font-family: ProximaNovaRegular
   text-align: center
 
-  &__copyright
-    background-color: $warmGray
-    color: $sweetGray
-    font-size: 18px !important
-    padding: 14px
-    text-align: center
-
-  &__bottom-content-wrapper
-    padding: 50px
-
-  &__social-icon
-    margin-right: 20px
-
-  &__icon-linkedin
-    height: 16px
-
-  &__icon-facebook, &__icon-instagram
-    height: 18px
-
-  &__bottom-grid-title
-    color: $darkGray
-    font-size: 18px !important
-    padding-bottom: 8px
-    padding-top: 20px
-    font-family: MalloryMedium
-
-  a
-    display: block
-    color: $darkGray
-    font-size: 18px !important
-    white-space: nowrap
-    font-family: ProximaNovaRegular
-
   &__phone
     color: $darkGray
 
   &__email
     color: $yellow
 
-  &__contact
-    display: flex
-    flex-direction: column
-    padding-top: 20px
+  &__icon-linkedin
+    height: 1.1vw
 
-  &__social-icons-wrapper
-    padding-top: 35px
+  &__icon-facebook, &__icon-instagram
+    height: 1.4vw
 
-  &__top-content-grid
-    font-size: 18px
-    > div
-      padding-bottom: 20px
-      line-height: 30px
-
-  &__top-content-title
-    padding-bottom: 32px !important
+  &__social-icon
+    margin-right: 1.4vw
 
   &__top-content-wrapper
-    background-repeat: no-repeat
+    background-image: url('../../assets/images/Footer/map.svg')
+    padding: 10.4vw $desktopPadding 5.5vw $desktopPadding
+    text-align: left
     background-color: $softGray
-    padding-top: 50px
+    background-position: center
+    background-repeat: no-repeat
+    color: $darkGray
 
-@media only screen and (min-width: 767px)
+  &__logo-wrapper
+    img
+      object-fit: contain
+
+  &__top-content-title
+    padding-bottom: 2.2vw !important
+  
+  &__copyright
+    background-color: $warmGray
+    color: $sweetGray
+    text-align: center
+    padding-top: 1vw
+    padding-bottom: 1vw
+    p
+      line-height: 1.13 !important
+      opacity: 0.4
+    
+  .col-md-3
+    h5
+      padding-bottom: 10px
+    p
+      line-height: 1.67 !important
+      
+  &__bottom-content-wrapper
+    padding: 6.3vw $desktopPadding 5.5vw $desktopPadding
+    display: flex
+    justify-content: space-around
+    align-items: flex-start
+
+  &__bottom-grid-container
+    display: flex
+    flex: 3
+    text-align: left
+    justify-content: space-around
+    > div
+      padding-bottom: 0
+      a
+        line-height: 1.78 !important
+  
+  a
+    line-height: 1.78
+    display: block
+    color: $darkGray
+    white-space: nowrap
+    font-family: ProximaNovaRegular
+
+  &__contact
+    padding-top: 2.8vw
+    padding-bottom: 2.8vw
+    text-align: left
+    display: flex
+    flex-direction: row
+    align-items: flex-start
+    span
+      font-size: 19px
+      padding-right: 3.4vw
+
+  &__bottom-grid-title
+    color: $darkGray
+    padding-bottom: 0.6vw
+    font-family: MalloryMedium
+
+  &__social-icons-wrapper
+    padding-top: 2.3vw
+
+@media (min-width: 768px) and (max-width: 1365px)
   .footer
+    &__icon-linkedin
+      height: 13px
+
+    &__icon-facebook, &__icon-instagram
+      height: 15px
+    
+    &__copyright
+      p
+        font-size: 14px !important
+      
+    .col-md-3
+      h5
+        font-size: 16px
+      p
+        font-size: 14px !important        
 
     &__logo-wrapper
-      text-align: left
-      flex: 1
+      img
+        height: 26px
 
     &__bottom-grid-container
-      display: flex
-      text-align: left
-      justify-content: space-between
+      > div
+        a
+          font-size: 16px
+    
+    a
+      font-size: 14px !important
+
+    h3
+      font-size: 16px !important
 
     &__contact
-      text-align: left
-      display: flex
-      flex-direction: row
-      align-items: flex-start
-      padding-top: 40px
-      padding-bottom: 40px
       span
-        padding-right: 50px
-
-    &__top-content-wrapper
-      background-image: url('../../assets/images/Footer/map.svg')
-      padding: 100px 50px 80px 50px
-      text-align: left
-      background-position: center
-      background-repeat: no-repeat
-
-    &__top-content-grid
-      width: 100%
-      background-position: center
-      background-repeat: no-repeat
-      display: grid
-      grid-template-columns: repeat(2, 295px)
-      grid-column-gap: 20px
-      font-size: 18px
-      line-height: 30px
-      text-align: left
+        font-size: 16px
 
     &__bottom-grid-title
-      padding-top: 0
+      font-size: 14px !important
 
-@media only screen and (min-width: 1023px)
+@media only screen and (min-width: 1366px)
   .footer
-    &__bottom-content-wrapper
-      padding: 50px
-      display: flex
-      align-items: flex-start
 
-    &__logo-wrapper
-      flex: 2
-      display: flex
-      justify-content: flex-start
-      flex-direction: column
+    &__icon-linkedin
+      height: 16px
+
+    &__icon-facebook, &__icon-instagram
+      height: 19px
+
+    &__social-icon
+      margin-right: 20px
+
+    &__top-content-title
+      padding-bottom: 33px !important
+    
+    &__copyright
+      padding-top: 14px
+      padding-bottom: 14px
+      p
+        font-size: 18px !important
+      
+    .col-md-3
+      h5
+        font-size: 20px
+        padding-bottom: 10px
+      p
+        font-size: 18px !important        
+
+    &__bottom-content-wrapper
+      padding: 90px $desktopPadding 80px $desktopPadding
 
     &__bottom-grid-container
-      flex: 3
-      justify-content: space-around
-
-    &__email
-      padding-right: 0 !important
-
-    &__top-content-wrapper
-      padding: 150px 50px 80px 50px
-
-    &__top-content-grid
-      grid-template-columns: repeat(4, auto)
-      grid-column-gap: 20px
-
-@media only screen and (min-width: 1300px)
-  .footer
-    &__top-content-wrapper
-      padding: 150px 100px 80px 100px
-
-    &__top-content-grid
-      grid-template-columns: repeat(4, 295px)
-      grid-column-gap: 20px
-      font-size: 18px
-
-    &__bottom-content-wrapper
-      padding: 88px 100px 80px 100px
-
+      > div
+        a
+          font-size: 19px
+    
     a
       font-size: 18px !important
 
@@ -156,5 +177,15 @@
       font-size: 20px !important
 
     &__contact
+      padding-top: 40px
+      padding-bottom: 40px
       span
-        font-size: 18px
+        font-size: 19px
+        padding-right: 50px
+
+    &__bottom-grid-title
+      font-size: 18px !important
+      padding-bottom: 8px
+
+    &__social-icons-wrapper
+      padding-top: 34px

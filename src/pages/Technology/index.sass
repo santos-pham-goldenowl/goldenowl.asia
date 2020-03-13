@@ -1,14 +1,8 @@
 @import '../../styles/variables.sass'
-
 .technology-container
+  > div
+    header, .breadcrumb, .technology-description
+      background-color: $slightOrange !important
+
   .qualities
     padding-top: 0
-
-  .breadcrumb
-    background-color: $slightOrange
-
-
-@media only screen and (min-width: 1300px)
-  .technology-container
-    .breadcrumb__content
-      padding-left: 105px

@@ -1,0 +1,59 @@
+@import '../../../../styles/variables.sass'
+
+.technologies
+  background-color: #2e2e2e
+  text-align: center
+  margin-top: 1.4vw
+
+  &__view-all
+    font-family: ProximaNovaRegular
+    color: $white
+
+  &__title
+    color: #ffffff !important
+    padding-bottom: 5.5vw
+    line-height: 1.3
+
+  img
+    display: inline-block
+
+  .col-md-2
+    padding-bottom: 5.5vw
+  
+  &__grid-item
+    margin: auto
+    max-width: 100% !important
+    max-height: 4.2vw !important
+
+  &__view-all
+    font-size: 23px
+    padding-top: 0
+    padding-bottom: 0
+
+@media (min-width: 768px) and (max-width: 1365px)
+  .technologies
+    padding: 6.9vw
+
+    &__title
+      font-size: 26px
+    
+    &__view-all
+      font-size: 16px
+
+@media only screen and (min-width: 1366px)
+  .technologies
+    margin-top: 20px
+    padding: 100px
+
+    &__title
+      padding-bottom: 80px
+      font-size: 34px
+
+    .col-md-2
+      padding-bottom: 80px
+    
+    &__grid-item
+      max-height: 60px !important
+
+    &__view-all
+      font-size: 23px

@@ -1,62 +1,67 @@
+@import '../../styles/variables.sass'
+
 .partners
-  padding: 0 30px 80px 20px
-
+  padding: 5.5vw 0 6.9vw 0
+  
   &__title
-    padding-bottom: 50px !important
     text-align: center
-
-  img
-    width: 99px
-    height: 26px
-    object-fit: contain
+    line-height: 1.27
+    padding-bottom: 4.2vw !important
 
   &__grid
-    padding-top: 50px
     display: grid
-    grid-template: repeat(2, auto) / repeat(3, auto)
     justify-content: space-between
-    grid-row-gap: 30px
-    grid-column-gap: 10px
 
-@media only screen and (min-width: 767px)
+  .react-multi-carousel-track
+    display: flex
+    align-items: center
+    justify-content: center
+    
+  li.react-multi-carousel-item  
+    padding: 0 2.2vw
+
+  .react-multiple-carousel__arrow
+    background-color: transparent !important
+    &:focus
+      outline: none
+    &::before, &::after
+      color: $smokeGray
+    &--left
+      left: 0 !important
+    &--right
+      right: 0 !important
+
+  img
+    object-fit: contain
+
+@media only screen and (min-width: 768px)
   .partners
-    .logo-assured
-      width: 126px
-      height: 26px
+    &__grid
+      grid-template-columns: repeat(6, auto)
 
-    .logo-finda
-      width: 167px
-      height: 30px
-
-    .logo-luxe
-      width: 79px
-      height: 40px
-
-    .logo-candy
-      width: 171px
-      height: 28px
-
-    .logo-gig
-      width: 54px
-      height: 50px
-
-    .logo-mywork
-      width: 112px
-      height: 28px
-
-@media only screen and (min-width: 1023px)
+@media only screen and (min-width: 768px)
   .partners
-    padding-top: 80px
-
-@media only screen and (min-width: 1300px)
-  .partners
-    padding-top: 80px
-    padding-bottom: 130px
+    &__grid
+      grid-template-columns: repeat(6, auto)
+    
+    img
+      max-width: 70px
+      height: 20px
 
     &__title
-      padding-bottom: 65px !important
+      font-size: 26px
 
-    &__grid
-      display: grid
-      grid-template-columns: repeat(6, auto)
-      justify-content: space-between
+@media only screen and (min-width: 1366px)
+  .partners
+    padding: 80px 0 100px 0
+
+    &__title
+      font-size: 34px
+      padding-bottom: 60px !important
+      
+    li.react-multi-carousel-item  
+      padding: 0 31px
+    
+    img
+      max-width: 100px
+      height: 26px
