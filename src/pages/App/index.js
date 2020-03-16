@@ -10,6 +10,7 @@ import singleServiceDetails from '../../utils/SingleServiceDetails'
 import objectToArray from '../../utils/objectToArray'
 import SingleService from '../SingleService'
 import Testimonials from '../Testimonials';
+import Portfolio from '../Portfolio';
 import Blog from '../Blog';
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
       <Route exact path="/about-us" component={About} />
       <Route path="/technologies" component={TechnologyContainer} />
       <Route path="/testimonials" component={Testimonials} />
+      <Route path="/portfolio" component={Portfolio} />
       <Route path="/blog" component={Blog} />
       {
         objectToArray(singleServiceDetails).map((service) => (
