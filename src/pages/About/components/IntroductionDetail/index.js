@@ -9,7 +9,7 @@ const IntroductionDetail = () => (
       <h3>
         We are Golden Owl
       </h3>
-      <div className="content">
+      <div className="introduction-detail__content">
         <p>
           Golden Owl's leading mission is to turn customers' ideas into a useful technological platform for a variety of purposes from trade to company and project management. No matter how big or small your project is, our team here always work with high attention and discipline to bring client a perfect product with high quality of code and security.
         </p>
