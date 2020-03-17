@@ -3,8 +3,9 @@ import { Tabs, Tab } from "react-bootstrap";
 import "./index.sass";
 import PortfolioHeader from "../../components/PortfolioHeader";
 import tabContent from "../../utils/portfolioTabContent";
+import PortfolioInteresting from "../../components/PortfolioInteresting";
 
-const Services = () => (
+const Portfolio = () => (
   <section className="portfolio">
     <div className="container-fluid no-padding">
       <PortfolioHeader />
@@ -105,16 +106,9 @@ const Services = () => (
         </Tabs>{" "}
         {/* end tab */}
       </section>
-      <section className="portfolio__interesting">
-        <p className="portfolio__interesting__above-text">
-          Interesting our work?
-        </p>
-        <p className="portfolio__interesting__below-text">
-          Let’s find a time to meet
-        </p>
-      </section>
+      <PortfolioInteresting />
     </div>
   </section>
 );
 
-export default Services;
+export default Portfolio;

@@ -1,0 +1,73 @@
+@import '../../styles/variables.sass'
+
+.portfolio-details
+
+  &__body
+    padding-top: 80px
+    padding-bottom: 150px
+    .row
+      margin: 0 -25px
+
+    [class*='col']
+      padding-left: 25px
+      padding-right: 25px
+      
+    h1
+      font-size: 60px
+      color: $solidBlack
+      padding-bottom: 80px
+
+    &__cover
+      padding-bottom: 100px
+
+    &__first-paragraph
+      margin-bottom: 60px
+    
+    &__second-paragraph
+      margin-bottom: 90px
+    
+    &__third-paragraph
+      margin-top: 20px
+      margin-bottom: 130px
+    
+    &__next-project
+      padding: 80px
+      background-color: #24272C
+      h3, p
+        color: $white
+      h3
+        font-size: 36px
+        line-height: 1.67
+      p
+        font-size: 20px
+        line-height: 1.5
+
+    &__item-title
+      text-align: right
+      line-height: 1.67
+      padding-left: 40px
+    
+    &__item-content
+      padding-left: 60px
+      padding-right: 160px
+      font-size: 20px
+      line-height: 1.5
+      color: $softBlack
+    
+    .list
+      padding-left: 20px !important
+
+    ul > li
+      &:before
+        content: '•'
+        padding-right: 40px
+        padding-bottom: 10px
+    
+    .no-margin-bottom
+      margin-bottom: 0
+
+    img
+      width: 100%
+
+    &__image
+      padding-bottom: 80px
