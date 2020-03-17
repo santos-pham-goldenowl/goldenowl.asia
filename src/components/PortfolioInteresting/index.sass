@@ -1,11 +1,9 @@
 @import '../../styles/variables.sass'
 .portfolio-interesting
-    padding: 285px 0
     text-align: center
     background-color: $slightOrange
 
     p
-        font-size: 30px
         line-height: 1.33
 
     &__above-text
@@ -14,3 +12,17 @@
     &__below-text
         display: inline-block
         border-bottom: 1px solid $darkGray
+
+@media (min-width: 768px) and (max-width: 1365px)
+    .portfolio-interesting
+        padding: 19.8vw 0
+
+        p
+            font-size: 16px
+
+@media only screen and (min-width: 1366px)
+    .portfolio-interesting
+        padding: 285px 0
+
+        p
+            font-size: 20px
