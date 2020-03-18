@@ -9,6 +9,17 @@
   font-family: ProximaNovaBold
   display: none
 
+  .no-bootstrap-arrow
+    &:after
+      content: none !important
+  
+  &__button
+    padding-left: 0 !important
+
+  .no-hover-text-decoration
+    &:hover, &:focus
+      text-decoration: none !important
+
   h4
     margin-top: 0
     margin-bottom: 0
@@ -49,7 +60,7 @@
       height: 45px
 
     &__button
-      padding-right: 45px
+      padding-right: 45px !important
 
     &__arrow-right
       width: 17px

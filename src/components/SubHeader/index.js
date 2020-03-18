@@ -6,6 +6,7 @@ import arrowRight from "../../assets/images/arrow-right.svg";
 import arrowDown from "../../assets/images/chevron-down-solid.svg";
 import "./index.sass";
 import "./service.sass";
+import { Dropdown } from "react-bootstrap";
 
 class SubHeader extends Component {
   state = { showServices: false };
@@ -46,7 +47,7 @@ class SubHeader extends Component {
       </div>
     );
 
-    const buttoNode = (
+    const buttonNode = (
       <div className="services">
         <div
           className="services__arrow-wrapper"
@@ -66,7 +67,46 @@ class SubHeader extends Component {
             <h4 className="sub-header__text">Home</h4>
           </Link>
         </div>
-        <div>{this.state.showServices ? servicesNode : buttoNode}</div>
+
+        {/* */}
+        <Dropdown>
+          {/* <button
+            className="dropdown-toggle btn btn-link services__arrow-wrapper sub-header__button no-hover-text-decoration d-flex no-bootstrap-arrow"
+            type="button"
+            dataToggle="dropdown"
+            id="services-dropdown"
+            ariaHaspopup="true"
+            ariaExpanded="false"
+          > */}
+              <Dropdown.Toggle 
+                variant={'link'}
+                className="services__link services__arrow-wrapper sub-header__button dropdown-toggle d-flex no-bootstrap-arrow no-hover-text-decoration" 
+                id="services-dropdown"
+              >
+                <a className="no-hover-text-decoration" href="/services"><h4 className="sub-header__text">Services</h4></a>
+                <img className="arrow-down" src={arrowDown} alt="arrow-down" />
+              </Dropdown.Toggle>
+          {/* </button> */}
+          <Dropdown.Menu className="services__items" ariaLabelledby="services-dropdown">
+            {ServicesData.map(service => (
+              <Link key={service.link} to={`/services/${service.link}`}>
+                <div className="services__service">
+                  <div className="services__icon-wrapper">
+                    <img src={service.url} alt={service.name} />
+                  </div>
+                  <div className="services__service-description-wrapper">
+                    <h4>{service.name}</h4>
+                    <p className="services__service-description">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+        {/* */}
+
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/technologies">
             <h4 className="sub-header__text">Technology</h4>

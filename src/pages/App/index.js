@@ -12,9 +12,11 @@ import SingleService from '../SingleService'
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
 import Blog from '../Blog';
+import ScrollToTop from '../../components/ScrollToTop';
 
 const App = () => (
   <BrowserRouter>
+    <ScrollToTop />
     <section className="App">
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
