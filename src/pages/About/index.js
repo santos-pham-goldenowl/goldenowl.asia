@@ -19,7 +19,7 @@ class About extends Component {
           <MainHeader />
           <SubHeader />
           <BreadCrumb>
-            <p>About</p>
+            <p>About us</p>
           </BreadCrumb>
           <AboutUs />
           <IntroductionDetail />
