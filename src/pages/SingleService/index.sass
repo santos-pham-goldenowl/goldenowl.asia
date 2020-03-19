@@ -35,11 +35,18 @@
     position: relative
 
   &__dotted-square
-    position: absolute
     height: initial
     display: inline-block
+    border-radius: 4px
+    border: dashed 1px #e6a143
+    h3
+      line-height: 1.47
+    p
+      line-height: 1.5
 
   &__yellow-rectangle
+    position: absolute
+    top: 0
     background-color: $yellow
     h3
       line-height: 1.47
@@ -115,15 +122,24 @@
         font-size: 18px
 
     &__third-content
-      padding-bottom: 1.4vw
+      padding-top: 1.4vw
 
     &__dotted-square
       margin-left: -70px
       width: 80vw
+      padding: 6.9vw 8.4vw 6.9vw 6.9vw
+      > div:first-child
+        padding-right: 1.4vw
+        h3
+          font-size: 26px
+          padding-bottom: 2.1vw
+        p
+          font-size: 14px
+      > div:last-child
+        padding-left: 1.4vw
 
     &__yellow-rectangle
-      margin-left: -70px
-      padding: 6.9vw 6.9vw 6.9vw 6.9vw
+      padding: 6.9vw
       width: 78.5vw
       > div:first-child
         padding-right: 1.4vw
@@ -209,20 +225,12 @@
         font-size: 26px
 
     &__third-content
-      padding-bottom: 20px
+      padding-top: 20px
 
     &__dotted-square
-      margin-left: -calc(#{$desktopPadding} + 105px)
       width: 1150px
-      height: 480px
-      border-radius: 4px
-      border: dashed 1px #e6a143
-
-    &__yellow-rectangle
-      margin-left: calc((#{$desktopPadding} + 105px)*-1) !important
-      padding: 100px
-      padding-left: calc(#{$desktopPadding} + 105px)
-      width: 1130px
+      margin-left: -100px
+      padding: 100px 120px 100px 100px
       > div:first-child
         padding-right: 20px
         h3
@@ -232,9 +240,25 @@
           font-size: 20px
       > div:last-child
         padding-left: 20px
+
+    &__yellow-rectangle
+      left: calc(#{$desktopPadding} - 100px )
+      padding: 100px
+      width: 1130px
+      > div:first-child
+        width: 65.59%
+        h3
+          font-size: 34px
+          padding-bottom: 30px
+        p
+          font-size: 20px
+      > div:last-child
+        padding-left: 40px
       
     &__logos-wrapper
+      width: 34.41%
       img
+        align-self: start
         width: 80px 
         margin-right: 20px
         margin-bottom: 20px
