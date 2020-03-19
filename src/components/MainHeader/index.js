@@ -44,7 +44,7 @@ class MainHeader extends Component {
               <li className="main-header__flex-item">
                 <Link to="/portfolio">Portfolio</Link> 
               </li>
-              <li className="main-header__flex-item font-bold">
+              <li className="d-none main-header__flex-item font-bold">
                 <span>English</span>
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
               </li>
@@ -76,7 +76,7 @@ class MainHeader extends Component {
             <li className="main-header__flex-item">
               <Link to="/portfolio">Portfolio</Link>
             </li>
-            <li className="main-header__flex-item font-bold" style={{ display: 'none' }}>
+            <li className="d-none main-header__flex-item font-bold" style={{ display: 'none' }}>
               <span>English</span>
               <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
             </li>
