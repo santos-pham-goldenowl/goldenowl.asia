@@ -4,6 +4,7 @@ import "./index.sass";
 import PortfolioHeader from "../../components/PortfolioHeader";
 import tabContent from "../../utils/portfolioTabContent";
 import PortfolioInteresting from "../../components/PortfolioInteresting";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => (
   <section className="portfolio">
@@ -35,6 +36,7 @@ const Portfolio = () => (
             <div className="row">
               {tabContent.map((item, index) => (
                 <div className="col-md-6">
+                <Link to={`/portfolio${item.url}`}>
                   <div
                     className="portfolio__card"
                     style={{
@@ -51,7 +53,8 @@ const Portfolio = () => (
                       {item.content}
                     </h4>
                   </div>
-                </div>
+                </Link>
+              </div>
               ))}
             </div>
           </Tab>
@@ -59,6 +62,7 @@ const Portfolio = () => (
             <div className="row">
               {[...tabContent].reverse().map((item, index) => (
                 <div className="col-md-6">
+                <Link to={`/portfolio${item.url}`}>
                   <div
                     className="portfolio__card"
                     style={{
@@ -75,7 +79,8 @@ const Portfolio = () => (
                       {item.content}
                     </h4>
                   </div>
-                </div>
+                </Link>
+              </div>
               ))}
             </div>
           </Tab>
@@ -83,22 +88,24 @@ const Portfolio = () => (
             <div className="row">
               {tabContent.map((item, index) => (
                 <div className="col-md-6">
-                  <div
-                    className="portfolio__card"
-                    style={{
-                      marginLeft: index % 2 === 0 ? "auto" : 0,
-                      marginLeft: index % 2 === 0 ? 0 : "auto",
-                      backgroundImage: `url(${item.img})`
-                    }}
-                  >
-                    <h4
+                  <Link to={`/portfolio${item.url}`}>
+                    <div
+                      className="portfolio__card"
                       style={{
-                        color: item.isWhite ? "#fff" : "#3e403d"
+                        marginLeft: index % 2 === 0 ? "auto" : 0,
+                        marginLeft: index % 2 === 0 ? 0 : "auto",
+                        backgroundImage: `url(${item.img})`
                       }}
                     >
-                      {item.content}
-                    </h4>
-                  </div>
+                      <h4
+                        style={{
+                          color: item.isWhite ? "#fff" : "#3e403d"
+                        }}
+                      >
+                        {item.content}
+                      </h4>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>
