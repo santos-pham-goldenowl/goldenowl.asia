@@ -74,7 +74,7 @@ const SingleService = ({ content }) => {
               </div>
           </div>
           <div id="dashed-border" className="service__dotted-square" >
-          <div style={{ visibility: "hidden" }} className="row">
+          <div className="row invisible">
             {/* append data */}
               <div className="col-md-8">
                 <h3>{content.fourth.title}</h3>
