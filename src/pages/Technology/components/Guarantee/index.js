@@ -1,6 +1,7 @@
 import React from "react";
 
 import CheckPoint from "../../../../components/CheckPoint";
+
 import "./index.sass";
 
 const Guarantee = () => (

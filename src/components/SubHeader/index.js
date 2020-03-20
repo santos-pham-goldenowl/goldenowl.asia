@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ServicesData from "../../utils/Services";
 import arrowRight from "../../assets/images/arrow-right.svg";
 import arrowDown from "../../assets/images/chevron-down-solid.svg";
+
 import "./index.sass";
 import "./service.sass";
 
@@ -85,7 +86,7 @@ class SubHeader extends Component {
             <img
               className="sub-header__arrow-right"
               src={arrowRight}
-              alt="arrow-right"
+              alt="GO-contact-us"
             />
           </Link>
         </div>

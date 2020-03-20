@@ -1,7 +1,8 @@
 import React from "react";
 
-import "./index.sass";
 import TabContainer from "../../../../components/Tabs/TechTabs";
+
+import "./index.sass";
 
 const TechnologyDetail = () => (
   <section className="technology-detail">

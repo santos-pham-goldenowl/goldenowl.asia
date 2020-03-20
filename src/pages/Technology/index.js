@@ -7,6 +7,7 @@ import TechnologyCards from "./components/TechnologyCards";
 import Home from "../../components/BreadCrumb";
 import TechnologyDetail from "./components/TechnologyDetail";
 import Guarantee from "./components/Guarantee";
+
 import "./index.sass";
 
 const TechnologyContainer = () => (

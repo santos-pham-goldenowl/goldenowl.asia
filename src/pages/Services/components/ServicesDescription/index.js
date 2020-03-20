@@ -2,6 +2,7 @@ import React from "react";
 
 import present from "../../../../assets/images/service_description.png";
 import Bg from "../../../../assets/images/wavy_bg_2.png";
+
 import "./index.sass";
 
 const ServicesDescription = () => {

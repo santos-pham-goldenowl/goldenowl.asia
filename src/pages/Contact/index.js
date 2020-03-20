@@ -5,10 +5,10 @@ import MainHeader from "../../components/MainHeader";
 import SubHeader from "../../components/SubHeader";
 import BreadCrumb from "../../components/BreadCrumb";
 import Footer from "../../components/Footer";
-import "./index.sass";
-import objectToArray from "../../utils/objectToArray";
 import CheckPoint from "../../components/CheckPoint";
 import ArrowRight from "../../components/ArrowRight";
+
+import "./index.sass";
 
 const SingleService = () => {
   return (
