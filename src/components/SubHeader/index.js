@@ -68,27 +68,22 @@ class SubHeader extends Component {
             <h4 className="sub-header__text">Home</h4>
           </Link>
         </div>
-
-        {/* */}
+        {/* Services Dropdown-start */}
         <Dropdown>
-          {/* <button
-            className="dropdown-toggle btn btn-link services__arrow-wrapper sub-header__button no-hover-text-decoration d-flex no-bootstrap-arrow"
-            type="button"
-            dataToggle="dropdown"
+          <Dropdown.Toggle
+            variant={"link"}
+            className="services__link services__arrow-wrapper sub-header__button dropdown-toggle d-flex no-bootstrap-arrow no-hover-text-decoration"
             id="services-dropdown"
-            ariaHaspopup="true"
-            ariaExpanded="false"
-          > */}
-              <Dropdown.Toggle 
-                variant={'link'}
-                className="services__link services__arrow-wrapper sub-header__button dropdown-toggle d-flex no-bootstrap-arrow no-hover-text-decoration" 
-                id="services-dropdown"
-              >
-                <a className="no-hover-text-decoration" href="/services"><h4 className="sub-header__text">Services</h4></a>
-                <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-              </Dropdown.Toggle>
-          {/* </button> */}
-          <Dropdown.Menu className="services__items" ariaLabelledby="services-dropdown">
+          >
+            <a className="no-hover-text-decoration" href="/services">
+              <h4 className="sub-header__text">Services</h4>
+            </a>
+            <img className="arrow-down" src={arrowDown} alt="arrow-down" />
+          </Dropdown.Toggle>
+          <Dropdown.Menu
+            className="services__items"
+            ariaLabelledby="services-dropdown"
+          >
             {ServicesData.map(service => (
               <Link key={service.link} to={`/services/${service.link}`}>
                 <div className="services__service">
@@ -106,8 +101,7 @@ class SubHeader extends Component {
             ))}
           </Dropdown.Menu>
         </Dropdown>
-        {/* */}
-
+        {/* Services Dropdown-end */}
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/technologies">
             <h4 className="sub-header__text">Technology</h4>
