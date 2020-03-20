@@ -11,7 +11,7 @@ const CompanyQualities = () => (
     <div className="row">
       <div className="col-md-4 qualities__items d-block">
         <img src={companyQuality1} alt="Golden Owl Asia" />
-        <h5>Golden Owl Asia</h5>
+        <h5>Our Company</h5>
         <div className="d-flex">
           <p>
               A leading name in providing exceptional technology solutions and

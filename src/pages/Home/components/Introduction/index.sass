@@ -13,8 +13,8 @@
     font-family: ProximaNovaRegular
   
   img
-    float: right
-
+    left: 0
+    position: absolute
 
 @media (min-width: 768px) and (max-width: 1365px)
   .introduction
@@ -26,19 +26,26 @@
       font-size: 18px
       line-height: 1.55
 
+    &__left-side
+      margin-left: -62.5px
+
     img
-      width: calc(100% + 70px)
+      height: 38.2vw
 
 @media only screen and (min-width: 1366px)
   .introduction
     padding-top: 120px
 
     &__title
-      font-size: 36px
+      padding-bottom: 40px
+      font-size: 34px
     
     p
       font-size: 26px
       line-height: 1.54
 
+    &__left-side
+      margin-left: -90px
+
     img
-      width: calc(100% + 100px)
+      height: 550px

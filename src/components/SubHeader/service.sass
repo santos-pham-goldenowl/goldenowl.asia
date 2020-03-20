@@ -3,17 +3,9 @@
 
 .services
   &__items
-    position: absolute
-    top: 60px
-    padding-left: 30px
-    padding-right: 30px
-    padding-top: 20px
-    padding-bottom: 20px
-    background-color: $white
     width: 434px
-    border-radius: 10px
-
-    z-index: 50
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -15px rgba(160, 160, 160, 0.5);
 
     &:before
       content: ""
@@ -60,12 +52,10 @@
       background-color: #fafafa
       border-radius: 6px
 
-@media only screen and (min-width: 1023px)
+@media (min-width: 768px) and (max-width: 1365px)
   .services
-    &__items
-      right: 150px
 
-@media only screen and (min-width: 1300px)
+@media only screen and (min-width: 1366px)
   .services
     &__items
-      right: 230px
+      padding: 30px !important

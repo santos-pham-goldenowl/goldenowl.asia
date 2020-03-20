@@ -86,17 +86,17 @@ const Footer = () => (
             <Link to="/about-us">About us</Link>
             <Link to="/services">Services</Link>
             <Link to="/technologies">Technologies</Link>
-            <a href="/testimonials">Testimonials</a>
-            <a href="/portfolio">Portfolio</a>
+            <Link to="/testimonials">Testimonials</a>
+            <Link to="/portfolio">Portfolio</a>
           </div>
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
             <a href="#">Careers</a>
-            <a href="/contact">Contact us</a>
+            <Link to="/contact">Contact us</a>
             <a href="#">FAQ</a>
-            <a href="/blog">Blog</a>
+            <Link to="/blog">Blog</a>
           </div>
         </div>
       </div>
