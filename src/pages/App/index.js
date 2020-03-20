@@ -12,6 +12,7 @@ import SingleService from '../SingleService'
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
 import Blog from '../Blog';
+import Contact from '../Contact';
 
 const App = () => (
   <BrowserRouter>
@@ -22,6 +23,7 @@ const App = () => (
       <Route path="/testimonials" component={Testimonials} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/blog" component={Blog} />
+      <Route path="/contact-us" component={Contact} />
       {
         objectToArray(singleServiceDetails).map((service) => (
           <Route

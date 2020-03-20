@@ -1,6 +1,7 @@
 import React from "react";
 
 import { firstRow, secondRow } from "../../../../utils/logoSlider";
+
 import "./index.sass";
 
 const RunningPanels = () => (
