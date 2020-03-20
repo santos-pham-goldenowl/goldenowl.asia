@@ -7,7 +7,7 @@ const Introduction = () => (
   <section className="introduction">
     <div className="row">
       <div className="col-md-5 introduction__left-side">
-        <img src={study} alt={study} loading="lazy" />
+        <img src={study} alt="study" loading="lazy" />
       </div>
       <div className="col-md-6 ml-auto">
         <h3 className="introduction__title">We are Golden Owl</h3>
