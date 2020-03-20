@@ -6,10 +6,12 @@ import About from '../About'
 import TechnologyContainer from '../Technology';
 import Services from '../Services'
 import singleServiceDetails from '../../utils/SingleServiceDetails'
+import portfolioDetails from '../../utils/portfolioDetails';
 import objectToArray from '../../utils/objectToArray'
 import SingleService from '../SingleService'
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
+import PortfolioSubPage from '../PortfolioSubPage';
 import Blog from '../Blog';
 import Contact from '../Contact';
 import ScrollToTop from '../../components/ScrollToTop';
@@ -22,11 +24,22 @@ const App = () => (
     <section className="App">
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
-      <Route path="/technologies" component={TechnologyContainer} />
-      <Route path="/testimonials" component={Testimonials} />
-      <Route path="/portfolio" component={Portfolio} />
+      <Route exact path="/technologies" component={TechnologyContainer} />
+      <Route exact path="/testimonials" component={Testimonials} />
+      <Route exact path="/portfolio" component={Portfolio} />
+      {
+        objectToArray(portfolioDetails).map((portfolio) => (
+          <Route
+            exact
+            key={portfolio.key}
+            path={`/portfolio/${portfolio.url}`}
+            component={() => <PortfolioSubPage content={portfolio} />}
+          />
+        ))
+      }
       <Route path="/blog" component={Blog} />
       <Route path="/contact-us" component={Contact} />
+      <Route exact path="/services" component={Services} />
       {
         objectToArray(singleServiceDetails).map((service) => (
           <Route
@@ -37,7 +50,6 @@ const App = () => (
           />
         ))
       }
-      <Route exact path="/services" component={Services} />
     </section>
   </BrowserRouter>
 )

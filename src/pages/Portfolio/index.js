@@ -3,8 +3,10 @@ import { Tabs, Tab } from "react-bootstrap";
 import "./index.sass";
 import PortfolioHeader from "../../components/PortfolioHeader";
 import tabContent from "../../utils/portfolioTabContent";
+import PortfolioInteresting from "../../components/PortfolioInteresting";
+import { Link } from "react-router-dom";
 
-const Services = () => (
+const Portfolio = () => (
   <section className="portfolio">
     <div className="container-fluid no-padding">
       <PortfolioHeader />
@@ -33,23 +35,21 @@ const Services = () => (
           <Tab eventKey="all" title="All">
             <div className="row">
               {tabContent.map((item, index) => (
-                <div className="col-md-6">
-                  <div
-                    className="portfolio__card"
-                    style={{
-                      marginLeft: index % 2 === 0 ? "auto" : 0,
-                      marginLeft: index % 2 === 0 ? 0 : "auto",
-                      backgroundImage: `url(${item.img})`
-                    }}
-                  >
-                    <h4
+                <div key={item.url} className="col-md-6">
+                  <Link to={`/portfolio/${item.url}`}>
+                    <div
+                      className="portfolio__card"
                       style={{
-                        color: item.isWhite ? "#fff" : "#3e403d"
+                        marginRight: index % 2 === 0 ? "auto" : 0,
+                        marginLeft: index % 2 === 0 ? 0 : "auto",
+                        backgroundImage: `url(${item.img})`
                       }}
                     >
-                      {item.content}
-                    </h4>
-                  </div>
+                      <h4 className={item.isWhite && "white-title"}>
+                        {item.content}
+                      </h4>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -57,23 +57,21 @@ const Services = () => (
           <Tab eventKey="web" title="Web development">
             <div className="row">
               {[...tabContent].reverse().map((item, index) => (
-                <div className="col-md-6">
-                  <div
-                    className="portfolio__card"
-                    style={{
-                      marginLeft: index % 2 === 0 ? "auto" : 0,
-                      marginLeft: index % 2 === 0 ? 0 : "auto",
-                      backgroundImage: `url(${item.img})`
-                    }}
-                  >
-                    <h4
+                <div key={item.url} className="col-md-6">
+                  <Link to={`/portfolio/${item.url}`}>
+                    <div
+                      className="portfolio__card"
                       style={{
-                        color: item.isWhite ? "#fff" : "#3e403d"
+                        marginRight: index % 2 === 0 ? "auto" : 0,
+                        marginLeft: index % 2 === 0 ? 0 : "auto",
+                        backgroundImage: `url(${item.img})`
                       }}
                     >
-                      {item.content}
-                    </h4>
-                  </div>
+                      <h4 className={item.isWhite && "white-title"}>
+                        {item.content}
+                      </h4>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -81,40 +79,31 @@ const Services = () => (
           <Tab eventKey="mobile" title="Mobile development">
             <div className="row">
               {tabContent.map((item, index) => (
-                <div className="col-md-6">
-                  <div
-                    className="portfolio__card"
-                    style={{
-                      marginLeft: index % 2 === 0 ? "auto" : 0,
-                      marginLeft: index % 2 === 0 ? 0 : "auto",
-                      backgroundImage: `url(${item.img})`
-                    }}
-                  >
-                    <h4
+                <div key={item.url} className="col-md-6">
+                  <Link to={`/portfolio/${item.url}`}>
+                    <div
+                      className="portfolio__card"
                       style={{
-                        color: item.isWhite ? "#fff" : "#3e403d"
+                        marginRight: index % 2 === 0 ? "auto" : 0,
+                        marginLeft: index % 2 === 0 ? 0 : "auto",
+                        backgroundImage: `url(${item.img})`
                       }}
                     >
-                      {item.content}
-                    </h4>
-                  </div>
+                      <h4 className={item.isWhite && "white-title"}>
+                        {item.content}
+                      </h4>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>
           </Tab>
-        </Tabs>{" "}
+        </Tabs>
         {/* end tab */}
       </section>
-      <section className="portfolio__interesting">
-        <p className="portfolio__interesting__above-text">
-          Interesting our work?
-        </p>
-        <p className="portfolio__interesting__below-text">
-          Let’s find a time to meet
-        </p>
-      </section>
+      <PortfolioInteresting />
     </div>
   </section>
 );
 
-export default Services;
+export default Portfolio;
