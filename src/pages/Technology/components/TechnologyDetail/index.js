@@ -13,7 +13,9 @@ const TechnologyDetail = () => (
         <br />
         become the state of the art.
       </p>
-      <TabContainer />
+      <div className="col-12">
+        <TabContainer />
+      </div>
     </div>
   </section>
 );
