@@ -1,7 +1,8 @@
 import React from "react";
 
-import "./index.sass";
 import TabContainer from "../../../../components/Tabs/TechTabs";
+
+import "./index.sass";
 
 const TechnologyDetail = () => (
   <section className="technology-detail">
@@ -12,7 +13,9 @@ const TechnologyDetail = () => (
         <br />
         become the state of the art.
       </p>
-      <TabContainer />
+      <div className="col-12">
+        <TabContainer />
+      </div>
     </div>
   </section>
 );

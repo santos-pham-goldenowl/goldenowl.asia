@@ -1,0 +1,86 @@
+@import '../../styles/variables.sass'
+
+.contact-us
+  header, .breadcrumb, section
+    background-color: $white    
+  
+  .contact-form
+    h1
+      color: $solidBlack
+    
+    p
+      color: $darkGray
+      line-height: 1.5
+
+    &__send-wrapper
+      &:hover, &:focus
+        .send-rectangle
+          border: none 
+          background-color: $yellow
+        .send-dashed-border
+          border: dashed 1px $yellow
+
+    
+    .send-rectangle
+      border: solid 1px $solidBlack
+      background-color: $white
+      position: absolute
+      top: 0
+      left: 10px
+      p
+        color: $solidBlack
+      .arrow-wrapper
+        background-color: transparent
+
+    .send-dashed-border
+      border-radius: 4px
+      border: dashed 1px $solidBlack;
+
+@media (min-width: 768px) and (max-width: 1365px)
+  .contact-us
+    &__title
+      padding-bottom: 30px
+    
+@media only screen and (min-width: 1366px)
+  .contact-us
+
+    .contact-form
+      padding: 74px 0 150px 0
+
+      &__wrapper
+        padding: 0 105px
+      
+      h1
+        width: 295px
+        padding-bottom: 30px
+        font-size: 60px
+      
+      .check-point
+        margin-right: 15px
+      
+      &__introduction
+        padding-bottom: 40px
+
+      p
+        font-size: 20px
+      
+      label
+        font-size: 18px
+      
+      .send-rectangle
+        width: 505px
+        height: 140px
+        p
+          font-size: 16px
+          padding-bottom: 15px
+          padding-left: 15px
+        
+        .arrow-wrapper
+          padding-right: 15px
+          padding-bottom: 20px
+        
+      .send-dashed-border
+        width: 505px
+        height: 140px
+        margin-left: 10px
+        margin-top: 10px

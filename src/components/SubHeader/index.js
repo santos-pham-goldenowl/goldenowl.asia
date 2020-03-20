@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ServicesData from "../../utils/Services";
 import arrowRight from "../../assets/images/arrow-right.svg";
 import arrowDown from "../../assets/images/chevron-down-solid.svg";
+
 import "./index.sass";
 import "./service.sass";
 import { Dropdown } from "react-bootstrap";
@@ -118,14 +119,16 @@ class SubHeader extends Component {
           </Link>
         </div>
         <div className="sub-header__contact-wrapper d-flex align-items-center justify-content-center">
-          <h4 className="sub-header__contact-title sub-header__text">
-            Contact us
-          </h4>
-          <img
-            className="sub-header__arrow-right"
-            src={arrowRight}
-            alt="arrow-right"
-          />
+          <Link to="/contact-us" className="d-flex">
+            <h4 className="sub-header__contact-title sub-header__text">
+              Contact us
+            </h4>
+            <img
+              className="sub-header__arrow-right"
+              src={arrowRight}
+              alt="GO-contact-us"
+            />
+          </Link>
         </div>
       </header>
     );

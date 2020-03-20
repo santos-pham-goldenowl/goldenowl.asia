@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import bg from "../../../../assets/images/bg.svg";
 import ArrowRight from "../../../../components/ArrowRight";
+
 import "./index.sass";
 
 const Missions = () => {
