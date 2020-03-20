@@ -10,7 +10,7 @@ import objectToArray from "../../utils/objectToArray";
 import "./index.sass";
 
 const SingleService = ({ content }) => {
-  const { key } = content;
+
   return (
     <section className="service">
       <div className="container-fluid no-padding">
@@ -19,10 +19,10 @@ const SingleService = ({ content }) => {
         <BreadCrumb>
           <Link to="/services">Services</Link>
           <span>/</span>
-          <p>{key}</p>
+          <p>{content.key}</p>
         </BreadCrumb>
         <section className="service__first-content">
-          <h1>{key}</h1>
+          <h1>{content.key}</h1>
           <p>{content.first.content}</p>
           <div className="image-wrapper">
             <img src={content.cover} alt="cover" />
@@ -56,25 +56,45 @@ const SingleService = ({ content }) => {
           </div>
         </section>
         <section className="service__third-content">
-          <div className="service__yellow-rectangle">
-            <div className="row">
-              <div className="col-md-8">
+          <div id="rectangle" className="service__yellow-rectangle d-flex">
+              <div className="service__yellow-rectangle__text">
                 <h3>{content.fourth.title}</h3>
                 <p>{content.fourth.content}</p>
               </div>
-              <div className="col-md-4 service__logos-wrapper d-flex flex-wrap align-items-start">
-                {objectToArray(content.fourth.logos).map(image => (
-                  <img
-                    key={image.name}
-                    src={image.url}
-                    alt={image.name}
-                    loading="lazy"
-                  />
-                ))}
+              <div className="service__logos-wrapper">
+                <div className="d-flex flex-wrap">
+                  {content.fourth.logos.map(image => (
+                    <img
+                      key={image.name}
+                      src={image.url}
+                      alt={image.name}
+                      loading="lazy"
+                    />
+                  ))}                  
+                </div>
+              </div>
+          </div>
+          <div id="dashed-border" className="service__dotted-square" >
+          <div className="row invisible">
+            {/* append data */}
+              <div className="service__yellow-rectangle__text">
+                <h3>{content.fourth.title}</h3>
+                <p>{content.fourth.content}</p>
+              </div>
+              <div className="service__logos-wrapper">
+                <div className="d-flex flex-wrap">
+                  {content.fourth.logos.map(image => (
+                    <img
+                      key={image.name}
+                      src={image.url}
+                      alt={image.name}
+                      loading="lazy"
+                    />
+                  ))}                  
+                </div>
               </div>
             </div>
           </div>
-          {/* <div className="service__dotted-square" /> */}
         </section>
         <section className="service__other-services-container">
           <h3 className="service__other-services-title">Other services</h3>
