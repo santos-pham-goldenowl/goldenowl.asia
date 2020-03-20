@@ -12,7 +12,7 @@ export default [
     content: "Referral Candy – A helpful solution for your company’s marketing",
     isWhite: true,
     img: img1,
-    url: '/referral-candy'
+    url: 'referral-candy'
   },
   { content: "GIG – Job is not a big deal", isWhite: true, img: img2, url: '/gig' },
   {
@@ -20,7 +20,7 @@ export default [
       "The Work Project – Change your workplace with many beautiful things",
     isWhite: false,
     img: img3,
-    url: '/the-work-project'
+    url: 'the-work-project'
   },
   {
     content: "My Agency – The place to find your most suitable job",
@@ -32,24 +32,24 @@ export default [
     content: "The Luxe Nomad – Make your holiday a paradise",
     isWhite: false,
     img: img5,
-    url: '/the-luxe-nomad'
+    url: 'the-luxe-nomad'
   },
   {
     content: "Find a Wealth Manager – Good advisor for your investment plan",
     isWhite: true,
     img: img6,
-    url: '/find-a-wealth-manager'
+    url: 'find-a-wealth-manager'
   },
   {
     content: "Eye Protec – The best bodyguard for your life",
     isWhite: true,
     img: img7,
-    url: '/eye-protec'
+    url: 'eye-protec'
   },
   {
     content: "Personifi – Where to find the most suitable personal loan",
     isWhite: true,
     img: img8,
-    url: '/personifi'
+    url: 'personifi'
   }
 ];

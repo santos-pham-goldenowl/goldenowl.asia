@@ -73,7 +73,6 @@ const SingleService = ({ content }) => {
               </div>
             </div>
           </div>
-          {/* <div className="service__dotted-square" /> */}
         </section>
         <section className="service__other-services-container">
           <h3 className="service__other-services-title">Other services</h3>

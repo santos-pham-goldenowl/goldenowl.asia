@@ -30,7 +30,7 @@ const Services = ({ content }) => {
             <div className="col-md-7 portfolio-details__body__second-paragraph">
               <ul className="no-margin-bottom">
                 {content.techs.map(item => (
-                  <li className="portfolio-details__body__item-content list d-flex">
+                  <li key={item} className="portfolio-details__body__item-content list d-flex">
                     <p>{item}</p>
                   </li>
                 ))}
@@ -39,9 +39,9 @@ const Services = ({ content }) => {
             {content.img.map((image, index) => (
               <div
                 className={`col-md-${image.col} portfolio-details__body__image`}
-                key={`${content.key} ${index}`}
+                key={`${content.key}-${index}`}
               >
-                <img src={image.src} alt={`${content.key} ${index}`} loading="lazy" />
+                <img src={image.src} alt={`${content.key} img no.${index}`} loading="lazy" />
               </div>
             ))}
             <div className="col-md-5 portfolio-details__body__third-paragraph">

@@ -35,73 +35,17 @@ const Portfolio = () => (
           <Tab eventKey="all" title="All">
             <div className="row">
               {tabContent.map((item, index) => (
-                <div className="col-md-6">
-                <Link to={`/portfolio${item.url}`}>
-                  <div
-                    className="portfolio__card"
-                    style={{
-                      marginLeft: index % 2 === 0 ? "auto" : 0,
-                      marginLeft: index % 2 === 0 ? 0 : "auto",
-                      backgroundImage: `url(${item.img})`
-                    }}
-                  >
-                    <h4
-                      style={{
-                        color: item.isWhite ? "#fff" : "#3e403d"
-                      }}
-                    >
-                      {item.content}
-                    </h4>
-                  </div>
-                </Link>
-              </div>
-              ))}
-            </div>
-          </Tab>
-          <Tab eventKey="web" title="Web development">
-            <div className="row">
-              {[...tabContent].reverse().map((item, index) => (
-                <div className="col-md-6">
-                <Link to={`/portfolio${item.url}`}>
-                  <div
-                    className="portfolio__card"
-                    style={{
-                      marginLeft: index % 2 === 0 ? "auto" : 0,
-                      marginLeft: index % 2 === 0 ? 0 : "auto",
-                      backgroundImage: `url(${item.img})`
-                    }}
-                  >
-                    <h4
-                      style={{
-                        color: item.isWhite ? "#fff" : "#3e403d"
-                      }}
-                    >
-                      {item.content}
-                    </h4>
-                  </div>
-                </Link>
-              </div>
-              ))}
-            </div>
-          </Tab>
-          <Tab eventKey="mobile" title="Mobile development">
-            <div className="row">
-              {tabContent.map((item, index) => (
-                <div className="col-md-6">
-                  <Link to={`/portfolio${item.url}`}>
+                <div key={item.url} className="col-md-6">
+                  <Link to={`/portfolio/${item.url}`}>
                     <div
                       className="portfolio__card"
                       style={{
-                        marginLeft: index % 2 === 0 ? "auto" : 0,
+                        marginRight: index % 2 === 0 ? "auto" : 0,
                         marginLeft: index % 2 === 0 ? 0 : "auto",
                         backgroundImage: `url(${item.img})`
                       }}
                     >
-                      <h4
-                        style={{
-                          color: item.isWhite ? "#fff" : "#3e403d"
-                        }}
-                      >
+                      <h4 className={item.isWhite && "white-title"}>
                         {item.content}
                       </h4>
                     </div>
@@ -110,7 +54,51 @@ const Portfolio = () => (
               ))}
             </div>
           </Tab>
-        </Tabs>{" "}
+          <Tab eventKey="web" title="Web development">
+            <div className="row">
+              {[...tabContent].reverse().map((item, index) => (
+                <div key={item.url} className="col-md-6">
+                  <Link to={`/portfolio/${item.url}`}>
+                    <div
+                      className="portfolio__card"
+                      style={{
+                        marginRight: index % 2 === 0 ? "auto" : 0,
+                        marginLeft: index % 2 === 0 ? 0 : "auto",
+                        backgroundImage: `url(${item.img})`
+                      }}
+                    >
+                      <h4 className={item.isWhite && "white-title"}>
+                        {item.content}
+                      </h4>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </Tab>
+          <Tab eventKey="mobile" title="Mobile development">
+            <div className="row">
+              {tabContent.map((item, index) => (
+                <div key={item.url} className="col-md-6">
+                  <Link to={`/portfolio/${item.url}`}>
+                    <div
+                      className="portfolio__card"
+                      style={{
+                        marginRight: index % 2 === 0 ? "auto" : 0,
+                        marginLeft: index % 2 === 0 ? 0 : "auto",
+                        backgroundImage: `url(${item.img})`
+                      }}
+                    >
+                      <h4 className={item.isWhite && "white-title"}>
+                        {item.content}
+                      </h4>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </Tab>
+        </Tabs>
         {/* end tab */}
       </section>
       <PortfolioInteresting />
