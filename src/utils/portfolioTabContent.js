@@ -14,7 +14,7 @@ export default [
     img: img1,
     url: 'referral-candy'
   },
-  { content: "GIG – Job is not a big deal", isWhite: true, img: img2, url: '/gig' },
+  { content: "GIG – Job is not a big deal", isWhite: true, img: img2, url: 'gig' },
   {
     content:
       "The Work Project – Change your workplace with many beautiful things",

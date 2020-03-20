@@ -113,7 +113,7 @@ class SubHeader extends Component {
           </Link>
         </div>
         <div className="sub-header__contact-wrapper d-flex align-items-center justify-content-center">
-          <Link to="/contact-us" className="d-flex">
+          <Link to="/contact-us" className="d-flex align-items-center">
             <h4 className="sub-header__contact-title sub-header__text">
               Contact us
             </h4>

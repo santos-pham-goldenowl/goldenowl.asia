@@ -10,7 +10,6 @@ import objectToArray from "../../utils/objectToArray";
 import "./index.sass";
 
 const SingleService = ({ content }) => {
-
   return (
     <section className="service">
       <div className="container-fluid no-padding">
@@ -57,41 +56,39 @@ const SingleService = ({ content }) => {
         </section>
         <section className="service__third-content">
           <div id="rectangle" className="service__yellow-rectangle d-flex">
-              <div className="service__yellow-rectangle__text">
-                <h3>{content.fourth.title}</h3>
-                <p>{content.fourth.content}</p>
+            <div className="service__yellow-rectangle__text">
+              <h3>{content.fourth.title}</h3>
+              <p>{content.fourth.content}</p>
+            </div>
+            <div className="service__logos-wrapper">
+              <div className="d-flex flex-wrap">
+                {content.fourth.logos.map(image => (
+                  <img
+                    key={image.name}
+                    src={image.url}
+                    alt={image.name}
+                    loading="lazy"
+                  />
+                ))}
               </div>
-              <div className="service__logos-wrapper">
-                <div className="d-flex flex-wrap">
-                  {content.fourth.logos.map(image => (
-                    <img
-                      key={image.name}
-                      src={image.url}
-                      alt={image.name}
-                      loading="lazy"
-                    />
-                  ))}                  
-                </div>
-              </div>
+            </div>
           </div>
-          <div id="dashed-border" className="service__dotted-square" >
-          <div className="row invisible">
+          <div id="dashed-border" className="service__dotted-square d-flex">
             {/* append data */}
-              <div className="service__yellow-rectangle__text">
-                <h3>{content.fourth.title}</h3>
-                <p>{content.fourth.content}</p>
-              </div>
-              <div className="service__logos-wrapper">
-                <div className="d-flex flex-wrap">
-                  {content.fourth.logos.map(image => (
-                    <img
-                      key={image.name}
-                      src={image.url}
-                      alt={image.name}
-                      loading="lazy"
-                    />
-                  ))}                  
-                </div>
+            <div className="service__yellow-rectangle__text">
+              <h3>{content.fourth.title}</h3>
+              <p>{content.fourth.content}</p>
+            </div>
+            <div className="service__logos-wrapper">
+              <div className="d-flex flex-wrap">
+                {content.fourth.logos.map(image => (
+                  <img
+                    key={image.name}
+                    src={image.url}
+                    alt={image.name}
+                    loading="lazy"
+                  />
+                ))}
               </div>
             </div>
           </div>
