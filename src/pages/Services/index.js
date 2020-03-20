@@ -8,8 +8,9 @@ import Contact from "../../components/Contact";
 import BreadCrumb from "../../components/BreadCrumb";
 import ServicesDescription from "./components/ServicesDescription";
 import ServicesDetail from "./components/ServicesDetail";
-import "./index.sass";
 import ServicesParagraphs from "./components/ServicesParagraphs";
+
+import "./index.sass";
 
 const Services = () => (
   <section className="services-container">

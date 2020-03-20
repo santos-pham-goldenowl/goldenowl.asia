@@ -5,7 +5,6 @@ import Home from '../Home'
 import About from '../About'
 import TechnologyContainer from '../Technology';
 import Services from '../Services'
-import './index.sass'
 import singleServiceDetails from '../../utils/SingleServiceDetails'
 import portfolioDetails from '../../utils/portfolioDetails';
 import objectToArray from '../../utils/objectToArray'
@@ -14,9 +13,14 @@ import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
 import PortfolioSubPage from '../PortfolioSubPage';
 import Blog from '../Blog';
+import Contact from '../Contact';
+import ScrollToTop from '../../components/ScrollToTop';
+
+import './index.sass'
 
 const App = () => (
   <BrowserRouter>
+    <ScrollToTop />
     <section className="App">
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
@@ -34,6 +38,7 @@ const App = () => (
         ))
       }
       <Route path="/blog" component={Blog} />
+      <Route path="/contact-us" component={Contact} />
       <Route exact path="/services" component={Services} />
       {
         objectToArray(singleServiceDetails).map((service) => (
