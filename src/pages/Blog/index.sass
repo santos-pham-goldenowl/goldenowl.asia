@@ -1,0 +1,117 @@
+@import '../../styles/variables.sass'
+.blog
+  .breadcrumb, header, .welcome
+    background-color: $slightOrange !important
+
+  .welcome
+    p
+      line-height: 1.54
+  
+  .blogs
+    &__item
+      h4
+        font-family: MalloryBold
+        line-height: 1.47
+
+      p
+        line-height: 1.5
+
+      .category      
+        p
+          color: #85868f
+    
+    &__item-image
+      width: 100%
+
+@media (min-width: 768px) and (max-width: 1365px)
+  .blog
+    .welcome
+      padding-top: 5.6vw
+      padding-bottom: 10.3vw
+
+      &__wrapper
+        padding-left: 7.2vw
+      
+      h1
+        font-size: 40px
+        padding-bottom: 0.7vw
+      
+      p
+        font-size: 18px
+    
+    .row
+      margin: 0 -12.5px !important
+    
+    [class*='col']
+      padding-left: 12.5px !important
+      padding-right: 12.5px !important
+
+    .blogs
+      padding-top: 1.4vw
+      padding-bottom: 10.3vw
+
+      &__item
+        padding-top: 4.2vw
+
+        h4
+          font-size: 26px
+          padding-bottom: 1.4vw
+
+        p
+          font-size: 14px
+        
+        .category
+          padding-bottom: 1.4vw
+          p
+            font-size: 11px
+            padding-right: 1.4vw
+        
+        .category-vertical
+          padding-top: 2.1vw
+
+
+@media only screen and (min-width: 1366px)
+  .blog
+    .welcome
+      padding-top: 80px
+      padding-bottom: 150px
+
+      &__wrapper
+        padding-left: 105px
+      
+      h1
+        font-size: 60px
+        padding-bottom: 10px
+      
+      p
+        font-size: 26px
+    
+    .row
+      margin: 0 -17.5px !important
+    
+    [class*='col']
+      padding-left: 17.5px !important
+      padding-right: 17.5px !important
+
+    .blogs
+      padding-top: 20px
+      padding-bottom: 150px
+
+      &__item
+        padding-top: 60px
+
+        h4
+          font-size: 34px
+          padding-bottom: 20px
+
+        p
+          font-size: 20px
+        
+        .category
+          padding-bottom: 20px
+          p
+            font-size: 16px
+            padding-right: 20px
+        
+        .category-vertical
+          padding-top: 30px

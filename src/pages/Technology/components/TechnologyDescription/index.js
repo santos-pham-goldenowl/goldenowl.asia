@@ -2,6 +2,7 @@ import React from "react";
 
 import bg from "../../../../assets/images/wavy_bg_2.png";
 import technology from "../../../../assets/images/technology-cover.png";
+
 import "./index.sass";
 
 const TechnologyDescription = () => {

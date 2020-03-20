@@ -38,9 +38,13 @@ class MainHeader extends Component {
               <li className="main-header__flex-item">
                 <Link to="/about-us">About Golden Owl</Link>
               </li>
-              <li className="main-header__flex-item">Blog</li>
-              <li className="main-header__flex-item">Portfolio</li>
-              <li className="main-header__flex-item font-bold">
+              <li className="main-header__flex-item">
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li className="main-header__flex-item">
+                <Link to="/portfolio">Portfolio</Link> 
+              </li>
+              <li className="d-none main-header__flex-item font-bold">
                 <span>English</span>
                 <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
               </li>
@@ -69,8 +73,10 @@ class MainHeader extends Component {
               <Link to="/about-us">About Golden Owl</Link>
             </li>
             <li className="main-header__flex-item">Blog</li>
-            <li className="main-header__flex-item">Portfolio</li>
-            <li className="main-header__flex-item font-bold" style={{ display: 'none' }}>
+            <li className="main-header__flex-item">
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            <li className="d-none main-header__flex-item font-bold" style={{ display: 'none' }}>
               <span>English</span>
               <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
             </li>

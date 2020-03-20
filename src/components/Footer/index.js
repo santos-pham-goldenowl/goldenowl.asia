@@ -65,8 +65,8 @@ const Footer = () => (
           ))}
         </div>
         <div className="footer__contact row">
-          <span className="col-sm-12 col-lg-6 footer__phone">(+84) 912 878985</span>
-          <span className="col-sm-12 col-lg-6 footer__email">admin@goldenowl.asia</span>
+          <span className="col-md-12 col-lg-6 footer__phone">(+84) 912 878985</span>
+          <span className="col-md-12 col-lg-5 footer__email">admin@goldenowl.asia</span>
         </div>
       </div>
       <div className="footer__bottom-grid-container">
@@ -77,26 +77,26 @@ const Footer = () => (
             <Link to="/services/mobile-development">Mobile development</Link>
             <Link to="/services/ux-ui-design">UX UI design</Link>
             <Link to="/services/project-management">Project management</Link>
-            <Link to="/services/development-team">Development Team</Link>
+            <Link to="/services/development-team">Development team</Link>
           </div>
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Links</h3>
           <div>
-            <Link to="/about-us">About Us</Link>
+            <Link to="/about-us">About us</Link>
             <Link to="/services">Services</Link>
-            <Link to="/technologies">Technologiies</Link>
-            <a href="#">Testimonials</a>
-            <a href="#">Portfolio</a>
+            <Link to="/technologies">Technologies</Link>
+            <Link to="/testimonials">Testimonials</a>
+            <Link to="/portfolio">Portfolio</a>
           </div>
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
             <a href="#">Careers</a>
-            <a href="#">Contact Us</a>
+            <Link to="/contact">Contact us</a>
             <a href="#">FAQ</a>
-            <a href="#">Blog</a>
+            <Link to="/blog">Blog</a>
           </div>
         </div>
       </div>

@@ -5,8 +5,9 @@ import MainHeader from "../../components/MainHeader";
 import SubHeader from "../../components/SubHeader";
 import BreadCrumb from "../../components/BreadCrumb";
 import Footer from "../../components/Footer";
-import "./index.sass";
 import objectToArray from "../../utils/objectToArray";
+
+import "./index.sass";
 
 const SingleService = ({ content }) => {
 
@@ -76,19 +77,21 @@ const SingleService = ({ content }) => {
           <div id="dashed-border" className="service__dotted-square" >
           <div className="row invisible">
             {/* append data */}
-              <div className="col-md-8">
+              <div className="service__yellow-rectangle__text">
                 <h3>{content.fourth.title}</h3>
                 <p>{content.fourth.content}</p>
               </div>
-              <div className="col-md-4 service__logos-wrapper d-flex flex-wrap align-items-start">
-                {content.fourth.logos.map(image => (
-                  <img
-                    key={image.name}
-                    src={image.url}
-                    alt={image.name}
-                    loading="lazy"
-                  />
-                ))}
+              <div className="service__logos-wrapper">
+                <div className="d-flex flex-wrap">
+                  {content.fourth.logos.map(image => (
+                    <img
+                      key={image.name}
+                      src={image.url}
+                      alt={image.name}
+                      loading="lazy"
+                    />
+                  ))}                  
+                </div>
               </div>
             </div>
           </div>

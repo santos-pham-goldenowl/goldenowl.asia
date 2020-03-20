@@ -1,0 +1,88 @@
+@import '../../styles/variables.sass'
+.portfolio
+  header, &__priority, &__interesting
+    background-color: $slightOrange !important
+  
+  .nav-tabs
+    border-bottom: none
+  
+  .nav-link
+    border: none
+    font-family: MalloryBold
+    font-size: 34px
+    color: $darkGray
+    padding-left: 0
+    padding-right: 80px
+    margin-bottom: 40px
+  
+  .nav-link.active
+    position: relative
+    z-index: 1
+    &:before
+      border-top: 5px solid #fabf22
+      content: ""
+      margin: 0 auto
+      position: absolute
+      top: 50%
+      left: -80px
+      right: 0
+      bottom: 0
+      width: calc(100% - 50px)
+      z-index: -1
+  
+  &__priority
+    padding: 200px 0 150px 0
+
+    p
+      color: $darkGray
+
+    h1
+      font-size: 60px
+      color: $solidBlack
+      padding-right: 260px
+      padding-bottom: 80px
+
+    &__left-paragraph
+      p
+        font-size: 34px
+        line-height: 1.53
+    
+    &__right-paragraph
+      p
+        font-size: 20px
+        line-height: 1.8
+    
+  &__project
+    padding: 80px 0 150px 0
+
+  &__interesting
+    padding: 285px 0
+    text-align: center
+
+    p
+      font-size: 30px
+      line-height: 1.33
+
+    &__above-text
+      font-family: ProximaNovaBold
+
+    &__below-text
+      display: inline-block
+      border-bottom: 1px solid $darkGray
+    
+  &__card
+    padding: 56px 60px 0 60px
+    border-radius: 10px
+    height: 736px
+    width: 590px
+    margin-top: 60px
+    display: flex
+    background-repeat: no-repeat
+    background-position: top
+    background-size: 100%
+    transition: transform .3s
+    &:hover
+      transform: scale(1.03)
+    h4
+      font-size: 32px
+      lineHeight: 1.5

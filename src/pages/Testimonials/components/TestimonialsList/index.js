@@ -1,9 +1,10 @@
 import React from "react";
 
-import "./index.sass";
 import testimonials from "../../../../utils/testimonials";
 import objectToArray from "../../../../utils/objectToArray";
 import ArrowRight from "../../../../components/ArrowRight";
+
+import "./index.sass";
 
 const TestimonialsList = () => (
   <section className="testimonials-list">
