@@ -20,13 +20,21 @@
     margin-bottom: 1.4vw
     margin-right: 0.3vw
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .auto-carousel
     p
-      font-size: 14px
+      font-size: 10px
     
     &__name, &__idea
+      font-size: 8px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .auto-carousel
+    p
       font-size: 12px
+    
+    &__name, &__idea
+      font-size: 10px
 
 @media only screen and (min-width: 1366px)
   .auto-carousel

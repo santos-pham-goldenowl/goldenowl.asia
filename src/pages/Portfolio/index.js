@@ -2,7 +2,7 @@ import React from "react";
 import { Tabs, Tab } from "react-bootstrap";
 import "./index.sass";
 import PortfolioHeader from "../../components/PortfolioHeader";
-import tabContent from "../../utils/portfolioTabContent";
+import allTab, {mobileTab, webTab} from "../../utils/portfolioTabContent";
 import PortfolioInteresting from "../../components/PortfolioInteresting";
 import { Link } from "react-router-dom";
 
@@ -34,7 +34,7 @@ const Portfolio = () => (
         <Tabs defaultActiveKey="all" id="uncontrolled-tab-example">
           <Tab eventKey="all" title="All">
             <div className="row">
-              {tabContent.map((item, index) => (
+              {allTab.map((item, index) => (
                 <div key={item.url} className="col-md-6">
                   <Link to={`/portfolio/${item.url}`}>
                     <div
@@ -56,7 +56,7 @@ const Portfolio = () => (
           </Tab>
           <Tab eventKey="web" title="Web development">
             <div className="row">
-              {[...tabContent].reverse().map((item, index) => (
+              {webTab.map((item, index) => (
                 <div key={item.url} className="col-md-6">
                   <Link to={`/portfolio/${item.url}`}>
                     <div
@@ -78,7 +78,7 @@ const Portfolio = () => (
           </Tab>
           <Tab eventKey="mobile" title="Mobile development">
             <div className="row">
-              {tabContent.map((item, index) => (
+              {mobileTab.map((item, index) => (
                 <div key={item.url} className="col-md-6">
                   <Link to={`/portfolio/${item.url}`}>
                     <div

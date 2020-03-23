@@ -14,23 +14,19 @@ const Services = ({ content }) => {
             <div className="col-12 portfolio-details__body__cover">
               <img src={content.cover} alt={`${content.key} cover`} loading="lazy" />
             </div>
-            <div className="col-md-5 portfolio-details__body__first-paragraph">
-              <h3 className="portfolio-details__body__item-title">Overview</h3>
-            </div>
-            <div className="col-md-7 portfolio-details__body__first-paragraph">
+            <div className="col-md-12 portfolio-details__body__first-paragraph d-flex align-items-start">
+              <h3 className="ml-auto portfolio-details__body__item-title">Overview</h3>
               <p className="portfolio-details__body__item-content">
                 {content.overview}
               </p>
             </div>
-            <div className="col-md-5 portfolio-details__body__second-paragraph">
-              <h3 className="portfolio-details__body__item-title">
-                Technology
+            <div className="col-md-12 portfolio-details__body__second-paragraph d-flex align-items-start">
+              <h3 className="ml-auto portfolio-details__body__item-title">
+                Technologies
               </h3>
-            </div>
-            <div className="col-md-7 portfolio-details__body__second-paragraph">
               <ul className="no-margin-bottom">
                 {content.techs.map(item => (
-                  <li key={item} className="portfolio-details__body__item-content list d-flex">
+                  <li key={item} className="portfolio-details__body__item-content d-flex">
                     <p>{item}</p>
                   </li>
                 ))}
@@ -44,12 +40,10 @@ const Services = ({ content }) => {
                 <img src={image.src} alt={`${content.key} img no.${index}`} loading="lazy" />
               </div>
             ))}
-            <div className="col-md-5 portfolio-details__body__third-paragraph">
-              <h3 className="portfolio-details__body__item-title">
+            <div className="col-md-12 portfolio-details__body__third-paragraph d-flex align-items-start">
+              <h3 className="ml-auto portfolio-details__body__item-title">
                 {content.brief.title}
               </h3>
-            </div>
-            <div className="col-md-7 portfolio-details__body__third-paragraph">
               <p className="portfolio-details__body__item-content">
                 {content.brief.description}
               </p>

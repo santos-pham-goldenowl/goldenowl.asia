@@ -18,18 +18,36 @@
   
   img
       object-fit: contain
-      margin-left: 20px
-      margin-top: 8px
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
+  .quote
+  
+    &__content
+      font-size: 28px
+      line-height: 1.4
+      padding-bottom: 21px
+    
+    img
+      max-width: calc(100% + 59px)
+      margin-left: 11px
+      margin-top: 4px
+
+    &__author
+      font-size: 14px
+      line-height: 1.55
+
+@media (min-width: 1024px) and (max-width: 1365px)
   .quote
   
     &__content
       font-size: 36px
       line-height: 1.4
+      padding-bottom: 28px
     
     img
-      max-width: calc(100% + 50px)
+      max-width: calc(100% + 56px)
+      margin-left: 14px
+      margin-top: 6px
     
     &__author
       font-size: 18px
@@ -46,6 +64,8 @@
     
     img
       max-width: calc(100% + 80px)
+      margin-left: 20px
+      margin-top: 8px
     
     &__author
       font-size: 26px

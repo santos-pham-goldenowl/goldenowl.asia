@@ -22,10 +22,25 @@
     p
       line-height: 1.5
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .archieves
+    padding: 43px 0
+
     &__title
-      font-size: 14px
+      font-size: 10px
+    
+    &__item-flex
+      h2
+        font-size: 26px
+      p
+        font-size: 10px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .archieves
+    padding: 57px 0
+
+    &__title
+      font-size: 12px
     
     &__item-flex
       h2
@@ -35,7 +50,7 @@
 
 @media only screen and (min-width: 1366px)
   .archieves
-    padding: 80px 0 80px 0
+    padding: 80px 0
 
     &__title
       font-size: 20px

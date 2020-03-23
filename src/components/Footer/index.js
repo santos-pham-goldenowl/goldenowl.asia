@@ -65,8 +65,8 @@ const Footer = () => (
           ))}
         </div>
         <div className="footer__contact row">
-          <span className="col-md-12 col-lg-6 footer__phone">(+84) 912 878985</span>
-          <span className="col-md-12 col-lg-5 footer__email">admin@goldenowl.asia</span>
+          <span className="col-md-6 footer__phone">(+84) 912 878985</span>
+          <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
         </div>
       </div>
       <div className="footer__bottom-grid-container">
