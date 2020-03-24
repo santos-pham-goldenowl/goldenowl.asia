@@ -95,7 +95,7 @@ export default [
     content: "Briidge - The place to get your best trainer",
     isWhite: true,
     img: img14,
-    url: 'briigde'
+    url: 'briidge'
   },
   {
     content: "Bridge Pay - Track your money flow with this",
@@ -125,7 +125,7 @@ export default [
     content: "Corpzap - Your great assistant ",
     isWhite: true,
     img: img19,
-    url: 'corzap'
+    url: 'corpzap'
   },
   {
     content: "Luxify - The high-end product paradise",
@@ -171,7 +171,7 @@ export const mobileTab = [
     content: "Briidge - The place to get your best trainer",
     isWhite: true,
     img: img14,
-    url: 'briigde'
+    url: 'briidge'
   },
   {
     content: "Glife - Live green with Glife",

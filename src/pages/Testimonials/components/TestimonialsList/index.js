@@ -25,12 +25,10 @@ const TestimonialsList = () => (
               <p>{item.details}</p>
               <img className="logo" src={item.companyLogo} />
               <p className="title">{item.title}</p>
-              <div className="d-flex align-items-center">
-                <p className="case-study">
-                  VIEW CASE STUDY
-                </p>
-                <ArrowRight width="33px" left="33px" />
-              </div>
+              <p className="case-study d-flex align-items-center">
+                VIEW CASE STUDY
+                <ArrowRight className="case-study__arrow" />
+              </p>
             </div>
           </div>
         </div>
@@ -44,12 +42,10 @@ const TestimonialsList = () => (
               <p>{item.details}</p>
               <img className="logo" src={item.companyLogo} />
               <p className="title">{item.title}</p>
-              <div className="d-flex align-items-center">
-                <p className="case-study">
-                  VIEW CASE STUDY
-                </p>
-                <ArrowRight width="33px" left="33px" />
-              </div>
+              <p className="case-study d-flex align-items-center">
+                VIEW CASE STUDY
+                <ArrowRight className="case-study__arrow" />
+              </p>
             </div>
           </div>
           <div className="col-md-6 d-flex justify-content-end">

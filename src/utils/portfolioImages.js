@@ -45,6 +45,8 @@ export default {
     "https://drive.google.com/uc?export=view&id=1jwP1Zq8VnHPgn1kvNCd5e3-uHOO--Jvx",
   briidgeCover:
     "https://drive.google.com/uc?export=view&id=1TflkSlnkTbo8n3KOnFnBX5eFIit2xTn6",
+  collabs0: 
+    "https://drive.google.com/uc?export=view&id=1ZGA8zDzdprpJoX4P4AGB1VIhU1ZkvWHg",
   collabs1:
     "https://drive.google.com/uc?export=view&id=1adnNETD4TWUcxrCzb0aiw5bXMktzdRqZ",
   collabs2:
@@ -157,11 +159,11 @@ export default {
     "https://drive.google.com/uc?export=view&id=1ffPLY0xCFDnev3yo9f8J3fTbfuj8rHuS",
   gig6:
     "https://drive.google.com/uc?export=view&id=1hEQ-Bo1xJtzWpAu54XVg8TbpoOQEWLZM",
-  gig7:
+  gig9:
     "https://drive.google.com/uc?export=view&id=1eAFJyhb7EMeg_4QQlt_gnd2P_dcGkTz9",
   gig8:
     "https://drive.google.com/uc?export=view&id=1ZdGHGUo4wrZOH6TM6TnOilGDXTzEnl27",
-  gig9:
+  gig7:
     "https://drive.google.com/uc?export=view&id=1dByKQUa0t6iMTjrj_GjGOob0GlVYrfzM",
   gigCover:
     "https://drive.google.com/uc?export=view&id=1smiFWs_xTIQ2RdJYzn-DTbFt8OZZC_1d",

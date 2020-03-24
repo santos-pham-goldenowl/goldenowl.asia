@@ -34,62 +34,125 @@
     img
       width: 100%
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .portfolio-details
     &__body
-      padding-top: 5.6vw
-      padding-bottom: 10.3vw
+      padding-top: 42px
+      padding-bottom: 80px
       .row
-        margin: 0 -25px
+        margin: 0 -15px !important
 
       [class*='col']
-        padding-left: 15px
-        padding-right: 15px
+        padding-left: 15px !important
+        padding-right: 15px !important
+      
+      .col-md-6
+        &:nth-child(2n)
+          padding-left: 25px !important
+        &:nth-child(2n+1)
+          padding-right: 25px !important
         
       h1
-        font-size: 4.2vw
-        padding-bottom: 5.6vw
+        font-size: 30px
+        padding-bottom: 42px
 
       &__cover
-        padding-bottom: 6.9vw
+        padding-bottom: 53px
 
       &__first-paragraph
-        margin-bottom: 4.2vw
+        margin-bottom: 32px
       
       &__second-paragraph
-        margin-bottom: 6.3vw
+        margin-bottom: 48px
       
       &__third-paragraph
-        margin-top: 1.4vw
-        margin-bottom: 12vw
+        margin-top: 11px
+        margin-bottom: 69px
       
       &__next-project
-        padding: 5.6vw
+        padding: 42px
         h3
-          font-size: 26px
+          font-size: 19px
+        p
+          font-size: 12px
+
+      &__item-title
+        font-size: 19px
+      
+      &__item-content
+        font-size: 12px
+        width: 264px !important
+        margin-right: 85px
+        margin-left: 42px
+
+      ul > li
+        &:before
+          font-size: 13px
+          padding-right: 21px
+          padding-bottom: 5px
+
+      &__image
+        padding-bottom: 42px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .portfolio-details
+    &__body
+      padding-top: 57px
+      padding-bottom: 107px
+      .row
+        margin: 0 -15px !important
+
+      [class*='col']
+        padding-left: 15px !important
+        padding-right: 15px !important
+      
+      .col-md-6
+        &:nth-child(2n)
+          padding-left: 25px !important
+        &:nth-child(2n+1)
+          padding-right: 25px !important
+        
+      h1
+        font-size: 38px
+        padding-bottom: 57px
+
+      &__cover
+        padding-bottom: 71px
+
+      &__first-paragraph
+        margin-bottom: 43px
+      
+      &__second-paragraph
+        margin-bottom: 64px
+      
+      &__third-paragraph
+        margin-top: 14px
+        margin-bottom: 92px
+      
+      &__next-project
+        padding: 57px
+        h3
+          font-size: 24px
         p
           font-size: 14px
 
       &__item-title
-        padding-left: 2.8vw
+        font-size: 24px
       
       &__item-content
-        padding-left: 4.2vw
-        padding-right: 11.1vw
         font-size: 14px
-      
-      .list
-        padding-left: 1.4vw !important
+        width: 352px !important
+        margin-right: 114px
+        margin-left: 57px
 
-      ul
-        padding-inline-start: 2.8vw
-        li
-          &:before
-            padding-right: 2.8vw
-            padding-bottom: 0.7vw
+      ul > li
+        &:before
+          font-size: 17px
+          padding-right: 28px
+          padding-bottom: 7px
 
       &__image
-        padding-bottom: 5.6vw
+        padding-bottom: 57px
 
 @media only screen and (min-width: 1366px)
   .portfolio-details

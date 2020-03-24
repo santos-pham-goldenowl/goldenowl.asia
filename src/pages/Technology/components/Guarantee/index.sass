@@ -3,19 +3,57 @@
     line-height: 1.5
     display: inline-block
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .guarantee
-    padding-top: 10.3vw
+    padding-top: 80px
 
+    .row
+      margin-left: -10px !important
+      margin-right: -10px !important
+    
+    [class*='col']
+      padding-left: 10px !important
+      padding-right: 10px !important
+
+    #middle-title, &__line
+      width: 192px
+    
+    h3
+      font-size: 20px
+      padding-bottom: 21px
+    
+    .check-point-wrapper
+      margin-right: 8px
+      padding-top: 5px
+
+    p, h5
+      font-size: 12px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .guarantee
+    padding-top: 107px
+
+    .row
+      margin-left: -15px !important
+      margin-right: -15px !important
+    
+    [class*='col']
+      padding-left: 15px !important
+      padding-right: 15px !important
+
+    #middle-title, &__line
+      width: 250px
+    
     h3
       font-size: 26px
-      padding-bottom: 2.8vw
+      padding-bottom: 28px
     
-    .check-point
-      margin-right: 10px
+    .check-point-wrapper
+      margin-right: 11px
+      padding-top: 8px
     
-    p
-      font-size: 16px
+    p, h5, br
+      font-size: 14px
 
 @media only screen and (min-width: 1366px)
   .guarantee
@@ -34,7 +72,7 @@
 
     &__line
       width: 350px
-    
+        
     h3
       font-size: 34px
       padding-bottom: 40px
@@ -42,5 +80,5 @@
     .check-point
       margin-right: 15px
     
-    p
+    p, h5
       font-size: 20px

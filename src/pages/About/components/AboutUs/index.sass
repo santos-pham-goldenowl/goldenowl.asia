@@ -17,24 +17,48 @@
     img
       height: auto
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .about-us
-    padding-top: 8.3vw
-    padding-bottom: 13.4vw
+    padding-top: 64px
+    padding-bottom: 103px  
 
     &__left-side
       h2
-        font-size: 35px
-        margin-bottom: 2.9vw
+        font-size: 20px
+        line-height: 1.2
+        margin-bottom: 22px
+
+      p
+        font-size: 14px
+        line-height: 1.54
+
+    &__right-side
+      padding-left: 61px !important
+      overflow: inherit
+      img
+        width: 348px
+        height: auto
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .about-us
+    padding-top: 85px
+    padding-bottom: 137px  
+
+    &__left-side
+      h2
+        font-size: 34px
+        line-height: 1.2
+        margin-bottom: 30px
 
       p
         font-size: 18px
+        line-height: 1.54
 
     &__right-side
-      padding-left: 8vw !important
+      padding-left: 82px !important
       overflow: inherit
       img
-        width: 45.3vw
+        width: 464px
         height: auto
     
 @media only screen and (min-width: 1366px)

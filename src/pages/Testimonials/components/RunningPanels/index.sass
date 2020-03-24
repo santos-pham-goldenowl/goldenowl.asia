@@ -7,11 +7,38 @@
     overflow: hidden
     position: relative
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
+  .running-panels
+    &__wrapper
+      margin: 0 -50px
+    
+    .placeholder-row
+      max-height: 27px
+      margin-left: -50px
+      margin-right: -50px
+
+    .placeholder-img
+      max-width: 100%
+      max-height: 27px
+      padding: 0 13px
+      margin-bottom: 27px
+
+@media (min-width: 1024px) and (max-width: 1365px)
   .running-panels
     &__wrapper
       margin: 0 -70px
     
+    .placeholder-row
+      max-height: 36px
+      margin-left: -70px
+      margin-right: -70px
+
+    .placeholder-img
+      max-width: 100%
+      max-height: 36px
+      padding: 0 18px
+      margin-bottom: 36px
+
 @media only screen and (min-width: 1366px)
   .running-panels
     &__wrapper

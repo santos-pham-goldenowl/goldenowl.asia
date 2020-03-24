@@ -111,7 +111,7 @@ const SingleService = () => {
                               <p>Send message</p>
                             </div>
                             <div className="col-md-6 mt-auto d-flex justify-content-end">
-                              <ArrowRight width={33.9} left={33.9} />
+                              <ArrowRight className="contact-form__arrow" />
                             </div>
                           </div>
                         </div>

@@ -8,6 +8,11 @@ import './index.sass'
 class MainHeader extends Component {
   state = { showMenu: false }
 
+  openPortfolioInNewTab = () => {
+    const win = window.open("/portfolio");
+    win.focus();
+  }
+
   handleMenu = () => {
     this.setState({ showMenu: !this.state.showMenu })
   }
@@ -42,7 +47,7 @@ class MainHeader extends Component {
                 <Link to="/blog">Blog</Link>
               </li>
               <li className="main-header__flex-item">
-                <Link to="/portfolio">Portfolio</Link> 
+                <Link onClick={this.openPortfolioInNewTab} >Portfolio</Link> 
               </li>
               <li className="d-none main-header__flex-item font-bold">
                 <span>English</span>

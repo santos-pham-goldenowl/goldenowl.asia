@@ -8,6 +8,7 @@ export default {
       "Collabs is the platform that allows organizations to discover millions of influencers, create campaigns, communicate, schedule, approve content, execute, pay commissions to several influencers with one click & analyze the results. In short - it tremendously cuts down on overhead, removes the middlemen & executes campaigns more efficiently than ever!",
     techs: ["React Native", "Ruby on Rails"],
     img: [
+      { src: pImages.collabs0, col: 12 },
       { src: pImages.collabs1, col: 12 },
       { src: pImages.collabs2, col: 12 },
       { src: pImages.collabs3, col: 12 },
@@ -277,7 +278,7 @@ export default {
   },
   BridgePay: {
     cover: pImages.bridgePayCover,
-    url: "bridgePay",
+    url: "bridge-pay",
     overview:
       "Bridgepay is one of the most modern platforms which is for internal purpose only. This platform helps enterprises/ companies to manage their internal financial flow. All of the movements and status of money flow will be tracked and noted carefully and day by day. This platform had been a very useful financial assistant for any big enterprises.",
     techs: ["Ruby on Rails"],
@@ -373,7 +374,7 @@ export default {
         "If you want to stay green and have most organic food, Glife is the platform you need. To Glife, green is the key, means we focus on greenest and freshest everything, from fruits to vegetables and so on."
     }
   },
-  HOMEHUB: {
+  Homehub: {
     cover: pImages.homehubCover,
     url: "homehub",
     overview:
