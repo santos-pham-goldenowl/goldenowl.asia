@@ -14,23 +14,41 @@
     display: flex
     justify-content: flex-end
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .introduction-detail
-    padding-top: 8.3vw
-    padding-bottom: 10.5vw
+    padding-top: 64px
+    padding-bottom: 80px
 
     h3
+      height: 32px
       font-size: 26px
-      margin-bottom: 2.8vw
+      margin-bottom: 28px
 
     &__content
       p
-        font-size: 18px
+        font-size: 26px
 
     .img-wrapper
       img
-        width: 37.4vw
-        height: 45.1vw
+        width: 383px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .introduction-detail
+    padding-top: 85px
+    padding-bottom: 107px
+
+    h3
+      height: 24px
+      font-size: 20px
+      margin-bottom: 21px
+
+    &__content
+      p
+        font-size: 20px
+
+    .img-wrapper
+      img
+        width: 383px
 
 @media only screen and (min-width: 1366px)
   .introduction-detail
@@ -49,4 +67,3 @@
     .img-wrapper
       img
         width: 539px
-        height: 650px

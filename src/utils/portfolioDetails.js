@@ -8,6 +8,7 @@ export default {
       "Collabs is the platform that allows organizations to discover millions of influencers, create campaigns, communicate, schedule, approve content, execute, pay commissions to several influencers with one click & analyze the results. In short - it tremendously cuts down on overhead, removes the middlemen & executes campaigns more efficiently than ever!",
     techs: ["React Native", "Ruby on Rails"],
     img: [
+      { src: pImages.collabs0, col: 12 },
       { src: pImages.collabs1, col: 12 },
       { src: pImages.collabs2, col: 12 },
       { src: pImages.collabs3, col: 12 },
@@ -21,9 +22,9 @@ export default {
         "With all the effort, Golden Owl’s team spent days and nights making the project successful. Our client and users do experience and they are all pleased with it."
     }
   },
-  Connectajob: {
+  "Connect A Job": {
     cover: pImages.connectajobCover,
-    url: "connectajob",
+    url: "connect-a-job",
     overview:
       "ConnectaJob represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.",
     techs: ["Angular JS (FE)", "Ruby on Rails (BE)"],
@@ -147,18 +148,49 @@ export default {
         "The priority thing that we focus on when starting the project is the security. We promise to protect our clients’ information by the most up-to-date technology in the app."
     }
   },
-  // "My work": {
-  //   url: "my-work",
-  //   overview:
-  //     "Optimised for both employees and employers, mywork – an application under MyWork Global – provides an easy-to-use, transparent and interactive platform for all the shift-based sourcing needs. Way more than a job listing service, mywork allows its employee users to apply for jobs they found interested, proceed their billings, receive ratings and comments for their performance. It also supports businesses to nudge, communicate and add appropriate job seekers as favourites via special features integrated within the app.",
-  //   techs: ["PHP", "React Native", "React JS"],
-  //   img: [],
-  //   brief: {
-  //     title: "Great journey",
-  //     description:
-  //       "Working with MyWork has been a great journey since we treasure this long-term relationship, especially in this emerging age where technology is expanding at such an accelerating pace."
-  //   }
-  // },
+  "My work": {
+    cover: pImages.myWorkCover,
+    url: "my-work",
+    overview:
+      "Optimised for both employees and employers, mywork – an application under MyWork Global – provides an easy-to-use, transparent and interactive platform for all the shift-based sourcing needs. Way more than a job listing service, mywork allows its employee users to apply for jobs they found interested, proceed their billings, receive ratings and comments for their performance. It also supports businesses to nudge, communicate and add appropriate job seekers as favourites via special features integrated within the app.",
+    techs: ["PHP", "React Native", "React JS"],
+    img: [
+      { src: pImages.myWork1, col: 12 },
+      { src: pImages.myWork2, col: 4 },
+      { src: pImages.myWork3, col: 4 },
+      { src: pImages.myWork4, col: 4 },
+      { src: pImages.myWork5, col: 12 },
+    ],
+    brief: {
+      title: "Great journey",
+      description:
+        "Working with MyWork has been a great journey since we treasure this long-term relationship, especially in this emerging age where technology is expanding at such an accelerating pace."
+    }
+  },
+  Briidge: {
+    cover: pImages.briidgeCover,
+    url: "briidge",
+    overview:
+    "ConnectaJob represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.",
+    techs: ["Angular JS (FE)", "Ruby on Rails (BE)"],
+    img: [
+      { src: pImages.briidge1, col: 4 },
+      { src: pImages.briidge2, col: 4 },
+      { src: pImages.briidge3, col: 4 },
+      { src: pImages.briidge4, col: 4 },
+      { src: pImages.briidge5, col: 4 },
+      { src: pImages.briidge6, col: 4 },
+      { src: pImages.briidge7, col: 4 },
+      { src: pImages.briidge8, col: 4 },
+      { src: pImages.briidge9, col: 4 },
+      { src: pImages.briidge10, col: 12 },
+    ],
+    brief: {
+      title: "Most modern workflow",
+      description:
+      "Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product."
+    }
+  },
   Personifi: {
     cover: pImages.personifiCover,
     url: "personifi",
@@ -229,7 +261,7 @@ export default {
   },
   Bid4Skill: {
     cover: pImages.bid4SkillCover,
-    url: "bid4Skill",
+    url: "bid-4-skill",
     overview:
       "Among the more than 500 trainers on the platform several specializes in public speaking, providing training to every kind need at a high quality. Especially if you struggle to find any providers who are able or willing to do the exact training you want them to do, Bid4skill might be the training provider you are looking for.",
     techs: ["Ruby on Rails", "React JS", "AWS", "PostgreSQL"],
@@ -246,7 +278,7 @@ export default {
   },
   BridgePay: {
     cover: pImages.bridgePayCover,
-    url: "bridgePay",
+    url: "bridge-pay",
     overview:
       "Bridgepay is one of the most modern platforms which is for internal purpose only. This platform helps enterprises/ companies to manage their internal financial flow. All of the movements and status of money flow will be tracked and noted carefully and day by day. This platform had been a very useful financial assistant for any big enterprises.",
     techs: ["Ruby on Rails"],
@@ -342,7 +374,7 @@ export default {
         "If you want to stay green and have most organic food, Glife is the platform you need. To Glife, green is the key, means we focus on greenest and freshest everything, from fruits to vegetables and so on."
     }
   },
-  HOMEHUB: {
+  Homehub: {
     cover: pImages.homehubCover,
     url: "homehub",
     overview:
@@ -444,9 +476,9 @@ export default {
         "We have built a CMS platform for service providers to manage their customers whenever there is urgent demand from users. HOMEHUB will be an effective with everybody so that it could help them move home easier and comfortably."
     }
   },
-  Open: {
+  "Open The App": {
     cover: pImages.openCover,
-    url: "open",
+    url: "open-the-app",
     overview:
       "Open The App is a place to find colleagues and learn through video chat and voice calls between computers and mobile devices via the Internet. It also provides instant messaging services and video conference calls. Users can deal and pay for each other via the app.",
     techs: ["JavaScript", "NodeJS"],

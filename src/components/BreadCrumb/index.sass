@@ -10,7 +10,6 @@
     display: flex
     align-items: center
     border-bottom: 1px solid $slightYellow
-    padding-bottom: 10px
 
   span
     padding: 5px 10px 0 10px
@@ -23,17 +22,37 @@
       font-family: ProximaNovaRegular
       white-space: nowrap
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
+  .breadcrumb
+    padding-top: 14px !important
+    padding-bottom: 0 !important
+
+    img
+      height: 8px
+      padding-left: 56px
+
+    &__text
+      a, p
+        font-size: 10px
+    
+    &__content
+      padding-bottom: 5px
+
+@media (min-width: 1024px) and (max-width: 1365px)
   .breadcrumb
     padding-top: 18px !important
     padding-bottom: 0 !important
 
     img
-      padding-left: 73px
+      height: 10px
+      padding-left: 75px
 
     &__text
       a, p
         font-size: 14px
+
+    &__content
+      padding-bottom: 7px
 
 @media only screen and (min-width: 1366px)
   .breadcrumb
@@ -46,3 +65,6 @@
     &__text
       a, p
         font-size: 16px
+ 
+    &__content
+      padding-bottom: 10px

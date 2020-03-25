@@ -1,14 +1,100 @@
 @import '../../../../styles/variables.sass'
 
 .testimonials-list
-  .stats
-    h2
-      color: #f9be39
-
-@media (min-width: 768px) and (max-width: 1365px)
   .testimonials-list
-    padding: 5.1vw 0 6.9vw 0
+    &__item
+      p:last-child
+        padding-bottom: 0
+        
+@media (min-width: 768px) and (max-width: 1023px)
+  .testimonials-list
+    padding: 93px 0 0 0
 
+    h3
+      font-size: 26px
+      padding-bottom: 64px
+
+    &__item
+      padding-bottom: 53px
+      > div
+        &:first-child
+          > div
+            padding-right: 35px
+        &:last-child
+          > div
+            padding-left: 35px
+      h4
+        font-family: MalloryBold
+        font-size: 20px
+        padding-bottom: 16px
+      p
+        font-size: 14px
+        line-height: 1.5
+        padding-bottom: 43px
+      img.logo
+        height: 16px
+      p.title
+        font-size: 12px
+        padding-top: 11px
+        padding-bottom: 0
+        font-weight: bold
+        line-height: 1.75
+      &:last-child
+        img.logo
+          height: 28px
+      .arrow-wrapper
+        padding-left: 5px
+
+    .case-study__arrow
+      .line
+        width: 18px
+      .arrow-right
+        left: 18px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .testimonials-list
+    padding: 124px 0 0 0
+
+    h3
+      font-size: 34px
+      padding-bottom: 85px
+
+    &__item
+      padding-bottom: 71px
+      > div
+        &:first-child
+          > div
+            padding-right: 46px
+        &:last-child
+          > div
+            padding-left: 46px
+      h4
+        font-family: MalloryBold
+        font-size: 26px
+        padding-bottom: 21px
+      p
+        font-size: 14px
+        line-height: 1.5
+        padding-bottom: 57px
+      img.logo
+        height: 21px
+      p.title
+        font-size: 14px
+        padding-top: 14px
+        padding-bottom: 0
+        font-weight: bold
+        line-height: 1.75
+      &:last-child
+        img.logo
+          height: 34px
+      .arrow-wrapper
+        padding-left: 7px
+
+    .case-study__arrow
+      .line
+        width: 24px
+      .arrow-right
+        left: 24px
 
 @media only screen and (min-width: 1366px)
   .testimonials-list
@@ -38,6 +124,7 @@
       img.logo
         height: 30px
       p.title
+        font-size: 20px
         padding-top: 20px
         padding-bottom: 0
         font-weight: bold
@@ -47,3 +134,9 @@
           height: 50px
       .arrow-wrapper
         padding-left: 10px
+          
+    .case-study__arrow
+      .line
+        width: 34px
+      .arrow-right
+        left: 34px

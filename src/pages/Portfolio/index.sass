@@ -7,60 +7,41 @@
     border-bottom: none
   
   .nav-link
-    border: none
+    border: none !important
     font-family: MalloryBold
-    font-size: 34px
     color: $darkGray
     padding-left: 0
-    padding-right: 80px
-    margin-bottom: 40px
   
   .nav-link.active
     position: relative
     z-index: 1
     &:before
-      border-top: 5px solid #fabf22
       content: ""
       margin: 0 auto
       position: absolute
       top: 50%
-      left: -80px
       right: 0
       bottom: 0
-      width: calc(100% - 50px)
       z-index: -1
   
-  &__priority
-    padding: 200px 0 150px 0
-
     p
       color: $darkGray
 
     h1
-      font-size: 60px
       color: $solidBlack
-      padding-right: 260px
-      padding-bottom: 80px
-
+  
     &__left-paragraph
       p
-        font-size: 34px
         line-height: 1.53
     
     &__right-paragraph
       p
-        font-size: 20px
         line-height: 1.8
     
-  &__project
-    padding: 80px 0 150px 0
-
   &__interesting
-    padding: 285px 0
     text-align: center
 
     p
-      font-size: 30px
       line-height: 1.33
 
     &__above-text
@@ -71,11 +52,6 @@
       border-bottom: 1px solid $darkGray
     
   &__card
-    padding: 56px 60px 0 60px
-    border-radius: 10px
-    height: 736px
-    width: 590px
-    margin-top: 60px
     display: flex
     background-repeat: no-repeat
     background-position: top
@@ -85,8 +61,148 @@
       transform: scale(1.03)
     h4
       color: $darkGray
-      font-size: 32px
       lineHeight: 1.5
     
     .white-title
       color: $white
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .portfolio
+    .nav-link
+      font-size: 20px
+      padding-right: 43px
+      margin-bottom: 28px
+    
+    .nav-link.active
+      &:before
+        border-top: 3px solid #fabf22
+        left: -43px
+        width: calc(100% - 36px)
+    
+    &__priority
+      padding: 107px 0 80px 0
+
+      h1
+        font-size: 26px
+        padding-right: 139px
+        padding-bottom: 43px
+
+      &__left-paragraph
+        p
+          font-size: 20px
+      
+      &__right-paragraph
+        p
+          font-size: 12px
+      
+    &__project
+      padding: 43px 0 80px 0
+
+    &__interesting
+      padding: 152px 0
+
+      p
+        font-size: 21px
+      
+    &__card
+      padding: 30px 32px 0 32px
+      border-radius: 5px
+      height: 380px
+      width: 305px
+      margin-top: 32px
+      h4
+        font-size: 19px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .portfolio
+    .nav-link
+      font-size: 26px
+      padding-right: 57px
+      margin-bottom: 28px
+    
+    .nav-link.active
+      &:before
+        border-top: 4px solid #fabf22
+        left: -57px
+        width: calc(100% - 36px)
+    
+    &__priority
+      padding: 142px 0 107px 0
+
+      h1
+        font-size: 38px
+        padding-right: 185px
+        padding-bottom: 57px
+
+      &__left-paragraph
+        p
+          font-size: 26px
+      
+      &__right-paragraph
+        p
+          font-size: 14px
+      
+    &__project
+      padding: 57px 0 107px 0
+
+    &__interesting
+      padding: 203px 0
+
+      p
+        font-size: 22px
+      
+    &__card
+      padding: 28px 43px 0 43px
+      border-radius: 7px
+      height: 523px
+      width: 420px
+      margin-top: 38px
+      h4
+        font-size: 25px
+
+@media only screen and (min-width: 1366px)
+  .portfolio
+    .nav-link
+      font-size: 34px
+      padding-right: 80px
+      margin-bottom: 40px
+    
+    .nav-link.active
+      &:before
+        border-top: 5px solid #fabf22
+        left: -80px
+        width: calc(100% - 50px)
+    
+    &__priority
+      padding: 200px 0 150px 0
+
+      h1
+        font-size: 60px
+        padding-right: 260px
+        padding-bottom: 80px
+
+      &__left-paragraph
+        p
+          font-size: 34px
+      
+      &__right-paragraph
+        p
+          font-size: 20px
+      
+    &__project
+      padding: 80px 0 150px 0
+
+    &__interesting
+      padding: 285px 0
+
+      p
+        font-size: 30px
+      
+    &__card
+      padding: 56px 60px 0 60px
+      border-radius: 10px
+      height: 736px
+      width: 590px
+      margin-top: 60px
+      h4
+        font-size: 32px

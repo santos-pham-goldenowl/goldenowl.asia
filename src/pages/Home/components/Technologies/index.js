@@ -2,6 +2,7 @@ import React from 'react'
 
 import technologiesLogo from '../../../../utils/TechnologiesLogo'
 import './index.sass'
+import { Link } from 'react-router-dom'
 
 const Technologies = () => (
   <section className="technologies">
@@ -17,7 +18,9 @@ const Technologies = () => (
         </div>
       ))}
     </div>
-    <span className="technologies__view-all">View all technologies</span>
+    <Link to="/technologies">
+      <span className="technologies__view-all">View all technologies</span>
+    </Link>
   </section>
 )
 

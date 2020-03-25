@@ -99,23 +99,36 @@
 
     &__hamburger
       display: none
-    
-    &__flex-item
-      padding-left: 20px
-      &:last-child
-        padding-left: 30px !important
-    
+
     &__logo
       align-self: center
       width: auto !important
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .main-header
+    padding: 17px 0 14px 0
+
     &__logo
-      height: 32px
-    
+      max-height: 17px
+
+    &__flex-item
+      font-size: 10px
+      padding-left: 11px
+      &:last-child
+        padding-left: 16px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .main-header
+    padding: 23px 0 18px 0
+
+    &__logo
+      max-height: 22px
+
     &__flex-item
       font-size: 12px
+      padding-left: 14px
+      &:last-child
+        padding-left: 21px
 
 @media only screen and (min-width: 1366px)
   .main-header
@@ -126,3 +139,6 @@
 
     &__flex-item
       font-size: 14px
+      padding-left: 20px
+      &:last-child
+        padding-left: 30px

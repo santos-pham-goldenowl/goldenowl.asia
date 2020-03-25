@@ -65,8 +65,8 @@ const Footer = () => (
           ))}
         </div>
         <div className="footer__contact row">
-          <span className="col-md-12 col-lg-6 footer__phone">(+84) 912 878985</span>
-          <span className="col-md-12 col-lg-5 footer__email">admin@goldenowl.asia</span>
+          <span className="col-md-6 footer__phone">(+84) 912 878985</span>
+          <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
         </div>
       </div>
       <div className="footer__bottom-grid-container">
@@ -86,17 +86,17 @@ const Footer = () => (
             <Link to="/about-us">About us</Link>
             <Link to="/services">Services</Link>
             <Link to="/technologies">Technologies</Link>
-            <Link to="/testimonials">Testimonials</a>
-            <Link to="/portfolio">Portfolio</a>
+            <Link to="/testimonials">Testimonials</Link>
+            <Link to="/portfolio">Portfolio</Link>
           </div>
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
             <a href="#">Careers</a>
-            <Link to="/contact">Contact us</a>
+            <Link to="/contact-us">Contact us</Link>
             <a href="#">FAQ</a>
-            <Link to="/blog">Blog</a>
+            <Link to="/blog">Blog</Link>
           </div>
         </div>
       </div>

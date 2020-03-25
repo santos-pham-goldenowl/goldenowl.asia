@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Services = () => (
   <header className="portfolio-header d-flex">
-    <Link to="/">
+    <Link to="/portfolio">
       <div className="d-flex">
         <img className="portfolio-header__logo" src={logo} alt="go-logo" />
         <div className="portfolio-header__logo-text flex-column">

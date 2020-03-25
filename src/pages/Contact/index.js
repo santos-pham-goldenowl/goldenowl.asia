@@ -89,6 +89,7 @@ const SingleService = () => {
                     <div className="col-md-12">
                       <label>Subject*</label>
                       <input
+                        required
                         className="form-control"
                         placeholder="Overview in the few words"
                       />
@@ -96,6 +97,7 @@ const SingleService = () => {
                     <div className="col-md-12">
                       <label>Your message*</label>
                       <textarea
+                        required
                         rows={10}
                         className="form-control"
                         placeholder="How can we help you?"
@@ -109,7 +111,7 @@ const SingleService = () => {
                               <p>Send message</p>
                             </div>
                             <div className="col-md-6 mt-auto d-flex justify-content-end">
-                              <ArrowRight width={33.9} left={33.9} />
+                              <ArrowRight className="contact-form__arrow" />
                             </div>
                           </div>
                         </div>

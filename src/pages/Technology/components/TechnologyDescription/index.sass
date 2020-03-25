@@ -7,21 +7,37 @@
     p
       line-height: 1.54;
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .technology-description
-    padding: 8.3vw 0 13.3vw 0
+    padding: 63px 0 102px 0
+
+    &__left-side
+      h2
+        font-size: 27px
+        padding-bottom: 23px
+      p
+        font-size: 14px;
+
+    &__right-side
+      margin-right: -50px
+      img
+       max-width: 221px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .technology-description
+    padding: 85px 0 137px 0
 
     &__left-side
       h2
         font-size: 35px
-        padding-bottom: 3vw
+        padding-bottom: 31px
       p
         font-size: 18px;
 
     &__right-side
       margin-right: -70px
       img
-       max-width: 32.7vw
+       max-width: 335px
 
 @media only screen and (min-width: 1366px)
   .technology-description

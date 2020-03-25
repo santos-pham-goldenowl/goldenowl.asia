@@ -39,7 +39,7 @@ const Blog = () => (
                           alt="pic-big"
                         />
                       </div>
-                      <div style={{ paddingLeft: "25px" }} className="col-md-4">
+                      <div className="col-md-4 wide-blog">
                         <div className="category d-flex">
                           <p>BLOG & MAGAZINE </p>
                           <p>JAN 31, 2020</p>

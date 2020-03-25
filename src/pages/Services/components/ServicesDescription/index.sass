@@ -12,11 +12,24 @@
     position: inherit
     right: 0
 
-
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .services-description
-    padding-top: 8.3vw
-    padding-bottom: 13.4vw
+    padding-top: 64px
+    padding-bottom: 103px
+
+    h2
+      font-size: 26px
+    p
+      padding-top: 3vw
+      font-size: 14px;
+
+    img
+      width: calc(100% + 50px)
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .services-description
+    padding-top: 85px
+    padding-bottom: 137px
 
     h2
       font-size: 35px
@@ -25,7 +38,7 @@
       font-size: 18px;
 
     img
-      width: calc(100% + 100px)
+      width: calc(100% + 70px)
 
 @media only screen and (min-width: 1366px)
   .services-description

@@ -56,7 +56,7 @@ class TabContainer extends Component {
                 {BackEndTechs.map(tech => (
                   <div key={tech.name} className="tech-tab__logo-wrapper">
                     <img src={tech.url} alt={tech.name} />
-                    <p>{tech.name}</p>
+                    <p className="tech-tab__logo-name">{tech.name}</p>
                   </div>
                 ))}
               </div>
@@ -82,7 +82,7 @@ class TabContainer extends Component {
                 {MobileStackTechs.map(tech => (
                   <div key={tech.name} className="tech-tab__logo-wrapper">
                     <img src={tech.url} alt={tech.name} />
-                    <p>{tech.name}</p>
+                    <p className="tech-tab__logo-name">{tech.name}</p>
                   </div>
                 ))}
               </div>
@@ -108,7 +108,7 @@ class TabContainer extends Component {
                 {MobileStackTechs.map(tech => (
                   <div key={tech.name} className="tech-tab__logo-wrapper">
                     <img src={tech.url} alt={tech.name} />
-                    <p>{tech.name}</p>
+                    <p className="tech-tab__logo-name">{tech.name}</p>
                   </div>
                 ))}
               </div>

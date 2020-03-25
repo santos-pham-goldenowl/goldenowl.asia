@@ -16,21 +16,41 @@
     left: 0
     position: absolute
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .introduction
+    padding-top: 64px
 
     &__title
+      padding-bottom: 21px
+      font-size: 20px
+    
+    p
+      font-size: 14px
+      line-height: 1.54
+
+    &__left-side
+      margin-left: -63px
+
+    img
+      height: 293px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .introduction
+    padding-top: 85px
+
+    &__title
+      padding-bottom: 28px
       font-size: 26px
     
     p
       font-size: 18px
-      line-height: 1.55
+      line-height: 1.54
 
     &__left-side
-      margin-left: -62.5px
+      margin-left: -63px
 
     img
-      height: 38.2vw
+      height: 391px
 
 @media only screen and (min-width: 1366px)
   .introduction

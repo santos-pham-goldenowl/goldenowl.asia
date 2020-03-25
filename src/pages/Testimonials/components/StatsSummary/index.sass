@@ -5,29 +5,37 @@
   .stats
     h2
       color: #f9be39
+@media (min-width: 768px) and (max-width: 1023px)
+  .stats-summary
+    padding: 0 0 80px 0
+    
+    &__image-wrapper
+      padding-left: 56px
+      padding-right: 56px
 
-@media (min-width: 768px) and (max-width: 1365px)
-  .testimonials-stats
-    padding: 5.1vw 0 6.9vw 0
-    
-    &__wrapper
-      padding: 0 7.2vw
-    
-    h2
-      font-size: 40px
-    
-    .title
-      padding-bottom: 2.8vw
-
-    .stats
-      h2
-        padding-bottom: 0.9vw
+    &__paragraph
+      padding: 12px 0 27px 0
       p
+        padding-left: 35px
+        padding-right: 21px
+        font-size: 14px
+        line-height: 1.54
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .stats-summary
+    padding: 0 0 107px 0
+    
+    &__image-wrapper
+      padding-left: 75px
+      padding-right: 75px
+
+    &__paragraph
+      padding: 16px 0 36px 0
+      p
+        padding-left: 46px
+        padding-right: 28px
         font-size: 18px
-      sup
-        top: -18px
-        left: 5px
-        font-size: 18px
+        line-height: 1.54
 
 @media only screen and (min-width: 1366px)
   .stats-summary

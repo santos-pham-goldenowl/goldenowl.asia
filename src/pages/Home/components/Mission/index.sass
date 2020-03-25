@@ -23,18 +23,55 @@
   line-height: 1.35
   padding-bottom: 1.3vw
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .missions
+    padding-top: 107px
+    padding-bottom: 97px
+
+    &__title
+      font-size: 20px
+
+    p
+      font-size: 14px
+      line-height: 1.55
+    
+    &__item-title
+      font-size: 18px
+      padding-bottom: 10px
+    
+    &__item
+      padding-bottom: 32px
+    
+    &__arrow
+      .line
+        width: 18px
+      .arrow-right
+        left: 18px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .missions
+    padding-top: 143px
+    padding-bottom: 129px
 
     &__title
       font-size: 26px
 
     p
-      font-size: 19px
+      font-size: 18px
       line-height: 1.55
     
     &__item-title
-      font-size: 20px
+      font-size: 16px
+      padding-bottom: 14px
+    
+    &__item
+      padding-bottom: 43px
+
+    &__arrow
+      .line
+        width: 24px
+      .arrow-right
+        left: 24px
 
 @media only screen and (min-width: 1366px)
   .missions
@@ -55,3 +92,9 @@
     
     &__item
       padding-bottom: 60px
+    
+    &__arrow
+      .line
+        width: 34px
+      .arrow-right
+        left: 34px

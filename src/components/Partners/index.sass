@@ -1,12 +1,10 @@
 @import '../../styles/variables.sass'
 
 .partners
-  padding: 5.5vw 0 6.9vw 0
   
   &__title
     text-align: center
     line-height: 1.27
-    padding-bottom: 4.2vw !important
 
   &__grid
     display: grid
@@ -17,9 +15,6 @@
     align-items: center
     justify-content: center
     
-  li.react-multi-carousel-item  
-    padding: 0 2.2vw
-
   .react-multiple-carousel__arrow
     background-color: transparent !important
     &:focus
@@ -33,6 +28,66 @@
 
   img
     object-fit: contain
+    width: 100%
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .partners
+    padding: 43px 0 53px 0
+
+    &__title
+      font-size: 20px
+      padding-bottom: 32px !important
+      
+    li.react-multi-carousel-item  
+      padding: 0 20px
+    
+    img#assured
+      height: 15px
+    
+    img#finda
+        height: 16px
+
+    img#luxe
+        height: 21px
+    
+    img#candy
+        height: 15px
+        
+    img#gig
+        height: 27px
+    
+    img#mywork
+        height: 15px
+    
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .partners
+    padding: 53px 0 71px 0
+
+    &__title
+      font-size: 26px
+      padding-bottom: 43px !important
+      
+    li.react-multi-carousel-item  
+      padding: 0 25px
+    
+    img#assured
+        height: 20px
+    
+    img#finda
+        height: 21px
+
+    img#luxe
+        height: 28px
+    
+    img#candy
+        height: 20px
+        
+    img#gig
+        height: 36px
+    
+    img#mywork
+        height: 20px
 
 @media only screen and (min-width: 1366px)
   .partners
@@ -41,11 +96,21 @@
     &__title
       font-size: 34px
       padding-bottom: 60px !important
-      
-    li.react-multi-carousel-item  
-      padding: 0 31px
+          
+    img#assured
+        height: 28px
     
-    img
-      width: 100%
-      max-width: 170px
-      max-height: 50px
+    img#finda
+        height: 30px
+
+    img#luxe
+        height: 40px
+    
+    img#candy
+        height: 28px
+        
+    img#gig
+        height: 50px
+    
+    img#mywork
+        height: 28px

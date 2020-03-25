@@ -23,28 +23,30 @@ export default {
     "https://drive.google.com/uc?export=view&id=1gQlC5YA0YXHY9cSSUNfSprub4dVL4MuL",
   bridgePayCover:
     "https://drive.google.com/uc?export=view&id=1S5TJbEJAmmj6c4ZqFcTC-epN0UawB8RV",
-  briidge2:
+  briidge6:
     "https://drive.google.com/uc?export=view&id=1BXdS7HU-3l6uRfQjA2iNnNvqE8rRE1xf",
-  briidge3:
+  briidge5:
     "https://drive.google.com/uc?export=view&id=1pZaqIwsdSvHb0GJEmeeVDJC-fH64TWnb",
   briidge4:
     "https://drive.google.com/uc?export=view&id=1df5I2hXc6MSpH6NiyKUgM2hZME8g6sE0",
-  briidge5:
+  briidge9:
     "https://drive.google.com/uc?export=view&id=1eLw5d9YRulYcJbH-W52Y7SRv4JlIizZl",
-  briidge6:
+  briidge8:
     "https://drive.google.com/uc?export=view&id=1fkp4Uarxz0fKqGrUevLKV6lkdDmsRHiV",
   briidge7:
     "https://drive.google.com/uc?export=view&id=1-zif-0zr88Qh_Ko589n9ICDh0Lbmgfh2",
-  briidgeGroup6:
+  briidge10:
     "https://drive.google.com/uc?export=view&id=1mcR69n_jNjxs2RaVdzJYrkqKRwx-g4B-",
-  briidgeGroup9:
+  briidge1:
     "https://drive.google.com/uc?export=view&id=1W79b6GDWsT7LBIpgDL1SBabb56JFKvSN",
-  briidgeGroup9Copy:
+  briidge2:
     "https://drive.google.com/uc?export=view&id=1dwTOoe4oJ_plsR1FwGhbLbXBAR_J7ifh",
-  briidgeGroup9Copy2:
+  briidge3:
     "https://drive.google.com/uc?export=view&id=1jwP1Zq8VnHPgn1kvNCd5e3-uHOO--Jvx",
-  briidgesection2:
+  briidgeCover:
     "https://drive.google.com/uc?export=view&id=1TflkSlnkTbo8n3KOnFnBX5eFIit2xTn6",
+  collabs0: 
+    "https://drive.google.com/uc?export=view&id=1ZGA8zDzdprpJoX4P4AGB1VIhU1ZkvWHg",
   collabs1:
     "https://drive.google.com/uc?export=view&id=1adnNETD4TWUcxrCzb0aiw5bXMktzdRqZ",
   collabs2:
@@ -117,25 +119,25 @@ export default {
     "https://drive.google.com/uc?export=view&id=1ycYv1W7pa-Hd48giNzZqbnevE52X-uzd",
   eyeProtecCover:
     "https://drive.google.com/uc?export=view&id=1j5Ea9yIhxBoGPbk7QLxVP7yUvZ_iYc8h",
-  findAWealthManager_1:
+  findAWealthManager1:
     "https://drive.google.com/uc?export=view&id=1JLwsNRbeD4tWuHTHTXim3C4dE5Gjg0K9",
-  findAWealthManager_2:
+  findAWealthManager2:
     "https://drive.google.com/uc?export=view&id=1jku-yShNHBq1W9tQr4yqtAW6v96ODI0Y",
-  findAWealthManager_3:
+  findAWealthManager3:
     "https://drive.google.com/uc?export=view&id=1S_npHDjtvgh4eR6AmAuVv9eNgW47LSLu",
-  findAWealthManager_4:
+  findAWealthManager4:
     "https://drive.google.com/uc?export=view&id=1SUjIWGrsyIJnAn4tIJSZC5INohbAKjPC",
-  findAWealthManager_5:
+  findAWealthManager5:
     "https://drive.google.com/uc?export=view&id=1qN0PXpbtSHzVgS0txHznE1TjL394ZDG3",
-  findAWealthManager_6:
+  findAWealthManager6:
     "https://drive.google.com/uc?export=view&id=1ttdNWlVnD3WChteqMQhG9N2S_oKRwhez",
-  findAWealthManager_7:
+  findAWealthManager7:
     "https://drive.google.com/uc?export=view&id=1Xjcb4y8kgglx7pXj4OAv1_BsluT8FZCL",
-  findAWealthManager_8:
+  findAWealthManager8:
     "https://drive.google.com/uc?export=view&id=1mzTA36V9wkQk7_Vj1KodLXf-Kwp2olRd",
-  findAWealthManager_9:
+  findAWealthManager9:
     "https://drive.google.com/uc?export=view&id=1JS1RGn3vYUpZnjyW6RlnxeJkmKx4X4y1",
-  findAWealthManager_Cover:
+  findAWealthManagerCover:
     "https://drive.google.com/uc?export=view&id=1eggVmaY3zf5WyOkpFKVMMbzN85hrDCRy",
   getAssured1:
     "https://drive.google.com/uc?export=view&id=1S3ySOZw2NTV0N8n50TKrXV2NHKbsHE4o",
@@ -157,11 +159,11 @@ export default {
     "https://drive.google.com/uc?export=view&id=1ffPLY0xCFDnev3yo9f8J3fTbfuj8rHuS",
   gig6:
     "https://drive.google.com/uc?export=view&id=1hEQ-Bo1xJtzWpAu54XVg8TbpoOQEWLZM",
-  gig7:
+  gig9:
     "https://drive.google.com/uc?export=view&id=1eAFJyhb7EMeg_4QQlt_gnd2P_dcGkTz9",
   gig8:
     "https://drive.google.com/uc?export=view&id=1ZdGHGUo4wrZOH6TM6TnOilGDXTzEnl27",
-  gig9:
+  gig7:
     "https://drive.google.com/uc?export=view&id=1dByKQUa0t6iMTjrj_GjGOob0GlVYrfzM",
   gigCover:
     "https://drive.google.com/uc?export=view&id=1smiFWs_xTIQ2RdJYzn-DTbFt8OZZC_1d",
@@ -376,5 +378,17 @@ export default {
   twp4:
     "https://drive.google.com/uc?export=view&id=1_65hWzArBWB9ZOYw4IQpDT71JO4SiJyI",
   twpCover:
-    "https://drive.google.com/uc?export=view&id=1lhpzIksch-SdzGAi3RmtL5tFidaUq178"
+    "https://drive.google.com/uc?export=view&id=1lhpzIksch-SdzGAi3RmtL5tFidaUq178",
+  myWork1:
+    "https://drive.google.com/uc?export=view&id=17cAO6h9vlUyegfG7cfPkeJG1vAnxyLPo",
+  myWork2:
+    "https://drive.google.com/uc?export=view&id=1do8rsNzz3L103md6ikCOTCuZeDna9djD",
+  myWork3:
+    "https://drive.google.com/uc?export=view&id=1BViNCN4Lm2CuIDaDFnyOhYDv1P13U-_Y",
+  myWork4:
+    "https://drive.google.com/uc?export=view&id=19q1mjf6s3qNUT7_4zW55MDPqpRg0K7Xj",
+  myWork5:
+    "https://drive.google.com/uc?export=view&id=1YiJ52w2PM_QHW00vqcZuVfPevODKRH5N",
+  myWorkCover:
+    "https://drive.google.com/uc?export=view&id=1_ny1utFsN4gZJqMBZoCuoUlHE6ZLekjN"
 };

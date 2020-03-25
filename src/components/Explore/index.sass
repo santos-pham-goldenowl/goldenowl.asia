@@ -21,7 +21,6 @@
     font-family: ProximaNovaBold
     line-height: 1.23
     padding: 0.9vw 0 4.2vw 0
-    width: calc(57.4% + 135px)
   
   &__top-content
     display: flex
@@ -29,32 +28,64 @@
 
   &__case-study
     display: flex
+    h6
+      align-self: center
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .explore
-    padding-bottom: 120px
+    padding-bottom: 64px
     
     > div
-      padding: 0 70px 0 105px
-      padding-top: 80px
-      padding-bottom: 80px
+      padding: 43px 53px 43px 80px
       margin: 0
 
     &__description
-      font-size: 26px !important
-      padding: 12px 0 60px 0
+      font-size: 20px !important
+      padding: 6px 0 32px 0
+    
+    h6
+     font-size: 10px
+    
+    &__case-study
+      h6
+        font-size: 8px
+        padding-right: 6px
+    
+    &__arrow
+      .arrow-right
+        left: 18px
+      .line
+        width: 18px
+
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .explore
+    padding-bottom: 85px
+    
+    > div
+      padding: 57px 71px 57px 107px
+      margin: 0
+
+    &__description
+      font-size: 18px !important
+      padding: 9px 0 43px 0
     
     h6
      font-size: 14px
+     padding-right: 9px
+    
+    &__arrow
+      .arrow-right
+        left: 24px
+      .line
+        width: 24px
 
 @media only screen and (min-width: 1366px)
   .explore
     padding-bottom: 120px
     
     > div
-      padding: 0 100px 0 150px
-      padding-top: 80px
-      padding-bottom: 80px
+      padding: 80px 100px 80px 150px
       margin: 0
 
     &__description
@@ -63,3 +94,11 @@
     
     h6
      font-size: 16px
+     padding-right: 15px
+
+    &__arrow
+      .arrow-right
+        left: 34px
+      .line
+        width: 34px
+      

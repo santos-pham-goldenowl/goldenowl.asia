@@ -40,10 +40,8 @@
     background-color: $warmGray
     color: $sweetGray
     text-align: center
-    padding-top: 1vw
-    padding-bottom: 1vw
     p
-      line-height: 1.13 !important
+      line-height: 1.23 !important
       opacity: 0.4
     
   .col-md-3
@@ -57,6 +55,9 @@
     display: flex
     justify-content: space-around
     align-items: flex-start
+    h3
+      font-family: MalloryBold
+      line-height: 1.3
 
   &__bottom-grid-container
     display: flex
@@ -94,45 +95,107 @@
   &__social-icons-wrapper
     padding-top: 2.3vw
 
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .footer
     &__icon-linkedin
-      height: 13px
+      height: 9px
 
     &__icon-facebook, &__icon-instagram
-      height: 15px
+      height: 10px
     
+    &__social-icon
+      margin-right: 11px
+
+    &__top-content-title
+      font-size: 17px
+      line-height: 1.34
+      padding-bottom: 17px !important
+
     &__copyright
       p
         font-size: 14px !important
       
     .col-md-3
       h5
-        font-size: 16px
+        font-size: 10px
       p
-        font-size: 14px !important        
+        font-size: 10px !important        
 
     &__logo-wrapper
       img
-        height: 26px
+        height: 17px
 
-    &__bottom-grid-container
-      > div
-        a
-          font-size: 16px
-    
     a
-      font-size: 14px !important
+      font-size: 12px !important
 
     h3
-      font-size: 16px !important
+      font-size: 12px !important
 
     &__contact
+      padding-top: 21px
+      padding-bottom: 21px
       span
-        font-size: 16px
+        font-size: 10px
+        padding-right: 27px
 
     &__bottom-grid-title
+      font-size: 10px !important
+      padding-bottom: 4px
+
+    &__social-icons-wrapper
+      padding-top: 18px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .footer
+    &__icon-linkedin
+      height: 11px
+
+    &__icon-facebook, &__icon-instagram
+      height: 13px
+
+    &__social-icon
+      margin-right: 14px
+
+    &__top-content-title
+      font-size: 19px
+      line-height: 1.34
+      padding-bottom: 23px !important
+
+    &__copyright
+      padding-top: 14px
+      padding-bottom: 14px
+      p
+        font-size: 18px !important
+      
+    .col-md-3
+      h5
+        font-size: 12px
+      p
+        font-size: 12px !important        
+
+    &__logo-wrapper
+      img
+        height: 22px
+
+    a
+      font-size: 12px !important
+
+    h3
       font-size: 14px !important
+
+    &__contact
+      padding-top: 28px
+      padding-bottom: 28px
+      span
+        font-size: 12px
+        padding-right: 36px
+
+    &__bottom-grid-title
+      font-size: 12px !important
+      padding-bottom: 6px
+
+    &__social-icons-wrapper
+      padding-top: 24px
 
 @media only screen and (min-width: 1366px)
   .footer
@@ -148,7 +211,8 @@
 
     &__top-content-title
       font-size: 24px
-      padding-bottom: 33px !important
+      line-height: 1.34
+      padding-bottom: 32px !important
     
     &__copyright
       padding-top: 14px
@@ -162,20 +226,23 @@
         padding-bottom: 10px
       p
         font-size: 18px !important        
-
+    
+    &__top-content-wrapper
+      padding-top: 150px
+      padding-bottom: 80px
+    
     &__bottom-content-wrapper
-      padding: 90px $desktopPadding 80px $desktopPadding
-
-    &__bottom-grid-container
-      > div
-        a
-          font-size: 19px
+      padding: 80px $desktopPadding 80px $desktopPadding
     
     a
       font-size: 18px !important
 
     h3
       font-size: 20px !important
+    
+    &__logo-wrapper
+      img
+        height: 31px
 
     &__contact
       padding-top: 40px
