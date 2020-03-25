@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Explore = () => (
   <section className="explore">
-    <div>
+    <div className="explore__card">
       <div className="explore__top-content">
         <h6>BID4SKILL | FEATURES CASE STUDY</h6>
           <Link className="explore__case-study" to="/portfolio/bid-4-skill">

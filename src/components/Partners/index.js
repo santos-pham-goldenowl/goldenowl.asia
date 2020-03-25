@@ -10,6 +10,15 @@ const Partners = () => (
       We partner with the world's best
     </h3>
     <SlideCarousel content={partnersLogo} />
+    <div id="mobile-display-section" className="row">
+      {
+        partnersLogo.map(item => (
+          <div className="col-6">
+            <img src={item.url} alt={`GO ${item.name}`} id={item.name} />
+          </div>
+        ))
+      }
+    </div>
   </section>
 )
 

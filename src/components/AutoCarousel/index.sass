@@ -1,4 +1,5 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .auto-carousel
   padding-right: 2.1vw
@@ -6,13 +7,28 @@
   p
     text-align: left
     line-height: 1.5
+    @include responsive($screen: mobile)
+      font-size: 12pt
+    @include responsive($screen: tablet)
+      font-size: 10px
+    @include responsive($screen: desktop)
+      font-size: 12px
+    @include responsive($screen: large-desktop)
+      font-size: 18px
 
   &__name
-    text-transform: uppercase
     color: $yellow
 
-  &__idea
+  &__idea, &__name
     text-transform: uppercase
+    @include responsive($screen: mobile)
+      font-size: 12px
+    @include responsive($screen: tablet)
+      font-size: 10px
+    @include responsive($screen: desktop)
+      font-size: 10px
+    @include responsive($screen: large-desktop)
+      font-size: 16px
 
   .quote-icon
     width: 0.3vw
@@ -24,22 +40,13 @@
   .auto-carousel
     p
       font-size: 10px
-    
-    &__name, &__idea
-      font-size: 8px
 
 @media (min-width: 1024px) and (max-width: 1365px)
   .auto-carousel
     p
       font-size: 12px
-    
-    &__name, &__idea
-      font-size: 10px
 
 @media only screen and (min-width: 1366px)
   .auto-carousel
     p
       font-size: 18px
-
-    &__name, &__idea
-      font-size: 16px

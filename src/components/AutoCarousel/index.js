@@ -18,7 +18,7 @@ const responsive = {
     slidesToSlide: 3,
   },
   mobile: {
-    breakpoint: { max: 464, min: 0 },
+    breakpoint: { max: 767, min: 0 },
     items: 1,
     slidesToSlide: 1,
   },
@@ -35,7 +35,7 @@ const AutoCarousel = (props) => (
     autoPlay={props.deviceType !== 'mobile'}
     keyBoardControl
     customTransition="all .8"
-    transitionDuration={500}
+    transitionDuration={1000}
     containerClass="carousel-container"
     removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
     deviceType={props.deviceType}

@@ -10,59 +10,9 @@ import "./service.sass";
 import { Dropdown } from "react-bootstrap";
 
 class SubHeader extends Component {
-  state = { showServices: false };
-
-  handleServicesOn = () => this.setState({ showServices: true });
-
-  handleServicesOff = () => this.setState({ showServices: false });
-
   render() {
-    const servicesNode = (
-      <div className="services" onMouseLeave={this.handleServicesOff}>
-        <div
-          className="services__arrow-wrapper"
-          onMouseEnter={this.handleServicesOn}
-        >
-          <Link className="services__link" to="/services">
-            <h4 className="sub-header__text">Services</h4>
-          </Link>
-          <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-        </div>
-        <div className="services__items">
-          {ServicesData.map(service => (
-            <Link key={service.link} to={`/services/${service.link}`}>
-              <div className="services__service">
-                <div className="services__icon-wrapper">
-                  <img src={service.url} alt={service.name} />
-                </div>
-                <div className="services__service-description-wrapper">
-                  <h4>{service.name}</h4>
-                  <p className="services__service-description">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    );
-
-    const buttonNode = (
-      <div className="services">
-        <div
-          className="services__arrow-wrapper"
-          onMouseEnter={this.handleServicesOn}
-        >
-          <Link to="/services">
-            <h4 className="sub-header__text">Services</h4>
-          </Link>
-          <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-        </div>
-      </div>
-    );
     return (
-      <header className="sub-header d-flex">
+      <header className="sub-header">
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/">
             <h4 className="sub-header__text">Home</h4>
