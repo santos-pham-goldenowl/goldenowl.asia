@@ -93,9 +93,9 @@ const Footer = () => (
         <div>
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
-            <a href="#">Careers</a>
+            <a href="/careers">Careers</a>
             <Link to="/contact-us">Contact us</Link>
-            <a href="#">FAQ</a>
+            <a href="/faq">FAQ</a>
             <Link to="/blog">Blog</Link>
           </div>
         </div>

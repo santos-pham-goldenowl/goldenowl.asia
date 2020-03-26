@@ -3,9 +3,9 @@ import React from "react";
 import technologiesLogo from "../../../../utils/TechnologiesLogo";
 import "./index.sass";
 import { Link } from "react-router-dom";
+import { isMobile } from 'react-device-detect';
 
 const Technologies = () => {
-  const isMobile = window.innerWidth < 768;
 
   return (
     <section className="technologies">

@@ -23,7 +23,7 @@ const TestimonialsList = () => (
                 {item.key}: {item.main}
               </h4>
               <p>{item.details}</p>
-              <img className="logo" src={item.companyLogo} />
+              <img className="logo" src={item.companyLogo} alt="logo" />
               <p className="title">{item.title}</p>
               <p className="case-study d-flex align-items-center">
                 VIEW CASE STUDY
@@ -40,7 +40,7 @@ const TestimonialsList = () => (
                 {item.key}: {item.main}
               </h4>
               <p>{item.details}</p>
-              <img className="logo" src={item.companyLogo} />
+              <img className="logo" src={item.companyLogo} alt="logo" />
               <p className="title">{item.title}</p>
               <p className="case-study d-flex align-items-center">
                 VIEW CASE STUDY
