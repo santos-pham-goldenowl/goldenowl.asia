@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from '../Home'
+import HomeClone from '../HomeClone'
 import About from '../About'
 import TechnologyContainer from '../Technology';
 import Services from '../Services'
@@ -22,6 +23,7 @@ const App = () => (
   <BrowserRouter>
     <ScrollToTop />
     <section className="App">
+      <Route exact path="/home" component={HomeClone} />
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
       <Route exact path="/technologies" component={TechnologyContainer} />

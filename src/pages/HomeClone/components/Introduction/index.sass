@@ -1,0 +1,62 @@
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
+
+.introduction
+  overflow: inherit
+  @include responsive($screen: mobile)
+    padding-top: 50px
+  @include responsive($screen: tablet)
+    padding-top: 64px
+  @include responsive($screen: desktop)
+    padding-top: 85px
+  @include responsive($screen: large-desktop)
+    padding-top: 100px
+    padding-bottom: 126px
+
+  &__title
+    padding-top: 0
+    @include responsive($screen: mobile)
+      font-size: 24px
+      line-height: 1.34
+      padding-bottom: 20px
+    @include responsive($screen: tablet)
+      padding-bottom: 21px
+      font-size: 20px
+    @include responsive($screen: desktop)
+      padding-bottom: 28px
+      font-size: 26px
+    @include responsive($screen: large-desktop)
+      padding-top: 126px
+      padding-bottom: 29px
+      font-size: 40px
+
+  &__text
+    padding-top: 0
+    font-family: ProximaNovaRegular
+    @include responsive($screen: mobile)
+      font-size: 16px
+      line-height: 1.5
+      padding-bottom: 40px
+    @include responsive($screen: tablet)
+      font-size: 14px
+      line-height: 1.54
+    @include responsive($screen: desktop)
+      font-size: 18px
+      line-height: 1.54
+    @include responsive($screen: large-desktop)
+      font-size: 18px
+      line-height: 1.5
+
+  img
+    position: absolute
+    left: 0
+    @include responsive($screen: mobile)
+      position: relative
+      left: -10.5px
+      height: 296px
+    @include responsive($screen: tablet)
+      height: 293px
+    @include responsive($screen: desktop)
+      height: 391px
+    @include responsive($screen: large-desktop)
+      height: 550px

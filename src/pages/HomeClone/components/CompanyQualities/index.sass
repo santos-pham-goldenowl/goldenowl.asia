@@ -1,0 +1,102 @@
+@import '../../../../styles/mixins'
+
+.qualities
+  text-align: center
+  @include responsive($screen: mobile)
+    padding: 50px 0
+  @include responsive($screen: tablet)
+    padding: 77px 0 64px 0
+  @include responsive($screen: desktop)
+    padding: 102px 0 85px 0
+  @include responsive($screen: large-desktop)
+    padding: 100px 0
+
+  .row
+    @include responsive($screen: tablet)
+      margin: 0 -13px !important
+    @include responsive($screen: desktop)
+      margin: 0 -21px !important
+    @include responsive($screen: large-desktop)
+      margin: 0 -25px !important
+
+  [class*='col-']
+    @include responsive($screen: tablet)
+      padding: 0 13px !important
+    @include responsive($screen: desktop)
+      padding: 0 21px !important
+    @include responsive($screen: large-desktop)
+      padding: 0 25px !important
+
+  &__items
+    text-align: center
+    img
+      max-width: 100%
+      @include responsive($screen: mobile)
+        max-width: 305px
+        margin-top: 40px
+        margin-bottom: 35px
+      @include responsive($screen: tablet)
+        max-height: 95px
+        margin-bottom: 21px
+      @include responsive($screen: desktop)
+        max-height: 127px
+        margin-bottom: 28px
+      @include responsive($screen: large-desktop)
+        max-height: 178px
+        margin-bottom: 30px
+    h5
+      font-family: ProximaNovaBold
+      font-weight: bold
+      @include responsive($screen: mobile)
+        font-size: 18px
+        line-height: 1.25
+        margin-bottom: 20px
+      @include responsive($screen: tablet)
+        font-size: 12px
+        line-height: 1.5
+        margin-bottom: 11px
+      @include responsive($screen: desktop)
+        font-size: 14px
+        line-height: 1.5
+        margin-bottom: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 24px
+        line-height: 1.23
+        margin-bottom: 20px
+    p
+      width: 100%
+      @include responsive($screen: mobile)
+        font-size: 16px
+        line-height: 1.5
+        margin-bottom: 30px
+      @include responsive($screen: tablet)
+        font-size: 12px
+        line-height: 1.5
+        margin-bottom: 16px
+      @include responsive($screen: desktop)
+        font-size: 14px
+        line-height: 1.5
+        margin-bottom: 21px
+      @include responsive($screen: large-desktop)
+        font-size: 18px
+        line-height: 1.5
+        margin-bottom: 30px
+    p.bottom-line
+      margin-bottom: 0
+
+  #need-line-break
+    padding: 0 20px
+
+  &__title
+    @include responsive($screen: mobile)
+      font-size: 24px
+    @include responsive($screen: tablet)
+      font-size: 20px
+      padding-bottom: 21px
+    @include responsive($screen: desktop)
+      font-size: 26px
+      padding-bottom: 28px
+    @include responsive($screen: large-desktop)
+      font-size: 40px
+      line-height: 1.33
+      padding-bottom: 40px

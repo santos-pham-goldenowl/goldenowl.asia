@@ -1,0 +1,70 @@
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
+
+.quote
+  @include responsive($screen: mobile)
+    padding-top: 0
+  @include responsive($screen: tablet)
+    padding-top: 65px
+  @include responsive($screen: desktop)
+    padding-top: 86px
+  @include responsive($screen: large-desktop)
+    padding-top: 84.3px
+
+  &__content
+    font-family: MalloryBold
+    color: $darkGray
+    @include responsive($screen: mobile)
+      width: 82.9%
+      font-size: 28px
+      line-height: 1.54
+      padding-bottom: 20px
+    @include responsive($screen: tablet)
+      font-size: 28px
+      line-height: 1.4
+      padding-bottom: 21px
+    @include responsive($screen: desktop)
+      font-size: 36px
+      line-height: 1.4
+      padding-bottom: 28px
+    @include responsive($screen: large-desktop)
+      font-size: 46px
+      line-height: 1.52
+      padding-bottom: 27px
+
+  &__author
+    max-width: 67.5%
+    font-size: 26px
+    line-height: 1.54
+    @include responsive($screen: mobile)
+      width: 79.1%
+      font-size: 16px
+      line-height: 1.5
+      padding-bottom: 30px
+    @include responsive($screen: tablet)
+      font-size: 14px
+      line-height: 1.55
+    @include responsive($screen: desktop)
+      font-size: 18px
+      line-height: 1.55
+    @include responsive($screen: large-desktop)
+      font-size: 20px
+      line-height: 1.5
+
+  img
+    object-fit: contain
+    @include responsive($screen: mobile)
+      max-width: calc( 100% + 30px )
+      margin: 0 -15px
+    @include responsive($screen: tablet)
+      max-width: calc(100% + 39px)
+      margin-left: 11px
+      margin-top: 4px
+    @include responsive($screen: desktop)
+      max-width: calc(100% + 56px)
+      margin-left: 14px
+      margin-top: 6px
+    @include responsive($screen: large-desktop)
+      max-width: calc(100% + 78px)
+      margin-left: 22px
+      margin-top: 8px
