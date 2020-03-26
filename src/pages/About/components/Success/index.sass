@@ -1,84 +1,108 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
 .success
   background-color: $softGray
+  @include responsive($screen: mobile)
+    padding: 50px 0
+  @include responsive($screen: tablet)
+    padding: 53px 0
+  @include responsive($screen: desktop)
+    padding: 71px 0
+  @include responsive($screen: large-desktop)
+    padding: 100px 0
 
   &__map
     width: 100%
-
-  &__title
-    border-bottom: 4px solid $darkGray
+    @include responsive($screen: mobile)
+      padding-top: 40px
+    @include responsive($screen: tablet)
+      padding-top: 32px
+    @include responsive($screen: desktop)
+      padding-top: 43px
+    @include responsive($screen: large-desktop)
+      padding-top: 60px
 
   &__paragraph
     padding-top: 20px
 
   &__sum
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding-top: 43px
+    @include responsive($screen: desktop)
+      padding-top: 57px
+    @include responsive($screen: large-desktop)
+      padding-top: 80px
     .col-md-6
+      h3
+        @include responsive($screen: mobile)
+          padding-top: 40px
+          font-size: 18px
+          border-bottom: 2px solid $darkGray
+          padding-bottom: 10px
+        @include responsive($screen: tablet)
+          font-size: 20px
+          border-bottom: 2px solid $darkGray
+          padding-bottom: 11px
+        @include responsive($screen: desktop)
+          font-size: 26px
+          border-bottom: 3px solid $darkGray
+          padding-bottom: 14px
+        @include responsive($screen: large-desktop)
+          font-size: 34px
+          border-bottom: 4px solid $darkGray
+          padding-bottom: 20px
       p
-        line-height: 1.5;
+        line-height: 1.5
+        @include responsive($screen: mobile)
+          padding-top: 10px
+          font-size: 16px
+        @include responsive($screen: tablet)
+          font-size: 12px
+        @include responsive($screen: desktop)
+          font-size: 14px
+        @include responsive($screen: large-desktop)
+          font-size: 20px
       &:nth-child(2n)
         padding-right: 0
       &:nth-child(2n+1)
         padding-left: 0
-    
-  &__main
-    h1
-      font-size: 50px
-    p
-      line-height: 1.54
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .success
-    padding-top: 6.9vw
-    padding-bottom: 6.9vw
-    
-    &__sum
-      padding-top: 5.6vw
-      .col-md-6
-        h3
-          font-size: 26px
-          border-bottom : 0.3vw solid $darkGray
-          padding-bottom: 1.4vw
-        p
-          font-size: 16px
-        &:nth-child(2n+1)
-          padding-right: 7.8vw
-        &:not(:last-child):not(:nth-last-child(2))
-          padding-bottom: 3.5vw
-    
-    &__map
-      padding-top: 4.2vw
-    
-    &__main
-      h1
-        font-size: 35px
-      p
-        font-size: 18px
-
-@media only screen and (min-width: 1366px)
-  .success
-    padding-top: 100px
-    padding-bottom: 100px
-    
-    &__sum
-      padding-top: 80px
-      .col-md-6
-        h3
-          font-size: 34px
-          border-bottom : 4px solid $darkGray
-          padding-bottom: 20px
-        p
-          font-size: 20px
-        &:nth-child(2n+1)
+        @include responsive($screen: tablet)
+          padding-right: 60px
+        @include responsive($screen: desktop)
+          padding-right: 80px
+        @include responsive($screen: large-desktop)
           padding-right: 112px
-        &:not(:last-child):not(:nth-last-child(2))
+      &:not(:last-child):not(:nth-last-child(2))
+        @include responsive($screen: tablet)
+          padding-bottom: 27px
+        @include responsive($screen: desktop)
+          padding-bottom: 36px
+        @include responsive($screen: large-desktop)
           padding-bottom: 50px
-    
-    &__map
-      padding-top: 60px
-    
-    &__main
-      h1
-        font-size: 50px
-      p
-        font-size: 26px
+
+  &__main-title
+    font-family: MalloryBold
+    @include responsive($screen: mobile)
+      font-size: 24px
+      line-height: 1.34
+      padding-bottom: 20px !important
+    @include responsive($screen: tablet)
+      font-size: 28px
+    @include responsive($screen: desktop)
+      font-size: 38px
+    @include responsive($screen: large-desktop)
+      font-size: 50px
+
+  &__main-description
+    line-height: 1.54
+    @include responsive($screen: mobile)
+      font-size: 16px
+      line-height: 1.5
+    @include responsive($screen: tablet)
+      font-size: 14px
+    @include responsive($screen: desktop)
+      font-size: 18px
+    @include responsive($screen: large-desktop)
+      font-size: 26px
