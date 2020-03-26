@@ -9,7 +9,7 @@ const CompanyQualities = () => (
   <section className="qualities">
     <h3 className="qualities__title"> Why choose us</h3>
     <div className="row">
-      <div className="col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block">
         <img src={companyQuality1} alt="Golden Owl Asia" />
         <h5>Our Company</h5>
         <div className="d-flex">
@@ -20,13 +20,13 @@ const CompanyQualities = () => (
           </p>
         </div>
         <div className="d-flex">
-          <p>
+          <p className="bottom-line">
               Value clear rules, relationships based on trust, dialogue and
               through the quality of services provided
           </p>
         </div>
       </div>
-      <div className="col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block">
         <img src={companyQuality2} alt="Key success" />
         <h5>
             Key success: time & materials
@@ -50,7 +50,7 @@ const CompanyQualities = () => (
           </p>
         </div>
       </div>
-      <div className="col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block">
         <img src={companyQuality3} alt="We create" />
         <h5>We create</h5>
         <div className="d-flex">
@@ -60,7 +60,7 @@ const CompanyQualities = () => (
           </p>
         </div>
         <div className="d-flex">
-          <p>
+          <p className="bottom-line">
               The advantages of the energy, skill of the developers, the
               expanding potential of your business, and the best price offered.
           </p>

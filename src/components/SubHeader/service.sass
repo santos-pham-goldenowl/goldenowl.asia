@@ -1,13 +1,31 @@
-@import '../../styles/variables.sass'
-@import '../../styles/mixins.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .services
   &__items
     box-shadow: 10px 10px 20px -15px rgba(160, 160, 160, 0.5)
+    @include responsive($screen: tablet)
+      padding: 17px !important
+      width: 241px
+    @include responsive($screen: desktop)
+      padding: 21px !important
+      width: 304px
+    @include responsive($screen: large-desktop)
+      padding: 30px !important
+      width: 434px
 
   &__arrow-wrapper
     display: flex
     align-items: center
+    @include responsive($screen: tablet)
+      padding-right: 25px
+      height: 28px
+    @include responsive($screen: desktop)
+      padding-right: 32px
+      height: 35px
+    @include responsive($screen: large-desktop)
+      padding-right: 45px
+      height: 50px
 
   &__icon-wrapper
     display: flex
@@ -15,75 +33,32 @@
     justify-content: center
     text-align: left
     padding-right: 10px
+    @include responsive($screen: tablet)
+      width: 28px
+    @include responsive($screen: desktop)
+      width: 35px
+    @include responsive($screen: large-desktop)
+      width: 50px
 
   &__service-description-wrapper
     text-align: left
     p, h4
       line-height: 1.38
+    @include responsive($screen: tablet)
+      font-size: 10px
+    @include responsive($screen: desktop)
+      font-size: 14px
+    @include responsive($screen: large-desktop)
+      font-size: 16px
 
   &__service
     display: flex
-
     &:hover
       background-color: #fafafa
       border-radius: 6px
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .services
-    &__items
-      padding: 17px !important
-      width: 241px
-
-    &__arrow-wrapper
-      padding-right: 25px
-      height: 28px
-
-    &__icon-wrapper
-      width: 28px
-
-    &__service-description-wrapper
-      p, h4
-        font-size: 10px
-
-    &__service
+    @include responsive($screen: tablet)
       padding: 11px 6px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .services
-    &__items
-      padding: 21px !important
-      width: 304px
-
-    &__arrow-wrapper
-      padding-right: 32px
-      height: 35px
-
-    &__icon-wrapper
-      width: 35px
-
-    &__service-description-wrapper
-      p, h4
-        font-size: 14px
-
-    &__service
+    @include responsive($screen: desktop)
       padding: 14px 7px
-
-@media only screen and (min-width: 1366px)
-  .services
-    &__items
-      padding: 30px !important
-      width: 434px
-
-    &__arrow-wrapper
-      padding-right: 45px
-      height: 50px
-
-    &__icon-wrapper
-      width: 50px
-
-    &__service-description-wrapper
-      p, h4
-        font-size: 16px
-
-    &__service
+    @include responsive($screen: large-desktop)
       padding: 20px 10px

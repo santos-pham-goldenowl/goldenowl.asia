@@ -1,14 +1,58 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .main-header
   font-family: ProximaNovaRegular
   display: flex
   align-items: center
+  @include responsive($screen: mobile)
+    padding: 20.2px 0 40.6px 0
+  @include responsive($screen: tablet)
+    padding: 17px 0 14px 0
+  @include responsive($screen: desktop)
+    padding: 23px 0 18px 0
+  @include responsive($screen: large-desktop)
+    padding: 32px 0 26px 0
+
+  &__logo-wrapper
+    display: flex
+    align-items: center
+
+  &__logo
+    align-self: center
+    width: auto !important
+    @include responsive($screen: mobile)
+      height: 29.2px
+    @include responsive($screen: tablet)
+      height: 17px
+    @include responsive($screen: desktop)
+      height: 22px
+    @include responsive($screen: large-desktop)
+      height: 31px
+
+  &__left-side
+    display: flex
+    flex: 2
+    justify-content: flex-start
+
+  &__right-side
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    @include responsive($screen: mobile)
+      display: none
+
+  &__flex-container
+    display: flex
+    align-items: center
+    margin-bottom: 0
 
   &__hamburger
-    display: flex
+    display: none
     flex-direction: column
     justify-content: center
+    @include responsive($screen: mobile)
+      display: flex
     span
       display: block
       width: 30px
@@ -35,11 +79,25 @@
   &__flex-item
     text-align: left
     font-family: ProximaNovaRegular
-    font-size: 14px
     color: $darkGray
     cursor: pointer
     a
       color: $darkGray
+    @include responsive($screen: tablet)
+      font-size: 10px
+      padding-left: 11px
+      &:last-child
+        padding-left: 16px
+    @include responsive($screen: desktop)
+      font-size: 12px
+      padding-left: 14px
+      &:last-child
+        padding-left: 21px
+    @include responsive($screen: large-desktop)
+      font-size: 14px
+      padding-left: 20px
+      &:last-child
+        padding-left: 30px
 
   &__flex-item:last-child
     display: flex
@@ -73,72 +131,3 @@
     .main-header__hamburger
       position: relative
       top: -15px
-
-@media (min-width: 768px)
-  .main-header
-    padding: 2.3vw 0 1.7vw 0
-
-    &__logo-wrapper
-      display: flex
-      align-items: center
-
-    &__left-side
-      display: flex
-      flex: 2
-      justify-content: flex-start
-
-    &__right-side
-      display: flex
-      align-items: center
-      justify-content: flex-end
-
-    &__flex-container
-      display: flex
-      align-items: center
-      margin-bottom: 0
-
-    &__hamburger
-      display: none
-
-    &__logo
-      align-self: center
-      width: auto !important
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .main-header
-    padding: 17px 0 14px 0
-
-    &__logo
-      max-height: 17px
-
-    &__flex-item
-      font-size: 10px
-      padding-left: 11px
-      &:last-child
-        padding-left: 16px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .main-header
-    padding: 23px 0 18px 0
-
-    &__logo
-      max-height: 22px
-
-    &__flex-item
-      font-size: 12px
-      padding-left: 14px
-      &:last-child
-        padding-left: 21px
-
-@media only screen and (min-width: 1366px)
-  .main-header
-    padding: 32px 0 26px 0
-
-    &__logo
-      max-height: 31px
-
-    &__flex-item
-      font-size: 14px
-      padding-left: 20px
-      &:last-child
-        padding-left: 30px

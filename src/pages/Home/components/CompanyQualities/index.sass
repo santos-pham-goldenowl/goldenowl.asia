@@ -1,108 +1,131 @@
-.qualities
-  padding: 8.3vw 0 8.3vw 0
-  text-align: center
+@import '../../../../styles/mixins'
 
-  .check-point-wrapper
-    padding-top: 0.7vw
+.qualities
+  text-align: center
+  @include responsive($screen: mobile)
+    padding: 50px 0
+  @include responsive($screen: tablet)
+    padding: 77px 0 64px 0
+  @include responsive($screen: desktop)
+    padding: 102px 0 85px 0
+  @include responsive($screen: large-desktop)
+    padding: 144px 0 120px 0
+
+  .row
+    @include responsive($screen: tablet)
+      margin: 0 -13px !important
+    @include responsive($screen: desktop)
+      margin: 0 -21px !important
+    @include responsive($screen: large-desktop)
+      margin: 0 -25px !important
+
+  [class*='col-']
+    @include responsive($screen: tablet)
+      padding: 0 13px !important
+    @include responsive($screen: desktop)
+      padding: 0 21px !important
+    @include responsive($screen: large-desktop)
+      padding: 0 25px !important
 
   &__items
     text-align: center
     img
       max-width: 100%
-      max-height: 12.8vw
-      margin-bottom: 2.8vw
+      @include responsive($screen: mobile)
+        max-width: 305px
+        margin-top: 40px
+        margin-bottom: 35px
+      @include responsive($screen: tablet)
+        max-height: 95px
+        margin-bottom: 21px
+      @include responsive($screen: desktop)
+        max-height: 127px
+        margin-bottom: 28px
+      @include responsive($screen: large-desktop)
+        max-height: 178px
+        margin-bottom: 40px
     h5
-      margin-bottom: 2.1vw
+      font-family: MalloryBold
       font-weight: bold
-    div
-      p
-        width: 100%
-        margin: 0
-        margin-bottom: 2.8vw !important
-      p.bottom-line
-        margin-bottom: 0 !important
-  
+      @include responsive($screen: mobile)
+        font-size: 18px
+        line-height: 1.25
+        margin-bottom: 20px
+      @include responsive($screen: tablet)
+        font-size: 12px
+        line-height: 1.5
+        margin-bottom: 11px
+      @include responsive($screen: desktop)
+        font-size: 14px
+        line-height: 1.5
+        margin-bottom: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 20px
+        line-height: 1.5
+        margin-bottom: 20px
+    p
+      width: 100%
+      @include responsive($screen: mobile)
+        font-size: 16px
+        line-height: 1.5
+        margin-bottom: 30px
+      @include responsive($screen: tablet)
+        font-size: 12px
+        line-height: 1.5
+        margin-bottom: 16px
+      @include responsive($screen: desktop)
+        font-size: 14px
+        line-height: 1.5
+        margin-bottom: 21px
+      @include responsive($screen: large-desktop)
+        font-size: 20px
+        line-height: 1.5
+        margin-bottom: 30px
+    p.bottom-line
+      margin-bottom: 0
+
   &__title
-    padding-bottom: 2.8vw !important
+    @include responsive($screen: mobile)
+      font-size: 24px
+    @include responsive($screen: tablet)
+      font-size: 20px
+      padding-bottom: 21px
+    @include responsive($screen: desktop)
+      font-size: 26px
+      padding-bottom: 28px
+    @include responsive($screen: large-desktop)
+      font-size: 34px
+      padding-bottom: 40px
 
 @media (min-width: 768px) and (max-width: 1023px)
   .qualities
-    padding: 77px 0 64px 0
-
-    .row
-      margin-right: -21px !important
-      margin-left: -21px  !important
-
-    [class*='col-']
-      padding-right: 21px !important
-      padding-left: 21px  !important 
-
     div
       p
-        margin-bottom: 16px !important
-    
-    &__title
-      font-size: 20px
+        margin-bottom: 16px
 
     &__items
       h5, p
-        font-size: 12px !important
-        line-height: 1.5 !important
+        font-size: 12px
+        line-height: 1.5
 
 @media (min-width: 1024px) and (max-width: 1365px)
   .qualities
-    padding: 102px 0 85px 0
-
-    .row
-      margin-right: -21px !important
-      margin-left: -21px  !important
-
-    [class*='col-']
-      padding-right: 21px !important
-      padding-left: 21px  !important 
-
     div
       p
-        margin-bottom: 21px !important
-    
-    &__title
-      font-size: 26px
+        margin-bottom: 21px
 
     &__items
       h5, p
-        font-size: 14px !important
-        line-height: 1.5 !important
+        font-size: 14px
+        line-height: 1.5
 
 @media only screen and (min-width: 1366px)
   .qualities
-    padding: 144px 0 120px 0
-
-    .check-point-wrapper
-      padding-top: 10px
-    
-    .row
-      margin-right: -25px !important
-      margin-left: -25px  !important
-
-    [class*='col-']
-      padding-right: 25px !important
-      padding-left: 25px  !important
-    
     div
       p
-        margin-bottom: 30px !important
-    
-    &__title
-      font-size: 34px
-      padding-bottom: 40px !important
+        margin-bottom: 30px
 
     &__items
-      img        
-        max-height: 178px
-        margin-bottom: 40px
-      h5
-        margin-bottom: 20px
       h5, p
         font-size: 20px
-        line-height: 1.5 !important
-
+        line-height: 1.5

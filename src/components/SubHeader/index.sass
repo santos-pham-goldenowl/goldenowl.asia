@@ -1,20 +1,29 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .sub-header
+  display: flex
   padding: 0
   justify-content: flex-end
   align-items: center
   position: relative
   font-size: 14px
   font-family: ProximaNovaBold
-  display: none
+  @include responsive($screen: mobile)
+    display: none
 
   .no-bootstrap-arrow
     &:after
-      content: none !important
-  
-  &__button
-    padding-left: 0 !important
+      content: none
+
+  &__button, #services-dropdown
+    padding-left: 0
+    @include responsive($screen: tablet)
+      padding-right: 27px
+    @include responsive($screen: desktop)
+      padding-right: 36px
+    @include responsive($screen: large-desktop)
+      padding-right: 50px
 
   .no-hover-text-decoration
     &:hover, &:focus
@@ -27,61 +36,37 @@
 
   &__contact-wrapper
     background-color: $yellow
+    @include responsive($screen: tablet)
+      width: 83px
+      height: 24px
+    @include responsive($screen: desktop)
+      width: 110px
+      height: 32px
+    @include responsive($screen: large-desktop)
+      width: 155px
+      height: 45px
 
   &__contact-title
     white-space: nowrap
 
-@media (min-width: 768px) and (max-width: 1023px)
-  .sub-header
-
-    &__text
+  &__text
+    @include responsive($screen: tablet)
       font-size: 10px
-    
-    &__contact-wrapper
-      width: 83px
-      height: 24px
+    @include responsive($screen: desktop)
+      font-size: 12px
+    @include responsive($screen: large-desktop)
+      font-size: 16px
 
-    &__button
-      padding-right: 27px !important
-
-    &__arrow-right
+  &__arrow-right
+    @include responsive($screen: tablet)
       width: 9px
       height: 6px
       margin-left: 11px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .sub-header
-
-    &__text
-      font-size: 12px
-    
-    &__contact-wrapper
-      width: 110px
-      height: 32px
-
-    &__button
-      padding-right: 36px !important
-
-    &__arrow-right
+    @include responsive($screen: desktop)
       width: 12px
       height: 9px
       margin-left: 14px
-
-@media only screen and (min-width: 1366px)
-  .sub-header
-    
-    &__text
-      font-size: 16px
-    
-    &__contact-wrapper
-      width: 155px
-      height: 45px
-
-    &__button
-      padding-right: 50px !important
-
-    &__arrow-right
+    @include responsive($screen: large-desktop)
       width: 17px
       height: 12px
       margin-left: 20px
-

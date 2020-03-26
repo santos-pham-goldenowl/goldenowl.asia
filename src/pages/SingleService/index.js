@@ -99,16 +99,16 @@ const SingleService = ({ content }) => {
             {objectToArray(content.navs).map(image => (
               <div
                 key={image.title}
-                className="col-sm-12 col-md-6 service__other-service-wrapper"
+                className="col-12 col-md-6 service__other-service-wrapper"
               >
                 <Link
                   className="service__other-service"
                   to={`/services/${image.url}`}
                 >
-                  <div className="col-sm-3">
+                  <div className="col-3">
                     <img src={image.imgUrl} alt={image.title} />
                   </div>
-                  <div className="col-sm-9">
+                  <div className="col-9">
                     <h4 className="">{image.title}</h4>
                   </div>
                 </Link>

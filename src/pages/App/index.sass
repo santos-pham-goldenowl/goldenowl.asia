@@ -1,6 +1,6 @@
-@import '../../styles/variables.sass'
-@import '../../styles/mixins.sass'
-@import "node_modules/bootstrap/scss/bootstrap";
+@import '../../styles/variables'
+@import '../../styles/mixins'
+@import "node_modules/bootstrap/scss/bootstrap"
 $proxima-font-path: "../../assets/fonts/proxima"
 $mallory-font-path: "../../assets/fonts/mallory"
 
@@ -10,11 +10,47 @@ $mallory-font-path: "../../assets/fonts/mallory"
   overflow: hidden
   overflow-y: hidden
 
+  > section
+    .container-fluid
+      header, .breadcrumb, > section, footer > div
+        width: 100%
+        @include responsive($screen: mobile)
+          padding-left: 15px
+          padding-right: 15px
+        @include responsive($screen: tablet)
+          padding-left: 50px
+          padding-right: 50px
+        @include responsive($screen: desktop)
+          padding-left: 70px
+          padding-right: 70px
+        @include responsive($screen: large-desktop)
+          padding-left: $desktopPadding
+          padding-right: $desktopPadding
+
+  .row
+    @include responsive($screen: mobile)
+      margin: 0 -4.5px
+    @include responsive($screen: tablet)
+      margin: 0 -5px
+    @include responsive($screen: desktop)
+      margin: 0 -7.5px
+    @include responsive($screen: large-desktop)
+      margin: 0 -10px
+
+  [class*='col-']
+    @include responsive($screen: mobile)
+      padding: 0 4.5px
+    @include responsive($screen: tablet)
+      padding: 0 5px
+    @include responsive($screen: desktop)
+      padding: 0 7.5px
+    @include responsive($screen: large-desktop)
+      padding: 0 10px
+
 .container-fluid
   &.no-padding
-    padding-left: 0px;
-    padding-right: 0px;
-
+    padding-left: 0px
+    padding-right: 0px
 
 p, h1, h2, h3
   margin: 0
@@ -74,6 +110,13 @@ input, select, textarea
   color: #85868f !important
   border-radius: unset !important
   margin-bottom: 1.25rem
+  @include responsive($screen: mobile)
+  @include responsive($screen: tablet)
+    font-size: 10px
+  @include responsive($screen: desktop)
+    font-size: 14px
+  @include responsive($screen: large-desktop)
+    font-size: 16px
 
 textarea
   padding: 0.4375rem 0.75rem !important
@@ -84,60 +127,5 @@ input, select
   padding: 0.8125rem 0.75rem !important
   border: solid 1px $slightGray !important
 
-@media (min-width: 768px) and (max-width: 1023px)
-  .App
-    > section
-      .container-fluid
-        header, .breadcrumb, > section, footer > div
-          width: 100%
-          padding-left: 50px
-          padding-right: 50px
-    .row
-      margin-left: -7.5px
-      margin-right: -7.5px
-
-    [class*='col-']
-      padding-left: 7.5px
-      padding-right: 7.5px
-
-    input, select, textarea
-      font-size: 10px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .App
-    > section
-      .container-fluid
-        header, .breadcrumb, > section, footer > div
-          width: 100%
-          padding-left: 70px
-          padding-right: 70px
-    .row
-      margin-left: -7.5px
-      margin-right: -7.5px
-
-    [class*='col-']
-      padding-left: 7.5px
-      padding-right: 7.5px
-
-    input, select, textarea
-      font-size: 14px
-    
-@media only screen and (min-width: 1366px)
-  .App
-    > section
-      .container-fluid
-        header, .breadcrumb, > section, footer > div
-          width: 100%
-          padding-left: $desktopPadding
-          padding-right: $desktopPadding
-
-    .row
-      margin-left: -10px
-      margin-right: -10px
-      
-    [class*='col-']
-      padding-left: 10px
-      padding-right: 10px
-    
-    label
-      margin-bottom: 0.75rem
+label
+  margin-bottom: 0.75rem

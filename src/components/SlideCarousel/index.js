@@ -33,7 +33,7 @@ const SlideCarousel = ({ ...props }) => {
       keyBoardControl
       customTransition="all .5"
       transitionDuration={500}
-      containerClass="d-flex align-items-center"
+      containerClass="align-items-center"
       deviceType={deviceType}
       dotListClass="custom-dot-list-style"
     >
