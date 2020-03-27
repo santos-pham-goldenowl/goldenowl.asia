@@ -10,6 +10,31 @@ import "./service.sass";
 import { Dropdown } from "react-bootstrap";
 
 class SubHeader extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.state = {
+      dropdownOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }));
+  }
+
+  onMouseEnter() {
+    this.setState({ dropdownOpen: true });
+  }
+
+  onMouseLeave() {
+    this.setState({ dropdownOpen: false });
+  }
+
   render() {
     return (
       <header className="sub-header">
@@ -19,38 +44,39 @@ class SubHeader extends Component {
           </Link>
         </div>
         {/* Services Dropdown-start */}
-        <Dropdown>
-          <Dropdown.Toggle
-            variant={"link"}
-            className="services__link services__arrow-wrapper sub-header__button dropdown-toggle d-flex no-bootstrap-arrow no-hover-text-decoration"
+        <div class="dropdown">
+          <div
+            className="align-items-center sub-header__button"
             id="services-dropdown"
           >
-            <a className="no-hover-text-decoration" href="/services">
+            <Link
+              className="d-flex align-items-center no-hover-text-decoration"
+              to="/services"
+            >
               <h4 className="sub-header__text">Services</h4>
-            </a>
-            <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-          </Dropdown.Toggle>
-          <Dropdown.Menu
-            className="services__items"
-            ariaLabelledby="services-dropdown"
-          >
-            {ServicesData.map(service => (
-              <Link key={service.link} to={`/services/${service.link}`}>
-                <div className="services__service">
-                  <div className="services__icon-wrapper">
-                    <img src={service.url} alt={service.name} />
+              <img className="arrow-down" src={arrowDown} alt="arrow-down" />
+            </Link>
+          </div>
+          <div className="dropdown-content">
+            <div className="services__items">
+              {ServicesData.map(service => (
+                <Link key={service.link} to={`/services/${service.link}`}>
+                  <div className="services__service">
+                    <div className="services__icon-wrapper">
+                      <img src={service.url} alt={service.name} />
+                    </div>
+                    <div className="services__service-description-wrapper">
+                      <h4>{service.name}</h4>
+                      <p className="services__service-description">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="services__service-description-wrapper">
-                    <h4>{service.name}</h4>
-                    <p className="services__service-description">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </Dropdown.Menu>
-        </Dropdown>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
         {/* Services Dropdown-end */}
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/technologies">

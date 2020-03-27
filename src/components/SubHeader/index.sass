@@ -25,6 +25,29 @@
     @include responsive($screen: large-desktop)
       padding-right: 50px
 
+  .dropdown
+    position: relative
+    display: inline-block
+
+    &:hover
+      .dropdown-content
+        display: block
+
+    &-content
+      display: none
+      position: absolute
+      background-color: transparent
+      z-index: 1
+      @include responsive($screen: tablet)
+        padding-top: 27px
+        left: -21px
+      @include responsive($screen: desktop)
+        padding-top: 36px
+        left: -28px
+      @include responsive($screen: large-desktop)
+        padding-top: 50px
+        left: -40px
+
   .no-hover-text-decoration
     &:hover, &:focus
       text-decoration: none !important
