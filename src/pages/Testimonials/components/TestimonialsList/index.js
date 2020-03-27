@@ -5,6 +5,7 @@ import objectToArray from "../../../../utils/objectToArray";
 import ArrowRight from "../../../../components/ArrowRight";
 
 import "./index.sass";
+import { Link } from "react-router-dom";
 
 const TestimonialsList = () => (
   <section className="testimonials-list">
@@ -25,10 +26,12 @@ const TestimonialsList = () => (
               <p>{item.details}</p>
               <img className="logo" src={item.companyLogo} alt="logo" />
               <p className="title">{item.title}</p>
-              <p className="case-study d-flex align-items-center">
-                VIEW CASE STUDY
-                <ArrowRight className="case-study__arrow" />
-              </p>
+              <Link to={`/portfolio/${item.url}`}>
+                <p className="case-study d-flex align-items-center">
+                  VIEW CASE STUDY
+                  <ArrowRight className="case-study__arrow" />
+                </p>
+              </Link>
             </div>
           </div>
         </div>
@@ -42,10 +45,12 @@ const TestimonialsList = () => (
               <p>{item.details}</p>
               <img className="logo" src={item.companyLogo} alt="logo" />
               <p className="title">{item.title}</p>
-              <p className="case-study d-flex align-items-center">
-                VIEW CASE STUDY
-                <ArrowRight className="case-study__arrow" />
-              </p>
+              <Link to={`/portfolio/${item.url}`}>
+                <p className="case-study d-flex align-items-center">
+                  VIEW CASE STUDY
+                  <ArrowRight className="case-study__arrow" />
+                </p>
+              </Link>
             </div>
           </div>
           <div className="col-md-6 d-flex justify-content-end">
