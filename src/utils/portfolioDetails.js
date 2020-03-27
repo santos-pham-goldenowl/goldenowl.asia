@@ -1,3 +1,4 @@
+import React from "react";
 import pImages from "./portfolioImages";
 
 export default {
@@ -17,7 +18,11 @@ export default {
       { src: pImages.collabs6, col: 4 }
     ],
     brief: {
-      title: "Our effort",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Our effort
+        </h3>
+      ),
       description:
         "With all the effort, Golden Owl’s team spent days and nights making the project successful. Our client and users do experience and they are all pleased with it."
     }
@@ -41,7 +46,11 @@ export default {
       { src: pImages.connectajob10, col: 12 }
     ],
     brief: {
-      title: "Most modern workflow",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Most modern <br/> workflow
+        </h3>
+        ),
       description:
         "Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product."
     }
@@ -64,7 +73,11 @@ export default {
       { src: pImages.findAWealthManager9, col: 4 }
     ],
     brief: {
-      title: "Good investment portal",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Good investment<br/>portal
+        </h3>
+        ),
       description:
         "Finding an investment channel is no longer a problem thanks to Find a Wealth Manager. Users will be able to make more money and receive lots of advice from most professional consultants."
     }
@@ -88,7 +101,11 @@ export default {
       { src: pImages.getAssured3, col: 12 }
     ],
     brief: {
-      title: "Support to take care employees",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Support to <br/> take care employees
+        </h3>
+        ),
       description:
         "Don’t need to spend a large time taking care of employees, Get Assured do it all for your enterprise. Believe it or not, this site is a perfect assistant for every kind of business."
     }
@@ -111,7 +128,11 @@ export default {
       { src: pImages.gig9, col: 4 }
     ],
     brief: {
-      title: "Perfect assistant",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Perfect assistant
+        </h3>
+        ),
       description:
         "GIG provides job seeks as well as recruiters a great portal where they can meet the demand of each other. Having all useful features, this website has brough lots of benefits for both roles."
     }
@@ -143,12 +164,16 @@ export default {
       { src: pImages.mosendo11, col: 12 }
     ],
     brief: {
-      title: "High security",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          High security
+        </h3>
+        ),
       description:
         "The priority thing that we focus on when starting the project is the security. We promise to protect our clients’ information by the most up-to-date technology in the app."
     }
   },
-  "My work": {
+  "My Work": {
     cover: pImages.myWorkCover,
     url: "my-work",
     overview:
@@ -159,10 +184,14 @@ export default {
       { src: pImages.myWork2, col: 4 },
       { src: pImages.myWork3, col: 4 },
       { src: pImages.myWork4, col: 4 },
-      { src: pImages.myWork5, col: 12 },
+      { src: pImages.myWork5, col: 12 }
     ],
     brief: {
-      title: "Great journey",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Great journey
+        </h3>
+        ),
       description:
         "Working with MyWork has been a great journey since we treasure this long-term relationship, especially in this emerging age where technology is expanding at such an accelerating pace."
     }
@@ -171,7 +200,7 @@ export default {
     cover: pImages.briidgeCover,
     url: "briidge",
     overview:
-    "ConnectaJob represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.",
+      "Connect A Job represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.",
     techs: ["Angular JS (FE)", "Ruby on Rails (BE)"],
     img: [
       { src: pImages.briidge1, col: 4 },
@@ -183,12 +212,16 @@ export default {
       { src: pImages.briidge7, col: 4 },
       { src: pImages.briidge8, col: 4 },
       { src: pImages.briidge9, col: 4 },
-      { src: pImages.briidge10, col: 12 },
+      { src: pImages.briidge10, col: 12 }
     ],
     brief: {
-      title: "Most modern workflow",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Most modern <br/> workflow
+        </h3>
+        ),
       description:
-      "Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product."
+        "Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product."
     }
   },
   Personifi: {
@@ -211,7 +244,11 @@ export default {
       { src: pImages.personifi11, col: 12 }
     ],
     brief: {
-      title: "We focus on the program",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          We focus<br/>on the program
+        </h3>
+        ),
       description:
         "We consider the meaning of this app after listening to the client's idea. An app related to money needs the exact in every small thing, so we care a lot about using programs for this app. We choose suitable programs for this app and calculate the solution to make it effective. With a high mission, we build this app successfully and the client is pleased with our product."
     }
@@ -229,7 +266,11 @@ export default {
       { src: pImages.referralCandy4, col: 12 }
     ],
     brief: {
-      title: "Marketing success",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Marketing success
+        </h3>
+        ),
       description:
         "Marketing is a very important step in running a business. The more people know your business, the more money you earn. Therefore, Referral Candy is build to increase the productivity of marketing programs."
     }
@@ -254,7 +295,11 @@ export default {
       { src: pImages.twp4, col: 12 }
     ],
     brief: {
-      title: "A helpful platform",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          A helpful platform
+        </h3>
+        ),
       description:
         "Some magazines like Forbes, Wallpaper, etc. have complimented THE WORK PROJECT as a popular program for helping and supporting to change and design workplace."
     }
@@ -271,7 +316,11 @@ export default {
       { src: pImages.bid4Skill3, col: 12 }
     ],
     brief: {
-      title: "We have launched the project with all passion",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          We have launched the <br /> project with all passion
+        </h3>
+      ),
       description:
         "Golden Owl launched the product, built a transparent workflow and makes updates frequently until it has a big scale. We operated with a high level of efficiency, transparency, responsiveness, attended to client needs and delivered truly sets them apart."
     }
@@ -309,7 +358,11 @@ export default {
       { src: pImages.corpzap3, col: 12 }
     ],
     brief: {
-      title: "A legal assistant",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          A legal assistant
+        </h3>
+        ),
       description:
         "Everything related to the legal field needs a very careful and professional assistant. If you need any advice or legal paperwork, Corpzap is the one you need."
     }
@@ -345,7 +398,11 @@ export default {
       { src: pImages.eyeProtec13, col: 12 }
     ],
     brief: {
-      title: `Protect you and your lovers as well`,
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Protect you and <br/> your lovers as well
+        </h3>
+        ),
       description:
         "Thanks to Eye Protect, users now can choose the safest way to go and help their friends, relatives and so on to avoid any dangerous route and find a safe way to go home."
     }
@@ -369,7 +426,11 @@ export default {
       { src: pImages.glife10, col: 12 }
     ],
     brief: {
-      title: "Live green with Glife",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Live green with<br/>Glife
+        </h3>
+        ),
       description:
         "If you want to stay green and have most organic food, Glife is the platform you need. To Glife, green is the key, means we focus on greenest and freshest everything, from fruits to vegetables and so on."
     }
@@ -394,7 +455,11 @@ export default {
       { src: pImages.homehub11, col: 6 }
     ],
     brief: {
-      title: "As a helpful platform",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          As a helpful platform
+        </h3>
+        ),
       description:
         "We have built a CMS platform for service providers to manage their customers whenever there is urgent demand from users. HOMEHUB will be an effective with everybody so that it could help them move home easier and comfortably."
     }
@@ -412,7 +477,11 @@ export default {
       { src: pImages.luxify4, col: 12 }
     ],
     brief: {
-      title: "A platform for high-end products",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          A platform for<br/>high-end products
+        </h3>
+        ),
       description:
         "Understanding the uniqueness of the client's idea about Luxify, we - the development team from Golden Owl tried our best and applied technology selectively to the platform. Hence, now we have one of the greatest platforms for the high-end class."
     }
@@ -434,7 +503,11 @@ export default {
       { src: pImages.narratrs8, col: 4 }
     ],
     brief: {
-      title: "A way to be famous",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          A way to be famous
+        </h3>
+        ),
       description:
         "Users’ stories would be more interesting and well-known due to Narratrs. Users now can become more famous and are able to earn money from this platform."
     }
@@ -453,7 +526,11 @@ export default {
       { src: pImages.publicInsight5, col: 12 }
     ],
     brief: {
-      title: "We always try our best",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          We always try<br/>our best
+        </h3>
+        ),
       description:
         "Knowing the importance of official information, Golden Owl has tried our best to bring the best product to clients. We are proud to be the"
     }
@@ -471,7 +548,11 @@ export default {
       { src: pImages.techsauce4, col: 12 }
     ],
     brief: {
-      title: "As a very helpful platform",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          As a very<br/>helpful platform
+        </h3>
+        ),
       description:
         "We have built a CMS platform for service providers to manage their customers whenever there is urgent demand from users. HOMEHUB will be an effective with everybody so that it could help them move home easier and comfortably."
     }
@@ -501,7 +582,11 @@ export default {
       { src: pImages.open16, col: 12 }
     ],
     brief: {
-      title: "Most modern workflow",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Most modern <br/> workflow
+        </h3>
+        ),
       description:
         "Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product."
     }
@@ -527,7 +612,11 @@ export default {
       { src: pImages.theLuxeNomad6, col: 4 }
     ],
     brief: {
-      title: "Handful site",
+      title: (
+        <h3 className="ml-auto portfolio-details__item-title">
+          Handful site
+        </h3>
+        ),
       description:
         "The Luxe Nomad is bringing lots of opportunities for travellers to find the most suitable and comfortable accommodation for their vacation. No matter where they go, they will always have the greatest time."
     }
