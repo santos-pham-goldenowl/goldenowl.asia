@@ -11,8 +11,10 @@
       font-size: 12pt
     @include responsive($screen: tablet)
       font-size: 10px
+      margin: 0 -4px
     @include responsive($screen: desktop)
-      font-size: 12px
+      font-size: 14px
+      margin: 0 -5px
     @include responsive($screen: large-desktop)
       font-size: 18px
 
@@ -26,27 +28,12 @@
     @include responsive($screen: tablet)
       font-size: 10px
     @include responsive($screen: desktop)
-      font-size: 10px
+      font-size: 12px
     @include responsive($screen: large-desktop)
       font-size: 16px
 
-  .quote-icon
-    width: 0.3vw
-    height: 0.3vw
-    margin-bottom: 1.4vw
-    margin-right: 0.3vw
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .auto-carousel
-    p
-      font-size: 10px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .auto-carousel
-    p
-      font-size: 12px
-
-@media only screen and (min-width: 1366px)
-  .auto-carousel
-    p
-      font-size: 18px
+.react-multi-carousel-dot-list
+  @include responsive($screen: tablet)
+    bottom: -24px !important
+  @include responsive($screen: desktop)
+    bottom: -31px !important
