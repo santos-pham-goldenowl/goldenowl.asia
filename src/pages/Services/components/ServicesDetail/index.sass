@@ -68,13 +68,17 @@
       font-size: 20px
     h5
       @include responsive($screen: mobile)
+        font-size: 18px
         margin-bottom: 10px
       @include responsive($screen: tablet)
         margin-bottom: 7px
+        font-size: 12px
       @include responsive($screen: desktop)
         margin-bottom: 9px
+        font-size: 14px
       @include responsive($screen: large-desktop)
         margin-bottom: 13px
+        font-size: 20px
 
   &__links
     @include responsive($screen: mobile)
@@ -85,39 +89,3 @@
       padding-bottom: 107px
     @include responsive($screen: large-desktop)
       padding-bottom: 150px
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .services-detail
-
-    &__links
-      padding-bottom: 80px
-
-    .img-wrapper
-
-    img
-      &:last-child
-        height: 117px
-
-    .card-content
-      h5
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .services-detail
-
-    &__links
-
-    img
-      &:last-child
-
-    .card-content
-      h5
-
-@media only screen and (min-width: 1366px)
-  .services-detail
-
-    .img-wrapper
-    img
-      &:last-child
-
-    .card-content
-      h5
