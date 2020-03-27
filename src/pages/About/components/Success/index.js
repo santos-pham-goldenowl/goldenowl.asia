@@ -2,9 +2,10 @@ import React from 'react'
 
 import './index.sass'
 import map from '../../../../assets/images/map.svg'
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth'
 
 const Success = () => {
-  const isMobile = window.innerWidth < 768;
+  const isMobile = useMobileWidth();
 
   return (
   <section className="success">
