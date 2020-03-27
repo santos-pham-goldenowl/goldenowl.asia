@@ -1,7 +1,10 @@
 import React from "react";
 
 import present from "../../../../assets/images/service_description.png";
+import servicesMobile from "../../../../assets/images/service_mobile.png"
 import Bg from "../../../../assets/images/wavy_bg_2.png";
+
+import useMobileWidth from "../../../../utils/hooks/useMobileWidth";
 
 import "./index.sass";
 
@@ -13,11 +16,13 @@ const ServicesDescription = () => {
     backgroundSize: "100vw"
   };
 
+  const isMobile = useMobileWidth();
+
   return (
     <section className="services-description" style={sectionStyle}>
       <div className="row">
         <div className="col-md-5">
-          <h2 className="services-description__title">SERVICES</h2>
+          <h2 className="services-description__title">Services</h2>
           <p className="">
             We provide software solutions, mostly about website and mobile
             applications for a wide variety of fields, from finance to commerce
@@ -26,7 +31,7 @@ const ServicesDescription = () => {
           </p>
         </div>
         <div className="col-md-6 ml-auto">
-          <img src={present} alt="present" />
+          <img src={isMobile ? servicesMobile : present} alt="present" />
         </div>
       </div>
     </section>

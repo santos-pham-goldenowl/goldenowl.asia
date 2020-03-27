@@ -1,92 +1,123 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
 .services-detail
   align-items: start
-    
-  .col-md-4
-    &:nth-child(1), &:nth-child(2), &:nth-child(3)
-      padding-top: 0
+  @include responsive($screen: mobile)
+    padding-top: 10.4px
+  @include responsive($screen: tablet)
+    padding-top: 80px
+  @include responsive($screen: desktop)
+    padding-top: 107px
+  @include responsive($screen: large-desktop)
+    padding-top: 150px
 
   .img-wrapper
     display: flex
     justify-content: center
     -o-object-fit: contain
     object-fit: contain
+    @include responsive($screen: mobile)
+      margin-bottom: 40px
+    @include responsive($screen: tablet)
+      margin-bottom: 21px
+    @include responsive($screen: desktop)
+      margin-bottom: 28px
+    @include responsive($screen: large-desktop)
+      margin-bottom: 40px
+
+  .link-wrapper
+    @include responsive($screen: mobile)
+      margin-top: 40px !important
+    @include responsive($screen: tablet)
+      margin-top: 69px
+    @include responsive($screen: desktop)
+      margin-top: 92px
+    @include responsive($screen: large-desktop)
+      margin-top: 130px
+    &:nth-child(1), &:nth-child(2), &:nth-child(3)
+      margin-top: 0
 
   img
     transition: transform .3s
     &:hover
       transform: scale(1.15)
-  
+    &:last-child
+      @include responsive($screen: mobile)
+        height: 196px
+      @include responsive($screen: tablet)
+        height: 117px
+      @include responsive($screen: desktop)
+        height: 156px
+      @include responsive($screen: large-desktop)
+        height: 220px
+
   .card-content
-    line-height: 1.5;
+    line-height: 1.5
+    @include responsive($screen: mobile)
+      font-size: 16px
+      width: 100%
+    @include responsive($screen: tablet)
+      width: 187px
+      font-size: 12px
+    @include responsive($screen: desktop)
+      width: 249px
+      font-size: 14px
+    @include responsive($screen: large-desktop)
+      width: 350px
+      font-size: 20px
+    h5
+      @include responsive($screen: mobile)
+        margin-bottom: 10px
+      @include responsive($screen: tablet)
+        margin-bottom: 7px
+      @include responsive($screen: desktop)
+        margin-bottom: 9px
+      @include responsive($screen: large-desktop)
+        margin-bottom: 13px
+
+  &__links
+    @include responsive($screen: mobile)
+      padding-bottom: 50px
+    @include responsive($screen: tablet)
+      padding-bottom: 80px
+    @include responsive($screen: desktop)
+      padding-bottom: 107px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 150px
 
 @media (min-width: 768px) and (max-width: 1023px)
   .services-detail
-    padding-top: 80px
 
     &__links
       padding-bottom: 80px
-      
-    .col-md-4
-      padding-top: 69px
-    
+
     .img-wrapper
-      margin-bottom: 21px
 
     img
       &:last-child
         height: 117px
-    
-    .card-content
-      width: 187px
-      font-size: 12px
-      h5
-        margin-bottom: 7px
 
+    .card-content
+      h5
 
 @media (min-width: 1024px) and (max-width: 1365px)
   .services-detail
-    padding-top: 107px
 
     &__links
-      padding-bottom: 107px
-      
-    .col-md-4
-      padding-top: 92px
-    
-    .img-wrapper
-      margin-bottom: 28px
 
     img
       &:last-child
-        height: 156px
-    
+
     .card-content
-      width: 249px
-      font-size: 14px
       h5
-        margin-bottom: 9px
 
 @media only screen and (min-width: 1366px)
   .services-detail
-    padding-top: 150px
 
-    &__links
-      padding-bottom: 150px
-      
-    .col-md-4
-      padding-top: 130px
-    
     .img-wrapper
-      margin-bottom: 40px
-
     img
       &:last-child
-        height: 220px
-    
+
     .card-content
-      width: 350px
-      font-size: 20px
       h5
-        margin-bottom: 13px
