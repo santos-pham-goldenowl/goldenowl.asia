@@ -3,8 +3,6 @@ import Carousel from 'react-multi-carousel'
 
 import 'react-multi-carousel/lib/styles.css'
 import './index.sass'
-import leftQuote from '../../assets/images/quote-left-solid.svg'
-import rightQuote from '../../assets/images/quote-right-solid.svg'
 
 const responsive = {
   desktop: {
@@ -45,9 +43,7 @@ const AutoCarousel = (props) => (
     {props.content.map((c) => (
       <div key={c.name} className="auto-carousel" style={{ paddingRight: '25px', paddingLeft: '25px', textAlign: 'left' }}>
         <p>
-          <img className="quote-icon" src={leftQuote} alt="left-double-quote" loading="lazy" />
-          {c.content}
-          <img className="quote-icon" src={rightQuote} alt="right-double-quote" loading="lazy" />
+          {`"${c.content}"`}
         </p>
         <div className="feedback__client-wrapper">
           <img src={c.url} alt="study" loading="lazy" />

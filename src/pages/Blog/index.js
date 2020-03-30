@@ -105,6 +105,7 @@ const Blog = () => (
               default:
                 break;
             }
+            return <div />;
           })}
         </div>
       </section>

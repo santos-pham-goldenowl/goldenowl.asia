@@ -188,7 +188,7 @@ const servicesDetails = {
     cover: uiUxCoverImage,
     first: { content: 'A good user experience is the best glue between a brand and (potential) customers. We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.' },
     second: {
-      title: 'We offer a design services.',
+      title: 'We offer a design services',
       content: 'All our team members here at shape understand web design and application design. We can create UX UI design services in specific areas to help your business. Creating unique visuals to make you and your brand stand out from the crowd, and more importantly - your competitors.',
 
     },
