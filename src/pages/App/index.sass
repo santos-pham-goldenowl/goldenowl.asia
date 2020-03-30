@@ -111,21 +111,27 @@ input, select, textarea
   border-radius: unset !important
   margin-bottom: 1.25rem
   @include responsive($screen: mobile)
+    font-size: 14px !important
   @include responsive($screen: tablet)
-    font-size: 10px
+    font-size: 10px !important
   @include responsive($screen: desktop)
-    font-size: 14px
+    font-size: 14px !important
   @include responsive($screen: large-desktop)
-    font-size: 16px
+    font-size: 16px !important
 
 textarea
   padding: 0.4375rem 0.75rem !important
   border: solid 1px $solidBlack !important
+  @include responsive($screen: mobile)
+    line-height: 1.6 !important
 
 input, select
   height: calc(2.625rem + 2px) !important
   padding: 0.8125rem 0.75rem !important
   border: solid 1px $slightGray !important
+  @include responsive($screen: mobile)
+    height: 50px !important
 
 label
+  line-height: 1.25
   margin-bottom: 0.75rem

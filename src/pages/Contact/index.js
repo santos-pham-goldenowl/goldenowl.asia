@@ -9,8 +9,12 @@ import CheckPoint from '../../components/CheckPoint'
 import ArrowRight from '../../components/ArrowRight'
 
 import './index.sass'
+import useMobileWidth from '../../utils/hooks/useMobileWidth'
 
-const SingleService = () => (
+const SingleService = () => {
+  const isMobile = useMobileWidth();
+
+  return (
   <section className="contact-us">
     <div className="container-fluid no-padding">
       <MainHeader />
@@ -22,7 +26,7 @@ const SingleService = () => (
         <div className="contact-form__wrapper">
           <div className="row">
             <div className="col-md-5">
-              <h1>Chat with our sales team</h1>
+              {isMobile ? <h1>Chat with our <br /> sales team</h1> : <h1>Chat with our sales team</h1>}
               <p className="contact-form__introduction">
                   Whether you’re a start-up, we’d love to chat about our
                   products and make a personalised plan that fits your business.
@@ -97,7 +101,7 @@ const SingleService = () => (
                     <label>Your message*</label>
                     <textarea
                       required
-                      rows={10}
+                      rows={isMobile ? 7 : 10}
                       className="form-control"
                       placeholder="How can we help you?"
                     />
@@ -106,10 +110,10 @@ const SingleService = () => (
                     <div className="contact-form__send-wrapper d-flex">
                       <div className="send-rectangle">
                         <div className="row h-100">
-                          <div className="col-md-6 mt-auto">
+                          <div className="col-6 mt-auto">
                             <p>Send message</p>
                           </div>
-                          <div className="col-md-6 mt-auto d-flex justify-content-end">
+                          <div className="col-6 mt-auto d-flex justify-content-end">
                             <ArrowRight className="contact-form__arrow" />
                           </div>
                         </div>
@@ -126,6 +130,6 @@ const SingleService = () => (
       <Footer />
     </div>
   </section>
-)
+)}
 
 export default SingleService
