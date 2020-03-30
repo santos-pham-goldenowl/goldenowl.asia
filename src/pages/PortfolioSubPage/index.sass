@@ -1,215 +1,200 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
+
 .portfolio-details
+  @include responsive($screen: mobile)
+  @include responsive($screen: tablet)
+    padding-top: 42px
+    padding-bottom: 80px
+  @include responsive($screen: desktop)
+    padding-top: 57px
+    padding-bottom: 107px
+  @include responsive($screen: large-desktop)
+    padding-top: 80px
+    padding-bottom: 150px
 
-  &__body
-    h1
-      color: $solidBlack
-    
-    &__next-project
-      background-color: #24272C
-      h3, p
-        color: $white
-      h3
-        line-height: 1.67
-      p
-        line-height: 1.5
-
-    &__item-title
-      text-align: right
-      line-height: 1.67
-    
-    &__item-content
-      line-height: 1.5
-      color: $softBlack
-    
-    ul
-      padding-inline-start: 0
-      > li
-        &:before
-          content: '•'
-  
-    .no-margin-bottom
-      margin-bottom: 0
-
-    img
-      width: 100%
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .portfolio-details
-    &__body
-      padding-top: 42px
+  h1
+    color: $solidBlack
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      font-size: 30px
+      padding-bottom: 42px
+    @include responsive($screen: desktop)
+      font-size: 38px
+      padding-bottom: 57px
+    @include responsive($screen: large-desktop)
+      font-size: 60px
       padding-bottom: 80px
-      .row
-        margin: 0 -15px !important
 
-      [class*='col']
-        padding-left: 15px !important
-        padding-right: 15px !important
-      
-      .col-md-6
-        &:nth-child(2n)
-          padding-left: 25px !important
-        &:nth-child(2n+1)
-          padding-right: 25px !important
-        
-      h1
-        font-size: 30px
-        padding-bottom: 42px
+  .row
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      margin: 0 -10px !important
+    @include responsive($screen: desktop)
+      margin: 0 -15px !important
+    @include responsive($screen: large-desktop)
+      margin: 0 -25px !important
 
-      &__cover
-        padding-bottom: 53px
+  [class*='col']
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding-left: 10px !important
+      padding-right: 10px !important
+    @include responsive($screen: desktop)
+      padding-left: 15px !important
+      padding-right: 15px !important
+    @include responsive($screen: large-desktop)
+      padding-left: 25px !important
+      padding-right: 25px !important
 
-      &__first-paragraph
-        margin-bottom: 32px
-      
-      &__second-paragraph
-        margin-bottom: 48px
-      
-      &__third-paragraph
-        margin-top: 11px
-        margin-bottom: 69px
-      
-      &__next-project
-        padding: 42px
-        h3
-          font-size: 19px
-        p
-          font-size: 12px
+  .col-md-6
+    &:nth-child(2n)
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        padding-left: 21px !important
+      @include responsive($screen: desktop)
+        padding-left: 28px !important
+      @include responsive($screen: large-desktop)
+        padding-left: 40px !important
+    &:nth-child(2n+1)
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        padding-right: 21px !important
+      @include responsive($screen: desktop)
+        padding-right: 28px !important
+      @include responsive($screen: large-desktop)
+        padding-right: 40px !important
 
-      &__item-title
+  &__cover
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding-bottom: 53px !important
+    @include responsive($screen: desktop)
+      padding-bottom: 71px !important
+    @include responsive($screen: large-desktop)
+      padding-bottom: 100px !important
+
+  &__first-paragraph
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      margin-bottom: 32px
+    @include responsive($screen: desktop)
+      margin-bottom: 43px
+    @include responsive($screen: large-desktop)
+      margin-bottom: 60px
+
+  &__second-paragraph
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      margin-bottom: 48px
+    @include responsive($screen: desktop)
+      margin-bottom: 64px
+    @include responsive($screen: large-desktop)
+      margin-bottom: 90px
+
+  &__third-paragraph
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      margin-top: 11px
+      margin-bottom: 69px
+    @include responsive($screen: desktop)
+      margin-top: 20px
+      margin-bottom: 130px
+    @include responsive($screen: large-desktop)
+      margin-top: 20px
+      margin-bottom: 130px
+
+  &__next-project
+    background-color: #24272C
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding: 42px
+    @include responsive($screen: desktop)
+      padding: 57px
+    @include responsive($screen: large-desktop)
+      padding: 80px
+    h3, p
+      color: $white
+    h3
+      line-height: 1.67
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
         font-size: 19px
-      
-      &__item-content
+      @include responsive($screen: desktop)
+        font-size: 24px
+      @include responsive($screen: large-desktop)
+        font-size: 36px
+    p
+      line-height: 1.5
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
         font-size: 12px
-        width: 264px !important
-        margin-right: 85px
-        margin-left: 42px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 20px
 
-      ul > li
-        &:before
+  &__item-title
+    text-align: right
+    line-height: 1.67
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      font-size: 19px
+    @include responsive($screen: desktop)
+      font-size: 24px
+    @include responsive($screen: large-desktop)
+      font-size: 36px
+
+  &__item-content
+    line-height: 1.5
+    color: $softBlack
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      font-size: 12px
+      width: 264px !important
+      margin-right: 85px
+      margin-left: 42px
+    @include responsive($screen: desktop)
+      font-size: 14px
+      width: 352px !important
+      margin-right: 114px
+      margin-left: 57px
+    @include responsive($screen: large-desktop)
+      font-size: 20px
+      width: 495px !important
+      margin-right: 160px
+      margin-left: 80px
+
+  ul
+    padding-inline-start: 0
+    > li
+      &:before
+        content: '•'
+        @include responsive($screen: mobile)
+        @include responsive($screen: tablet)
           font-size: 13px
           padding-right: 21px
           padding-bottom: 5px
-
-      &__image
-        padding-bottom: 42px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .portfolio-details
-    &__body
-      padding-top: 57px
-      padding-bottom: 107px
-      .row
-        margin: 0 -15px !important
-
-      [class*='col']
-        padding-left: 15px !important
-        padding-right: 15px !important
-      
-      .col-md-6
-        &:nth-child(2n)
-          padding-left: 25px !important
-        &:nth-child(2n+1)
-          padding-right: 25px !important
-        
-      h1
-        font-size: 38px
-        padding-bottom: 57px
-
-      &__cover
-        padding-bottom: 71px
-
-      &__first-paragraph
-        margin-bottom: 43px
-      
-      &__second-paragraph
-        margin-bottom: 64px
-      
-      &__third-paragraph
-        margin-top: 14px
-        margin-bottom: 92px
-      
-      &__next-project
-        padding: 57px
-        h3
-          font-size: 24px
-        p
-          font-size: 14px
-
-      &__item-title
-        font-size: 24px
-      
-      &__item-content
-        font-size: 14px
-        width: 352px !important
-        margin-right: 114px
-        margin-left: 57px
-
-      ul > li
-        &:before
+        @include responsive($screen: desktop)
           font-size: 17px
           padding-right: 28px
           padding-bottom: 7px
-
-      &__image
-        padding-bottom: 57px
-
-@media only screen and (min-width: 1366px)
-  .portfolio-details
-    &__body
-      padding-top: 80px
-      padding-bottom: 150px
-      .row
-        margin: 0 -25px !important
-
-      [class*='col']
-        padding-left: 25px !important
-        padding-right: 25px !important
-      
-      .col-md-6
-        &:nth-child(2n)
-          padding-left: 40px !important
-        &:nth-child(2n+1)
-          padding-right: 40px !important
-        
-      h1
-        font-size: 60px
-        padding-bottom: 80px
-
-      &__cover
-        padding-bottom: 100px
-
-      &__first-paragraph
-        margin-bottom: 60px
-      
-      &__second-paragraph
-        margin-bottom: 90px
-      
-      &__third-paragraph
-        margin-top: 20px
-        margin-bottom: 130px
-      
-      &__next-project
-        padding: 80px
-        h3
-          font-size: 36px
-        p
-          font-size: 20px
-
-      &__item-title
-        font-size: 36px
-      
-      &__item-content
-        font-size: 20px
-        width: 495px !important
-        margin-right: 160px
-        margin-left: 80px
-
-      ul > li
-        &:before
+        @include responsive($screen: large-desktop)
           font-size: 24px
           padding-right: 40px
           padding-bottom: 10px
 
-      &__image
-        padding-bottom: 80px
+  .no-margin-bottom
+    margin-bottom: 0
+
+  img
+    width: 100%
+
+  &__image
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding-bottom: 42px !important
+    @include responsive($screen: desktop)
+      padding-bottom: 57px !important
+    @include responsive($screen: large-desktop)
+      padding-bottom: 80px !important

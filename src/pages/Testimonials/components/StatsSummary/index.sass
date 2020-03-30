@@ -1,54 +1,47 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
-.testimonials-stats
-
-  .stats
-    h2
-      color: #f9be39
-@media (min-width: 768px) and (max-width: 1023px)
-  .stats-summary
+.stats-summary
+  @include responsive($screen: mobile)
+  @include responsive($screen: tablet)
     padding: 0 0 80px 0
-    
-    &__image-wrapper
+  @include responsive($screen: desktop)
+    padding: 0 0 107px 0
+  @include responsive($screen: large-desktop)
+    padding: 0 0 150px 0
+
+  &__image-wrapper
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
       padding-left: 56px
       padding-right: 56px
-
-    &__paragraph
-      padding: 12px 0 27px 0
-      p
-        padding-left: 35px
-        padding-right: 21px
-        font-size: 14px
-        line-height: 1.54
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .stats-summary
-    padding: 0 0 107px 0
-    
-    &__image-wrapper
+    @include responsive($screen: desktop)
       padding-left: 75px
       padding-right: 75px
-
-    &__paragraph
-      padding: 16px 0 36px 0
-      p
-        padding-left: 46px
-        padding-right: 28px
-        font-size: 18px
-        line-height: 1.54
-
-@media only screen and (min-width: 1366px)
-  .stats-summary
-    padding: 0 0 150px 0
-    
-    &__image-wrapper
+    @include responsive($screen: large-desktop)
       padding-left: 105px
       padding-right: 105px
 
-    &__paragraph
+  &__paragraph
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding: 12px 0 27px 0
+    @include responsive($screen: desktop)
+      padding: 16px 0 36px 0
+    @include responsive($screen: large-desktop)
       padding: 23px 0 50px 0
-      p
+    p
+      line-height: 1.54
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        padding-left: 35px
+        padding-right: 21px
+        font-size: 14px
+      @include responsive($screen: desktop)
+        padding-left: 46px
+        padding-right: 28px
+        font-size: 18px
+      @include responsive($screen: large-desktop)
         padding-left: 65px
         padding-right: 40px
         font-size: 26px
-        line-height: 1.54

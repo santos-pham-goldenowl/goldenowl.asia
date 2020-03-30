@@ -10,8 +10,8 @@ const Develop = () => (
       <br />
       already love
     </h2>
-    <div className="row">
-      <div className="col-md-4 develop__content">
+    <div className="row develop__content">
+      <div className="col-12 col-md-4 develop__content-text">
         <h3>
           Work with your beloved and familiar language
         </h3>
@@ -19,7 +19,7 @@ const Develop = () => (
           Golden Owl - we have a team that is expert at different programming languages so whatever your favourite language is, we are always here to turn it into your wanted product.
         </p>
       </div>
-      <div className="col-md-7 ml-auto flex-row-reverse">
+      <div className="col-12 col-md-7 ml-auto image-wrapper">
         <div className="rectangle" />
         <img className="develop__image" src={code} alt="code" />
       </div>

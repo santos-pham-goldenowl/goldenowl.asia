@@ -1,69 +1,95 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
 .develop
-  &__image
-    width: 100%
+  @include responsive($screen: mobile)
+    padding-top: 50px
+  @include responsive($screen: tablet)
+    padding: 80px 0 37px 0
+  @include responsive($screen: desktop)
+    padding: 107px 0 49px 0
+  @include responsive($screen: large-desktop)
+    padding: 150px 0 69px 0
 
-  .row
+  &__content
+    @include responsive($screen: tablet)
+      margin-top: 53px !important
+    @include responsive($screen: desktop)
+      margin-top: 71px !important
+    @include responsive($screen: large-desktop)
+      margin-top: 100px !important
+    h3
+      line-height: 1.34
+      @include responsive($screen: mobile)
+        padding-top: 40px
+        font-size: 24px
+      @include responsive($screen: tablet)
+        padding-top: 43px
+        font-size: 20px
+      @include responsive($screen: desktop)
+        padding-top: 57px
+        font-size: 26px
+      @include responsive($screen: large-desktop)
+        padding-top: 80px
+        font-size: 34px
     p
       line-height: 1.54
-    .col-md-7
-      div, img
-        position: inherit
-        right: 0  
-  
-  .rectangle 
-    background-color: $softGray;
+      @include responsive($screen: mobile)
+        padding-top: 20px
+        padding-bottom: 40px
+        font-size: 16px
+        line-height: 1.5
+      @include responsive($screen: tablet)
+        padding-top: 16px
+        font-size: 14px
+      @include responsive($screen: desktop)
+        padding-top: 21px
+        font-size: 18px
+      @include responsive($screen: large-desktop)
+        padding-top: 30px
+        font-size: 26px
+
+  .image-wrapper
+    @include responsive($screen: mobile)
+      margin-right: -15px
+      height: 296px
+
+  .rectangle, &__image
+    @include responsive($screen: mobile)
+      position: absolute
+      right: 0
+      width: 301px
+    @include responsive($screen: tablet)
+      width: 435px
+    @include responsive($screen: desktop)
+      width: 580px
+    @include responsive($screen: large-desktop)
+      width: 815px
+
+  .rectangle
+    background-color: $softGray
+    @include responsive($screen: mobile)
+      height: 13.1px
+      border-radius: 2.6px
+    @include responsive($screen: tablet)
+      height: 16px
+      border-radius: 3px
+    @include responsive($screen: desktop)
+      height: 21px
+      border-radius: 4px
+    @include responsive($screen: large-desktop)
+      height: 30px
+      border-radius: 6px
 
   &__title
     text-align: center
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .develop
-    padding-top: 10.4vw
-    padding-bottom: 4.8vw
-
-    .row
-      margin-top: 6.9vw
-      h3
-        padding-top: 3.5vw
-        font-size: 26px
-      p
-        padding-top: 2.1vw
-        font-size: 18px
-    
-    .rectangle 
-      width: 56.6vw
-      height: 2.1vw
-      border-radius: 0.4vw;
-
-    &__image
-      width: 56.6vw
-
-    &__title
-      height: 6.3vw
-
-@media only screen and (min-width: 1366px)
-  .develop
-    padding-top: 150px
-    padding-bottom: 69px
-
-    .row
-      margin-top: 100px
-      h3
-        padding-top: 50px
-        font-size: 34px
-      p
-        padding-top: 30px
-        font-size: 26px
-    
-    .rectangle 
-      width: 815px
-      height: 30px
-      border-radius: 6px;
-
-    &__image
-      width: 815px
-
-    &__title
-      height: 90px
+    line-height: 1.3
+    @include responsive($screen: mobile)
+      text-align: left
+      font-size: 24px
+    @include responsive($screen: tablet)
+      font-size: 20px
+    @include responsive($screen: desktop)
+      font-size: 26px
+    @include responsive($screen: large-desktop)
+      font-size: 34px

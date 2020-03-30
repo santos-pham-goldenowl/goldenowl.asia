@@ -1,13 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import MainHeader from "../../components/MainHeader";
-import SubHeader from "../../components/SubHeader";
-import BreadCrumb from "../../components/BreadCrumb";
-import Footer from "../../components/Footer";
-import objectToArray from "../../utils/objectToArray";
+import MainHeader from '../../components/MainHeader'
+import SubHeader from '../../components/SubHeader'
+import BreadCrumb from '../../components/BreadCrumb'
+import Footer from '../../components/Footer'
+import objectToArray from '../../utils/objectToArray'
 
-import "./index.sass";
+import './index.sass'
+
 
 const SingleService = ({ content }) => {
   return (
@@ -59,20 +60,16 @@ const SingleService = ({ content }) => {
             <div className="service__yellow-rectangle__text">
               <h3>{content.fourth.title}</h3>
               <p>{content.fourth.content}</p>
-            </div>
-            <div className="service__logos-wrapper">
-              <div className="d-flex flex-wrap">
-                {content.fourth.logos.map(image => (
-                  <img
-                    key={image.name}
-                    src={image.url}
-                    alt={image.name}
-                    loading="lazy"
-                  />
-                ))}
-              </div>
+
             </div>
           </div>
+          <div className="col-md-4">
+            <div className="service__slogan-item no-border">
+              <h3>{content.third.right.title}</h3>
+              <p>{content.third.right.content}</p>
+            </div>
+          </div>
+
           <div id="dashed-border" className="service__dotted-square d-flex">
             {/* append data */}
             <div id="inside-border" className="service__yellow-rectangle d-flex invisible">
@@ -126,4 +123,4 @@ const SingleService = ({ content }) => {
   );
 };
 
-export default SingleService;
+export default SingleService

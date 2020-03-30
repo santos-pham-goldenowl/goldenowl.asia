@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import ServicesData from "../../utils/Services";
-import arrowRight from "../../assets/images/arrow-right.svg";
-import arrowDown from "../../assets/images/chevron-down-solid.svg";
+import ServicesData from '../../utils/Services'
+import arrowRight from '../../assets/images/arrow-right.svg'
+import arrowDown from '../../assets/images/chevron-down-solid.svg'
 
-import "./index.sass";
-import "./service.sass";
-import { Dropdown } from "react-bootstrap";
+import './index.sass'
+import './service.sass'
 
 class SubHeader extends Component {
   render() {
@@ -19,38 +18,39 @@ class SubHeader extends Component {
           </Link>
         </div>
         {/* Services Dropdown-start */}
-        <Dropdown>
-          <Dropdown.Toggle
-            variant={"link"}
-            className="services__link services__arrow-wrapper sub-header__button dropdown-toggle d-flex no-bootstrap-arrow no-hover-text-decoration"
+        <div className="dropdown">
+          <div
+            className="align-items-center sub-header__button"
             id="services-dropdown"
           >
-            <a className="no-hover-text-decoration" href="/services">
+            <Link
+              className="d-flex align-items-center no-hover-text-decoration"
+              to="/services"
+            >
               <h4 className="sub-header__text">Services</h4>
-            </a>
-            <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-          </Dropdown.Toggle>
-          <Dropdown.Menu
-            className="services__items"
-            ariaLabelledby="services-dropdown"
-          >
-            {ServicesData.map(service => (
-              <Link key={service.link} to={`/services/${service.link}`}>
-                <div className="services__service">
-                  <div className="services__icon-wrapper">
-                    <img src={service.url} alt={service.name} />
+              <img className="arrow-down" src={arrowDown} alt="arrow-down" />
+            </Link>
+          </div>
+          <div className="dropdown-content">
+            <div className="services__items">
+              {ServicesData.map((service) => (
+                <Link key={service.link} to={`/services/${service.link}`}>
+                  <div className="services__service">
+                    <div className="services__icon-wrapper">
+                      <img src={service.url} alt={service.name} />
+                    </div>
+                    <div className="services__service-description-wrapper">
+                      <h4>{service.name}</h4>
+                      <p className="services__service-description">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="services__service-description-wrapper">
-                    <h4>{service.name}</h4>
-                    <p className="services__service-description">
-                      {service.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </Dropdown.Menu>
-        </Dropdown>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
         {/* Services Dropdown-end */}
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/technologies">
@@ -75,8 +75,8 @@ class SubHeader extends Component {
           </Link>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default SubHeader;
+export default SubHeader

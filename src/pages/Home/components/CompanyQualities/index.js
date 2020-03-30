@@ -22,7 +22,7 @@ const CompanyQualities = () => (
         <div className="d-flex">
           <p className="bottom-line">
               Value clear rules, relationships based on trust, dialogue and
-              through the quality of services provided
+              through the quality of services provided.
           </p>
         </div>
       </div>
@@ -34,7 +34,7 @@ const CompanyQualities = () => (
             working model which
         </h5>
         <div className="d-flex">
-          <p>Provides flexible solution for dynamic requirements</p>
+          <p>Provides flexible solution for dynamic requirements.</p>
         </div>
         <div className="d-flex">
           <p>
@@ -46,7 +46,7 @@ const CompanyQualities = () => (
           <p className="bottom-line">
               Allows Clients to track progress and know exactly where the team
               is at any point. It is ending up with a better product reduces the
-              business risk of the enterprise
+              business risk of the enterprise.
           </p>
         </div>
       </div>
@@ -56,7 +56,7 @@ const CompanyQualities = () => (
         <div className="d-flex">
           <p>
               The unspoken international rule of business which is the offshore
-              development center
+              development center.
           </p>
         </div>
         <div className="d-flex">

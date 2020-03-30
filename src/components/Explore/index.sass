@@ -35,29 +35,31 @@
       font-size: 10px
     @include responsive($screen: desktop)
       font-size: 14px
-      padding-right: 9px
+      padding-right: 14px
     @include responsive($screen: large-desktop)
+      font-size: 16px
+      padding-right: 20px
 
   &__description
     font-family: ProximaNovaBold
     line-height: 1.23
     @include responsive($screen: mobile)
       display: none
+    @include responsive($screen: tablet)
+      font-size: 18px
+      padding: 6px 0 32px 0
+    @include responsive($screen: desktop)
+      font-size: 26px
+      padding: 9px 0 43px 0
+    @include responsive($screen: large-desktop)
+      font-size: 38px
+      padding: 12px 0 60px 0
 
   &__top-content
     display: flex
     justify-content: space-between
     @include responsive($screen: mobile)
       display: none
-    @include responsive($screen: tablet)
-      font-size: 20px
-      padding: 6px 0 32px 0
-    @include responsive($screen: desktop)
-      font-size: 18px
-      padding: 9px 0 43px 0
-    @include responsive($screen: large-desktop)
-      font-size: 38px
-      padding: 12px 0 60px 0
 
   &__case-study
     display: flex
@@ -65,20 +67,20 @@
       align-self: center
       @include responsive($screen: tablet)
         font-size: 8px
-        padding-right: 6px
+        padding-right: 11px
 
-    &__arrow
-      .arrow-right
-        @include responsive($screen: tablet)
-          left: 18px
-        @include responsive($screen: desktop)
-          left: 24px
-        @include responsive($screen: large-desktop)
-          left: 34px
-      .line
-        @include responsive($screen: tablet)
-          width: 18px
-        @include responsive($screen: desktop)
-          width: 24px
-        @include responsive($screen: large-desktop)
-          width: 34px
+  &__arrow
+    .arrow-right
+      @include responsive($screen: tablet)
+        left: 18px
+      @include responsive($screen: desktop)
+        left: 24px
+      @include responsive($screen: large-desktop)
+        left: 34px
+    .line
+      @include responsive($screen: tablet)
+        width: 18px
+      @include responsive($screen: desktop)
+        width: 24px
+      @include responsive($screen: large-desktop)
+        width: 34px
