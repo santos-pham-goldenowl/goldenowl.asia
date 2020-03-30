@@ -3,8 +3,6 @@ import Carousel from 'react-multi-carousel'
 
 import 'react-multi-carousel/lib/styles.css'
 import './index.sass'
-import leftQuote from '../../assets/images/quote-left-solid.svg'
-import rightQuote from '../../assets/images/quote-right-solid.svg'
 
 const responsive = {
   desktop: {
