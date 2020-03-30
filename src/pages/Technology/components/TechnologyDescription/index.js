@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react'
 
-import bg from "../../../../assets/images/wavy_bg_2.png";
-import technology from "../../../../assets/images/technology-cover.png";
+import bg from '../../../../assets/images/wavy_bg_2.png'
+import technology from '../../../../assets/images/technology-cover.png'
 
-import "./index.sass";
+import './index.sass'
 
 const TechnologyDescription = () => {
   const sectionStyle = {
     backgroundImage: `url(${bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "bottom",
-    backgroundSize: "100vw"
-  };
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'bottom',
+    backgroundSize: '100vw',
+  }
 
   return (
     <section className="technology-description" style={sectionStyle}>
@@ -39,7 +39,7 @@ const TechnologyDescription = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default TechnologyDescription;
+export default TechnologyDescription

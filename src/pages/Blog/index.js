@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react'
 
-import MainHeader from "../../components/MainHeader";
-import SubHeader from "../../components/SubHeader";
-import BreadCrumb from "../../components/BreadCrumb";
-import Footer from "../../components/Footer";
-import blogContent from "../../utils/blogContent";
-import objectToArray from "../../utils/objectToArray";
+import MainHeader from '../../components/MainHeader'
+import SubHeader from '../../components/SubHeader'
+import BreadCrumb from '../../components/BreadCrumb'
+import Footer from '../../components/Footer'
+import blogContent from '../../utils/blogContent'
+import objectToArray from '../../utils/objectToArray'
 
-import "./index.sass";
+import './index.sass'
 
 const Blog = () => (
   <section className="blog">
@@ -50,7 +50,7 @@ const Blog = () => (
                       </div>
                     </div>
                   </div>
-                );
+                )
               case 1:
               case 2:
               case 3:
@@ -76,7 +76,7 @@ const Blog = () => (
                       </div>
                     </div>
                   </div>
-                );
+                )
               case 4:
               case 5:
                 return (
@@ -101,17 +101,17 @@ const Blog = () => (
                       </div>
                     </div>
                   </div>
-                );
+                )
               default:
-                break;
+                break
             }
-            return <div />;
+            return <div />
           })}
         </div>
       </section>
       <Footer />
     </div>
   </section>
-);
+)
 
-export default Blog;
+export default Blog

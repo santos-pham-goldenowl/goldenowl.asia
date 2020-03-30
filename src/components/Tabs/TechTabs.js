@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import TabContent from "./TabContent";
-import TabHeader from "./TabHeader";
-import Tabs from "./Tabs";
+import TabContent from './TabContent'
+import TabHeader from './TabHeader'
+import Tabs from './Tabs'
 
-import "./index.sass";
-import FrontEndTechs from "../../utils/FrontendTechs";
-import BackEndTechs from "../../utils/BackEndTechs";
-import MobileStackTechs from "../../utils/MobileTechs";
+import './index.sass'
+import FrontEndTechs from '../../utils/FrontendTechs'
+import BackEndTechs from '../../utils/BackEndTechs'
+import MobileStackTechs from '../../utils/MobileTechs'
 
 class TabContainer extends Component {
   render() {
@@ -28,7 +28,7 @@ class TabContainer extends Component {
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
-                {FrontEndTechs.map(tech => (
+                {FrontEndTechs.map((tech) => (
                   <div key={tech.name} className="tech-tab__logo-wrapper">
                     <img src={tech.url} alt={tech.name} />
                     <p className="tech-tab__logo-name">{tech.name}</p>
@@ -53,7 +53,7 @@ class TabContainer extends Component {
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
-                {BackEndTechs.map(tech => (
+                {BackEndTechs.map((tech) => (
                   <div key={tech.name} className="tech-tab__logo-wrapper">
                     <img src={tech.url} alt={tech.name} />
                     <p className="tech-tab__logo-name">{tech.name}</p>
@@ -79,7 +79,7 @@ class TabContainer extends Component {
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
-                {MobileStackTechs.map(tech => (
+                {MobileStackTechs.map((tech) => (
                   <div key={tech.name} className="tech-tab__logo-wrapper">
                     <img src={tech.url} alt={tech.name} />
                     <p className="tech-tab__logo-name">{tech.name}</p>
@@ -105,7 +105,7 @@ class TabContainer extends Component {
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
-                {MobileStackTechs.map(tech => (
+                {MobileStackTechs.map((tech) => (
                   <div key={tech.name} className="tech-tab__logo-wrapper">
                     <img src={tech.url} alt={tech.name} />
                     <p className="tech-tab__logo-name">{tech.name}</p>
@@ -116,8 +116,8 @@ class TabContainer extends Component {
           </section>
         </TabContent>
       </Tabs>
-    );
+    )
   }
 }
 
-export default TabContainer;
+export default TabContainer

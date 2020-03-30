@@ -15,8 +15,8 @@ const ServicesDetail = () => (
               <img src={content.url} alt={content.key} />
             </div>
             <div className="card-content">
-                <h5>{content.key}</h5>
-                <p>{content.content}</p>
+              <h5>{content.key}</h5>
+              <p>{content.content}</p>
             </div>
           </Link>
         </div>
