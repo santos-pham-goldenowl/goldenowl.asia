@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import ServicesData from "../../utils/Services";
-import arrowRight from "../../assets/images/arrow-right.svg";
-import arrowDown from "../../assets/images/chevron-down-solid.svg";
+import ServicesData from '../../utils/Services'
+import arrowRight from '../../assets/images/arrow-right.svg'
+import arrowDown from '../../assets/images/chevron-down-solid.svg'
 
-import "./index.sass";
-import "./service.sass";
+import './index.sass'
+import './service.sass'
 
 class SubHeader extends Component {
   render() {
@@ -18,7 +18,7 @@ class SubHeader extends Component {
           </Link>
         </div>
         {/* Services Dropdown-start */}
-        <div class="dropdown">
+        <div className="dropdown">
           <div
             className="align-items-center sub-header__button"
             id="services-dropdown"
@@ -33,7 +33,7 @@ class SubHeader extends Component {
           </div>
           <div className="dropdown-content">
             <div className="services__items">
-              {ServicesData.map(service => (
+              {ServicesData.map((service) => (
                 <Link key={service.link} to={`/services/${service.link}`}>
                   <div className="services__service">
                     <div className="services__icon-wrapper">
@@ -75,8 +75,8 @@ class SubHeader extends Component {
           </Link>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default SubHeader;
+export default SubHeader

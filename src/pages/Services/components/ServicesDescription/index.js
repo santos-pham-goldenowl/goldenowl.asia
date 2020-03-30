@@ -1,22 +1,21 @@
-import React from "react";
+import React from 'react'
 
-import present from "../../../../assets/images/service_description.png";
-import servicesMobile from "../../../../assets/images/service_mobile.png"
-import Bg from "../../../../assets/images/wavy_bg_2.png";
+import present from '../../../../assets/images/service_description.png'
+import servicesMobile from '../../../../assets/images/service_mobile.png'
+import Bg from '../../../../assets/images/wavy_bg_2.png'
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth'
 
-import useMobileWidth from "../../../../utils/hooks/useMobileWidth";
-
-import "./index.sass";
+import './index.sass'
 
 const ServicesDescription = () => {
   const sectionStyle = {
     backgroundImage: `url(${Bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "bottom",
-    backgroundSize: "100vw"
-  };
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'bottom',
+    backgroundSize: '100vw',
+  }
 
-  const isMobile = useMobileWidth();
+  const isMobile = useMobileWidth()
 
   return (
     <section className="services-description" style={sectionStyle}>
@@ -35,7 +34,7 @@ const ServicesDescription = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ServicesDescription;
+export default ServicesDescription

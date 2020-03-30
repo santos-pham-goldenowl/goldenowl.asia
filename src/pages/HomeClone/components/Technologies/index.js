@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react'
 
-import technologiesLogo from "../../../../utils/TechnologiesLogo";
-import "./index.sass";
-import { Link } from "react-router-dom";
+import technologiesLogo from '../../../../utils/TechnologiesLogo'
+
+import './index.sass'
+import { Link } from 'react-router-dom'
 
 const Technologies = () => {
-  const isMobile = window.innerWidth < 768;
+  const isMobile = window.innerWidth < 768
 
   return (
     <section className="technologies">
@@ -25,7 +26,7 @@ const Technologies = () => {
         <span className="technologies__view-all">View all technologies</span>
       </Link>
     </section>
-  );
-};
+  )
+}
 
-export default Technologies;
+export default Technologies

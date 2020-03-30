@@ -2,9 +2,9 @@ import React from 'react'
 
 import MainHeader from '../../components/MainHeader'
 import SubHeader from '../../components/SubHeader'
-import Partners from './components/Partners'
 import Footer from '../../components/Footer'
 
+import Partners from './components/Partners'
 import Contact from './components/Contact'
 import Quote from './components/Quote'
 import Missions from './components/Mission'

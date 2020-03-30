@@ -178,7 +178,7 @@ const servicesDetails = {
     },
     fourth: {
       title: 'We are stronger together',
-      content: "Each member of the development team has their own strength and ability, they may still not good at some points and that’s why they always try our best to work together and support each other for the common achievement. Working together makes us stronger and growing faster.",
+      content: 'Each member of the development team has their own strength and ability, they may still not good at some points and that’s why they always try our best to work together and support each other for the common achievement. Working together makes us stronger and growing faster.',
       logos: [],
     },
     navs: developmentTeam,
@@ -208,7 +208,7 @@ const servicesDetails = {
     },
     fourth: {
       title: 'Seamless Integration with popular design tools.',
-      content: "Design tool plays a very importance role in creating design process. Thanks to tools such as Invision and Adobe Photoshop as well as other ones, amazing designs are produced and published and makes the project’s UI looks so nice and attractive.",
+      content: 'Design tool plays a very importance role in creating design process. Thanks to tools such as Invision and Adobe Photoshop as well as other ones, amazing designs are produced and published and makes the project’s UI looks so nice and attractive.',
       logos: [
         {
           name: 'sketch',
@@ -255,7 +255,7 @@ const servicesDetails = {
     },
     fourth: {
       title: 'Seamless Integration with 50+ software platforms.',
-      content: "Our projects are build in many programming languages like Javascript, Ruby on Rails, etc. Due to those magical tools, we are able to create so many amazing projects. We know which one is more suitable for your project and make it better than ever.",
+      content: 'Our projects are build in many programming languages like Javascript, Ruby on Rails, etc. Due to those magical tools, we are able to create so many amazing projects. We know which one is more suitable for your project and make it better than ever.',
       logos: [
         {
           name: 'html',

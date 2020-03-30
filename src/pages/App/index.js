@@ -4,18 +4,18 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Home from '../Home'
 import HomeClone from '../HomeClone'
 import About from '../About'
-import TechnologyContainer from '../Technology';
+import TechnologyContainer from '../Technology'
 import Services from '../Services'
 import singleServiceDetails from '../../utils/SingleServiceDetails'
-import portfolioDetails from '../../utils/portfolioDetails';
+import portfolioDetails from '../../utils/portfolioDetails'
 import objectToArray from '../../utils/objectToArray'
 import SingleService from '../SingleService'
-import Testimonials from '../Testimonials';
-import Portfolio from '../Portfolio';
-import PortfolioSubPage from '../PortfolioSubPage';
-import Blog from '../Blog';
-import Contact from '../Contact';
-import ScrollToTop from '../../components/ScrollToTop';
+import Testimonials from '../Testimonials'
+import Portfolio from '../Portfolio'
+import PortfolioSubPage from '../PortfolioSubPage'
+import Blog from '../Blog'
+import Contact from '../Contact'
+import ScrollToTop from '../../components/ScrollToTop'
 
 import './index.sass'
 

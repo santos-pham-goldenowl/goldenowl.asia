@@ -1,10 +1,12 @@
-import React from "react";
-import { Tabs, Tab } from "react-bootstrap";
-import "./index.sass";
-import PortfolioHeader from "../../components/PortfolioHeader";
-import allTab, { mobileTab, webTab } from "../../utils/portfolioTabContent";
-import PortfolioInteresting from "../../components/PortfolioInteresting";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Tabs, Tab } from 'react-bootstrap'
+
+import './index.sass'
+import { Link } from 'react-router-dom'
+
+import PortfolioHeader from '../../components/PortfolioHeader'
+import allTab, { mobileTab, webTab } from '../../utils/portfolioTabContent'
+import PortfolioInteresting from '../../components/PortfolioInteresting'
 
 const Portfolio = () => (
   <section className="portfolio">
@@ -41,11 +43,11 @@ const Portfolio = () => (
                       className="portfolio__card"
                       style={{
                         marginRight: index % 2 === 0 ? 20 : 0,
-                        marginLeft: index % 2 === 0 ? 0 : 20
+                        marginLeft: index % 2 === 0 ? 0 : 20,
                       }}
                     >
                       <img src={item.img} alt={item.url} />
-                      <h4 className={item.isWhite && "white-title"}>
+                      <h4 className={item.isWhite && 'white-title'}>
                         {item.content}
                       </h4>
                     </div>
@@ -62,12 +64,12 @@ const Portfolio = () => (
                     <div
                       className="portfolio__card"
                       style={{
-                        marginRight: index % 2 === 0 ? "auto" : 0,
-                        marginLeft: index % 2 === 0 ? 0 : "auto"
+                        marginRight: index % 2 === 0 ? 'auto' : 0,
+                        marginLeft: index % 2 === 0 ? 0 : 'auto',
                       }}
                     >
                       <img src={item.img} alt={item.url} />
-                      <h4 className={item.isWhite && "white-title"}>
+                      <h4 className={item.isWhite && 'white-title'}>
                         {item.content}
                       </h4>
                     </div>
@@ -84,12 +86,12 @@ const Portfolio = () => (
                     <div
                       className="portfolio__card"
                       style={{
-                        marginRight: index % 2 === 0 ? "auto" : 0,
-                        marginLeft: index % 2 === 0 ? 0 : "auto"
+                        marginRight: index % 2 === 0 ? 'auto' : 0,
+                        marginLeft: index % 2 === 0 ? 0 : 'auto',
                       }}
                     >
                       <img src={item.img} alt={item.url} />
-                      <h4 className={item.isWhite && "white-title"}>
+                      <h4 className={item.isWhite && 'white-title'}>
                         {item.content}
                       </h4>
                     </div>
@@ -104,6 +106,6 @@ const Portfolio = () => (
       <PortfolioInteresting />
     </div>
   </section>
-);
+)
 
-export default Portfolio;
+export default Portfolio

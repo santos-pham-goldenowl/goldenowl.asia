@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import bg from "../../../../assets/images/bg.svg";
-import ArrowRight from "../../../../components/ArrowRight";
+import bg from '../../../../assets/images/bg.svg'
+import ArrowRight from '../../../../components/ArrowRight'
 
-import "./index.sass";
+import './index.sass'
 
 const Missions = () => {
   const sectionStyle = {
     backgroundImage: `url(${bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "bottom"
-  };
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'bottom',
+  }
   return (
     <section className="missions" style={sectionStyle}>
       <div className="row">
@@ -29,15 +29,15 @@ const Missions = () => {
             <div className="col-6">
               <Link className="missions__item" to="/services/web-development">
                 <h3 className="missions__item-title">Web development</h3>
-                <ArrowRight className="missions__arrow"/>
+                <ArrowRight className="missions__arrow" />
               </Link>
               <Link className="missions__item" to="/services/ux-ui-design">
                 <h3 className="missions__item-title">UX UI design</h3>
-                <ArrowRight className="missions__arrow"/>
+                <ArrowRight className="missions__arrow" />
               </Link>
               <Link className="missions__item" to="/services/development-team">
                 <h3 className="missions__item-title">Development team</h3>
-                <ArrowRight className="missions__arrow"/>
+                <ArrowRight className="missions__arrow" />
               </Link>
             </div>
             <div className="col-6">
@@ -46,21 +46,21 @@ const Missions = () => {
                 to="/services/mobile-development"
               >
                 <h3 className="missions__item-title">Mobile development</h3>
-                <ArrowRight className="missions__arrow"/>
+                <ArrowRight className="missions__arrow" />
               </Link>
               <Link
                 className="missions__item"
                 to="/services/project-management"
               >
                 <h3 className="missions__item-title">Project management</h3>
-                <ArrowRight className="missions__arrow"/>
+                <ArrowRight className="missions__arrow" />
               </Link>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Missions;
+export default Missions
