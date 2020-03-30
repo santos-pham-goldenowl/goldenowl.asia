@@ -38,7 +38,7 @@ export default {
     main: 'They are my first choice to work with',
     details: '“They are such a good team! Honestly I just come to them with an unclear idea but they keep asking and giving suggestion to make it better and better. They will be my first choice to work with in the future.”',
     companyLogo: gig,
-    title: 'CO - FOUNDER & MANAGER DIRECTOR OF GIG TO GIG',
+    title: 'CO - FOUNDER & ADVISORY OF GIG TO GIG',
     url: 'gig',
   },
 

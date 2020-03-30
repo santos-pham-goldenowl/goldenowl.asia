@@ -3,6 +3,7 @@
 
 .stats-summary
   @include responsive($screen: mobile)
+    padding: 0 0 50px 0
   @include responsive($screen: tablet)
     padding: 0 0 80px 0
   @include responsive($screen: desktop)
@@ -12,6 +13,9 @@
 
   &__image-wrapper
     @include responsive($screen: mobile)
+      padding-left: 25px
+      padding-right: 25px
+      margin-bottom: 40px
     @include responsive($screen: tablet)
       padding-left: 56px
       padding-right: 56px
@@ -33,6 +37,8 @@
     p
       line-height: 1.54
       @include responsive($screen: mobile)
+        line-height: 1.5
+        font-size: 16px
       @include responsive($screen: tablet)
         padding-left: 35px
         padding-right: 21px

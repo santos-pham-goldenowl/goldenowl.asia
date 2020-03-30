@@ -92,7 +92,9 @@ class MainHeader extends Component {
             <li className="main-header__flex-item">
               <Link to="/technologies">Technology</Link>
             </li>
-            <li className="main-header__flex-item">Testimonial</li>
+            <li className="main-header__flex-item">
+            <Link to="/testimonial">Testimonial</Link>
+            </li>
             <li className="main-header__flex-item">Contact us</li>
             <li style={{ borderBottom: '1px solid #f1e3b9', marginBottom: '20px' }} />
             <li className="main-header__flex-item">
