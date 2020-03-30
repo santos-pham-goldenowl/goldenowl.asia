@@ -1,142 +1,134 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
 .testimonials-list
-  .testimonials-list
-    &__item
-      p:last-child
-        padding-bottom: 0
-        
-@media (min-width: 768px) and (max-width: 1023px)
-  .testimonials-list
+  @include responsive($screen: mobile)
+  @include responsive($screen: tablet)
     padding: 93px 0 0 0
-
-    h3
-      font-size: 26px
-      padding-bottom: 64px
-
-    &__item
-      padding-bottom: 53px
-      > div
-        &:first-child
-          > div
-            padding-right: 35px
-        &:last-child
-          > div
-            padding-left: 35px
-      h4
-        font-family: MalloryBold
-        font-size: 20px
-        padding-bottom: 16px
-      p
-        font-size: 14px
-        line-height: 1.5
-        padding-bottom: 43px
-      img.logo
-        height: 16px
-      p.title
-        font-size: 12px
-        padding-top: 11px
-        padding-bottom: 0
-        font-weight: bold
-        line-height: 1.75
-      &:last-child
-        img.logo
-          height: 28px
-      .arrow-wrapper
-        padding-left: 5px
-
-    .case-study__arrow
-      .line
-        width: 18px
-      .arrow-right
-        left: 18px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .testimonials-list
+  @include responsive($screen: desktop)
     padding: 124px 0 0 0
-
-    h3
-      font-size: 34px
-      padding-bottom: 85px
-
-    &__item
-      padding-bottom: 71px
-      > div
-        &:first-child
-          > div
-            padding-right: 46px
-        &:last-child
-          > div
-            padding-left: 46px
-      h4
-        font-family: MalloryBold
-        font-size: 26px
-        padding-bottom: 21px
-      p
-        font-size: 14px
-        line-height: 1.5
-        padding-bottom: 57px
-      img.logo
-        height: 21px
-      p.title
-        font-size: 14px
-        padding-top: 14px
-        padding-bottom: 0
-        font-weight: bold
-        line-height: 1.75
-      &:last-child
-        img.logo
-          height: 34px
-      .arrow-wrapper
-        padding-left: 7px
-
-    .case-study__arrow
-      .line
-        width: 24px
-      .arrow-right
-        left: 24px
-
-@media only screen and (min-width: 1366px)
-  .testimonials-list
+  @include responsive($screen: large-desktop)
     padding: 175px 0 0 0
 
-    h3
+  h3
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      font-size: 26px
+      padding-bottom: 64px
+    @include responsive($screen: desktop)
+      font-size: 34px
+      padding-bottom: 85px
+    @include responsive($screen: large-desktop)
       font-size: 50px
       padding-bottom: 120px
 
-    &__item
+  &__item
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding-bottom: 53px
+    @include responsive($screen: desktop)
+      padding-bottom: 71px
+    @include responsive($screen: large-desktop)
       padding-bottom: 100px
-      > div
-        &:first-child
-          > div
+    p:last-child
+      padding-bottom: 0
+    > div
+      &:first-child
+        > div
+          @include responsive($screen: mobile)
+          @include responsive($screen: tablet)
+            padding-right: 35px
+          @include responsive($screen: desktop)
+            padding-right: 46px
+          @include responsive($screen: large-desktop)
             padding-right: 65px
-        &:last-child
-          > div
+      &:last-child
+        > div
+          @include responsive($screen: mobile)
+          @include responsive($screen: tablet)
+            padding-left: 35px
+          @include responsive($screen: desktop)
+            padding-left: 46px
+          @include responsive($screen: large-desktop)
             padding-left: 65px
-      h4
-        font-family: MalloryBold
+    h4
+      font-family: MalloryBold
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 20px
+        padding-bottom: 16px
+      @include responsive($screen: desktop)
+        font-size: 26px
+        padding-bottom: 21px
+      @include responsive($screen: large-desktop)
         font-size: 34px
         padding-bottom: 30px
-      p
+    p
+      line-height: 1.5
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 12px
+        padding-bottom: 43px
+      @include responsive($screen: desktop)
+        font-size: 14px
+        padding-bottom: 57px
+      @include responsive($screen: large-desktop)
         font-size: 20px
-        line-height: 1.5
         padding-bottom: 80px
-      img.logo
+    img.logo
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        height: 16px
+      @include responsive($screen: desktop)
+        height: 21px
+      @include responsive($screen: large-desktop)
         height: 30px
-      p.title
+    p.title
+      padding-bottom: 0
+      font-weight: bold
+      line-height: 1.75
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 12px
+        padding-top: 11px
+      @include responsive($screen: desktop)
+        font-size: 14px
+        padding-top: 14px
+      @include responsive($screen: large-desktop)
         font-size: 20px
         padding-top: 20px
-        padding-bottom: 0
-        font-weight: bold
-        line-height: 1.75
-      &:last-child
-        img.logo
+    &:last-child
+      img.logo
+        @include responsive($screen: mobile)
+        @include responsive($screen: tablet)
+          height: 28px
+        @include responsive($screen: desktop)
+          height: 34px
+        @include responsive($screen: large-desktop)
           height: 50px
-      .arrow-wrapper
+    .arrow-wrapper
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        padding-left: 5px
+      @include responsive($screen: desktop)
+        padding-left: 7px
+      @include responsive($screen: large-desktop)
         padding-left: 10px
-          
-    .case-study__arrow
-      .line
+
+  .case-study__arrow
+    .line
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        width: 18px
+      @include responsive($screen: desktop)
+        width: 24px
+      @include responsive($screen: large-desktop)
         width: 34px
-      .arrow-right
+    .arrow-right
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        left: 18px
+      @include responsive($screen: desktop)
+        left: 24px
+      @include responsive($screen: large-desktop)
         left: 34px

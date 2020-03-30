@@ -5,7 +5,7 @@ import PortfolioInteresting from "../../components/PortfolioInteresting";
 
 const Services = ({ content }) => {
   return (
-    <section className="portfolio-details">
+    <section>
       <div className="container-fluid no-padding">
         <PortfolioHeader />
         <section className="portfolio-details">
