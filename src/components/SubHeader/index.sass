@@ -1,13 +1,56 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .sub-header
+  display: flex
   padding: 0
   justify-content: flex-end
   align-items: center
   position: relative
   font-size: 14px
   font-family: ProximaNovaBold
-  display: none
+  @include responsive($screen: mobile)
+    display: none
+
+  .no-bootstrap-arrow
+    &:after
+      content: none
+
+  &__button, #services-dropdown
+    padding-left: 0
+    @include responsive($screen: tablet)
+      padding-right: 27px
+    @include responsive($screen: desktop)
+      padding-right: 36px
+    @include responsive($screen: large-desktop)
+      padding-right: 50px
+
+  .dropdown
+    position: relative
+    display: inline-block
+
+    &:hover
+      .dropdown-content
+        display: block
+
+    &-content
+      display: none
+      position: absolute
+      background-color: transparent
+      z-index: 1
+      @include responsive($screen: tablet)
+        padding-top: 16px
+        left: -21px
+      @include responsive($screen: desktop)
+        padding-top: 21px
+        left: -28px
+      @include responsive($screen: large-desktop)
+        padding-top: 30px
+        left: -40px
+
+  .no-hover-text-decoration
+    &:hover, &:focus
+      text-decoration: none !important
 
   h4
     margin-top: 0
@@ -16,43 +59,37 @@
 
   &__contact-wrapper
     background-color: $yellow
+    @include responsive($screen: tablet)
+      width: 83px
+      height: 24px
+    @include responsive($screen: desktop)
+      width: 110px
+      height: 34px
+    @include responsive($screen: large-desktop)
+      width: 155px
+      height: 45px
 
   &__contact-title
     white-space: nowrap
 
-@media (min-width: 768px) and (max-width: 1365px)
-  .sub-header
-    &__button
-      padding-right: 32px
-
-    &__text
+  &__text
+    @include responsive($screen: tablet)
+      font-size: 10px
+    @include responsive($screen: desktop)
       font-size: 13px
-    
-    &__arrow-right
-      width: 12px
-      height: 8.5px
-      margin-left: 14px
-
-    &__contact-wrapper
-      width: 110px
-      height: 34px
-
-
-@media only screen and (min-width: 1366px)
-  .sub-header
-    
-    &__text
+    @include responsive($screen: large-desktop)
       font-size: 16px
-    
-    &__contact-wrapper
-      width: 155px
-      height: 45px
 
-    &__button
-      padding-right: 45px
-
-    &__arrow-right
+  &__arrow-right
+    @include responsive($screen: tablet)
+      width: 9px
+      height: 6px
+      margin-left: 11px
+    @include responsive($screen: desktop)
+      width: 12px
+      height: 9px
+      margin-left: 14px
+    @include responsive($screen: large-desktop)
       width: 17px
       height: 12px
       margin-left: 20px
-

@@ -8,9 +8,9 @@ import './index.sass'
 const Footer = () => (
   <footer className="footer">
     <div className="footer__top-content-wrapper">
-        <h4 className="heading-small footer__top-content-title">
+      <h4 className="heading-small footer__top-content-title">
           Areas we serve
-        </h4>
+      </h4>
       <div className="row">
         <div className="col-md-3">
           <h5>Ho Chi Minh City</h5>
@@ -65,8 +65,8 @@ const Footer = () => (
           ))}
         </div>
         <div className="footer__contact row">
-          <span className="col-md-12 col-lg-6 footer__phone">(+84) 912 878985</span>
-          <span className="col-md-12 col-lg-5 footer__email">admin@goldenowl.asia</span>
+          <span className="col-md-6 footer__phone">(+84) 912 878985</span>
+          <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
         </div>
       </div>
       <div className="footer__bottom-grid-container">
@@ -77,26 +77,26 @@ const Footer = () => (
             <Link to="/services/mobile-development">Mobile development</Link>
             <Link to="/services/ux-ui-design">UX UI design</Link>
             <Link to="/services/project-management">Project management</Link>
-            <Link to="/services/development-team">Development Team</Link>
+            <Link to="/services/development-team">Development team</Link>
           </div>
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Links</h3>
           <div>
-            <Link to="/about-us">About Us</Link>
+            <Link to="/about-us">About us</Link>
             <Link to="/services">Services</Link>
-            <Link to="/technologies">Technologiies</Link>
-            <a href="#">Testimonials</a>
-            <a href="#">Portfolio</a>
+            <Link to="/technologies">Technologies</Link>
+            <Link to="/testimonials">Testimonials</Link>
+            <Link to="/portfolio">Portfolio</Link>
           </div>
         </div>
         <div>
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
-            <a href="#">Careers</a>
-            <a href="#">Contact Us</a>
-            <a href="#">FAQ</a>
-            <a href="#">Blog</a>
+            <a href="/careers">Careers</a>
+            <Link to="/contact-us">Contact us</Link>
+            <a href="/faq">FAQ</a>
+            <Link to="/blog">Blog</Link>
           </div>
         </div>
       </div>

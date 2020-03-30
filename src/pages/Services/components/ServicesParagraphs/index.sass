@@ -1,53 +1,114 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
 .services-paragraphs
   background-color: $softGray
   align-items: start
-      
-  .col-md-6
-    .card
-      text-align: center
-      background-color: $white
-      border: none
-    h4
-      line-height: 1.25
-    p
-      line-height: 1.5
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .services-paragraphs
+  @include responsive($screen: mobile)
+    padding: 25px 0
+  @include responsive($screen: tablet)
+    padding: 80px 0
+  @include responsive($screen: desktop)
+    padding: 107px 0
+  @include responsive($screen: large-desktop)
     padding: 150px 0
+
+  .card
+    text-align: center
+    background-color: $white
+    border: none
+    &:last-child
+      @include responsive($screen: tablet)
+        padding-left: 10px
+      @include responsive($screen: desktop)
+        padding-left: 15px
+      @include responsive($screen: large-desktop)
+        padding-left: 25px
+      h4
+        @include responsive($screen: tablet)
+          padding: 0 51px 14px 51px
+        @include responsive($screen: desktop)
+          padding: 0 38px 11px 38px
+        @include responsive($screen: large-desktop)
+          padding: 0 72px 20px 72px
+    &:first-child
+      @include responsive($screen: tablet)
+        padding-right: 10px
+      @include responsive($screen: desktop)
+        padding-right: 15px
+      @include responsive($screen: large-desktop)
+        padding-right: 25px
+      h4
+        @include responsive($screen: tablet)
+          padding: 0 62px 14px 62px
+        @include responsive($screen: desktop)
+          padding: 0 83px 11px 83px
+        @include responsive($screen: large-desktop)
+          padding: 0 117px 20px 117px
+
+    @include responsive($screen: mobile)
+      margin: 15px 0
+      padding: 30px 20px
+    @include responsive($screen: tablet)
+      padding: 43px 36px
+    @include responsive($screen: desktop)
+      padding: 27px 32px
+    @include responsive($screen: large-desktop)
+      padding: 60px 50px
+
+  h4
+    font-family: MalloryBold
+    line-height: 1.25
+    @include responsive($screen: mobile)
+      font-size: 18px
+      line-height: 1.5
+      padding-bottom: 20px
+    @include responsive($screen: tablet)
+      font-size: 13px
+    @include responsive($screen: desktop)
+      font-size: 15px
+    @include responsive($screen: large-desktop)
+      font-size: 24px
+
+  p
+    line-height: 1.5
+    @include responsive($screen: mobile)
+      font-size: 16px
+    @include responsive($screen: tablet)
+      font-size: 12px
+    @include responsive($screen: desktop)
+      font-size: 14px
+    @include responsive($screen: large-desktop)
+      font-size: 20px
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .services-paragraphs
+    .card
+      h4
+      p
+      &:last-child
+        h4
+      &:first-child
+        h4
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .services-paragraphs
     .col-md-6
       .card
-        padding: 4.2vw 3.5vw
       h4
-        font-size: 24px
       p
-        font-size: 20px
       &:last-child
-        padding-left: 15px
         h4
-          padding: 0 0 1.4vw 0
       &:first-child
-        padding-right: 15px
         h4
-          padding: 0 2vw 1.4vw 2vw
 
 @media only screen and (min-width: 1366px)
   .services-paragraphs
-    padding: 150px 0
     .col-md-6
       .card
-        padding: 60px 50px
       h4
-        font-size: 24px
       p
-        font-size: 20px
       &:last-child
-        padding-left: 25px
         h4
-          padding: 0 72px 20px 72px
       &:first-child
-        padding-right: 25px
         h4
-          padding: 0 117px 20px 117px

@@ -1,30 +1,76 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
 .feedback
-  padding: 8.3vw 0 5.5vw 0
   text-align: center
-  
+  @include responsive($screen: mobile)
+    padding: 50px 0 50px 0
+  @include responsive($screen: tablet)
+    padding: 64px 0 43px 0
+  @include responsive($screen: desktop)
+    padding: 85px 0 57px 0
+  @include responsive($screen: large-desktop)
+    padding: 120px 0 80px 0
+
+  &__quote
+  @include responsive($screen: mobile)
+  @include responsive($screen: tablet)
+    line-height: 56px
+  @include responsive($screen: desktop)
+    line-height: 70px
+  @include responsive($screen: large-desktop)
+
   &__title
     line-height: 1.6
-    padding-bottom: 2.8vw !important
+    @include responsive($screen: mobile)
+      font-size: 24px
+      padding-bottom: 40px
+    @include responsive($screen: tablet)
+      font-size: 20px
+      padding-bottom: 21px
+    @include responsive($screen: desktop)
+      font-size: 26px
+      padding-bottom: 28px
+    @include responsive($screen: large-desktop)
+      font-size: 34px
+      padding-bottom: 40px
 
   &__client-wrapper
     justify-content: flex-start
     align-items: center
-    padding-bottom: 3.4vw
-    padding-top: 1.4vw
     display: flex
+    @include responsive($screen: mobile)
+      padding-bottom: 64px
+      padding-top: 30px
+    @include responsive($screen: tablet)
+      padding-bottom: 26px
+      padding-top: 11px
+    @include responsive($screen: desktop)
+      padding-bottom: 36px
+      padding-top: 14px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 50px
+      padding-top: 20px
 
     img
-      width: 5.9vw
-      height: 5.9vw      
       border-radius: 50%
       object-fit: cover
-      margin-right: 1.4vw !important
+      @include responsive($screen: mobile)
+        width: 68px
+        margin-right: 20px
+      @include responsive($screen: tablet)
+        width: 45px
+        margin-right: 11px
+      @include responsive($screen: desktop)
+        width: 60px
+        margin-right: 14px
+      @include responsive($screen: large-desktop)
+        width: 85px
+        margin-right: 20px
 
   .react-multi-carousel-list
     max-width: 90vw
-      
+
   .react-multi-carousel-dot
     button
       width: 10px !important
@@ -34,21 +80,17 @@
       display: inline-block !important
       margin-right: 10px !important
       border: none !important
+      @include responsive($screen: mobile)
+        height: 5.8pt !important
 
   .react-multi-carousel-dot--active
     button
       background: $yellow !important
       width: 2.1vw !important
-      border-radius: 1.4vw !important    
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .feedback
-
-    &__quote
-      line-height: 70px
-
-    &__title
-      font-size: 26px
+      border-radius: 1.4vw !important
+      @include responsive($screen: mobile)
+        width: 22pt !important
+        height: 5.8pt !important
 
 @media only screen and (min-width: 1366px)
   .feedback
@@ -57,18 +99,17 @@
     &__title
       font-size: 34px
       padding-bottom: 40px !important
-    
+
     img
       width: 85px
-      height: 85px      
-    
+      height: 85px
+
     .react-multi-carousel-dot--active
       button
         background: $yellow !important
         width: 30px !important
         border-radius: 20px !important
-    
+
     &__client-wrapper
       padding-bottom: 50px
       padding-top: 20px
-

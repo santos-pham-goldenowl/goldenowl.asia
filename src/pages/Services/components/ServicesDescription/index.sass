@@ -1,42 +1,63 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
+
 .services-description
-  h2
-    line-height: 1.2
-  p
-    line-height: 1.54;
-
-  .col-md-6
-    padding-left: 0 !important
-  
-  img
-    position: inherit
-    right: 0
-
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .services-description
-    padding-top: 8.3vw
-    padding-bottom: 13.4vw
-
-    h2
-      font-size: 35px
-    p
-      padding-top: 3vw
-      font-size: 18px;
-
-    img
-      width: calc(100% + 100px)
-
-@media only screen and (min-width: 1366px)
-  .services-description
+  @include responsive($screen: mobile)
+    padding-top: 30px
+    padding-bottom: 74.6px
+  @include responsive($screen: tablet)
+    padding-top: 64px
+    padding-bottom: 103px
+  @include responsive($screen: desktop)
+    padding-top: 85px
+    padding-bottom: 137px
+  @include responsive($screen: large-desktop)
     padding-top: 120px
     padding-bottom: 193px
 
-    h2
+  h2
+    line-height: 1.2
+    @include responsive($screen: mobile)
+      font-size: 28px
+      padding-bottom: 21px
+    @include responsive($screen: tablet)
+      font-size: 26px
+      text-transform: uppercase
+    @include responsive($screen: desktop)
+      font-size: 35px
+      text-transform: uppercase
+    @include responsive($screen: large-desktop)
       font-size: 50px
-    p
+      text-transform: uppercase
+
+  p
+    line-height: 1.54
+    @include responsive($screen: mobile)
+      font-size: 16px
+      line-height: 1.5
+    @include responsive($screen: tablet)
+      padding-top: 23px
+      font-size: 14px
+    @include responsive($screen: desktop)
+      padding-top: 31px
+      font-size: 18px
+    @include responsive($screen: large-desktop)
       padding-top: 43px
       font-size: 26px
 
-    img
-      width: calc(100% + 130px)
+  .col-md-6
+    padding-left: 0 !important
+
+  img
+    position: inherit
+    right: 0
+    @include responsive($screen: mobile)
+      margin-left: -15px
+      padding-top: 30px
+      width: calc(100% + 30px)
+    @include responsive($screen: tablet)
+      width: calc(100% + 50px)
+    @include responsive($screen: desktop)
+      width: calc(100% + 70px)
+    @include responsive($screen: large-desktop)
+      width: calc(100% + 100px)

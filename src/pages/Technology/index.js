@@ -1,13 +1,16 @@
-import React from "react";
-import MainHeader from "../../components/MainHeader";
-import SubHeader from "../../components/SubHeader";
-import Footer from "../../components/Footer";
-import TechnologyDescription from "./components/TechnologyDescription";
-import TechnologyCards from "./components/TechnologyCards";
-import Home from "../../components/BreadCrumb";
-import TechnologyDetail from "./components/TechnologyDetail";
-import Guarantee from "./components/Guarantee";
-import "./index.sass";
+import React from 'react'
+
+import MainHeader from '../../components/MainHeader'
+import SubHeader from '../../components/SubHeader'
+import Footer from '../../components/Footer'
+import Home from '../../components/BreadCrumb'
+
+import TechnologyDescription from './components/TechnologyDescription'
+import TechnologyCards from './components/TechnologyCards'
+import TechnologyDetail from './components/TechnologyDetail'
+import Guarantee from './components/Guarantee'
+
+import './index.sass'
 
 const TechnologyContainer = () => (
   <section className="technology-container">
@@ -24,6 +27,6 @@ const TechnologyContainer = () => (
       <Footer />
     </div>
   </section>
-);
+)
 
-export default TechnologyContainer;
+export default TechnologyContainer

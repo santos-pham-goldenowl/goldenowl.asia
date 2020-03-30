@@ -1,53 +1,74 @@
-@import '../../../../styles/variables.sass'
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
 
 .testimonials-stats
+  @include responsive($screen: mobile)
+  @include responsive($screen: tablet)
+    padding-top: 39px !important
+    padding-bottom: 53px !important
+  @include responsive($screen: desktop)
+    padding-top: 53px !important
+    padding-bottom: 71px !important
+  @include responsive($screen: large-desktop)
+    padding-top: 74px !important
+    padding-bottom: 100px !important
+
+  &__wrapper
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding: 0 56px
+    @include responsive($screen: desktop)
+      padding: 0 75px
+    @include responsive($screen: large-desktop)
+      padding: 0 105px
+
+  .title
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding-bottom: 21px
+    @include responsive($screen: desktop)
+      padding-bottom: 28px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 40px
+
+  h2
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      font-size: 30px
+    @include responsive($screen: desktop)
+      font-size: 38px
+    @include responsive($screen: large-desktop)
+      font-size: 60px
 
   .stats
     h2
       color: #f9be39
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .testimonials-stats
-    padding: 5.1vw 0 6.9vw 0
-    
-    &__wrapper
-      padding: 0 7.2vw
-    
-    h2
-      font-size: 40px
-    
-    .title
-      padding-bottom: 2.8vw
-
-    .stats
-      h2
-        padding-bottom: 0.9vw
-      p
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        padding-bottom: 6px
+      @include responsive($screen: desktop)
+        padding-bottom: 9px
+      @include responsive($screen: large-desktop)
+        padding-bottom: 12px
+    p
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 14px
+      @include responsive($screen: desktop)
         font-size: 18px
-      sup
-        top: -18px
+      @include responsive($screen: large-desktop)
+        font-size: 26px
+    sup
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        top: -14px
+        left: 4px
+        font-size: 14px
+      @include responsive($screen: desktop)
+        top: -19px
         left: 5px
         font-size: 18px
-
-@media only screen and (min-width: 1366px)
-  .testimonials-stats
-    padding: 74px 0 100px 0
-    
-    &__wrapper
-      padding: 0 105px
-    
-    h2
-      font-size: 60px
-    
-    .title
-      padding-bottom: 40px
-
-    .stats
-      h2
-        padding-bottom: 12px
-      p
-        font-size: 26px
-      sup
+      @include responsive($screen: large-desktop)
         top: -26.5px
         left: 7px
         font-size: 26px

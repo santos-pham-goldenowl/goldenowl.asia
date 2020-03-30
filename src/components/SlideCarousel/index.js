@@ -10,7 +10,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1365, min: 768 },
-    items: 5,
+    items: 6,
     slidesToSlide: 1,
   },
   mobile: {
@@ -33,13 +33,13 @@ const SlideCarousel = ({ ...props }) => {
       keyBoardControl
       customTransition="all .5"
       transitionDuration={500}
-      containerClass="d-flex align-items-center"
+      containerClass="align-items-center"
       deviceType={deviceType}
       dotListClass="custom-dot-list-style"
     >
       {content.map((c) => (
-        <div key={c.name} className="slide-image-wrapper" style={{ display: 'flex', justifyContent: 'center' }}>
-          <img className={`logo-${c.name}`} src={c.url} alt={c.name} />
+        <div key={c.name} className="slide-image-wrapper d-flex justify-content-center">
+          <img id={c.name} className={`logo-${c.name}`} src={c.url} alt={c.name} />
         </div>
       ))}
     </Carousel>

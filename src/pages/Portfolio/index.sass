@@ -1,0 +1,173 @@
+@import '../../styles/variables'
+@import '../../styles/mixins'
+
+.portfolio
+  header, &__priority
+    background-color: $slightOrange !important
+
+  .nav-tabs
+    border-bottom: none
+
+  &__priority
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding: 107px 0 80px 0
+    @include responsive($screen: desktop)
+      padding: 142px 0 107px 0
+    @include responsive($screen: large-desktop)
+      padding: 200px 0 150px 0
+    h1
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 26px
+        padding-right: 139px
+        padding-bottom: 43px
+      @include responsive($screen: desktop)
+        font-size: 38px
+        padding-right: 185px
+        padding-bottom: 57px
+      @include responsive($screen: large-desktop)
+        font-size: 60px
+        padding-right: 260px
+        padding-bottom: 80px
+
+    &__left-paragraph
+      line-height: 1.53
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 20px
+      @include responsive($screen: desktop)
+        font-size: 26px
+      @include responsive($screen: large-desktop)
+        font-size: 34px
+
+    &__right-paragraph
+      line-height: 1.8
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 12px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 20px
+
+  .nav-link
+    border: none !important
+    font-family: MalloryBold
+    color: $darkGray
+    padding-left: 0
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      font-size: 20px
+      padding-right: 43px
+      margin-bottom: 28px
+    @include responsive($screen: desktop)
+      font-size: 26px
+      padding-right: 57px
+      margin-bottom: 28px
+    @include responsive($screen: large-desktop)
+      font-size: 34px
+      padding-right: 80px
+      margin-bottom: 40px
+
+  .nav-link.active
+    position: relative
+    z-index: 1
+    &:before
+      content: ""
+      margin: 0 auto
+      position: absolute
+      top: 50%
+      right: 0
+      bottom: 0
+      z-index: -1
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        border-top: 3px solid #fabf22
+        left: -43px
+        width: calc(100% - 36px)
+      @include responsive($screen: desktop)
+        border-top: 4px solid #fabf22
+        left: -57px
+        width: calc(100% - 36px)
+      @include responsive($screen: large-desktop)
+        border-top: 5px solid #fabf22
+        left: -80px
+        width: calc(100% - 50px)
+    p
+      color: $darkGray
+    h1
+      color: $solidBlack
+
+  &__project
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding: 43px 0 80px 0
+    @include responsive($screen: desktop)
+      padding: 57px 0 107px 0
+    @include responsive($screen: large-desktop)
+      padding: 80px 0 150px 0
+
+  &__interesting
+    text-align: center
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding: 152px 0
+    @include responsive($screen: desktop)
+      padding: 203px 0
+    @include responsive($screen: large-desktop)
+      padding: 285px 0
+
+    p
+      line-height: 1.33
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 16px
+      @include responsive($screen: desktop)
+        font-size: 21px
+      @include responsive($screen: large-desktop)
+        font-size: 30px
+
+  &__card
+    display: flex
+    background-repeat: no-repeat
+    background-position: top
+    background-size: 100%
+    transition: transform .3s
+    position: relative
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      margin-top: 32px
+    @include responsive($screen: desktop)
+      margin-top: 43px
+    @include responsive($screen: large-desktop)
+      margin-top: 60px
+    &:hover
+      transform: scale(1.03)
+    h4
+      color: $darkGray
+      line-height: 1.5
+      z-index: 1
+      position: absolute
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        padding: 30px 32px 0 32px
+        font-size: 19px
+      @include responsive($screen: desktop)
+        padding: 40px 43px 0 43px
+        font-size: 25px
+      @include responsive($screen: large-desktop)
+        padding: 56px 60px 0 60px
+        font-size: 32px
+    img
+      max-width: 100%
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        border-radius: 5px
+      @include responsive($screen: desktop)
+        border-radius: 7px
+      @include responsive($screen: large-desktop)
+        border-radius: 10px
+
+  .white-title
+    color: $white

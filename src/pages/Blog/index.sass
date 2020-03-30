@@ -10,6 +10,7 @@
   .blogs
     &__item
       h4
+        font-family: MalloryBold
         line-height: 1.47
 
       p
@@ -21,19 +22,67 @@
     
     &__item-image
       width: 100%
-
-@media (min-width: 768px) and (max-width: 1365px)
+@media (min-width: 768px) and (max-width: 1023px)
   .blog
     .welcome
-      padding-top: 5.6vw
-      padding-bottom: 10.3vw
+      padding-top: 43px
+      padding-bottom: 80px
 
       &__wrapper
-        padding-left: 7.2vw
+        padding-left: 56px
       
       h1
-        font-size: 40px
-        padding-bottom: 0.7vw
+        font-size: 30px
+        padding-bottom: 5px
+      
+      p
+        font-size: 14px
+    
+    .row
+      margin: 0 -12.5px !important
+    
+    [class*='col']
+      padding-left: 12.5px !important
+      padding-right: 12.5px !important
+
+    .blogs
+      padding-top: 14px
+      padding-bottom: 80px
+
+      &__item
+        padding-top: 32px
+
+        h4
+          font-size: 17px
+          padding-bottom: 11px
+
+        p
+          font-size: 12px
+        
+        .category
+          padding-bottom: 14px
+          p
+            font-size: 8px
+            padding-right: 10px
+        
+        .category-vertical
+          padding-top: 16px
+
+        .wide-blog
+          padding-left: 15px
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .blog
+    .welcome
+      padding-top: 57px
+      padding-bottom: 107px
+
+      &__wrapper
+        padding-left: 75px
+      
+      h1
+        font-size: 38px
+        padding-bottom: 7px
       
       p
         font-size: 18px
@@ -46,28 +95,30 @@
       padding-right: 12.5px !important
 
     .blogs
-      padding-top: 1.4vw
-      padding-bottom: 10.3vw
+      padding-top: 14px
+      padding-bottom: 107px
 
       &__item
-        padding-top: 4.2vw
+        padding-top: 43px
 
         h4
-          font-size: 26px
-          padding-bottom: 1.4vw
+          font-size: 25px
+          padding-bottom: 14px
 
         p
           font-size: 14px
         
         .category
-          padding-bottom: 1.4vw
+          padding-bottom: 14px
           p
-            font-size: 11px
-            padding-right: 1.4vw
+            font-size: 10px
+            padding-right: 14px
         
         .category-vertical
-          padding-top: 2.1vw
+          padding-top: 21px
 
+        .wide-blog
+          padding-left: 15px
 
 @media only screen and (min-width: 1366px)
   .blog
@@ -114,3 +165,6 @@
         
         .category-vertical
           padding-top: 30px
+        
+        .wide-blog
+          padding-left: 25px

@@ -1,16 +1,46 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .breadcrumb
   width: 100%
-  padding: 0 30px
   margin-bottom: 0 !important
+  @include responsive($screen: mobile)
+  @include responsive($screen: tablet)
+    padding-top: 14px !important
+    padding-bottom: 0 !important
+  @include responsive($screen: desktop)
+    padding-top: 18px !important
+    padding-bottom: 0 !important
+  @include responsive($screen: large-desktop)
+    padding-top: 26px !important
+    padding-bottom: 0 !important
+
+  img
+    @include responsive($screen: mobile)
+      height: 13px
+      padding-left: 5px
+    @include responsive($screen: tablet)
+      height: 8px
+      padding-left: 56px
+    @include responsive($screen: desktop)
+      height: 10px
+      padding-left: 75px
+    @include responsive($screen: large-desktop)
+      padding-left: 105px
 
   &__content
     width: 100%
     display: flex
     align-items: center
     border-bottom: 1px solid $slightYellow
-    padding-bottom: 10px
+    @include responsive($screen: mobile)
+      padding-bottom: 14px
+    @include responsive($screen: tablet)
+      padding-bottom: 5px
+    @include responsive($screen: desktop)
+      padding-bottom: 7px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 10px
 
   span
     padding: 5px 10px 0 10px
@@ -22,27 +52,12 @@
     a, p
       font-family: ProximaNovaRegular
       white-space: nowrap
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .breadcrumb
-    padding-top: 18px !important
-    padding-bottom: 0 !important
-
-    img
-      padding-left: 73px
-
-    &__text
-      a, p
+      @include responsive($screen: mobile)
+        font-size: 12px
+        line-height: 1.25
+      @include responsive($screen: tablet)
+        font-size: 10px
+      @include responsive($screen: desktop)
         font-size: 14px
-
-@media only screen and (min-width: 1366px)
-  .breadcrumb
-    padding-top: 26px !important
-    padding-bottom: 0 !important
-
-    img
-      padding-left: 105px
-
-    &__text
-      a, p
+      @include responsive($screen: large-desktop)
         font-size: 16px

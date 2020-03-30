@@ -9,9 +9,9 @@ const CompanyQualities = () => (
   <section className="qualities">
     <h3 className="qualities__title"> Why choose us</h3>
     <div className="row">
-      <div className="col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block">
         <img src={companyQuality1} alt="Golden Owl Asia" />
-        <h5>Golden Owl Asia</h5>
+        <h5>Our Company</h5>
         <div className="d-flex">
           <p>
               A leading name in providing exceptional technology solutions and
@@ -20,13 +20,13 @@ const CompanyQualities = () => (
           </p>
         </div>
         <div className="d-flex">
-          <p>
+          <p className="bottom-line">
               Value clear rules, relationships based on trust, dialogue and
-              through the quality of services provided
+              through the quality of services provided.
           </p>
         </div>
       </div>
-      <div className="col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block">
         <img src={companyQuality2} alt="Key success" />
         <h5>
             Key success: time & materials
@@ -34,7 +34,7 @@ const CompanyQualities = () => (
             working model which
         </h5>
         <div className="d-flex">
-          <p>Provides flexible solution for dynamic requirements</p>
+          <p>Provides flexible solution for dynamic requirements.</p>
         </div>
         <div className="d-flex">
           <p>
@@ -46,21 +46,21 @@ const CompanyQualities = () => (
           <p className="bottom-line">
               Allows Clients to track progress and know exactly where the team
               is at any point. It is ending up with a better product reduces the
-              business risk of the enterprise
+              business risk of the enterprise.
           </p>
         </div>
       </div>
-      <div className="col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block">
         <img src={companyQuality3} alt="We create" />
         <h5>We create</h5>
         <div className="d-flex">
           <p>
               The unspoken international rule of business which is the offshore
-              development center
+              development center.
           </p>
         </div>
         <div className="d-flex">
-          <p>
+          <p className="bottom-line">
               The advantages of the energy, skill of the developers, the
               expanding potential of your business, and the best price offered.
           </p>

@@ -1,65 +1,86 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .explore
-  padding-bottom: 8.3vw
+  @include responsive($screen: mobile)
+    padding-bottom: 52px
+  @include responsive($screen: tablet)
+    padding-bottom: 60px
+  @include responsive($screen: desktop)
+    padding-bottom: 85px
+  @include responsive($screen: large-desktop)
+    padding-bottom: 120px
 
   &__image-wrapper
     display: flex
     justify-content: center
-  
-  > div
-    padding: 0 6.9vw 0 10.4vw
+
+  &__card
     background-color: $albescentWhite
-    padding-top: 5.5vw
-    padding-bottom: 5.5vw
     margin: 0
+    @include responsive($screen: mobile)
+      padding: 30px 0 28px 0
+    @include responsive($screen: tablet)
+      padding: 43px 53px 43px 80px
+    @include responsive($screen: desktop)
+      padding: 57px 71px 57px 107px
+    @include responsive($screen: large-desktop)
+      padding: 80px 100px 80px 150px
 
   &__image
     width: 100%
 
+  h6
+    @include responsive($screen: tablet)
+      font-size: 10px
+    @include responsive($screen: desktop)
+      font-size: 14px
+      padding-right: 14px
+    @include responsive($screen: large-desktop)
+      font-size: 16px
+      padding-right: 20px
+
   &__description
     font-family: ProximaNovaBold
     line-height: 1.23
-    padding: 0.9vw 0 4.2vw 0
-    width: calc(57.4% + 120px);
-  
+    @include responsive($screen: mobile)
+      display: none
+    @include responsive($screen: tablet)
+      font-size: 18px
+      padding: 6px 0 32px 0
+    @include responsive($screen: desktop)
+      font-size: 26px
+      padding: 9px 0 43px 0
+    @include responsive($screen: large-desktop)
+      font-size: 38px
+      padding: 12px 0 60px 0
+
   &__top-content
     display: flex
     justify-content: space-between
+    @include responsive($screen: mobile)
+      display: none
 
   &__case-study
     display: flex
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .explore
-    padding-bottom: 120px
-    
-    > div
-      padding: 0 70px 0 105px
-      padding-top: 80px
-      padding-bottom: 80px
-      margin: 0
-
-    &__description
-      font-size: 26px !important
-      padding: 12px 0 60px 0
-    
     h6
-     font-size: 14px
+      align-self: center
+      @include responsive($screen: tablet)
+        font-size: 8px
+        padding-right: 11px
 
-@media only screen and (min-width: 1366px)
-  .explore
-    padding-bottom: 120px
-    
-    > div
-      padding: 0 101px 0 150px
-      padding-top: 80px
-      padding-bottom: 80px
-      margin: 0
-
-    &__description
-      font-size: 37px
-      padding: 12px 0 60px 0
-    
-    h6
-     font-size: 16px
+  &__arrow
+    .arrow-right
+      @include responsive($screen: tablet)
+        left: 18px
+      @include responsive($screen: desktop)
+        left: 24px
+      @include responsive($screen: large-desktop)
+        left: 34px
+    .line
+      @include responsive($screen: tablet)
+        width: 18px
+      @include responsive($screen: desktop)
+        width: 24px
+      @include responsive($screen: large-desktop)
+        width: 34px

@@ -1,52 +1,59 @@
+@import '../../../../styles/mixins'
+
 .introduction-detail
   display: flex
   flex-direction: row
+  @include responsive($screen: mobile)
+    padding: 50.4px 0 50.3px 0
+  @include responsive($screen: tablet)
+    padding: 64px 0 81px 0
+  @include responsive($screen: desktop)
+    padding: 85px 0 107px 0
+  @include responsive($screen: large-desktop)
+    padding: 120px 0 151px 0
 
-  .content
+  &__title
+    line-height: 1.3
+    @include responsive($screen: mobile)
+      font-size: 24px
+      line-height: 1.5
+      margin-bottom: 20px
+    @include responsive($screen: tablet)
+      font-size: 20px
+      margin-bottom: 21px
+    @include responsive($screen: desktop)
+      font-size: 26px
+      margin-bottom: 28px
+    @include responsive($screen: large-desktop)
+      font-size: 34px
+      margin-bottom: 40px
+
+  &__content
     display: flex
     flex-direction: column
     p
       line-height: 1.54 !important
       &:last-child
         margin-top: auto
-
-  .img-wrapper
-    display: flex
-    justify-content: flex-end
-
-@media (min-width: 768px) and (max-width: 1365px)
-  .introduction-detail
-    padding-top: 8.3vw
-    padding-bottom: 10.5vw
-
-    h3
-      font-size: 26px
-      margin-bottom: 2.8vw
-
-    .content
-      p
+      @include responsive($screen: mobile)
+        font-size: 16px
+      @include responsive($screen: tablet)
         font-size: 18px
-
-    .img-wrapper
-      img
-        width: 37.4vw
-        height: 45.1vw
-
-@media only screen and (min-width: 1366px)
-  .introduction-detail
-    padding-top: 120px
-    padding-bottom: 151px
-
-    h3
-      height: 45px
-      font-size: 34px
-      margin-bottom: 40px
-
-    .content
-      p
+      @include responsive($screen: desktop)
+        font-size: 20px
+      @include responsive($screen: large-desktop)
         font-size: 26px
 
-    .img-wrapper
-      img
+  .img-wrapper
+    justify-content: flex-end
+    height: auto
+    img
+      @include responsive($screen: mobile)
+        margin: 50px 50.4px 0 50px
+        width: 70.9%
+      @include responsive($screen: tablet)
+        width: 287px
+      @include responsive($screen: desktop)
+        width: 383px
+      @include responsive($screen: large-desktop)
         width: 539px
-        height: 650px

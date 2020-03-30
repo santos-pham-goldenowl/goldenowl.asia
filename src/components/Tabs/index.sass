@@ -3,10 +3,9 @@
 .header-group
   display: flex
   border-bottom: 1px solid $slightGray
-  justify-content: space-between
+  justify-content: center
 
 .header
-  padding-bottom: 44px
   cursor: pointer
 
   p
@@ -22,16 +21,14 @@
   padding-bottom: 10px
 
 .tech-tab
-  &__right-side
+  .right-side
     display: grid
     grid-template: repeat(4, auto) / repeat(3, auto)
     justify-content: space-between
-    padding-top: 50px
     grid-row-gap: 20px
-
-.content
-  height: 410px
-
+    img
+      width: auto
+    
 .tab-content-container
   padding-top: 30px
 
@@ -47,14 +44,6 @@
 
   .tab-content-container
     padding-top: 50px
-
-  .content
-    padding-left: 50px
-    padding-right: 50px
-
-  .header
-    p
-      padding: 0 40px
 
   .tech-tab
     display: flex
@@ -79,8 +68,7 @@
       p
         line-height: 30px
 
-    &__right-side
-      flex: 1
+    .right-side
       display: grid
       grid-template: repeat(2, auto) / repeat(3, auto)
       justify-content: space-between
@@ -93,30 +81,118 @@
       padding: 20px
       color: $litleGray
 
-@media only screen and (min-width: 1300px)
+@media (min-width: 768px) and (max-width: 1023px)
+  .header
+    padding: 0 18px 23px 18px
+
   .tech-tab
     display: flex
 
-    .tab-header-title
-      font-size: 36px
-      padding-bottom: 20px
+    &__description
+      color: $softBlack
+      font-size: 12px
+      line-height: 1.5
+
+    &__logo-name
+      font-size: 10px
+    
+    .right-side
+      padding-left: 27px! important
+
+    &__logo-wrapper
+      display: flex
+      align-items: center
+      img
+        margin-right: 22px
+
+  .tab-content-container
+    padding-top: 53px
+    padding-bottom: 64px
+  
+  .right-side
+    display: grid
+    grid-template: repeat(2, auto) / repeat(3, auto)
+    justify-content: space-between
+    padding-top: 32px
+    grid-row-gap: 32px
+    > div
+      text-align: center
+    img
+      height: 21px
+
+
+@media (min-width: 1024px) and (max-width: 1365px)
+  .header
+    padding: 0 24px 31px 24px
+
+  .tech-tab
+    display: flex
 
     &__description
       color: $softBlack
+      font-size: 14px
+      line-height: 1.5
 
-    &__left-side
-      padding-right: 135px
+    &__logo-name
+      font-size: 12px
+    
+    .right-side
+      padding-left: 36px! important
+
+    &__logo-wrapper
+      display: flex
+      align-items: center
+      img
+        margin-right: 30px
+
+  .tab-content-container
+    padding-top: 71px
+    padding-bottom: 85px
+
+  .right-side
+    display: grid
+    grid-template: repeat(2, auto) / repeat(3, auto)
+    justify-content: space-between
+    padding-top: 36px
+    grid-row-gap: 43px
+    > div
+      text-align: center
+    img
+      height: 28px
+
+@media only screen and (min-width: 1366px)
+  .header
+    padding: 0 34px 44px 34px
+
+  .tech-tab
+    display: flex
+
+    &__description
+      color: $softBlack
+      font-size: 20px
+      line-height: 1.5
 
     &__logo-name
       font-size: 18px
+    
+    .right-side
+      padding-left: 50px! important
 
-  .content
-    padding-left: 100px
-    padding-right: 100px
+    &__logo-wrapper
+      display: flex
+      align-items: center
+      img
+        margin-right: 42px
 
   .tab-content-container
     padding-top: 100px
-
-  .header-group
-    margin-left: 100px
-    margin-right: 100px
+    padding-bottom: 120px
+  
+  .right-side
+    display: grid
+    grid-template: repeat(2, auto) / repeat(3, auto)
+    justify-content: space-between
+    padding-top: 50px
+    grid-row-gap: 60px
+    > div
+      text-align: center

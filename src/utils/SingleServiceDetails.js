@@ -128,7 +128,7 @@ const servicesDetails = {
     },
     fourth: {
       title: 'Efficient management with management tool',
-      content: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc.',
+      content: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc. All members of the project management team love it and so does our client.',
       logos: [
         {
           name: 'slack',
@@ -179,36 +179,7 @@ const servicesDetails = {
     fourth: {
       title: 'We are stronger together',
       content: 'Each member of the development team has their own strength and ability, they may still not good at some points and that’s why they always try our best to work together and support each other for the common achievement. Working together makes us stronger and growing faster.',
-      logos: [
-        {
-          name: 'html',
-          url: html,
-        },
-        {
-          name: 'css3',
-          url: css3,
-        },
-        {
-          name: 'js',
-          url: js,
-        },
-        {
-          name: 'react',
-          url: react,
-        },
-        {
-          name: 'angular',
-          url: angular,
-        },
-        {
-          name: 'mock',
-          url: mock,
-        },
-        {
-          name: '50plus',
-          url: plus,
-        },
-      ],
+      logos: [],
     },
     navs: developmentTeam,
   },
@@ -217,7 +188,7 @@ const servicesDetails = {
     cover: uiUxCoverImage,
     first: { content: 'A good user experience is the best glue between a brand and (potential) customers. We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.' },
     second: {
-      title: 'We offer a design services.',
+      title: 'We offer a design services',
       content: 'All our team members here at shape understand web design and application design. We can create UX UI design services in specific areas to help your business. Creating unique visuals to make you and your brand stand out from the crowd, and more importantly - your competitors.',
 
     },
@@ -237,7 +208,7 @@ const servicesDetails = {
     },
     fourth: {
       title: 'Seamless Integration with popular design tools.',
-      content: 'Design tool plays a very importance role in creating design process. Thanks to tools such as Invision and Adobe Photoshop as well as other ones, amazing designs are produced and published.',
+      content: 'Design tool plays a very importance role in creating design process. Thanks to tools such as Invision and Adobe Photoshop as well as other ones, amazing designs are produced and published and makes the project’s UI looks so nice and attractive.',
       logos: [
         {
           name: 'sketch',
@@ -284,7 +255,7 @@ const servicesDetails = {
     },
     fourth: {
       title: 'Seamless Integration with 50+ software platforms.',
-      content: 'Our projects are build in many programming languages like Javascript, Ruby on Rails, etc. We know which one is more suitable for your project and make it better than ever.',
+      content: 'Our projects are build in many programming languages like Javascript, Ruby on Rails, etc. Due to those magical tools, we are able to create so many amazing projects. We know which one is more suitable for your project and make it better than ever.',
       logos: [
         {
           name: 'html',

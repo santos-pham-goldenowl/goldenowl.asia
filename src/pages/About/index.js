@@ -4,8 +4,9 @@ import MainHeader from '../../components/MainHeader'
 import SubHeader from '../../components/SubHeader'
 import Footer from '../../components/Footer'
 import Partners from '../../components/Partners'
-import AboutUs from './components/AboutUs'
 import BreadCrumb from '../../components/BreadCrumb'
+
+import AboutUs from './components/AboutUs'
 import Success from './components/Success'
 import Develop from './components/Develop'
 import IntroductionDetail from './components/IntroductionDetail'
@@ -19,7 +20,7 @@ class About extends Component {
           <MainHeader />
           <SubHeader />
           <BreadCrumb>
-            <p>About</p>
+            <p>About us</p>
           </BreadCrumb>
           <AboutUs />
           <IntroductionDetail />

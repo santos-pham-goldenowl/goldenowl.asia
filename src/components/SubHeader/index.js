@@ -1,72 +1,57 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-import ServicesData from "../../utils/Services";
-import arrowRight from "../../assets/images/arrow-right.svg";
-import arrowDown from "../../assets/images/chevron-down-solid.svg";
-import "./index.sass";
-import "./service.sass";
+import ServicesData from '../../utils/Services'
+import arrowRight from '../../assets/images/arrow-right.svg'
+import arrowDown from '../../assets/images/chevron-down-solid.svg'
+
+import './index.sass'
+import './service.sass'
 
 class SubHeader extends Component {
-  state = { showServices: false };
-
-  handleServicesOn = () => this.setState({ showServices: true });
-
-  handleServicesOff = () => this.setState({ showServices: false });
-
   render() {
-    const servicesNode = (
-      <div className="services" onMouseLeave={this.handleServicesOff}>
-        <div
-          className="services__arrow-wrapper"
-          onMouseEnter={this.handleServicesOn}
-        >
-          <Link className="services__link" to="/services">
-            <h4 className="sub-header__text">Services</h4>
-          </Link>
-          <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-        </div>
-        <div className="services__items">
-          {ServicesData.map(service => (
-            <Link key={service.link} to={`/services/${service.link}`}>
-              <div className="services__service">
-                <div className="services__icon-wrapper">
-                  <img src={service.url} alt={service.name} />
-                </div>
-                <div className="services__service-description-wrapper">
-                  <h4>{service.name}</h4>
-                  <p className="services__service-description">
-                    {service.description}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    );
-
-    const buttoNode = (
-      <div className="services">
-        <div
-          className="services__arrow-wrapper"
-          onMouseEnter={this.handleServicesOn}
-        >
-          <Link to="/services">
-            <h4 className="sub-header__text">Services</h4>
-          </Link>
-          <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-        </div>
-      </div>
-    );
     return (
-      <header className="sub-header d-flex">
+      <header className="sub-header">
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/">
             <h4 className="sub-header__text">Home</h4>
           </Link>
         </div>
-        <div>{this.state.showServices ? servicesNode : buttoNode}</div>
+        {/* Services Dropdown-start */}
+        <div className="dropdown">
+          <div
+            className="align-items-center sub-header__button"
+            id="services-dropdown"
+          >
+            <Link
+              className="d-flex align-items-center no-hover-text-decoration"
+              to="/services"
+            >
+              <h4 className="sub-header__text">Services</h4>
+              <img className="arrow-down" src={arrowDown} alt="arrow-down" />
+            </Link>
+          </div>
+          <div className="dropdown-content">
+            <div className="services__items">
+              {ServicesData.map((service) => (
+                <Link key={service.link} to={`/services/${service.link}`}>
+                  <div className="services__service">
+                    <div className="services__icon-wrapper">
+                      <img src={service.url} alt={service.name} />
+                    </div>
+                    <div className="services__service-description-wrapper">
+                      <h4>{service.name}</h4>
+                      <p className="services__service-description">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Services Dropdown-end */}
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/technologies">
             <h4 className="sub-header__text">Technology</h4>
@@ -78,18 +63,20 @@ class SubHeader extends Component {
           </Link>
         </div>
         <div className="sub-header__contact-wrapper d-flex align-items-center justify-content-center">
-          <h4 className="sub-header__contact-title sub-header__text">
-            Contact us
-          </h4>
-          <img
-            className="sub-header__arrow-right"
-            src={arrowRight}
-            alt="arrow-right"
-          />
+          <Link to="/contact-us" className="d-flex align-items-center">
+            <h4 className="sub-header__contact-title sub-header__text">
+              Contact us
+            </h4>
+            <img
+              className="sub-header__arrow-right"
+              src={arrowRight}
+              alt="GO-contact-us"
+            />
+          </Link>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default SubHeader;
+export default SubHeader
