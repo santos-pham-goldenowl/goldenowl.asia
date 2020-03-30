@@ -1,0 +1,74 @@
+@import '../../../../styles/variables'
+@import '../../../../styles/mixins'
+
+.technologies
+  background-color: #2e2e2e
+  text-align: center
+  @include responsive($screen: mobile)
+    padding: 50px 0
+  @include responsive($screen: tablet)
+    margin-top: 11px
+    padding: 53px
+  @include responsive($screen: desktop)
+    margin-top: 14px
+    padding: 71px
+  @include responsive($screen: large-desktop)
+    margin-top: 20px
+    padding: 80px 100px 60px 100px
+
+  &__view-all
+    font-family: ProximaNovaRegular
+    color: $white
+
+  &__title
+    color: #ffffff !important
+    line-height: 1.33
+    @include responsive($screen: mobile)
+      padding-bottom: 30px
+      font-size: 24px
+      line-height: 1.5
+    @include responsive($screen: tablet)
+      padding-bottom: 43px
+      font-size: 20px
+    @include responsive($screen: desktop)
+      padding-bottom: 57px
+      font-size: 26px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 80px
+      font-size: 40px
+
+  .logo-wrapper
+    @include responsive($screen: mobile)
+      padding-bottom: 40px !important
+    @include responsive($screen: tablet)
+      padding-bottom: 43px !important
+    @include responsive($screen: desktop)
+      padding-bottom: 57px !important
+    @include responsive($screen: large-desktop)
+      padding-bottom: 60px !important
+
+  &__grid-item
+    margin: auto
+    max-width: 100% !important
+    @include responsive($screen: mobile)
+      max-height: 40px !important
+      max-width: 102px !important
+    @include responsive($screen: tablet)
+      max-height: 32px !important
+    @include responsive($screen: desktop)
+      max-height: 43px
+    @include responsive($screen: large-desktop)
+      max-height: 60px
+
+  &__view-all
+    padding-top: 0
+    padding-bottom: 0
+    @include responsive($screen: mobile)
+      font-size: 16px
+    @include responsive($screen: tablet)
+      font-size: 14px
+    @include responsive($screen: desktop)
+      font-size: 16px
+    @include responsive($screen: large-desktop)
+      font-size: 18px
+      line-height: 1.22
