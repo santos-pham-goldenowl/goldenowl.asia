@@ -1,0 +1,16 @@
+@import '../../styles/variables'
+@import '../../styles/mixins'
+
+.home
+  .main-header, .sub-header, .quote
+    background-color: $slightOrange
+
+  hr
+    @include responsive($screen: mobile)
+      width: calc(100% - 30px)
+    @include responsive($screen: tablet)
+      width: calc(100% - 100px)
+    @include responsive($screen: desktop)
+      width: calc(100% - 140px)
+    @include responsive($screen: large-desktop)
+      width: 1240px

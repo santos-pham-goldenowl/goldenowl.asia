@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-import TabContainer from "../../../../components/Tabs/TechTabs";
+import TabContainer from '../../../../components/Tabs/TechTabs'
 
-import "./index.sass";
+import './index.sass'
 
 const TechnologyDetail = () => (
   <section className="technology-detail">
@@ -18,6 +18,6 @@ const TechnologyDetail = () => (
       </div>
     </div>
   </section>
-);
+)
 
-export default TechnologyDetail;
+export default TechnologyDetail

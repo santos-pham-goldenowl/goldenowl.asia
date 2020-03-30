@@ -12,7 +12,7 @@ const TestimonialsStats = () => (
       </h2>
       <div className="row">
         {
-          objectToArray(testimonialsStats).map(item => (
+          objectToArray(testimonialsStats).map((item) => (
             <div key={item.key} className="col-md-3 stats">
               <h2>{item.number}<sup>{item.unit}</sup></h2>
               <p>{item.key}</p>

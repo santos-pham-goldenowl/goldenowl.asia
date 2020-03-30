@@ -8,9 +8,9 @@ import './index.sass'
 const Footer = () => (
   <footer className="footer">
     <div className="footer__top-content-wrapper">
-        <h4 className="heading-small footer__top-content-title">
+      <h4 className="heading-small footer__top-content-title">
           Areas we serve
-        </h4>
+      </h4>
       <div className="row">
         <div className="col-md-3">
           <h5>Ho Chi Minh City</h5>
