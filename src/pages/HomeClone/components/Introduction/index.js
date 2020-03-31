@@ -4,11 +4,11 @@ import study from '../../../../assets/images/study.png'
 import './index.sass'
 
 const Introduction = () => (
-  <section className="introduction">
+  <section className="introduction-clone">
     <div className="row">
       <div className="col-12 col-md-6 ml-auto align-items-center">
-        <h3 className="introduction__title">We are Golden Owl</h3>
-        <p className="introduction__text">
+        <h3 className="introduction-clone__title">We are Golden Owl</h3>
+        <p className="introduction-clone__text">
         The role of Golden Owl Asia starts where Enterprise meets technology. We provide IT solutions that allow our Clients to achieve specific goals and measurable benefits.
           <br />
           <br />
