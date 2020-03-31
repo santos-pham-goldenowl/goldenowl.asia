@@ -18,7 +18,7 @@ const Testimonials = () => (
       <MainHeader />
       <SubHeader />
       <BreadCrumb>
-        <Link to="/testimonials">Testimonials</Link>
+        <Link to="/testimonial">Testimonials</Link>
       </BreadCrumb>
       <TestimonialsStats />
       <StatsSummary />

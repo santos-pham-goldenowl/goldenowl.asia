@@ -86,7 +86,7 @@ const Footer = () => (
             <Link to="/about-us">About us</Link>
             <Link to="/services">Services</Link>
             <Link to="/technologies">Technologies</Link>
-            <Link to="/testimonials">Testimonials</Link>
+            <Link to="/testimonial">Testimonials</Link>
             <Link to="/portfolio">Portfolio</Link>
           </div>
         </div>

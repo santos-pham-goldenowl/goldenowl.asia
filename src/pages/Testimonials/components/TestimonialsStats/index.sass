@@ -3,6 +3,8 @@
 
 .testimonials-stats
   @include responsive($screen: mobile)
+    padding-top: 30px !important
+    padding-bottom: 10px !important
   @include responsive($screen: tablet)
     padding-top: 39px !important
     padding-bottom: 53px !important
@@ -24,6 +26,7 @@
 
   .title
     @include responsive($screen: mobile)
+      padding-bottom: 40px
     @include responsive($screen: tablet)
       padding-bottom: 21px
     @include responsive($screen: desktop)
@@ -33,6 +36,9 @@
 
   h2
     @include responsive($screen: mobile)
+      &.title
+        font-size: 28px
+        line-height: 1.36
     @include responsive($screen: tablet)
       font-size: 30px
     @include responsive($screen: desktop)
@@ -44,6 +50,9 @@
     h2
       color: #f9be39
       @include responsive($screen: mobile)
+        font-size: 40px
+        line-height: 1.33
+        padding-bottom: 10px
       @include responsive($screen: tablet)
         padding-bottom: 6px
       @include responsive($screen: desktop)
@@ -52,6 +61,10 @@
         padding-bottom: 12px
     p
       @include responsive($screen: mobile)
+        font-size: 16px
+        line-height: 1.5
+        padding-bottom: 30px
+        padding-right: 10%
       @include responsive($screen: tablet)
         font-size: 14px
       @include responsive($screen: desktop)
@@ -60,6 +73,9 @@
         font-size: 26px
     sup
       @include responsive($screen: mobile)
+        top: -14px
+        left: 4px
+        font-size: 25px
       @include responsive($screen: tablet)
         top: -14px
         left: 4px

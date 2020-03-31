@@ -58,7 +58,7 @@ class SubHeader extends Component {
           </Link>
         </div>
         <div className="d-flex align-items-center sub-header__button">
-          <Link to="/testimonials">
+          <Link to="/testimonial">
             <h4 className="sub-header__text">Testimonial</h4>
           </Link>
         </div>

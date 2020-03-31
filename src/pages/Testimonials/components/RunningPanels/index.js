@@ -36,16 +36,16 @@ const RunningPanels = () => (
         },
         mobile: {
           breakpoint: {
-            max: 464,
+            max: 767,
             min: 0,
           },
-          items: 6,
+          items: 3,
           partialVisibilityGutter: 30,
         },
         tablet: {
           breakpoint: {
             max: 1024,
-            min: 464,
+            min: 768,
           },
           items: 6,
           partialVisibilityGutter: 30,
@@ -93,16 +93,16 @@ const RunningPanels = () => (
         },
         mobile: {
           breakpoint: {
-            max: 464,
+            max: 767,
             min: 0,
           },
-          items: 6,
+          items: 3,
           partialVisibilityGutter: 30,
         },
         tablet: {
           breakpoint: {
             max: 1024,
-            min: 464,
+            min: 768,
           },
           items: 6,
           partialVisibilityGutter: 30,
