@@ -10,7 +10,6 @@ const Guarantee = () => (
       <h3 className="d-block w-100 text-center">We guarantee</h3>
       <div className="col-md-4">
         <h5>Deliver the most high-quality product</h5>
-        <br />
         <div className="d-flex guarantee__line">
           <CheckPoint />
           <p>Elegant design</p>
@@ -30,7 +29,6 @@ const Guarantee = () => (
         <h5 id="middle-title">
           Provide the best solution so that customer gets the greatest benefit
         </h5>
-        <br />
         <div className="d-flex guarantee__line">
           <CheckPoint />
           <p>Meet the customer requirements with latest technologies</p>
@@ -48,7 +46,6 @@ const Guarantee = () => (
       </div>
       <div className="col-md-4">
         <h5>Provide maintenance/ improvement</h5>
-        <br />
         <div className="d-flex guarantee__line">
           <CheckPoint />
           <p>

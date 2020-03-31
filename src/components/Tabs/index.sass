@@ -1,4 +1,5 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .header-group
   display: flex
@@ -7,192 +8,113 @@
 
 .header
   cursor: pointer
+  @include responsive($screen: mobile)
+    padding: 0 8.5px 10px 8.5px
+  @include responsive($screen: tablet)
+    padding: 0 18px 23px 18px
+  @include responsive($screen: desktop)
+    padding: 0 24px 31px 24px
+  @include responsive($screen: large-desktop)
+    padding: 0 34px 44px 34px
 
   p
     color: $litleGray
-    padding: 0 5px
 
 .frontend-title
   border-bottom: 1px solid $yellow
   p
     color: $black
 
-.tab-header-title
-  padding-bottom: 10px
-
 .tech-tab
+  display: flex
   .right-side
     display: grid
-    grid-template: repeat(4, auto) / repeat(3, auto)
+    grid-template: repeat(2, auto) / repeat(3, auto)
     justify-content: space-between
-    grid-row-gap: 20px
+    @include responsive($screen: mobile)
+      padding-top: 40px !important
+      grid-row-gap: 30px
+    @include responsive($screen: tablet)
+      padding-top: 27px
+      grid-row-gap: 32px
+      padding-left: 27px! important
+    @include responsive($screen: desktop)
+      padding-top: 34px
+      grid-row-gap: 43px
+      padding-left: 36px! important
+    @include responsive($screen: large-desktop)
+      padding-top: 50px
+      grid-row-gap: 60px
+      padding-left: 50px! important
+    > div
+      text-align: center
     img
       width: auto
-    
+      max-width: 100%
+      @include responsive($screen: mobile)
+        max-height: 30px
+      @include responsive($screen: tablet)
+        max-height: 21px
+      @include responsive($screen: desktop)
+        max-height: 28px
+      @include responsive($screen: large-desktop)
+        max-height: 40px
+
+  &__logo-name
+    @include responsive($screen: mobile)
+      font-size: 14px
+      line-height: 2.14
+    @include responsive($screen: tablet)
+      font-size: 10px
+    @include responsive($screen: desktop)
+      font-size: 12px
+    @include responsive($screen: large-desktop)
+      font-size: 18px
+
+  &__description
+    color: $softBlack
+    line-height: 1.5
+    @include responsive($screen: mobile)
+      font-size: 16px
+    @include responsive($screen: tablet)
+      font-size: 12px
+    @include responsive($screen: desktop)
+      font-size: 14px
+    @include responsive($screen: large-desktop)
+      font-size: 20px
+
+  &__logo-wrapper
+    display: flex
+    align-items: center
+    .image-wrapper
+      @include responsive($screen: mobile)
+        width: 34px
+        margin-right: 8px
+      @include responsive($screen: tablet)
+        width: 24px
+        margin-right: 11px
+      @include responsive($screen: desktop)
+        width: 32px
+        margin-right: 14px
+      @include responsive($screen: large-desktop)
+        width: 45px
+        margin-right: 20px
+
 .tab-content-container
-  padding-top: 30px
+  @include responsive($screen: mobile)
+    padding-top: 40px
+    padding-bottom: 50px
+  @include responsive($screen: tablet)
+    padding-top: 53px
+    padding-bottom: 80px
+  @include responsive($screen: desktop)
+    padding-top: 71px
+    padding-bottom: 107px
+  @include responsive($screen: large-desktop)
+    padding-top: 100px
+    padding-bottom: 150px
 
 .header-active-true
   border-bottom: 1px solid $darkYellow
   p
     color: $darkGray
-
-@media only screen and (min-width: 1023px)
-  .header-group
-    display: flex
-    justify-content: center
-
-  .tab-content-container
-    padding-top: 50px
-
-  .tech-tab
-    display: flex
-
-    &__logo-wrapper
-      display: flex
-      align-items: center
-      img
-        margin-right: 20px
-      p
-        font-size: 18px
-
-    &__description
-      color: $softBlack
-
-    .tab-header-title
-      padding-bottom: 10px
-
-    &__left-side
-      flex: 1
-      padding-right: 50px
-      p
-        line-height: 30px
-
-    .right-side
-      display: grid
-      grid-template: repeat(2, auto) / repeat(3, auto)
-      justify-content: space-between
-      grid-row-gap: 60px
-      > div
-        text-align: center
-
-  .tab-header
-    p
-      padding: 20px
-      color: $litleGray
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .header
-    padding: 0 18px 23px 18px
-
-  .tech-tab
-    display: flex
-
-    &__description
-      color: $softBlack
-      font-size: 12px
-      line-height: 1.5
-
-    &__logo-name
-      font-size: 10px
-    
-    .right-side
-      padding-left: 27px! important
-
-    &__logo-wrapper
-      display: flex
-      align-items: center
-      img
-        margin-right: 22px
-
-  .tab-content-container
-    padding-top: 53px
-    padding-bottom: 64px
-  
-  .right-side
-    display: grid
-    grid-template: repeat(2, auto) / repeat(3, auto)
-    justify-content: space-between
-    padding-top: 32px
-    grid-row-gap: 32px
-    > div
-      text-align: center
-    img
-      height: 21px
-
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .header
-    padding: 0 24px 31px 24px
-
-  .tech-tab
-    display: flex
-
-    &__description
-      color: $softBlack
-      font-size: 14px
-      line-height: 1.5
-
-    &__logo-name
-      font-size: 12px
-    
-    .right-side
-      padding-left: 36px! important
-
-    &__logo-wrapper
-      display: flex
-      align-items: center
-      img
-        margin-right: 30px
-
-  .tab-content-container
-    padding-top: 71px
-    padding-bottom: 85px
-
-  .right-side
-    display: grid
-    grid-template: repeat(2, auto) / repeat(3, auto)
-    justify-content: space-between
-    padding-top: 36px
-    grid-row-gap: 43px
-    > div
-      text-align: center
-    img
-      height: 28px
-
-@media only screen and (min-width: 1366px)
-  .header
-    padding: 0 34px 44px 34px
-
-  .tech-tab
-    display: flex
-
-    &__description
-      color: $softBlack
-      font-size: 20px
-      line-height: 1.5
-
-    &__logo-name
-      font-size: 18px
-    
-    .right-side
-      padding-left: 50px! important
-
-    &__logo-wrapper
-      display: flex
-      align-items: center
-      img
-        margin-right: 42px
-
-  .tab-content-container
-    padding-top: 100px
-    padding-bottom: 120px
-  
-  .right-side
-    display: grid
-    grid-template: repeat(2, auto) / repeat(3, auto)
-    justify-content: space-between
-    padding-top: 50px
-    grid-row-gap: 60px
-    > div
-      text-align: center

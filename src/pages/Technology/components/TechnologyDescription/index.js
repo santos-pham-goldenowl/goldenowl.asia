@@ -17,7 +17,7 @@ const TechnologyDescription = () => {
     <section className="technology-description" style={sectionStyle}>
       <div className="row">
         <div className="col-md-7 technology-description__left-side">
-          <h2>TECHNOLOGY</h2>
+          <h2>Technology</h2>
           <p>
             By using many programming languages such as Ruby on Rails,
             Javascript and PHP and best platforms, we have built lots of
