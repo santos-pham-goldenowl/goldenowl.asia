@@ -1,9 +1,12 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .footer
   background-color: $white
   font-family: ProximaNovaRegular
   text-align: center
+  @include responsive($screen: mobile)
+    display: none
 
   &__phone
     color: $darkGray
@@ -12,29 +15,75 @@
     color: $yellow
 
   &__icon-linkedin
-    height: 1.1vw
+    @include responsive($screen: tablet)
+      height: 9px
+    @include responsive($screen: desktop)
+      height: 11px
+    @include responsive($screen: large-desktop)
+      height: 16px
 
   &__icon-facebook, &__icon-instagram
-    height: 1.4vw
+    @include responsive($screen: tablet)
+      height: 10px
+    @include responsive($screen: desktop)
+      height: 13px
+    @include responsive($screen: large-desktop)
+      height: 18px
+
+  &__social-icons-wrapper
+    @include responsive($screen: tablet)
+      padding-top: 18px
+    @include responsive($screen: desktop)
+      padding-top: 24px
+    @include responsive($screen: large-desktop)
+      padding-top: 34px
 
   &__social-icon
-    margin-right: 1.4vw
+    @include responsive($screen: tablet)
+      margin-right: 11px
+    @include responsive($screen: desktop)
+      margin-right: 14px
+    @include responsive($screen: large-desktop)
+      margin-right: 20px
 
   &__top-content-wrapper
     background-image: url('../../assets/images/Footer/map.svg')
-    padding: 10.4vw $desktopPadding 5.5vw $desktopPadding
     text-align: left
     background-color: $softGray
     background-position: center
     background-repeat: no-repeat
     color: $darkGray
+    @include responsive($screen: tablet)
+      padding-top: 80px
+      padding-bottom: 43px
+    @include responsive($screen: desktop)
+      padding-top: 107px
+      padding-bottom: 57px
+    @include responsive($screen: large-desktop)
+      padding-top: 150px
+      padding-bottom: 80px
 
   &__logo-wrapper
-    img
-      object-fit: contain
+  img
+    object-fit: contain
+    @include responsive($screen: tablet)
+      height: 17px
+    @include responsive($screen: desktop)
+      height: 22px
+    @include responsive($screen: large-desktop)
+      height: 31px
 
   &__top-content-title
-    padding-bottom: 2.2vw !important
+    line-height: 1.34
+    @include responsive($screen: tablet)
+      font-size: 13px
+      padding-bottom: 17px
+    @include responsive($screen: desktop)
+      font-size: 17px
+      padding-bottom: 23px
+    @include responsive($screen: large-desktop)
+      font-size: 24px
+      padding-bottom: 32px
 
   &__copyright
     background-color: $warmGray
@@ -47,17 +96,46 @@
   .col-md-3
     h5
       padding-bottom: 10px
+      @include responsive($screen: tablet)
+        font-size: 12px
+        padding-bottom: 5px
+      @include responsive($screen: desktop)
+        font-size: 14px
+        padding-bottom: 7px
+      @include responsive($screen: large-desktop)
+        font-size: 20px
+        padding-bottom: 10px
     p
-      line-height: 1.67 !important
+      line-height: 1.67
+      @include responsive($screen: tablet)
+        font-size: 10px
+      @include responsive($screen: desktop)
+        font-size: 12px
+      @include responsive($screen: large-desktop)
+        font-size: 18px
 
   &__bottom-content-wrapper
-    padding: 6.3vw $desktopPadding 5.5vw $desktopPadding
     display: flex
     justify-content: space-around
     align-items: flex-start
+    @include responsive($screen: tablet)
+      padding-top: 43px
+      padding-bottom: 43px
+    @include responsive($screen: desktop)
+      padding-top: 57px
+      padding-bottom: 57px
+    @include responsive($screen: large-desktop)
+      padding-top: 80px
+      padding-bottom: 80px
     h3
       font-family: MalloryBold
       line-height: 1.3
+      @include responsive($screen: tablet)
+        font-size: 12px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 20px
 
   &__bottom-grid-container
     display: flex
@@ -67,195 +145,70 @@
     > div
       padding-bottom: 0
       a
-        line-height: 1.78 !important
-
-  a
-    line-height: 1.78
-    display: block
-    color: $darkGray
-    white-space: nowrap
-    font-family: ProximaNovaRegular
+        line-height: 1.78
+        display: block
+        color: $darkGray
+        white-space: nowrap
+        font-family: ProximaNovaRegular
+        @include responsive($screen: tablet)
+          font-size: 10px
+        @include responsive($screen: desktop)
+          font-size: 12px
+        @include responsive($screen: large-desktop)
+          font-size: 18px
 
   &__contact
-    padding-top: 2.8vw
-    padding-bottom: 2.8vw
     text-align: left
     display: flex
     flex-direction: row
     align-items: flex-start
-    span
-      font-size: 19px
-      padding-right: 3.4vw
-
-  &__bottom-grid-title
-    color: $darkGray
-    padding-bottom: 0.6vw
-    font-family: MalloryMedium
-
-  &__social-icons-wrapper
-    padding-top: 2.3vw
-@media (max-width: 767px)
-  .footer
-    display: none
-@media (min-width: 768px) and (max-width: 1023px)
-  .footer
-    &__icon-linkedin
-      height: 9px
-
-    &__icon-facebook, &__icon-instagram
-      height: 10px
-
-    &__social-icon
-      margin-right: 11px
-
-    &__top-content-title
-      font-size: 17px
-      line-height: 1.34
-      padding-bottom: 17px !important
-
-    &__copyright
-      p
-        font-size: 14px !important
-
-    .col-md-3
-      h5
-        font-size: 10px
-      p
-        font-size: 10px !important
-
-    &__logo-wrapper
-      img
-        height: 17px
-
-    a
-      font-size: 12px !important
-
-    h3
-      font-size: 12px !important
-
-    &__contact
+    @include responsive($screen: tablet)
       padding-top: 21px
       padding-bottom: 21px
-      span
-        font-size: 10px
-        padding-right: 27px
-
-    &__bottom-grid-title
-      font-size: 10px !important
-      padding-bottom: 4px
-
-    &__social-icons-wrapper
-      padding-top: 18px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .footer
-    &__icon-linkedin
-      height: 11px
-
-    &__icon-facebook, &__icon-instagram
-      height: 13px
-
-    &__social-icon
-      margin-right: 14px
-
-    &__top-content-title
-      font-size: 19px
-      line-height: 1.34
-      padding-bottom: 23px !important
-
-    &__copyright
-      padding-top: 14px
-      padding-bottom: 14px
-      p
-        font-size: 18px !important
-
-    .col-md-3
-      h5
-        font-size: 12px
-      p
-        font-size: 12px !important
-
-    &__logo-wrapper
-      img
-        height: 22px
-
-    a
-      font-size: 12px !important
-
-    h3
-      font-size: 14px !important
-
-    &__contact
+    @include responsive($screen: desktop)
       padding-top: 28px
       padding-bottom: 28px
-      span
-        font-size: 12px
-        padding-right: 36px
-
-    &__bottom-grid-title
-      font-size: 12px !important
-      padding-bottom: 6px
-
-    &__social-icons-wrapper
-      padding-top: 24px
-
-@media only screen and (min-width: 1366px)
-  .footer
-
-    &__icon-linkedin
-      height: 16px
-
-    &__icon-facebook, &__icon-instagram
-      height: 18px
-
-    &__social-icon
-      margin-right: 20px
-
-    &__top-content-title
-      font-size: 24px
-      line-height: 1.34
-      padding-bottom: 32px !important
-
-    &__copyright
-      padding-top: 14px
-      padding-bottom: 14px
-      p
-        font-size: 18px !important
-
-    .col-md-3
-      h5
-        font-size: 20px
-        padding-bottom: 10px
-      p
-        font-size: 18px !important
-
-    &__top-content-wrapper
-      padding-top: 150px
-      padding-bottom: 80px
-
-    &__bottom-content-wrapper
-      padding: 80px $desktopPadding 80px $desktopPadding
-
-    a
-      font-size: 18px !important
-
-    h3
-      font-size: 20px !important
-
-    &__logo-wrapper
-      img
-        height: 31px
-
-    &__contact
+    @include responsive($screen: large-desktop)
       padding-top: 40px
       padding-bottom: 40px
-      span
+    span
+      @include responsive($screen: tablet)
+        font-size: 10px
+        padding-right: 27px
+      @include responsive($screen: desktop)
+        font-size: 12px
+        padding-right: 36px
+      @include responsive($screen: large-desktop)
         font-size: 18px
         padding-right: 50px
 
-    &__bottom-grid-title
-      font-size: 18px !important
+  &__bottom-grid-title
+    color: $darkGray
+    font-family: MalloryMedium
+    @include responsive($screen: tablet)
+      font-size: 10px
+      padding-bottom: 4px
+    @include responsive($screen: desktop)
+      font-size: 12px
+      padding-bottom: 6px
+    @include responsive($screen: large-desktop)
+      font-size: 18px
       padding-bottom: 8px
 
-    &__social-icons-wrapper
-      padding-top: 34px
+  &__copyright
+    @include responsive($screen: tablet)
+      padding-top: 7px
+      padding-bottom: 7px
+    @include responsive($screen: desktop)
+      padding-top: 10px
+      padding-bottom: 10px
+    @include responsive($screen: large-desktop)
+      padding-top: 14px
+      padding-bottom: 14px
+    p
+      @include responsive($screen: tablet)
+        font-size: 9px
+      @include responsive($screen: desktop)
+        font-size: 12px
+      @include responsive($screen: large-desktop)
+        font-size: 18px
