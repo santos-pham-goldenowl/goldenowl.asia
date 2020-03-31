@@ -81,11 +81,11 @@ class MainHeader extends Component {
             <li className="main-header__flex-item">
               <Link to="/portfolio">Portfolio</Link>
             </li>
-            <li className="d-none main-header__flex-item font-bold" style={{ display: 'none' }}>
+            <li className="d-none main-header__flex-item font-bold">
               <span>English</span>
               <img className="arrow-down" src={arrowDown} alt="arrow-down" loading="lazy" />
             </li>
-            <li style={{ borderBottom: '1px solid #f1e3b9', marginBottom: '20px' }} />
+            <li className="separate-line" />
             <li className="main-header__flex-item">
               <Link to="/services">Services</Link>
             </li>
@@ -96,7 +96,7 @@ class MainHeader extends Component {
             <Link to="/testimonial">Testimonial</Link>
             </li>
             <li className="main-header__flex-item">Contact us</li>
-            <li style={{ borderBottom: '1px solid #f1e3b9', marginBottom: '20px' }} />
+            <li className="separate-line" />
             <li className="main-header__flex-item">
               <Link to="/services/web-development">Web development</Link>
             </li>
