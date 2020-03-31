@@ -159,6 +159,7 @@
     @include responsive($screen: mobile)
       font-size: 14px
       margin-left: 0
+      max-width: 32%
       margin-right: auto
     @include responsive($screen: tablet)
       font-size: 19px
@@ -195,11 +196,13 @@
     @include responsive($screen: mobile)
       width: 65.8% !important
     > li
+      width: 100% !important
       &:before
         content: '•'
         @include responsive($screen: mobile)
           font-size: 14px
           padding-right: 25px
+          padding-bottom: 5px
         @include responsive($screen: tablet)
           font-size: 13px
           padding-right: 21px
