@@ -66,6 +66,13 @@
       @include responsive($screen: large-desktop)
         padding-right: 40px !important
 
+  .col-6
+    @include responsive($screen: mobile)
+      &:nth-child(2n)
+        padding-left: 6.25px !important
+      &:nth-child(2n+1)
+        padding-right: 6.25px !important
+
   &__cover
     @include responsive($screen: mobile)
       padding-bottom: 30px !important
