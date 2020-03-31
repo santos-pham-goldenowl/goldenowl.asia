@@ -61,20 +61,20 @@
       margin-bottom: 5px
       z-index: 31
 
-  &__flex-container-show
-    display: block
-    z-index: 31
-    padding: 0
-    position: absolute
-    min-height: 200vh
-    background: $slightOrange
-    z-index: 32
-    width: 100%
-    padding-left: 30px
-    padding-top: 30px
-    left: 0
-    li
-      padding-bottom: 10px
+  // &__flex-container-show
+  //   display: block
+  //   z-index: 31
+  //   padding: 0
+  //   position: absolute
+  //   min-height: 200vh
+  //   background: $slightOrange
+  //   z-index: 32
+  //   width: 100%
+  //   padding-left: 30px
+  //   padding-top: 30px
+  //   left: 0
+  //   li
+  //     padding-bottom: 10px
 
   &__flex-item
     text-align: left
@@ -111,27 +111,80 @@
     display: flex
     justify-content: space-between
 
-  &__left-side-show
-    display: flex
-    justify-content: space-between
+  // &__left-side-show
+  //   display: flex
+  //   justify-content: space-between
 
-    span:first-child
-      display: none
+  //   span:first-child
+  //     display: none
 
-    span:nth-child(2)
-      position: relative
-      transform: rotate(45deg)
-      top: 20px
+  //   span:nth-child(2)
+  //     position: relative
+  //     transform: rotate(45deg)
+  //     top: 20px
 
-    span:nth-child(3)
-      position: relative
-      top: 10px
-      transform: rotate(-45deg)
+  //   span:nth-child(3)
+  //     position: relative
+  //     top: 10px
+  //     transform: rotate(-45deg)
 
-    .main-header__hamburger
-      position: relative
-      top: -15px
+  //   .main-header__hamburger
+  //     position: relative
+  //     top: -15px
 
 .separate-line
   border-bottom: 1px solid #f1e3b9
   margin-bottom: 20px
+
+.mobile-menu
+  position: fixed
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+  z-index: 1
+  background-color: $yellow
+  > div
+    padding-left: 15px
+    padding-right: 15px
+
+  &__header
+    display: flex
+    height: 70px
+    background-color: $darkGray
+
+  &__close
+    align-self: center
+    height: 20px
+    margin-left: auto
+
+  &__primary-link
+    margin-top: 40px
+    margin-bottom: 50px
+    a
+      font-family: MalloryBold
+      line-height: 1.22
+      margin-bottom: 20px
+    img
+      height: 10px
+
+  &__secondary-link
+    margin-bottom: 50px
+    a
+      font-family: ProximaNovaRegular
+      line-height: 1.21
+      margin-bottom: 20px
+
+  .contact-link
+    font-family: MalloryBold
+    line-height: 1.22
+    margin-bottom: 30px
+
+  &__arrow
+    padding-top: 3px
+    padding-left: 20px
+    background-color: transparent !important
+    .line
+      width: 17px
+    .arrow
+      left: 17px
