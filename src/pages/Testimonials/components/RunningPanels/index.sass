@@ -9,6 +9,15 @@
 
 .logos-row
   @include responsive($screen: mobile)
+    &:first-child
+      .placeholder-img
+        max-height: 20px
+    &:last-child
+      .placeholder-img
+        max-height: 30px
+  @include responsive($screen: mobile)
+    margin-left: -15px
+    margin-right: -15px
   @include responsive($screen: tablet)
     margin-left: -50px
     margin-right: -50px
@@ -19,13 +28,21 @@
     margin-left: -100px
     margin-right: -100px
   &:last-child
-    margin-top: 50px
+    @include responsive($screen: mobile)
+      margin-top: 24px
+    @include responsive($screen: tablet)
+      margin-top: 25px
+    @include responsive($screen: desktop)
+      margin-top: 35px
+    @include responsive($screen: large-desktop)
+      margin-top: 50px
 
 .placeholder-img
   max-width: 100%
   margin-top: auto !important
   margin-bottom: auto !important
   @include responsive($screen: mobile)
+    padding: 0 15px
   @include responsive($screen: tablet)
     max-height: 27px
     padding: 0 13px

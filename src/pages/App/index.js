@@ -27,7 +27,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
       <Route exact path="/technologies" component={TechnologyContainer} />
-      <Route exact path="/testimonials" component={Testimonials} />
+      <Route exact path="/testimonial" component={Testimonials} />
       <Route exact path="/portfolio" component={Portfolio} />
       {
         objectToArray(portfolioDetails).map((portfolio) => (
