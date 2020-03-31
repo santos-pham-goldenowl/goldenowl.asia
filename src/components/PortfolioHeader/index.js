@@ -7,7 +7,7 @@ import './index.sass'
 import { Link } from 'react-router-dom'
 
 const Services = () => (
-  <header className="portfolio-header d-flex">
+  <header className="portfolio-header d-flex align-items-center">
     <Link to="/portfolio">
       <div className="d-flex">
         <img className="portfolio-header__logo" src={logo} alt="go-logo" />
