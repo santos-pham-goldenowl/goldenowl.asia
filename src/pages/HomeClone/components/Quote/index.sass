@@ -1,7 +1,7 @@
 @import '../../../../styles/variables'
 @import '../../../../styles/mixins'
 
-.quote
+.quote-clone
   @include responsive($screen: mobile)
     padding-top: 0
   @include responsive($screen: tablet)
@@ -49,7 +49,7 @@
       line-height: 1.55
     @include responsive($screen: large-desktop)
       font-size: 20px
-      line-height: 1.5
+      line-height: 1.45
 
   img
     object-fit: contain
@@ -59,12 +59,12 @@
     @include responsive($screen: tablet)
       max-width: calc(100% + 39px)
       margin-left: 11px
-      margin-top: 2px
+      margin-top: -2px
     @include responsive($screen: desktop)
       max-width: calc(100% + 56px)
       margin-left: 14px
-      margin-top: 3px
+      margin-top: -3px
     @include responsive($screen: large-desktop)
       max-width: calc(100% + 78px)
       margin-left: 22px
-      margin-top: 4px
+      margin-top: -4px

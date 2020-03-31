@@ -6,10 +6,10 @@ import companyQuality2 from '../../../../assets/images/qualities/2.png'
 import companyQuality3 from '../../../../assets/images/qualities/3.png'
 
 const CompanyQualities = () => (
-  <section className="qualities">
-    <h3 className="qualities__title"> Why choose us</h3>
+  <section className="qualities-clone">
+    <h3 className="qualities-clone__title"> Why choose us</h3>
     <div className="row">
-      <div className="col-12 col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities-clone__items d-block">
         <img src={companyQuality1} alt="Golden Owl Asia" />
         <h5>Our Company</h5>
         <div className="d-flex">
@@ -26,7 +26,7 @@ const CompanyQualities = () => (
           </p>
         </div>
       </div>
-      <div className="col-12 col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities-clone__items d-block">
         <img src={companyQuality2} alt="Key success" />
         <h5>
             Key success: time & materials
@@ -50,7 +50,7 @@ const CompanyQualities = () => (
           </p>
         </div>
       </div>
-      <div className="col-12 col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities-clone__items d-block">
         <img src={companyQuality3} alt="We create" />
         <h5>We create</h5>
         <div id="need-line-break" className="d-flex">

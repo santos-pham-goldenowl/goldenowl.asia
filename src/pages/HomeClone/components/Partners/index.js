@@ -5,8 +5,8 @@ import partnersLogo from '../../../../utils/PartnersLogo'
 import './index.sass'
 
 const Partners = () => (
-  <section className="partners">
-    <h3 className="partners__title">
+  <section className="partners-clone">
+    <h3 className="partners-clone__title">
       We partner with the world's best
     </h3>
     <SlideCarousel content={partnersLogo} />
