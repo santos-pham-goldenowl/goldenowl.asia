@@ -1,170 +1,169 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
+
 .blog
   .breadcrumb, header, .welcome
     background-color: $slightOrange !important
 
   .welcome
+    @include responsive($screen: mobile)
+      padding-top: 30px
+      padding-bottom: 50px
+    @include responsive($screen: tablet)
+      padding-top: 43px
+      padding-bottom: 80px
+    @include responsive($screen: desktop)
+      padding-top: 57px
+      padding-bottom: 107px
+    @include responsive($screen: large-desktop)
+      padding-top: 80px
+      padding-bottom: 150px
+    &__wrapper
+      @include responsive($screen: tablet)
+        padding-left: 56px
+      @include responsive($screen: desktop)
+        padding-left: 75px
+      @include responsive($screen: large-desktop)
+        padding-left: 105px
+    h1
+      @include responsive($screen: mobile)
+        font-size: 28px
+        padding-bottom: 20px
+      @include responsive($screen: tablet)
+        font-size: 30px
+        padding-bottom: 5px
+      @include responsive($screen: desktop)
+        font-size: 38px
+        padding-bottom: 7px
+      @include responsive($screen: large-desktop)
+        font-size: 60px
+        padding-bottom: 10px
+
     p
       line-height: 1.54
-  
+      @include responsive($screen: mobile)
+        font-size: 16px
+        line-height: 1.5
+      @include responsive($screen: tablet)
+        font-size: 14px
+      @include responsive($screen: desktop)
+        font-size: 18px
+      @include responsive($screen: large-desktop)
+        font-size: 26px
+
   .blogs
+    @include responsive($screen: mobile)
+      padding-bottom: 10px
+    @include responsive($screen: tablet)
+      padding-top: 14px
+      padding-bottom: 80px
+    @include responsive($screen: desktop)
+      padding-top: 14px
+      padding-bottom: 107px
+    @include responsive($screen: large-desktop)
+      padding-top: 20px
+      padding-bottom: 150px
     &__item
+      @include responsive($screen: mobile)
+        padding-bottom: 40px
+      @include responsive($screen: tablet)
+        padding-top: 32px
+      @include responsive($screen: desktop)
+        padding-top: 43px
+      @include responsive($screen: large-desktop)
+        padding-top: 60px
       h4
         font-family: MalloryBold
         line-height: 1.47
-
-      p
-        line-height: 1.5
-
-      .category      
-        p
-          color: #85868f
-    
-    &__item-image
-      width: 100%
-@media (min-width: 768px) and (max-width: 1023px)
-  .blog
-    .welcome
-      padding-top: 43px
-      padding-bottom: 80px
-
-      &__wrapper
-        padding-left: 56px
-      
-      h1
-        font-size: 30px
-        padding-bottom: 5px
-      
-      p
-        font-size: 14px
-    
-    .row
-      margin: 0 -12.5px !important
-    
-    [class*='col']
-      padding-left: 12.5px !important
-      padding-right: 12.5px !important
-
-    .blogs
-      padding-top: 14px
-      padding-bottom: 80px
-
-      &__item
-        padding-top: 32px
-
-        h4
+        @include responsive($screen: mobile)
+          font-size: 24px
+          line-height: 1.34
+          padding-bottom: 20px
+        @include responsive($screen: tablet)
           font-size: 17px
           padding-bottom: 11px
-
-        p
-          font-size: 12px
-        
-        .category
-          padding-bottom: 14px
-          p
-            font-size: 8px
-            padding-right: 10px
-        
-        .category-vertical
-          padding-top: 16px
-
-        .wide-blog
-          padding-left: 15px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .blog
-    .welcome
-      padding-top: 57px
-      padding-bottom: 107px
-
-      &__wrapper
-        padding-left: 75px
-      
-      h1
-        font-size: 38px
-        padding-bottom: 7px
-      
-      p
-        font-size: 18px
-    
-    .row
-      margin: 0 -12.5px !important
-    
-    [class*='col']
-      padding-left: 12.5px !important
-      padding-right: 12.5px !important
-
-    .blogs
-      padding-top: 14px
-      padding-bottom: 107px
-
-      &__item
-        padding-top: 43px
-
-        h4
+        @include responsive($screen: desktop)
           font-size: 25px
           padding-bottom: 14px
-
-        p
+        @include responsive($screen: large-desktop)
+          font-size: 34px
+          padding-bottom: 20px
+      p
+        line-height: 1.5
+        @include responsive($screen: mobile)
+          font-size: 16px
+        @include responsive($screen: tablet)
+          font-size: 12px
+        @include responsive($screen: desktop)
           font-size: 14px
-        
-        .category
+        @include responsive($screen: large-desktop)
+          font-size: 20px
+
+      .category
+        @include responsive($screen: mobile)
+          padding-top: 20px
+          padding-bottom: 20px
+        @include responsive($screen: tablet)
+          padding-bottom: 11px
+        @include responsive($screen: desktop)
           padding-bottom: 14px
-          p
+        @include responsive($screen: large-desktop)
+          padding-bottom: 20px
+        p
+          color: #85868f
+          &:last-child
+            padding-right: 0
+          @include responsive($screen: mobile)
+            font-size: 12px
+            line-height: 1.25
+            padding-right: 40px
+          @include responsive($screen: tablet)
+            font-size: 8px
+            padding-right: 10px
+          @include responsive($screen: desktop)
             font-size: 10px
             padding-right: 14px
-        
-        .category-vertical
-          padding-top: 21px
+          @include responsive($screen: large-desktop)
+            font-size: 16px
+            padding-right: 20px
 
-        .wide-blog
-          padding-left: 15px
+    &__item-image
+      width: 100%
+      @include responsive($screen: mobile)
+        margin: 0 -15px
+        width: calc( 100% + 30px )
 
-@media only screen and (min-width: 1366px)
-  .blog
-    .welcome
-      padding-top: 80px
-      padding-bottom: 150px
-
-      &__wrapper
-        padding-left: 105px
-      
-      h1
-        font-size: 60px
-        padding-bottom: 10px
-      
-      p
-        font-size: 26px
-    
-    .row
+  .row
+    @include responsive($screen: tablet)
+      margin: 0 -9px !important
+    @include responsive($screen: desktop)
+      margin: 0 -12.5px !important
+    @include responsive($screen: large-desktop)
       margin: 0 -17.5px !important
-    
-    [class*='col']
+
+  [class*='col']
+    @include responsive($screen: tablet)
+      padding-left: 9px !important
+      padding-right: 9px !important
+    @include responsive($screen: desktop)
+      padding-left: 12.5px !important
+      padding-right: 12.5px !important
+    @include responsive($screen: large-desktop)
       padding-left: 17.5px !important
       padding-right: 17.5px !important
 
-    .blogs
-      padding-top: 20px
-      padding-bottom: 150px
+  .category-vertical
+    @include responsive($screen: tablet)
+      padding-top: 16px
+    @include responsive($screen: desktop)
+      padding-top: 21px
+    @include responsive($screen: large-desktop)
+      padding-top: 30px
 
-      &__item
-        padding-top: 60px
-
-        h4
-          font-size: 34px
-          padding-bottom: 20px
-
-        p
-          font-size: 20px
-        
-        .category
-          padding-bottom: 20px
-          p
-            font-size: 16px
-            padding-right: 20px
-        
-        .category-vertical
-          padding-top: 30px
-        
-        .wide-blog
-          padding-left: 25px
+  .wide-blog
+    @include responsive($screen: tablet)
+      padding-left: 13px
+    @include responsive($screen: desktop)
+      padding-left: 18px
+    @include responsive($screen: large-desktop)
+      padding-left: 25px
