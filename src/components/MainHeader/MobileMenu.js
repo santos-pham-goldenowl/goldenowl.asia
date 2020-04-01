@@ -19,6 +19,11 @@ const MobileMenu = () => {
     setSubMenuState(!subMenuState);
   };
 
+  const closeAllMenu = () => {
+    setSubMenuState(false);
+    setState(false);
+  }
+
   useEffect(() => {
     document.body.style.overflowY = state ? "hidden" : "auto";
   }, [state]);
@@ -51,11 +56,11 @@ const MobileMenu = () => {
         </div>
         <div className="mobile-menu__content">
           <div className="mobile-menu__primary-link">
-            <Link className="d-flex" to="/">
+            <Link onClick={closeAllMenu} className="d-flex" to="/">
               Home
             </Link>
             <div className="d-flex">
-              <Link to="/services">Services</Link>
+              <Link onClick={closeAllMenu} to="/services">Services</Link>
               <img
                 className="ml-auto"
                 src={arrowDown}
@@ -63,25 +68,25 @@ const MobileMenu = () => {
                 onClick={toggleSubMenuState}
               />
             </div>
-            <Link className="d-flex" to="/technologies">
+            <Link onClick={closeAllMenu} className="d-flex" to="/technologies">
               Technology
             </Link>
-            <Link className="d-flex" to="/testimonial">
+            <Link onClick={closeAllMenu} className="d-flex" to="/testimonial">
               Testimonials
             </Link>
           </div>
           <div className="mobile-menu__secondary-link">
-            <Link className="d-flex" to="/about-us">
+            <Link onClick={closeAllMenu} className="d-flex" to="/about-us">
               About Golden Owl
             </Link>
-            <Link className="d-flex" to="/blog">
+            <Link onClick={closeAllMenu} className="d-flex" to="/blog">
               Blog
             </Link>
-            <Link className="d-flex" to="/portfolio">
+            <Link onClick={closeAllMenu} className="d-flex" to="/portfolio">
               Portfolio
             </Link>
           </div>
-          <Link
+          <Link onClick={closeAllMenu}
             className="d-flex align-items-center contact-link"
             to="/contact-us"
           >
@@ -106,31 +111,31 @@ const MobileMenu = () => {
         </div>
         <div className="mobile-menu__content">
           <div className="mobile-menu__primary-link">
-            <Link to="/services/web-development">
+            <Link onClick={closeAllMenu} to="/services/web-development">
               Web development
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link to="/services/mobile-development">
+            <Link onClick={closeAllMenu} to="/services/mobile-development">
               Mobile development
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link to="/services/ux-ui-design">
+            <Link onClick={closeAllMenu} to="/services/ux-ui-design">
               UX UI design
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link to="/services/project-management">
+            <Link onClick={closeAllMenu} to="/services/project-management">
               Project management
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link to="/services/development-team">
+            <Link onClick={closeAllMenu} to="/services/development-team">
               Development team
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
