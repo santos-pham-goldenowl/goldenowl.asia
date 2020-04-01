@@ -74,6 +74,38 @@
         padding-bottom: 28px
       @include responsive($screen: large-desktop)
         padding-bottom: 40px
+      p
+        color: $darkGray
+        line-height: 1.5
+        @include responsive($screen: mobile)
+          font-size: 16px
+        @include responsive($screen: tablet)
+          width: 213px
+          font-size: 10px
+        @include responsive($screen: desktop)
+          width: 284px
+          font-size: 14px
+        @include responsive($screen: large-desktop)
+          width: 400px
+          font-size: 20px
+  h1
+    color: $solidBlack
+    @include responsive($screen: mobile)
+      font-size: 28px
+      line-height: 1.36
+      padding-bottom: 20px
+    @include responsive($screen: tablet)
+      width: 165px
+      padding-bottom: 17px
+      font-size: 28px
+    @include responsive($screen: desktop)
+      width: 206.5px
+      padding-bottom: 21px
+      font-size: 37px
+    @include responsive($screen: large-desktop)
+      width: 295px
+      padding-bottom: 30px
+      font-size: 60px
 
   .send-rectangle
     border: solid 1px $solidBlack
@@ -161,39 +193,6 @@
       margin-right: 10.5px
     @include responsive($screen: large-desktop)
       margin-right: 15px
-
-  h1
-    color: $solidBlack
-    @include responsive($screen: mobile)
-      font-size: 28px
-      line-height: 1.36
-      padding-bottom: 20px
-    @include responsive($screen: tablet)
-      width: 165px
-      padding-bottom: 17px
-      font-size: 28px
-    @include responsive($screen: desktop)
-      width: 206.5px
-      padding-bottom: 21px
-      font-size: 37px
-    @include responsive($screen: large-desktop)
-      width: 295px
-      padding-bottom: 30px
-      font-size: 60px
-  p
-    color: $darkGray
-    line-height: 1.5
-    @include responsive($screen: mobile)
-      font-size: 16px
-    @include responsive($screen: tablet)
-      width: 213px
-      font-size: 10px
-    @include responsive($screen: desktop)
-      width: 284px
-      font-size: 14px
-    @include responsive($screen: large-desktop)
-      width: 400px
-      font-size: 20px
 
   label
     @include responsive($screen: mobile)
