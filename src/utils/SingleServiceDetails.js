@@ -32,6 +32,13 @@ import developmentCoverImage from '../assets/images/service/DevelopmentTeam/cove
 import uiUxCoverImage from '../assets/images/service/UiUx/cover.svg'
 import webCoverImage from '../assets/images/service/WebDevelopment/cover.svg'
 
+// mobile cover import
+import mMobileCoverImage from '../assets/images/service/MobileDevelopment/mCover.png'
+import mProjectCoverImage from '../assets/images/service/ProjectManagement/mCover.png'
+import mDevelopmentCoverImage from '../assets/images/service/DevelopmentTeam/mCover.png'
+import mUiUxCoverImage from '../assets/images/service/UiUx/mCover.png'
+import mWebCoverImage from '../assets/images/service/WebDevelopment/mCover.png'
+
 // below section navigation
 import pageNavs from './OtherServices'
 
@@ -41,6 +48,7 @@ const servicesDetails = {
   'Mobile development': {
     url: 'mobile-development',
     cover: mobileCoverImage,
+    mobileCover: mMobileCoverImage,
     first: { content: 'A good application is not only about the unique business but also about great responsive on all kinds of mobiles and tablets. Therefore, having a developer with vast experience and good at creating UX/ UI is a must in a mobile application project.' },
     second: {
       title: 'We have a great mobile development team',
@@ -107,6 +115,7 @@ const servicesDetails = {
   'Project management': {
     url: 'project-management',
     cover: projectCoverImage,
+    mobileCover: mProjectCoverImage,
     first: { content: 'The success of each project has the vital contribution of a project manager. Golden Owl is proud of having a professional project management team who not only always stays side-by-side to support our development team for a good result but is also a friendly partner to client.' },
     second: {
       title: 'What makes our project management success',
@@ -157,6 +166,7 @@ const servicesDetails = {
   'Development Team': {
     url: 'development-team',
     cover: developmentCoverImage,
+    mobileCover: mDevelopmentCoverImage,
     first: { content: 'Development team is one of important elements that makes up the success of any projects. Golden Owl Consulting owns a large number of outstanding developers with large experience in building website as well as application. No matter how complicated client’s idea is, we always try our best to make the best production. We always find the best way to make the work more efficient.' },
     second: {
       title: 'Try our best for client’s satisfaction',
@@ -186,6 +196,7 @@ const servicesDetails = {
   'UX UI design': {
     url: 'ux-ui-design',
     cover: uiUxCoverImage,
+    mobileCover: mUiUxCoverImage,
     first: { content: 'A good user experience is the best glue between a brand and (potential) customers. We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.' },
     second: {
       title: 'We offer a design services',
@@ -233,6 +244,7 @@ const servicesDetails = {
   'Web development': {
     url: 'web-development',
     cover: webCoverImage,
+    mobileCover: mWebCoverImage,
     first: { content: 'We - Golden Owl is a professional company with great experience in web development from small to big web project in many from many fields such as business, finance, management, etc.' },
     second: {
       title: 'What can we bring',
