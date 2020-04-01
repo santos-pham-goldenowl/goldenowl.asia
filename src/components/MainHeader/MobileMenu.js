@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import mobileMenuLogo from "../../assets/images/mobileMenuLogo.png";
 import arrowDown from "../../assets/images/servicesArrowDown.png";
 import closeIcon from "../../assets/images/whitecloseicon.png";
 import backIcon from "../../assets/images/whitebackicon.png";
 import ArrowRight from "../ArrowRight";
+import { Link } from "react-router-dom";
+
 
 const MobileMenu = () => {
   const [state, setState] = useState(false);
@@ -19,9 +20,9 @@ const MobileMenu = () => {
     setSubMenuState(!subMenuState);
   };
 
-  const closeAllMenu = () => {
-    setSubMenuState(false);
-    setState(false);
+  const closeAllMenu = (location) => {
+    if (location === window.location.pathname)
+      window.location.reload();
   }
 
   useEffect(() => {
@@ -56,11 +57,11 @@ const MobileMenu = () => {
         </div>
         <div className="mobile-menu__content">
           <div className="mobile-menu__primary-link">
-            <Link onClick={closeAllMenu} className="d-flex" to="/">
+            <Link onClick={() => closeAllMenu("/")} className="d-flex" to="/">
               Home
             </Link>
             <div className="d-flex">
-              <Link onClick={closeAllMenu} to="/services">Services</Link>
+              <Link onClick={() => closeAllMenu("/services")} to="/services">Services</Link>
               <img
                 className="ml-auto"
                 src={arrowDown}
@@ -68,25 +69,25 @@ const MobileMenu = () => {
                 onClick={toggleSubMenuState}
               />
             </div>
-            <Link onClick={closeAllMenu} className="d-flex" to="/technologies">
+            <Link onClick={() => closeAllMenu("/technologies")} className="d-flex" to="/technologies">
               Technology
             </Link>
-            <Link onClick={closeAllMenu} className="d-flex" to="/testimonial">
+            <Link onClick={() => closeAllMenu("/testimonial")} className="d-flex" to="/testimonial">
               Testimonials
             </Link>
           </div>
           <div className="mobile-menu__secondary-link">
-            <Link onClick={closeAllMenu} className="d-flex" to="/about-us">
+            <Link onClick={() => closeAllMenu("/about-us")} className="d-flex" to="/about-us">
               About Golden Owl
             </Link>
-            <Link onClick={closeAllMenu} className="d-flex" to="/blog">
+            <Link onClick={() => closeAllMenu("/blog")} className="d-flex" to="/blog">
               Blog
             </Link>
-            <Link onClick={closeAllMenu} className="d-flex" to="/portfolio">
+            <Link onClick={() => closeAllMenu("/portfolio")} className="d-flex" to="/portfolio">
               Portfolio
             </Link>
           </div>
-          <Link onClick={closeAllMenu}
+          <Link onClick={() => closeAllMenu("/contact-us")}
             className="d-flex align-items-center contact-link"
             to="/contact-us"
           >
@@ -111,31 +112,31 @@ const MobileMenu = () => {
         </div>
         <div className="mobile-menu__content">
           <div className="mobile-menu__primary-link">
-            <Link onClick={closeAllMenu} to="/services/web-development">
+            <Link onClick={() => closeAllMenu("/services/web-development")} to="/services/web-development">
               Web development
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link onClick={closeAllMenu} to="/services/mobile-development">
+            <Link onClick={() => closeAllMenu("/services/mobile-development")} to="/services/mobile-development">
               Mobile development
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link onClick={closeAllMenu} to="/services/ux-ui-design">
+            <Link onClick={() => closeAllMenu("/services/ux-ui-design")} to="/services/ux-ui-design">
               UX UI design
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link onClick={closeAllMenu} to="/services/project-management">
+            <Link onClick={() => closeAllMenu("/services/project-management")} to="/services/project-management">
               Project management
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
               </p>
             </Link>
-            <Link onClick={closeAllMenu} to="/services/development-team">
+            <Link onClick={() => closeAllMenu("/services/development-team")} to="/services/development-team">
               Development team
               <p className="mobile-menu__item-description">
                 Lorem ipsum dolor sit amet, te albucius
