@@ -9,7 +9,6 @@
     .row
       p
         line-height: 1.54
-    @include responsive($screen: mobile)
     @include responsive($screen: tablet)
       padding-left: 106px !important
     @include responsive($screen: desktop)
@@ -58,24 +57,25 @@
     .image-wrapper
       position: absolute
       z-index: 1
-      @include responsive($screen: mobile)
-        margin-right: -15px !important
       @include responsive($screen: tablet)
+        padding-left: 59px
         margin-right: -50px !important
       @include responsive($screen: desktop)
+        padding-left: 75px
         margin-right: -70px !important
       @include responsive($screen: large-desktop)
+        padding-left: 105px
         margin-right: -100px !important
       img
         object-fit: contain
         @include responsive($screen: mobile)
-          max-width: calc(100% - 15px)
+          max-width: 100%
         @include responsive($screen: tablet)
           max-width: calc(100% - 50px)
         @include responsive($screen: desktop)
           max-width: calc(100% - 70px)
         @include responsive($screen: large-desktop)
-          max-width: calc(100% - #{$desktopPadding} + 100px)
+          max-width: calc(100% - #{$desktopPadding})
     #white-background
       position: absolute
       top: -1px
@@ -94,10 +94,13 @@
       @include responsive($screen: mobile)
         margin-right: -15px !important
       @include responsive($screen: tablet)
+        padding-left: 59px
         margin-right: -50px !important
       @include responsive($screen: desktop)
+        padding-left: 75px
         margin-right: -70px !important
       @include responsive($screen: large-desktop)
+        padding-left: 105px
         margin-right: -100px !important
       img
         max-width: 100%

@@ -2,6 +2,8 @@ import React from 'react'
 
 import bg from '../../../../assets/images/wavy_bg_2.png'
 import technology from '../../../../assets/images/technology-cover.png'
+import mTechnology from '../../../../assets/images/mTechnology.png'
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth'
 
 import './index.sass'
 
@@ -12,6 +14,8 @@ const TechnologyDescription = () => {
     backgroundPosition: 'bottom',
     backgroundSize: '100vw',
   }
+
+  const isMobile = useMobileWidth()
 
   return (
     <section className="technology-description" style={sectionStyle}>
@@ -35,7 +39,7 @@ const TechnologyDescription = () => {
           </p>
         </div>
         <div className="col-md-5 ml-auto d-flex justify-content-end technology-description__right-side">
-          <img src={technology} alt="technology description" />
+          <img src={isMobile ? mTechnology : technology} alt="technology description" />
         </div>
       </div>
     </section>
