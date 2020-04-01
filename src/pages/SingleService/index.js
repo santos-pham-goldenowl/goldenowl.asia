@@ -8,6 +8,10 @@ import Footer from '../../components/Footer'
 import objectToArray from '../../utils/objectToArray'
 import useMobileWidth from '../../utils/hooks/useMobileWidth'
 
+
+import coverPlaceholder from '../../assets/images/service/cover-min.png'
+import mCoverPlaceholder from '../../assets/images/service/mCover-min.png'
+
 import './index.sass'
 
 
@@ -33,7 +37,7 @@ const SingleService = ({ content }) => {
           <img src={isMobile ? content.mobileCover : content.cover} alt={`GO-${content.key}-cover`} />
         </div>
         <div className="invisible placeholder-wrapper">
-          <img src={isMobile ? content.mobileCover : content.cover} alt={`GO-${content.key}-cover`} />
+          <img src={isMobile ? mCoverPlaceholder : coverPlaceholder} alt={`GO-${content.key}-cover`} />
         </div>
       </section>      
       <section className="service__second-content">
