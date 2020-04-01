@@ -22,7 +22,7 @@ import './index.sass'
 const App = () => (
   <BrowserRouter>
     <ScrollToTop />
-    <section className="App">
+    <section id="app" className="App">
       <Route exact path="/home" component={HomeClone} />
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
