@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import arrowDown from "../../assets/images/chevron-down-solid.svg";
+import mobileMenuLogo from "../../assets/images/mobileMenuLogo.png";
+import arrowDown from "../../assets/images/servicesArrowDown.png";
 import closeIcon from "../../assets/images/whitecloseicon.png";
 import backIcon from "../../assets/images/whitebackicon.png";
 import ArrowRight from "../ArrowRight";
@@ -36,6 +37,11 @@ const MobileMenu = () => {
       {/* Menu content */}
       <div className={`${state ? "" : "d-none "}mobile-menu`}>
         <div className="mobile-menu__header">
+          <img
+            src={mobileMenuLogo}
+            alt="GO-mobile-logo"
+            className="mobile-menu__logo"
+          />
           <img
             src={closeIcon}
             alt="close-menu"
