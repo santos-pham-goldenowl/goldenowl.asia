@@ -120,7 +120,7 @@
   &__next-project
     background-color: #24272C
     @include responsive($screen: mobile)
-      padding: 67.5px 30px
+      padding: 67.5px 0 67.5px 30px
     @include responsive($screen: tablet)
       padding: 42px
     @include responsive($screen: desktop)
@@ -231,3 +231,7 @@
       padding-bottom: 57px !important
     @include responsive($screen: large-desktop)
       padding-bottom: 80px !important
+
+.case-study
+  @include responsive($screen: mobile)
+    font-size: 14px !important
