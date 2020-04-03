@@ -16,7 +16,7 @@ const Missions = () => {
   return (
     <section className="missions" style={sectionStyle}>
       <div className="row">
-        <div className="col-12 col-md-4">
+        <div className="col-12 col-md-4 col-lg-5">
           <h3 className="missions__title">What we do</h3>
           <p>
             Lorem ipsum dolor sit amet, natum persequeris vel cu. Nominavi
@@ -24,7 +24,7 @@ const Missions = () => {
             eloquentiam id has.
           </p>
         </div>
-        <div className="col-12 col-md-7 offset-md-1 pr-0">
+        <div className="col-12 col-md-7 col-lg-6 ml-auto pr-0">
           <div className="row">
             <div className="col-6">
               <Link className="missions__item" to="/services/web-development">

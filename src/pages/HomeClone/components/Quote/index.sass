@@ -1,15 +1,11 @@
 @import '../../../../styles/variables'
 @import '../../../../styles/mixins'
 
-.quote
+.quote-clone
   @include responsive($screen: mobile)
     padding-top: 0
-  @include responsive($screen: tablet)
-    padding-top: 65px
-  @include responsive($screen: desktop)
-    padding-top: 86px
   @include responsive($screen: large-desktop)
-    padding-top: 84.3px
+    padding-top: 80.3px
 
   &__content
     font-family: MalloryBold
@@ -19,15 +15,8 @@
       font-size: 28px
       line-height: 1.54
       padding-bottom: 20px
-    @include responsive($screen: tablet)
-      font-size: 28px
-      line-height: 1.4
-      padding-bottom: 21px
-    @include responsive($screen: desktop)
-      font-size: 36px
-      line-height: 1.4
-      padding-bottom: 28px
     @include responsive($screen: large-desktop)
+      padding-top: 4px
       font-size: 46px
       line-height: 1.53
       padding-bottom: 27px
@@ -41,30 +30,15 @@
       font-size: 16px
       line-height: 1.5
       padding-bottom: 30px
-    @include responsive($screen: tablet)
-      font-size: 14px
-      line-height: 1.55
-    @include responsive($screen: desktop)
-      font-size: 18px
-      line-height: 1.55
     @include responsive($screen: large-desktop)
       font-size: 20px
-      line-height: 1.5
+      line-height: 1.45
 
   img
     object-fit: contain
     @include responsive($screen: mobile)
       max-width: calc( 100% + 30px )
       margin: 0 -15px
-    @include responsive($screen: tablet)
-      max-width: calc(100% + 39px)
-      margin-left: 11px
-      margin-top: 2px
-    @include responsive($screen: desktop)
-      max-width: calc(100% + 56px)
-      margin-left: 14px
-      margin-top: 3px
     @include responsive($screen: large-desktop)
       max-width: calc(100% + 78px)
       margin-left: 22px
-      margin-top: 4px

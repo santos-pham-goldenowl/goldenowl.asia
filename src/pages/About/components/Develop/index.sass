@@ -3,7 +3,7 @@
 
 .develop
   @include responsive($screen: mobile)
-    padding-top: 50px
+    padding: 50px 0 2px 0
   @include responsive($screen: tablet)
     padding: 80px 0 37px 0
   @include responsive($screen: desktop)
@@ -52,19 +52,21 @@
   .image-wrapper
     @include responsive($screen: mobile)
       margin-right: -15px
-      height: 296px
 
   .rectangle, &__image
     @include responsive($screen: mobile)
       position: absolute
-      right: 0
-      width: 301px
+      right: -10px
+      width: 85.1%
     @include responsive($screen: tablet)
-      width: 435px
+      max-width: 435px
     @include responsive($screen: desktop)
-      width: 580px
+      max-width: 580px
     @include responsive($screen: large-desktop)
-      width: 815px
+      max-width: 815px
+
+  &__image-placeholder
+    width: 87.3%
 
   .rectangle
     background-color: $softGray
