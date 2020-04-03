@@ -61,21 +61,6 @@
       margin-bottom: 5px
       z-index: 31
 
-  &__flex-container-show
-    display: block
-    z-index: 31
-    padding: 0
-    position: absolute
-    min-height: 200vh
-    background: $slightOrange
-    z-index: 32
-    width: 100%
-    padding-left: 30px
-    padding-top: 30px
-    left: 0
-    li
-      padding-bottom: 10px
-
   &__flex-item
     text-align: left
     font-family: ProximaNovaRegular
@@ -111,27 +96,91 @@
     display: flex
     justify-content: space-between
 
-  &__left-side-show
-    display: flex
-    justify-content: space-between
-
-    span:first-child
-      display: none
-
-    span:nth-child(2)
-      position: relative
-      transform: rotate(45deg)
-      top: 20px
-
-    span:nth-child(3)
-      position: relative
-      top: 10px
-      transform: rotate(-45deg)
-
-    .main-header__hamburger
-      position: relative
-      top: -15px
-
 .separate-line
   border-bottom: 1px solid #f1e3b9
   margin-bottom: 20px
+
+.mobile-menu
+  position: fixed
+  left: 0
+  top: 0
+  height: 120%
+  width: 100%
+  z-index: 2
+  background-color: $yellow
+  overflow-y: auto
+  display: none
+  @include responsive($screen: mobile)
+    display: block
+  > div
+    padding-left: 15px
+    padding-right: 15px
+
+  &__header
+    display: flex
+    height: 70px
+    background-color: $darkGray
+
+  &__back
+    img
+      align-self: center
+      height: 20px
+      margin-right: 30px
+    h3
+      align-self: center
+      margin-top: -5px
+      margin-bottom: -4px
+      font-size: 24px
+      line-height: 29px
+      font-family: ProximaNovaBold
+      color: $white
+
+  &__logo
+    align-self: center
+    height: 29.2px
+
+  &__close
+    align-self: center
+    height: 20px
+    margin-left: auto
+
+  &__item-description
+    margin-top: 5px
+    font-family: ProximaNovaRegular
+    font-size: 14px
+    line-height: 1.21
+    padding-bottom: 20px
+
+  &__primary-link
+    margin-top: 40px
+    margin-bottom: 50px
+    > a, > div
+      font-family: ProximaNovaBold
+      line-height: 1.22
+      margin-bottom: 20px
+    img
+      height: 10px
+
+  &__secondary-link
+    margin-bottom: 50px
+    a
+      font-family: ProximaNovaRegular
+      line-height: 1.21
+      margin-bottom: 20px
+
+  .contact-link
+    font-family: ProximaNovaBold
+    line-height: 1.22
+    margin-bottom: 30px
+
+  &__arrow
+    padding-top: 3px
+    padding-left: 20px
+    background-color: transparent !important
+    .line
+      width: 17px
+    .arrow
+      left: 17px
+
+.mobile-menu .sub-menu
+  z-index: 3
