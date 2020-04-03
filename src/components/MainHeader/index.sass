@@ -6,7 +6,7 @@
   display: flex
   align-items: center
   @include responsive($screen: mobile)
-    padding: 20.2px 0 40.6px 0
+    padding: 20.2px 0 30px 0
   @include responsive($screen: tablet)
     padding: 17px 0 14px 0
   @include responsive($screen: desktop)
@@ -55,11 +55,11 @@
       display: flex
     span
       display: block
-      width: 30px
-      height: 5px
+      width: 27px
+      height: 4px
+      margin-bottom: 4px !important
       background-color: $darkGray
       margin-bottom: 5px
-      z-index: 31
 
   &__flex-item
     text-align: left
@@ -95,6 +95,7 @@
   &__left-side
     display: flex
     justify-content: space-between
+    align-items: center
 
 .separate-line
   border-bottom: 1px solid #f1e3b9
@@ -110,6 +111,7 @@
   background-color: $yellow
   overflow-y: auto
   display: none
+  font-size: 18px
   @include responsive($screen: mobile)
     display: block
   > div
@@ -164,6 +166,7 @@
   &__secondary-link
     margin-bottom: 50px
     a
+      font-size: 14px
       font-family: ProximaNovaRegular
       line-height: 1.21
       margin-bottom: 20px

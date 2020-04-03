@@ -40,7 +40,7 @@ const Missions = () => {
                 <ArrowRight className="missions__arrow" />
               </Link>
             </div>
-            <div className="col-6">
+            <div className="col-6 pr-0">
               <Link
                 className="missions__item"
                 to="/services/mobile-development"
