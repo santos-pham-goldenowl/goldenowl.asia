@@ -20,7 +20,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Our effort
         </h3>
       ),
@@ -48,7 +48,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Most modern <br /> workflow
         </h3>
       ),
@@ -75,7 +75,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Good investment<br />portal
         </h3>
       ),
@@ -103,7 +103,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Support to <br /> take care employees
         </h3>
       ),
@@ -130,7 +130,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Perfect assistant
         </h3>
       ),
@@ -166,7 +166,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           High security
         </h3>
       ),
@@ -189,7 +189,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Great journey
         </h3>
       ),
@@ -217,7 +217,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Most modern <br /> workflow
         </h3>
       ),
@@ -246,7 +246,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           We focus<br />on the program
         </h3>
       ),
@@ -268,7 +268,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Marketing success
         </h3>
       ),
@@ -297,7 +297,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           A helpful platform
         </h3>
       ),
@@ -318,7 +318,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           We have launched the <br /> project with all passion
         </h3>
       ),
@@ -360,7 +360,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           A legal assistant
         </h3>
       ),
@@ -400,7 +400,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Protect you and <br /> your lovers as well
         </h3>
       ),
@@ -428,7 +428,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Live green with<br />Glife
         </h3>
       ),
@@ -457,7 +457,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           As a helpful platform
         </h3>
       ),
@@ -479,7 +479,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           A platform for<br />high-end products
         </h3>
       ),
@@ -505,7 +505,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           A way to be famous
         </h3>
       ),
@@ -528,7 +528,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           We always try<br />our best
         </h3>
       ),
@@ -550,7 +550,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           As a very<br />helpful platform
         </h3>
       ),
@@ -584,7 +584,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Most modern <br /> workflow
         </h3>
       ),
@@ -614,7 +614,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="ml-auto portfolio-details__item-title">
+        <h3 className="portfolio-details__item-title">
           Handful site
         </h3>
       ),

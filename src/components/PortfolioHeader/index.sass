@@ -1,54 +1,56 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
 
 .portfolio-header
+    @include responsive($screen: mobile)
+        padding-top: 17px
+    @include responsive($screen: tablet)
+        padding-top: 16px
+    @include responsive($screen: desktop)
+        padding-top: 21px
+    @include responsive($screen: large-desktop)
+        padding-top: 30.3px
+
     p
         line-height: 1.5
         color: $slightBlack
-            
-    &__email
-        font-family: ProximaNovaBold
-
-@media (min-width: 768px) and (max-width: 1023px)
-    .portfolio-header
-        padding-top: 16px
-
-        p
+        @include responsive($screen: mobile)
+            font-size: 12px
+        @include responsive($screen: tablet)
             font-size: 9px
-
-        &__logo
-            max-height: 26px
-            padding-right: 11px
-        
-        &__logo-text
-            img
-                max-height: 9px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-    .portfolio-header
-        padding-top: 21px
-
-        p
+        @include responsive($screen: desktop)
             font-size: 11px
-
-        &__logo
-            max-height: 34px
-            padding-right: 15px
-        
-        &__logo-text
-            img
-                max-height: 12px
-
-@media only screen and (min-width: 1366px)
-    .portfolio-header
-        padding-top: 30.3px
-
-        p
+        @include responsive($screen: large-desktop)
             font-size: 16px
 
-        &__logo
+    &__logo
+        align-self: center
+        @include responsive($screen: mobile)
+            max-height: 28.8px
+            padding-right: 12.4px
+        @include responsive($screen: tablet)
+            max-height: 26px
+            padding-right: 11px
+        @include responsive($screen: desktop)
+            max-height: 34px
+            padding-right: 15px
+        @include responsive($screen: large-desktop)
             max-height: 48px
             padding-right: 20.6px
-        
-        &__logo-text
-            img
+
+    &__logo-text
+        p
+            @include responsive($screen: mobile)
+                font-size: 8.5px
+        img
+            @include responsive($screen: mobile)
+                max-height: 10.3px
+            @include responsive($screen: tablet)
+                max-height: 9px
+            @include responsive($screen: desktop)
+                max-height: 12px
+            @include responsive($screen: large-desktop)
                 max-height: 17px
+
+    &__email
+        font-family: ProximaNovaBold
