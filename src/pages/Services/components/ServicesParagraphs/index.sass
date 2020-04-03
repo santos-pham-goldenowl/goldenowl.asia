@@ -26,9 +26,9 @@
         padding-left: 25px
       h4
         @include responsive($screen: tablet)
-          padding: 0 51px 14px 51px
-        @include responsive($screen: desktop)
           padding: 0 38px 11px 38px
+        @include responsive($screen: desktop)
+          padding: 0 51px 14px 51px
         @include responsive($screen: large-desktop)
           padding: 0 72px 20px 72px
     &:first-child
@@ -50,9 +50,9 @@
       margin: 15px 0
       padding: 30px 20px
     @include responsive($screen: tablet)
-      padding: 43px 36px
-    @include responsive($screen: desktop)
       padding: 27px 32px
+    @include responsive($screen: desktop)
+      padding: 43px 36px
     @include responsive($screen: large-desktop)
       padding: 60px 50px
 
@@ -64,9 +64,9 @@
       line-height: 1.5
       padding-bottom: 20px
     @include responsive($screen: tablet)
-      font-size: 13px
+      font-size: 14px
     @include responsive($screen: desktop)
-      font-size: 15px
+      font-size: 16px
     @include responsive($screen: large-desktop)
       font-size: 24px
 
@@ -80,35 +80,3 @@
       font-size: 14px
     @include responsive($screen: large-desktop)
       font-size: 20px
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .services-paragraphs
-    .card
-      h4
-      p
-      &:last-child
-        h4
-      &:first-child
-        h4
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .services-paragraphs
-    .col-md-6
-      .card
-      h4
-      p
-      &:last-child
-        h4
-      &:first-child
-        h4
-
-@media only screen and (min-width: 1366px)
-  .services-paragraphs
-    .col-md-6
-      .card
-      h4
-      p
-      &:last-child
-        h4
-      &:first-child
-        h4
