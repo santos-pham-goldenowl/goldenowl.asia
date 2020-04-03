@@ -8,7 +8,24 @@ import PortfolioHeader from '../../components/PortfolioHeader'
 import allTab, { mobileTab, webTab } from '../../utils/portfolioTabContent'
 import PortfolioInteresting from '../../components/PortfolioInteresting'
 
-const Portfolio = () => (
+const Portfolio = () => {
+
+  const projectRender = data => data.map(item => (
+    <div key={item.url} className="col-md-6">
+      <Link to={`/portfolio/${item.url}`}>
+        <div
+          className="portfolio__tab__card"
+        >
+          <img src={item.img} alt={item.url} />
+          <h4 className={item.isWhite && 'white-title'}>
+            {item.content}
+          </h4>
+        </div>
+      </Link>
+    </div>
+  ))
+
+  return (
   <section className="portfolio">
     <div className="container-fluid no-padding">
       <PortfolioHeader />
@@ -35,69 +52,18 @@ const Portfolio = () => (
         {/* start tab */}
         <Tabs defaultActiveKey="all" id="uncontrolled-tab-example">
           <Tab eventKey="all" title="All">
-            <div className="row">
-              {allTab.map((item, index) => (
-                <div key={item.url} className="col-md-6">
-                  <Link to={`/portfolio/${item.url}`}>
-                    <div
-                      className="portfolio__card"
-                      style={{
-                        marginRight: index % 2 === 0 ? 20 : 0,
-                        marginLeft: index % 2 === 0 ? 0 : 20,
-                      }}
-                    >
-                      <img src={item.img} alt={item.url} />
-                      <h4 className={item.isWhite && 'white-title'}>
-                        {item.content}
-                      </h4>
-                    </div>
-                  </Link>
-                </div>
-              ))}
+            <div className="row portfolio__tab">
+              {projectRender(allTab)}
             </div>
           </Tab>
           <Tab eventKey="web" title="Web development">
-            <div className="row">
-              {webTab.map((item, index) => (
-                <div key={item.url} className="col-md-6">
-                  <Link to={`/portfolio/${item.url}`}>
-                    <div
-                      className="portfolio__card"
-                      style={{
-                        marginRight: index % 2 === 0 ? 'auto' : 0,
-                        marginLeft: index % 2 === 0 ? 0 : 'auto',
-                      }}
-                    >
-                      <img src={item.img} alt={item.url} />
-                      <h4 className={item.isWhite && 'white-title'}>
-                        {item.content}
-                      </h4>
-                    </div>
-                  </Link>
-                </div>
-              ))}
+            <div className="row portfolio__tab">
+              {projectRender(webTab)}
             </div>
           </Tab>
           <Tab eventKey="mobile" title="Mobile development">
-            <div className="row">
-              {mobileTab.map((item, index) => (
-                <div key={item.url} className="col-md-6">
-                  <Link to={`/portfolio/${item.url}`}>
-                    <div
-                      className="portfolio__card"
-                      style={{
-                        marginRight: index % 2 === 0 ? 'auto' : 0,
-                        marginLeft: index % 2 === 0 ? 0 : 'auto',
-                      }}
-                    >
-                      <img src={item.img} alt={item.url} />
-                      <h4 className={item.isWhite && 'white-title'}>
-                        {item.content}
-                      </h4>
-                    </div>
-                  </Link>
-                </div>
-              ))}
+            <div className="row portfolio__tab">
+              {projectRender(mobileTab)}
             </div>
           </Tab>
         </Tabs>
@@ -106,6 +72,6 @@ const Portfolio = () => (
       <PortfolioInteresting />
     </div>
   </section>
-)
+)}
 
 export default Portfolio

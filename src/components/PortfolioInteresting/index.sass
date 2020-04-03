@@ -1,10 +1,29 @@
-@import '../../styles/variables.sass'
+@import '../../styles/variables'
+@import '../../styles/mixins'
+
 .portfolio-interesting
     text-align: center
     background-color: $slightOrange
+    @include responsive($screen: mobile)
+        padding: 175px 0
+    @include responsive($screen: tablet)
+        padding: 152px 0
+    @include responsive($screen: desktop)
+        padding: 203px 0
+    @include responsive($screen: large-desktop)
+        padding: 285px 0
 
     p
         line-height: 1.33
+        @include responsive($screen: mobile)
+            font-size: 20px
+            line-height: 1.5
+        @include responsive($screen: tablet)
+            font-size: 19px
+        @include responsive($screen: desktop)
+            font-size: 22px
+        @include responsive($screen: large-desktop)
+            font-size: 30px
 
     &__above-text
         font-family: ProximaNovaBold
@@ -12,24 +31,3 @@
     &__below-text
         display: inline-block
         border-bottom: 1px solid $darkGray
-
-@media (min-width: 768px) and (max-width: 1023px)
-    .portfolio-interesting
-        padding: 152px 0
-
-        p
-            font-size: 19px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-    .portfolio-interesting
-        padding: 203px 0
-
-        p
-            font-size: 22px
-
-@media only screen and (min-width: 1366px)
-    .portfolio-interesting
-        padding: 285px 0
-
-        p
-            font-size: 30px

@@ -14,14 +14,14 @@ const Services = ({ content }) => (
           <div className="col-12 portfolio-details__cover">
             <img src={content.cover} alt={`${content.key} cover`} loading="lazy" />
           </div>
-          <div className="col-md-12 portfolio-details__first-paragraph d-flex align-items-start">
-            <h3 className="ml-auto portfolio-details__item-title">Overview</h3>
+          <div className="col-12 portfolio-details__first-paragraph d-flex align-items-start">
+            <h3 className="portfolio-details__item-title">Overview</h3>
             <p className="portfolio-details__item-content">
               {content.overview}
             </p>
           </div>
-          <div className="col-md-12 portfolio-details__second-paragraph d-flex align-items-start">
-            <h3 className="ml-auto portfolio-details__item-title">
+          <div className="col-12 portfolio-details__second-paragraph d-flex align-items-start">
+            <h3 className="portfolio-details__item-title">
                 Technologies
             </h3>
             <ul className="no-margin-bottom">
@@ -34,7 +34,7 @@ const Services = ({ content }) => (
           </div>
           {content.img.map((image, index) => (
             <div
-              className={`col-md-${image.col} portfolio-details__image`}
+              className={`${image.col > 4 ? 'col-12': 'col-6'} col-md-${image.col} portfolio-details__image`}
               key={`${content.key}-${index}`}
             >
               <img src={image.src} alt={`${content.key} img no.${index}`} loading="lazy" />

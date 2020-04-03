@@ -26,7 +26,7 @@ const Home = () => {
 
   return (
 
-    <section className="home">
+    <section className="home-clone">
       <div className="container-fluid no-padding">
         <MainHeader />
         <SubHeader />

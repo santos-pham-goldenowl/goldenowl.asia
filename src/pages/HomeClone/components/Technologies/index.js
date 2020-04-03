@@ -9,13 +9,13 @@ const Technologies = () => {
   const isMobile = window.innerWidth < 768
 
   return (
-    <section className="technologies">
-      <h3 className="technologies__title heading-base">Technologies we use</h3>
+    <section className="technologies-clone">
+      <h3 className="technologies-clone__title heading-base">Technologies we use</h3>
       <div className="row">
         {technologiesLogo.map((logo, index) => (
           <div key={logo.name} className={`col-6 col-md-2 logo-wrapper${(isMobile && index > 7) ? ' d-none' : ' d-flex'}`}>
             <img
-              className="technologies__grid-item"
+              className="technologies-clone__grid-item"
               src={logo.url}
               alt={logo.name}
             />
@@ -23,7 +23,7 @@ const Technologies = () => {
         ))}
       </div>
       <Link to="/technologies">
-        <span className="technologies__view-all">View all technologies</span>
+        <span className="technologies-clone__view-all">View all technologies</span>
       </Link>
     </section>
   )
