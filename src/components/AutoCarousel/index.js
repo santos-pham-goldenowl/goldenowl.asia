@@ -93,13 +93,7 @@ const AutoCarousel = props => {
         {chunkArray(mobileData, 3).map(cGroup => (
           <div
             key={cGroup.name}
-            className="auto-carousel"
-            style={{
-              paddingRight: "25px",
-              paddingLeft: "25px",
-              textAlign: "left"
-            }}
-          >
+            className="auto-carousel">
             {cGroup.map(c => (
               <div className="mobile-micro-item">
                 <p>{`"${c.content}"`}</p>
@@ -108,7 +102,6 @@ const AutoCarousel = props => {
                   <span className="auto-carousel__name">{c.name},&nbsp;</span>
                   <span className="auto-carousel__idea">{c.idea}</span>
                 </div>
-                <hr />
               </div>
             ))}
           </div>
