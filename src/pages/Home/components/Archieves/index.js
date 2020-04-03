@@ -14,7 +14,7 @@ const Archieves = () => (
       <div className="col-6 col-md-2 d-block archieves__item">
         <center>
           <h2>129</h2>
-          <p>Number of succesful project</p>
+          <p>Number of successful project</p>
         </center>
       </div>
       <div className="col-6 col-md-2 d-block archieves__item">
