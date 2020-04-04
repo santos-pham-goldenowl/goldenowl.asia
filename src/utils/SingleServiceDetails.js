@@ -26,11 +26,11 @@ import inVision from '../assets/images/service/UiUx/in-vision.svg'
 import ps from '../assets/images/service/UiUx/ps.svg'
 import sketch from '../assets/images/service/UiUx/sketch.svg'
 // cover import
-import mobileCoverImage from '../assets/images/service/MobileDevelopment/cover.svg'
-import projectCoverImage from '../assets/images/service/ProjectManagement/cover.svg'
-import developmentCoverImage from '../assets/images/service/DevelopmentTeam/cover.svg'
-import uiUxCoverImage from '../assets/images/service/UiUx/cover.svg'
-import webCoverImage from '../assets/images/service/WebDevelopment/cover.svg'
+import mobileCoverImage from '../assets/images/service/MobileDevelopment/cover.jpg'
+import projectCoverImage from '../assets/images/service/ProjectManagement/cover.jpg'
+import developmentCoverImage from '../assets/images/service/DevelopmentTeam/cover.jpg'
+import uiUxCoverImage from '../assets/images/service/UiUx/cover.jpg'
+import webCoverImage from '../assets/images/service/WebDevelopment/cover.jpg'
 
 // mobile cover import
 import mMobileCoverImage from '../assets/images/service/MobileDevelopment/mCover.png'
