@@ -1,9 +1,9 @@
 import React from "react";
 
-import code from "../../../../assets/images/code.png";
-import mobileCode from "../../../../assets/images/mobileCode.png";
+import code from "assets/images/code.png";
+import mobileCode from "assets/images/mobileCode.png";
 import "./index.sass";
-import useMobileWidth from "../../../../utils/hooks/useMobileWidth";
+import useMobileWidth from "utils/hooks/useMobileWidth";
 
 const Develop = () => {
   const isMobile = useMobileWidth();

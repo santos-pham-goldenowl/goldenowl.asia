@@ -1,7 +1,7 @@
 import React from 'react'
 
-import AutoCarousel from '../../../../components/AutoCarousel'
-import feedback from '../../../../utils/Feedback'
+import AutoCarousel from 'components/AutoCarousel'
+import feedback from 'utils/Feedback'
 import './index.sass'
 
 const Feedback = () => (

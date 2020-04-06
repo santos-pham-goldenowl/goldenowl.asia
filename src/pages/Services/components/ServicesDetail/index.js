@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { ServicesDetailContent } from '../../../../utils/ServicesDetail'
+import { ServicesDetailContent } from 'utils/ServicesDetail'
 import './index.sass'
-import objectToArray from '../../../../utils/objectToArray'
+import objectToArray from 'utils/objectToArray'
 
 const ServicesDetail = () => (
   <section className="services-detail">

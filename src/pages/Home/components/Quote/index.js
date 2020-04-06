@@ -1,9 +1,9 @@
 import React from 'react'
 
-import useMobileWidth from '../../../../utils/hooks/useMobileWidth'
+import useMobileWidth from 'utils/hooks/useMobileWidth'
 
-import work from '../../../../assets/images/work.png'
-import mobileWork from '../../../../assets/images/mobileWork.png'
+import work from 'assets/images/work.png'
+import mobileWork from 'assets/images/mobileWork.png'
 import './index.sass'
 
 const Quote = () => {

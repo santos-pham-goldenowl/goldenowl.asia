@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { firstRow, secondRow } from '../../../../utils/logoSlider'
+import { firstRow, secondRow } from 'utils/logoSlider'
 
 import './index.sass'
 import Carousel from 'react-multi-carousel'

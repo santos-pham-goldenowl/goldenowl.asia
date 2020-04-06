@@ -1,11 +1,11 @@
 import React from 'react'
 
-import MainHeader from '../../components/MainHeader'
-import SubHeader from '../../components/SubHeader'
-import BreadCrumb from '../../components/BreadCrumb'
-import Footer from '../../components/Footer'
-import blogContent from '../../utils/blogContent'
-import objectToArray from '../../utils/objectToArray'
+import MainHeader from 'components/MainHeader'
+import SubHeader from 'components/SubHeader'
+import BreadCrumb from 'components/BreadCrumb'
+import Footer from 'components/Footer'
+import blogContent from 'utils/blogContent'
+import objectToArray from 'utils/objectToArray'
 
 import './index.sass'
 

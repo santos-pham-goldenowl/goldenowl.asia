@@ -1,9 +1,9 @@
 import React from 'react'
 
-import MainHeader from '../../components/MainHeader'
-import SubHeader from '../../components/SubHeader'
-import Footer from '../../components/Footer'
-import Home from '../../components/BreadCrumb'
+import MainHeader from 'components/MainHeader'
+import SubHeader from 'components/SubHeader'
+import Footer from 'components/Footer'
+import Home from 'components/BreadCrumb'
 
 import TechnologyDescription from './components/TechnologyDescription'
 import TechnologyCards from './components/TechnologyCards'
