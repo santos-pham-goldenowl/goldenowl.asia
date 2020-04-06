@@ -24,9 +24,9 @@ const Services = ({ content }) => (
             <h3 className="portfolio-details__item-title">
                 Technologies
             </h3>
-            <ul className="no-margin-bottom">
+            <ul className="portfolio-details__item-content no-margin-bottom">
               {content.techs.map((item) => (
-                <li key={item} className="portfolio-details__item-content d-flex">
+                <li key={item} className="d-flex">
                   <p>{item}</p>
                 </li>
               ))}
