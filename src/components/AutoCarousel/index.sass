@@ -2,9 +2,22 @@
 @import 'styles/mixins'
 
 .auto-carousel
-  padding-right: 25px
-  padding-left: 25px
   text-align: left
+  @include responsive($screen: mobile)
+    padding-right: 0
+    padding-left: 0
+  @include responsive($screen: tablet)
+    padding-right: 12.5px
+    padding-left: 12.5px
+  @include responsive($screen: desktop)
+    padding-right: 17.5px
+    padding-left: 17.5px
+  @include responsive($screen: large-desktop)
+    padding-right: 25px
+    padding-left: 25px
+  .micro-item
+    &:last-child
+      padding-bottom: 4px
 
   p
     text-align: left
@@ -13,18 +26,16 @@
       font-size: 12pt
     @include responsive($screen: tablet)
       font-size: 10px
-      margin: 0 -4px
     @include responsive($screen: desktop)
       font-size: 14px
-      margin: 0 -5px
     @include responsive($screen: large-desktop)
       font-size: 18px
 
-  &__name
-    color: $yellow
-
-  &__idea, &__name
+  &__name-company
     text-transform: uppercase
+    display: inline
+    span
+      color: $yellow
     @include responsive($screen: mobile)
       font-size: 12px
     @include responsive($screen: tablet)

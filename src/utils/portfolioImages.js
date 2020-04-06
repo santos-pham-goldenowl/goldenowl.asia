@@ -7,21 +7,21 @@ export default {
     'https://drive.google.com/uc?export=view&id=1B3i5re-Igq0fIo3pFSstQKDcYYrfC53y',
   bid4SkillCover:
     'https://drive.google.com/uc?export=view&id=1xaNVsXtxz-AADjIEbm3R6vzZcEg3fzyw',
-  bridgePay1:
+  brdgePay1:
     'https://drive.google.com/uc?export=view&id=1GrfMliF0we5yzP3Pk0J3g5weF3aYiSqN',
-  bridgePay2:
+  brdgePay2:
     'https://drive.google.com/uc?export=view&id=1OmoBl3wqZuWSboz73BLu3uk_fKvRj9FY',
-  bridgePay3:
+  brdgePay3:
     'https://drive.google.com/uc?export=view&id=1KqPcA2usoxuWCj8o-amBxbBLhVqDUQ6l',
-  bridgePay4:
+  brdgePay4:
     'https://drive.google.com/uc?export=view&id=1Dw1sYBpuGNfPy35FHhKbU7qDXQRTK4GR',
-  bridgePay5:
+  brdgePay5:
     'https://drive.google.com/uc?export=view&id=1-bqJI1uMtx5kiL6Rc2tAy9_dndBkH8Bz',
-  bridgePay6:
+  brdgePay6:
     'https://drive.google.com/uc?export=view&id=1mcuJhM_Bga4_tnYS4mFuFWggheuMZr34',
-  bridgePay7:
+  brdgePay7:
     'https://drive.google.com/uc?export=view&id=1gQlC5YA0YXHY9cSSUNfSprub4dVL4MuL',
-  bridgePayCover:
+  brdgePayCover:
     'https://drive.google.com/uc?export=view&id=1S5TJbEJAmmj6c4ZqFcTC-epN0UawB8RV',
   briidge6:
     'https://drive.google.com/uc?export=view&id=1BXdS7HU-3l6uRfQjA2iNnNvqE8rRE1xf',
