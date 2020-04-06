@@ -325,20 +325,20 @@ export default {
         'Golden Owl launched the product, built a transparent workflow and makes updates frequently until it has a big scale. We operated with a high level of efficiency, transparency, responsiveness, attended to client needs and delivered truly sets them apart.',
     },
   },
-  BridgePay: {
-    cover: pImages.bridgePayCover,
-    url: 'bridge-pay',
+  BrdgePay: {
+    cover: pImages.brdgePayCover,
+    url: 'brdge-pay',
     overview:
-      'BridgePay is one of the most modern platforms which is for internal purpose only. This platform helps enterprises/ companies to manage their internal financial flow. All of the movements and status of money flow will be tracked and noted carefully and day by day. This platform had been a very useful financial assistant for any big enterprises.',
+      'BrdgePay is one of the most modern platforms which is for internal purpose only. This platform helps enterprises/ companies to manage their internal financial flow. All of the movements and status of money flow will be tracked and noted carefully and day by day. This platform had been a very useful financial assistant for any big enterprises.',
     techs: ['Ruby on Rails'],
     img: [
-      { src: pImages.bridgePay1, col: 12 },
-      { src: pImages.bridgePay2, col: 12 },
-      { src: pImages.bridgePay3, col: 12 },
-      { src: pImages.bridgePay4, col: 12 },
-      { src: pImages.bridgePay5, col: 12 },
-      { src: pImages.bridgePay6, col: 12 },
-      { src: pImages.bridgePay7, col: 12 },
+      { src: pImages.brdgePay1, col: 12 },
+      { src: pImages.brdgePay2, col: 12 },
+      { src: pImages.brdgePay3, col: 12 },
+      { src: pImages.brdgePay4, col: 12 },
+      { src: pImages.brdgePay5, col: 12 },
+      { src: pImages.brdgePay6, col: 12 },
+      { src: pImages.brdgePay7, col: 12 },
     ],
     brief: {
       title: (

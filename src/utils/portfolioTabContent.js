@@ -98,10 +98,10 @@ export default [
     url: 'briidge',
   },
   {
-    content: 'Bridge Pay - Track your money flow with this',
+    content: 'Brdge Pay - Track your money flow with this',
     isWhite: false,
     img: img15,
-    url: 'bridge-pay',
+    url: 'brdge-pay',
   },
   {
     content: 'Find a wealth manager - Direct your financial purpose',
@@ -250,10 +250,10 @@ export const webTab = [
     url: 'narratrs',
   },
   {
-    content: 'Bridge Pay - Track your money flow with this',
+    content: 'Brdge Pay - Track your money flow with this',
     isWhite: false,
     img: img15,
-    url: 'bridge-pay',
+    url: 'brdge-pay',
   },
   {
     content: 'Find a wealth manager - Direct your financial purpose',
