@@ -1,4 +1,4 @@
-@import '../../../../styles/mixins'
+@import 'styles/mixins'
 
 .archieves
   background-color: #f8f8f8
@@ -11,9 +11,6 @@
     padding: 57px 0
   @include responsive($screen: large-desktop)
     padding: 80px 0
-
-  &__main-content
-    padding-top: 2.8vw
 
   &__title
     @include responsive($screen: mobile)
@@ -72,17 +69,3 @@
         font-size: 14px
       @include responsive($screen: large-desktop)
         font-size: 20px
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .archieves
-    p
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .archieves
-    p
-
-@media only screen and (min-width: 1366px)
-  .archieves
-
-    &__item-flex
-      p

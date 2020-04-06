@@ -1,7 +1,7 @@
 import React from 'react'
 
-import research from '../../../../assets/images/research.png'
-import bg from '../../../../assets/images/about_bg.png'
+import research from 'assets/images/research.png'
+import bg from 'assets/images/about_bg.png'
 import './index.sass'
 
 const AboutUs = () => {

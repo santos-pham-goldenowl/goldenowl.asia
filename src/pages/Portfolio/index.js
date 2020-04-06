@@ -4,9 +4,9 @@ import { Tabs, Tab } from 'react-bootstrap'
 import './index.sass'
 import { Link } from 'react-router-dom'
 
-import PortfolioHeader from '../../components/PortfolioHeader'
-import allTab, { mobileTab, webTab } from '../../utils/portfolioTabContent'
-import PortfolioInteresting from '../../components/PortfolioInteresting'
+import PortfolioHeader from 'components/PortfolioHeader'
+import allTab, { mobileTab, webTab } from 'utils/portfolioTabContent'
+import PortfolioInteresting from 'components/PortfolioInteresting'
 
 const Portfolio = () => {
 

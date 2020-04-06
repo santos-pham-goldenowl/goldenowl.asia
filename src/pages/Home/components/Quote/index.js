@@ -1,9 +1,15 @@
 import React from 'react'
 
-import work from '../../../../assets/images/work.png'
+import useMobileWidth from 'utils/hooks/useMobileWidth'
+
+import work from 'assets/images/work.png'
+import mobileWork from 'assets/images/mobileWork.png'
 import './index.sass'
 
-const Quote = () => (
+const Quote = () => {
+  const isMobile = useMobileWidth();
+
+  return (
   <section className="quote">
     <div className="row">
       <div className="col-md-5">
@@ -16,10 +22,10 @@ const Quote = () => (
         </div>
       </div>
       <div className="col-md-7">
-        <img src={work} alt="work" loading="lazy" />
+        <img src={isMobile ? mobileWork : work} alt="work" loading="lazy" />
       </div>
     </div>
   </section>
-)
+)}
 
 export default Quote

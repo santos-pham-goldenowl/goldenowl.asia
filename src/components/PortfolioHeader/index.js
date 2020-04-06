@@ -1,7 +1,7 @@
 import React from 'react'
 
-import logo from '../../assets/images/go.png'
-import companyName from '../../assets/images/golden_owl_text.png'
+import logo from 'assets/images/go.png'
+import companyName from 'assets/images/golden_owl_text.png'
 
 import './index.sass'
 import { Link } from 'react-router-dom'

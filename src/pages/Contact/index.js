@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import MainHeader from '../../components/MainHeader'
-import SubHeader from '../../components/SubHeader'
-import BreadCrumb from '../../components/BreadCrumb'
-import Footer from '../../components/Footer'
-import CheckPoint from '../../components/CheckPoint'
-import ArrowRight from '../../components/ArrowRight'
+import MainHeader from 'components/MainHeader'
+import SubHeader from 'components/SubHeader'
+import BreadCrumb from 'components/BreadCrumb'
+import Footer from 'components/Footer'
+import CheckPoint from 'components/CheckPoint'
+import ArrowRight from 'components/ArrowRight'
 
 import './index.sass'
-import useMobileWidth from '../../utils/hooks/useMobileWidth'
+import useMobileWidth from 'utils/hooks/useMobileWidth'
 
 const SingleService = () => {
   const isMobile = useMobileWidth();

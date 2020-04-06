@@ -1,6 +1,6 @@
 import React from 'react'
 
-import technologiesLogo from '../../../../utils/TechnologiesLogo'
+import technologiesLogo from 'utils/TechnologiesLogo'
 
 import './index.sass'
 import { Link } from 'react-router-dom'

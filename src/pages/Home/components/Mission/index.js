@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import bg from '../../../../assets/images/bg.svg'
-import ArrowRight from '../../../../components/ArrowRight'
+import bg from 'assets/images/bg.svg'
+import ArrowRight from 'components/ArrowRight'
 
 import './index.sass'
 
@@ -40,7 +40,7 @@ const Missions = () => {
                 <ArrowRight className="missions__arrow" />
               </Link>
             </div>
-            <div className="col-6">
+            <div className="col-6 pr-0">
               <Link
                 className="missions__item"
                 to="/services/mobile-development"

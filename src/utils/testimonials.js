@@ -1,11 +1,11 @@
-import antony from '../assets/images/testimonials/testimonialItems/1.png'
-import mark from '../assets/images/testimonials/testimonialItems/2.png'
-import jane from '../assets/images/testimonials/testimonialItems/3.png'
-import riaz from '../assets/images/testimonials/testimonialItems/4.png'
-import myAgency from '../assets/images/testimonials/testimonialItems/5.png'
-import refferalCandy from '../assets/images/testimonials/testimonialItems/6.png'
-import bid4Skill from '../assets/images/testimonials/testimonialItems/7.png'
-import gig from '../assets/images/testimonials/testimonialItems/8.png'
+import antony from 'assets/images/testimonials/testimonialItems/1.png'
+import mark from 'assets/images/testimonials/testimonialItems/2.png'
+import jane from 'assets/images/testimonials/testimonialItems/3.png'
+import riaz from 'assets/images/testimonials/testimonialItems/4.png'
+import myAgency from 'assets/images/testimonials/testimonialItems/5.png'
+import refferalCandy from 'assets/images/testimonials/testimonialItems/6.png'
+import bid4Skill from 'assets/images/testimonials/testimonialItems/7.png'
+import gig from 'assets/images/testimonials/testimonialItems/8.png'
 
 
 export default {

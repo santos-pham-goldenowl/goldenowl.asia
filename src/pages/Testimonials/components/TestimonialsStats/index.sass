@@ -1,5 +1,5 @@
-@import '../../../../styles/variables'
-@import '../../../../styles/mixins'
+@import 'styles/variables'
+@import 'styles/mixins'
 
 .testimonials-stats
   @include responsive($screen: mobile)
@@ -72,6 +72,7 @@
       @include responsive($screen: large-desktop)
         font-size: 26px
     sup
+      color: $slightBrown
       @include responsive($screen: mobile)
         top: -14px
         left: 4px

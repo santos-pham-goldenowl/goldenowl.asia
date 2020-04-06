@@ -1,5 +1,5 @@
-@import '../../../../styles/variables'
-@import '../../../../styles/mixins'
+@import 'styles/variables'
+@import 'styles/mixins'
 
 .feedback
   text-align: center
@@ -40,7 +40,7 @@
     align-items: center
     display: flex
     @include responsive($screen: mobile)
-      padding-bottom: 64px
+      padding-bottom: 40px
       padding-top: 30px
     @include responsive($screen: tablet)
       padding-bottom: 26px
@@ -70,6 +70,15 @@
 
   .react-multi-carousel-list
     max-width: 90vw
+    @include responsive($screen: mobile)
+      max-width: 100%
+      position: relative
+      height: 634px
+
+  .react-multi-carousel-track
+    @include responsive($screen: mobile)
+      position: absolute
+      top: 0
 
   .react-multi-carousel-dot
     button
@@ -81,35 +90,13 @@
       margin-right: 10px !important
       border: none !important
       @include responsive($screen: mobile)
-        height: 5.8pt !important
+        height: 5.8px !important
 
   .react-multi-carousel-dot--active
     button
       background: $yellow !important
-      width: 2.1vw !important
-      border-radius: 1.4vw !important
+      width: 30px !important
+      border-radius: 20px !important
       @include responsive($screen: mobile)
-        width: 22pt !important
-        height: 5.8pt !important
-
-@media only screen and (min-width: 1366px)
-  .feedback
-    padding: 120px 0 80px 0
-
-    &__title
-      font-size: 34px
-      padding-bottom: 40px !important
-
-    img
-      width: 85px
-      height: 85px
-
-    .react-multi-carousel-dot--active
-      button
-        background: $yellow !important
-        width: 30px !important
-        border-radius: 20px !important
-
-    &__client-wrapper
-      padding-bottom: 50px
-      padding-top: 20px
+        width: 22px !important
+        height: 5.8px !important

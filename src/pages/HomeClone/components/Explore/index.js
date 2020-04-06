@@ -1,7 +1,7 @@
 import React from 'react'
 
-import ArrowRight from '../../../../components/ArrowRight'
-import laptop from '../../../../assets/images/3.png'
+import ArrowRight from 'components/ArrowRight'
+import laptop from 'assets/images/3.png'
 
 import './index.sass'
 import { Link } from 'react-router-dom'

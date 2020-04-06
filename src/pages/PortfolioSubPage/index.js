@@ -1,8 +1,8 @@
 import React from 'react'
 
 import './index.sass'
-import PortfolioHeader from '../../components/PortfolioHeader'
-import PortfolioInteresting from '../../components/PortfolioInteresting'
+import PortfolioHeader from 'components/PortfolioHeader'
+import PortfolioInteresting from 'components/PortfolioInteresting'
 
 const Services = ({ content }) => (
   <section>

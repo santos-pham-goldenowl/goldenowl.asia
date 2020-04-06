@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-import mobileMenuLogo from "../../assets/images/mobileMenuLogo.png";
-import arrowDown from "../../assets/images/servicesArrowDown.png";
-import closeIcon from "../../assets/images/whitecloseicon.png";
-import backIcon from "../../assets/images/whitebackicon.png";
+import mobileMenuLogo from "assets/images/mobileMenuLogo.png";
+import arrowDown from "assets/images/servicesArrowDown.png";
+import closeIcon from "assets/images/whitecloseicon.png";
+import backIcon from "assets/images/whitebackicon.png";
 import ArrowRight from "../ArrowRight";
 import { Link } from "react-router-dom";
 
