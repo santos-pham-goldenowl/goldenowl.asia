@@ -19,9 +19,9 @@ const Missions = () => {
         <div className="col-12 col-md-5">
           <h3 className="missions-clone__title">What we do</h3>
           <p>
-            Lorem ipsum dolor sit amet, natum persequeris vel cu. Nominavi
-            temporibus ad sit. Pri nonumy laudem complectitur ea. Modus
-            eloquentiam id has.
+            We enhance ourselves in many essential elements contributing to the
+            success of a project. This includes the project itself and teams’
+            involvement.
           </p>
         </div>
         <div className="col-12 col-md-7 pr-0 missions-clone__items-wrapper">

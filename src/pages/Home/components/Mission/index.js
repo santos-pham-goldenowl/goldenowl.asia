@@ -1,27 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import bg from 'assets/images/bg.svg'
-import ArrowRight from 'components/ArrowRight'
+import bg from "assets/images/bg.svg";
+import ArrowRight from "components/ArrowRight";
 
-import './index.sass'
+import "./index.sass";
 
 const Missions = () => {
   const sectionStyle = {
     backgroundImage: `url(${bg})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    backgroundPosition: 'bottom',
-  }
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "bottom",
+  };
   return (
     <section className="missions" style={sectionStyle}>
       <div className="row">
         <div className="col-12 col-md-4 col-lg-5">
           <h3 className="missions__title">What we do</h3>
           <p>
-            Lorem ipsum dolor sit amet, natum persequeris vel cu. Nominavi
-            temporibus ad sit. Pri nonumy laudem complectitur ea. Modus
-            eloquentiam id has.
+            We enhance ourselves in many essential elements contributing to the
+            success of a project. This includes the project itself and teams’
+            involvement.
           </p>
         </div>
         <div className="col-12 col-md-7 col-lg-6 ml-auto pr-0">
@@ -60,7 +60,7 @@ const Missions = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Missions
+export default Missions;

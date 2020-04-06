@@ -6,6 +6,7 @@ import closeIcon from "assets/images/whitecloseicon.png";
 import backIcon from "assets/images/whitebackicon.png";
 import ArrowRight from "../ArrowRight";
 import { Link } from "react-router-dom";
+import ServicesData from "utils/Services";
 
 
 const MobileMenu = () => {
@@ -112,36 +113,14 @@ const MobileMenu = () => {
         </div>
         <div className="mobile-menu__content">
           <div className="mobile-menu__primary-link">
-            <Link onClick={() => closeAllMenu("/services/web-development")} to="/services/web-development">
-              Web development
-              <p className="mobile-menu__item-description">
-                Lorem ipsum dolor sit amet, te albucius
-              </p>
-            </Link>
-            <Link onClick={() => closeAllMenu("/services/mobile-development")} to="/services/mobile-development">
-              Mobile development
-              <p className="mobile-menu__item-description">
-                Lorem ipsum dolor sit amet, te albucius
-              </p>
-            </Link>
-            <Link onClick={() => closeAllMenu("/services/ux-ui-design")} to="/services/ux-ui-design">
-              UX UI design
-              <p className="mobile-menu__item-description">
-                Lorem ipsum dolor sit amet, te albucius
-              </p>
-            </Link>
-            <Link onClick={() => closeAllMenu("/services/project-management")} to="/services/project-management">
-              Project management
-              <p className="mobile-menu__item-description">
-                Lorem ipsum dolor sit amet, te albucius
-              </p>
-            </Link>
-            <Link onClick={() => closeAllMenu("/services/development-team")} to="/services/development-team">
-              Development team
-              <p className="mobile-menu__item-description">
-                Lorem ipsum dolor sit amet, te albucius
-              </p>
-            </Link>
+{ServicesData.map(item => (
+  <Link onClick={() => closeAllMenu(`/services/${item.url}`)} to={`/services/${item.url}`}>
+  {item.name}
+  <p className="mobile-menu__item-description">
+    {item.description}
+  </p>
+</Link>
+))            }
           </div>
         </div>
       </div>
