@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import testimonials from "../../../../utils/testimonials";
-import objectToArray from "../../../../utils/objectToArray";
-import ArrowRight from "../../../../components/ArrowRight";
-import useMobileWidth from "../../../../utils/hooks/useMobileWidth";
+import testimonials from "utils/testimonials";
+import objectToArray from "utils/objectToArray";
+import ArrowRight from "components/ArrowRight";
+import useMobileWidth from "utils/hooks/useMobileWidth";
 
 import "./index.sass";
 

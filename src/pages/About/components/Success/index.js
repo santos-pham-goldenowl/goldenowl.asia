@@ -1,8 +1,8 @@
 import React from 'react'
 
 import './index.sass'
-import map from '../../../../assets/images/map.svg'
-import useMobileWidth from '../../../../utils/hooks/useMobileWidth'
+import map from 'assets/images/map.svg'
+import useMobileWidth from 'utils/hooks/useMobileWidth'
 
 const Success = () => {
   const isMobile = useMobileWidth()

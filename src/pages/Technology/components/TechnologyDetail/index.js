@@ -1,7 +1,7 @@
 import React from "react";
 
-import TabContainer from "../../../../components/Tabs/TechTabs";
-import useMobileWidth from "../../../../utils/hooks/useMobileWidth";
+import TabContainer from "components/Tabs/TechTabs";
+import useMobileWidth from "utils/hooks/useMobileWidth";
 
 import "./index.sass";
 

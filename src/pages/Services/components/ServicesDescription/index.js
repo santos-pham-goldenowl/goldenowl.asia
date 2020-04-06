@@ -1,9 +1,9 @@
 import React from 'react'
 
-import present from '../../../../assets/images/service_description.png'
-import servicesMobile from '../../../../assets/images/service_mobile.png'
-import Bg from '../../../../assets/images/wavy_bg_2.png'
-import useMobileWidth from '../../../../utils/hooks/useMobileWidth'
+import present from 'assets/images/service_description.png'
+import servicesMobile from 'assets/images/service_mobile.png'
+import Bg from 'assets/images/wavy_bg_2.png'
+import useMobileWidth from 'utils/hooks/useMobileWidth'
 
 import './index.sass'
 

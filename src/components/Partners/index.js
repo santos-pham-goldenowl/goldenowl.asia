@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SlideCarousel from '../SlideCarousel'
-import partnersLogo from '../../utils/PartnersLogo'
+import partnersLogo from 'utils/PartnersLogo'
 import './index.sass'
 
 const Partners = () => (

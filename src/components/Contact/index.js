@@ -2,7 +2,7 @@ import React from 'react'
 
 import './index.sass'
 
-import useMobileWidth from '../../utils/hooks/useMobileWidth'
+import useMobileWidth from 'utils/hooks/useMobileWidth'
 
 const Contact = () => {
   const isMobile = useMobileWidth()

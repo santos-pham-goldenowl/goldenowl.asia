@@ -1,6 +1,6 @@
 import React from 'react'
 
-import work from '../../../../assets/images/work.png'
+import work from 'assets/images/work.png'
 import './index.sass'
 
 const Quote = () => (

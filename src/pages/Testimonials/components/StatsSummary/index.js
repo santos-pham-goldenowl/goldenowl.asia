@@ -1,6 +1,6 @@
 import React from 'react'
 
-import surfWeb from '../../../../assets/images/testimonials/surfWeb.svg'
+import surfWeb from 'assets/images/testimonials/surfWeb.svg'
 import './index.sass'
 
 const StatsSummary = () => (

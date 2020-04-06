@@ -1,8 +1,8 @@
-import service1 from '../assets/images/service/illustration-01.png'
-import service2 from '../assets/images/service/illustration-02.png'
-import service3 from '../assets/images/service/illustration-03.png'
-import service4 from '../assets/images/service/illustration-04.png'
-import service5 from '../assets/images/service/illustration-05.png'
+import service1 from 'assets/images/service/illustration-01.png'
+import service2 from 'assets/images/service/illustration-02.png'
+import service3 from 'assets/images/service/illustration-03.png'
+import service4 from 'assets/images/service/illustration-04.png'
+import service5 from 'assets/images/service/illustration-05.png'
 
 
 export const ServicesDetailContent = {

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import './index.sass'
-import objectToArray from '../../../../utils/objectToArray'
-import testimonialsStats from '../../../../utils/testimonialsStats'
+import objectToArray from 'utils/objectToArray'
+import testimonialsStats from 'utils/testimonialsStats'
 
 const TestimonialsStats = () => (
   <section className="testimonials-stats">

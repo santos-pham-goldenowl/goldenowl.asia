@@ -1,9 +1,9 @@
 import React from 'react'
 
 import './index.sass'
-import companyQuality1 from '../../../../assets/images/qualities/1.png'
-import companyQuality2 from '../../../../assets/images/qualities/2.png'
-import companyQuality3 from '../../../../assets/images/qualities/3.png'
+import companyQuality1 from 'assets/images/qualities/1.png'
+import companyQuality2 from 'assets/images/qualities/2.png'
+import companyQuality3 from 'assets/images/qualities/3.png'
 
 const CompanyQualities = () => (
   <section className="qualities">

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import goldenOwl from "../../assets/images/golden_owl.png";
-import arrowDown from "../../assets/images/chevron-down-solid.svg";
+import goldenOwl from "assets/images/golden_owl.png";
+import arrowDown from "assets/images/chevron-down-solid.svg";
 import "./index.sass";
 import MobileMenu from "./MobileMenu";
 

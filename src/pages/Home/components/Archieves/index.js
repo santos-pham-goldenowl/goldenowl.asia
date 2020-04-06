@@ -1,6 +1,6 @@
 import React from "react";
 
-import useMobileWidth from "../../../../utils/hooks/useMobileWidth";
+import useMobileWidth from "utils/hooks/useMobileWidth";
 
 import "./index.sass";
 

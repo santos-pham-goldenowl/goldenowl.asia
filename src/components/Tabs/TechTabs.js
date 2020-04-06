@@ -5,9 +5,9 @@ import TabHeader from './TabHeader'
 import Tabs from './Tabs'
 
 import './index.sass'
-import FrontEndTechs from '../../utils/FrontendTechs'
-import BackEndTechs from '../../utils/BackEndTechs'
-import MobileStackTechs from '../../utils/MobileTechs'
+import FrontEndTechs from 'utils/FrontendTechs'
+import BackEndTechs from 'utils/BackEndTechs'
+import MobileStackTechs from 'utils/MobileTechs'
 
 class TabContainer extends Component {
   render() {

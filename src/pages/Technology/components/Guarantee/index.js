@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CheckPoint from '../../../../components/CheckPoint'
+import CheckPoint from 'components/CheckPoint'
 
 import './index.sass'
 

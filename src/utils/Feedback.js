@@ -1,6 +1,6 @@
-import f1 from '../assets/images/raja_1.png'
-import f2 from '../assets/images/raja_2.png'
-import f3 from '../assets/images/raja.png'
+import f1 from 'assets/images/raja_1.png'
+import f2 from 'assets/images/raja_2.png'
+import f3 from 'assets/images/raja.png'
 
 const feedback = [
   {

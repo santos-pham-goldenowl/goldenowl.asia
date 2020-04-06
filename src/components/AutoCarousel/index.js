@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 
-import chunkArray from "../../utils/chunkArray";
-import useMobileWidth from "../../utils/hooks/useMobileWidth";
+import chunkArray from "utils/chunkArray";
+import useMobileWidth from "utils/hooks/useMobileWidth";
 
 import "react-multi-carousel/lib/styles.css";
 import "./index.sass";

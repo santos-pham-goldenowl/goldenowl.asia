@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import MainHeader from '../../components/MainHeader'
-import SubHeader from '../../components/SubHeader'
-import BreadCrumb from '../../components/BreadCrumb'
-import Footer from '../../components/Footer'
-import objectToArray from '../../utils/objectToArray'
-import useMobileWidth from '../../utils/hooks/useMobileWidth'
+import MainHeader from 'components/MainHeader'
+import SubHeader from 'components/SubHeader'
+import BreadCrumb from 'components/BreadCrumb'
+import Footer from 'components/Footer'
+import objectToArray from 'utils/objectToArray'
+import useMobileWidth from 'utils/hooks/useMobileWidth'
 
 
-import coverPlaceholder from '../../assets/images/service/cover-min.png'
-import mCoverPlaceholder from '../../assets/images/service/mCover-min.png'
+import coverPlaceholder from 'assets/images/service/cover-min.png'
+import mCoverPlaceholder from 'assets/images/service/mCover-min.png'
 
 import './index.sass'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { ServicesDetailParagraphs } from '../../../../utils/ServicesDetail'
-import objectToArray from '../../../../utils/objectToArray'
+import { ServicesDetailParagraphs } from 'utils/ServicesDetail'
+import objectToArray from 'utils/objectToArray'
 
 import './index.sass'
 

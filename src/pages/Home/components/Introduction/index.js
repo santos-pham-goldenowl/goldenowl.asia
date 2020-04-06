@@ -1,6 +1,6 @@
 import React from 'react'
 
-import study from '../../../../assets/images/study.png'
+import study from 'assets/images/study.png'
 import './index.sass'
 
 const Introduction = () => (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import working from '../../../../assets/images/working.png'
+import working from 'assets/images/working.png'
 import './index.sass'
 
 const IntroductionDetail = () => (
