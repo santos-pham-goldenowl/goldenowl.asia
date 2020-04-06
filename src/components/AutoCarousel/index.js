@@ -11,26 +11,26 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    slidesToSlide: 3
+    slidesToSlide: 3,
   },
   tablet: {
     breakpoint: { max: 1023, min: 768 },
     items: 3,
-    slidesToSlide: 3
+    slidesToSlide: 3,
   },
   mobile: {
     breakpoint: { max: 767, min: 0 },
     items: 1,
-    slidesToSlide: 1
-  }
+    slidesToSlide: 1,
+  },
 };
 
-const AutoCarousel = props => {
+const AutoCarousel = (props) => {
   const isMobile = useMobileWidth();
 
-  const mobileData = props.content.slice(0)
+  const mobileData = props.content.slice(0);
 
-  const defaultItemRender = data => {
+  const defaultItemRender = (data) => {
     return (
       <Carousel
         swipeable={false}
@@ -49,13 +49,14 @@ const AutoCarousel = props => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {data.content.map(c => (
-          <div key={c.name} className="auto-carousel">
+        {data.content.map((c) => (
+          <div key={c.name} className="auto-carousel d-flex flex-column">
             <p>{`"${c.content}"`}</p>
-            <div className="feedback__client-wrapper">
+            <div className="feedback__client-wrapper mt-auto">
               <img src={c.url} alt="study" loading="lazy" />
-              <span className="auto-carousel__name">{c.name},&nbsp;</span>
-              <span className="auto-carousel__idea">{c.idea}</span>
+              <p className="auto-carousel__name-company">
+                <span>{c.name}</span>, {c.project}
+              </p>
             </div>
           </div>
         ))}
@@ -63,7 +64,7 @@ const AutoCarousel = props => {
     );
   };
 
-  const mobileItemRender = data => {
+  const mobileItemRender = (data) => {
     return (
       <Carousel
         swipeable={false}
@@ -82,16 +83,16 @@ const AutoCarousel = props => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {chunkArray(mobileData, 3).map(cGroup => (
-          <div
-            key={cGroup.name} className="auto-carousel">
-            {cGroup.map(c => (
+        {chunkArray(mobileData, 3).map((cGroup) => (
+          <div key={cGroup.name} className="auto-carousel">
+            {cGroup.map((c) => (
               <div className="mobile-micro-item">
                 <p>{`"${c.content}"`}</p>
                 <div className="feedback__client-wrapper">
                   <img src={c.url} alt="study" loading="lazy" />
-                  <span className="auto-carousel__name">{c.name},&nbsp;</span>
-                  <span className="auto-carousel__idea">{c.idea}</span>
+                  <p className="auto-carousel__name-company">
+                    <span>{c.name}</span>, {c.project}
+                  </p>
                 </div>
               </div>
             ))}
