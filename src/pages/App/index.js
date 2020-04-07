@@ -2,14 +2,13 @@ import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Home from '../Home'
-import HomeClone from '../HomeClone'
 import About from '../About'
 import TechnologyContainer from '../Technology'
 import Services from '../Services'
 import singleServiceDetails from 'utils/SingleServiceDetails'
 import portfolioDetails from 'utils/portfolioDetails'
 import objectToArray from 'utils/objectToArray'
-import SingleService from '../SingleService'
+import ServicesSubPage from '../ServicesSubPage'
 import Testimonials from '../Testimonials'
 import Portfolio from '../Portfolio'
 import PortfolioSubPage from '../PortfolioSubPage'
@@ -23,7 +22,6 @@ const App = () => (
   <BrowserRouter>
     <ScrollToTop />
     <section id="app" className="App">
-      <Route exact path="/home" component={HomeClone} />
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
       <Route exact path="/technologies" component={TechnologyContainer} />
@@ -48,7 +46,7 @@ const App = () => (
             exact
             key={service.key}
             path={`/services/${service.url}`}
-            component={() => <SingleService content={service} />}
+            component={() => <ServicesSubPage content={service} />}
           />
         ))
       }

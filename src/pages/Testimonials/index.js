@@ -11,9 +11,13 @@ import TestimonialsStats from './components/TestimonialsStats'
 import StatsSummary from './components/StatsSummary'
 import TestimonialsList from './components/TestimonialsList'
 import RunningPanels from './components/RunningPanels'
+import Helmet from 'react-helmet'
 
 const Testimonials = () => (
   <section className="testimonials">
+    <Helmet>
+      <title>Testimonials - Golden Owl</title>
+    </Helmet>
     <div className="container-fluid no-padding">
       <MainHeader />
       <SubHeader />
@@ -22,10 +26,7 @@ const Testimonials = () => (
       </BreadCrumb>
       <TestimonialsStats />
       <StatsSummary />
-      {/* to-do: animation */}
-      {/* refer: https://styled-components.com/ */}
       <RunningPanels />
-      {/* ---------------- */}
       <TestimonialsList />
       <Footer />
     </div>
