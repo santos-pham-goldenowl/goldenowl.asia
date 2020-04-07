@@ -12,7 +12,7 @@ const ServicesDetail = () => (
         <div key={content.key} className="col-12 col-md-4 link-wrapper">
           <Link to={`/services/${content.link}`}>
             <div className="img-wrapper w-100">
-              <img src={content.url} alt={content.key} />
+              <img id={`go-${content.link}`} src={content.url} alt={content.key} />
             </div>
             <div className="card-content">
               <h5>{content.key}</h5>
