@@ -163,7 +163,7 @@
       margin-right: -30px !important
 
     &__card
-      display: flex
+      display: block
       background-repeat: no-repeat
       background-position: top
       background-size: 100%
@@ -192,16 +192,20 @@
         z-index: 1
         position: absolute
         @include responsive($screen: mobile)
-          padding: 30px 40px 0 30px
+          top: 40px
+          padding: 0 40px 0 40px
           font-size: 18px
         @include responsive($screen: tablet)
-          padding: 30px 32px 0 32px
+          top: 30px
+          padding: 0 32px 0 32px
           font-size: 19px
         @include responsive($screen: desktop)
-          padding: 40px 43px 0 43px
+          top: 40px
+          padding: 0 43px 0 43px
           font-size: 25px
         @include responsive($screen: large-desktop)
-          padding: 56px 60px 0 60px
+          top: 56px
+          padding: 0 60px 0 60px
           font-size: 32px
       img
         width: 100%
