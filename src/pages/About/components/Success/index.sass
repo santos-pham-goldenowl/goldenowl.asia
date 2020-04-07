@@ -10,7 +10,7 @@
   @include responsive($screen: desktop)
     padding: 71px 0
   @include responsive($screen: large-desktop)
-    padding: 100px 0
+    padding: 80px 0
 
   &__map
     width: 100%
@@ -21,10 +21,14 @@
     @include responsive($screen: desktop)
       padding-top: 43px
     @include responsive($screen: large-desktop)
-      padding-top: 60px
+      padding-top: 82px
 
   &__paragraph
-    padding-top: 20px
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+    @include responsive($screen: desktop)
+    @include responsive($screen: large-desktop)
+      padding-top: 20px
 
   &__sum
     @include responsive($screen: mobile)
@@ -36,6 +40,7 @@
       padding-top: 80px
     .col-md-6
       h3
+        line-height: 1.35
         @include responsive($screen: mobile)
           padding-top: 40px
           font-size: 18px
@@ -50,8 +55,8 @@
           border-bottom: 3px solid $darkGray
           padding-bottom: 14px
         @include responsive($screen: large-desktop)
-          font-size: 34px
-          border-bottom: 4px solid $darkGray
+          font-size: 26px
+          border-bottom: 2px solid $darkGray
           padding-bottom: 20px
       p
         line-height: 1.5
@@ -63,9 +68,7 @@
         @include responsive($screen: desktop)
           font-size: 14px
         @include responsive($screen: large-desktop)
-          font-size: 20px
-      &:nth-child(2n)
-        padding-right: 0
+          font-size: 18px
       &:nth-child(2n+1)
         padding-left: 0
         @include responsive($screen: tablet)
@@ -73,17 +76,18 @@
         @include responsive($screen: desktop)
           padding-right: 80px
         @include responsive($screen: large-desktop)
-          padding-right: 112px
+          padding-right: 123px
       &:not(:last-child):not(:nth-last-child(2))
         @include responsive($screen: tablet)
           padding-bottom: 27px
         @include responsive($screen: desktop)
           padding-bottom: 36px
         @include responsive($screen: large-desktop)
-          padding-bottom: 50px
+          padding-bottom: 60px
 
   &__main-title
     font-family: MalloryBold
+    line-height: 1.33
     @include responsive($screen: mobile)
       font-size: 24px
       line-height: 1.34
@@ -93,10 +97,10 @@
     @include responsive($screen: desktop)
       font-size: 38px
     @include responsive($screen: large-desktop)
-      font-size: 50px
+      font-size: 40px
 
   &__main-description
-    line-height: 1.54
+    line-height: 1.5
     @include responsive($screen: mobile)
       font-size: 16px
       line-height: 1.5
@@ -105,4 +109,4 @@
     @include responsive($screen: desktop)
       font-size: 18px
     @include responsive($screen: large-desktop)
-      font-size: 26px
+      font-size: 24px
