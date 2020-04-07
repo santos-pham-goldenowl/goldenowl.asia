@@ -52,6 +52,8 @@
   .image-wrapper
     @include responsive($screen: mobile)
       margin-right: -15px
+    @include responsive($screen: large-desktop)
+      margin-right: -110px
 
   .rectangle, &__image
     @include responsive($screen: mobile)
@@ -63,7 +65,7 @@
     @include responsive($screen: desktop)
       max-width: 580px
     @include responsive($screen: large-desktop)
-      max-width: 815px
+      max-width: 710px
 
   &__image-placeholder
     width: 87.3%
@@ -80,7 +82,6 @@
       height: 21px
       border-radius: 4px
     @include responsive($screen: large-desktop)
-      margin-right: -100px
       height: 20px
       border-radius: 4.2px
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import code from "assets/images/code.png";
+import code from "assets/images/code2.png";
 import mobileCode from "assets/images/mobileCode.png";
 import "./index.sass";
 import useMobileWidth from "utils/hooks/useMobileWidth";
@@ -16,7 +16,7 @@ const Develop = () => {
   )
 
   const defaultImageRender = () => (
-    <div className="col-md-7 ml-auto image-wrapper">
+    <div className="col-md-7 pr-0 ml-auto image-wrapper">
       <div className="rectangle" />
       <img className="develop__image" src={code} alt="code" />
     </div>
