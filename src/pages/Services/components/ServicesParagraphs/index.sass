@@ -11,41 +11,12 @@
   @include responsive($screen: desktop)
     padding: 107px 0
   @include responsive($screen: large-desktop)
-    padding: 150px 0
+    padding: 80px 0
 
   .card
     text-align: center
     background-color: $white
     border: none
-    &:last-child
-      @include responsive($screen: tablet)
-        padding-left: 10px
-      @include responsive($screen: desktop)
-        padding-left: 15px
-      @include responsive($screen: large-desktop)
-        padding-left: 25px
-      h4
-        @include responsive($screen: tablet)
-          padding: 0 38px 11px 38px
-        @include responsive($screen: desktop)
-          padding: 0 51px 14px 51px
-        @include responsive($screen: large-desktop)
-          padding: 0 72px 20px 72px
-    &:first-child
-      @include responsive($screen: tablet)
-        padding-right: 10px
-      @include responsive($screen: desktop)
-        padding-right: 15px
-      @include responsive($screen: large-desktop)
-        padding-right: 25px
-      h4
-        @include responsive($screen: tablet)
-          padding: 0 62px 14px 62px
-        @include responsive($screen: desktop)
-          padding: 0 83px 11px 83px
-        @include responsive($screen: large-desktop)
-          padding: 0 117px 20px 117px
-
     @include responsive($screen: mobile)
       margin: 15px 0
       padding: 30px 20px
@@ -54,11 +25,37 @@
     @include responsive($screen: desktop)
       padding: 43px 36px
     @include responsive($screen: large-desktop)
-      padding: 60px 50px
+      padding: 40px 50px
+
+  #services-paragraph-0
+    @include responsive($screen: tablet)
+    @include responsive($screen: desktop)
+    @include responsive($screen: large-desktop)
+      padding-right: 25px
+    h4
+      @include responsive($screen: tablet)
+        padding: 0 38px 11px 38px
+      @include responsive($screen: desktop)
+        padding: 0 51px 14px 51px
+      @include responsive($screen: large-desktop)
+        padding: 0 72px 20px 72px
+
+  #services-paragraph-1
+    @include responsive($screen: tablet)
+    @include responsive($screen: desktop)
+    @include responsive($screen: large-desktop)
+      padding-left: 25px
+    h4
+      @include responsive($screen: tablet)
+        padding: 0 62px 14px 62px
+      @include responsive($screen: desktop)
+        padding: 0 83px 11px 83px
+      @include responsive($screen: large-desktop)
+        padding: 0 57px 20px 57px
 
   h4
-    font-family: MalloryBold
-    line-height: 1.25
+    font-family: ProximanovaBold
+    line-height: 1.34
     @include responsive($screen: mobile)
       font-size: 18px
       line-height: 1.5
@@ -79,4 +76,4 @@
     @include responsive($screen: desktop)
       font-size: 14px
     @include responsive($screen: large-desktop)
-      font-size: 20px
+      font-size: 18px
