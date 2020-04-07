@@ -9,7 +9,7 @@
   @include responsive($screen: desktop)
     padding: 102px 0 85px 0
   @include responsive($screen: large-desktop)
-    padding: 144px 0 120px 0
+    padding: 100px 0
 
   .row
     @include responsive($screen: tablet)
@@ -43,7 +43,7 @@
         margin-bottom: 28px
       @include responsive($screen: large-desktop)
         max-height: 178px
-        margin-bottom: 40px
+        margin-bottom: 30px
     h5
       font-family: MalloryBold
       font-weight: bold
@@ -63,8 +63,8 @@
         line-height: 1.5
         margin-bottom: 14px
       @include responsive($screen: large-desktop)
-        font-size: 20px
-        line-height: 1.5
+        font-size: 26px
+        line-height: 1.23
         margin-bottom: 20px
     p
       width: 100%
@@ -84,11 +84,14 @@
         line-height: 1.5
         margin-bottom: 21px
       @include responsive($screen: large-desktop)
-        font-size: 20px
+        font-size: 18px
         line-height: 1.5
         margin-bottom: 30px
     p.bottom-line
       margin-bottom: 0
+
+  #need-line-break
+    padding: 0 20px
 
   &__title
     @include responsive($screen: mobile)
@@ -100,5 +103,6 @@
       font-size: 26px
       padding-bottom: 28px
     @include responsive($screen: large-desktop)
-      font-size: 34px
+      font-size: 40px
+      line-height: 1.33
       padding-bottom: 40px

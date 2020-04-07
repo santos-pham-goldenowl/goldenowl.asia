@@ -9,7 +9,7 @@
   @include responsive($screen: desktop)
     padding: 107px 0 49px 0
   @include responsive($screen: large-desktop)
-    padding: 150px 0 69px 0
+    padding: 100px 0 0 0
 
   &__content
     @include responsive($screen: tablet)
@@ -17,9 +17,9 @@
     @include responsive($screen: desktop)
       margin-top: 71px !important
     @include responsive($screen: large-desktop)
-      margin-top: 100px !important
+      margin-top: 80px !important
     h3
-      line-height: 1.34
+      line-height: 1.5
       @include responsive($screen: mobile)
         padding-top: 40px
         font-size: 24px
@@ -30,10 +30,10 @@
         padding-top: 57px
         font-size: 26px
       @include responsive($screen: large-desktop)
-        padding-top: 80px
-        font-size: 34px
+        padding-top: 128px
+        font-size: 32px
     p
-      line-height: 1.54
+      line-height: 1.5
       @include responsive($screen: mobile)
         padding-top: 20px
         padding-bottom: 40px
@@ -46,8 +46,8 @@
         padding-top: 21px
         font-size: 18px
       @include responsive($screen: large-desktop)
-        padding-top: 30px
-        font-size: 26px
+        padding-top: 20px
+        font-size: 18px
 
   .image-wrapper
     @include responsive($screen: mobile)
@@ -80,12 +80,13 @@
       height: 21px
       border-radius: 4px
     @include responsive($screen: large-desktop)
-      height: 30px
-      border-radius: 6px
+      margin-right: -100px
+      height: 20px
+      border-radius: 4.2px
 
   &__title
     text-align: center
-    line-height: 1.3
+    line-height: 1.33
     @include responsive($screen: mobile)
       text-align: left
       font-size: 24px
@@ -94,4 +95,4 @@
     @include responsive($screen: desktop)
       font-size: 26px
     @include responsive($screen: large-desktop)
-      font-size: 34px
+      font-size: 40px

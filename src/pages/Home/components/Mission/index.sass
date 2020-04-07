@@ -9,10 +9,10 @@
   @include responsive($screen: desktop)
     padding: 142px 0 129px 0
   @include responsive($screen: large-desktop)
-    padding: 200px 0 182.4px 0
+    padding: 100px 0 152px 0
 
   &__title
-    line-height: 1.32
+    line-height: 1.33
     @include responsive($screen: mobile)
       font-size: 24px
       padding-bottom: 20px
@@ -23,8 +23,8 @@
       font-size: 26px
       padding-bottom: 27px
     @include responsive($screen: large-desktop)
-      font-size: 34px
-      padding-bottom: 38px
+      font-size: 40px
+      padding-bottom: 22px
 
   p
     @include responsive($screen: mobile)
@@ -38,8 +38,13 @@
       font-size: 18px
       line-height: 1.55
     @include responsive($screen: large-desktop)
-      font-size: 26px
-      line-height: 1.54
+      font-size: 18px
+      line-height: 1.5
+
+  &__items-wrapper
+    padding-left: 103px !important
+    @include responsive($screen: mobile)
+      padding-left: 0 !important
 
   &__item
     justify-content: flex-start
@@ -89,24 +94,4 @@
       @include responsive($screen: desktop)
         left: 24px
       @include responsive($screen: large-desktop)
-        left: 34px
-
-@media (min-width: 768px) and (max-width: 1023px)
-  .missions
-    .line
-      .arrow-right
-        left: 18px
-
-@media (min-width: 1024px) and (max-width: 1365px)
-  .missions
-    &__arrow
-      .line
-      .arrow-right
-        left: 24px
-
-@media only screen and (min-width: 1366px)
-  .missions
-    &__arrow
-      .line
-      .arrow-right
         left: 34px
