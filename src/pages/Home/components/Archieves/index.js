@@ -15,9 +15,7 @@ const Archieves = () => {
         <p className="archieves__title text-center">
           {isMobile
             ? "Worldwide Cutomer’s base: Singapore, Australia, UK, Hong Kong, the US and more…"
-            : `Worldwide Cutomer’s base: Singapore, Australia, UK,${(
-                <br />
-              )} Hong Kong, the US and more…`}
+            : <>Worldwide Cutomer’s base: Singapore, Australia, UK, <br/> Hong Kong, the US and more…</>}
         </p>
       </div>
       <div className="archieves__main-content row">

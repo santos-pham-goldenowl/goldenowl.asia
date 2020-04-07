@@ -8,31 +8,31 @@ const ServicesData = [
   {
     name: 'Web development',
     url: web,
-    description: 'Lorem ipsum dolor sit amet, te albucius',
+    description: 'Website, security and great design',
     link: 'web-development',
   },
   {
     name: 'Mobile development',
     url: phone,
-    description: 'Lorem ipsum dolor sit amet, te albucius',
+    description: 'Mobile responsive',
     link: 'mobile-development',
   },
   {
     name: 'UX UI Design',
     url: circle,
-    description: 'Lorem ipsum dolor sit amet, te albucius',
+    description: 'Color harmony and convenient UX',
     link: 'ux-ui-design',
   },
   {
     name: 'Project management',
     url: note,
-    description: 'Lorem ipsum dolor sit amet, te albucius',
+    description: 'Responsibility and carefulness',
     link: 'project-management',
   },
   {
     name: 'Development team',
     url: flag,
-    description: 'Lorem ipsum dolor sit amet, te albucius',
+    description: 'Professionality and outstanding developers',
     link: 'development-team',
   },
 ]

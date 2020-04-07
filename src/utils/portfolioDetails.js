@@ -218,11 +218,10 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Most modern <br /> workflow
+          Our achievement
         </h3>
       ),
-      description:
-        'Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product.',
+      description: 'Building networking is not an easy task, all members in GOLDEN OWL thought and deliberated with each other about how to build this app usefully. We spend much time and high efforts in building BRIIDGE. And now, we gain success!! We have created the whole IOS, Android app, and admin webpage as well as the whole project which lasts for years. Our clients are satisfied with our product and continue cooperating with us.'
     },
   },
   Personifi: {
@@ -326,25 +325,29 @@ export default {
         'Golden Owl launched the product, built a transparent workflow and makes updates frequently until it has a big scale. We operated with a high level of efficiency, transparency, responsiveness, attended to client needs and delivered truly sets them apart.',
     },
   },
-  BridgePay: {
-    cover: pImages.bridgePayCover,
-    url: 'bridge-pay',
+  BrdgePay: {
+    cover: pImages.brdgePayCover,
+    url: 'brdge-pay',
     overview:
-      'Bridgepay is one of the most modern platforms which is for internal purpose only. This platform helps enterprises/ companies to manage their internal financial flow. All of the movements and status of money flow will be tracked and noted carefully and day by day. This platform had been a very useful financial assistant for any big enterprises.',
+      'BrdgePay is one of the most modern platforms which is for internal purpose only. This platform helps enterprises/ companies to manage their internal financial flow. All of the movements and status of money flow will be tracked and noted carefully and day by day. This platform had been a very useful financial assistant for any big enterprises.',
     techs: ['Ruby on Rails'],
     img: [
-      { src: pImages.bridgePay1, col: 12 },
-      { src: pImages.bridgePay2, col: 12 },
-      { src: pImages.bridgePay3, col: 12 },
-      { src: pImages.bridgePay4, col: 12 },
-      { src: pImages.bridgePay5, col: 12 },
-      { src: pImages.bridgePay6, col: 12 },
-      { src: pImages.bridgePay7, col: 12 },
+      { src: pImages.brdgePay1, col: 12 },
+      { src: pImages.brdgePay2, col: 12 },
+      { src: pImages.brdgePay3, col: 12 },
+      { src: pImages.brdgePay4, col: 12 },
+      { src: pImages.brdgePay5, col: 12 },
+      { src: pImages.brdgePay6, col: 12 },
+      { src: pImages.brdgePay7, col: 12 },
     ],
     brief: {
-      title: 'We build the platform with concentration',
+      title: (
+        <h3 className="portfolio-details__item-title">
+          We build the platform<br />with concentration
+        </h3>
+        ),
       description:
-        'Understanding the difficulty of managing finance, Golden Owl has chosen all best developers and technology to bring clients the best platform. We spend passion and concentration while developing this project',
+        'Understanding the difficulty of managing finance, Golden Owl has chosen all best developers and technology to bring clients the best platform. We spend passion and concentration while developing this project.',
     },
   },
   Corpzap: {
@@ -533,7 +536,7 @@ export default {
         </h3>
       ),
       description:
-        'Knowing the importance of official information, Golden Owl has tried our best to bring the best product to clients. We are proud to be the',
+        'Knowing the importance of official information, Golden Owl has tried our best to bring the best product to clients. We are proud to be the one who joined and built this platform.',
     },
   },
   Techsauce: {
@@ -551,11 +554,11 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          As a very<br />helpful platform
+          Manage everything better<br/>thanks to Techsauce
         </h3>
       ),
       description:
-        'We have built a CMS platform for service providers to manage their customers whenever there is urgent demand from users. HOMEHUB will be an effective with everybody so that it could help them move home easier and comfortably.',
+        'Techsauce is a harmonious blend of web platform, mobile apps, onsite hardware and software, specially designed battle-tested processes, and world class people.',
     },
   },
   'Open The App': {
@@ -585,11 +588,11 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Most modern <br /> workflow
+          Open a new world
         </h3>
       ),
-      description:
-        'Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product.',
+      description: 
+        'Thanks to Open the app, users can talk to each other not only just one but also a group. More ideas and more opinions would be shared widely.'
     },
   },
   'The Luxe Nomad': {

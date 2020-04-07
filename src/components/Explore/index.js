@@ -16,7 +16,7 @@ const Explore = () => (
           <ArrowRight className="explore__arrow" />
         </Link>
       </div>
-      <p className="explore__description">Lorem ipsum dolor sit amet, iudico oratio<br />eos ex. Duo ludu.</p>
+      <p className="explore__description">Get your favorite training course</p>
       <div className="explore__image-wrapper">
         <img className="explore__image" src={laptop} alt="computer" loading="lazy" />
       </div>
