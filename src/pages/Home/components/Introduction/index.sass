@@ -11,7 +11,8 @@
   @include responsive($screen: desktop)
     padding-top: 85px
   @include responsive($screen: large-desktop)
-    padding-top: 120px
+    padding-top: 100px
+    padding-bottom: 126px
 
   &__title
     padding-top: 0
@@ -26,8 +27,9 @@
       padding-bottom: 28px
       font-size: 26px
     @include responsive($screen: large-desktop)
-      padding-bottom: 40px
-      font-size: 34px
+      padding-top: 126px
+      padding-bottom: 29px
+      font-size: 40px
 
   &__text
     padding-top: 0
@@ -39,12 +41,15 @@
     @include responsive($screen: tablet)
       font-size: 14px
       line-height: 1.54
+      padding-left: 5px
     @include responsive($screen: desktop)
       font-size: 18px
       line-height: 1.54
+      padding-left: 7.5px
     @include responsive($screen: large-desktop)
-      font-size: 26px
-      line-height: 1.54
+      font-size: 18px
+      line-height: 1.5
+      padding-left: 10px
 
   img
     position: absolute
@@ -60,6 +65,6 @@
       height: 391px
       top: 120px
     @include responsive($screen: large-desktop)
-      height: 550px
+      max-height: 550px
       left: calc(#{$desktopPadding} - 100px)
-      top: 120px
+      top: 100px
