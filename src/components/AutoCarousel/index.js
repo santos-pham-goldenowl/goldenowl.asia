@@ -39,10 +39,9 @@ const AutoCarousel = (props) => {
         responsive={responsive}
         ssr
         infinite
-        autoPlay={data.deviceType !== "mobile"}
+        autoPlay
+        autoPlaySpeed={10000}
         keyBoardControl
-        customTransition="all .8"
-        transitionDuration={1000}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
         deviceType={data.deviceType}
@@ -73,10 +72,9 @@ const AutoCarousel = (props) => {
         responsive={responsive}
         ssr
         infinite
-        autoPlay={data.deviceType !== "mobile"}
+        autoPlay
+        autoPlaySpeed={15000}
         keyBoardControl
-        customTransition="all .8"
-        transitionDuration={1000}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
         deviceType={data.deviceType}
