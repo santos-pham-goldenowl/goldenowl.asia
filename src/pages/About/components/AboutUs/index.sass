@@ -13,11 +13,14 @@
   @include responsive($screen: desktop)
     padding: 85px 0 137px 0
   @include responsive($screen: large-desktop)
-    padding: 120px 0 193px 0
+    padding: 80px 0 150px 0
 
   &__left-side
+    width: 41.6%
+    @include responsive($screen: mobile)
+      width: 100%
     h2
-      line-height: 1.2
+      line-height: 1.33
       @include responsive($screen: mobile)
         font-size: 28px
         margin-bottom: 21px
@@ -28,10 +31,10 @@
         font-size: 34px
         margin-bottom: 30px
       @include responsive($screen: large-desktop)
-        font-size: 50px
-        margin-bottom: 42px
+        font-size: 40px
+        margin-bottom: 20px
     p
-      line-height: 1.54
+      line-height: 1.5
       @include responsive($screen: mobile)
         font-size: 16px
         padding-bottom: 31.5px
@@ -40,26 +43,21 @@
       @include responsive($screen: desktop)
         font-size: 18px
       @include responsive($screen: large-desktop)
-        font-size: 26px
+        font-size: 18px
 
   &__right-side
     overflow: inherit
+    width: 58.4%
     @include responsive($screen: mobile)
+      width: 100%
       padding-left: 0 !important
-    @include responsive($screen: tablet)
-      padding-left: 61px !important
-    @include responsive($screen: desktop)
-      padding-left: 82px !important
-    @include responsive($screen: large-desktop)
-      padding-left: 115px !important
     img
       width: auto
+      float: right
       @include responsive($screen: mobile)
         width: 100%
         padding: 0 25px 0 26.2px
       @include responsive($screen: tablet)
-        height: 346px
       @include responsive($screen: desktop)
-        height: 461px
       @include responsive($screen: large-desktop)
-        height: 648px
+        height: 499px
