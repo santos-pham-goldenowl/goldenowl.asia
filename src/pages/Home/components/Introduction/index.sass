@@ -2,6 +2,7 @@
 @import 'styles/mixins'
 
 .introduction
+  position: relative
   overflow: inherit
   @include responsive($screen: mobile)
     padding-top: 50px
@@ -50,12 +51,15 @@
     left: 0
     @include responsive($screen: mobile)
       position: relative
-      left: -10.5px
+      left: -15px
       width: 95%
     @include responsive($screen: tablet)
       height: 293px
+      top: 64px
     @include responsive($screen: desktop)
       height: 391px
+      top: 120px
     @include responsive($screen: large-desktop)
       height: 550px
       left: calc(#{$desktopPadding} - 100px)
+      top: 120px
