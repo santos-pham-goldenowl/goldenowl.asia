@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ServicesDetailParagraphs } from 'utils/ServicesDetail'
+import { ServicesDetailParagraphs } from 'utils/servicesDetail'
 import objectToArray from 'utils/objectToArray'
 
 import './index.sass'

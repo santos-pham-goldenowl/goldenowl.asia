@@ -6,7 +6,7 @@ import closeIcon from "assets/images/whitecloseicon.png";
 import backIcon from "assets/images/whitebackicon.png";
 import ArrowRight from "../ArrowRight";
 import { Link } from "react-router-dom";
-import ServicesData from "utils/Services";
+import ServicesData from "utils/servicesMenuContent";
 
 
 const MobileMenu = () => {

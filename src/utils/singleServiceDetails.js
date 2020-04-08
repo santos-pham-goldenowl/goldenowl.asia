@@ -40,7 +40,7 @@ import mUiUxCoverImage from 'assets/images/service/UiUx/mCover.png'
 import mWebCoverImage from 'assets/images/service/WebDevelopment/mCover.png'
 
 // below section navigation
-import pageNavs from './OtherServices'
+import pageNavs from './otherServices'
 
 const { webDevelopment, mobileDevelopment, uiUxDesign, projectManagement, developmentTeam } = pageNavs
 
