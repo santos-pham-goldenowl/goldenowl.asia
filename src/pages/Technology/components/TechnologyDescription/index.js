@@ -20,7 +20,7 @@ const TechnologyDescription = () => {
   return (
     <section className="technology-description" style={sectionStyle}>
       <div className="row">
-        <div className="col-md-7 technology-description__left-side">
+        <div className="col-md-6 technology-description__left-side">
           <h2>Technology</h2>
           <p>
             By using many programming languages such as Ruby on Rails,
@@ -38,7 +38,7 @@ const TechnologyDescription = () => {
             to build it but also about how to choose the right technology.
           </p>
         </div>
-        <div className="col-md-5 ml-auto d-flex justify-content-end technology-description__right-side">
+        <div className="col-md-6 ml-auto d-flex justify-content-end technology-description__right-side">
           <img src={isMobile ? mTechnology : technology} alt="technology description" />
         </div>
       </div>
