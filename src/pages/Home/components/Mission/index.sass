@@ -3,11 +3,11 @@
 
 .missions
   @include responsive($screen: mobile)
-    padding: 50px 0 74.4px 0
+    padding: 50px 0 74px 0
   @include responsive($screen: tablet)
-    padding: 107px 0 97px 0
+    padding: 50px 0 76px 0
   @include responsive($screen: desktop)
-    padding: 142px 0 129px 0
+    padding: 70px 0 108px 0
   @include responsive($screen: large-desktop)
     padding: 100px 0 152px 0
 
@@ -18,28 +18,26 @@
       padding-bottom: 20px
     @include responsive($screen: tablet)
       font-size: 20px
-      padding-bottom: 20px
+      padding-bottom: 11px
     @include responsive($screen: desktop)
-      font-size: 26px
-      padding-bottom: 27px
+      font-size: 28px
+      padding-bottom: 15px
     @include responsive($screen: large-desktop)
       font-size: 40px
       padding-bottom: 22px
 
   p
+    line-height: 1.5
     @include responsive($screen: mobile)
       font-size: 16px
       line-height: 1.5
       padding-bottom: 30px
     @include responsive($screen: tablet)
       font-size: 14px
-      line-height: 1.55
     @include responsive($screen: desktop)
-      font-size: 18px
-      line-height: 1.55
+      font-size: 14px
     @include responsive($screen: large-desktop)
       font-size: 18px
-      line-height: 1.5
 
   &__items-wrapper
     padding-left: 103px !important
@@ -49,15 +47,14 @@
   &__item
     justify-content: flex-start
     display: block
-    padding-bottom: 4.2vw
     &:last-child
       padding-bottom: 0
     @include responsive($screen: mobile)
       padding-bottom: 30.4px
     @include responsive($screen: tablet)
-      padding-bottom: 32px
+      padding-bottom: 30px
     @include responsive($screen: desktop)
-      padding-bottom: 43px
+      padding-bottom: 42px
     @include responsive($screen: large-desktop)
       padding-bottom: 60px
 
@@ -67,11 +64,11 @@
       font-size: 16px
       padding-bottom: 14px
     @include responsive($screen: tablet)
-      font-size: 18px
+      font-size: 14px
       padding-bottom: 10px
     @include responsive($screen: desktop)
       font-size: 20px
-      padding-bottom: 14px
+      padding-bottom: 13px
     @include responsive($screen: large-desktop)
       font-size: 26px
       padding-bottom: 19px
@@ -79,18 +76,18 @@
   &__arrow
     .line
       @include responsive($screen: mobile)
-        width: 27.9px
+        width: 28px
       @include responsive($screen: tablet)
-        width: 18px
+        width: 17px
       @include responsive($screen: desktop)
         width: 24px
       @include responsive($screen: large-desktop)
         width: 34px
     .arrow-right
       @include responsive($screen: mobile)
-        left: 27.9px
+        left: 28px
       @include responsive($screen: tablet)
-        left: 18px
+        left: 17px
       @include responsive($screen: desktop)
         left: 24px
       @include responsive($screen: large-desktop)

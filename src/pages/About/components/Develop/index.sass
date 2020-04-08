@@ -5,17 +5,17 @@
   @include responsive($screen: mobile)
     padding: 50px 0 2px 0
   @include responsive($screen: tablet)
-    padding: 80px 0 37px 0
+    padding-top: 50px
   @include responsive($screen: desktop)
-    padding: 107px 0 49px 0
+    padding-top: 70px
   @include responsive($screen: large-desktop)
-    padding: 100px 0 0 0
+    padding-top: 100px
 
   &__content
     @include responsive($screen: tablet)
-      margin-top: 53px !important
+      margin-top: 40px !important
     @include responsive($screen: desktop)
-      margin-top: 71px !important
+      margin-top: 56px !important
     @include responsive($screen: large-desktop)
       margin-top: 80px !important
     h3
@@ -24,11 +24,11 @@
         padding-top: 40px
         font-size: 24px
       @include responsive($screen: tablet)
-        padding-top: 43px
-        font-size: 20px
+        padding-top: 64px
+        font-size: 16px
       @include responsive($screen: desktop)
-        padding-top: 57px
-        font-size: 26px
+        padding-top: 90px
+        font-size: 22px
       @include responsive($screen: large-desktop)
         padding-top: 128px
         font-size: 32px
@@ -40,11 +40,11 @@
         font-size: 16px
         line-height: 1.5
       @include responsive($screen: tablet)
-        padding-top: 16px
+        padding-top: 10px
         font-size: 14px
       @include responsive($screen: desktop)
-        padding-top: 21px
-        font-size: 18px
+        padding-top: 14px
+        font-size: 14px
       @include responsive($screen: large-desktop)
         padding-top: 20px
         font-size: 18px
@@ -52,20 +52,19 @@
   .image-wrapper
     @include responsive($screen: mobile)
       margin-right: -15px
+    @include responsive($screen: tablet)
+      margin-right: -55px
+    @include responsive($screen: desktop)
+      margin-right: -77px
     @include responsive($screen: large-desktop)
       margin-right: -110px
 
   .rectangle, &__image
+    width: 100%
     @include responsive($screen: mobile)
       position: absolute
       right: -10px
       width: 85.1%
-    @include responsive($screen: tablet)
-      max-width: 435px
-    @include responsive($screen: desktop)
-      max-width: 580px
-    @include responsive($screen: large-desktop)
-      max-width: 710px
 
   &__image-placeholder
     width: 87.3%
@@ -76,11 +75,11 @@
       height: 13.1px
       border-radius: 2.6px
     @include responsive($screen: tablet)
-      height: 16px
-      border-radius: 3px
+      height: 10px
+      border-radius: 2.1px
     @include responsive($screen: desktop)
-      height: 21px
-      border-radius: 4px
+      height: 14px
+      border-radius: 2.9px
     @include responsive($screen: large-desktop)
       height: 20px
       border-radius: 4.2px
@@ -94,6 +93,6 @@
     @include responsive($screen: tablet)
       font-size: 20px
     @include responsive($screen: desktop)
-      font-size: 26px
+      font-size: 28px
     @include responsive($screen: large-desktop)
       font-size: 40px
