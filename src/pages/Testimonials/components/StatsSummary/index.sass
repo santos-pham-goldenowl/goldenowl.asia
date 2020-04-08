@@ -5,11 +5,11 @@
   @include responsive($screen: mobile)
     padding: 0 0 50px 0
   @include responsive($screen: tablet)
-    padding: 0 0 80px 0
+    padding: 0 0 50px 0
   @include responsive($screen: desktop)
-    padding: 0 0 107px 0
+    padding: 0 0 70px 0
   @include responsive($screen: large-desktop)
-    padding: 0 0 150px 0
+    padding: 0 0 100px 0
 
   &__image-wrapper
     @include responsive($screen: mobile)
@@ -17,27 +17,22 @@
       padding-right: 25px
       margin-bottom: 40px
     @include responsive($screen: tablet)
-      padding-left: 56px
-      padding-right: 56px
+      padding-left: 53px
+      padding-right: 52px
     @include responsive($screen: desktop)
-      padding-left: 75px
-      padding-right: 75px
+      padding-left: 74px
+      padding-right: 73px
     @include responsive($screen: large-desktop)
       padding-left: 105px
       padding-right: 105px
 
   &__paragraph
-    @include responsive($screen: mobile)
-    @include responsive($screen: tablet)
-      padding: 12px 0 12px 0
-    @include responsive($screen: desktop)
-      padding: 16px 0 16px 0
-    @include responsive($screen: large-desktop)
-      padding: 23px 0 23px 0
+    height: 100%
+    display: flex
     p
-      line-height: 1.54
+      line-height: 1.5
+      margin: auto 0
       @include responsive($screen: mobile)
-        line-height: 1.5
         font-size: 16px
       @include responsive($screen: tablet)
         padding-left: 35px
@@ -46,8 +41,8 @@
       @include responsive($screen: desktop)
         padding-left: 46px
         padding-right: 28px
-        font-size: 18px
+        font-size: 17px
       @include responsive($screen: large-desktop)
         padding-left: 65px
         padding-right: 40px
-        font-size: 26px
+        font-size: 24px

@@ -59,7 +59,7 @@ const RunningPanels = () => (
     >
       {firstRow.map((item, index) => (
         <div key={`logo-${index}`} className="m-auto">
-          <img className="placeholder-img" src={item} alt={`logo-${index}`} />
+          <img className="running-panels-logo" src={item} alt={`logo-${index}`} />
         </div>
       ))}
     </Carousel>
@@ -116,7 +116,7 @@ const RunningPanels = () => (
     >
       {secondRow.map((item, index) => (
         <div key={`logo-${index}`} className="m-auto">
-          <img className="placeholder-img rotated" src={item} alt={`logo-${index}`} />
+          <img className="running-panels-logo rotated" src={item} alt={`logo-${index}`} />
         </div>
       ))}
     </Carousel>
