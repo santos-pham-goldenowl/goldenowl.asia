@@ -180,6 +180,12 @@ export const mobileTab = [
     url: 'glife',
   },
   {
+    content: 'Mosendo - Smart wallet ever',
+    isWhite: true,
+    img: img11,
+    url: 'mosendo',
+  },
+  {
     content: 'Open the app - Open new horizon',
     isWhite: true,
     img: img24,
@@ -230,12 +236,6 @@ export const webTab = [
     isWhite: false,
     img: img9,
     url: 'bid4skill',
-  },
-  {
-    content: 'Mosendo - Smart wallet ever',
-    isWhite: true,
-    img: img11,
-    url: 'mosendo',
   },
   {
     content: 'Collabs - For your better event',
