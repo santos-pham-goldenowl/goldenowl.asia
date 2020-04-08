@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import './index.sass'
 import PortfolioHeader from 'components/PortfolioHeader'
@@ -6,6 +7,9 @@ import PortfolioInteresting from 'components/PortfolioInteresting'
 
 const Services = ({ content }) => (
   <section>
+    <Helmet>
+      <title>{`${content.key} - Golden Owl`}</title>
+    </Helmet>
     <div className="container-fluid no-padding">
       <PortfolioHeader />
       <section className="portfolio-details">

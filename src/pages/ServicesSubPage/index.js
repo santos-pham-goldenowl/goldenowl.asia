@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import MainHeader from 'components/MainHeader'
 import SubHeader from 'components/SubHeader'
@@ -7,18 +8,20 @@ import BreadCrumb from 'components/BreadCrumb'
 import Footer from 'components/Footer'
 import objectToArray from 'utils/objectToArray'
 import useMobileWidth from 'utils/hooks/useMobileWidth'
-
+import capitalizeWords from 'utils/capitalizeWords'
 
 import coverPlaceholder from 'assets/images/service/cover-min.png'
 import mCoverPlaceholder from 'assets/images/service/mCover-min.png'
 
 import './index.sass'
 
-
-const SingleService = ({ content }) => {
+const ServicesSubPage = ({ content }) => {
   const isMobile = useMobileWidth()
   return (
   <section className="service">
+    <Helmet>
+      <title>{`${capitalizeWords(content.key)} - Golden Owl`}</title>
+    </Helmet>
     <div className="container-fluid no-padding">
       <MainHeader />
       <SubHeader />
@@ -138,4 +141,4 @@ const SingleService = ({ content }) => {
   </section>
 )}
 
-export default SingleService
+export default ServicesSubPage

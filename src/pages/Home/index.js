@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import MainHeader from 'components/MainHeader'
 import SubHeader from 'components/SubHeader'
@@ -25,8 +26,10 @@ const Home = () => {
   }
 
   return (
-
     <section className="home">
+      <Helmet>
+        <title>Golden Owl</title>
+      </Helmet>
       <div className="container-fluid no-padding">
         <MainHeader />
         <SubHeader />

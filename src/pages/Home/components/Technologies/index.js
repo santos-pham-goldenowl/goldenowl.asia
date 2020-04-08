@@ -1,6 +1,6 @@
 import React from 'react'
 
-import technologiesLogo from 'utils/TechnologiesLogo'
+import technologiesLogo from 'utils/technologiesLogo'
 import useMobileWidth from 'utils/hooks/useMobileWidth'
 
 import './index.sass'

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import go from 'assets/images/golden_owl.png'
-import socialIcons from 'utils/SocialIcons'
+import socialIcons from 'utils/socialIcons'
 import './index.sass'
 
 const Footer = () => (

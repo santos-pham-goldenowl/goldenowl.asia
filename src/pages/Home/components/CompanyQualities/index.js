@@ -53,7 +53,7 @@ const CompanyQualities = () => (
       <div className="col-12 col-md-4 qualities__items d-block">
         <img src={companyQuality3} alt="We create" />
         <h5>We create</h5>
-        <div className="d-flex">
+        <div id="need-line-break" className="d-flex">
           <p>
               The unspoken international rule of business which is the offshore
               development center.

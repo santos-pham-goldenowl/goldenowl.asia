@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import MainHeader from 'components/MainHeader'
 import SubHeader from 'components/SubHeader'
@@ -11,11 +12,14 @@ import ArrowRight from 'components/ArrowRight'
 import './index.sass'
 import useMobileWidth from 'utils/hooks/useMobileWidth'
 
-const SingleService = () => {
+const ServicesSubPage = () => {
   const isMobile = useMobileWidth();
 
   return (
   <section className="contact-us">
+    <Helmet>
+      <title>Contact Us - Golden Owl</title>
+    </Helmet>
     <div className="container-fluid no-padding">
       <MainHeader />
       <SubHeader />
@@ -132,4 +136,4 @@ const SingleService = () => {
   </section>
 )}
 
-export default SingleService
+export default ServicesSubPage

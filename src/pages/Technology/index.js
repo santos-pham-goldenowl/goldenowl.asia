@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import MainHeader from 'components/MainHeader'
 import SubHeader from 'components/SubHeader'
@@ -14,6 +15,9 @@ import './index.sass'
 
 const TechnologyContainer = () => (
   <section className="technology-container">
+    <Helmet>
+      <title>Technology - Golden Owl</title>
+    </Helmet>
     <div className="container-fluid no-padding">
       <MainHeader />
       <SubHeader />

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import present from 'assets/images/service_description.png'
+import present from 'assets/images/services.png'
 import servicesMobile from 'assets/images/service_mobile.png'
 import Bg from 'assets/images/wavy_bg_2.png'
 import useMobileWidth from 'utils/hooks/useMobileWidth'
@@ -23,10 +23,10 @@ const ServicesDescription = () => {
         <div className="col-md-5">
           <h2 className="services-description__title">Services</h2>
           <p className="">
-            We provide software solutions, mostly about website and mobile
-            applications for a wide variety of fields, from finance to commerce
-            and so on. We are proud of being very selective and have one of the
-            best full-stacked developer training programs in Ho Chi Minh City.
+            We provide software solutions, mostly about website and mobile applications for a wide variety of fields, from finance to commerce and so on. We are proud of being very selective and have one of the best full-stacked developer training programs in Ho Chi Minh City.
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet, te alii munere duo, vel nostrud iuvaret te. In nonumy salutatus vel. Verear ponderum te sed, vis in putent explicari. Nam tempor inimicus patrioque ei, an usu epicuri detracto gubergren. Atqui minim corrumpit cu usu, cu denique comprehensam per. Adhuc inimicus constituto ut ius, eros civibus ei quo, vel eu labores fuisset percipitur.
           </p>
         </div>
         <div className="col-md-6 ml-auto">

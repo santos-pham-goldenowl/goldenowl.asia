@@ -1,8 +1,9 @@
 import React from 'react'
 import { Tabs, Tab } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import './index.sass'
-import { Link } from 'react-router-dom'
 
 import PortfolioHeader from 'components/PortfolioHeader'
 import allTab, { mobileTab, webTab } from 'utils/portfolioTabContent'
@@ -27,6 +28,9 @@ const Portfolio = () => {
 
   return (
   <section className="portfolio">
+    <Helmet>
+      <title>Portfolio - Golden Owl</title>
+    </Helmet>
     <div className="container-fluid no-padding">
       <PortfolioHeader />
       <section className="portfolio__priority">

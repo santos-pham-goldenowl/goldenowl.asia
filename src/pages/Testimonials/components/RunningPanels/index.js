@@ -15,7 +15,7 @@ const RunningPanels = () => (
       centerMode={false}
       className=""
       containerClass="logos-row"
-      customTransition="all 1s linear"
+      customTransition="all 3s linear"
       dotListClass=""
       draggable
       focusOnSelect={false}
@@ -55,7 +55,7 @@ const RunningPanels = () => (
       sliderClass=""
       slidesToSlide={0}
       swipeable
-      transitionDuration={1000}
+      transitionDuration={3000}
     >
       {firstRow.map((item, index) => (
         <div key={`logo-${index}`} className="m-auto">
@@ -72,7 +72,7 @@ const RunningPanels = () => (
       centerMode={false}
       className=""
       containerClass="logos-row rotated"
-      customTransition="all 1s linear"
+      customTransition="all 3s linear"
       dotListClass=""
       draggable
       focusOnSelect={false}
@@ -112,7 +112,7 @@ const RunningPanels = () => (
       sliderClass=""
       slidesToSlide={0}
       swipeable
-      transitionDuration={1000}
+      transitionDuration={3000}
     >
       {secondRow.map((item, index) => (
         <div key={`logo-${index}`} className="m-auto">
