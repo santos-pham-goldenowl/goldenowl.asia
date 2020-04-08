@@ -35,7 +35,7 @@ const Blog = () => (
                 return (
                   <div key={blog.key} className="col-md-12">
                     <div className="row blogs__item">
-                      <div className="col-md-8 d-flex">
+                      <div className="col-12 col-md-8 d-block">
                         <img
                           loading="lazy"
                           className="blogs__item-image"
@@ -59,9 +59,9 @@ const Blog = () => (
               case 2:
               case 3:
                 return (
-                  <div key={blog.key} className="col-md-4">
+                  <div key={blog.key} className="col-12 col-md-4">
                     <div className="blogs__item">
-                      <div className="d-flex">
+                      <div className="d-block">
                         <img
                           loading="lazy"
                           className="blogs__item-image"
@@ -84,9 +84,9 @@ const Blog = () => (
               case 4:
               case 5:
                 return (
-                  <div key={blog.key} className="col-md-6">
+                  <div key={blog.key} className="col-12 col-md-6">
                     <div className="blogs__item">
-                      <div className="d-flex">
+                      <div className="d-block">
                         <img
                           loading="lazy"
                           className="blogs__item-image"

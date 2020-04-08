@@ -38,7 +38,7 @@ const TechnologyDescription = () => {
             to build it but also about how to choose the right technology.
           </p>
         </div>
-        <div className="col-md-6 ml-auto d-flex justify-content-end technology-description__right-side">
+        <div className="col-md-6 ml-auto d-block technology-description__right-side">
           <img src={isMobile ? mTechnology : technology} alt="technology description" />
         </div>
       </div>
