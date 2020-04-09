@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import ServicesData from 'utils/servicesMenuContent'
-import arrowRight from 'assets/images/arrow-right.svg'
+import arrowRight from 'assets/images/arrow-right-white.png'
 import arrowDown from 'assets/images/chevron-down-solid-white.png'
 import goWhite from 'assets/images/goWhite.png'
 
