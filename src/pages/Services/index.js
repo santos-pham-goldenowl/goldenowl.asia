@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import Helmet from 'react-helmet'
 
 import MainHeader from 'components/MainHeader'
@@ -7,22 +7,36 @@ import Footer from 'components/Footer'
 import Explore from 'components/Explore'
 import Contact from 'components/Contact'
 import BreadCrumb from 'components/BreadCrumb'
+import FixedTopBreadCrumb from "components/FixedTopBreadCrumb";
+import FixedTopHeader from "components/FixedTopHeader";
 
 import ServicesDescription from './components/ServicesDescription'
 import ServicesDetail from './components/ServicesDetail'
 import ServicesParagraphs from './components/ServicesParagraphs'
+import stickyTrigger from "utils/stickyTrigger"
+import useScrollDirection from "utils/hooks/useScrollDirection";
 
 import './index.sass'
 
-const Services = () => (
+const Services = () => {
+  const pageContent = createRef();
+  const scrollDirection = useScrollDirection()
+  
+  window.onscroll = () => stickyTrigger(scrollDirection)
+
+  return (
   <section className="services-container">
     <Helmet>
       <title>Services - Golden Owl</title>
     </Helmet>
-    <div className="container-fluid no-padding">
+    <div ref={pageContent} className="container-fluid no-padding">
+      <FixedTopHeader />
+      <FixedTopBreadCrumb pageContent={pageContent}>
+        <p>Services</p>
+      </FixedTopBreadCrumb>
       <MainHeader />
       <SubHeader />
-      <BreadCrumb>
+      <BreadCrumb pageContent={pageContent} >
         <p>Services</p>
       </BreadCrumb>
       <ServicesDescription />
@@ -33,6 +47,6 @@ const Services = () => (
       <Footer />
     </div>
   </section>
-)
+)}
 
 export default Services

@@ -1,21 +1,19 @@
 @import 'styles/variables'
 @import 'styles/mixins'
 
-.breadcrumb
+.fixed-breadcrumb
   width: 100%
   margin-bottom: 0 !important
+  padding-bottom: 0 !important
   @include responsive($screen: mobile)
+    display: none !important
     padding-top: 0 !important
-    padding-bottom: 0 !important
   @include responsive($screen: tablet)
     padding-top: 15px !important
-    padding-bottom: 0 !important
   @include responsive($screen: desktop)
     padding-top: 21px !important
-    padding-bottom: 0 !important
   @include responsive($screen: large-desktop)
-    padding-top: 30px !important
-    padding-bottom: 0 !important
+    padding-top: 15px !important
 
   img
     @include responsive($screen: mobile)
@@ -44,7 +42,7 @@
     @include responsive($screen: desktop)
       padding-bottom: 7px
     @include responsive($screen: large-desktop)
-      padding-bottom: 10px
+      padding-bottom: 14px
 
   span
     padding: 0 10px 0 10px
@@ -59,6 +57,7 @@
     a, p
       font-family: ProximaNovaRegular
       white-space: nowrap
+      line-height: 1.25
       @include responsive($screen: mobile)
         font-size: 12px
       @include responsive($screen: tablet)
