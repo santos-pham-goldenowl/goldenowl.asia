@@ -1,0 +1,73 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.fixed-breadcrumb
+  width: 100%
+  margin-bottom: 0 !important
+  padding-bottom: 0 !important
+  @include responsive($screen: mobile)
+    display: none !important
+    padding-top: 0 !important
+  @include responsive($screen: tablet)
+    padding-top: 15px !important
+  @include responsive($screen: desktop)
+    padding-top: 21px !important
+  @include responsive($screen: large-desktop)
+    padding-top: 15px !important
+
+  img
+    @include responsive($screen: mobile)
+      height: 12px
+      padding-left: 5px
+    @include responsive($screen: tablet)
+      height: 8px
+      padding-left: 56px
+    @include responsive($screen: desktop)
+      height: 10px
+      padding-left: 75px
+    @include responsive($screen: large-desktop)
+      padding-left: 105px
+
+  &__content
+    width: 100%
+    display: flex
+    align-items: center
+    border-bottom: 1px solid $slightYellow
+    line-height: 1
+    @include responsive($screen: mobile)
+      line-height: 0.95
+      padding-bottom: 14px
+    @include responsive($screen: tablet)
+      padding-bottom: 5px
+    @include responsive($screen: desktop)
+      padding-bottom: 7px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 14px
+
+  span
+    padding: 0 10px 0 10px
+    @include responsive($screen: mobile)
+      font-size: 12px
+      padding: 0 6px 0 6px
+
+  &__text
+    cursor: pointer
+    display: flex
+    align-items: center
+    a, p
+      font-family: ProximaNovaRegular
+      white-space: nowrap
+      line-height: 1.25
+      @include responsive($screen: mobile)
+        font-size: 12px
+      @include responsive($screen: tablet)
+        font-size: 14px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 16px
+    a
+      @include responsive($screen: mobile)
+        line-height: 1
+        > div
+          height: 15px
