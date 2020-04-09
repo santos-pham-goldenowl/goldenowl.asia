@@ -9,11 +9,11 @@
   @include responsive($screen: desktop)
     padding: 85px 0 137px 0
   @include responsive($screen: large-desktop)
-    padding: 119px 0 192px 0
+    padding: 80px 0 142px 0
 
   &__left-side
     h2
-      line-height: 1.2
+      line-height: 1.34
       text-transform: uppercase
       @include responsive($screen: mobile)
         text-transform: capitalize
@@ -26,22 +26,22 @@
         font-size: 35px
         padding-bottom: 31px
       @include responsive($screen: large-desktop)
-        font-size: 50px
-        padding-bottom: 43px
+        font-size: 40px
+        margin-bottom: 30px
     p
-      line-height: 1.54
+      line-height: 1.5
       @include responsive($screen: mobile)
-        line-height: 1.5
         font-size: 16px
         padding-bottom: 30px
       @include responsive($screen: tablet)
         font-size: 14px
       @include responsive($screen: desktop)
-        font-size: 18px
+        font-size: 14px
       @include responsive($screen: large-desktop)
-        font-size: 26px
+        font-size: 18px
 
   &__right-side
+    display: block
     @include responsive($screen: mobile)
       margin-right: -15px
     @include responsive($screen: tablet)
@@ -51,11 +51,9 @@
     @include responsive($screen: large-desktop)
       margin-right: -100px
     img
+      float: right
+      width: 82%
       @include responsive($screen: mobile)
         width: 83.6%
-      @include responsive($screen: tablet)
-        max-width: 221px
-      @include responsive($screen: desktop)
-        max-width: 335px
       @include responsive($screen: large-desktop)
-        max-width: 471px
+        max-width: 500px

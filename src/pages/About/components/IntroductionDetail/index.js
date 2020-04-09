@@ -20,8 +20,10 @@ const IntroductionDetail = () => (
           </p>
         </div>
       </div>
-      <div className="col-12 col-md-5 ml-auto img-wrapper">
-        <img src={working} alt="working" loading="lazy" />
+      <div className="col-12 col-md-5 ml-auto">
+        <div className="img-wrapper">
+          <img src={working} alt="working" loading="lazy" />
+        </div>
       </div>
     </div>
   </section>
