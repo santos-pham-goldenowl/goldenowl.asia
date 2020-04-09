@@ -66,7 +66,7 @@ const AutoCarousel = (props) => {
   const mobileItemRender = (data) => {
     return (
       <Carousel
-        swipeable={false}
+        swipeable
         draggable={false}
         showDots
         responsive={responsive}
