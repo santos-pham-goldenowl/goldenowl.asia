@@ -12,7 +12,7 @@ const Footer = () => (
           Areas we serve
       </h4>
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-3 pr-5">
           <h5>Ho Chi Minh City</h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
           <p>justin@goldenowl.asia</p>
@@ -64,7 +64,7 @@ const Footer = () => (
             />
           ))}
         </div>
-        <div className="footer__contact">
+        <div className="footer__contact row">
           <span className="col-md-6 footer__phone">(+84) 912 878985</span>
           <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
         </div>
