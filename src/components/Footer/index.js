@@ -64,7 +64,7 @@ const Footer = () => (
             />
           ))}
         </div>
-        <div className="footer__contact row">
+        <div className="footer__contact">
           <span className="col-md-6 footer__phone">(+84) 912 878985</span>
           <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
         </div>
