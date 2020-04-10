@@ -1,0 +1,72 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.services
+  &__items
+    background-color: $white
+    box-shadow: 10px 10px 20px -15px rgba(160, 160, 160, 0.5)
+    @include responsive($screen: tablet)
+      padding: 17px !important
+      width: 252px
+      border-radius: 5px
+    @include responsive($screen: desktop)
+      padding: 21px !important
+      width: 341px
+      border-radius: 7px
+    @include responsive($screen: large-desktop)
+      padding: 30px !important
+      width: 434px
+      border-radius: 10px
+
+  &__arrow-wrapper
+    display: flex
+    align-items: center
+    @include responsive($screen: tablet)
+      padding-right: 25px
+      height: 28px
+    @include responsive($screen: desktop)
+      padding-right: 32px
+      height: 35px
+    @include responsive($screen: large-desktop)
+      padding-right: 45px
+      height: 50px
+
+  &__icon-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: left
+    padding-right: 10px
+    @include responsive($screen: tablet)
+      width: 28px
+    @include responsive($screen: desktop)
+      width: 35px
+    @include responsive($screen: large-desktop)
+      width: 50px
+    img
+      max-width: 75%
+      max-height: 75%
+
+  &__service-description-wrapper
+    text-align: left
+    p, h4
+      color: $darkGray
+      line-height: 1.25
+      @include responsive($screen: tablet)
+        font-size: 10px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 16px
+
+  &__service
+    display: flex
+    &:hover
+      background-color: #fafafa
+      border-radius: 6px
+    @include responsive($screen: tablet)
+      padding: 11px 6px
+    @include responsive($screen: desktop)
+      padding: 14px 7px
+    @include responsive($screen: large-desktop)
+      padding: 20px 10px

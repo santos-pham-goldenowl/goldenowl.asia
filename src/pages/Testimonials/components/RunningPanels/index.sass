@@ -6,6 +6,7 @@
 
 .rotated
   transform: rotate(180deg)
+  @include responsive($screen: mobile)
 
 .logos-row
   @include responsive($screen: mobile)
@@ -42,7 +43,10 @@
   margin-top: auto !important
   margin-bottom: auto !important
   @include responsive($screen: mobile)
+    max-height: 20px
     padding: 0 15px
+    &.rotated
+      max-height: 30px
   @include responsive($screen: tablet)
     max-height: 27px
     padding: 0 13px

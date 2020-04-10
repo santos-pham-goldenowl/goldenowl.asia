@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createRef } from 'react'
 import { Link } from 'react-router-dom'
 import Helmet from 'react-helmet'
 
@@ -8,22 +8,36 @@ import BreadCrumb from 'components/BreadCrumb'
 import Footer from 'components/Footer'
 import CheckPoint from 'components/CheckPoint'
 import ArrowRight from 'components/ArrowRight'
+import FixedTopBreadCrumb from "components/FixedTopBreadCrumb";
+import FixedTopHeader from "components/FixedTopHeader";
+
+import useMobileWidth from 'utils/hooks/useMobileWidth'
+import stickyTrigger from "utils/stickyTrigger"
+import useScrollDirection from "utils/hooks/useScrollDirection";
 
 import './index.sass'
-import useMobileWidth from 'utils/hooks/useMobileWidth'
 
 const ServicesSubPage = () => {
   const isMobile = useMobileWidth();
 
+  const pageContent = createRef();
+  const scrollDirection = useScrollDirection()
+  
+  window.onscroll = () => stickyTrigger(scrollDirection)
+  
   return (
   <section className="contact-us">
     <Helmet>
       <title>Contact Us - Golden Owl</title>
     </Helmet>
-    <div className="container-fluid no-padding">
+    <div ref={pageContent} className="container-fluid no-padding">
+      <FixedTopHeader />
+      <FixedTopBreadCrumb pageContent={pageContent}>
+        <p>Contact us</p>
+      </FixedTopBreadCrumb>
       <MainHeader />
       <SubHeader />
-      <BreadCrumb>
+      <BreadCrumb pageContent={pageContent}>
         <Link to="/contact-us">Contact us</Link>
       </BreadCrumb>
       <section className="contact-form">
