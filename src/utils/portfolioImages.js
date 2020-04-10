@@ -22,6 +22,7 @@ briidge7: "https://drive.google.com/uc?export=view&id=1HDH406yFtW4zNbx-2XudwmuWH
 briidge8: "https://drive.google.com/uc?export=view&id=1AeuNHW0OVULl6SNBlaOjgdvhyQOdVa2U",
 briidge9: "https://drive.google.com/uc?export=view&id=1U7cjp-hMd9hI1ysiP05Eo2-8a6PpDuA6",
 briidgeCover: "https://drive.google.com/uc?export=view&id=1eYnbyImZ8FBZ6qkErWT80xX_A8Iff5xE",
+collabs0: "https://drive.google.com/uc?export=view&id=1ZGA8zDzdprpJoX4P4AGB1VIhU1ZkvWHg",
 collabs1: "https://drive.google.com/uc?export=view&id=1-EyST_MHjyEpi3kKZpOXwZA-D9CFq5Ag",
 collabs2: "https://drive.google.com/uc?export=view&id=1AOcHAOb6S7GNovm7crq3MJqN9P43yKLX",
 collabs3: "https://drive.google.com/uc?export=view&id=1xngppnkyQ0y7Myte4M_shj5BNvSsrRQj",

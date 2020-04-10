@@ -15,7 +15,6 @@ import CompanyQuality from "./components/CompanyQualities";
 import Archieves from "./components/Archieves";
 import Feedback from "./components/Feedback";
 import Technologies from "./components/Technologies";
-import FixedTopBreadCrumb from "components/FixedTopBreadCrumb";
 import FixedTopHeader from "components/FixedTopHeader";
 
 import stickyTrigger from "utils/stickyTrigger";
