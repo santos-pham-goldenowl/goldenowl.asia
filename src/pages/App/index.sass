@@ -88,8 +88,13 @@ p, span
   font-family: ProximaNovaRegular
 
 .arrow-down
-  height: 10px
   margin-left: 5px
+  @include responsive($screen: tablet)
+    height: 5px
+  @include responsive($screen: desktop)
+    height: 7px
+  @include responsive($screen: large-desktop)
+    height: 10px
 
 a
   text-decoration: none !important
@@ -112,7 +117,7 @@ input, select, textarea
   @include responsive($screen: mobile)
     font-size: 14px !important
   @include responsive($screen: tablet)
-    font-size: 10px !important
+    font-size: 12px !important
   @include responsive($screen: desktop)
     font-size: 14px !important
   @include responsive($screen: large-desktop)
@@ -129,7 +134,16 @@ input, select
   padding: 1rem 0.75rem !important
   border: solid 1px $slightGray !important
   height: 50px !important
+  @include responsive($screen: tablet)
+    height: 25px !important
+  @include responsive($screen: desktop)
+    height: 35px !important
 
 label
   line-height: 1.25
-  margin-bottom: 10px
+  @include responsive($screen: tablet)
+    margin-bottom: 5px
+  @include responsive($screen: desktop)
+    margin-bottom: 7px
+  @include responsive($screen: large-desktop)
+    margin-bottom: 10px

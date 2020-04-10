@@ -13,16 +13,12 @@
   @include responsive($screen: mobile)
     display: none
 
-  .no-bootstrap-arrow
-    &:after
-      content: none
-
   &__button, #services-dropdown
     padding-left: 0
     @include responsive($screen: tablet)
-      padding-right: 27px
+      padding-right: 25px
     @include responsive($screen: desktop)
-      padding-right: 36px
+      padding-right: 35px
     @include responsive($screen: large-desktop)
       padding-right: 50px
 
@@ -40,10 +36,10 @@
       background-color: transparent
       z-index: 2
       @include responsive($screen: tablet)
-        padding-top: 16px
+        padding-top: 15px
         left: -21px
       @include responsive($screen: desktop)
-        padding-top: 21px
+        padding-top: 20px
         left: -28px
       @include responsive($screen: large-desktop)
         padding-top: 30px
@@ -62,7 +58,7 @@
   &__contact-wrapper
     background-color: $darkYellow
     @include responsive($screen: tablet)
-      width: 83px
+      width: 85px
       height: 25px
     @include responsive($screen: desktop)
       width: 110px
@@ -76,20 +72,20 @@
 
   &__text
     @include responsive($screen: tablet)
-      font-size: 10px
+      font-size: 8px
     @include responsive($screen: desktop)
-      font-size: 13px
+      font-size: 12px
     @include responsive($screen: large-desktop)
       font-size: 16px
 
   &__arrow-right
     @include responsive($screen: tablet)
-      width: 9px
+      width: 10px
       height: 6px
-      margin-left: 11px
+      margin-left: 10px
     @include responsive($screen: desktop)
       width: 12px
-      height: 9px
+      height: 8px
       margin-left: 14px
     @include responsive($screen: large-desktop)
       width: 17px
@@ -102,4 +98,4 @@
     @include responsive($screen: desktop)
       height: 22px
     @include responsive($screen: large-desktop)
-      height: 31px
+      height: 32px

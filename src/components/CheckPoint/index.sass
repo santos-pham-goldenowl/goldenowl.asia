@@ -1,4 +1,5 @@
-@import 'styles/variables.sass'
+@import 'styles/variables'
+@import 'styles/mixins'
 
 .check-point
   width: 12px
@@ -11,4 +12,11 @@
   transform: rotate(135deg)
 
 .check-point-wrapper
-  padding-top: 13px
+  @include responsive($screen: mobile)
+    padding-top: 12px
+  @include responsive($screen: tablet)
+    padding-top: 10px
+  @include responsive($screen: desktop)
+    padding-top: 11px
+  @include responsive($screen: large-desktop)
+    padding-top: 13px
