@@ -13,6 +13,12 @@
 
   &__email
     color: $yellow
+    @include responsive($screen: tablet)
+      margin-left: 5px
+    @include responsive($screen: desktop)
+      margin-left: 7px
+    @include responsive($screen: large-desktop)
+      margin-left: 10px
 
   &__icon-linkedin
     @include responsive($screen: tablet)
@@ -117,7 +123,7 @@
 
   &__bottom-content-wrapper
     display: flex
-    justify-content: space-around
+    justify-content: space-between
     align-items: flex-start
     @include responsive($screen: tablet)
       padding-top: 43px
@@ -140,9 +146,11 @@
 
   &__bottom-grid-container
     display: flex
-    flex: 3
+    width: 50%
     text-align: left
-    justify-content: space-around
+    justify-content: space-between
+    padding: 0 5px
+    margin-right: 100px
     > div
       padding-bottom: 0
       a
@@ -161,6 +169,7 @@
   &__contact
     text-align: left
     display: flex
+    flex: 1
     flex-direction: row
     align-items: flex-start
     @include responsive($screen: tablet)

@@ -10,7 +10,7 @@ brdgePay4: "https://drive.google.com/uc?export=view&id=1p4F4-Fb387yR3TPH5kGUS9oV
 brdgePay5: "https://drive.google.com/uc?export=view&id=1fiJhMVjVQ8W_TSqljJhfx4bwcUlF7OPY",
 brdgePay6: "https://drive.google.com/uc?export=view&id=1Cik3No0kjRj5BWa6e0GmQNqDPySIpYMo",
 brdgePay7: "https://drive.google.com/uc?export=view&id=1L1pZqnwQdwyDGXtOFXtKMVzLbN1_j321",
-brdgePayCover: "https://drive.google.com/uc?export=view&id=131mE3XAzG7neTKXKa5bmeXUrayjXbUws",
+brdgePayCover: "https://drive.google.com/uc?export=view&id=1GfGSzFgZ18l53MVOBhLfyYlbk0jH-9b1",
 briidge1: "https://drive.google.com/uc?export=view&id=1vd3nRPiKiqlcr0QFztX6Y1wv4mSOCtKB",
 briidge10: "https://drive.google.com/uc?export=view&id=1XFgtDjd9ULBGgmo54w0XFgNwzhnWJGcM",
 briidge2: "https://drive.google.com/uc?export=view&id=1NO3KK8diL2YtUv2gH74NXbYroOegFhWL",
