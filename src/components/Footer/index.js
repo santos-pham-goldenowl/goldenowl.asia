@@ -88,9 +88,9 @@ const Footer = () => (
               <Link to="/portfolio">Portfolio</Link>
             </div>
           </div>
-          <div>
+          <div className="col-md-2 pl-0">
             <h3 className="footer__bottom-grid-title">Others</h3>
-            <div className="col-md-2 pl-0">
+            <div>
               <a href="/careers">Careers</a>
               <Link to="/contact-us">Contact us</Link>
               <a href="/faq">FAQ</a>
