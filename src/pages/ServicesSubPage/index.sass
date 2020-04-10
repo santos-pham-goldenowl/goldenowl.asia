@@ -307,6 +307,7 @@
       width: 65.6%
       @include responsive($screen: mobile)
         width: 100%
+
   &__logos-wrapper
     width: 34.5%
     @include responsive($screen: mobile)
@@ -378,9 +379,19 @@
     @include responsive($screen: large-desktop)
       padding: 0 25px 50px 25px !important
     &:nth-child(2n)
-      padding-right: 0 !important
+      @include responsive($screen: tablet)
+        padding-right: 2px !important
+      @include responsive($screen: desktop)
+        padding-right: 7px !important
+      @include responsive($screen: large-desktop)
+        padding-right: 10px !important
     &:nth-child(2n+1)
-      padding-left: 0 !important
+      @include responsive($screen: tablet)
+        padding-left: 3px !important
+      @include responsive($screen: desktop)
+        padding-left: 8px !important
+      @include responsive($screen: large-desktop)
+        padding-left: 10px !important
 
   &__other-service
     border-radius: 8px
