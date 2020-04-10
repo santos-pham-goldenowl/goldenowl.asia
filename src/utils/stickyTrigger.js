@@ -10,15 +10,17 @@ export default function stickyTrigger(direction) {
     const fixedHeader = document.getElementById("fixed-top-header");
 
     if (window.pageYOffset >= sticky) {
-      if (direction === "down") {
-        fixedBreadcrumb.classList.remove("d-none");
-        fixedHeader.classList.add("d-none");
-      } else {
-        fixedBreadcrumb.classList.add("d-none");
-        fixedHeader.classList.remove("d-none");
-      }
+      if (fixedBreadcrumb) {
+        if (direction === "down") {
+          fixedBreadcrumb.classList.remove("d-none");
+          fixedHeader.classList.add("d-none");
+        } else {
+          fixedBreadcrumb.classList.add("d-none");
+          fixedHeader.classList.remove("d-none");
+        }
+      } else fixedHeader.classList.remove("d-none");
     } else {
-      fixedBreadcrumb.classList.add("d-none");
+      if (fixedBreadcrumb) fixedBreadcrumb.classList.add("d-none");
       fixedHeader.classList.add("d-none");
     }
   }

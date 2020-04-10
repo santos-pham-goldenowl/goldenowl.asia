@@ -18,7 +18,9 @@ const Explore = () => (
       </div>
       <p className="explore__description">Get your favorite training course</p>
       <div className="explore__image-wrapper">
-        <img className="explore__image" src={laptop} alt="computer" loading="lazy" />
+        <a href="/portfolio/bid-4-skill">
+          <img className="explore__image" src={laptop} alt="computer" loading="lazy" />
+        </a>
       </div>
     </div>
   </section>
