@@ -146,19 +146,14 @@
         font-size: 20px
 
   &__bottom-grid-container
-    display: flex
     width: 50%
     text-align: left
-    justify-content: space-between
     @include responsive($screen: tablet)
-      padding: 0 7px 0 3px
       margin-right: 50px
     @include responsive($screen: desktop)
-      padding: 0 10px 0 4px
       margin-right: 70px
     @include responsive($screen: large-desktop)
-      padding: 0 15px 0 5px
-      margin-right: 100px
+      margin-right: 90px
     > div
       padding-bottom: 0
       a
@@ -173,6 +168,29 @@
           font-size: 12px
         @include responsive($screen: large-desktop)
           font-size: 16px
+
+  &__bottom-grid-row
+    @include responsive($screen: tablet)
+      margin-left: -3px !important
+      margin-right: -2px !important
+    @include responsive($screen: desktop)
+      margin-left: -4px !important
+      margin-right: -3px !important
+    @include responsive($screen: large-desktop)
+      margin-left: -5px !important
+      margin-right: -5px !important
+    [class*='col']
+      @include responsive($screen: tablet)
+        padding-left: 3px !important
+        padding-right: 2px !important
+      @include responsive($screen: desktop)
+        padding-left: 4px !important
+        padding-right: 3px !important
+      @include responsive($screen: large-desktop)
+        padding-left: 5px !important
+        padding-right: 5px !important
+    .pl-0
+      padding-left: 0 !important
 
   &__contact
     text-align: left
