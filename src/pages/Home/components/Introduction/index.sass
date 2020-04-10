@@ -56,17 +56,19 @@
   img
     position: absolute
     left: 0
+    width: 43.4%
     @include responsive($screen: mobile)
       position: relative
       left: -15px
       width: 95%
     @include responsive($screen: tablet)
-      height: 275px
+      max-width: 386px
       top: 50px
     @include responsive($screen: desktop)
-      height: 385px
+      max-width: 477px
       top: 70px
     @include responsive($screen: large-desktop)
       max-height: 550px
+      max-width: 625px
       left: calc(#{$desktopPadding} - 100px)
       top: 100px
