@@ -37,17 +37,17 @@ const ServicesSubPage = () => {
               </p>
               <div className="d-flex">
                 <CheckPoint />
-                <p>Learn more about Golden Owl</p>
+                <p className="contact-form__reason">Learn more about Golden Owl</p>
               </div>
               <br />
               <div className="d-flex">
                 <CheckPoint />
-                <p>Find the right solution for your needs</p>
+                <p className="contact-form__reason">Find the right solution for your needs</p>
               </div>
               <br />
               <div className="d-flex">
                 <CheckPoint />
-                <p>Learn more about Golden Owl</p>
+                <p className="contact-form__reason">Learn more about Golden Owl</p>
               </div>
             </div>
             <div className="col-md-6 ml-auto">

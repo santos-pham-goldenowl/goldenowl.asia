@@ -11,11 +11,11 @@
     @include responsive($screen: mobile)
       padding: 30px 0 50px 0
     @include responsive($screen: tablet)
-      padding: 42px 0 84px 0
+      padding: 40px 0 50px 0
     @include responsive($screen: desktop)
-      padding: 52px 0 105px 0
+      padding: 56px 0 70px 0
     @include responsive($screen: large-desktop)
-      padding: 74px 0 150px 0
+      padding: 80px 0 100px 0
 
     &__form
       @include responsive($screen: mobile)
@@ -37,7 +37,6 @@
           border: dashed 1px $yellow
 
     &__wrapper
-      @include responsive($screen: mobile)
       @include responsive($screen: tablet)
         padding: 0 59px
       @include responsive($screen: desktop)
@@ -65,29 +64,39 @@
         @include responsive($screen: large-desktop)
           left: 34px
 
+    &__reason
+      line-height: 1.78 !important
+      color: $darkGray
+      line-height: 1.5
+      @include responsive($screen: tablet)
+        width: 200px
+        font-size: 14px
+      @include responsive($screen: desktop)
+        width: 280px
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        width: 400px
+        font-size: 18px
+
     &__introduction
+      color: $darkGray
+      line-height: 1.5
       @include responsive($screen: mobile)
         padding-bottom: 20px
+        font-size: 16px
       @include responsive($screen: tablet)
-        padding-bottom: 23px
+        width: 200px
+        font-size: 14px
+        padding-bottom: 19px
       @include responsive($screen: desktop)
-        padding-bottom: 28px
+        width: 280px
+        font-size: 14px
+        padding-bottom: 26px
       @include responsive($screen: large-desktop)
-        padding-bottom: 40px
-      p
-        color: $darkGray
-        line-height: 1.5
-        @include responsive($screen: mobile)
-          font-size: 16px
-        @include responsive($screen: tablet)
-          width: 213px
-          font-size: 10px
-        @include responsive($screen: desktop)
-          width: 284px
-          font-size: 14px
-        @include responsive($screen: large-desktop)
-          width: 400px
-          font-size: 20px
+        width: 400px
+        font-size: 20px
+        padding-bottom: 37px
+
   h1
     color: $solidBlack
     @include responsive($screen: mobile)
@@ -95,17 +104,22 @@
       line-height: 1.36
       padding-bottom: 20px
     @include responsive($screen: tablet)
-      width: 165px
-      padding-bottom: 17px
-      font-size: 28px
+      width: 195px
+      padding-bottom: 10px
+      font-size: 24px
     @include responsive($screen: desktop)
-      width: 206.5px
-      padding-bottom: 21px
-      font-size: 37px
+      width: 275px
+      padding-bottom: 14px
+      font-size: 32px
     @include responsive($screen: large-desktop)
-      width: 295px
-      padding-bottom: 30px
-      font-size: 60px
+      width: 390px
+      padding-bottom: 20px
+      font-size: 46px
+
+  br
+    display: none
+    @include responsive($screen: mobile)
+      display: block
 
   .send-rectangle
     border: solid 1px $solidBlack
@@ -195,10 +209,9 @@
       margin-right: 15px
 
   label
-    @include responsive($screen: mobile)
     @include responsive($screen: tablet)
-      font-size: 9px
+      font-size: 14px
     @include responsive($screen: desktop)
-      font-size: 12px
+      font-size: 14px
     @include responsive($screen: large-desktop)
-      font-size: 18px
+      font-size: 16px

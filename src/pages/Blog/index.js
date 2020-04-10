@@ -75,7 +75,7 @@ const Blog = () => (
                           <p>JAN 31, 2020</p>
                           <p>10 MIN READ</p>
                         </div>
-                        <h4>{blog.key}</h4>
+                        <h4 className="small-item-title">{blog.key}</h4>
                         <p>{blog.content}</p>
                       </div>
                     </div>
@@ -100,7 +100,7 @@ const Blog = () => (
                           <p>JAN 31, 2020</p>
                           <p>10 MIN READ</p>
                         </div>
-                        <h4>{blog.key}</h4>
+                        <h4 className="medium-item-title">{blog.key}</h4>
                         <p>{blog.content}</p>
                       </div>
                     </div>
