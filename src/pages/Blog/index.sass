@@ -58,13 +58,13 @@
       padding-bottom: 10px
     @include responsive($screen: tablet)
       padding-top: 14px
-      padding-bottom: 50px
+      padding-bottom: 46px
     @include responsive($screen: desktop)
       padding-top: 14px
-      padding-bottom: 70px
+      padding-bottom: 64px
     @include responsive($screen: large-desktop)
       padding-top: 20px
-      padding-bottom: 100px
+      padding-bottom: 90px
     &__item
       @include responsive($screen: mobile)
         padding-bottom: 40px
@@ -122,13 +122,13 @@
             padding-right: 40px
           @include responsive($screen: tablet)
             font-size: 12px
-            padding-right: 10px
+            padding-right: 16px
           @include responsive($screen: desktop)
             font-size: 12px
-            padding-right: 14px
+            padding-right: 20px
           @include responsive($screen: large-desktop)
             font-size: 12px
-            padding-right: 20px
+            padding-right: 30px
 
     &__item-image
       width: 100%
@@ -155,13 +155,28 @@
       padding-left: 17.5px !important
       padding-right: 17.5px !important
 
-  .category-vertical
+  .category-vertical-big
     @include responsive($screen: tablet)
       padding-top: 16px
     @include responsive($screen: desktop)
       padding-top: 21px
     @include responsive($screen: large-desktop)
       padding-top: 30px
+    p
+      @include responsive($screen: tablet)
+        font-size: 8px !important
+      @include responsive($screen: desktop)
+        font-size: 12px !important
+      @include responsive($screen: large-desktop)
+        font-size: 16px !important
+
+  .category-vertical-small
+    @include responsive($screen: tablet)
+      padding-top: 10px
+    @include responsive($screen: desktop)
+      padding-top: 14px
+    @include responsive($screen: large-desktop)
+      padding-top: 20px
 
   .wide-blog
     @include responsive($screen: tablet)
@@ -187,3 +202,12 @@
       margin-top: 7px
     @include responsive($screen: large-desktop)
       margin-top: 10px
+
+  .medium-item-content
+    line-height: 1.5
+    @include responsive($screen: tablet)
+      font-size: 14px !important
+    @include responsive($screen: desktop)
+      font-size: 14px !important
+    @include responsive($screen: large-desktop)
+      font-size: 20px !important

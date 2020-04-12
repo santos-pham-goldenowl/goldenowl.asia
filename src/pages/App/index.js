@@ -1,16 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
-
-import Home from '../Home';
-import About from '../About';
-import Contact from '../Contact';
-import Services from '../Services';
-import ServicesSubPage from '../ServicesSubPage';
-import TechnologyContainer from '../Technology';
-import PortfolioSubPage from '../PortfolioSubPage';
-import Testimonials from '../Testimonials';
-import Portfolio from '../Portfolio';
-import Blog from '../Blog';
+import { Route } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
 import ScrollToTop from '../../components/ScrollToTop';
 
@@ -20,13 +10,68 @@ import singleServiceDetails from '../../utils/singleServiceDetails';
 
 import './index.sass';
 
+// Fix `window is not defined` when run on SSR
+if (typeof (window) === 'undefined') {
+  global.window = {};
+}
+
+const Home = Loadable({
+  loader: () => import('../Home'),
+  loading: () => null,
+});
+
+const About = Loadable({
+  loader: () => import('../About'),
+  loading: () => null,
+});
+
+const Contact = Loadable({
+  loader: () => import('../Contact'),
+  loading: () => null,
+});
+
+const Services = Loadable({
+  loader: () => import('../Services'),
+  loading: () => null,
+});
+
+const ServicesSubPage = Loadable({
+  loader: () => import('../ServicesSubPage'),
+  loading: () => null,
+});
+
+const Technology = Loadable({
+  loader: () => import('../Technology'),
+  loading: () => null,
+});
+
+const PortfolioSubPage = Loadable({
+  loader: () => import('../PortfolioSubPage'),
+  loading: () => null,
+});
+
+const Testimonials = Loadable({
+  loader: () => import('../Testimonials'),
+  loading: () => null,
+});
+
+const Portfolio = Loadable({
+  loader: () => import('../Portfolio'),
+  loading: () => null,
+});
+
+const Blog = Loadable({
+  loader: () => import('../Blog'),
+  loading: () => null,
+});
+
 const App = () => (
-  <BrowserRouter>
+  <>
     <ScrollToTop />
     <section id="app" className="App">
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
-      <Route exact path="/technologies" component={TechnologyContainer} />
+      <Route exact path="/technologies" component={Technology} />
       <Route exact path="/testimonial" component={Testimonials} />
       <Route exact path="/portfolio" component={Portfolio} />
       {
@@ -53,7 +98,7 @@ const App = () => (
         ))
       }
     </section>
-  </BrowserRouter>
+  </>
 );
 
 export default App;

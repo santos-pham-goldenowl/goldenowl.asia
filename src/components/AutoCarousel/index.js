@@ -48,13 +48,13 @@ const AutoCarousel = (props) => {
       itemClass="carousel-item-padding-40-px"
     >
       {data.content.map((c) => (
-        <div key={c.name} className="auto-carousel d-flex flex-column">
+        <div key={c.name} className="auto-carousel h-100 d-flex flex-column">
           <p>{`"${c.content}"`}</p>
           <div className="feedback__client-wrapper mt-auto">
             <img src={c.url} alt="study" loading="lazy" />
             <p className="auto-carousel__name-company">
               <span>{c.name}</span>
-              ,
+              {" "},{" "}
               {c.project}
             </p>
           </div>
