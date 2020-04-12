@@ -19,7 +19,6 @@ import useScrollDirection from '../../utils/hooks/useScrollDirection';
 
 import './index.sass';
 
-
 const Testimonials = () => {
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
