@@ -201,7 +201,7 @@ export default {
     cover: pImages.briidgeCover,
     url: 'briidge',
     overview:
-      'Connect A Job represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.',
+      'BRIIDGE is a selective network of experienced trainers and coaches covering a wide range of specialties in Leadership, Management, Communication, Sales, Public Speaking, Team Building and more… With BID4SKILL, you can find a trainer suitable with all demands of your company quickly. This project help you saving time and money to look for a good trainer.',
     techs: ['Angular JS (FE)', 'Ruby on Rails (BE)'],
     img: [
       { src: pImages.briidge1, col: 4 },

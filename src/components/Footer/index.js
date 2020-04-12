@@ -1,18 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import go from 'assets/images/golden_owl.png'
-import socialIcons from 'utils/socialIcons'
-import './index.sass'
+import go from "assets/images/golden_owl.png";
+import socialIcons from "utils/socialIcons";
+import "./index.sass";
 
 const Footer = () => (
   <footer className="footer">
     <div className="footer__top-content-wrapper">
-      <h4 className="footer__top-content-title">
-          Areas we serve
-      </h4>
+      <h4 className="footer__top-content-title">Areas we serve</h4>
       <div className="row">
-        <div className="col-md-3">
+        <div className="col-md-3 pr-5">
           <h5>Ho Chi Minh City</h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
           <p>justin@goldenowl.asia</p>
@@ -51,7 +49,6 @@ const Footer = () => (
     </div>
     <div className="footer__bottom-content-wrapper">
       <div className="footer__logo-wrapper">
-
         <img className="d-block" src={go} alt="golden-logo" />
         <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
           {socialIcons.map((icon) => (
@@ -70,33 +67,35 @@ const Footer = () => (
         </div>
       </div>
       <div className="footer__bottom-grid-container">
-        <div>
-          <h3 className="footer__bottom-grid-title">Our Services</h3>
-          <div>
-            <Link to="/services/web-development">Website development</Link>
-            <Link to="/services/mobile-development">Mobile development</Link>
-            <Link to="/services/ux-ui-design">UX UI design</Link>
-            <Link to="/services/project-management">Project management</Link>
-            <Link to="/services/development-team">Development team</Link>
+        <div className="row footer__bottom-grid-row">
+          <div className="col-md-6 pl-0 ">
+            <h3 className="footer__bottom-grid-title">Our Services</h3>
+            <div>
+              <Link to="/services/web-development">Website development</Link>
+              <Link to="/services/mobile-development">Mobile development</Link>
+              <Link to="/services/ux-ui-design">UX UI design</Link>
+              <Link to="/services/project-management">Project management</Link>
+              <Link to="/services/development-team">Development team</Link>
+            </div>
           </div>
-        </div>
-        <div>
-          <h3 className="footer__bottom-grid-title">Links</h3>
-          <div>
-            <Link to="/about-us">About us</Link>
-            <Link to="/services">Services</Link>
-            <Link to="/technologies">Technologies</Link>
-            <Link to="/testimonial">Testimonials</Link>
-            <Link to="/portfolio">Portfolio</Link>
+          <div className="col-md-4 pl-0">
+            <h3 className="footer__bottom-grid-title">Links</h3>
+            <div>
+              <Link to="/about-us">About us</Link>
+              <Link to="/services">Services</Link>
+              <Link to="/technologies">Technologies</Link>
+              <Link to="/testimonial">Testimonials</Link>
+              <Link to="/portfolio">Portfolio</Link>
+            </div>
           </div>
-        </div>
-        <div>
-          <h3 className="footer__bottom-grid-title">Others</h3>
-          <div>
-            <a href="/careers">Careers</a>
-            <Link to="/contact-us">Contact us</Link>
-            <a href="/faq">FAQ</a>
-            <Link to="/blog">Blog</Link>
+          <div className="col-md-2 pl-0">
+            <h3 className="footer__bottom-grid-title">Others</h3>
+            <div>
+              <a href="/careers">Careers</a>
+              <Link to="/contact-us">Contact us</Link>
+              <a href="/faq">FAQ</a>
+              <Link to="/blog">Blog</Link>
+            </div>
           </div>
         </div>
       </div>
@@ -105,6 +104,6 @@ const Footer = () => (
       <p>Copyright 2019 © Golden Owl Consulting</p>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;
