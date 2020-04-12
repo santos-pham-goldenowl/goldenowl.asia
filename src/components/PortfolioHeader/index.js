@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import logo from 'assets/images/go.png'
-import companyName from 'assets/images/golden_owl_text.png'
+import logo from '../../assets/images/go.png';
+import companyName from '../../assets/images/golden_owl_text.png';
 
-import './index.sass'
-import { Link } from 'react-router-dom'
+import './index.sass';
 
 const Services = () => (
   <header className="portfolio-header d-flex align-items-center">
@@ -22,6 +22,6 @@ const Services = () => (
       <p className="portfolio-header__email">admin@goldenowl.asia</p>
     </div>
   </header>
-)
+);
 
-export default Services
+export default Services;

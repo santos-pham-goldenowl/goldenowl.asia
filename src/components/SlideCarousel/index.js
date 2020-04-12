@@ -1,6 +1,7 @@
-import React from 'react'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+
+import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
   desktop: {
@@ -18,19 +19,20 @@ const responsive = {
     items: 1,
     slidesToSlide: 1,
   },
-}
+};
+
 const SlideCarousel = ({ ...props }) => {
-  const { deviceType, content } = props
+  const { deviceType, content } = props;
 
   return (
     <Carousel
+      ssr
+      infinite
+      keyBoardControl
       swipeable={false}
       draggable={false}
       showDots={false}
       responsive={responsive}
-      ssr
-      infinite
-      keyBoardControl
       customTransition="all .5"
       transitionDuration={500}
       containerClass="align-items-center"
@@ -43,6 +45,7 @@ const SlideCarousel = ({ ...props }) => {
         </div>
       ))}
     </Carousel>
-  )
-}
-export default SlideCarousel
+  );
+};
+
+export default SlideCarousel;

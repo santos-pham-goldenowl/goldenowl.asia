@@ -1,6 +1,5 @@
-import React from 'react'
-
-import './index.sass'
+import React from 'react';
+import './index.sass';
 
 const TechnologyCards = () => (
   <section className="technology-cards">
@@ -29,6 +28,6 @@ const TechnologyCards = () => (
       </div>
     </div>
   </section>
-)
+);
 
-export default TechnologyCards
+export default TechnologyCards;

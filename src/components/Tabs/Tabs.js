@@ -1,28 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-import TabHeader from './TabHeader'
-import TabContent from './TabContent'
+import TabHeader from './TabHeader';
+import TabContent from './TabContent';
 
-class Tabs extends React.Component {
-  state = { selected: '' };
+class Tabs extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selected: '',
+    };
+  }
 
   toogleTab(name) {
-    this.setState({ selected: name })
+    this.setState({ selected: name });
   }
 
   render() {
-    const { children } = this.props
-    let { selected } = this.state
+    const { children } = this.props;
+    let { selected } = this.state;
 
-    selected = selected || children.filter((c) => c.type === TabHeader)[0].props.for
+    selected = selected || children.filter((c) => c.type === TabHeader)[0].props.for;
 
     const tabHeaders = children.filter((c) => c.type === TabHeader).map((c) => (
       React.cloneElement(c, { onSelect: this.toogleTab.bind(this), selected })
-    ))
+    ));
 
     const tabContents = children.filter((c) => c.type === TabContent).filter((c) => (
       c.props.name === selected
-    ))
+    ));
 
     return (
       <div>
@@ -33,8 +39,8 @@ class Tabs extends React.Component {
           {tabContents}
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Tabs
+export default Tabs;

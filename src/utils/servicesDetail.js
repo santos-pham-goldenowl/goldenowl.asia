@@ -1,9 +1,10 @@
-import service1 from 'assets/images/service/illustration-01.png'
-import service2 from 'assets/images/service/illustration-02.png'
-import service3 from 'assets/images/service/illustration-03.png'
-import service4 from 'assets/images/service/illustration-04.png'
-import service5 from 'assets/images/service/illustration-05.png'
+/* eslint-disable  max-len */
 
+import service1 from '../assets/images/service/illustration-01.png';
+import service2 from '../assets/images/service/illustration-02.png';
+import service3 from '../assets/images/service/illustration-03.png';
+import service4 from '../assets/images/service/illustration-04.png';
+import service5 from '../assets/images/service/illustration-05.png';
 
 export const ServicesDetailContent = {
   'Web Development': {
@@ -31,9 +32,13 @@ export const ServicesDetailContent = {
     content: 'We own more than 50 professional developers who help build full-stack solutions for clients in several platforms.',
     link: 'development-team',
   },
-}
+};
 
 export const ServicesDetailParagraphs = {
-  'From a basic idea to the masterpiece of work': { content: 'We not only shape your idea into a immaculate product but also make it beyond your expectation. Our product will always meet your demand and never let you down.' },
-  'Not only about quality but about design as well': { content: 'Besides paying attention to the quality and stability of the project, we also cherish the importance of design because the success of project is not only about how smooth it works, how unique the business is, it also about how elegant it looks. We always try our best to bring you the most modern and attractive design to the product.' },
-}
+  'From a basic idea to the masterpiece of work': {
+    content: 'We not only shape your idea into a immaculate product but also make it beyond your expectation. Our product will always meet your demand and never let you down.',
+  },
+  'Not only about quality but about design as well': {
+    content: 'Besides paying attention to the quality and stability of the project, we also cherish the importance of design because the success of project is not only about how smooth it works, how unique the business is, it also about how elegant it looks. We always try our best to bring you the most modern and attractive design to the product.',
+  },
+};

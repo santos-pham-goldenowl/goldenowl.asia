@@ -1,11 +1,11 @@
-import React from "react";
-import Carousel from "react-multi-carousel";
+import React from 'react';
+import Carousel from 'react-multi-carousel';
 
-import chunkArray from "utils/chunkArray";
-import useMobileWidth from "utils/hooks/useMobileWidth";
+import chunkArray from '../../utils/chunkArray';
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
 
-import "react-multi-carousel/lib/styles.css";
-import "./index.sass";
+import 'react-multi-carousel/lib/styles.css';
+import './index.sass';
 
 const responsive = {
   desktop: {
@@ -30,75 +30,75 @@ const AutoCarousel = (props) => {
 
   const mobileData = props.content.slice(0);
 
-  const defaultItemRender = (data) => {
-    return (
-      <Carousel
-        swipeable={false}
-        draggable={false}
-        showDots
-        responsive={responsive}
-        ssr
-        infinite
-        autoPlay
-        autoPlaySpeed={10000}
-        keyBoardControl
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-        deviceType={data.deviceType}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-      >
-        {data.content.map((c) => (
-          <div key={c.name} className="auto-carousel d-flex flex-column">
-            <p>{`"${c.content}"`}</p>
-            <div className="feedback__client-wrapper mt-auto">
-              <img src={c.url} alt="study" loading="lazy" />
-              <p className="auto-carousel__name-company">
-                <span>{c.name}</span>, {c.project}
-              </p>
-            </div>
+  const defaultItemRender = (data) => (
+    <Carousel
+      ssr
+      infinite
+      autoPlay
+      showDots
+      keyBoardControl
+      swipeable={false}
+      draggable={false}
+      responsive={responsive}
+      autoPlaySpeed={10000}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
+      deviceType={data.deviceType}
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
+      {data.content.map((c) => (
+        <div key={c.name} className="auto-carousel d-flex flex-column">
+          <p>{`"${c.content}"`}</p>
+          <div className="feedback__client-wrapper mt-auto">
+            <img src={c.url} alt="study" loading="lazy" />
+            <p className="auto-carousel__name-company">
+              <span>{c.name}</span>
+              ,
+              {c.project}
+            </p>
           </div>
-        ))}
-      </Carousel>
-    );
-  };
+        </div>
+      ))}
+    </Carousel>
+  );
 
-  const mobileItemRender = (data) => {
-    return (
-      <Carousel
-        swipeable
-        draggable={false}
-        showDots
-        responsive={responsive}
-        ssr
-        infinite
-        autoPlay
-        autoPlaySpeed={15000}
-        keyBoardControl
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-        deviceType={data.deviceType}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-      >
-        {chunkArray(mobileData, 3).map((cGroup) => (
-          <div key={cGroup.name} className="auto-carousel">
-            {cGroup.map((c) => (
-              <div className="mobile-micro-item">
-                <p>{`"${c.content}"`}</p>
-                <div className="feedback__client-wrapper">
-                  <img src={c.url} alt="study" loading="lazy" />
-                  <p className="auto-carousel__name-company">
-                    <span>{c.name}</span>, {c.project}
-                  </p>
-                </div>
+  const mobileItemRender = (data) => (
+    <Carousel
+      ssr
+      infinite
+      autoPlay
+      swipeable
+      showDots
+      keyBoardControl
+      draggable={false}
+      responsive={responsive}
+      autoPlaySpeed={15000}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
+      deviceType={data.deviceType}
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
+      {chunkArray(mobileData, 3).map((cGroup) => (
+        <div key={cGroup.name} className="auto-carousel">
+          {cGroup.map((c) => (
+            <div className="mobile-micro-item">
+              <p>{`"${c.content}"`}</p>
+              <div className="feedback__client-wrapper">
+                <img src={c.url} alt="study" loading="lazy" />
+                <p className="auto-carousel__name-company">
+                  <span>{c.name}</span>
+                  ,
+                  {c.project}
+                </p>
               </div>
-            ))}
-          </div>
-        ))}
-      </Carousel>
-    );
-  };
+            </div>
+          ))}
+        </div>
+      ))}
+    </Carousel>
+  );
 
   return isMobile ? mobileItemRender(props) : defaultItemRender(props);
 };

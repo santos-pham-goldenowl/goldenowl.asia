@@ -1,18 +1,18 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ArrowRight from '../../../../components/ArrowRight';
 
-import bg from "assets/images/bg.svg";
-import ArrowRight from "components/ArrowRight";
-
-import "./index.sass";
+import bg from '../../../../assets/images/bg.svg';
+import './index.sass';
 
 const Missions = () => {
   const sectionStyle = {
     backgroundImage: `url(${bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "bottom",
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'bottom',
   };
+
   return (
     <section className="missions" style={sectionStyle}>
       <div className="row">

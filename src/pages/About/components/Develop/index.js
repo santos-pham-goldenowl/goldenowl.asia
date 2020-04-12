@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
 
-import code from "assets/images/code2.png";
-import mobileCode from "assets/images/mobileCode.png";
-import "./index.sass";
-import useMobileWidth from "utils/hooks/useMobileWidth";
+import code from '../../../../assets/images/code2.png';
+import mobileCode from '../../../../assets/images/mobileCode.png';
+
+import './index.sass';
 
 const Develop = () => {
   const isMobile = useMobileWidth();
@@ -13,14 +14,14 @@ const Develop = () => {
       <img className="develop__image-placeholder invisible" src={mobileCode} alt="code" />
       <img className="develop__image" src={mobileCode} alt="code" />
     </div>
-  )
+  );
 
   const defaultImageRender = () => (
     <div className="col-md-7 pr-0 ml-auto image-wrapper">
       <div className="rectangle" />
       <img className="develop__image" src={code} alt="code" />
     </div>
-  )
+  );
 
   return (
     <section className="develop">

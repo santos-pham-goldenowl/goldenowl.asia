@@ -1,26 +1,26 @@
-import img1 from 'assets/images/portfolio/1.png'
-import img2 from 'assets/images/portfolio/2.png'
-import img3 from 'assets/images/portfolio/3.png'
-import img4 from 'assets/images/portfolio/4.png'
-import img5 from 'assets/images/portfolio/5.png'
-import img6 from 'assets/images/portfolio/6.png'
-import img7 from 'assets/images/portfolio/7.png'
-import img8 from 'assets/images/portfolio/8.png'
-import img9 from 'assets/images/portfolio/9.png'
-import img11 from 'assets/images/portfolio/11.png'
-import img12 from 'assets/images/portfolio/12.png'
-import img13 from 'assets/images/portfolio/13.png'
-import img14 from 'assets/images/portfolio/14.png'
-import img15 from 'assets/images/portfolio/15.png'
-import img16 from 'assets/images/portfolio/16.png'
-import img17 from 'assets/images/portfolio/17.png'
-import img18 from 'assets/images/portfolio/18.png'
-import img19 from 'assets/images/portfolio/19.png'
-import img20 from 'assets/images/portfolio/20.png'
-import img21 from 'assets/images/portfolio/21.png'
-import img22 from 'assets/images/portfolio/22.png'
-import img23 from 'assets/images/portfolio/23.png'
-import img24 from 'assets/images/portfolio/24.png'
+import img1 from '../assets/images/portfolio/1.png';
+import img2 from '../assets/images/portfolio/2.png';
+import img3 from '../assets/images/portfolio/3.png';
+import img4 from '../assets/images/portfolio/4.png';
+import img5 from '../assets/images/portfolio/5.png';
+import img6 from '../assets/images/portfolio/6.png';
+import img7 from '../assets/images/portfolio/7.png';
+import img8 from '../assets/images/portfolio/8.png';
+import img9 from '../assets/images/portfolio/9.png';
+import img11 from '../assets/images/portfolio/11.png';
+import img12 from '../assets/images/portfolio/12.png';
+import img13 from '../assets/images/portfolio/13.png';
+import img14 from '../assets/images/portfolio/14.png';
+import img15 from '../assets/images/portfolio/15.png';
+import img16 from '../assets/images/portfolio/16.png';
+import img17 from '../assets/images/portfolio/17.png';
+import img18 from '../assets/images/portfolio/18.png';
+import img19 from '../assets/images/portfolio/19.png';
+import img20 from '../assets/images/portfolio/20.png';
+import img21 from '../assets/images/portfolio/21.png';
+import img22 from '../assets/images/portfolio/22.png';
+import img23 from '../assets/images/portfolio/23.png';
+import img24 from '../assets/images/portfolio/24.png';
 
 export default [
   {
@@ -29,7 +29,9 @@ export default [
     img: img1,
     url: 'referral-candy',
   },
-  { content: 'GIG – Job is not a big deal', isWhite: true, img: img2, url: 'gig' },
+  {
+    content: 'GIG – Job is not a big deal', isWhite: true, img: img2, url: 'gig',
+  },
   {
     content:
       'The Work Project – Change your workplace with many beautiful things',
@@ -157,10 +159,12 @@ export default [
     img: img24,
     url: 'open-the-app',
   },
-]
+];
 
 export const mobileTab = [
-  { content: 'GIG – Job is not a big deal', isWhite: true, img: img2, url: 'gig' },
+  {
+    content: 'GIG – Job is not a big deal', isWhite: true, img: img2, url: 'gig',
+  },
   {
     content: 'Eye Protec – The best bodyguard for your life',
     isWhite: true,
@@ -191,7 +195,7 @@ export const mobileTab = [
     img: img24,
     url: 'open-the-app',
   },
-]
+];
 
 export const webTab = [
   {
@@ -297,4 +301,4 @@ export const webTab = [
     img: img23,
     url: 'public-insight',
   },
-]
+];

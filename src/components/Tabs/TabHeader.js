@@ -1,27 +1,36 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
 class TabHeader extends React.Component {
-  static propTypes = { for: PropTypes.string.isRequired }
+  constructor(props) {
+    super(props);
 
-  state = { active: false }
-
-  static getDerivedStateFromProps(nextProps) {
-    return { active: nextProps.selected === nextProps.for }
+    this.state = {
+      active: false,
+    };
   }
 
-  onClick = (e) => {
-    if (this.props.onSelect) {
-      this.props.onSelect(this.props.for)
+  static getDerivedStateFromProps(nextProps) {
+    return { active: nextProps.selected === nextProps.for };
+  }
+
+  onClick = () => {
+    const { for: foz, onSelect } = this.props;
+
+    if (onSelect) {
+      onSelect(foz);
     }
   }
 
   render() {
+    const { active } = this.state;
+    const { children } = this.props;
+
     return (
-      <div className={`header header-active-${this.state.active}`} onClick={this.onClick}>{this.props.children}
+      <div className={`header header-active-${active}`} onClick={this.onClick}>
+        {children}
       </div>
-    )
+    );
   }
 }
 
-export default TabHeader
+export default TabHeader;

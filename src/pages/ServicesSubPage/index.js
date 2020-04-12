@@ -1,24 +1,24 @@
-import React, { createRef } from "react";
-import { Link } from "react-router-dom";
-import Helmet from "react-helmet";
+import React, { createRef } from 'react';
+import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
-import MainHeader from "components/MainHeader";
-import SubHeader from "components/SubHeader";
-import BreadCrumb from "components/BreadCrumb";
-import Footer from "components/Footer";
-import FixedTopBreadCrumb from "components/FixedTopBreadCrumb";
-import FixedTopHeader from "components/FixedTopHeader";
+import Footer from '../../components/Footer';
+import SubHeader from '../../components/SubHeader';
+import MainHeader from '../../components/MainHeader';
+import BreadCrumb from '../../components/BreadCrumb';
+import FixedTopHeader from '../../components/FixedTopHeader';
+import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
 
-import objectToArray from "utils/objectToArray";
-import useMobileWidth from "utils/hooks/useMobileWidth";
-import capitalizeWords from "utils/capitalizeWords";
-import stickyTrigger from "utils/stickyTrigger";
-import useScrollDirection from "utils/hooks/useScrollDirection";
+import objectToArray from '../../utils/objectToArray';
+import stickyTrigger from '../../utils/stickyTrigger';
+import capitalizeWords from '../../utils/capitalizeWords';
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
+import useScrollDirection from '../../utils/hooks/useScrollDirection';
 
-import coverPlaceholder from "assets/images/service/cover-min.png";
-import mCoverPlaceholder from "assets/images/service/mCover-min.png";
+import coverPlaceholder from '../../assets/images/service/cover-min.png';
+import mCoverPlaceholder from '../../assets/images/service/mCover-min.png';
 
-import "./index.sass";
+import './index.sass';
 
 const ServicesSubPage = ({ content }) => {
   const isMobile = useMobileWidth();

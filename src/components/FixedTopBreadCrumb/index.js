@@ -1,23 +1,24 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import home from 'assets/images/home-icon.png'
-import './index.sass'
-import ReadingProgress from 'components/ReadingProgress'
+import ReadingProgress from '../ReadingProgress';
 
-const FixedTopBreadCrumb = (props) => (
+import home from '../../assets/images/home-icon.png';
+import './index.sass';
+
+const FixedTopBreadCrumb = ({ children, pageContent }) => (
   <section id="fixed-top-breadcrumb" className="fixed-breadcrumb fixed-top d-none">
     <div className="fixed-breadcrumb__content">
       <Link to="/">
         <div>
           <img src={home} alt="home" loading="lazy" />
-          {props.children && <span>/</span>}
+          {children && <span>/</span>}
         </div>
       </Link>
-      <div className="fixed-breadcrumb__text">{props.children}</div>
+      <div className="fixed-breadcrumb__text">{children}</div>
     </div>
-    <ReadingProgress target={props.pageContent} />
+    <ReadingProgress target={pageContent} />
   </section>
-)
+);
 
-export default FixedTopBreadCrumb
+export default FixedTopBreadCrumb;

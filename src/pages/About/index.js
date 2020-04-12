@@ -1,28 +1,29 @@
-import React, { createRef } from "react";
-import Helmet from "react-helmet";
+import React, { createRef } from 'react';
+import Helmet from 'react-helmet';
 
-import MainHeader from "components/MainHeader";
-import SubHeader from "components/SubHeader";
-import Footer from "components/Footer";
-import Partners from "components/Partners";
-import BreadCrumb from "components/BreadCrumb";
-import FixedTopBreadCrumb from "components/FixedTopBreadCrumb";
-import FixedTopHeader from "components/FixedTopHeader";
+import MainHeader from '../../components/MainHeader';
+import SubHeader from '../../components/SubHeader';
+import Footer from '../../components/Footer';
+import Partners from '../../components/Partners';
+import BreadCrumb from '../../components/BreadCrumb';
+import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
+import FixedTopHeader from '../../components/FixedTopHeader';
 
-import AboutUs from "./components/AboutUs";
-import Success from "./components/Success";
-import Develop from "./components/Develop";
-import IntroductionDetail from "./components/IntroductionDetail";
-import stickyTrigger from "utils/stickyTrigger"
-import useScrollDirection from "utils/hooks/useScrollDirection";
+import AboutUs from './components/AboutUs';
+import Success from './components/Success';
+import Develop from './components/Develop';
+import IntroductionDetail from './components/IntroductionDetail';
 
-import "./index.sass";
+import stickyTrigger from '../../utils/stickyTrigger';
+import useScrollDirection from '../../utils/hooks/useScrollDirection';
+
+import './index.sass';
 
 const About = () => {
   const pageContent = createRef();
-  const scrollDirection = useScrollDirection()
-  
-  window.onscroll = () => stickyTrigger(scrollDirection)
+  const scrollDirection = useScrollDirection();
+
+  window.onscroll = () => stickyTrigger(scrollDirection);
 
   return (
     <section className="about-container">
@@ -49,4 +50,5 @@ const About = () => {
     </section>
   );
 };
+
 export default About;

@@ -1,10 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 
-const TabContent = (props) => (
-  <div className="tab-content-container">{props.children}</div>
-)
+const TabContent = ({ children }) => (
+  <div className="tab-content-container">{children}</div>
+);
 
-TabContent.propTypes = { name: PropTypes.string.isRequired }
-
-export default TabContent
+export default TabContent;

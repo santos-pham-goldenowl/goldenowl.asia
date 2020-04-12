@@ -1,8 +1,8 @@
-import circle from 'assets/images/service/circle.png'
-import flag from 'assets/images/service/flag.png'
-import note from 'assets/images/service/note.png'
-import phone from 'assets/images/service/phone.png'
-import web from 'assets/images/service/web.png'
+import circle from '../assets/images/service/circle.png';
+import flag from '../assets/images/service/flag.png';
+import note from '../assets/images/service/note.png';
+import phone from '../assets/images/service/phone.png';
+import web from '../assets/images/service/web.png';
 
 const ServicesData = [
   {
@@ -35,6 +35,6 @@ const ServicesData = [
     description: 'Professionality and outstanding developers',
     link: 'development-team',
   },
-]
+];
 
-export default ServicesData
+export default ServicesData;

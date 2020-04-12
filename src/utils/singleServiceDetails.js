@@ -1,55 +1,64 @@
 /* eslint-disable max-len */
 
 // logo import
-import rails from 'assets/images/service/MobileDevelopment/rails.svg'
-import rubic from 'assets/images/service/MobileDevelopment/rubic.svg'
-import php from 'assets/images/service/MobileDevelopment/php.svg'
-import swift from 'assets/images/service/MobileDevelopment/swift.svg'
-import reactNative from 'assets/images/service/MobileDevelopment/react-native.svg'
-import objectC from 'assets/images/service/MobileDevelopment/objectC.svg'
-import ios from 'assets/images/service/MobileDevelopment/ios.svg'
-import android from 'assets/images/service/MobileDevelopment/android.svg'
-import plus from 'assets/images/service/MobileDevelopment/plus.svg'
-import skype from 'assets/images/service/ProjectManagement/skype.svg'
-import slack from 'assets/images/service/ProjectManagement/slack.svg'
-import trello from 'assets/images/service/ProjectManagement/trello.svg'
-import fire from 'assets/images/service/ProjectManagement/fire.svg'
-import wave from 'assets/images/service/ProjectManagement/wave.svg'
-import html from 'assets/images/service/WebDevelopment/html.svg'
-import css3 from 'assets/images/service/WebDevelopment/css3.svg'
-import js from 'assets/images/service/WebDevelopment/js.svg'
-import react from 'assets/images/service/WebDevelopment/react.svg'
-import angular from 'assets/images/service/WebDevelopment/angular.svg'
-import mock from 'assets/images/service/WebDevelopment/mock.svg'
-import ai from 'assets/images/service/UiUx/ai.svg'
-import inVision from 'assets/images/service/UiUx/in-vision.svg'
-import ps from 'assets/images/service/UiUx/ps.svg'
-import sketch from 'assets/images/service/UiUx/sketch.svg'
+import rails from '../assets/images/service/MobileDevelopment/rails.svg';
+import rubic from '../assets/images/service/MobileDevelopment/rubic.svg';
+import php from '../assets/images/service/MobileDevelopment/php.svg';
+import swift from '../assets/images/service/MobileDevelopment/swift.svg';
+import reactNative from '../assets/images/service/MobileDevelopment/react-native.svg';
+import objectC from '../assets/images/service/MobileDevelopment/objectC.svg';
+import ios from '../assets/images/service/MobileDevelopment/ios.svg';
+import android from '../assets/images/service/MobileDevelopment/android.svg';
+import plus from '../assets/images/service/MobileDevelopment/plus.svg';
+import skype from '../assets/images/service/ProjectManagement/skype.svg';
+import slack from '../assets/images/service/ProjectManagement/slack.svg';
+import trello from '../assets/images/service/ProjectManagement/trello.svg';
+import fire from '../assets/images/service/ProjectManagement/fire.svg';
+import wave from '../assets/images/service/ProjectManagement/wave.svg';
+import html from '../assets/images/service/WebDevelopment/html.svg';
+import css3 from '../assets/images/service/WebDevelopment/css3.svg';
+import js from '../assets/images/service/WebDevelopment/js.svg';
+import react from '../assets/images/service/WebDevelopment/react.svg';
+import angular from '../assets/images/service/WebDevelopment/angular.svg';
+import mock from '../assets/images/service/WebDevelopment/mock.svg';
+import ai from '../assets/images/service/UiUx/ai.svg';
+import inVision from '../assets/images/service/UiUx/in-vision.svg';
+import ps from '../assets/images/service/UiUx/ps.svg';
+import sketch from '../assets/images/service/UiUx/sketch.svg';
+
 // cover import
-import mobileCoverImage from 'assets/images/service/MobileDevelopment/cover.jpg'
-import projectCoverImage from 'assets/images/service/ProjectManagement/cover.jpg'
-import developmentCoverImage from 'assets/images/service/DevelopmentTeam/cover.jpg'
-import uiUxCoverImage from 'assets/images/service/UiUx/cover.jpg'
-import webCoverImage from 'assets/images/service/WebDevelopment/cover.jpg'
+import mobileCoverImage from '../assets/images/service/MobileDevelopment/cover.jpg';
+import projectCoverImage from '../assets/images/service/ProjectManagement/cover.jpg';
+import developmentCoverImage from '../assets/images/service/DevelopmentTeam/cover.jpg';
+import uiUxCoverImage from '../assets/images/service/UiUx/cover.jpg';
+import webCoverImage from '../assets/images/service/WebDevelopment/cover.jpg';
 
 // mobile cover import
-import mMobileCoverImage from 'assets/images/service/MobileDevelopment/mCover.png'
-import mProjectCoverImage from 'assets/images/service/ProjectManagement/mCover.png'
-import mDevelopmentCoverImage from 'assets/images/service/DevelopmentTeam/mCover.png'
-import mUiUxCoverImage from 'assets/images/service/UiUx/mCover.png'
-import mWebCoverImage from 'assets/images/service/WebDevelopment/mCover.png'
+import mMobileCoverImage from '../assets/images/service/MobileDevelopment/mCover.png';
+import mProjectCoverImage from '../assets/images/service/ProjectManagement/mCover.png';
+import mDevelopmentCoverImage from '../assets/images/service/DevelopmentTeam/mCover.png';
+import mUiUxCoverImage from '../assets/images/service/UiUx/mCover.png';
+import mWebCoverImage from '../assets/images/service/WebDevelopment/mCover.png';
 
 // below section navigation
-import pageNavs from './otherServices'
+import pageNavs from './otherServices';
 
-const { webDevelopment, mobileDevelopment, uiUxDesign, projectManagement, developmentTeam } = pageNavs
+const {
+  webDevelopment,
+  mobileDevelopment,
+  uiUxDesign,
+  projectManagement,
+  developmentTeam,
+} = pageNavs;
 
 const servicesDetails = {
   'Mobile development': {
     url: 'mobile-development',
     cover: mobileCoverImage,
     mobileCover: mMobileCoverImage,
-    first: { content: 'A good application is not only about the unique business but also about great responsive on all kinds of mobiles and tablets. Therefore, having a developer with vast experience and good at creating UX/ UI is a must in a mobile application project.' },
+    first: {
+      content: 'A good application is not only about the unique business but also about great responsive on all kinds of mobiles and tablets. Therefore, having a developer with vast experience and good at creating UX/ UI is a must in a mobile application project.',
+    },
     second: {
       title: 'We have a great mobile development team',
       content: 'Golden Owl, we understand the important role of mobile application in modern life so we have invented ourselves to own a team of dynamic and talented developers who love to work, innovate and develop Mobile application.',
@@ -116,7 +125,9 @@ const servicesDetails = {
     url: 'project-management',
     cover: projectCoverImage,
     mobileCover: mProjectCoverImage,
-    first: { content: 'The success of each project has the vital contribution of a project manager. Golden Owl is proud of having a professional project management team who not only always stays side-by-side to support our development team for a good result but is also a friendly partner to client.' },
+    first: {
+      content: 'The success of each project has the vital contribution of a project manager. Golden Owl is proud of having a professional project management team who not only always stays side-by-side to support our development team for a good result but is also a friendly partner to client.',
+    },
     second: {
       title: 'What makes our project management success',
       content: 'Each of member in project manager team always tries her best to make the project goes as smooth as it can, finds the most suitable solutions for any arising issues and understands client’s need then deliver to development team.',
@@ -167,7 +178,9 @@ const servicesDetails = {
     url: 'development-team',
     cover: developmentCoverImage,
     mobileCover: mDevelopmentCoverImage,
-    first: { content: 'Development team is one of important elements that makes up the success of any projects. Golden Owl Consulting owns a large number of outstanding developers with large experience in building website as well as application. No matter how complicated client’s idea is, we always try our best to make the best production. We always find the best way to make the work more efficient.' },
+    first: {
+      content: 'Development team is one of important elements that makes up the success of any projects. Golden Owl Consulting owns a large number of outstanding developers with large experience in building website as well as application. No matter how complicated client’s idea is, we always try our best to make the best production. We always find the best way to make the work more efficient.',
+    },
     second: {
       title: 'Try our best for client’s satisfaction',
       content: 'The process of creating a website or an application may very complex and need the involvement of many developers, but we always find out the best solution to give to client. We make an effort to aim to achieve their satisfaction.',
@@ -197,11 +210,12 @@ const servicesDetails = {
     url: 'ux-ui-design',
     cover: uiUxCoverImage,
     mobileCover: mUiUxCoverImage,
-    first: { content: 'A good user experience is the best glue between a brand and (potential) customers. We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.' },
+    first: {
+      content: 'A good user experience is the best glue between a brand and (potential) customers. We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.',
+    },
     second: {
       title: 'We offer a design services',
       content: 'All our team members here at shape understand web design and application design. We can create UX UI design services in specific areas to help your business. Creating unique visuals to make you and your brand stand out from the crowd, and more importantly - your competitors.',
-
     },
     third: {
       left: {
@@ -245,7 +259,9 @@ const servicesDetails = {
     url: 'web-development',
     cover: webCoverImage,
     mobileCover: mWebCoverImage,
-    first: { content: 'We - Golden Owl is a professional company with great experience in web development from small to big web project in many from many fields such as business, finance, management, etc.' },
+    first: {
+      content: 'We - Golden Owl is a professional company with great experience in web development from small to big web project in many from many fields such as business, finance, management, etc.',
+    },
     second: {
       title: 'What can we bring',
       content: 'As a professional company, we are able to work on many programming languages for web development. We always update the latest technologies so that we can serve the customer the best solutions.',
@@ -301,6 +317,6 @@ const servicesDetails = {
     },
     navs: webDevelopment,
   },
-}
+};
 
-export default servicesDetails
+export default servicesDetails;

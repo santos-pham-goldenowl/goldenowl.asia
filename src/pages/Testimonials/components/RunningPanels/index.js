@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Carousel from 'react-multi-carousel';
 
-import { firstRow, secondRow } from 'utils/logoSlider'
-
-import './index.sass'
-import Carousel from 'react-multi-carousel'
+import { firstRow, secondRow } from '../../../../utils/logoSlider';
+import './index.sass';
 
 const RunningPanels = () => (
   <section>
@@ -120,8 +119,7 @@ const RunningPanels = () => (
         </div>
       ))}
     </Carousel>
-
   </section>
-)
+);
 
-export default RunningPanels
+export default RunningPanels;

@@ -1,12 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import home from 'assets/images/home-icon.png'
-import './index.sass'
-import ReadingProgress from 'components/ReadingProgress'
+import home from '../../assets/images/home-icon.png';
+import ReadingProgress from '../ReadingProgress';
 
-const BreadCrumb = (props) => (
-  <section id="breadcrumb" ref={props.ref} className="breadcrumb">
+import './index.sass';
+
+const BreadCrumb = ({ ref, children, pageContent }) => (
+  <section id="breadcrumb" ref={ref} className="breadcrumb">
     <div className="breadcrumb__content">
       <Link to="/">
         <div>
@@ -14,10 +15,10 @@ const BreadCrumb = (props) => (
           <span>/</span>
         </div>
       </Link>
-      <div className="breadcrumb__text">{props.children}</div>
+      <div className="breadcrumb__text">{children}</div>
     </div>
-    <ReadingProgress target={props.pageContent} />
+    <ReadingProgress target={pageContent} />
   </section>
-)
+);
 
-export default BreadCrumb
+export default BreadCrumb;

@@ -1,13 +1,13 @@
-import React from 'react'
+/* eslint-disable  max-len */
 
-import pImages from './portfolioImages'
+import React from 'react';
+import pImages from './portfolioImages';
 
 export default {
   Collabs: {
     url: 'collabs',
     cover: pImages.collabsCover,
-    overview:
-      'Collabs is the platform that allows organizations to discover millions of influencers, create campaigns, communicate, schedule, approve content, execute, pay commissions to several influencers with one click & analyze the results. In short - it tremendously cuts down on overhead, removes the middlemen & executes campaigns more efficiently than ever!',
+    overview: 'Collabs is the platform that allows organizations to discover millions of influencers, create campaigns, communicate, schedule, approve content, execute, pay commissions to several influencers with one click & analyze the results. In short - it tremendously cuts down on overhead, removes the middlemen & executes campaigns more efficiently than ever!',
     techs: ['React Native', 'Ruby on Rails'],
     img: [
       { src: pImages.collabs0, col: 12 },
@@ -31,8 +31,7 @@ export default {
   'Connect A Job': {
     cover: pImages.connectajobCover,
     url: 'connect-a-job',
-    overview:
-      'ConnectaJob represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.',
+    overview: 'ConnectaJob represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.',
     techs: ['Angular JS (FE)', 'Ruby on Rails (BE)'],
     img: [
       { src: pImages.connectajob1, col: 4 },
@@ -49,18 +48,20 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Most modern <br /> workflow
+          Most modern
+          {' '}
+          <br />
+          {' '}
+          workflow
         </h3>
       ),
-      description:
-        'Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product.',
+      description: 'Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product.',
     },
   },
   'Find a Wealth Manager': {
     cover: pImages.findAWealthManagerCover,
     url: 'find-a-wealth-manager',
-    overview:
-      'A platform uses smart technology combined with human expertise to get users direct access to the best professionals from the leading ﬁrms who commit to best practice and better value fees. Golden Owl has helped maintain this site with bug ﬁxing using Ruby on Rails technology.',
+    overview: 'A platform uses smart technology combined with human expertise to get users direct access to the best professionals from the leading ﬁrms who commit to best practice and better value fees. Golden Owl has helped maintain this site with bug ﬁxing using Ruby on Rails technology.',
     techs: ['Responsive UI', 'Ruby on Rails'],
     img: [
       { src: pImages.findAWealthManager1, col: 12 },
@@ -76,7 +77,9 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Good investment<br />portal
+          Good investment
+          <br />
+          portal
         </h3>
       ),
       description:
@@ -104,7 +107,11 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Support to <br /> take care employees
+          Support to
+          {' '}
+          <br />
+          {' '}
+          take care employees
         </h3>
       ),
       description:
@@ -221,7 +228,7 @@ export default {
           Our achievement
         </h3>
       ),
-      description: 'Building networking is not an easy task, all members in GOLDEN OWL thought and deliberated with each other about how to build this app usefully. We spend much time and high efforts in building BRIIDGE. And now, we gain success!! We have created the whole IOS, Android app, and admin webpage as well as the whole project which lasts for years. Our clients are satisfied with our product and continue cooperating with us.'
+      description: 'Building networking is not an easy task, all members in GOLDEN OWL thought and deliberated with each other about how to build this app usefully. We spend much time and high efforts in building BRIIDGE. And now, we gain success!! We have created the whole IOS, Android app, and admin webpage as well as the whole project which lasts for years. Our clients are satisfied with our product and continue cooperating with us.',
     },
   },
   Personifi: {
@@ -246,7 +253,9 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          We focus<br />on the program
+          We focus
+          <br />
+          on the program
         </h3>
       ),
       description:
@@ -318,7 +327,11 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          We have launched the <br /> project with all passion
+          We have launched the
+          {' '}
+          <br />
+          {' '}
+          project with all passion
         </h3>
       ),
       description:
@@ -343,9 +356,11 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          We build the platform<br />with concentration
+          We build the platform
+          <br />
+          with concentration
         </h3>
-        ),
+      ),
       description:
         'Understanding the difficulty of managing finance, Golden Owl has chosen all best developers and technology to bring clients the best platform. We spend passion and concentration while developing this project.',
     },
@@ -404,7 +419,11 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Protect you and <br /> your lovers as well
+          Protect you and
+          {' '}
+          <br />
+          {' '}
+          your lovers as well
         </h3>
       ),
       description:
@@ -432,7 +451,9 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Live green with<br />Glife
+          Live green with
+          <br />
+          Glife
         </h3>
       ),
       description:
@@ -483,7 +504,9 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          A platform for<br />high-end products
+          A platform for
+          <br />
+          high-end products
         </h3>
       ),
       description:
@@ -532,7 +555,9 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          We always try<br />our best
+          We always try
+          <br />
+          our best
         </h3>
       ),
       description:
@@ -554,7 +579,9 @@ export default {
     brief: {
       title: (
         <h3 className="portfolio-details__item-title">
-          Manage everything better<br/>thanks to Techsauce
+          Manage everything better
+          <br />
+          thanks to Techsauce
         </h3>
       ),
       description:
@@ -591,8 +618,8 @@ export default {
           Open a new world
         </h3>
       ),
-      description: 
-        'Thanks to Open the app, users can talk to each other not only just one but also a group. More ideas and more opinions would be shared widely.'
+      description:
+        'Thanks to Open the app, users can talk to each other not only just one but also a group. More ideas and more opinions would be shared widely.',
     },
   },
   'The Luxe Nomad': {
@@ -621,8 +648,7 @@ export default {
           Handful site
         </h3>
       ),
-      description:
-        'The Luxe Nomad is bringing lots of opportunities for travellers to find the most suitable and comfortable accommodation for their vacation. No matter where they go, they will always have the greatest time.',
+      description: 'The Luxe Nomad is bringing lots of opportunities for travellers to find the most suitable and comfortable accommodation for their vacation. No matter where they go, they will always have the greatest time.',
     },
   },
-}
+};

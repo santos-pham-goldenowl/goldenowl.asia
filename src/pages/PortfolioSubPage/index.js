@@ -1,9 +1,9 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
-import './index.sass'
-import PortfolioHeader from 'components/PortfolioHeader'
-import PortfolioInteresting from 'components/PortfolioInteresting'
+import PortfolioHeader from '../../components/PortfolioHeader';
+import PortfolioInteresting from '../../components/PortfolioInteresting';
+import './index.sass';
 
 const Services = ({ content }) => (
   <section>
@@ -26,7 +26,7 @@ const Services = ({ content }) => (
           </div>
           <div className="col-12 portfolio-details__second-paragraph d-flex align-items-start">
             <h3 className="portfolio-details__item-title">
-                Technologies
+              Technologies
             </h3>
             <ul className="portfolio-details__item-content no-margin-bottom">
               {content.techs.map((item) => (
@@ -38,7 +38,7 @@ const Services = ({ content }) => (
           </div>
           {content.img.map((image, index) => (
             <div
-              className={`${image.col > 4 ? 'col-12': 'col-6'} col-md-${image.col} portfolio-details__image`}
+              className={`${image.col > 4 ? 'col-12' : 'col-6'} col-md-${image.col} portfolio-details__image`}
               key={`${content.key}-${index}`}
             >
               <img src={image.src} alt={`${content.key} img no.${index}`} loading="lazy" />
@@ -61,6 +61,6 @@ const Services = ({ content }) => (
       <PortfolioInteresting />
     </div>
   </section>
-)
+);
 
-export default Services
+export default Services;

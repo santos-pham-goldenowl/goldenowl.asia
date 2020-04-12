@@ -1,9 +1,11 @@
-import raja from 'assets/images/feedback/Raja.jpg'
-import drDidin from 'assets/images/feedback/DrDidin.png'
-import willBeebe from 'assets/images/feedback/WillBeebe.jpg'
-import tinkerbox from 'assets/images/feedback/Tinkerbox.png'
-import congLuu from 'assets/images/feedback/CongLuu.png'
-import nhiemNguyen from 'assets/images/feedback/NhiemNguyen.png'
+/* eslint-disable  max-len */
+
+import raja from '../assets/images/feedback/Raja.jpg';
+import drDidin from '../assets/images/feedback/DrDidin.png';
+import willBeebe from '../assets/images/feedback/WillBeebe.jpg';
+import tinkerbox from '../assets/images/feedback/Tinkerbox.png';
+import congLuu from '../assets/images/feedback/CongLuu.png';
+import nhiemNguyen from '../assets/images/feedback/NhiemNguyen.png';
 
 const feedback = [
   {
@@ -22,7 +24,7 @@ const feedback = [
     name: 'Will Beebe',
     project: 'Project PC crawler',
     url: willBeebe,
-    content: `Golden Owl has been a stable, consistent, and strong contributor to our company and I'm looking forward to working with them much more in the future.`,
+    content: 'Golden Owl has been a stable, consistent, and strong contributor to our company and I\'m looking forward to working with them much more in the future.',
   },
   {
     name: 'Cong Luu',
@@ -34,7 +36,7 @@ const feedback = [
     name: 'Nhiem Nguyen',
     project: 'Project Iadoa, US',
     url: nhiemNguyen,
-    content: `GoldenOwl is very knowledgeable in Ruby on Rails and especially in Spree. My requirements weren't clear at first but they asked questions and then delivered a quality application. Easy to work with and highly recommended.`,
+    content: 'GoldenOwl is very knowledgeable in Ruby on Rails and especially in Spree. My requirements weren\'t clear at first but they asked questions and then delivered a quality application. Easy to work with and highly recommended.',
   },
   {
     name: 'Tinkerbox',
@@ -42,6 +44,6 @@ const feedback = [
     url: tinkerbox,
     content: 'Justin have been a delight to work with. His team was fast to respond and deliver.',
   },
-]
+];
 
-export default feedback
+export default feedback;

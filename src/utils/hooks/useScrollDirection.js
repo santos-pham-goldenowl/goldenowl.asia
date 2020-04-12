@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-const SCROLL_UP = "up";
-const SCROLL_DOWN = "down";
+const SCROLL_UP = 'up';
+const SCROLL_DOWN = 'down';
 
 const useScrollDirection = ({
   initialDirection,
   thresholdPixels,
-  off
+  off,
 } = {}) => {
   const [scrollDir, setScrollDir] = useState(initialDirection);
 
@@ -36,10 +36,10 @@ const useScrollDirection = ({
     };
 
     !off
-      ? window.addEventListener("scroll", onScroll)
+      ? window.addEventListener('scroll', onScroll)
       : setScrollDir(initialDirection);
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, [initialDirection, thresholdPixels, off]);
 
   return scrollDir;

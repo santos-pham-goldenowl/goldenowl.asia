@@ -1,22 +1,24 @@
-import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import Home from '../Home'
-import About from '../About'
-import TechnologyContainer from '../Technology'
-import Services from '../Services'
-import singleServiceDetails from 'utils/singleServiceDetails'
-import portfolioDetails from 'utils/portfolioDetails'
-import objectToArray from 'utils/objectToArray'
-import ServicesSubPage from '../ServicesSubPage'
-import Testimonials from '../Testimonials'
-import Portfolio from '../Portfolio'
-import PortfolioSubPage from '../PortfolioSubPage'
-import Blog from '../Blog'
-import Contact from '../Contact'
-import ScrollToTop from 'components/ScrollToTop'
+import Home from '../Home';
+import About from '../About';
+import Contact from '../Contact';
+import Services from '../Services';
+import ServicesSubPage from '../ServicesSubPage';
+import TechnologyContainer from '../Technology';
+import PortfolioSubPage from '../PortfolioSubPage';
+import Testimonials from '../Testimonials';
+import Portfolio from '../Portfolio';
+import Blog from '../Blog';
 
-import './index.sass'
+import ScrollToTop from '../../components/ScrollToTop';
+
+import objectToArray from '../../utils/objectToArray';
+import portfolioDetails from '../../utils/portfolioDetails';
+import singleServiceDetails from '../../utils/singleServiceDetails';
+
+import './index.sass';
 
 const App = () => (
   <BrowserRouter>
@@ -52,6 +54,6 @@ const App = () => (
       }
     </section>
   </BrowserRouter>
-)
+);
 
-export default App
+export default App;
