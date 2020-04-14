@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { ServicesDetailParagraphs } from 'utils/servicesDetail'
-import objectToArray from 'utils/objectToArray'
+import { ServicesDetailParagraphs } from '../../../../utils/servicesDetail';
+import objectToArray from '../../../../utils/objectToArray';
 
-import './index.sass'
+import './index.sass';
 
 const ServicesParagraphs = () => (
   <section className="services-paragraphs">
@@ -18,6 +18,6 @@ const ServicesParagraphs = () => (
       ))}
     </div>
   </section>
-)
+);
 
-export default ServicesParagraphs
+export default ServicesParagraphs;

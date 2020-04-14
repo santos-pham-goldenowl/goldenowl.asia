@@ -1,25 +1,25 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import ServicesData from 'utils/servicesMenuContent'
-import arrowRight from 'assets/images/arrow-right-white.png'
-import arrowDown from 'assets/images/chevron-down-solid-white.png'
-import goWhite from 'assets/images/goWhite.png'
+import arrowRight from '../../assets/images/arrow-right-white.png';
+import arrowDown from '../../assets/images/chevron-down-solid-white.png';
+import goWhite from '../../assets/images/goWhite.png';
 
-import './index.sass'
-import './service.sass'
+import ServicesData from '../../utils/servicesMenuContent';
+
+import './index.sass';
+import './service.sass';
 
 class FixedTopHeader extends Component {
   render() {
     return (
       <header id="fixed-top-header" className="fixed-top-header d-none fixed-top">
-        <img src={goWhite} className="fixed-top-header__logo mr-auto" />
+        <img src={goWhite} className="fixed-top-header__logo mr-auto" alt="..." />
         <div className="d-flex align-items-center fixed-top-header__button">
           <Link to="/">
             <h4 className="fixed-top-header__text">Home</h4>
           </Link>
         </div>
-        {/* Services Dropdown-start */}
         <div className="dropdown">
           <div
             className="align-items-center fixed-top-header__button"
@@ -53,7 +53,6 @@ class FixedTopHeader extends Component {
             </div>
           </div>
         </div>
-        {/* Services Dropdown-end */}
         <div className="d-flex align-items-center fixed-top-header__button">
           <Link to="/technologies">
             <h4 className="fixed-top-header__text">Technology</h4>
@@ -77,8 +76,8 @@ class FixedTopHeader extends Component {
           </Link>
         </div>
       </header>
-    )
+    );
   }
 }
 
-export default FixedTopHeader
+export default FixedTopHeader;

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-
-import "./index.sass";
+import React, { useState, useEffect } from 'react';
+import './index.sass';
 
 const ReadingProgress = ({ target }) => {
   const [readingProgress, setReadingProgress] = useState(0);
@@ -11,28 +10,25 @@ const ReadingProgress = ({ target }) => {
     }
 
     const element = target.current;
-    const totalHeight =
-      element.clientHeight - element.offsetTop - window.innerHeight;
-    const windowScrollTop =
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0;
+    const totalHeight = element.clientHeight - element.offsetTop - window.innerHeight;
+    const windowScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     if (windowScrollTop === 0) {
-      return setReadingProgress(0);
+      setReadingProgress(0);
+      return;
     }
 
     if (windowScrollTop > totalHeight) {
-      return setReadingProgress(100);
+      setReadingProgress(100);
+      return;
     }
 
     setReadingProgress((windowScrollTop / totalHeight) * 100);
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollListener);
-    return () => window.removeEventListener("scroll", scrollListener);
+    window.addEventListener('scroll', scrollListener);
+    return () => window.removeEventListener('scroll', scrollListener);
   });
 
   return (

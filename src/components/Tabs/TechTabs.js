@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import TabContent from './TabContent'
-import TabHeader from './TabHeader'
-import Tabs from './Tabs'
+import TabContent from './TabContent';
+import TabHeader from './TabHeader';
+import Tabs from './Tabs';
 
-import './index.sass'
-import FrontEndTechs from 'utils/frontendTechs'
-import BackEndTechs from 'utils/backEndTechs'
-import MobileStackTechs from 'utils/mobileTechs'
+import FrontEndTechs from '../../utils/frontendTechs';
+import BackEndTechs from '../../utils/backEndTechs';
+import MobileStackTechs from '../../utils/mobileTechs';
+
+import './index.sass';
 
 class TabContainer extends Component {
   render() {
@@ -124,8 +125,8 @@ class TabContainer extends Component {
           </section>
         </TabContent>
       </Tabs>
-    )
+    );
   }
 }
 
-export default TabContainer
+export default TabContainer;

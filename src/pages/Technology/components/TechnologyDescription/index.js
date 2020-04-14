@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import bg from 'assets/images/wavy_bg_2.png'
-import technology from 'assets/images/technology-cover.png'
-import mTechnology from 'assets/images/mTechnology.png'
-import useMobileWidth from 'utils/hooks/useMobileWidth'
+import bg from '../../../../assets/images/wavy_bg_2.png';
+import technology from '../../../../assets/images/technology-cover.png';
+import mTechnology from '../../../../assets/images/mTechnology.png';
 
-import './index.sass'
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
+
+import './index.sass';
 
 const TechnologyDescription = () => {
   const sectionStyle = {
@@ -13,9 +14,9 @@ const TechnologyDescription = () => {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom',
     backgroundSize: '100vw',
-  }
+  };
 
-  const isMobile = useMobileWidth()
+  const isMobile = useMobileWidth();
 
   return (
     <section className="technology-description" style={sectionStyle}>
@@ -43,7 +44,7 @@ const TechnologyDescription = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default TechnologyDescription
+export default TechnologyDescription;

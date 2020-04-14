@@ -1,9 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import go from "assets/images/golden_owl.png";
-import socialIcons from "utils/socialIcons";
-import "./index.sass";
+import socialIcons from '../../utils/socialIcons';
+
+import go from '../../assets/images/golden_owl.png';
+import './index.sass';
 
 const Footer = () => (
   <footer className="footer">

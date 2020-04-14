@@ -1,9 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { ServicesDetailContent } from 'utils/servicesDetail'
-import './index.sass'
-import objectToArray from 'utils/objectToArray'
+import objectToArray from '../../../../utils/objectToArray';
+import { ServicesDetailContent } from '../../../../utils/servicesDetail';
+
+import './index.sass';
 
 const ServicesDetail = () => (
   <section className="services-detail">
@@ -16,13 +17,13 @@ const ServicesDetail = () => (
             </div>
             <div className="card-content">
               <h5>{content.key}</h5>
-              <p>{content.content}</p>
+              {content.content}
             </div>
           </Link>
         </div>
       ))}
     </div>
   </section>
-)
+);
 
-export default ServicesDetail
+export default ServicesDetail;

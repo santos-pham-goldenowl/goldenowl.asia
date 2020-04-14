@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import ArrowRight from '../ArrowRight'
-import laptop from 'assets/images/3.png'
+import ArrowRight from '../ArrowRight';
 
-import './index.sass'
-import { Link } from 'react-router-dom'
+import laptop from '../../assets/images/3.png';
+import './index.sass';
 
 const Explore = () => (
   <section className="explore">
@@ -24,6 +24,6 @@ const Explore = () => (
       </div>
     </div>
   </section>
-)
+);
 
-export default Explore
+export default Explore;

@@ -1,7 +1,9 @@
-import React from 'react'
+/* eslint-disable  max-len */
 
-import working from 'assets/images/working.png'
-import './index.sass'
+import React from 'react';
+
+import working from '../../../../assets/images/working.png';
+import './index.sass';
 
 const IntroductionDetail = () => (
   <section className="introduction-detail">
@@ -27,7 +29,6 @@ const IntroductionDetail = () => (
       </div>
     </div>
   </section>
-)
+);
 
-
-export default IntroductionDetail
+export default IntroductionDetail;

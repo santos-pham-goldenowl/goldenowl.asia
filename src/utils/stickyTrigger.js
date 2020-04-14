@@ -1,27 +1,25 @@
 export default function stickyTrigger(direction) {
-  const lastTopElement =
-    document.getElementById("breadcrumb") ||
-    document.getElementById("sub-header");
+  const lastTopElement = document.getElementById('breadcrumb') || document.getElementById('sub-header');
 
-  if (lastTopElement !== null) {
+  if (lastTopElement) {
     const sticky = lastTopElement.offsetTop;
 
-    const fixedBreadcrumb = document.getElementById("fixed-top-breadcrumb");
-    const fixedHeader = document.getElementById("fixed-top-header");
+    const fixedBreadcrumb = document.getElementById('fixed-top-breadcrumb');
+    const fixedHeader = document.getElementById('fixed-top-header');
 
     if (window.pageYOffset >= sticky) {
       if (fixedBreadcrumb) {
-        if (direction === "down") {
-          fixedBreadcrumb.classList.remove("d-none");
-          fixedHeader.classList.add("d-none");
+        if (direction === 'down') {
+          fixedBreadcrumb.classList.remove('d-none');
+          fixedHeader.classList.add('d-none');
         } else {
-          fixedBreadcrumb.classList.add("d-none");
-          fixedHeader.classList.remove("d-none");
+          fixedBreadcrumb.classList.add('d-none');
+          fixedHeader.classList.remove('d-none');
         }
-      } else fixedHeader.classList.remove("d-none");
+      } else fixedHeader.classList.remove('d-none');
     } else {
-      if (fixedBreadcrumb) fixedBreadcrumb.classList.add("d-none");
-      fixedHeader.classList.add("d-none");
+      if (fixedBreadcrumb) fixedBreadcrumb.classList.add('d-none');
+      fixedHeader.classList.add('d-none');
     }
   }
 }

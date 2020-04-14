@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import ServicesData from 'utils/servicesMenuContent'
-import arrowRight from 'assets/images/arrow-right.svg'
-import arrowDown from 'assets/images/chevron-down-solid.svg'
+import arrowRight from '../../assets/images/arrow-right.svg';
+import arrowDown from '../../assets/images/chevron-down-solid.svg';
+import ServicesData from '../../utils/servicesMenuContent';
 
-import './index.sass'
-import './service.sass'
+import './index.sass';
+import './service.sass';
 
 class SubHeader extends Component {
   render() {
@@ -17,7 +17,6 @@ class SubHeader extends Component {
             <h4 className="sub-header__text">Home</h4>
           </Link>
         </div>
-        {/* Services Dropdown-start */}
         <div className="dropdown">
           <div
             className="align-items-center sub-header__button"
@@ -51,7 +50,6 @@ class SubHeader extends Component {
             </div>
           </div>
         </div>
-        {/* Services Dropdown-end */}
         <div className="d-flex align-items-center sub-header__button">
           <Link to="/technologies">
             <h4 className="sub-header__text">Technology</h4>
@@ -75,8 +73,8 @@ class SubHeader extends Component {
           </Link>
         </div>
       </header>
-    )
+    );
   }
 }
 
-export default SubHeader
+export default SubHeader;

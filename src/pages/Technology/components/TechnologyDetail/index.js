@@ -1,9 +1,8 @@
-import React from "react";
+import React from 'react';
+import TabContainer from '../../../../components/Tabs/TechTabs';
 
-import TabContainer from "components/Tabs/TechTabs";
-import useMobileWidth from "utils/hooks/useMobileWidth";
-
-import "./index.sass";
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
+import './index.sass';
 
 const TechnologyDetail = () => {
   const isMobile = useMobileWidth();
@@ -12,8 +11,12 @@ const TechnologyDetail = () => {
       <div className="row">
         <h3 className="d-block text-center w-100">Tech we use</h3>
         <p className="technology-detail__description d-block text-center w-100">
-          We apply the most modern technology to every single project to {isMobile || <br />}
-          {' '}make it become{' '} 
+          We apply the most modern technology to every single project to
+          {' '}
+          {isMobile || <br />}
+          {' '}
+          make it become
+          {' '}
           {isMobile && <br />}
           the state of the art.
         </p>

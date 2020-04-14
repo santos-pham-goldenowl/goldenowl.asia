@@ -1,153 +1,170 @@
-import React, { createRef } from 'react'
-import { Link } from 'react-router-dom'
-import Helmet from 'react-helmet'
+import React, { createRef } from 'react';
+import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
 
-import MainHeader from 'components/MainHeader'
-import SubHeader from 'components/SubHeader'
-import BreadCrumb from 'components/BreadCrumb'
-import Footer from 'components/Footer'
-import CheckPoint from 'components/CheckPoint'
-import ArrowRight from 'components/ArrowRight'
-import FixedTopBreadCrumb from "components/FixedTopBreadCrumb";
-import FixedTopHeader from "components/FixedTopHeader";
+import Footer from '../../components/Footer';
+import SubHeader from '../../components/SubHeader';
+import MainHeader from '../../components/MainHeader';
+import BreadCrumb from '../../components/BreadCrumb';
+import CheckPoint from '../../components/CheckPoint';
+import ArrowRight from '../../components/ArrowRight';
+import FixedTopHeader from '../../components/FixedTopHeader';
+import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
 
-import useMobileWidth from 'utils/hooks/useMobileWidth'
-import stickyTrigger from "utils/stickyTrigger"
-import useScrollDirection from "utils/hooks/useScrollDirection";
+import stickyTrigger from '../../utils/stickyTrigger';
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
+import useScrollDirection from '../../utils/hooks/useScrollDirection';
 
-import './index.sass'
+import './index.sass';
 
 const ServicesSubPage = () => {
   const isMobile = useMobileWidth();
-
   const pageContent = createRef();
-  const scrollDirection = useScrollDirection()
-  
-  window.onscroll = () => stickyTrigger(scrollDirection)
-  
+  const scrollDirection = useScrollDirection();
+
+  window.onscroll = () => stickyTrigger(scrollDirection);
+
   return (
-  <section className="contact-us">
-    <Helmet>
-      <title>Contact Us - Golden Owl</title>
-    </Helmet>
-    <div ref={pageContent} className="container-fluid no-padding">
-      <FixedTopHeader />
-      <FixedTopBreadCrumb pageContent={pageContent}>
-        <p>Contact us</p>
-      </FixedTopBreadCrumb>
-      <MainHeader />
-      <SubHeader />
-      <BreadCrumb pageContent={pageContent}>
-        <Link to="/contact-us">Contact us</Link>
-      </BreadCrumb>
-      <section className="contact-form">
-        <div className="contact-form__wrapper">
-          <div className="row">
-            <div className="col-md-5">
-              {isMobile ? <h1>Chat with our <br /> sales team</h1> : <h1>Chat with our sales team</h1>}
-              <p className="contact-form__introduction">
+    <section className="contact-us">
+      <Helmet>
+        <title>Contact Us - Golden Owl</title>
+        <link href="https://www.goldenowl.asia/home/amp" rel="amphtml" />
+        <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug" name="google-site-verification" />
+        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
+        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." property="og:description" />
+        <meta content="http://www.goldenowl.asia/assets/background-home.jpg" property="og:image" />
+        <meta name="csrf-param" content="authenticity_token" />
+        <meta name="csrf-token" content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg==" />
+      </Helmet>
+      <div ref={pageContent} className="container-fluid no-padding">
+        <FixedTopHeader />
+        <FixedTopBreadCrumb pageContent={pageContent}>
+          <p>Contact us</p>
+        </FixedTopBreadCrumb>
+        <MainHeader />
+        <SubHeader />
+        <BreadCrumb pageContent={pageContent}>
+          <Link to="/contact-us">Contact us</Link>
+        </BreadCrumb>
+        <section className="contact-form">
+          <div className="contact-form__wrapper">
+            <div className="row">
+              <div className="col-md-5">
+                {isMobile ? (
+                  <h1>
+                    Chat with our
+                    {' '}
+                    <br />
+                    {' '}
+                    sales team
+                  </h1>
+                ) : <h1>Chat with our sales team</h1>}
+                <p className="contact-form__introduction">
                   Whether you’re a start-up, we’d love to chat about our
                   products and make a personalised plan that fits your business.
-              </p>
-              <div className="d-flex">
-                <CheckPoint />
-                <p className="contact-form__reason">Learn more about Golden Owl</p>
+                </p>
+                <div className="d-flex">
+                  <CheckPoint />
+                  <p className="contact-form__reason">Learn more about Golden Owl</p>
+                </div>
+                <br />
+                <div className="d-flex">
+                  <CheckPoint />
+                  <p className="contact-form__reason">Find the right solution for your needs</p>
+                </div>
+                <br />
+                <div className="d-flex">
+                  <CheckPoint />
+                  <p className="contact-form__reason">Learn more about Golden Owl</p>
+                </div>
               </div>
-              <br />
-              <div className="d-flex">
-                <CheckPoint />
-                <p className="contact-form__reason">Find the right solution for your needs</p>
-              </div>
-              <br />
-              <div className="d-flex">
-                <CheckPoint />
-                <p className="contact-form__reason">Learn more about Golden Owl</p>
-              </div>
-            </div>
-            <div className="col-md-6 ml-auto">
-              <div className="contact-form__form">
-                <div className="row">
-                  <div className="col-md-6">
-                    <label>First name</label>
-                    <input
-                      className="form-control"
-                      placeholder="Your first name"
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label>Last name</label>
-                    <input
-                      className="form-control"
-                      placeholder="Your last name"
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label>Email*</label>
-                    <input
-                      required
-                      className="form-control"
-                      placeholder="Your email"
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label>Phone number</label>
-                    <input
-                      className="form-control"
-                      placeholder="+84 212 2223 333"
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label>Company</label>
-                    <input
-                      className="form-control"
-                      placeholder="Your company"
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label>Country</label>
-                    <select className="form-control" />
-                  </div>
-                  <div className="col-md-12">
-                    <label>Subject*</label>
-                    <input
-                      required
-                      className="form-control"
-                      placeholder="Overview in the few words"
-                    />
-                  </div>
-                  <div className="col-md-12">
-                    <label>Your message*</label>
-                    <textarea
-                      required
-                      rows={isMobile ? 7 : 10}
-                      className="form-control"
-                      placeholder="How can we help you?"
-                    />
-                  </div>
-                  <div className="col-md-12 pr-0">
-                    <div className="contact-form__send-wrapper d-flex">
-                      <div className="send-rectangle">
-                        <div className="row h-100">
-                          <div className="col-6 mt-auto">
-                            <p>Send message</p>
-                          </div>
-                          <div className="col-6 mt-auto d-flex justify-content-end">
-                            <ArrowRight className="contact-form__arrow" />
+              <div className="col-md-6 ml-auto">
+                <div className="contact-form__form">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <label>First name</label>
+                      <input
+                        className="form-control"
+                        placeholder="Your first name"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label>Last name</label>
+                      <input
+                        className="form-control"
+                        placeholder="Your last name"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label>Email*</label>
+                      <input
+                        required
+                        className="form-control"
+                        placeholder="Your email"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label>Phone number</label>
+                      <input
+                        className="form-control"
+                        placeholder="+84 212 2223 333"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label>Company</label>
+                      <input
+                        className="form-control"
+                        placeholder="Your company"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label>Country</label>
+                      <select className="form-control" />
+                    </div>
+                    <div className="col-md-12">
+                      <label>Subject*</label>
+                      <input
+                        required
+                        className="form-control"
+                        placeholder="Overview in the few words"
+                      />
+                    </div>
+                    <div className="col-md-12">
+                      <label>Your message*</label>
+                      <textarea
+                        required
+                        rows={isMobile ? 7 : 10}
+                        className="form-control"
+                        placeholder="How can we help you?"
+                      />
+                    </div>
+                    <div className="col-md-12 pr-0">
+                      <div className="contact-form__send-wrapper d-flex">
+                        <div className="send-rectangle">
+                          <div className="row h-100">
+                            <div className="col-6 mt-auto">
+                              <p>Send message</p>
+                            </div>
+                            <div className="col-6 mt-auto d-flex justify-content-end">
+                              <ArrowRight className="contact-form__arrow" />
+                            </div>
                           </div>
                         </div>
+                        <div className="send-dashed-border" />
                       </div>
-                      <div className="send-dashed-border" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
-  </section>
-)}
+        </section>
+        <Footer />
+      </div>
+    </section>
+  );
+};
 
-export default ServicesSubPage
+export default ServicesSubPage;

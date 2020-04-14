@@ -7,7 +7,10 @@ export default {
     number: 30,
     unit: '%',
   },
-  'Faster user acceptance testing': { number: 30 },
-  'More deployments': { number: 15 },
-
-}
+  'Faster user acceptance testing': {
+    number: 30,
+  },
+  'More deployments': {
+    number: 15,
+  },
+};

@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import technologiesLogo from 'utils/technologiesLogo'
-import useMobileWidth from 'utils/hooks/useMobileWidth'
+import technologiesLogo from '../../../../utils/technologiesLogo';
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
 
-import './index.sass'
-import { Link } from 'react-router-dom'
+import './index.sass';
 
 const Technologies = () => {
-  const isMobile = useMobileWidth()
+  const isMobile = useMobileWidth();
 
   return (
     <section className="technologies">
@@ -27,7 +27,7 @@ const Technologies = () => {
         <span className="technologies__view-all">View all technologies</span>
       </Link>
     </section>
-  )
-}
+  );
+};
 
-export default Technologies
+export default Technologies;

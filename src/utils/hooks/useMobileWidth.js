@@ -1,16 +1,16 @@
-import { useLayoutEffect, useState } from 'react'
+import { useLayoutEffect, useState } from 'react';
 
 const useMobileWidth = () => {
-  const [width, setWidth] = useState(0)
+  const [width, setWidth] = useState(0);
   useLayoutEffect(() => {
     function updateWidth() {
-      setWidth(window.innerWidth)
+      setWidth(window.innerWidth);
     }
-    window.addEventListener('resize', updateWidth)
-    updateWidth()
-    return () => window.removeEventListener('resize', updateWidth)
-  }, [])
-  return width < 768
-}
+    window.addEventListener('resize', updateWidth);
+    updateWidth();
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+  return width < 768;
+};
 
-export default useMobileWidth
+export default useMobileWidth;

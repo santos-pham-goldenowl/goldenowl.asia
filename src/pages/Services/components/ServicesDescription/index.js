@@ -1,21 +1,24 @@
-import React from 'react'
+/* eslint-disable  max-len */
 
-import present from 'assets/images/services.png'
-import servicesMobile from 'assets/images/service_mobile.png'
-import Bg from 'assets/images/wavy_bg_2.png'
-import useMobileWidth from 'utils/hooks/useMobileWidth'
+import React from 'react';
 
-import './index.sass'
+import bg from '../../../../assets/images/wavy_bg_2.png';
+import present from '../../../../assets/images/services.png';
+import servicesMobile from '../../../../assets/images/service_mobile.png';
+
+import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
+
+import './index.sass';
 
 const ServicesDescription = () => {
   const sectionStyle = {
-    backgroundImage: `url(${Bg})`,
+    backgroundImage: `url(${bg})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom',
     backgroundSize: '100vw',
-  }
+  };
 
-  const isMobile = useMobileWidth()
+  const isMobile = useMobileWidth();
 
   return (
     <section className="services-description" style={sectionStyle}>
@@ -34,7 +37,7 @@ const ServicesDescription = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ServicesDescription
+export default ServicesDescription;

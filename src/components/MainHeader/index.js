@@ -1,29 +1,34 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import MobileMenu from './MobileMenu';
 
-import goldenOwl from "assets/images/golden_owl.png";
-import arrowDown from "assets/images/chevron-down-solid.svg";
-import "./index.sass";
-import MobileMenu from "./MobileMenu";
+import goldenOwl from '../../assets/images/golden_owl.png';
+import arrowDown from '../../assets/images/chevron-down-solid.svg';
+import './index.sass';
 
 class MainHeader extends Component {
-  state = { showMenu: false };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showMenu: false,
+    };
+  }
 
   openPortfolioInNewTab = () => {
-    const win = window.open("/portfolio");
+    const win = window.open('/portfolio');
     win.focus();
   };
 
   handleMenu = () => {
-    this.setState({ showMenu: !this.state.showMenu });
+    const { showMenu } = this.state;
+    this.setState({ showMenu: !showMenu });
   };
 
   render() {
     return (
       <header className="main-header">
-        <div
-          className="main-header__left-side"
-        >
+        <div className="main-header__left-side">
           <div className="main-header__logo-wrapper">
             <Link to="/">
               <img
