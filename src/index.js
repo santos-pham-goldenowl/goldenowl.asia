@@ -1,7 +1,6 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 import { Provider } from 'react-redux';
-import { Frontload } from 'react-frontload';
 import { render, hydrate } from 'react-dom';
 import { ConnectedRouter } from 'connected-react-router';
 
@@ -14,9 +13,7 @@ const { store, history } = createStore();
 const Application = (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Frontload noServerRender>
-        <App />
-      </Frontload>
+      <App />
     </ConnectedRouter>
   </Provider>
 );
