@@ -180,7 +180,7 @@ const ServicesSubPage = () => {
                       <label>Your message*</label>
                       <textarea
                         required
-                        rows={isMobile ? 7 : 10}
+                        rows={isMobile ? 7 : 5}
                         className="form-control"
                         placeholder="How can we help you?"
                         onChange={(e) =>
