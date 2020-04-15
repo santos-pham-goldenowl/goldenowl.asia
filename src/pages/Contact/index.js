@@ -30,7 +30,7 @@ const ServicesSubPage = () => {
 
   const sendEmail = () =>
     axios
-      .post("/send-email", info)
+      .post("https://golden-owl-web.herokuapp.com/send-email", info)
       .then(function (response) {
         console.log(response);
       })
