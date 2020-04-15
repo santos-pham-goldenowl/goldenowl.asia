@@ -53,6 +53,7 @@ const TestimonialsList = () => {
           <h4>
             {item.key}
             :
+            {' '}
             {item.main}
           </h4>
           <p>{item.details}</p>
@@ -74,6 +75,7 @@ const TestimonialsList = () => {
           <h4>
             {item.key}
             :
+            {' '}
             {item.main}
           </h4>
           <p>{item.details}</p>
