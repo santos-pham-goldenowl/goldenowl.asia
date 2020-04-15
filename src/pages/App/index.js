@@ -1,8 +1,18 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Loadable from 'react-loadable';
 
 import ScrollToTop from '../../components/ScrollToTop';
+
+import Home from '../Home';
+import About from '../About';
+import Contact from '../Contact';
+import Services from '../Services';
+import ServicesSubPage from '../ServicesSubPage';
+import Technology from '../Technology';
+import PortfolioSubPage from '../PortfolioSubPage';
+import Testimonials from '../Testimonials';
+import Portfolio from '../Portfolio';
+import Blog from '../Blog';
 
 import objectToArray from '../../utils/objectToArray';
 import portfolioDetails from '../../utils/portfolioDetails';
@@ -14,56 +24,6 @@ import './index.sass';
 if (typeof (window) === 'undefined') {
   global.window = {};
 }
-
-const Home = Loadable({
-  loader: () => import('../Home'),
-  loading: () => null,
-});
-
-const About = Loadable({
-  loader: () => import('../About'),
-  loading: () => null,
-});
-
-const Contact = Loadable({
-  loader: () => import('../Contact'),
-  loading: () => null,
-});
-
-const Services = Loadable({
-  loader: () => import('../Services'),
-  loading: () => null,
-});
-
-const ServicesSubPage = Loadable({
-  loader: () => import('../ServicesSubPage'),
-  loading: () => null,
-});
-
-const Technology = Loadable({
-  loader: () => import('../Technology'),
-  loading: () => null,
-});
-
-const PortfolioSubPage = Loadable({
-  loader: () => import('../PortfolioSubPage'),
-  loading: () => null,
-});
-
-const Testimonials = Loadable({
-  loader: () => import('../Testimonials'),
-  loading: () => null,
-});
-
-const Portfolio = Loadable({
-  loader: () => import('../Portfolio'),
-  loading: () => null,
-});
-
-const Blog = Loadable({
-  loader: () => import('../Blog'),
-  loading: () => null,
-});
 
 const App = () => (
   <>
