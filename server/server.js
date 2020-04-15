@@ -29,8 +29,10 @@ const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Set up homepage, static assets, and capture everything else
+app.use(express.Router().get("/", loader));
+app.use(express.static(path.resolve(__dirname, "../build")));
+
 app.use(express.Router().post("/send-email", (req, res) => {
-  console.log('HEHEHE');
   const { firstName, lastName, email, phoneNum, company, country, subject, message: goMessage } = req.body;
 
   const msg = {
@@ -78,15 +80,6 @@ app.use(express.Router().post("/send-email", (req, res) => {
   );
 }));
 
-
-app.get('/test', (req, res, next) => {res.send('HEllo test')});
-app.post('/test', (req, res, next) => {res.json({success: true})});
-
-app.use(express.Router().get("/", loader));
-app.use(express.static(path.resolve(__dirname, "../build")));
-
-
-
 app.use(loader);
 
 // We tell React Loadable to load all required assets and start listening - ROCK AND ROLL!
@@ -96,7 +89,6 @@ Loadable.preloadAll().then(() => {
 
 // Handle the bugs somehow
 app.on("error", (error) => {
-  console.log('error somehow: ', error);
   if (error.syscall !== "listen") {
     throw error;
   }
