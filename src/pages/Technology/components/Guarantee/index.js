@@ -25,7 +25,7 @@ const Guarantee = () => (
       </div>
       <div className="col-md-4">
         <h5 id="middle-title">
-          Provide the best solution so that customer gets the greatest benefit
+          Provide the best solution
         </h5>
         <div className="d-flex guarantee__line">
           <CheckPoint />
