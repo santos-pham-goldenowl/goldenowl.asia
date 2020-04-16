@@ -14,11 +14,14 @@ const IntroductionDetail = () => (
         </h3>
         <div className="introduction-detail__content">
           <p>
-            Golden Owl's leading mission is to turn customers' ideas into a useful technological platform for a variety of purposes from trade to company and project management. No matter how big or small your project is, our team here always work with high attention and discipline to bring client a perfect product with high quality of code and security.
-          </p>
+            <strong>OUTSOURCED SOFTWARE DEVELOPMENT FROM CONCEPT TO DELIVERY</strong>
+            <br/>
+            <br/>
+            We are a well-established agile software outsourcing company who builds successful, scalable products that empower your business.
+            </p>
           <br />
           <p>
-            We pride ourselves on having clients’ satisfaction on products we built. Our experiences are proven by more than 22 Mobile Applications and 38 Websites projects across 6 countries in the world, including the U.K, America, Singapore, etc.
+            Technology is our core. We have talented and dedicated engineers that offer accelerated performance. Our work focuses on innovative, time-tested software development solutions. You can always count on our expertise, effective communication and our commitment to your project.
           </p>
         </div>
       </div>

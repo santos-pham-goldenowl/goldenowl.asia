@@ -17,11 +17,10 @@ const AboutUs = () => {
       <div className="about-us__left-side">
         <h2>About us</h2>
         <p>
-          We are Golden Owl Consulting, a HCM-Singapore join venture group established in November, 2015 in Ho Chi Minh City.
-          We specialize in web and mobile development with the latest Ruby on Rails and Javascript technologies.
+          “OUR GOAL IS TO MAKE YOUR BUSINESS IDEAS BECOME POSSIBLE WITH TECHNOLOGY SOLUTIONS.”
           <br />
           <br />
-          We provide fast, reliable, and professional software outsourcing, IT service consulting, website designing, and automation testing.
+          When it comes to the development of web and mobile applications, Golden Owl offers fabulous solutions with highly dedicated and professional developers.
         </p>
       </div>
       <div className="about-us__right-side">
