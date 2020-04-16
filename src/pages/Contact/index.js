@@ -183,7 +183,7 @@ const ServicesSubPage = () => {
                 }
 
                 if (!validateEmail(value)) {
-                  return "Please enter a valid email addresss";
+                  return "Invalid email address";
                 }
 
                 await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -194,7 +194,7 @@ const ServicesSubPage = () => {
           </div>
           {/* Phone Number */}
           <div className="col-md-6">
-            <label>Phone number</label>
+            <label>Phone number*</label>
             <InputField
               className="form-control"
               type="phone"
@@ -206,7 +206,7 @@ const ServicesSubPage = () => {
                 }
 
                 if (!validatePhoneNum(value)) {
-                  return "Please enter a valid phone number";
+                  return "Invalid phone number";
                 }
                 await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -227,7 +227,7 @@ const ServicesSubPage = () => {
           <div className="col-md-6">
             <label>Country</label>
             <SelectField
-              className="form-control"
+              className="custom-select"
               field="country"
               options={countries}
             />
