@@ -5,7 +5,8 @@ import './index.sass';
 const Guarantee = () => (
   <section className="guarantee">
     <div className="row">
-      <h3 className="d-block w-100 text-center">We guarantee</h3>
+    <h3 className="d-block w-100 text-center pb-0">You don’t speak Tech?</h3>
+    <h3 className="d-block w-100 text-center">We got you covered with our guarantees</h3>
       <div className="col-md-4">
         <h5>Deliver the most high-quality product</h5>
         <div className="d-flex guarantee__line">

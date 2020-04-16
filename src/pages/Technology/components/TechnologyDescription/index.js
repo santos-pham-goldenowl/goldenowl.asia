@@ -24,20 +24,14 @@ const TechnologyDescription = () => {
         <div className="col-md-6 technology-description__left-side">
           <h2>Technology</h2>
           <p>
-            By using many programming languages such as Ruby on Rails,
-            Javascript and PHP and best platforms, we have built lots of
-            incredible projects in a variety of fields and achieve reliability
-            from clients. One way or another we try our best to update the most
-            up-to-date technology to catch up with the acceleration of
-            technology.
+            <strong>We excel in technologies which are truly battle-tested and bring to the table what fits best for clients needs.</strong>
             <br />
             <br />
-            Using the right, suitable and technology in building a software
-            product is very important because it may affect to inside function
-            as well as the stability. Hence, building a software product
-            requires the developer a wide range of knowledge not only about how
-            to build it but also about how to choose the right technology.
-          </p>
+            Technology is our core. We keep our talented engineers up-to-date with the latest technologies and trends. However that doesn’t mean we choose technologies just because they’re new or trendy. We use those which are stable, reliable and battle-tested.
+            <br />
+            <br />
+            With the expertise in a wide range of programming languages especially Ruby on Rails, Javascript and PHP, also popular frameworks and platforms, we know exactly which tool can help you achieve your business goals and solve the problems of your end-users.
+            </p>
         </div>
         <div className="col-md-6 ml-auto d-block technology-description__right-side">
           <img src={isMobile ? mTechnology : technology} alt="technology description" />

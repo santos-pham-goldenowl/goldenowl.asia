@@ -51,7 +51,7 @@ const TechnologyContainer = () => {
         <TechnologyDescription />
         <Guarantee />
         <TechnologyDetail />
-        <TechnologyCards />
+        {/* <TechnologyCards /> */}
         <Footer />
       </div>
     </section>
