@@ -15,11 +15,11 @@ const Quote = () => {
       <div className="row">
         <div className="col-md-5">
           <h1 className="quote__content">
-            “If you deprive yourself of offshore development and your competitors do not, you are putting yourself out of business”
+            “The best customer service is if the customer doesn’t need to call you, doesn’t need to talk to you. It just works.”
           </h1>
           <div className="quote__author">
-            <strong className="quote__text-bold">Lee Kuan Yew - </strong>
-            <span>the first Prime Minister of Singapore.</span>
+            <strong className="quote__text-bold">Jeff Bezos - </strong>
+            <span>CEO of Amazon.</span>
           </div>
         </div>
         <div className="col-md-7">

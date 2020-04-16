@@ -15,40 +15,45 @@ const Success = () => {
       <div className="row success__main">
         <div className="col-12 col-md-6">
           <h1 className="success__main-title">
-            Our achievement
+          What we’ve achieved so far
           </h1>
         </div>
         <div className="col-12 col-md-6 success__main-description">
           <p>
-            We pride ourselves on having clients’ satisfaction in the products we built. Our proven experience is deep from 30+ Mobile Applications and 45+ Website projects across 7 countries, including America, the United Kingdom, Malaysia, Australia, Thailand, Indonesia, Singapore, etc.
+            As a bespoke software development company we have delivered a vast range of applications that have made a significant difference in their business.
+            <br />
+            <br />
+            We served start-ups and enterprises across the globe: B2B, B2C, Retail, Education, HR Management, Travel, Hospitality, Ecommerce, IT Solutions, Fintech, Finance, Real estate, Legal
           </p>
         </div>
       </div>
       <div className="row success__sum">
         <div className="col-12 col-md-6">
           <h3>
-            {isMobile ? 'Our company' : '30+ mobile application' }
+            {isMobile ? 'Our company' : '30+ mobile apps' }
+            {/* Our Services */}
           </h3>
           <p className="success__left-side success__paragraph">
-            We have turned client’s idea into more than 30 mobile applications successfully. Each of them has different unique features from design to main business.
+            We offer custom software development in full package from conception to delivery. We build applications that your user will love
           </p>
         </div>
 
         <div className="col-12 col-md-6">
           <h3>
             45+ websites
+            {/* What make us unique */}
           </h3>
           <p className="success__paragraph">
-            We also fulfilled at least 45 websites in many fields like ecommerce, management, etc. Some of them are used by big groups, companies and a large number of users.
+            You can rest assured the code behind your website is exactly the right fit, clean and easy to maintain.
           </p>
         </div>
         <div className="col-12 col-md-6" />
         <div className="col-12 col-md-6">
           <h3>
-            7 countries
+            4 countries
           </h3>
           <p className="success__paragraph">
-            We are proud of being a well-known enterprise which can work together with clients coming from Singapore, UK, America, etc.
+          We have offices in Vietnam, Singapore, Australia and Norway.
           </p>
           <img className="success__map" src={map} alt="map" />
         </div>

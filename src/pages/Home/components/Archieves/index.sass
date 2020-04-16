@@ -22,6 +22,15 @@
       font-size: 14px
     @include responsive($screen: large-desktop)
       font-size: 18px
+    strong
+      @include responsive($screen: mobile)
+        font-size: 20px
+      @include responsive($screen: tablet)
+        font-size: 24px
+      @include responsive($screen: desktop)
+        font-size: 24px
+      @include responsive($screen: large-desktop)
+        font-size: 32px
 
   &__main-content
     @include responsive($screen: mobile)

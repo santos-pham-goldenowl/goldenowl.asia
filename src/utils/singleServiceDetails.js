@@ -57,24 +57,25 @@ const servicesDetails = {
     cover: mobileCoverImage,
     mobileCover: mMobileCoverImage,
     first: {
-      content: 'A good application is not only about the unique business but also about great responsive on all kinds of mobiles and tablets. Therefore, having a developer with vast experience and good at creating UX/ UI is a must in a mobile application project.',
+      content: 'With about 90% of time on mobile spent in applications, investing in a mobile app for your business may help to attract customers and to get your brand in front of more people. Golden Owl have developed mobile applications in various industries: from Real Estate, Ecommerce, Social Platforms, to Financial Services or Education.',
     },
     second: {
-      title: 'We have a great mobile development team',
-      content: 'Golden Owl, we understand the important role of mobile application in modern life so we have invented ourselves to own a team of dynamic and talented developers who love to work, innovate and develop Mobile application.',
+      title: 'What to expect',
+      content: 'Agility is the name of the game. Our scrum-based Agile development methodology ensures frequent builds and gives you plenty of time to test and adjust. Our process ensures we build products that create measurable value on time and on budget.',
     },
     third: {
+      title: 'At Goldwen Owl, we can deliver more…',
       left: {
-        title: 'Responsive',
-        content: 'A perfect responsive mobile app always delivers its purposes to client and user in the most positive way.',
+        title: 'High performance',
+        content: 'Responsive applications can be complex when you’re writing large, component-based application platforms, and we’re expert at managing and controlling that complexity while maximizing the capabilities of the mobile devices, turning a mobile product into a real business.',
       },
       center: {
-        title: 'Performance',
-        content: 'A mobile app works smoothly with fast speed always gains the affection from users and clients.',
+        title: 'Measurable value.',
+        content: 'Agility is the name of the game. Our scrum-based Agile development methodology ensures frequent builds and gives you plenty of time to test and adjust. Our process ensures we build products that create measurable value on time and on budget.',
       },
       right: {
-        title: 'Storage',
-        content: 'The less storage a mobile app takes, the better it is.',
+        title: 'Full package',
+        content: 'We provide consulting, UI/UX design and product development services for every stage of your mobile project. ',
       },
     },
     fourth: {
@@ -126,23 +127,25 @@ const servicesDetails = {
     cover: projectCoverImage,
     mobileCover: mProjectCoverImage,
     first: {
-      content: 'The success of each project has the vital contribution of a project manager. Golden Owl is proud of having a professional project management team who not only always stays side-by-side to support our development team for a good result but is also a friendly partner to client.',
+      highlight: 'To make you feel like we work as your in-house team.',
+      content: `No matter what, you can't create an amazing software product without the collaboration between the business side and technical side.`,
     },
     second: {
-      title: 'What makes our project management success',
-      content: 'Each of member in project manager team always tries her best to make the project goes as smooth as it can, finds the most suitable solutions for any arising issues and understands client’s need then deliver to development team.',
+      title: 'With our project managers, you can sleep well – you are in good hands.',
+      content: 'At Golden Owl, we are proud of our project manager team -  key people who contributed to each and every project’s success. It’s them who make our approach work perfectly when it comes to remote collaboration.',
     },
     third: {
+      title: 'Simple and powerful',
       left: {
-        title: 'Responsibility',
+        title: 'Client-oriented',
         content: 'Our project management team knows what to do, what is need, and is aware of how important their duty is.',
       },
       center: {
-        title: 'Friendliness',
+        title: 'High-quality team',
         content: 'As a close friend to client as well as developer, our project manager is the one who understand both side and finds out one same language in best way to satisfy both.',
       },
       right: {
-        title: 'Delivery',
+        title: 'Always in touch',
         content: 'A project manager is not only the one who keeps track and controls any situations of the project but also takes responsibility to deliver message from developer to client and vice versa.',
       },
     },
@@ -179,24 +182,26 @@ const servicesDetails = {
     cover: developmentCoverImage,
     mobileCover: mDevelopmentCoverImage,
     first: {
-      content: 'Development team is one of important elements that makes up the success of any projects. Golden Owl Consulting owns a large number of outstanding developers with large experience in building website as well as application. No matter how complicated client’s idea is, we always try our best to make the best production. We always find the best way to make the work more efficient.',
+      highlight: 'Our work is about impactful products.',
+      content: `Building software is a complex process. That’s why you shouldn't try to tackle it alone.`,
     },
     second: {
-      title: 'Try our best for client’s satisfaction',
-      content: 'The process of creating a website or an application may very complex and need the involvement of many developers, but we always find out the best solution to give to client. We make an effort to aim to achieve their satisfaction.',
+      title: 'We value professionals and teamwork to boost efficiency and productivity',
+      content: 'Each developer in our team has their own strengths and expertise but they have things in common: clean code, product-first mindset, great communication skills. We share the same vision: build software that boosts productivity for businesses and simplifies user’s lives.',
     },
     third: {
+      title: 'Simple and powerful',
       left: {
-        title: 'Responsibility',
-        content: 'Being in time for deadline and ensuring the quality of final production are our priority when working with client.',
+        title: 'Technology experts',
+        content: 'We’re proud of our full-stack technology. Our reliable team of software engineers delivers cutting-edge software solutions on top of .NET, Ruby, Java, React, employing high-level development practices of cloud automation, blockchain, and artificial intelligence.',
       },
       center: {
-        title: 'Team work',
-        content: 'Corporation makes the project more facilitate, helps people understand each other and brings team members together.',
+        title: 'Disciplined team',
+        content: 'We work in a team and we live by these principles: ship code on time, don’t compromise quality, and bring passion to our work.',
       },
       right: {
-        title: 'Great experience',
-        content: 'Developers with great experience in their field increases the success and client’s satisfaction of the project.',
+        title: 'Enhance team spirit',
+        content: `Before joining a commercial project, all developers must undergo internal training to learn work procedures and processes.\n Our standpoint is that when you’re good at something, you have a responsibility to share the know-how with others. Knowledge and support are shared across the team so that people can learn, develop and get promoted faster.`,
       },
     },
     fourth: {
@@ -211,24 +216,25 @@ const servicesDetails = {
     cover: uiUxCoverImage,
     mobileCover: mUiUxCoverImage,
     first: {
-      content: 'A good user experience is the best glue between a brand and (potential) customers. We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.',
+      content: 'At Golden Owl, we believe that love at first sight is possible. When it comes to user experience, you can definitely count on us for product design service. Our team of professional designers and UI experts work closely with our clients to design and develop applications that are intuitive, engaging & aesthetically appealing.',
     },
     second: {
-      title: 'We offer a design services',
-      content: 'All our team members here at shape understand web design and application design. We can create UX UI design services in specific areas to help your business. Creating unique visuals to make you and your brand stand out from the crowd, and more importantly - your competitors.',
+      title: 'What you get',
+      content: 'We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.',
     },
     third: {
+      title: "How we do that: Step by step",
       left: {
-        title: 'Ideation',
+        title: 'UX Design & Testing',
         content: 'We design, make prototypes and test design concepts to ensure that users achieve their goals smoothly.',
       },
       center: {
-        title: 'Usability research',
-        content: 'Through usability research we learn how visitors experience the platform and we make recommendations for optimisation.',
+        title: 'Visual Design',
+        content: 'Defining the look and feel. Visual layout design, creating animations & designing icon and image sets in accordance with brand and style guidelines. The goal is to create a polished and elegant product that users will love.',
       },
       right: {
-        title: 'Interaction design',
-        content: 'We design interactions between users and products. The most important thing is that the user archieves his goal as simply as possible, something we test on the basis of detailed prototypes.',
+        title: 'Build & Test',
+        content: 'Creating unique visuals to make you and your brand stand out from the crowd, and more importantly - your competitors.',
       },
     },
     fourth: {
@@ -260,25 +266,26 @@ const servicesDetails = {
     cover: webCoverImage,
     mobileCover: mWebCoverImage,
     first: {
-      content: 'We - Golden Owl is a professional company with great experience in web development from small to big web project in many from many fields such as business, finance, management, etc.',
+      content: 'With dozens of successful website development projects, we are confident to help you identify your challenges, to give you a clear and rational tangible solution that fits your needs. Our reliable team of software engineers delivers cutting-edge software solutions on top of .NET, Ruby, Java, React, employing high-level development practices of cloud automation, blockchain, and artificial intelligence.',
     },
     second: {
-      title: 'What can we bring',
-      content: 'As a professional company, we are able to work on many programming languages for web development. We always update the latest technologies so that we can serve the customer the best solutions.',
+      title: 'What to expect',
+      content: `We not only deliver great quality, but we strive to deliver it in the timescales that align with your expectations. It is as important to us as it is to you that website is delivered properly, on time and on budget.`,
 
     },
     third: {
+      title: 'At Goldwen Owl, we can deliver more…',
       left: {
-        title: 'Quality',
-        content: 'We have young and active people who are led and instructed by senior developers. Also, we understand technologies so we know how to produce the good and clean code.',
+        title: 'The right fit',
+        content: 'Our developers are proficient in many programming languages. We always update the latest web technology and we don’t play favorites with platforms or tools. You can rest assured the code behind your website is exactly the right fit, clean and easy to maintain.',
       },
       center: {
-        title: 'Productivity',
-        content: 'Beside owning an expert and experienced developer team, we also have good project managers who have good background in management. We know how to control the time and tasks to make it delivery in time.',
+        title: 'Clear communication',
+        content: `Why are our clients so pleased working with our team? We believe it’s because of our interaction and communication style. Language boundaries don't exist in our dictionary. Our project managers don’t speak tech to clients, we speak your language and we live our core values by keeping it clear, simple but effective.`,
       },
       right: {
-        title: 'Security',
-        content: 'Beside the quality of the code, security is set as importance as well. With experience in deploying many websites, we know how to make your web site is protected from being attacked by bad guys.',
+        title: 'Long term relationships',
+        content: 'We are not that type of company that builds your website and walks away. We ensure your website is not only high-performing but also easy to maintain and extend in the future. Security is also on our top priorities, we know techniques to protect your website against hackers and attacks.',
       },
     },
     fourth: {

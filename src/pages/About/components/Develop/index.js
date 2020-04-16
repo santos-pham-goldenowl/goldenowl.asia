@@ -32,11 +32,22 @@ const Develop = () => {
       </h2>
       <div className="row develop__content">
         <div className="col-12 col-md-4 develop__content-text">
-          <h3>Work with your beloved and familiar language</h3>
+          <h3>Are you...</h3>
           <p>
-            Golden Owl - we have a team that is expert at different programming
-            languages so whatever your favourite language is, we are always here
-            to turn it into your wanted product.
+              struggling with digital transformation?
+              <br/>
+              build MVP for a groundbreaking idea?
+              <br/>
+              looking for a distributed team?
+              <br/>
+              offset costs of hiring local engineers?
+              <br/>
+              looking for extra workforce for in-house projects with tight deadlines?
+              <br/>
+              <br />
+              <strong>We are here to help!</strong>
+              <br />
+              Just drop us a message and we will contact you back to make your idea possible!
           </p>
         </div>
         {isMobile ? mobileImageRender() : defaultImageRender() }

@@ -58,6 +58,7 @@ const ServicesSubPage = ({ content }) => {
         </BreadCrumb>
         <section className="service__first-content">
           <h1>{content.key}</h1>
+          <p className="pb-0"><strong>{content.first.highlight}</strong></p>
           <p>{content.first.content}</p>
         </section>
         <section className="cover">
@@ -80,7 +81,7 @@ const ServicesSubPage = ({ content }) => {
           <p>{content.second.content}</p>
         </section>
         <section className="service__slogan">
-          <h2>Simple and powerful</h2>
+          <h2>{content.third.title}</h2>
           <div className="row">
             <div className="col-12 col-md-4">
               <div className="service__slogan-item">
@@ -101,6 +102,7 @@ const ServicesSubPage = ({ content }) => {
               </div>
             </div>
           </div>
+          {/* <Link onClick={openPortfolioInNewTab}><strong>See how we developed our projects</strong></Link> */}
         </section>
         <section className="service__third-content">
           <div id="rectangle" className="service__yellow-rectangle d-flex ">
