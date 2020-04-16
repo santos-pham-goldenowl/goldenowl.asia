@@ -1,4 +1,4 @@
-import React, { createRef, useState } from "react";
+import React, { createRef, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import axios from "axios";
@@ -20,6 +20,7 @@ import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
 
 import "./index.sass";
+import goLogo from "../../assets/images/go.png"
 
 const SelectField = (props) => {
   const [field, fieldOptions, { options, ...rest }] = splitFormProps(props);
@@ -36,7 +37,7 @@ const SelectField = (props) => {
 
   return (
     <>
-      {isTouched && error ? <em>{error}</em> : null}
+      {isTouched && error ? <em className="error">{error}</em> : null}
       <select {...rest} value={value} onChange={handleSelectChange}>
         <option disabled value="" />
         {options.map((option) => (
@@ -44,7 +45,7 @@ const SelectField = (props) => {
             {option}
           </option>
         ))}
-      </select>{" "}
+      </select>
     </>
   );
 };
@@ -60,9 +61,9 @@ const InputField = React.forwardRef((props, ref) => {
   return (
     <>
       {isValidating ? (
-        <em>Validating...</em>
+        <em className="validating">Validating...</em>
       ) : isTouched && error ? (
-        <em>{error}</em>
+        <em className="error">{error}</em>
       ) : message ? (
         <em>{message}</em>
       ) : null}
@@ -82,9 +83,9 @@ const InputTextArea = React.forwardRef((props, ref) => {
   return (
     <>
       {isValidating ? (
-        <em>Validating...</em>
+        <em className="validating">Validating...</em>
       ) : isTouched && error ? (
-        <em>{error}</em>
+        <em className="error">{error}</em>
       ) : message ? (
         <em>{message}</em>
       ) : null}
@@ -100,21 +101,217 @@ const ServicesSubPage = () => {
   const isMobile = useMobileWidth();
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
-  const [info, setInfo] = useState();
 
-  const onInputChange = (label, data) => setInfo({ ...info, [label]: data });
-
-  const sendEmail = () =>
-    axios
-      .post("https://golden-owl-web.herokuapp.com/send-email", info)
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
+  const defaultValues = useMemo(() => ({
+    firstName: "",
+    lastName:"",
+    email: "",
+    phoneNum: "",
+    company: "",
+    country: "",
+    subject: "",
+    message: ""
+  }), [])
   window.onscroll = () => stickyTrigger(scrollDirection);
+
+  function validateEmail(email) {
+    var re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  function validatePhoneNum(phoneNum) {
+    var re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.[0-9]*$/;
+    return re.test(String(phoneNum).toLowerCase()) || !phoneNum;
+  }
+
+  const {
+    Form,
+    meta: { isSubmitting, canSubmit },
+  } = useForm({
+    defaultValues,
+    onSubmit: async (values, instance) => {
+      await axios
+        .post("/send-email", values)
+        .then((res) => {
+          if (!res.data.error) {
+            instance.reset();
+            setModal(true);
+          } else setFailedModal(true);
+        })
+        .catch((error) => {
+          error && setFailedModal(true)
+        });
+    },
+    debugForm: false,
+  });
+
+  const formRender = () => (
+    <Form>
+      <div className="contact-form__form">
+        <div className="row">
+          {/* First Name */}
+          <div className="col-md-6">
+            <label>First name*</label>
+            <InputField
+              className="form-control"
+              placeholder="Your first name"
+              field="firstName"
+              validate={(value) => (!value ? "Required" : false)}
+            />
+          </div>
+          {/* Last Name */}
+          <div className="col-md-6">
+            <label>Last name*</label>
+            <InputField
+              className="form-control"
+              placeholder="Your last name"
+              field="lastName"
+              validate={(value) => (!value ? "Required" : false)}
+            />
+          </div>
+          {/* Email */}
+          <div className="col-md-6">
+            <label>Email*</label>
+            <InputField
+              className="form-control"
+              type="email"
+              field="email"
+              placeholder="Your email"
+              validate={async (value) => {
+                if (!value) {
+                  return "Required";
+                }
+
+                if (!validateEmail(value)) {
+                  return "Invalid email address";
+                }
+
+                await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                return false;
+              }}
+            />
+          </div>
+          {/* Phone Number */}
+          <div className="col-md-6">
+            <label>Phone number*</label>
+            <InputField
+              className="form-control"
+              type="phone"
+              placeholder="+84 212 2223 333"
+              field="phoneNum"
+              validate={async (value) => {
+                if (!value) {
+                  return "Required";
+                }
+
+                if (!validatePhoneNum(value)) {
+                  return "Invalid phone number";
+                }
+                await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                return false;
+              }}
+            />
+          </div>
+          {/* Company */}
+          <div className="col-md-6">
+            <label>Company</label>
+            <InputField
+              className="form-control"
+              placeholder="Your company"
+              field="company"
+            />
+          </div>
+          {/* Countries */}
+          <div className="col-md-6">
+            <label>Country</label>
+            <SelectField
+              className="custom-select"
+              field="country"
+              options={countries}
+            />
+          </div>
+          {/* Subject */}
+          <div className="col-md-12">
+            <label>Subject*</label>
+            <InputField
+              className="form-control"
+              placeholder="Overview in the few words"
+              field="subject"
+              validate={(value) => (!value ? "Required" : false)}
+            />
+          </div>
+          <div className="col-md-12">
+            <label>Your message*</label>
+            <InputTextArea
+              rows={isMobile ? 7 : 5}
+              className="form-control"
+              placeholder="How can we help you?"
+              field="message"
+              validate={(value) => (!value ? "Required" : false)}
+            />
+          </div>
+          <Modal size="sm" show={failedModal} onHide={() => setFailedModal(false)}>
+            <Modal.Body>
+              <div className="d-flex">
+                <img className="modal-logo align-self-center" src={goLogo} alt="GO logo"/>
+                <p className="d-inline-block m-auto"><center>Failed to send message,<br/> please try again!</center></p>
+              </div>
+            </Modal.Body>
+          </Modal>
+          <Modal size="sm" show={modal} onHide={() => setModal(false)}>
+            <Modal.Body>
+              <div className="d-flex">
+                <img className="modal-logo align-self-center" src={goLogo} alt="GO logo"/>
+                <p className="d-inline-block m-auto"><center>Message has been sent!</center></p>
+              </div>
+            </Modal.Body>
+          </Modal>
+          {isSubmitting ? (
+            <div className="col-md-12 pr-0">
+              <button
+                type="submit"
+                className="contact-form__send-wrapper w-100 d-flex btn btn-link p-0"
+              >
+                <div className="send-rectangle">
+                  <div className="row h-100">
+                    <div className="col-6 mt-auto text-left">
+                      <p>Sending...</p>
+                    </div>
+                    <div className="col-6 mt-auto d-flex justify-content-end">
+                      <ArrowRight className="contact-form__arrow" />
+                    </div>
+                  </div>
+                </div>
+                <div className="send-dashed-border" />
+              </button>
+            </div>
+          ) : (
+            <div className="col-md-12 pr-0">
+              <button
+                type="submit"
+                disable={!canSubmit}
+                className="contact-form__send-wrapper w-100 d-flex btn btn-link p-0"
+              >
+                <div className="send-rectangle">
+                  <div className="row h-100">
+                    <div className="col-6 mt-auto text-left">
+                      <p>Send message</p>
+                    </div>
+                    <div className="col-6 mt-auto d-flex justify-content-end">
+                      <ArrowRight className="contact-form__arrow" />
+                    </div>
+                  </div>
+                </div>
+                <div className="send-dashed-border" />
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </Form>
+  );
 
   function validateEmail(email) {
     var re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;

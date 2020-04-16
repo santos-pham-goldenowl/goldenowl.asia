@@ -28,13 +28,16 @@
     @include responsive($screen: large-desktop)
       height: 16px !important
 
-  &__icon-facebook, &__icon-instagram
+  &__icon-facebook, &__icon-twitter
     @include responsive($screen: tablet)
       height: 10px !important
     @include responsive($screen: desktop)
       height: 14px !important
     @include responsive($screen: large-desktop)
       height: 18px !important
+
+  &__icon-twitter
+    opacity: 0.4
 
   &__social-icons-wrapper
     @include responsive($screen: tablet)
