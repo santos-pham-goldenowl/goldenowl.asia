@@ -14,17 +14,16 @@ const Footer = () => (
         <div className="col-md-3 pr-5">
           <h5>Ho Chi Minh City</h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
-          <p>justin@goldenowl.asia</p>
+          <p>claire@goldenowl.asia</p>
           <p>(+84) 912 878985</p>
         </div>
         <div className="col-md-3">
-          <h5>Ha Noi</h5>
+          <h5>Norway</h5>
           <p>
-            02 Le Van Thiem, Nhan Chinh
+            Romemyra 30, 7091            
             <br />
-            Thanh Xuan, Ha Noi
+            Tiller
           </p>
-          <p>+(84) 91 287 89 85</p>
         </div>
         <div className="col-md-3">
           <h5>London</h5>
@@ -53,18 +52,20 @@ const Footer = () => (
         <img className="d-block" src={go} alt="golden-logo" />
         <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
           {socialIcons.map((icon) => (
-            <img
-              key={icon.name}
-              src={icon.url}
-              className={`footer__social-icon d-inline-block footer__icon-${icon.name}`}
-              alt={icon.name}
-              loading="lazy"
-            />
+            <a href={icon.link}>
+              <img
+                key={icon.name}
+                src={icon.url}
+                className={`footer__social-icon d-inline-block footer__icon-${icon.name}`}
+                alt={icon.name}
+                loading="lazy"
+              />
+            </a>
           ))}
         </div>
         <div className="footer__contact row">
           <span className="col-md-6 footer__phone">(+84) 912 878985</span>
-          <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
+          <span className="col-md-5 footer__email">claire@goldenowl.asia</span>
         </div>
       </div>
       <div className="footer__bottom-grid-container">
@@ -92,10 +93,10 @@ const Footer = () => (
           <div className="col-md-2 pl-0">
             <h3 className="footer__bottom-grid-title">Others</h3>
             <div>
-              <a href="/careers">Careers</a>
+              {/* <a href="/careers">Careers</a> */}
               <Link to="/contact-us">Contact us</Link>
-              <a href="/faq">FAQ</a>
-              <Link to="/blog">Blog</Link>
+              {/* <a href="/faq">FAQ</a> */}
+              {/* <Link to="/blog">Blog</Link> */}
             </div>
           </div>
         </div>
