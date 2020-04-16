@@ -1,6 +1,6 @@
 export default {
   Projects: {
-    number: 70,
+    number: 129,
     unit: '+',
   },
   'Uplift in developer productivity': {

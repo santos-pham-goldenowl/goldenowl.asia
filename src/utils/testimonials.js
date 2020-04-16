@@ -12,8 +12,8 @@ import gig from '../assets/images/testimonials/testimonialItems/8.png';
 export default {
   'Antony Woodcock': {
     avatar: antony,
-    main: 'They went beyond expectations.',
-    details: '"The end product was excellent, in terms of functionality and structure that went beyond my expectations. Golden Owl is the first company I would recommend to other people. It was a very good experience working with them, they were pretty agile and responsive to our needs. I’m definitely confident for future partnership."',
+    main: 'They’re excellent went beyond expectations.',
+    details: '"The end product was excellent, beyond my expectations. Golden Owl is the first company I would recommend to other people. I’m definitely confident for future partnership."',
     companyLogo: myAgency,
     title: 'CO - FOUNDER & MANAGER DIRECTOR OF MY AGENCY',
     url: 'my-work',
@@ -29,7 +29,7 @@ export default {
   Jane: {
     avatar: jane,
     main: 'They showed a great passion and can-do attitude during the project.',
-    details: '"Their people help to bridge the gap between the developers and non-tech employees in our internal team. The team they sent out was amazing. They took everything personal, showed a great passion for our project like this was their own. I told them what I needed, and they made it happen, never to shoot me down by telling me that it won’t work. They communicated with us without delays and always were in touch.”',
+    details: '"The team they sent out was amazing. They took everything personal, showed a great passion for our project like this was their own. I told them what I needed, and they made it happen, never to shoot me down by telling me that it won’t work.”',
     companyLogo: bid4Skill,
     title: 'CO - FOUNDER & MANAGER DIRECTOR OF BID4SKILL',
     url: 'bid-4-skill',

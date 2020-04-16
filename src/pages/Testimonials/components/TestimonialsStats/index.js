@@ -9,7 +9,7 @@ const TestimonialsStats = () => (
   <section className="testimonials-stats">
     <div className="testimonials-stats__wrapper">
       <h2 className="title">
-        Overall, customers have reported some incredible results.
+        {`We’re honored to contribute to\n clients’ success`}
       </h2>
       <div className="row">
         {

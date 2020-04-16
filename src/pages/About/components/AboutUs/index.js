@@ -15,12 +15,12 @@ const AboutUs = () => {
   return (
     <section className="about-us" style={sectionStyle}>
       <div className="about-us__left-side">
-        <h2>About us</h2>
+        <h2>A team of experts</h2>
         <p>
-          “OUR GOAL IS TO MAKE YOUR BUSINESS IDEAS BECOME POSSIBLE WITH TECHNOLOGY SOLUTIONS.”
+          We are Golden Owl - a well-established agile software outsourcing company who builds successful, scalable products that empower your business. Started in 2015 as a Vietnam - Singapore joint-venture, now we are expanding and operating in Vietnam, Singapore, Australia and Norway.
           <br />
           <br />
-          When it comes to the development of web and mobile applications, Golden Owl offers fabulous solutions with highly dedicated and professional developers.
+          Our work focuses on innovative, time-tested software development solutions. You can always count on our expertise, effective communication and our commitment to your projects.
         </p>
       </div>
       <div className="about-us__right-side">

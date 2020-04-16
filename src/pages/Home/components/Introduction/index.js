@@ -11,7 +11,7 @@ const Introduction = () => {
     <section className="introduction">
       <div className>
         <div className={`${isMobile ? 'w-100' : 'w-50'} ml-auto`}>
-          <h3 className="introduction__title">Hello, World! We are Golden Owl</h3>
+          <h3 className="introduction__title">Hi, World! We're Golden Owl</h3>
           <p className="introduction__text">
             If you’re looking for a software company to transform your business to the next level, you've found the right partner to help.
             <br />

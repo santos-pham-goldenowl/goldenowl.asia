@@ -23,9 +23,8 @@ class TabContainer extends Component {
               <div className="col-md-5">
                 <h2 className="tab-header-title">Front-end</h2>
                 <p className="tech-tab__description">
-                  When talking of front-end development, it’s about transferring the code into the look.
-                  <br/>
-                  Each and every technology we use has different advantages that serve best to different goals. However there is a common between them: They are used and trusted by the biggest and most innovative companies for making high-performance and supremely scalable applications and software.
+                When talking of front-end development, it’s about transferring the code into the look.  
+                Each and every technology we use has different advantages that serve best to different goals. However there is a common between them: They are used and trusted by the biggest and most innovative companies for making high-performance and supremely scalable applications and software.
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
