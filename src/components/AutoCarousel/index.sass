@@ -39,14 +39,17 @@
     @include responsive($screen: mobile)
       font-size: 12px !important
     @include responsive($screen: tablet)
-      font-size: 10px
+      font-size: 14px !important
     @include responsive($screen: desktop)
-      font-size: 12px
+      font-size: 14px !important
     @include responsive($screen: large-desktop)
-      font-size: 16px
+      font-size: 16px !important
 
 .react-multi-carousel-dot-list
   @include responsive($screen: tablet)
     bottom: -24px !important
   @include responsive($screen: desktop)
     bottom: -31px !important
+
+  button:focus
+    outline: none !important
