@@ -19,12 +19,10 @@ const StatsSummary = () => (
       <div className="ml-auto col-md-6">
         <div className="stats-summary__paragraph">
           <p>
-            The effort of our developers have gained achievement when lots of
-            our clients give good feedback about our service. They not only
-            talk about how much effort the project team made but also about
-            how friendly and how good the team is. Thanks to those positive
-            comments, we are here will always try our best to keep giving the
-            best service to clients.
+            <strong>Start-ups and enterprises have come to us worried about staying within budget, meeting deadlines, and building a skilled team fast enough. We’ve helped all of their projects succeed.</strong>
+            <br />
+            <br />
+            When a client does give us feedback, it's a very kind gesture. Thanks to your valuable reviews and opinions, we can be sure that our efforts bring desired results. Your words help us constantly improve our customer experiences by knowing what we are doing right and what we can work on.
           </p>
         </div>
       </div>
