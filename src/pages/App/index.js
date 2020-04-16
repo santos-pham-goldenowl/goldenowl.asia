@@ -13,6 +13,7 @@ import PortfolioSubPage from '../PortfolioSubPage';
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
 import Blog from '../Blog';
+import NotFound from '../NotFound';
 
 import objectToArray from '../../utils/objectToArray';
 import portfolioDetails from '../../utils/portfolioDetails';
@@ -57,6 +58,7 @@ const App = () => (
           />
         ))
       }
+      <Route path="*" component={NotFound} />
     </section>
   </>
 );
