@@ -77,6 +77,8 @@ const Footer = () => (
               <Link to="/services/ux-ui-design">UX UI design</Link>
               <Link to="/services/project-management">Project management</Link>
               <Link to="/services/development-team">Development team</Link>
+              <Link to="#">IT Solutions Consulting</Link>
+              <Link to="#">Automation Testing</Link>
             </div>
           </div>
           <div className="col-md-4 pl-0">
