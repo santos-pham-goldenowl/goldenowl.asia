@@ -94,7 +94,7 @@ const InputTextArea = React.forwardRef((props, ref) => {
   );
 });
 
-const ServicesSubPage = () => {
+const Contact = () => {
   const [modal, setModal] = useState();
   const [failedModal, setFailedModal] = useState();
 
@@ -383,4 +383,4 @@ const ServicesSubPage = () => {
   );
 };
 
-export default ServicesSubPage;
+export default Contact;

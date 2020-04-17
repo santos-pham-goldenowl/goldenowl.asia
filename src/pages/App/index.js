@@ -13,6 +13,7 @@ import PortfolioSubPage from '../PortfolioSubPage';
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
 import Blog from '../Blog';
+import Career from '../Career';
 import NotFound from '../NotFound';
 
 import objectToArray from '../../utils/objectToArray';
@@ -59,6 +60,7 @@ const App = () => (
             />
           ))
         }
+        <Route exact path="/careers" component={Career} />
         <Route path="*" component={NotFound} />
       </Switch>
     </section>
