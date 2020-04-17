@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import ScrollToTop from '../../components/ScrollToTop';
 
@@ -13,6 +13,7 @@ import PortfolioSubPage from '../PortfolioSubPage';
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
 import Blog from '../Blog';
+import NotFound from '../NotFound';
 
 import objectToArray from '../../utils/objectToArray';
 import portfolioDetails from '../../utils/portfolioDetails';
@@ -29,34 +30,37 @@ const App = () => (
   <>
     <ScrollToTop />
     <section id="app" className="App">
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
-      <Route exact path="/technologies" component={Technology} />
-      <Route exact path="/testimonial" component={Testimonials} />
-      <Route exact path="/portfolio" component={Portfolio} />
-      {
-        objectToArray(portfolioDetails).map((portfolio) => (
-          <Route
-            exact
-            key={portfolio.key}
-            path={`/portfolio/${portfolio.url}`}
-            component={() => <PortfolioSubPage content={portfolio} />}
-          />
-        ))
-      }
-      <Route path="/blog" component={Blog} />
-      <Route path="/contact-us" component={Contact} />
-      <Route exact path="/services" component={Services} />
-      {
-        objectToArray(singleServiceDetails).map((service) => (
-          <Route
-            exact
-            key={service.key}
-            path={`/services/${service.url}`}
-            component={() => <ServicesSubPage content={service} />}
-          />
-        ))
-      }
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about-us" component={About} />
+        <Route exact path="/technologies" component={Technology} />
+        <Route exact path="/testimonial" component={Testimonials} />
+        <Route exact path="/portfolio" component={Portfolio} />
+        {
+          objectToArray(portfolioDetails).map((portfolio) => (
+            <Route
+              exact
+              key={portfolio.key}
+              path={`/portfolio/${portfolio.url}`}
+              component={() => <PortfolioSubPage content={portfolio} />}
+            />
+          ))
+        }
+        <Route path="/blog" component={Blog} />
+        <Route path="/contact-us" component={Contact} />
+        <Route exact path="/services" component={Services} />
+        {
+          objectToArray(singleServiceDetails).map((service) => (
+            <Route
+              exact
+              key={service.key}
+              path={`/services/${service.url}`}
+              component={() => <ServicesSubPage content={service} />}
+            />
+          ))
+        }
+        <Route path="*" component={NotFound} />
+      </Switch>
     </section>
   </>
 );
