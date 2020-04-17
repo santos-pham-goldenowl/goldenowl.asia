@@ -1,4 +1,5 @@
 /* eslint-disable  max-len */
+import React from 'react'
 
 import service1 from '../assets/images/service/illustration-01.png';
 import service2 from '../assets/images/service/illustration-02.png';
@@ -9,27 +10,27 @@ import service5 from '../assets/images/service/illustration-05.png';
 export const ServicesDetailContent = {
   'Web Development': {
     url: service1,
-    content: 'Our certified development experts use only trusted technologies for delivering backend, FE, cloud, AI and other software solutions.',
+    content: <p>Our certified development experts use only trusted technologies for delivering backend, FE, cloud, AI and other software solutions.</p>,
     link: 'web-development',
   },
   'Mobile Development': {
     url: service2,
-    content: 'It doesn’t matter what type of mobile software you need; our developers are ready to build native, hybrid, and cross-platform applications.',
+    content: <p>It doesn’t matter what type of mobile software you need; our developers are ready to build native, hybrid, and <span className="d-inline-block">cross-platform</span> applications.</p>,
     link: 'mobile-development',
   },
   'UX/UI design': {
     url: service3,
-    content: 'Software products must be unique, eye-pleasing and user-friendly. Our UI/ UX designers create brand identity concepts, prototypes, great interfaces, and more.',
+    content: <p>Software products must be unique, <span className="d-inline-block">eye-pleasing</span> and <span className="d-inline-block">user-friendly.</span> Our UI/ UX designers create brand identity concepts, prototypes, great interfaces, and more.</p>,
     link: 'ux-ui-design',
   },
   'Project management': {
     url: service4,
-    content: 'We help managing the plan, organization, and accountability to achieve information technology goals.',
+    content: <p>We help managing the plan, organization, and accountability to achieve information technology goals.</p>,
     link: 'project-management',
   },
   'Development team': {
     url: service5,
-    content: 'We own more than 50 professional developers who help build full-stack solutions for clients in several platforms.',
+    content: <p>We own more than 50 professional developers who help build <span className="d-inline-block">full-stack</span> solutions for clients in several platforms.</p>,
     link: 'development-team',
   },
 };

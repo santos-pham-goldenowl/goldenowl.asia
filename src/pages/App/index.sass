@@ -114,20 +114,18 @@ input, select, textarea
   color: #85868f !important
   border-radius: unset !important
   margin-bottom: 1.25rem
-  @include responsive($screen: mobile)
-    font-size: 14px !important
-  @include responsive($screen: tablet)
-    font-size: 12px !important
-  @include responsive($screen: desktop)
-    font-size: 14px !important
-  @include responsive($screen: large-desktop)
-    font-size: 16px !important
+  font-size: 14px !important
 
 textarea
   padding: 0.4375rem 0.75rem !important
   border: solid 1px $solidBlack !important
-  @include responsive($screen: mobile)
-    line-height: 1.6 !important
+  line-height: 1.5 !important
+  @include responsive($screen: tablet)
+    padding: 12px !important
+  @include responsive($screen: desktop)
+    padding: 12px 11px 11px 10px !important
+  @include responsive($screen: large-desktop)
+    padding: 17px 15px 16px 15px !important
 
 input, select
   height: calc(2.625rem + 2px) !important
