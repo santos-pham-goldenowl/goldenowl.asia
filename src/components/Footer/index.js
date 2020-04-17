@@ -144,7 +144,7 @@ const Footer = () => {
             <br className="d-block"/>
             Tiller
           </p>
-          <p>+47 95869324</p>
+          <p>(+47) 95869324</p>
         </div>
         <div className="col-6 col-md-3">
           <h5>London</h5>
@@ -155,7 +155,7 @@ const Footer = () => {
             <br />
             St Albans
           </p>
-          <p>0345 456 0522</p>
+          <p>(+0345) 456 0522</p>
         </div>
         <div className="col-6 col-md-3">
           <h5>Sydney</h5>
@@ -164,7 +164,7 @@ const Footer = () => {
             <br />
             Taren Point, NSW 2229
           </p>
-          <p>(02) 8212 4222</p>
+          <p>(+02) 8212 4222</p>
         </div>
       </div>
     </div>

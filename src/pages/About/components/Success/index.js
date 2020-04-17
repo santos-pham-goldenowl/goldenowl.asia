@@ -30,11 +30,12 @@ const Success = () => {
       <div className="row success__sum">
         <div className="col-12 col-md-6">
           <h3>
-            {isMobile ? 'Our company' : '30+ mobile apps' }
+            {/* {isMobile ? 'Our company' : '30+ mobile apps' } */}
+            30+ mobile apps
             {/* Our Services */}
           </h3>
           <p className="success__left-side success__paragraph">
-            We offer custom software development in full package from conception to delivery. We build applications that your user will love
+            We offer custom software development in full package from conception to delivery. We build applications that your user will love.
           </p>
         </div>
 
@@ -50,10 +51,10 @@ const Success = () => {
         <div className="col-12 col-md-6" />
         <div className="col-12 col-md-6">
           <h3>
-            4 countries
+            7 countries
           </h3>
           <p className="success__paragraph">
-          We have offices in Vietnam, Singapore, Australia and Norway.
+          We are proud of being a well-known enterprise which can work together with clients coming from Singapore, UK, America, etc. 
           </p>
           <img className="success__map" src={map} alt="map" />
         </div>

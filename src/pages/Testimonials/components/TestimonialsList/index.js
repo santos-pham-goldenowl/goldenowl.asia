@@ -99,7 +99,7 @@ const TestimonialsList = () => {
 
   return (
     <section className="testimonials-list">
-      <h3 className="text-center">Customer’s love</h3>
+      <h3 className="text-center">Let’s see what our clients recommend about Golden Owl</h3>
       {isMobile ? mobileView() : defaultView()}
     </section>
   );
