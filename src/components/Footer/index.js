@@ -130,17 +130,17 @@ const Footer = () => {
         <div className="col-6 col-md-3 pr-5">
           <h5>Ho Chi Minh City</h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
-          <p>justin@goldenowl.asia</p>
+          <p>claire@goldenowl.asia</p>
           <p>(+84) 912 878985</p>
         </div>
-        <div className="col-6 col-md-3">
-          <h5>Ha Noi</h5>
+        <div className="col-md-3">
+          <h5>Norway</h5>
           <p>
-            02 Le Van Thiem, Nhan Chinh{" "}
+            Romemyra 30, 7091            
             <br />
-            Thanh Xuan, Ha Noi
+            Tiller
           </p>
-          <p>+(84) 91 287 89 85</p>
+          <p>+47 95869324</p>
         </div>
         <div className="col-6 col-md-3">
           <h5>London</h5>

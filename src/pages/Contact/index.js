@@ -1,4 +1,4 @@
-import React, { createRef, useState } from "react";
+import React, { createRef, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import axios from "axios";
@@ -20,6 +20,7 @@ import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
 
 import "./index.sass";
+import goLogo from "../../assets/images/go.png"
 
 const SelectField = (props) => {
   const [field, fieldOptions, { options, ...rest }] = splitFormProps(props);
@@ -36,7 +37,7 @@ const SelectField = (props) => {
 
   return (
     <>
-      {isTouched && error ? <em>{error}</em> : null}
+      {isTouched && error ? <em className="error">{error}</em> : null}
       <select {...rest} value={value} onChange={handleSelectChange}>
         <option disabled value="" />
         {options.map((option) => (
@@ -44,7 +45,7 @@ const SelectField = (props) => {
             {option}
           </option>
         ))}
-      </select>{" "}
+      </select>
     </>
   );
 };
@@ -60,9 +61,9 @@ const InputField = React.forwardRef((props, ref) => {
   return (
     <>
       {isValidating ? (
-        <em>Validating...</em>
+        <em className="validating">Validating...</em>
       ) : isTouched && error ? (
-        <em>{error}</em>
+        <em className="error">{error}</em>
       ) : message ? (
         <em>{message}</em>
       ) : null}
@@ -82,9 +83,9 @@ const InputTextArea = React.forwardRef((props, ref) => {
   return (
     <>
       {isValidating ? (
-        <em>Validating...</em>
+        <em className="validating">Validating...</em>
       ) : isTouched && error ? (
-        <em>{error}</em>
+        <em className="error">{error}</em>
       ) : message ? (
         <em>{message}</em>
       ) : null}
@@ -101,6 +102,16 @@ const ServicesSubPage = () => {
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
 
+  const defaultValues = useMemo(() => ({
+    firstName: "",
+    lastName:"",
+    email: "",
+    phoneNum: "",
+    company: "",
+    country: "",
+    subject: "",
+    message: ""
+  }), [])
   window.onscroll = () => stickyTrigger(scrollDirection);
 
   function validateEmail(email) {
@@ -117,12 +128,15 @@ const ServicesSubPage = () => {
     Form,
     meta: { isSubmitting, canSubmit },
   } = useForm({
+    defaultValues,
     onSubmit: async (values, instance) => {
       await axios
         .post("/send-email", values)
-        .then(() => {
-          instance.reset();
-          setModal(true);
+        .then((res) => {
+          if (!res.data.error) {
+            instance.reset();
+            setModal(true);
+          } else setFailedModal(true);
         })
         .catch((error) => {
           error && setFailedModal(true)
@@ -169,7 +183,7 @@ const ServicesSubPage = () => {
                 }
 
                 if (!validateEmail(value)) {
-                  return "Please enter a valid email addresss";
+                  return "Invalid email address";
                 }
 
                 await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -180,7 +194,7 @@ const ServicesSubPage = () => {
           </div>
           {/* Phone Number */}
           <div className="col-md-6">
-            <label>Phone number</label>
+            <label>Phone number*</label>
             <InputField
               className="form-control"
               type="phone"
@@ -192,7 +206,7 @@ const ServicesSubPage = () => {
                 }
 
                 if (!validatePhoneNum(value)) {
-                  return "Please enter a valid phone number";
+                  return "Invalid phone number";
                 }
                 await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -213,7 +227,7 @@ const ServicesSubPage = () => {
           <div className="col-md-6">
             <label>Country</label>
             <SelectField
-              className="form-control"
+              className="custom-select"
               field="country"
               options={countries}
             />
@@ -239,10 +253,20 @@ const ServicesSubPage = () => {
             />
           </div>
           <Modal size="sm" show={failedModal} onHide={() => setFailedModal(false)}>
-            <Modal.Body><p className="failed-message"><center>Failed to send message,<br/> please try again!</center></p></Modal.Body>
+            <Modal.Body>
+              <div className="d-flex">
+                <img className="modal-logo align-self-center" src={goLogo} alt="GO logo"/>
+                <p className="d-inline-block m-auto"><center>Failed to send message,<br/> please try again!</center></p>
+              </div>
+            </Modal.Body>
           </Modal>
           <Modal size="sm" show={modal} onHide={() => setModal(false)}>
-            <Modal.Body><p className="success-message"><center>Message has been sent!</center></p></Modal.Body>
+            <Modal.Body>
+              <div className="d-flex">
+                <img className="modal-logo align-self-center" src={goLogo} alt="GO logo"/>
+                <p className="d-inline-block m-auto"><center>Message has been sent!</center></p>
+              </div>
+            </Modal.Body>
           </Modal>
           {isSubmitting ? (
             <div className="col-md-12 pr-0">

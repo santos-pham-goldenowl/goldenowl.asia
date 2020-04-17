@@ -36,11 +36,9 @@ app.use(express.Router().post('/send-email', (req, res) => {
     firstName, lastName, email, phoneNum, company, country, subject, message: goMessage,
   } = req.body;
 
-  // TODO:
-  // Config from, to with ENV
   const msg = {
-    to: 'stephanyhcm.go@gmail.com',
-    from: 'austin@goldenowl.asia',
+    to: process.env.TO_ADDRESS,
+    from: process.env.FROM_ADDRESS,
     subject: `From [GO Website]: ${subject}`,
     html: `<head>
             <style>

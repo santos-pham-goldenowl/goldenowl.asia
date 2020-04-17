@@ -22,15 +22,11 @@
         padding-top: 40px
 
       em
-        color: red
         position: absolute
         bottom: 0
         right: 10px
         font-size: 14px
         font-family: ProximaNovaRegular
-
-    .success-message
-      color: $lightningYellow
 
     &__send-wrapper
       @include responsive($screen: mobile)
@@ -225,3 +221,13 @@
       font-size: 14px
     @include responsive($screen: large-desktop)
       font-size: 16px
+
+  .success-message, .validating
+    color: $lightningYellow
+
+  .error
+    color: red
+
+.modal-logo
+  width: 10%
+  display: inline-block
