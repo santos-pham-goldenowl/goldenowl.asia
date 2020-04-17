@@ -46,11 +46,10 @@ const Missions = () => {
                 <h3 className="missions__item-title">Development team</h3>
                 <ArrowRight className="missions__arrow" />
               </Link>
-              <Link className="missions__item">
+              {/* <Link className="missions__item">
                 <h3 className="missions__item-title">IT Solutions Consulting</h3>
                 <ArrowRight className="missions__arrow" />
-              </Link>
-
+              </Link> */}
             </div>
             <div className="col-6 pr-0">
               <Link
@@ -67,12 +66,12 @@ const Missions = () => {
                 <h3 className="missions__item-title">Project management</h3>
                 <ArrowRight className="missions__arrow" />
               </Link>
-              <Link
+              {/* <Link
                 className="missions__item"
               >
                 <h3 className="missions__item-title">Automation Testing</h3>
                 <ArrowRight className="missions__arrow" />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

@@ -114,12 +114,12 @@ const ServicesSubPage = () => {
   }), [])
   window.onscroll = () => stickyTrigger(scrollDirection);
 
-  function validateEmail(email) {
+  const validateEmail = (email) => {
     var re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
     return re.test(String(email).toLowerCase());
   }
 
-  function validatePhoneNum(phoneNum) {
+  const validatePhoneNum = (phoneNum) => {
     var re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.[0-9]*$/;
     return re.test(String(phoneNum).toLowerCase()) || !phoneNum;
   }

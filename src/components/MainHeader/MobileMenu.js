@@ -100,7 +100,10 @@ const MobileMenu = () => {
       {/* Sub-Menu content */}
       <div className={`${subMenuState ? '' : 'd-none '}mobile-menu sub-menu`}>
         <div className="mobile-menu__header">
-          <div className="mobile-menu__back d-flex" onClick={toggleSubMenuState}>
+          <div
+            className="mobile-menu__back d-flex"
+            onClick={toggleSubMenuState}
+          >
             <img src={backIcon} className="d-inline-block" alt="back-menu" />
             <h3>Services</h3>
           </div>

@@ -5,7 +5,7 @@ import socialIcons from '../../utils/socialIcons';
 
 import go from '../../assets/images/golden_owl.png';
 import './index.sass';
-import useMobileWidth from 'utils/hooks/useMobileWidth';
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
 
 const Footer = () => {
   const isMobile = useMobileWidth()
@@ -51,13 +51,15 @@ const Footer = () => {
             </div>
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
-                <img
-                  key={icon.name}
-                  src={icon.url}
-                  className={`footer__social-icon d-inline-block footer__icon-${icon.name}`}
-                  alt={icon.name}
-                  loading="lazy"
-                />
+                <a href={icon.link}>
+                  <img
+                    key={icon.name}
+                    src={icon.url}
+                    className={`footer__social-icon d-inline-block footer__icon-${icon.name}`}
+                    alt={icon.name}
+                    loading="lazy"
+                  />
+                </a>
               ))}
             </div>
           </div>
@@ -72,13 +74,15 @@ const Footer = () => {
       <img className="d-block" src={go} alt="golden-logo" />
       <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
         {socialIcons.map((icon) => (
-          <img
-            key={icon.name}
-            src={icon.url}
-            className={`footer__social-icon d-inline-block footer__icon-${icon.name}`}
-            alt={icon.name}
-            loading="lazy"
-          />
+          <a href={icon.link}>
+            <img
+              key={icon.name}
+              src={icon.url}
+              className={`footer__social-icon d-inline-block footer__icon-${icon.name}`}
+              alt={icon.name}
+              loading="lazy"
+            />
+          </a>
         ))}
       </div>
       <div className="footer__contact row">
@@ -111,10 +115,10 @@ const Footer = () => {
         <div className="col-md-2 pl-0">
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
-            <a href="/careers">Careers</a>
+            {/* <a href="/careers">Careers</a> */}
             <Link to="/contact-us">Contact us</Link>
-            <a href="/faq">FAQ</a>
-            <Link to="/blog">Blog</Link>
+            {/* <a href="/faq">FAQ</a> */}
+            {/* <Link to="/blog">Blog</Link> */}
           </div>
         </div>
       </div>
@@ -133,11 +137,11 @@ const Footer = () => {
           <p>claire@goldenowl.asia</p>
           <p>(+84) 912 878985</p>
         </div>
-        <div className="col-md-3">
+        <div className="col-6 col-md-3">
           <h5>Norway</h5>
           <p>
-            Romemyra 30, 7091            
-            <br />
+            Romemyra 30, 7091{" "}            
+            <br className="d-block"/>
             Tiller
           </p>
           <p>+47 95869324</p>

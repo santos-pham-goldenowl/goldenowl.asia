@@ -17,7 +17,7 @@ const ServicesDetail = () => (
             </div>
             <div className="card-content">
               <h5>{content.key}</h5>
-              <p>{content.content}</p>
+              {content.content}
             </div>
           </Link>
         </div>
