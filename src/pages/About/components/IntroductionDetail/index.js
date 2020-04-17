@@ -10,15 +10,14 @@ const IntroductionDetail = () => (
     <div className="row">
       <div className="col-12 col-md-6">
         <h3 className="introduction-detail__title">
-          We are Golden Owl
+        We make your idea happen
         </h3>
         <div className="introduction-detail__content">
           <p>
-            Golden Owl's leading mission is to turn customers' ideas into a useful technological platform for a variety of purposes from trade to company and project management. No matter how big or small your project is, our team here always work with high attention and discipline to bring client a perfect product with high quality of code and security.
-          </p>
-          <br />
-          <p>
-            We pride ourselves on having clients’ satisfaction on products we built. Our experiences are proven by more than 22 Mobile Applications and 38 Websites projects across 6 countries in the world, including the U.K, America, Singapore, etc.
+          With experience through hundreds of projects, we demonstrated confidence in offering full-stack solutions for our clients. 
+          <br/>
+          <br/>
+          Our team is expertise not only in mobile app and website development, but also in UI/UX design, automation testing and IT consulting. We focus on creating impactful solutions that fit client’s needs perfectly.
           </p>
         </div>
       </div>

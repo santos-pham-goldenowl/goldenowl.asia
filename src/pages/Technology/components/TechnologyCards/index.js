@@ -6,23 +6,17 @@ const TechnologyCards = () => (
     <div className="row">
       <div className="col-md-6">
         <div className="technology-cards__card text-center">
-          <h4>Modern technology</h4>
+          <h4>Optimal solutions</h4>
           <p>
-            The technology is changing and growing constantly with the advent of
-            new technologies as well as the upgrading of old ones to a higher
-            level. Golden Owl is proud of our update ability and promises to
-            bring the most all-around software solution to clients.
+            We understand that your growth is key to our, and therefore our mission is not just to deliver what we are ordered to, but also to advise and search for more optimal solutions for your business.
           </p>
         </div>
       </div>
       <div className="col-md-6">
         <div className="technology-cards__card text-center">
-          <h4>Low cost solutions</h4>
+          <h4>Custom solutions</h4>
           <p>
-            We not only deliver products that optimize your business but also
-            help to cut the cost which must be paid for a software product.
-            Nowhere can you find a company that provides software services with
-            reasonable price like us.
+            We listen to your ideas and create custom software solutions from the ground up, designed especially for your business.
           </p>
         </div>
       </div>
