@@ -25,6 +25,15 @@ const Blog = () => {
     <section className="blog">
       <Helmet>
         <title>Blog - Golden Owl</title>
+        <link href="https://www.goldenowl.asia/home/amp" rel="amphtml" />
+        <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug" name="google-site-verification" />
+        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
+        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." property="og:description" />
+        <meta content="http://www.goldenowl.asia/assets/background-home.jpg" property="og:image" />
+        <meta name="csrf-param" content="authenticity_token" />
+        <meta name="csrf-token" content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg==" />
       </Helmet>
       <div ref={pageContent} className="container-fluid no-padding">
         <FixedTopHeader />
@@ -85,7 +94,7 @@ const Blog = () => {
                           />
                         </div>
                         <div className="d-block">
-                          <div className="category category-vertical d-flex">
+                          <div className="category category-vertical-small d-flex">
                             <p>BLOG & MAGAZINE </p>
                             <p>JAN 31, 2020</p>
                             <p>10 MIN READ</p>
@@ -110,13 +119,13 @@ const Blog = () => {
                           />
                         </div>
                         <div className="d-block">
-                          <div className="category category-vertical d-flex">
+                          <div className="category category-vertical-big d-flex">
                             <p>BLOG & MAGAZINE </p>
                             <p>JAN 31, 2020</p>
                             <p>10 MIN READ</p>
                           </div>
                           <h4 className="medium-item-title">{blog.key}</h4>
-                          <p>{blog.content}</p>
+                          <p className="medium-item-content">{blog.content}</p>
                         </div>
                       </div>
                     </div>

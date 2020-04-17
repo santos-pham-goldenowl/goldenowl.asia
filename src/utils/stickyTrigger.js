@@ -1,7 +1,7 @@
 export default function stickyTrigger(direction) {
   const lastTopElement = document.getElementById('breadcrumb') || document.getElementById('sub-header');
 
-  if (lastTopElement !== null) {
+  if (lastTopElement) {
     const sticky = lastTopElement.offsetTop;
 
     const fixedBreadcrumb = document.getElementById('fixed-top-breadcrumb');
