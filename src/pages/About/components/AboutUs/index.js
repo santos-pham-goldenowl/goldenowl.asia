@@ -1,6 +1,6 @@
 import React from 'react';
 
-import bg from '../../../../assets/images/about_bg.png';
+import bg from '../../../../assets/images/wavy_bg_2.png';
 import research from '../../../../assets/images/research.png';
 import './index.sass';
 

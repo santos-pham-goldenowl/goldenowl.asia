@@ -61,7 +61,7 @@ const servicesDetails = {
     },
     second: {
       title: 'What to expect',
-      content: 'Agility is the name of the game. Our scrum-based Agile development methodology ensures frequent builds and gives you plenty of time to test and adjust. Our process ensures we build products that create measurable value on time and on budget.',
+      content: 'We use the best tools used to create native mobile apps for iOS and Android, even when you decide to use the best hybrid mobile app framework. UX/UI designers also onboard, making sure that your mobile app’s interface is both beautiful and intuitive.',
     },
     third: {
       title: 'At Goldwen Owl, we can deliver more…',
@@ -138,15 +138,15 @@ const servicesDetails = {
       title: 'Simple and powerful',
       left: {
         title: 'Client-oriented',
-        content: 'Our project management team knows what to do, what is need, and is aware of how important their duty is.',
+        content: 'Project managers work with our clients to understand their goals around delivery, growth, and revenue, and in partnership we define the product strategy that will meet their needs and achieve their goals. They make sure project needs are met by always bringing the right people to the team.',
       },
       center: {
         title: 'High-quality team',
-        content: 'As a close friend to client as well as developer, our project manager is the one who understand both side and finds out one same language in best way to satisfy both.',
+        content: 'Our project managers are encouraged to constantly improve their project management skills, not only the technology but also soft skills, management and team collaboration. They play the role of communicator, a problem-solver, a team supporter and a consultant at the same time.',
       },
       right: {
         title: 'Always in touch',
-        content: 'A project manager is not only the one who keeps track and controls any situations of the project but also takes responsibility to deliver message from developer to client and vice versa.',
+        content: 'Our project managers show a high sense of responsibility and responsiveness during the project. Dealing with international clients is no problem for us – everybody speaks English and further improves their language skills.',
       },
     },
     fourth: {
@@ -195,11 +195,11 @@ const servicesDetails = {
         title: 'Technology experts',
         content: 'We’re proud of our full-stack technology. Our reliable team of software engineers delivers cutting-edge software solutions on top of .NET, Ruby, Java, React, employing high-level development practices of cloud automation, blockchain, and artificial intelligence.',
       },
-      center: {
+      right: {
         title: 'Disciplined team',
         content: 'We work in a team and we live by these principles: ship code on time, don’t compromise quality, and bring passion to our work.',
       },
-      right: {
+      center: {
         title: 'Enhance team spirit',
         content: `Before joining a commercial project, all developers must undergo internal training to learn work procedures and processes.\n Our standpoint is that when you’re good at something, you have a responsibility to share the know-how with others. Knowledge and support are shared across the team so that people can learn, develop and get promoted faster.`,
       },
