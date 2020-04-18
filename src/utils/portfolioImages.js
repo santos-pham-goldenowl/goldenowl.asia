@@ -1,198 +1,395 @@
+import bid4Skill1 from '../assets/images/portfolio/optimized_portfolio/Bid4Skill_1_optimized.png';
+import bid4Skill2 from '../assets/images/portfolio/optimized_portfolio/Bid4Skill_2_optimized.png';
+import bid4Skill3 from '../assets/images/portfolio/optimized_portfolio/Bid4Skill_3_optimized.png';
+import bid4SkillCover from '../assets/images/portfolio/optimized_portfolio/Bid4Skill_Cover_optimized.png';
+import brdgePay1 from '../assets/images/portfolio/optimized_portfolio/BridgePay_1_optimized.png';
+import brdgePay2 from '../assets/images/portfolio/optimized_portfolio/BridgePay_2_optimized.png';
+import brdgePay3 from '../assets/images/portfolio/optimized_portfolio/BridgePay_3_optimized.png';
+import brdgePay4 from '../assets/images/portfolio/optimized_portfolio/BridgePay_4_optimized.png';
+import brdgePay5 from '../assets/images/portfolio/optimized_portfolio/BridgePay_5_optimized.png';
+import brdgePay6 from '../assets/images/portfolio/optimized_portfolio/BridgePay_6_optimized.png';
+import brdgePay7 from '../assets/images/portfolio/optimized_portfolio/BridgePay_7_optimized.png';
+import brdgePayCover from '../assets/images/portfolio/optimized_portfolio/BridgePay_Cover_optimized.png';
+import briidge1 from '../assets/images/portfolio/optimized_portfolio/Briidge_1_optimized.png';
+import briidge10 from '../assets/images/portfolio/optimized_portfolio/Briidge_10_optimized.png';
+import briidge2 from '../assets/images/portfolio/optimized_portfolio/Briidge_2_optimized.png';
+import briidge3 from '../assets/images/portfolio/optimized_portfolio/Briidge_3_optimized.png';
+import briidge4 from '../assets/images/portfolio/optimized_portfolio/Briidge_4_optimized.png';
+import briidge5 from '../assets/images/portfolio/optimized_portfolio/Briidge_5_optimized.png';
+import briidge6 from '../assets/images/portfolio/optimized_portfolio/Briidge_6_optimized.png';
+import briidge7 from '../assets/images/portfolio/optimized_portfolio/Briidge_7_optimized.png';
+import briidge8 from '../assets/images/portfolio/optimized_portfolio/Briidge_8_optimized.png';
+import briidge9 from '../assets/images/portfolio/optimized_portfolio/Briidge_9_optimized.png';
+import briidgeCover from '../assets/images/portfolio/optimized_portfolio/Briidge_Cover_optimized.png';
+import collabs0 from '../assets/images/portfolio/optimized_portfolio/Collabs_0_optimized.png';
+import collabs1 from '../assets/images/portfolio/optimized_portfolio/Collabs_1_optimized.png';
+import collabs2 from '../assets/images/portfolio/optimized_portfolio/Collabs_2_optimized.png';
+import collabs3 from '../assets/images/portfolio/optimized_portfolio/Collabs_3_optimized.png';
+import collabs4 from '../assets/images/portfolio/optimized_portfolio/Collabs_4_optimized.png';
+import collabs5 from '../assets/images/portfolio/optimized_portfolio/Collabs_5_optimized.png';
+import collabs6 from '../assets/images/portfolio/optimized_portfolio/Collabs_6_optimized.png';
+import collabsCover from '../assets/images/portfolio/optimized_portfolio/Collabs_Cover_optimized.png';
+import connectajob1 from '../assets/images/portfolio/optimized_portfolio/Connectajob_1_optimized.png';
+import connectajob10 from '../assets/images/portfolio/optimized_portfolio/Connectajob_10_optimized.png';
+import connectajob2 from '../assets/images/portfolio/optimized_portfolio/Connectajob_2_optimized.png';
+import connectajob3 from '../assets/images/portfolio/optimized_portfolio/Connectajob_3_optimized.png';
+import connectajob4 from '../assets/images/portfolio/optimized_portfolio/Connectajob_4_optimized.png';
+import connectajob5 from '../assets/images/portfolio/optimized_portfolio/Connectajob_5_optimized.png';
+import connectajob6 from '../assets/images/portfolio/optimized_portfolio/Connectajob_6_optimized.png';
+import connectajob7 from '../assets/images/portfolio/optimized_portfolio/Connectajob_7_optimized.png';
+import connectajob8 from '../assets/images/portfolio/optimized_portfolio/Connectajob_8_optimized.png';
+import connectajob9 from '../assets/images/portfolio/optimized_portfolio/Connectajob_9_optimized.png';
+import connectajobCover from '../assets/images/portfolio/optimized_portfolio/Connectajob_Cover_optimized.png';
+import corpzap1 from '../assets/images/portfolio/optimized_portfolio/Corpzap_1_optimized.png';
+import corpzap2 from '../assets/images/portfolio/optimized_portfolio/Corpzap_2_optimized.png';
+import corpzap3 from '../assets/images/portfolio/optimized_portfolio/Corpzap_3_optimized.png';
+import corpzapCover from '../assets/images/portfolio/optimized_portfolio/Corpzap_Cover_optimized.png';
+import eyeProtec1 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_1_optimized.png';
+import eyeProtec10 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_10_optimized.png';
+import eyeProtec11 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_11_optimized.png';
+import eyeProtec12 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_12_optimized.png';
+import eyeProtec13 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_13_optimized.png';
+import eyeProtec2 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_2_optimized.png';
+import eyeProtec3 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_3_optimized.png';
+import eyeProtec4 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_4_optimized.png';
+import eyeProtec5 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_5_optimized.png';
+import eyeProtec6 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_6_optimized.png';
+import eyeProtec7 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_7_optimized.png';
+import eyeProtec8 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_8_optimized.png';
+import eyeProtec9 from '../assets/images/portfolio/optimized_portfolio/EyeProtec_9_optimized.png';
+import eyeProtecCover from '../assets/images/portfolio/optimized_portfolio/EyeProtec_Cover_optimized.png';
+import findAWealthManager1 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_1_optimized.png';
+import findAWealthManager2 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_2_optimized.png';
+import findAWealthManager3 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_3_optimized.png';
+import findAWealthManager4 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_4_optimized.png';
+import findAWealthManager5 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_5_optimized.png';
+import findAWealthManager6 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_6_optimized.png';
+import findAWealthManager7 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_7_optimized.png';
+import findAWealthManager8 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_8_optimized.png';
+import findAWealthManager9 from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_9_optimized.png';
+import findAWealthManagerCover from '../assets/images/portfolio/optimized_portfolio/Findawealthmanager_Cover_optimized.png';
+import getAssured1 from '../assets/images/portfolio/optimized_portfolio/Getassured_1_optimized.png';
+import getAssured2 from '../assets/images/portfolio/optimized_portfolio/Getassured_2_optimized.png';
+import getAssured3 from '../assets/images/portfolio/optimized_portfolio/Getassured_3_optimized.png';
+import getAssuredCover from '../assets/images/portfolio/optimized_portfolio/Getassured_Cover_optimized.png';
+import gig1 from '../assets/images/portfolio/optimized_portfolio/Gig_1_optimized.png';
+import gig2 from '../assets/images/portfolio/optimized_portfolio/Gig_2_optimized.png';
+import gig3 from '../assets/images/portfolio/optimized_portfolio/Gig_3_optimized.png';
+import gig4 from '../assets/images/portfolio/optimized_portfolio/Gig_4_optimized.png';
+import gig5 from '../assets/images/portfolio/optimized_portfolio/Gig_5_optimized.png';
+import gig6 from '../assets/images/portfolio/optimized_portfolio/Gig_6_optimized.png';
+import gig7 from '../assets/images/portfolio/optimized_portfolio/Gig_7_optimized.png';
+import gig8 from '../assets/images/portfolio/optimized_portfolio/Gig_8_optimized.png';
+import gig9 from '../assets/images/portfolio/optimized_portfolio/Gig_9_optimized.png';
+import gigCover from '../assets/images/portfolio/optimized_portfolio/Gig_Cover_optimized.png';
+import glife1 from '../assets/images/portfolio/optimized_portfolio/Glife_1_optimized.png';
+import glife10 from '../assets/images/portfolio/optimized_portfolio/Glife_10_optimized.png';
+import glife2 from '../assets/images/portfolio/optimized_portfolio/Glife_2_optimized.png';
+import glife3 from '../assets/images/portfolio/optimized_portfolio/Glife_3_optimized.png';
+import glife4 from '../assets/images/portfolio/optimized_portfolio/Glife_4_optimized.png';
+import glife5 from '../assets/images/portfolio/optimized_portfolio/Glife_5_optimized.png';
+import glife6 from '../assets/images/portfolio/optimized_portfolio/Glife_6_optimized.png';
+import glife7 from '../assets/images/portfolio/optimized_portfolio/Glife_7_optimized.png';
+import glife8 from '../assets/images/portfolio/optimized_portfolio/Glife_8_optimized.png';
+import glife9 from '../assets/images/portfolio/optimized_portfolio/Glife_9_optimized.png';
+import glifeCover from '../assets/images/portfolio/optimized_portfolio/Glife_Cover_optimized.png';
+import homehub1 from '../assets/images/portfolio/optimized_portfolio/Homehub_1_optimized.png';
+import homehub10 from '../assets/images/portfolio/optimized_portfolio/Homehub_10_optimized.png';
+import homehub11 from '../assets/images/portfolio/optimized_portfolio/Homehub_11_optimized.png';
+import homehub2 from '../assets/images/portfolio/optimized_portfolio/Homehub_2_optimized.png';
+import homehub3 from '../assets/images/portfolio/optimized_portfolio/Homehub_3_optimized.png';
+import homehub4 from '../assets/images/portfolio/optimized_portfolio/Homehub_4_optimized.png';
+import homehub5 from '../assets/images/portfolio/optimized_portfolio/Homehub_5_optimized.png';
+import homehub6 from '../assets/images/portfolio/optimized_portfolio/Homehub_6_optimized.png';
+import homehub7 from '../assets/images/portfolio/optimized_portfolio/Homehub_7_optimized.png';
+import homehub8 from '../assets/images/portfolio/optimized_portfolio/Homehub_8_optimized.png';
+import homehub9 from '../assets/images/portfolio/optimized_portfolio/Homehub_9_optimized.png';
+import homehubCover from '../assets/images/portfolio/optimized_portfolio/Homehub_Cover_optimized.png';
+import luxify1 from '../assets/images/portfolio/optimized_portfolio/Luxify_1_optimized.png';
+import luxify2 from '../assets/images/portfolio/optimized_portfolio/Luxify_2_optimized.png';
+import luxify3 from '../assets/images/portfolio/optimized_portfolio/Luxify_3_optimized.png';
+import luxify4 from '../assets/images/portfolio/optimized_portfolio/Luxify_4_optimized.png';
+import luxifyCover from '../assets/images/portfolio/optimized_portfolio/Luxify_Cover_optimized.png';
+import mosendo1 from '../assets/images/portfolio/optimized_portfolio/Mosendo_1_optimized.png';
+import mosendo10 from '../assets/images/portfolio/optimized_portfolio/Mosendo_10_optimized.png';
+import mosendo11 from '../assets/images/portfolio/optimized_portfolio/Mosendo_11_optimized.png';
+import mosendo2 from '../assets/images/portfolio/optimized_portfolio/Mosendo_2_optimized.png';
+import mosendo3 from '../assets/images/portfolio/optimized_portfolio/Mosendo_3_optimized.png';
+import mosendo4 from '../assets/images/portfolio/optimized_portfolio/Mosendo_4_optimized.png';
+import mosendo5 from '../assets/images/portfolio/optimized_portfolio/Mosendo_5_optimized.png';
+import mosendo6 from '../assets/images/portfolio/optimized_portfolio/Mosendo_6_optimized.png';
+import mosendo7 from '../assets/images/portfolio/optimized_portfolio/Mosendo_7_optimized.png';
+import mosendo8 from '../assets/images/portfolio/optimized_portfolio/Mosendo_8_optimized.png';
+import mosendo9 from '../assets/images/portfolio/optimized_portfolio/Mosendo_9_optimized.png';
+import mosendoCover from '../assets/images/portfolio/optimized_portfolio/Mosendo_Cover_optimized.png';
+import myWork1 from '../assets/images/portfolio/optimized_portfolio/myWork_1_optimized.png';
+import myWork2 from '../assets/images/portfolio/optimized_portfolio/myWork_2_optimized.png';
+import myWork3 from '../assets/images/portfolio/optimized_portfolio/myWork_3_optimized.png';
+import myWork4 from '../assets/images/portfolio/optimized_portfolio/myWork_4_optimized.png';
+import myWork5 from '../assets/images/portfolio/optimized_portfolio/myWork_5_optimized.png';
+import myWorkCover from '../assets/images/portfolio/optimized_portfolio/myWork_Cover_optimized.png';
+import narratrs1 from '../assets/images/portfolio/optimized_portfolio/Narratrs_1_optimized.png';
+import narratrs2 from '../assets/images/portfolio/optimized_portfolio/Narratrs_2_optimized.png';
+import narratrs3 from '../assets/images/portfolio/optimized_portfolio/Narratrs_3_optimized.png';
+import narratrs4 from '../assets/images/portfolio/optimized_portfolio/Narratrs_4_optimized.png';
+import narratrs5 from '../assets/images/portfolio/optimized_portfolio/Narratrs_5_optimized.png';
+import narratrs6 from '../assets/images/portfolio/optimized_portfolio/Narratrs_6_optimized.png';
+import narratrs7 from '../assets/images/portfolio/optimized_portfolio/Narratrs_7_optimized.png';
+import narratrs8 from '../assets/images/portfolio/optimized_portfolio/Narratrs_8_optimized.png';
+import narratrsCover from '../assets/images/portfolio/optimized_portfolio/Narratrs_Cover_optimized.png';
+import open1 from '../assets/images/portfolio/optimized_portfolio/Open_1_optimized.png';
+import open10 from '../assets/images/portfolio/optimized_portfolio/Open_10_optimized.png';
+import open11 from '../assets/images/portfolio/optimized_portfolio/Open_11_optimized.png';
+import open12 from '../assets/images/portfolio/optimized_portfolio/Open_12_optimized.png';
+import open13 from '../assets/images/portfolio/optimized_portfolio/Open_13_optimized.png';
+import open14 from '../assets/images/portfolio/optimized_portfolio/Open_14_optimized.png';
+import open15 from '../assets/images/portfolio/optimized_portfolio/Open_15_optimized.png';
+import open16 from '../assets/images/portfolio/optimized_portfolio/Open_16_optimized.png';
+import open2 from '../assets/images/portfolio/optimized_portfolio/Open_2_optimized.png';
+import open3 from '../assets/images/portfolio/optimized_portfolio/Open_3_optimized.png';
+import open4 from '../assets/images/portfolio/optimized_portfolio/Open_4_optimized.png';
+import open5 from '../assets/images/portfolio/optimized_portfolio/Open_5_optimized.png';
+import open6 from '../assets/images/portfolio/optimized_portfolio/Open_6_optimized.png';
+import open7 from '../assets/images/portfolio/optimized_portfolio/Open_7_optimized.png';
+import open8 from '../assets/images/portfolio/optimized_portfolio/Open_8_optimized.png';
+import open9 from '../assets/images/portfolio/optimized_portfolio/Open_9_optimized.png';
+import openCover from '../assets/images/portfolio/optimized_portfolio/Open_Cover_optimized.png';
+import personifi1 from '../assets/images/portfolio/optimized_portfolio/Personifi_1_optimized.png';
+import personifi10 from '../assets/images/portfolio/optimized_portfolio/Personifi_10_optimized.png';
+import personifi11 from '../assets/images/portfolio/optimized_portfolio/Personifi_11_optimized.png';
+import personifi2 from '../assets/images/portfolio/optimized_portfolio/Personifi_2_optimized.png';
+import personifi3 from '../assets/images/portfolio/optimized_portfolio/Personifi_3_optimized.png';
+import personifi4 from '../assets/images/portfolio/optimized_portfolio/Personifi_4_optimized.png';
+import personifi5 from '../assets/images/portfolio/optimized_portfolio/Personifi_5_optimized.png';
+import personifi6 from '../assets/images/portfolio/optimized_portfolio/Personifi_6_optimized.png';
+import personifi7 from '../assets/images/portfolio/optimized_portfolio/Personifi_7_optimized.png';
+import personifi8 from '../assets/images/portfolio/optimized_portfolio/Personifi_8_optimized.png';
+import personifi9 from '../assets/images/portfolio/optimized_portfolio/Personifi_9_optimized.png';
+import personifiCover from '../assets/images/portfolio/optimized_portfolio/Personifi_Cover_optimized.png';
+import publicInsight1 from '../assets/images/portfolio/optimized_portfolio/PublicInsight_1_optimized.png';
+import publicInsight2 from '../assets/images/portfolio/optimized_portfolio/PublicInsight_2_optimized.png';
+import publicInsight3 from '../assets/images/portfolio/optimized_portfolio/PublicInsight_3_optimized.png';
+import publicInsight4 from '../assets/images/portfolio/optimized_portfolio/PublicInsight_4_optimized.png';
+import publicInsight5 from '../assets/images/portfolio/optimized_portfolio/PublicInsight_5_optimized.png';
+import publicInsightCover from '../assets/images/portfolio/optimized_portfolio/PublicInsight_Cover_optimized.png';
+import referralCandy1 from '../assets/images/portfolio/optimized_portfolio/Referralcandy_1_optimized.png';
+import referralCandy2 from '../assets/images/portfolio/optimized_portfolio/Referralcandy_2_optimized.png';
+import referralCandy3 from '../assets/images/portfolio/optimized_portfolio/Referralcandy_3_optimized.png';
+import referralCandy4 from '../assets/images/portfolio/optimized_portfolio/Referralcandy_4_optimized.png';
+import referralCandyCover from '../assets/images/portfolio/optimized_portfolio/Referralcandy_Cover_optimized.png';
+import techsauce1 from '../assets/images/portfolio/optimized_portfolio/Techsauce_1_optimized.png';
+import techsauce2 from '../assets/images/portfolio/optimized_portfolio/Techsauce_2_optimized.png';
+import techsauce3 from '../assets/images/portfolio/optimized_portfolio/Techsauce_3_optimized.png';
+import techsauce4 from '../assets/images/portfolio/optimized_portfolio/Techsauce_4_optimized.png';
+import techsauceCover from '../assets/images/portfolio/optimized_portfolio/Techsauce_Cover_optimized.png';
+import theLuxeNomad1 from '../assets/images/portfolio/optimized_portfolio/TheLuxeNomad_1_optimized.png';
+import theLuxeNomad2 from '../assets/images/portfolio/optimized_portfolio/TheLuxeNomad_2_optimized.png';
+import theLuxeNomad3 from '../assets/images/portfolio/optimized_portfolio/TheLuxeNomad_3_optimized.png';
+import theLuxeNomad4 from '../assets/images/portfolio/optimized_portfolio/TheLuxeNomad_4_optimized.png';
+import theLuxeNomad5 from '../assets/images/portfolio/optimized_portfolio/TheLuxeNomad_5_optimized.png';
+import theLuxeNomad6 from '../assets/images/portfolio/optimized_portfolio/TheLuxeNomad_6_optimized.png';
+import theLuxeNomadCover from '../assets/images/portfolio/optimized_portfolio/TheLuxeNomad_Cover_optimized.png';
+import twp1 from '../assets/images/portfolio/optimized_portfolio/twp_1_optimized.png';
+import twp2 from '../assets/images/portfolio/optimized_portfolio/twp_2_optimized.png';
+import twp3 from '../assets/images/portfolio/optimized_portfolio/twp_3_optimized.png';
+import twp4 from '../assets/images/portfolio/optimized_portfolio/twp_4_optimized.png';
+import twpCover from '../assets/images/portfolio/optimized_portfolio/twp_Cover_optimized.png';
+
 export default {
-  bid4Skill1: 'https://drive.google.com/uc?export=view&id=1TAGWjM8m4O3xawm0oK45t1h62glFYDaw',
-  bid4Skill2: 'https://drive.google.com/uc?export=view&id=1uUF0mdIu4cJya2P-6VypgW2BtoIxH5H5',
-  bid4Skill3: 'https://drive.google.com/uc?export=view&id=18IoSe8DwiiDefMdNqT4o3PHd941H8rNN',
-  bid4SkillCover: 'https://drive.google.com/uc?export=view&id=1KTqCGIsFUlQPPeiTPwN75rQph4Og490y',
-  brdgePay1: 'https://drive.google.com/uc?export=view&id=1BUnlQzBG6qx2ail729DuFh9X2xDNaM1z',
-  brdgePay2: 'https://drive.google.com/uc?export=view&id=1DQWcOUJAUzS6hVvPuFF7AcTrbFLbBy2v',
-  brdgePay3: 'https://drive.google.com/uc?export=view&id=14XtqQcGPBEUQfBQcAOBSh6UBZt0U5JYx',
-  brdgePay4: 'https://drive.google.com/uc?export=view&id=1p4F4-Fb387yR3TPH5kGUS9oVWHP7GO6B',
-  brdgePay5: 'https://drive.google.com/uc?export=view&id=1fiJhMVjVQ8W_TSqljJhfx4bwcUlF7OPY',
-  brdgePay6: 'https://drive.google.com/uc?export=view&id=1Cik3No0kjRj5BWa6e0GmQNqDPySIpYMo',
-  brdgePay7: 'https://drive.google.com/uc?export=view&id=1L1pZqnwQdwyDGXtOFXtKMVzLbN1_j321',
-  brdgePayCover: 'https://drive.google.com/uc?export=view&id=1GfGSzFgZ18l53MVOBhLfyYlbk0jH-9b1',
-  briidge1: 'https://drive.google.com/uc?export=view&id=1vd3nRPiKiqlcr0QFztX6Y1wv4mSOCtKB',
-  briidge10: 'https://drive.google.com/uc?export=view&id=1XFgtDjd9ULBGgmo54w0XFgNwzhnWJGcM',
-  briidge2: 'https://drive.google.com/uc?export=view&id=1NO3KK8diL2YtUv2gH74NXbYroOegFhWL',
-  briidge3: 'https://drive.google.com/uc?export=view&id=15vD7tT6PEvt7F-aNOAdcrkPDbcvut0qM',
-  briidge4: 'https://drive.google.com/uc?export=view&id=171C9Odn3Efyl8y8JEyNYtRTBStIvL71t',
-  briidge5: 'https://drive.google.com/uc?export=view&id=1r7wRYFkITkaJKQ19dfDnSXoW0KViudQ0',
-  briidge6: 'https://drive.google.com/uc?export=view&id=10jFISO6G8JH0DLiKVwgt5bfKGaQxTDuA',
-  briidge7: 'https://drive.google.com/uc?export=view&id=1HDH406yFtW4zNbx-2XudwmuWHD6HIo-R',
-  briidge8: 'https://drive.google.com/uc?export=view&id=1AeuNHW0OVULl6SNBlaOjgdvhyQOdVa2U',
-  briidge9: 'https://drive.google.com/uc?export=view&id=1U7cjp-hMd9hI1ysiP05Eo2-8a6PpDuA6',
-  briidgeCover: 'https://drive.google.com/uc?export=view&id=1eYnbyImZ8FBZ6qkErWT80xX_A8Iff5xE',
-  collabs0: 'https://drive.google.com/uc?export=view&id=1ZGA8zDzdprpJoX4P4AGB1VIhU1ZkvWHg',
-  collabs1: 'https://drive.google.com/uc?export=view&id=1-EyST_MHjyEpi3kKZpOXwZA-D9CFq5Ag',
-  collabs2: 'https://drive.google.com/uc?export=view&id=1AOcHAOb6S7GNovm7crq3MJqN9P43yKLX',
-  collabs3: 'https://drive.google.com/uc?export=view&id=1xngppnkyQ0y7Myte4M_shj5BNvSsrRQj',
-  collabs4: 'https://drive.google.com/uc?export=view&id=1e1S9dtN-Lv7TYdJqSI6Ft4MhEE4kfCZQ',
-  collabs5: 'https://drive.google.com/uc?export=view&id=1o9Qtstj-9ytagwmVxov407UrGPjQr495',
-  collabs6: 'https://drive.google.com/uc?export=view&id=1DY9W8ZZ7nrBT-0p6k8XvS3tqK1HcXVFW',
-  collabsCover: 'https://drive.google.com/uc?export=view&id=1Qf_ICI2p-Q6-owxVfbKOQi0M6m1wluHj',
-  connectajob1: 'https://drive.google.com/uc?export=view&id=1LyfSikSi-tQDLC9a0JGPzbxXGl5TqbfB',
-  connectajob10: 'https://drive.google.com/uc?export=view&id=1c77D9NPzrkxyMlTD0hyU3M3punfXjCe2',
-  connectajob2: 'https://drive.google.com/uc?export=view&id=1UMNWurXG4q97WoCxgEC3V5eviqMXZbWM',
-  connectajob3: 'https://drive.google.com/uc?export=view&id=1KVtu1Xli_P71Xhugln8QJyUF3Z1fVVG4',
-  connectajob4: 'https://drive.google.com/uc?export=view&id=1IH35gYHQIyDRc0P0YJgBvg_dX-Qm48XT',
-  connectajob5: 'https://drive.google.com/uc?export=view&id=1DNymLkbm0ZaP6XwnhlmaQMLPHaVxpUFI',
-  connectajob6: 'https://drive.google.com/uc?export=view&id=1XNS3S6MvMWWyrlYU7guzKRODqRDqfAKA',
-  connectajob7: 'https://drive.google.com/uc?export=view&id=1owkhIFFwn48FA0jmDN74av3jfqQqxtfv',
-  connectajob8: 'https://drive.google.com/uc?export=view&id=1sz3nS6_WQCcHncIhQRr936wxYNNRpjZb',
-  connectajob9: 'https://drive.google.com/uc?export=view&id=16HEIYPz0EXvKwegbL727ED9x9uMsn6_H',
-  connectajobCover: 'https://drive.google.com/uc?export=view&id=1dB_upgWYpQcykoIX7670Wun5ipRp0m5w',
-  corpzap1: 'https://drive.google.com/uc?export=view&id=1zj_r2oPAlPDnXT5cUm9j09J_klFkA7Vs',
-  corpzap2: 'https://drive.google.com/uc?export=view&id=1iw1OTb13P-kowzxcBnUlYdip23yIq61G',
-  corpzap3: 'https://drive.google.com/uc?export=view&id=1oEhdaEpeFtE1UwaTYt8ACzvqtC2gOCW7',
-  corpzapCover: 'https://drive.google.com/uc?export=view&id=1hpX3p4i_RS3v9FUHlJ_-PuqYai6F9cEB',
-  eyeProtec1: 'https://drive.google.com/uc?export=view&id=10Xw44fDmlkgNF-O_YtypiEw6s5xp-ngL',
-  eyeProtec10: 'https://drive.google.com/uc?export=view&id=1k5tdynLdg726BZNMTwHWi4DkmsKsJwqP',
-  eyeProtec11: 'https://drive.google.com/uc?export=view&id=1wx8ojcOS6JvH34mG2htOF-pCasCpHqIY',
-  eyeProtec12: 'https://drive.google.com/uc?export=view&id=1crKEoZbTBLdwEJApUBRsKI8i78jymADw',
-  eyeProtec13: 'https://drive.google.com/uc?export=view&id=10wUlDsZnpMMlbGsUQ-zDgb4fFq12laJi',
-  eyeProtec2: 'https://drive.google.com/uc?export=view&id=1I-gDuINM8s4MkxcTdwOJBKuxTQ0arogr',
-  eyeProtec3: 'https://drive.google.com/uc?export=view&id=1GFvve33uEX2LozLNpS_JpdWI5v6BXi6U',
-  eyeProtec4: 'https://drive.google.com/uc?export=view&id=1qCJBWhcEB59-zAKexpqCPah9DKkA-2fm',
-  eyeProtec5: 'https://drive.google.com/uc?export=view&id=1Fv60konnsnCOVhlcAfAQZQZ0fINHXdOw',
-  eyeProtec6: 'https://drive.google.com/uc?export=view&id=1LrAPePLDAukG_z9UU5IuHiI1T_39xlXY',
-  eyeProtec7: 'https://drive.google.com/uc?export=view&id=1FIWoeVqAkGZADgobAM5_asjp-IAEdpum',
-  eyeProtec8: 'https://drive.google.com/uc?export=view&id=1rEFY0D1auaiMgimcNKnRGboQ_YJ_qm7A',
-  eyeProtec9: 'https://drive.google.com/uc?export=view&id=1kdLVN7-r2xzBGzfELXLloCroIUOLLyU7',
-  eyeProtecCover: 'https://drive.google.com/uc?export=view&id=1E8j5hgWXBK7ElCNs0TRSsCme0NEe-uiT',
-  findAWealthManager1: 'https://drive.google.com/uc?export=view&id=1h59cq9Wg7E2m5_DY7HQ7iQNx1nz6D_Tu',
-  findAWealthManager2: 'https://drive.google.com/uc?export=view&id=1YlkzAEQJdWEGTJAcDtG_4TFQJA4eS60M',
-  findAWealthManager3: 'https://drive.google.com/uc?export=view&id=1V1MM81RUxJBluhtNk89OfiTDpyOBixgB',
-  findAWealthManager4: 'https://drive.google.com/uc?export=view&id=1fQE6DLhl2nbaRoOyuSiS6nETFFGg0tlg',
-  findAWealthManager5: 'https://drive.google.com/uc?export=view&id=1-trUe5aLmIVncSnPfCaIEDXjQqisiGbM',
-  findAWealthManager6: 'https://drive.google.com/uc?export=view&id=1uWK9v9WjrnUQvTKDpZxyVrS5LR8w_d4m',
-  findAWealthManager7: 'https://drive.google.com/uc?export=view&id=1_Tkz34vaJnfb07G1lr5lQ6ANSBUtCVXx',
-  findAWealthManager8: 'https://drive.google.com/uc?export=view&id=16kJk5LUCnVARC87KZ8SEL_rSErVWIfAz',
-  findAWealthManager9: 'https://drive.google.com/uc?export=view&id=1_iXJJxN9r7A58ua712F2TN755RBbGCn0',
-  findAWealthManagerCover: 'https://drive.google.com/uc?export=view&id=1f9xerl1AaYrigKh8h6cmouvrFdJUoy9M',
-  getAssured1: 'https://drive.google.com/uc?export=view&id=1Stqh6CVfpOEkjkBxZruyXGopedGHSaYU',
-  getAssured2: 'https://drive.google.com/uc?export=view&id=1xQ3f1y7BXODYdElroF_k3TI4bfnTYyWM',
-  getAssured3: 'https://drive.google.com/uc?export=view&id=1gZtlNKVxHXRvLgtlJ59ThPs4zdikg4s7',
-  getAssuredCover: 'https://drive.google.com/uc?export=view&id=18L3-QVHcpa50_8wsEv97QLS8JTp_j1_z',
-  gig1: 'https://drive.google.com/uc?export=view&id=1KzlOSW6ALMhpIAINtXVpzShCyw1Xe2cw',
-  gig2: 'https://drive.google.com/uc?export=view&id=1L12bS51wzu5wCAF3tQYrJP0ASKt_3OJR',
-  gig3: 'https://drive.google.com/uc?export=view&id=1M53QQ7JorgtRa7hOd8PRsBsxTVr3jd74',
-  gig4: 'https://drive.google.com/uc?export=view&id=1LopsePOPWqgt6L-Yylv-Yll_LAfHmwSv',
-  gig5: 'https://drive.google.com/uc?export=view&id=1FX3bQYCr-w3cB8BVj4-U7_EnPpb5JhyO',
-  gig6: 'https://drive.google.com/uc?export=view&id=1sdwoBEEDvNx4VSpGFhJSdoEWVyp7OkdS',
-  gig7: 'https://drive.google.com/uc?export=view&id=1_tOYa-pFkG8_2JcmDwZ59f8rJ8zdz-0l',
-  gig8: 'https://drive.google.com/uc?export=view&id=1DBUIgWR4yaBvYDuG9SmS6QAFLjXlolPj',
-  gig9: 'https://drive.google.com/uc?export=view&id=1oxV364UBPCgHPHkUplHiYU0SjgZIR2vK',
-  gigCover: 'https://drive.google.com/uc?export=view&id=1RX_T8vO0FwHPy3K6pPxGF07j9mHcg2Aa',
-  glife1: 'https://drive.google.com/uc?export=view&id=1LkQFJnDfNZ_4ebhUVjTYSWY2LonfdpWD',
-  glife10: 'https://drive.google.com/uc?export=view&id=1-O1CCNpug-NKg74tWiRoICpZbPAOLwUL',
-  glife2: 'https://drive.google.com/uc?export=view&id=1fM1GyE-49KkdlVBd7hqH2XJAZ-mvF8-V',
-  glife3: 'https://drive.google.com/uc?export=view&id=1nsN2shoXElfpgOVIDn8xODpR0jtAHrZ_',
-  glife4: 'https://drive.google.com/uc?export=view&id=1vKW3wU5V56MnAjkOI8eHlyJy60SWJirH',
-  glife5: 'https://drive.google.com/uc?export=view&id=1SrzGLCkOdkrjDYP1GSj-6a94js8t6shH',
-  glife6: 'https://drive.google.com/uc?export=view&id=1AvA3Pcn7WqWExygi7VemvIa0bpkKr8Ld',
-  glife7: 'https://drive.google.com/uc?export=view&id=1FKgV8G2xf9w9AppgYcK4mSpXGyMbnxql',
-  glife8: 'https://drive.google.com/uc?export=view&id=1nk1IeYaRn8TFDilGQfhykBsVrt0j3lf1',
-  glife9: 'https://drive.google.com/uc?export=view&id=11ny_vex4ZGzPnG4f8vZgI-M4wZnIy1Ny',
-  glifeCover: 'https://drive.google.com/uc?export=view&id=1_Qga4JBG_heFzcfd6IgYRvwuC56gPA6a',
-  homehub1: 'https://drive.google.com/uc?export=view&id=1Llk9KWZOyDOKIlBRl0uJ7ki73f1PmFO2',
-  homehub10: 'https://drive.google.com/uc?export=view&id=1Xc_qUEy8C_2cjv-X1Z2tW-Kc2rUT_2L5',
-  homehub11: 'https://drive.google.com/uc?export=view&id=1tALivt-aYqMbdnyqykwELW1OigdHx6qa',
-  homehub2: 'https://drive.google.com/uc?export=view&id=1RxQFe6v6IQiRZCcQsDqyMw_aXR3fyI3L',
-  homehub3: 'https://drive.google.com/uc?export=view&id=1veWgRnH9w0KbeFtYt1pBKknoW4K4pmPM',
-  homehub4: 'https://drive.google.com/uc?export=view&id=1ar8iG9z6wDwRh46Brg-v6d3AC8JE84SM',
-  homehub5: 'https://drive.google.com/uc?export=view&id=15LzPcMi2Uvr9Y9wl8wscnsDSLPrBX4X0',
-  homehub6: 'https://drive.google.com/uc?export=view&id=1B7RxAw6dWGra8EQRisogE8y9qYCT4kml',
-  homehub7: 'https://drive.google.com/uc?export=view&id=17lk0v8tSZVhvhDyKVHU1KI2a-AyyqIn1',
-  homehub8: 'https://drive.google.com/uc?export=view&id=1bqmM53L8m6ghhaX9t53AFbOrK_vMWKFx',
-  homehub9: 'https://drive.google.com/uc?export=view&id=1rneLlcJr8s-Mw_x_oAfR7qk8qoOi4HvJ',
-  homehubCover: 'https://drive.google.com/uc?export=view&id=1oPCYwlyMWryQmtVk-Sy8rlYPpUjHXzaL',
-  luxify1:	'https://drive.google.com/uc?export=view&id=12TsOg0_7qy0pHFAvBMMKGJc_8g7NJYCj',
-  luxify2: 'https://drive.google.com/uc?export=view&id=1s_XJN8pEjWBNej10C30XtdpLWX2Tl88g',
-  luxify3: 'https://drive.google.com/uc?export=view&id=1kVPNpPmHLBh3aYBp5ch4uuW7_Mhl0LLs',
-  luxify4: 'https://drive.google.com/uc?export=view&id=1SH8OaH_TdqcNy20gUa6EXVI6mDDsz9Bh',
-  luxifyCover: 'https://drive.google.com/uc?export=view&id=11Frfq4zb-7XionWn5BSqfVO2NlAO77p6',
-  mosendo1: 'https://drive.google.com/uc?export=view&id=1Mp8zjQQxqBMVQ4ZgItz8F0RwWisbm6EH',
-  mosendo10: 'https://drive.google.com/uc?export=view&id=15LXNWds0An-ZhkUt5Stt5HrDy21z9hLf',
-  mosendo11: 'https://drive.google.com/uc?export=view&id=19JvTVxpKrX_cb3hy4-qWH0ncNnk2tXiy',
-  mosendo2: 'https://drive.google.com/uc?export=view&id=1RP5FDhUo39tV-8BK9cgpJlPTsnb5z2Ud',
-  mosendo3: 'https://drive.google.com/uc?export=view&id=1IYqo_uf6wbH7ivVMrxSV8V7ugrFJiF-S',
-  mosendo4: 'https://drive.google.com/uc?export=view&id=1l5X8wBsCI-IVIXciKFDJeWIhp9jb8h7H',
-  mosendo5: 'https://drive.google.com/uc?export=view&id=1VMqeP2Cgqns5LyEDMVfPzhimtRZXX1dB',
-  mosendo6: 'https://drive.google.com/uc?export=view&id=1CgJtmFEoOUAg7gNPBh5dzKVtoS938j9N',
-  mosendo7: 'https://drive.google.com/uc?export=view&id=19JBYzJ33Edn9LO0qgxyUV2wqhjwClx4I',
-  mosendo8: 'https://drive.google.com/uc?export=view&id=1NQmNe2PI9J7EibJPKbZ5Qy20uO1RTLRD',
-  mosendo9: 'https://drive.google.com/uc?export=view&id=1FewV3kKM1_BxrRThGgwm_HzRD-4MsaOy',
-  mosendoCover: 'https://drive.google.com/uc?export=view&id=1_NQq7rhxXr_MCiT1sWsGAcG_kyxvEBVr',
-  myWork1: 'https://drive.google.com/uc?export=view&id=1K_bUGznFrtE_ExEdVnC-dxb5lffBXVQJ',
-  myWork2: 'https://drive.google.com/uc?export=view&id=1V6fIDk92oYKXh1gvEZfUIFC5KzyCWV3Z',
-  myWork3: 'https://drive.google.com/uc?export=view&id=1yvyBVv1ef-Y5yLG7ZLis6-62RLydGkxx',
-  myWork4: 'https://drive.google.com/uc?export=view&id=1PlE4lQcGzhVV6xNDM6ijGw1hNmxM8Uv8',
-  myWork5: 'https://drive.google.com/uc?export=view&id=1VqrchbHfIUPq7lGu1yV75uvXcjnfBd0L',
-  myWorkCover: 'https://drive.google.com/uc?export=view&id=1LVtgWWEglrEvWZchSvoPH6JRFxvRMt_w',
-  narratrs1: 'https://drive.google.com/uc?export=view&id=1p-3doQDbZfUuNe_R_gIEem5xVuzi4PUb',
-  narratrs2: 'https://drive.google.com/uc?export=view&id=1aZ1hhpitiyZtYUVgBa9XrFs3mhTBUf4I',
-  narratrs3: 'https://drive.google.com/uc?export=view&id=1_A10EmvHIMag1AjVLKVun88e5Wz3cMQR',
-  narratrs4: 'https://drive.google.com/uc?export=view&id=1mZaWHTahYf8vYXJ71256MnObny88VzTF',
-  narratrs5: 'https://drive.google.com/uc?export=view&id=1f4rnRWf2yLxHPqvztToIQOmnamgdwn5f',
-  narratrs6: 'https://drive.google.com/uc?export=view&id=1TNkuJNzZFq94oKQtlgD3ApTj4pB7_hPm',
-  narratrs7: 'https://drive.google.com/uc?export=view&id=1SNN3jwTktmCvCtnzduB7UDCP9-oLzTg5',
-  narratrs8: 'https://drive.google.com/uc?export=view&id=1vp_IJP9gXW8IZtLnJW64YCrZRnJQsUOk',
-  narratrsCover: 'https://drive.google.com/uc?export=view&id=1-2HlEi5pA-r01aCpd3qPBT7Z5KS7ZK0A',
-  open1: 'https://drive.google.com/uc?export=view&id=1vnEdbrz5V0ce5h4efDjqCDzQvbzwDG9W',
-  open10: 'https://drive.google.com/uc?export=view&id=14VCvFwYhlKp2YOc9t6xTYXpwtR_0mE28',
-  open11: 'https://drive.google.com/uc?export=view&id=1MOtiZ1psrq9UMka1L914DJP-cE6Lq2nD',
-  open12: 'https://drive.google.com/uc?export=view&id=1yKAWLO7Rnh_AVgJcCTOYI0ZRUD8LzQlK',
-  open13: 'https://drive.google.com/uc?export=view&id=1pdLqjBiadW2c_JjWnI2rv77nNLtKIZQ9',
-  open14: 'https://drive.google.com/uc?export=view&id=1T78GblZYa6yC70fKuH5xPgJKihOTm4Y4',
-  open15: 'https://drive.google.com/uc?export=view&id=1Sx-nE2p4iDAlzLzzoGMaTAz3CYiVJkyB',
-  open16: 'https://drive.google.com/uc?export=view&id=10aXiMjrf3ToihX-TRlBC7eW-VjdhwiQW',
-  open2: 'https://drive.google.com/uc?export=view&id=1zBJJFb6WZ7rID4decsDb4qqtWN4P4bzk',
-  open3: 'https://drive.google.com/uc?export=view&id=1OSO0ZTR234i1AVpG7oTvyWchW8tfAzNW',
-  open4: 'https://drive.google.com/uc?export=view&id=1bU7UxsBVd6jxIcCpbPnjvpj35ylFpZuW',
-  open5: 'https://drive.google.com/uc?export=view&id=1Se4veogWvtbttP_TeoLiR00zHWUK-tey',
-  open6: 'https://drive.google.com/uc?export=view&id=1LQ0o1W484B34Ul2dGorn-mKTG14s3PeM',
-  open7: 'https://drive.google.com/uc?export=view&id=1NLUE5GVqBSHF5Rvb0XyA53Pie8bQ_JCP',
-  open8: 'https://drive.google.com/uc?export=view&id=1UUFwZ9__7RKzQRaOowb6AM39UbvGJagI',
-  open9: 'https://drive.google.com/uc?export=view&id=1PihH_svC9E5CuxoaohrQwQCCSm3Q15OL',
-  openCover: 'https://drive.google.com/uc?export=view&id=1qv3BlUG1xIw-E1S7BLBOCvxxTm8RAlFu',
-  personifi1: 'https://drive.google.com/uc?export=view&id=1odjDAIPkUEwpaIT8p7tiyYsa1Uf4MYn1',
-  personifi10: 'https://drive.google.com/uc?export=view&id=1AeQ-juByQaXtNDu2vi8W7zXkbU50NqGu',
-  personifi11: 'https://drive.google.com/uc?export=view&id=1DaGEjvaAf8aZ7JrixbEV5ohNdCnhVjvY',
-  personifi2: 'https://drive.google.com/uc?export=view&id=1BaeKZqdf_pgyOTncCgghNm0AMZytKtp0',
-  personifi3: 'https://drive.google.com/uc?export=view&id=1Ufeq_y80g65cEesSId7g9M18-LGqa1Fo',
-  personifi4: 'https://drive.google.com/uc?export=view&id=1Hj67m3wowaKvu7ChLPGk_dGbjLc_VbcY',
-  personifi5: 'https://drive.google.com/uc?export=view&id=1ORMI_i-fUQlEmdX2Bntj9u9e8XC0EH9H',
-  personifi6: 'https://drive.google.com/uc?export=view&id=16Q_zCtpI1olFVVU-TLL3aIlP6ERCocsH',
-  personifi7: 'https://drive.google.com/uc?export=view&id=1VVH_q5Vq99HDqwkBirkN05oiQt9NI7Xr',
-  personifi8: 'https://drive.google.com/uc?export=view&id=15AEBzo5EyVAjSR51xtwL0S64-9H2b8U2',
-  personifi9: 'https://drive.google.com/uc?export=view&id=16xPfaibZuAoTwfCLof17hbrwr2yW3iBd',
-  personifiCover: 'https://drive.google.com/uc?export=view&id=14VJPPvcthqoXVq5XqgHZ2_Mk4Iw8rjaO',
-  publicInsight1: 'https://drive.google.com/uc?export=view&id=1c-fDiEx27lQ_g45q43sQJzocXgweq7RF',
-  publicInsight2: 'https://drive.google.com/uc?export=view&id=1SNJXE8DcA6auEMBHLq5DqZ9azBHaoPm1',
-  publicInsight3: 'https://drive.google.com/uc?export=view&id=10DhIo8ZFhMzd7McsuR3MV03euoJgZ_2b',
-  publicInsight4: 'https://drive.google.com/uc?export=view&id=1yDxwfUruST86D3gMHXOw3DhZ_QXDpPHJ',
-  publicInsight5: 'https://drive.google.com/uc?export=view&id=1y3Fd7-sdizgbEVGWr2Fdacjn082VgxHF',
-  publicInsightCover: 'https://drive.google.com/uc?export=view&id=1Tf4MfQQEOmCyf0teWt8tUglvTJOcK6be',
-  referralCandy1: 'https://drive.google.com/uc?export=view&id=1IzVMH7Aj2ZC0Vrp3Wb5wTzmAgCSkJBg-',
-  referralCandy2: 'https://drive.google.com/uc?export=view&id=1iNmL73yy7n_QAhDDUb9zrMgUmGPRvLvG',
-  referralCandy3: 'https://drive.google.com/uc?export=view&id=1b4PtRgATmXpIaICZNdtWi8j9LsX77k2y',
-  referralCandy4: 'https://drive.google.com/uc?export=view&id=1eW-gZ4F7tXPRDzK3U62mPfNMMxkdC4qo',
-  referralCandyCover: 'https://drive.google.com/uc?export=view&id=1FhUjQ6Rxlse7Bv8LLYcRFJs3i3_rVXzn',
-  techsauce1: 'https://drive.google.com/uc?export=view&id=1CHgztRtUrsTkr4HfYN0HBs2ep4LYhHc8',
-  techsauce2: 'https://drive.google.com/uc?export=view&id=1m9OGzcH_6cF9OdrtgCcriQRs-EbE7LFV',
-  techsauce3: 'https://drive.google.com/uc?export=view&id=11jzZvJ7DwqfSK2XtaU_mcYZnjqnI9YiJ',
-  techsauce4: 'https://drive.google.com/uc?export=view&id=1u1OtIgSroAfpQwjWkH7P2wHYScSQ5sUP',
-  techsauceCover: 'https://drive.google.com/uc?export=view&id=1pziI2-DPW_h-YrouaqGanHaGowxKXSak',
-  theLuxeNomad1: 'https://drive.google.com/uc?export=view&id=1Jv4cFZQ0ZWMasrlemDnejB8kE80NMdfB',
-  theLuxeNomad2: 'https://drive.google.com/uc?export=view&id=1zeA_oa2aYbX7SjTyCFF9IJIUJ8mBDcJa',
-  theLuxeNomad3: 'https://drive.google.com/uc?export=view&id=1pM5OBq7ca_6A2k4Fu6Uiv7JafB8DVC2J',
-  theLuxeNomad4: 'https://drive.google.com/uc?export=view&id=1GxohYegrrQ0fUgvJ8LNTLa5M_oEnMtxS',
-  theLuxeNomad5: 'https://drive.google.com/uc?export=view&id=1v3C0G6dAR1mMYYdLefgnBGitLq_b8PgK',
-  theLuxeNomad6: 'https://drive.google.com/uc?export=view&id=1JAVCXVHTp2EHL_t9YZflGnYfb3Phq74R',
-  theLuxeNomadCover: 'https://drive.google.com/uc?export=view&id=1lm1rTTQVKYZpFaJc-THn8XRZugodxfGf',
-  twp1: 'https://drive.google.com/uc?export=view&id=1wJqcVHioQh8T69o13LdIEC3stMPNBW8l',
-  twp2: 'https://drive.google.com/uc?export=view&id=155ajZVWRuvJg79MAx8aNRNJbxIcbrBmW',
-  twp3: 'https://drive.google.com/uc?export=view&id=1D7HjqI0XVeo2ukn6r57wGr2cIyUm0020',
-  twp4: 'https://drive.google.com/uc?export=view&id=1OhjtR30j6cTwVCLWonkvtJYRE-xZX9Ji',
-  twpCover: 'https://drive.google.com/uc?export=view&id=1KT1eKEN0DNRhTRmbYQlTss6gimv1ogTc',
+  bid4Skill1,
+  bid4Skill2,
+  bid4Skill3,
+  bid4SkillCover,
+  brdgePay1,
+  brdgePay2,
+  brdgePay3,
+  brdgePay4,
+  brdgePay5,
+  brdgePay6,
+  brdgePay7,
+  brdgePayCover,
+  briidge1,
+  briidge10,
+  briidge2,
+  briidge3,
+  briidge4,
+  briidge5,
+  briidge6,
+  briidge7,
+  briidge8,
+  briidge9,
+  briidgeCover,
+  collabs0,
+  collabs1,
+  collabs2,
+  collabs3,
+  collabs4,
+  collabs5,
+  collabs6,
+  collabsCover,
+  connectajob1,
+  connectajob10,
+  connectajob2,
+  connectajob3,
+  connectajob4,
+  connectajob5,
+  connectajob6,
+  connectajob7,
+  connectajob8,
+  connectajob9,
+  connectajobCover,
+  corpzap1,
+  corpzap2,
+  corpzap3,
+  corpzapCover,
+  eyeProtec1,
+  eyeProtec10,
+  eyeProtec11,
+  eyeProtec12,
+  eyeProtec13,
+  eyeProtec2,
+  eyeProtec3,
+  eyeProtec4,
+  eyeProtec5,
+  eyeProtec6,
+  eyeProtec7,
+  eyeProtec8,
+  eyeProtec9,
+  eyeProtecCover,
+  findAWealthManager1,
+  findAWealthManager2,
+  findAWealthManager3,
+  findAWealthManager4,
+  findAWealthManager5,
+  findAWealthManager6,
+  findAWealthManager7,
+  findAWealthManager8,
+  findAWealthManager9,
+  findAWealthManagerCover,
+  getAssured1,
+  getAssured2,
+  getAssured3,
+  getAssuredCover,
+  gig1,
+  gig2,
+  gig3,
+  gig4,
+  gig5,
+  gig6,
+  gig7,
+  gig8,
+  gig9,
+  gigCover,
+  glife1,
+  glife10,
+  glife2,
+  glife3,
+  glife4,
+  glife5,
+  glife6,
+  glife7,
+  glife8,
+  glife9,
+  glifeCover,
+  homehub1,
+  homehub10,
+  homehub11,
+  homehub2,
+  homehub3,
+  homehub4,
+  homehub5,
+  homehub6,
+  homehub7,
+  homehub8,
+  homehub9,
+  homehubCover,
+  luxify1,
+  luxify2,
+  luxify3,
+  luxify4,
+  luxifyCover,
+  mosendo1,
+  mosendo10,
+  mosendo11,
+  mosendo2,
+  mosendo3,
+  mosendo4,
+  mosendo5,
+  mosendo6,
+  mosendo7,
+  mosendo8,
+  mosendo9,
+  mosendoCover,
+  myWork1,
+  myWork2,
+  myWork3,
+  myWork4,
+  myWork5,
+  myWorkCover,
+  narratrs1,
+  narratrs2,
+  narratrs3,
+  narratrs4,
+  narratrs5,
+  narratrs6,
+  narratrs7,
+  narratrs8,
+  narratrsCover,
+  open1,
+  open10,
+  open11,
+  open12,
+  open13,
+  open14,
+  open15,
+  open16,
+  open2,
+  open3,
+  open4,
+  open5,
+  open6,
+  open7,
+  open8,
+  open9,
+  openCover,
+  personifi1,
+  personifi10,
+  personifi11,
+  personifi2,
+  personifi3,
+  personifi4,
+  personifi5,
+  personifi6,
+  personifi7,
+  personifi8,
+  personifi9,
+  personifiCover,
+  publicInsight1,
+  publicInsight2,
+  publicInsight3,
+  publicInsight4,
+  publicInsight5,
+  publicInsightCover,
+  referralCandy1,
+  referralCandy2,
+  referralCandy3,
+  referralCandy4,
+  referralCandyCover,
+  techsauce1,
+  techsauce2,
+  techsauce3,
+  techsauce4,
+  techsauceCover,
+  theLuxeNomad1,
+  theLuxeNomad2,
+  theLuxeNomad3,
+  theLuxeNomad4,
+  theLuxeNomad5,
+  theLuxeNomad6,
+  theLuxeNomadCover,
+  twp1,
+  twp2,
+  twp3,
+  twp4,
+  twpCover,
 };
