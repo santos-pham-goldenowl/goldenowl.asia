@@ -47,7 +47,7 @@ const Footer = () => {
           <div className="col-6">
             <div className="footer__contact row">
               <span className="col-md-6 footer__phone">(+84) 912 878985</span>
-              <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
+              <span className="col-md-5 footer__email">claire@goldenowl.asia</span>
             </div>
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
       <div className="footer__contact row">
         <span className="col-md-6 footer__phone">(+84) 912 878985</span>
-        <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
+        <span className="col-md-5 footer__email">claire@goldenowl.asia</span>
       </div>
     </div>
     <div className="footer__bottom-grid-container">
@@ -117,7 +117,7 @@ const Footer = () => {
           <div>
             <a href="/careers">Careers</a>
             <Link to="/contact-us">Contact us</Link>
-            {/* <a href="/faq">FAQ</a> */}
+            <a href="/faq">FAQ</a>
             {/* <Link to="/blog">Blog</Link> */}
           </div>
         </div>
@@ -127,7 +127,7 @@ const Footer = () => {
   )
 
   return (
-  <footer className="footer">
+  <footer id="footer" className="footer">
     <div className="footer__top-content-wrapper">
       <h4 className="footer__top-content-title">Areas we serve</h4>
       <div className="row">
@@ -170,7 +170,7 @@ const Footer = () => {
     </div>
     {isMobile ? mobileRender() : defaultRender()}
     <div className="footer__copyright">
-      <p>Copyright 2019 © Golden Owl Consulting</p>
+      <p>Copyright 2015 © Golden Owl Consulting</p>
     </div>
   </footer>
 );}

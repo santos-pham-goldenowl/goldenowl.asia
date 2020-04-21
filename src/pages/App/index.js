@@ -12,6 +12,7 @@ import Technology from '../Technology';
 import PortfolioSubPage from '../PortfolioSubPage';
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
+import FAQ from '../FAQ';
 import Blog from '../Blog';
 import Career from '../Career';
 import CareerDetails from '../CareerDetails';
@@ -73,6 +74,7 @@ const App = () => (
             />
           ))
         }
+        <Route exact path="/faq" component={FAQ} />
         <Route path="*" component={NotFound} />
       </Switch>
     </section>
