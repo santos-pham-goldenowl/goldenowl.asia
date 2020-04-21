@@ -2,26 +2,26 @@ export default {
     "Full Stack Developer": {
         filled: false,
         time: "Full time",
-        link: "#"
+        url: "full-stack-developer",
     },
     "Java Script Developer": {
         filled: false,
         time: "Full time",
-        link: "#"
+        url: "java-script-developer"
     },
     "Project Coordinator": {
         filled: false,
         time: "Full time",
-        link: "#"
+        url: "project-coordinator"
     },
     "Human Resource": {
         filled: false,
         time: "Full time",
-        link: "#"
+        url: "human-resource"
     },
     "Project Manager": {
         filled: true,
         time: "Full time",
-        link: "#"
+        url: "project-manager"
     },
 }

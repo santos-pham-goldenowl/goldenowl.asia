@@ -46,7 +46,7 @@ const Career = ({ content }) => {
         <p className="d-inline careers__time">{item.time}</p>
       </td>
       <td className="fourth-col">
-        <Link to={item.link}>View details</Link>
+        <Link to={`careers/${item.url}`}>View details</Link>
       </td>
     </tr>
   )
@@ -60,7 +60,7 @@ const Career = ({ content }) => {
           <img className="clock" src={clock} alt="GO-clock" />
         </span>
         <p className="d-inline careers__time">{item.time}</p>
-        <Link to={item.link}>View details</Link>
+        <Link to={`careers/${item.url}`}>View details</Link>
       </td>
     </tr>
   )
