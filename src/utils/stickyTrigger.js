@@ -32,7 +32,7 @@ export function stickyTOCTrigger() {
 
   if (stickyTopTrigger && stickyBotTrigger) {
     const stickyTop = stickyTopTrigger.getBoundingClientRect().top + window.scrollY - stickyTopTrigger.offsetHeight*2;
-    const stickyBot = stickyBotTrigger.getBoundingClientRect().top + window.scrollY - document.getElementById('footer').offsetHeight / 2;
+    const stickyBot = stickyBotTrigger.getBoundingClientRect().top + window.scrollY - document.getElementById('footer').offsetHeight / 2 - stickyBotTrigger.offsetHeight;
 
     const toc = document.getElementById('toc');
 
