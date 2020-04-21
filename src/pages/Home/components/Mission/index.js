@@ -17,18 +17,15 @@ const Missions = () => {
     <section className="missions" style={sectionStyle}>
       <div className="row">
         <div className="col-12 col-md-4 col-lg-5 pr-md-0">
-          <h3 className="missions__title">What are you looking for?</h3>
+          <h3 className="missions__title">Hello! We're Golden Owl</h3>
           <p>
-            <strong>Business needs bespoke software.</strong>
+            If you’re looking for a software company to transform your business to the next level, you've found the right partner to help.
             <br/>
             <br/>
-              No matter what field you are in, business is tough. Since 2015, we’ve helped our clients harness the power of digital innovation through software in a variety of industries such as SaaS, ecommerce, legal, real estate,... 
+            We are strongly recommended by technical and non-technical leaders in various industries including retail, ecommerce, real estate, legal, travel & hospitality,...
             <br/>
             <br/>
-              Whether you’re building something from scratch or improving an existing product, our design and development consultants have you covered. Our team works with you to nail down the goals of your project and translate those goals into actionable steps. 
-            <br/>
-            <br/>
-              Or do you need to automate, orchestrate, coordinate, or transform your service-based business? Partner with us for custom software services focused on driving business results. Our technology mastery can help you pick the right tool for the challenge you face. 
+            Our reputation is built on engineering standards, development standards, our work ethic and responsive workflow. It's the work that we push out to the world that speaks most about us. 
           </p>
         </div>
         <div className="col-12 col-md-7 col-lg-6 ml-auto pr-0">
