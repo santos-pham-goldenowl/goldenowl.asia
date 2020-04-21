@@ -56,7 +56,7 @@ const FAQ = () => {
 
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
-    stickyTOCTrigger();
+    stickyTOCTrigger(isMobile);
   };
 
   return (
