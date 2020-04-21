@@ -16,7 +16,6 @@ import { renderToString } from 'react-dom/server';
 // Our store, entrypoint, and manifest
 import createStore from '../src/store';
 import App from '../src/pages/App';
-import manifest from '../build/asset-manifest.json';
 
 // LOADER
 export default (req, res) => {
@@ -28,14 +27,14 @@ export default (req, res) => {
       - Code-split script tags depending on the current route
   */
   const injectHTML = (data, {
-    html, title, meta, body, scripts, state,
+    html, title, meta, body, state,
   }) => {
     data = data.replace('<html>', `<html ${html}>`);
     data = data.replace(/<title>.*?<\/title>/g, title);
     data = data.replace('</head>', `${meta}</head>`);
     data = data.replace(
       '<div id="root"></div>',
-      `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>${scripts.join('')}`,
+      `<div id="root">${body}</div><script>window.__PRELOADED_STATE__ = ${state}</script>`,
     );
 
     return data;
@@ -79,11 +78,6 @@ export default (req, res) => {
         </Loadable.Capture>,
       );
 
-      // Let's format those assets into pretty <script> tags
-      const manifestScripts = manifest.entrypoints
-        .filter((ep) => ep.includes('.js'))
-        .map((c) => `<script type="text/javascript" src="/${c.replace(/^\//, '')}"></script>`);
-
       // We need to tell Helmet to compute the right meta tags, title, and such
       const helmet = Helmet.renderStatic();
 
@@ -97,7 +91,6 @@ export default (req, res) => {
         title: helmet.title.toString(),
         meta: helmet.meta.toString(),
         body: htmlBody,
-        scripts: manifestScripts,
         state: JSON.stringify(store.getState()).replace(/</g, '\\u003c'),
       });
 
