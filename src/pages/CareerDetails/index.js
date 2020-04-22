@@ -83,7 +83,7 @@ const ServicesSubPage = ({ content }) => {
   const formRender = () => <Form>
     <div className="row">
       <div className="col-12 col-md-3" />
-      <div className="col-12 col-md-6 px-md-0">
+      <div className="col-12 col-md-6">
         <div className="row">
           {/* First Name */}
           <div className="col-12 col-md-6">
@@ -130,11 +130,12 @@ const ServicesSubPage = ({ content }) => {
           </div>
           {/* CV */}
           <div className="col-12 col-md-6">
-            <label>Upload CV</label>
+            <label>CV Upload*</label>
             <InputField
               className="form-control"
               type="file"
               placeholder="No file chosen"
+              validate={(value) => (!value ? "Required" : false)}
               field="cv"
             />
           </div>
@@ -166,7 +167,7 @@ const ServicesSubPage = ({ content }) => {
                 <div className="send-rectangle">
                   <div className="row h-100">
                     <div className="col-6 mt-auto text-left">
-                      <p>Sending...</p>
+                      <p>Submitting...</p>
                     </div>
                     <div className="col-6 mt-auto d-flex justify-content-end">
                       <ArrowRight className="careers-details__arrow" />
@@ -186,7 +187,7 @@ const ServicesSubPage = ({ content }) => {
                 <div className="send-rectangle">
                   <div className="row h-100">
                     <div className="col-6 mt-auto text-left">
-                      <p>Send message</p>
+                      <p>Submit application</p>
                     </div>
                     <div className="col-6 mt-auto d-flex justify-content-end">
                       <ArrowRight className="careers-details__arrow" />
@@ -254,7 +255,7 @@ const ServicesSubPage = ({ content }) => {
                 </div>
                 {paragraphRender(careerDetails.third)}
                 {paragraphRender(careerDetails.fourth)}
-                <div className="career-details__body-requirements">
+                <div className="col-12 career-details__body-requirements">
                   <div className="row">
                     <div className="col-12 col-md-2" />
                     <div className="col-12 col-md-8">
