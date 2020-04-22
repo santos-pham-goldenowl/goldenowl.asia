@@ -64,14 +64,15 @@
       margin-right: 20px
 
   &__top-content-wrapper
-    background-image: url('../../assets/images/Footer/map.svg')
     text-align: left
+    background-image: url('../../assets/images/Footer/map.svg')
     background-color: $softGray
-    background-position: center
+    background-position-y: top
+    background-position-x: right
     background-repeat: no-repeat
+    background-size: 100%
     color: $darkGray
     @include responsive($screen: mobile)
-      background-position: top right
       background-size: 625px
       padding-top: 120px
       padding-bottom: 10px
@@ -113,11 +114,6 @@
     @include responsive($screen: large-desktop)
       font-size: 24px
       padding-bottom: 20px
-
-  &__copyright
-    background-color: $warmGray
-    color: $sweetGray
-    text-align: center
 
   .col-md-3
     @include responsive($screen: mobile)
@@ -281,6 +277,9 @@
       padding-bottom: 20px
 
   &__copyright
+    background-color: $warmGray
+    color: $sweetGray
+    text-align: center
     @include responsive($screen: mobile)
       padding-top: 12px
       padding-bottom: 13px

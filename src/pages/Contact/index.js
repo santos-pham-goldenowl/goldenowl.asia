@@ -329,7 +329,7 @@ const Contact = () => {
                 <div className="d-flex">
                   <CheckPoint />
                   <p className="contact-form__reason">
-                    Learn more about Golden Owl
+                    Schedule a demo
                   </p>
                 </div>
               </div>

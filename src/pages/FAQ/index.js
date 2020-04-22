@@ -92,12 +92,12 @@ const FAQ = () => {
       <div ref={pageContent} className="container-fluid no-padding">
         <FixedTopHeader />
         <FixedTopBreadCrumb pageContent={pageContent}>
-          <Link to="/fag">FAQ</Link>
+          <Link to="/faq">FAQ</Link>
         </FixedTopBreadCrumb>
         <MainHeader />
         <SubHeader />
         <BreadCrumb pageContent={pageContent}>
-          <Link to="/fag">FAQ</Link>
+          <Link to="/faq">FAQ</Link>
         </BreadCrumb>
         <section className="faq__opening">
           <h1>Frequently Asked Question</h1>
