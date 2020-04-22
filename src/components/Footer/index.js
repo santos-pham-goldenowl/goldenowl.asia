@@ -40,7 +40,7 @@ const Footer = () => {
             <div>
               <a href="/careers">Careers</a>
               <Link to="/contact-us">Contact us</Link>
-              {/* <a href="/faq">FAQ</a> */}
+              <a href="/faq">FAQ</a>
               {/* <Link to="/blog">Blog</Link> */}
             </div>
           </div>
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="col-6 col-md-3">
           <h5>Norway</h5>
           <p>
-            Romemyra 30, 7091{" "}            
+            Romemyra 30, 7091            
             <br className="d-block"/>
             Tiller
           </p>
@@ -149,7 +149,7 @@ const Footer = () => {
         <div className="col-6 col-md-3">
           <h5>London</h5>
           <p>
-            HERTFORDSHIRE OFFICE{" "}
+            HERTFORDSHIRE OFFICE
             <br />
             8 Parkway Porters Wood
             <br />
