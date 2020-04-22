@@ -109,7 +109,7 @@ const Career = ({ content }) => {
           <h2 className="careers__title">
             Careers at Golden Owl. From everything
           </h2>
-          <table className="table">
+          <table className="table mb-0">
             <tbody>
               {objectToArray(mockCareersData).map((item) => isMobile ? mobileRowRender(item) : defaultRowRender(item))}
             </tbody>
