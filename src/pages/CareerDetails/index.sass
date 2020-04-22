@@ -46,6 +46,7 @@
             margin-top: 30px
         p
             line-height: 1.67
+            font-family: ProximaNovaRegular
             @include responsive($screen: mobile)
                 font-size: 16px
             @include responsive($screen: tablet)
@@ -53,7 +54,7 @@
             @include responsive($screen: desktop)
                 font-size: 14px
             @include responsive($screen: large-desktop)
-                font-size: 18px
+                font-size: 16px
 
     .paragraph-title
         line-height: 1.5
@@ -99,6 +100,16 @@
             padding: 70px
         @include responsive($screen: large-desktop)
             padding: 100px
+
+        em
+            position: absolute
+            bottom: 0
+            right: 15px
+            font-size: 14px
+            font-family: ProximaNovaRegular
+
+    .error
+        color: red
 
     .job-status
         line-height: 1.25
