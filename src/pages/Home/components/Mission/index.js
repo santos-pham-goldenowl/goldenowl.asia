@@ -16,7 +16,7 @@ const Missions = () => {
   return (
     <section className="missions" style={sectionStyle}>
       <div className="row">
-        <div className="col-12 col-md-4 col-lg-5 pr-md-0">
+        <div className="col-12 col-md-5 pr-md-0">
           <h3 className="missions__title">Hello! We're Golden Owl</h3>
           <p>
             If you’re looking for a software company to transform your business to the next level, you've found the right partner to help.
