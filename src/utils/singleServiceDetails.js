@@ -80,7 +80,7 @@ const servicesDetails = {
     },
     fourth: {
       title: 'Seamless Integration with 50+ mobile platforms.',
-      content: 'Building mobile application projects on operator system Android and iOS has become successful thanks to programming languages such as Notejs, ObjC, etc. They are all play important role in the programming procedure.',
+      content: 'Building mobile application projects on operator system Android and iOS has become successful thanks to programming languages such as Notejs, ObjC, etc. They all play important role in the programming procedure.',
       logos: [
         {
           name: 'rails',
