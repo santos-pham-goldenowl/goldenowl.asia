@@ -12,12 +12,12 @@ const MockFAQRender = (i) => {
           as={Card.Header}
           eventKey={i}
         >
-          <p className="faq__question">
+          <div className="d-flex align-items-center">
             <span className={`faq__content-panel-status`}>
               <strong>{panelStatus ? '✖': '✚'}</strong>
             </span>
-            Lorem ipsum dolor sit amet, vix amet maluisset eu, ad probo posse?
-          </p>
+            <p className="faq__question">Lorem ipsum dolor sit amet, vix amet maluisset eu, ad probo posse?</p>
+          </div>
         </Accordion.Toggle>
         <Accordion.Collapse className eventKey={i}>
           <Card.Body className="faq__content-panel-body">
