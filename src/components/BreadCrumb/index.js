@@ -10,7 +10,7 @@ const BreadCrumb = ({ ref, children, pageContent }) => (
   <section id="breadcrumb" ref={ref} className="breadcrumb">
     <div className="breadcrumb__content">
       <Link to="/">
-        <div>
+        <div className="d-flex align-items-center">
           <img src={home} alt="home" loading="lazy" />
           <span>/</span>
         </div>
