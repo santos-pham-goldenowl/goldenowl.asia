@@ -221,14 +221,14 @@ const ServicesSubPage = ({ content }) => {
       <div ref={pageContent} className="container-fluid no-padding">
         <FixedTopHeader />
         <FixedTopBreadCrumb pageContent={pageContent}>
-          <Link to="/services">Careers</Link>
+          <Link to="/careers">Careers</Link>
           <span>/</span>
           <p>{content.key}</p>
         </FixedTopBreadCrumb>
         <MainHeader />
         <SubHeader />
         <BreadCrumb pageContent={pageContent}>
-          <Link to="/services">Careers</Link>
+          <Link to="/careers">Careers</Link>
           <span>/</span>
           <p>{content.key}</p>
         </BreadCrumb>
