@@ -26,7 +26,79 @@ import useScrollDirection from "../../utils/hooks/useScrollDirection";
 
 import "./index.sass";
 import goLogo from "../../assets/images/go.png";
-import companyLogo from '../../assets/images/GoldenOwlLogo.png';
+import companyLogo from "../../assets/images/GoldenOwlLogo.png";
+
+const SelectField = (props) => {
+  const [field, fieldOptions, { options, ...rest }] = splitFormProps(props);
+
+  const {
+    value = "",
+    setValue,
+    meta: { error, isTouched },
+  } = useField(field, fieldOptions);
+
+  const handleSelectChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  return (
+    <>
+      {isTouched && error ? <em className="error">{error}</em> : null}
+      <select {...rest} value={value} onChange={handleSelectChange}>
+        <option disabled value="" />
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </>
+  );
+};
+
+const InputField = React.forwardRef((props, ref) => {
+  const [field, fieldOptions, rest] = splitFormProps(props);
+
+  const {
+    meta: { error, isTouched, isValidating, message },
+    getInputProps,
+  } = useField(field, fieldOptions);
+
+  return (
+    <>
+      {isValidating ? (
+        <em className="validating">Validating...</em>
+      ) : isTouched && error ? (
+        <em className="error">{error}</em>
+      ) : message ? (
+        <em>{message}</em>
+      ) : null}
+      <input {...getInputProps({ ref, ...rest })} />
+    </>
+  );
+});
+
+const InputTextArea = React.forwardRef((props, ref) => {
+  const [field, fieldOptions, rest] = splitFormProps(props);
+
+  const {
+    meta: { error, isTouched, isValidating, message },
+    getInputProps,
+  } = useField(field, fieldOptions);
+
+  return (
+    <>
+      {isValidating ? (
+        <em className="validating">Validating...</em>
+      ) : isTouched && error ? (
+        <em className="error">{error}</em>
+      ) : message ? (
+        <em>{message}</em>
+      ) : null}
+      <textarea {...getInputProps({ ref, ...rest })} />
+    </>
+  );
+});
 
 const Contact = () => {
   const [modal, setModal] = useState();
@@ -49,6 +121,17 @@ const Contact = () => {
     }),
     []
   );
+  window.onscroll = () => stickyTrigger(scrollDirection);
+
+  const validateEmail = (email) => {
+    var re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const validatePhoneNum = (phoneNum) => {
+    var re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.[0-9]*$/;
+    return re.test(String(phoneNum).toLowerCase()) || !phoneNum;
+  };
 
   const {
     Form,
@@ -270,6 +353,7 @@ const Contact = () => {
     </Form>
   );
 
+
   return (
     <section className="contact-us">
       <Helmet>
@@ -277,9 +361,22 @@ const Contact = () => {
         <link href="https://www.goldenowl.asia/home/amp" rel="amphtml" />
         <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug" name="google-site-verification" />
-        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
-        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." property="og:description" />
+        <meta
+          content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug"
+          name="google-site-verification"
+        />
+        <meta
+          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+          name="description"
+        />
+        <meta
+          content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native"
+          property="og:title"
+        />
+        <meta
+          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+          property="og:description"
+        />
         <meta content={companyLogo} property="og:image" />
         <meta name="csrf-param" content="authenticity_token" />
         <meta
@@ -329,12 +426,16 @@ const Contact = () => {
                 <div className="d-flex">
                   <CheckPoint />
                   <p className="contact-form__reason">
-                    Learn more about Golden Owl
+                    Schedule a demo
                   </p>
                 </div>
               </div>
-              <div className="col-12 col-12 col-md-6 ml-auto">
-                {formRender()}
+              <div className="col-12 col-md-6 p-0 ml-auto">
+                  <iframe
+                    src="https://pipedrivewebforms.com/form/d4ad07bce7708484ea5575cea7d07e9a7536351"
+                    scrolling="no"
+                    seamless="seamless"
+                  />
               </div>
             </div>
           </div>

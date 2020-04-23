@@ -48,7 +48,7 @@ const MobileMenu = () => {
         <span />
       </div>
       {/* Menu content */}
-      <div className={`${state ? "" : "d-none "}mobile-menu`}>
+      <div className={`${state ? "mobile-menu-open ": ""}mobile-menu`}>
         <div className="mobile-menu__header">
           <img
             src={mobileMenuLogo}
@@ -125,7 +125,7 @@ const MobileMenu = () => {
         </div>
       </div>
       {/* Sub-Menu content */}
-      <div className={`${subMenuState ? "" : "d-none "}mobile-menu sub-menu`}>
+      <div className={`${subMenuState ? "mobile-menu-open ": ""}mobile-menu sub-menu`}>
         <div className="mobile-menu__header">
           <div
             className="mobile-menu__back d-flex"
