@@ -54,7 +54,7 @@ const AutoCarousel = (props) => {
             <img src={c.url} alt="study" loading="lazy" />
             <p className="auto-carousel__name-company">
               <span>{c.name}</span>
-              {" "},{" "}
+              ,{" "}
               {c.project}
             </p>
           </div>
@@ -89,7 +89,7 @@ const AutoCarousel = (props) => {
                 <img src={c.url} alt="study" loading="lazy" />
                 <p className="auto-carousel__name-company">
                   <span>{c.name}</span>
-                  ,
+                  ,{" "}
                   {c.project}
                 </p>
               </div>

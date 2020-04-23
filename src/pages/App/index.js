@@ -12,12 +12,16 @@ import Technology from '../Technology';
 import PortfolioSubPage from '../PortfolioSubPage';
 import Testimonials from '../Testimonials';
 import Portfolio from '../Portfolio';
+import FAQ from '../FAQ';
 import Blog from '../Blog';
+import Career from '../Career';
+import CareerDetails from '../CareerDetails';
 import NotFound from '../NotFound';
 
 import objectToArray from '../../utils/objectToArray';
 import portfolioDetails from '../../utils/portfolioDetails';
 import singleServiceDetails from '../../utils/singleServiceDetails';
+import mockCareersData from '../../utils/mockCareersData';
 
 import './index.sass';
 
@@ -59,6 +63,18 @@ const App = () => (
             />
           ))
         }
+        <Route exact path="/careers" component={Career} />
+        {
+          objectToArray(mockCareersData).map((career) => (
+            <Route
+              exact
+              key={career.key}
+              path={`/careers/${career.url}`}
+              component={() => <CareerDetails content={career} />}
+            />
+          ))
+        }
+        <Route exact path="/faq" component={FAQ} />
         <Route path="*" component={NotFound} />
       </Switch>
     </section>
