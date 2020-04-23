@@ -19,7 +19,7 @@ const Services = () => (
     </Link>
     <div className="ml-auto">
       <p>We are glad to connect —</p>
-      <p className="portfolio-header__email">claire@goldenowl.asia</p>
+      <p className="portfolio-header__email">hello@goldenowl.asia</p>
     </div>
   </header>
 );

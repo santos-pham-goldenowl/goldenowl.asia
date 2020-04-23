@@ -2,7 +2,7 @@ import React, { createRef, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import axios from "axios";
-import { useForm, useField, splitFormProps } from "react-form";
+import { useForm } from "react-form";
 import { Modal } from "react-bootstrap";
 
 import Footer from "../../components/Footer";
@@ -13,6 +13,11 @@ import CheckPoint from "../../components/CheckPoint";
 import ArrowRight from "../../components/ArrowRight";
 import FixedTopHeader from "../../components/FixedTopHeader";
 import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
+import {
+  SelectField,
+  InputField,
+  InputTextArea,
+} from "../../components/FormInputs";
 
 import stickyTrigger from "../../utils/stickyTrigger";
 import countries from "../../utils/countries";
@@ -149,12 +154,24 @@ const Contact = () => {
     debugForm: false,
   });
 
+  window.onscroll = () => stickyTrigger(scrollDirection);
+
+  const validateEmail = (email) => {
+    var re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const validatePhoneNum = (phoneNum) => {
+    var re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\.[0-9]*$/;
+    return re.test(String(phoneNum).toLowerCase()) || !phoneNum;
+  };
+
   const formRender = () => (
     <Form>
       <div className="contact-form__form">
         <div className="row">
           {/* First Name */}
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
             <label>First name*</label>
             <InputField
               className="form-control"
@@ -164,7 +181,7 @@ const Contact = () => {
             />
           </div>
           {/* Last Name */}
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
             <label>Last name*</label>
             <InputField
               className="form-control"
@@ -174,7 +191,7 @@ const Contact = () => {
             />
           </div>
           {/* Email */}
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
             <label>Email*</label>
             <InputField
               className="form-control"
@@ -197,7 +214,7 @@ const Contact = () => {
             />
           </div>
           {/* Phone Number */}
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
             <label>Phone number*</label>
             <InputField
               className="form-control"
@@ -219,7 +236,7 @@ const Contact = () => {
             />
           </div>
           {/* Company */}
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
             <label>Company</label>
             <InputField
               className="form-control"
@@ -228,7 +245,7 @@ const Contact = () => {
             />
           </div>
           {/* Countries */}
-          <div className="col-md-6">
+          <div className="col-12 col-md-6">
             <label>Country</label>
             <SelectField
               className="custom-select"
@@ -295,7 +312,7 @@ const Contact = () => {
             <div className="col-md-12 pr-0">
               <button
                 type="submit"
-                className="contact-form__send-wrapper w-100 d-flex btn btn-link p-0"
+                className="send-wrapper w-100 d-flex btn btn-link p-0"
               >
                 <div className="send-rectangle">
                   <div className="row h-100">
@@ -315,7 +332,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disable={!canSubmit}
-                className="contact-form__send-wrapper w-100 d-flex btn btn-link p-0"
+                className="send-wrapper w-100 d-flex btn btn-link p-0"
               >
                 <div className="send-rectangle">
                   <div className="row h-100">
@@ -409,7 +426,7 @@ const Contact = () => {
                 <div className="d-flex">
                   <CheckPoint />
                   <p className="contact-form__reason">
-                    Learn more about Golden Owl
+                    Schedule a demo
                   </p>
                 </div>
               </div>

@@ -38,16 +38,16 @@ const Footer = () => {
           <div className="col-6">
             <h3 className="footer__bottom-grid-title">Others</h3>
             <div>
-              {/* <a href="/careers">Careers</a> */}
+              <a href="/careers">Careers</a>
               <Link to="/contact-us">Contact us</Link>
-              {/* <a href="/faq">FAQ</a> */}
+              <a href="/faq">FAQ</a>
               {/* <Link to="/blog">Blog</Link> */}
             </div>
           </div>
           <div className="col-6">
             <div className="footer__contact row">
               <span className="col-md-6 footer__phone">(+84) 912 878985</span>
-              <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
+              <span className="col-md-5 footer__email">hello@goldenowl.asia</span>
             </div>
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
@@ -87,7 +87,7 @@ const Footer = () => {
       </div>
       <div className="footer__contact row">
         <span className="col-md-6 footer__phone">(+84) 912 878985</span>
-        <span className="col-md-5 footer__email">admin@goldenowl.asia</span>
+        <span className="col-md-5 footer__email">hello@goldenowl.asia</span>
       </div>
     </div>
     <div className="footer__bottom-grid-container">
@@ -115,9 +115,9 @@ const Footer = () => {
         <div className="col-md-2 pl-0">
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
-            {/* <a href="/careers">Careers</a> */}
+            <a href="/careers">Careers</a>
             <Link to="/contact-us">Contact us</Link>
-            {/* <a href="/faq">FAQ</a> */}
+            <a href="/faq">FAQ</a>
             {/* <Link to="/blog">Blog</Link> */}
           </div>
         </div>
@@ -127,20 +127,20 @@ const Footer = () => {
   )
 
   return (
-  <footer className="footer">
+  <footer id="footer" className="footer">
     <div className="footer__top-content-wrapper">
       <h4 className="footer__top-content-title">Areas we serve</h4>
       <div className="row">
         <div className="col-6 col-md-3 pr-5">
           <h5>Ho Chi Minh City</h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
-          <p>claire@goldenowl.asia</p>
+          <p>hello@goldenowl.asia</p>
           <p>(+84) 912 878985</p>
         </div>
         <div className="col-6 col-md-3">
           <h5>Norway</h5>
           <p>
-            Romemyra 30, 7091{" "}            
+            Romemyra 30, 7091            
             <br className="d-block"/>
             Tiller
           </p>
@@ -149,7 +149,7 @@ const Footer = () => {
         <div className="col-6 col-md-3">
           <h5>London</h5>
           <p>
-            HERTFORDSHIRE OFFICE{" "}
+            HERTFORDSHIRE OFFICE
             <br />
             8 Parkway Porters Wood
             <br />
@@ -170,7 +170,7 @@ const Footer = () => {
     </div>
     {isMobile ? mobileRender() : defaultRender()}
     <div className="footer__copyright">
-      <p>Copyright 2019 © Golden Owl Consulting</p>
+      <p>Copyright 2015 © Golden Owl Consulting</p>
     </div>
   </footer>
 );}

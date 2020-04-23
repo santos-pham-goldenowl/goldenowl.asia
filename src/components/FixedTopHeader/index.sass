@@ -24,13 +24,20 @@
   .dropdown
     position: relative
     display: inline-block
-
     &:hover
       .dropdown-content
-        display: block
+        @include responsive($screen: tablet)
+          height: 292px
+        @include responsive($screen: desktop)
+          height: 390px
+        @include responsive($screen: large-desktop)
+          height: 490px
 
     &-content
-      display: none
+      height: 0
+      transition: all 0.5s ease-in-out
+      transition-property: height
+      overflow: hidden
       position: absolute
       background-color: transparent
       z-index: 2
@@ -71,7 +78,7 @@
 
   &__text
     @include responsive($screen: tablet)
-      font-size: 8px
+      font-size: 12px
     @include responsive($screen: desktop)
       font-size: 12px
     @include responsive($screen: large-desktop)
