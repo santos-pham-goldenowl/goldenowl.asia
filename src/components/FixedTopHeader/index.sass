@@ -24,14 +24,6 @@
   .dropdown
     position: relative
     display: inline-block
-    &:hover
-      .dropdown-content
-        @include responsive($screen: tablet)
-          height: 292px
-        @include responsive($screen: desktop)
-          height: 390px
-        @include responsive($screen: large-desktop)
-          height: 490px
 
     &-content
       height: 0
@@ -50,6 +42,27 @@
       @include responsive($screen: large-desktop)
         padding-top: 30px
         left: -40px
+      &.dropdown-open
+        @include responsive($screen: tablet)
+          height: 292px
+        @include responsive($screen: desktop)
+          height: 390px
+        @include responsive($screen: large-desktop)
+          height: 490px
+
+  .services-dropdown-top-block
+    width: 100%
+    display: block
+    background-color: transparent
+    @include responsive($screen: tablet)
+      height: 16px
+      margin-bottom: -16px
+    @include responsive($screen: desktop)
+      height: 21px
+      margin-bottom: -21px
+    @include responsive($screen: large-desktop)
+      height: 30px
+      margin-bottom: -30px
 
   .no-hover-text-decoration
     &:hover, &:focus
