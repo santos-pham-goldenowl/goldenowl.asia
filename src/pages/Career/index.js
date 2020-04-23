@@ -40,9 +40,7 @@ const Career = ({ content }) => {
         <p className="careers__job">{item.key}</p>
       </td>
       <td className="third-col">
-        <span className="d-inline-block">
-          <img className="clock" src={clock} alt="GO-clock" />
-        </span>
+        <img className="clock" src={clock} alt="GO-clock" />
         <p className="d-inline careers__time">{item.time}</p>
       </td>
       <td className="fourth-col">
@@ -56,9 +54,7 @@ const Career = ({ content }) => {
       <td>
         {statusRender(item.filled)}
         <p className="careers__job">{item.key}</p>
-        <span className="d-inline-block">
-          <img className="clock" src={clock} alt="GO-clock" />
-        </span>
+        <img className="clock" src={clock} alt="GO-clock" />
         <p className="d-inline careers__time">{item.time}</p>
         <Link to={`careers/${item.url}`}>View details</Link>
       </td>
@@ -113,7 +109,7 @@ const Career = ({ content }) => {
           <h2 className="careers__title">
             Careers at Golden Owl. From everything
           </h2>
-          <table className="table">
+          <table className="table mb-0">
             <tbody>
               {objectToArray(mockCareersData).map((item) => isMobile ? mobileRowRender(item) : defaultRowRender(item))}
             </tbody>

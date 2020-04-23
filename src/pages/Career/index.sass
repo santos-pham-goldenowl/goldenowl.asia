@@ -40,6 +40,8 @@
     padding-right: 0 !important
     @include responsive($screen: mobile)
       height: 150px
+      padding-top: 20px !important
+      padding-bottom: 20px !important
     @include responsive($screen: tablet)
       height: 70px
     @include responsive($screen: desktop)
@@ -50,8 +52,9 @@
       color: $burntSienna !important
       font-family: ProximaNovaRegular
       line-height: 1.22
+      &:hover
+        text-decoration: underline !important
       @include responsive($screen: mobile)
-        line-height: 1.25
         font-size: 16px
       @include responsive($screen: tablet)
         font-size: 14px
@@ -59,13 +62,14 @@
         font-size: 14px
       @include responsive($screen: large-desktop)
         font-size: 18px
+      &:hover
+        text-decoration: underline !important
 
   &__job
     font-family: ProximaNovaBold
     line-height: 1.23
     color: $darkGray
     @include responsive($screen: mobile)
-      line-height: 1.25
       font-size: 24px
       margin-bottom: 15px
     @include responsive($screen: tablet)
@@ -80,7 +84,6 @@
     font-family: ProximaNovaRegular
     line-height: 1.22
     @include responsive($screen: mobile)
-      line-height: 1.25
       font-size: 16px
       margin-left: 10px
       margin-right: 50px
@@ -145,11 +148,13 @@
 
   .job-status
     line-height: 1.25
+    font-family: ProximaNovaRegular
     color: $white
     width: fit-content
     @include responsive($screen: mobile)
+      line-height: 1.24
       border-radius: 17.3px
-      padding: 7.5px 15px
+      padding: 7px 15px
       font-size: 12px
       margin-bottom: 15px
     @include responsive($screen: tablet)
