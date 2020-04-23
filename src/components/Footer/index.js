@@ -131,14 +131,14 @@ const Footer = () => {
     <div className="footer__top-content-wrapper">
       <h4 className="footer__top-content-title">Areas we serve</h4>
       <div className="row">
-        <div className="col-6 col-md-3 pr-5">
-          <h5>Ho Chi Minh City</h5>
+        <div className="col-6 col-md-3 pr-4">
+          <h5 className="d-flex align-items-start">Ho Chi Minh City{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg" alt="GO-Vietnam"/></h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
           <p>hello@goldenowl.asia</p>
           <p>(+84) 912 878985</p>
         </div>
         <div className="col-6 col-md-3">
-          <h5>Norway</h5>
+          <h5 className="d-flex align-items-start">Norway{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/no.svg" alt="Go-Norway"/></h5>
           <p>
             Romemyra 30, 7091            
             <br className="d-block"/>
@@ -147,7 +147,7 @@ const Footer = () => {
           <p>(+47) 95869324</p>
         </div>
         <div className="col-6 col-md-3">
-          <h5>London</h5>
+          <h5 className="d-flex align-items-start">London{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" alt="United Kingdom Flag"/></h5>
           <p>
             HERTFORDSHIRE OFFICE
             <br />
@@ -158,7 +158,7 @@ const Footer = () => {
           <p>(+0345) 456 0522</p>
         </div>
         <div className="col-6 col-md-3">
-          <h5>Sydney</h5>
+          <h5 className="d-flex align-items-start">Sydney{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/au.svg" alt="GO-Australia"/></h5>
           <p>
             Suite 8, Level 2, 1 Box Road
             <br />
