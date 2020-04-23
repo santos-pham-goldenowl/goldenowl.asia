@@ -23,17 +23,28 @@ class FixedTopHeader extends Component {
         <div className="dropdown">
           <div
             className="align-items-center fixed-top-header__button"
-            id="services-dropdown"
           >
             <Link
               className="d-flex align-items-center no-hover-text-decoration"
               to="/services"
+              onMouseOver={() => document.getElementById("fixed-top-services-dropdown").classList.add("dropdown-open")}
+              onMouseLeave={() => document.getElementById("fixed-top-services-dropdown").classList.remove("dropdown-open")}
             >
               <h4 className="fixed-top-header__text">Services</h4>
               <img className="arrow-down" src={arrowDown} alt="arrow-down" />
             </Link>
+            <div 
+              className="services-dropdown-top-block"
+              onMouseOver={() => document.getElementById("fixed-top-services-dropdown").classList.add("dropdown-open")}
+              onMouseLeave={() => document.getElementById("fixed-top-services-dropdown").classList.remove("dropdown-open")}
+            />  
           </div>
-          <div className="dropdown-content">
+          <div
+            id="fixed-top-services-dropdown" 
+            className="dropdown-content"
+            onMouseOver={() => document.getElementById("fixed-top-services-dropdown").classList.add("dropdown-open")}
+            onMouseLeave={() => document.getElementById("fixed-top-services-dropdown").classList.remove("dropdown-open")}
+          >
             <div className="services__items">
               {ServicesData.map((service) => (
                 <Link key={service.link} to={`/services/${service.link}`}>
