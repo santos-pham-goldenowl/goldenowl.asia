@@ -69,7 +69,7 @@
     a
       color: $darkGray
     @include responsive($screen: tablet)
-      font-size: 10px
+      font-size: 12px
       padding-left: 11px
       &:last-child
         padding-left: 16px
@@ -105,13 +105,19 @@
   position: fixed
   left: 0
   top: 0
-  height: 120%
+  height: 0
   width: 100%
+  height: 0
+  transition: all 1.5s ease-in-out
+  transition-property: height
+  overflow: hidden
   z-index: 2
   background-color: $yellow
   overflow-y: auto
   display: none
   font-size: 18px
+  &.mobile-menu-open
+    height: 120%
   @include responsive($screen: mobile)
     display: block
   > div

@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section className="contact">
       <h3>Get in touch via email</h3>
-      <h3 className="text-xl contact__email">claire@goldenowl.asia</h3>
+      <h3 className="text-xl contact__email">hello@goldenowl.asia</h3>
       {
       isMobile
         ? (

@@ -1,8 +1,8 @@
-import circle from '../assets/images/service/circle.png';
-import flag from '../assets/images/service/flag.png';
-import note from '../assets/images/service/note.png';
-import phone from '../assets/images/service/phone.png';
-import web from '../assets/images/service/web.png';
+import uiux from '../assets/images/service/UIUX.svg';
+import team from '../assets/images/service/Team.svg';
+import management from '../assets/images/service/Management.svg';
+import mobile from '../assets/images/service/Mobile.svg';
+import web from '../assets/images/service/Web.svg';
 
 const ServicesData = [
   {
@@ -13,25 +13,25 @@ const ServicesData = [
   },
   {
     name: 'Mobile development',
-    url: phone,
+    url: mobile,
     description: 'Mobile responsive',
     link: 'mobile-development',
   },
   {
     name: 'UX UI Design',
-    url: circle,
+    url: uiux,
     description: 'Color harmony and convenient UX',
     link: 'ux-ui-design',
   },
   {
     name: 'Project management',
-    url: note,
+    url: management,
     description: 'Responsibility and carefulness',
     link: 'project-management',
   },
   {
     name: 'Development team',
-    url: flag,
+    url: team,
     description: 'Professionality and outstanding developers',
     link: 'development-team',
   },

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
 
-import goldenOwl from '../../assets/images/golden_owl.png';
+import goldenOwl from '../../assets/images/golden_owl.svg';
 import arrowDown from '../../assets/images/chevron-down-solid.svg';
 import './index.sass';
 

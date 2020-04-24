@@ -2,21 +2,35 @@
 @import 'styles/mixins'
 
 .check-point
-  width: 12px
-  height: 7px
   border-top: 2px solid $green
   border-right: 2px solid $green
   position: relative
   top: -3px
   bottom: 0
   transform: rotate(135deg)
+  @include responsive($screen: mobile)
+    width: 15px
+    height: 8px
+  @include responsive($screen: tablet)
+    width: 10px
+    height: 6px
+  @include responsive($screen: desktop)
+    width: 10px
+    height: 6px
+  @include responsive($screen: large-desktop)
+    width: 15px
+    height: 8px
 
 .check-point-wrapper
   @include responsive($screen: mobile)
-    padding-top: 12px
+    padding-top: 10px
+    margin-right: 17px
   @include responsive($screen: tablet)
+    margin-right: 11px
     padding-top: 10px
   @include responsive($screen: desktop)
-    padding-top: 11px
+    margin-right: 11px
+    padding-top: 10px
   @include responsive($screen: large-desktop)
-    padding-top: 13px
+    margin-right: 15px
+    padding-top: 10px

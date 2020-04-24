@@ -1,0 +1,177 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.careers
+  white-space: pre-line
+
+  header, .breadcrumb, section
+    background-color: $white
+
+  &__list
+    @include responsive($screen: mobile)
+      padding: 30px 0 50px 0
+    @include responsive($screen: tablet)
+      padding: 40px 102px 50px 104px !important
+    @include responsive($screen: desktop)
+      padding: 56px 144px 70px 144px !important
+    @include responsive($screen: large-desktop)
+      padding: 80px calc(#{$desktopPadding} + 105px) 100px calc(#{$desktopPadding} + 105px) !important
+
+  &__title
+    line-height: 1.35
+    @include responsive($screen: mobile)
+      line-height: 1.36
+      font-size: 28px
+      margin-bottom: 10px
+    @include responsive($screen: tablet)
+      font-size: 24px
+      margin-bottom: 26px
+    @include responsive($screen: desktop)
+      font-size: 32px
+      margin-bottom: 36px
+    @include responsive($screen: large-desktop)
+      font-size: 46px
+      margin-bottom: 50px
+
+  td
+    border-top: none !important
+    border-bottom: 1px solid #dee2e6
+    padding-left: 0 !important
+    padding-right: 0 !important
+    @include responsive($screen: mobile)
+      height: 150px
+      padding-top: 20px !important
+      padding-bottom: 20px !important
+    @include responsive($screen: tablet)
+      height: 70px
+    @include responsive($screen: desktop)
+      height: 70px
+    @include responsive($screen: large-desktop)
+      height: 100px
+    a
+      color: $burntSienna !important
+      font-family: ProximaNovaRegular
+      line-height: 1.22
+      &:hover
+        text-decoration: underline !important
+      @include responsive($screen: mobile)
+        font-size: 16px
+      @include responsive($screen: tablet)
+        font-size: 14px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 18px
+      &:hover
+        text-decoration: underline !important
+
+  &__job
+    font-family: ProximaNovaBold
+    line-height: 1.23
+    color: $darkGray
+    @include responsive($screen: mobile)
+      font-size: 24px
+      margin-bottom: 15px
+    @include responsive($screen: tablet)
+      font-size: 14px
+    @include responsive($screen: desktop)
+      font-size: 18px
+    @include responsive($screen: large-desktop)
+      font-size: 26px
+
+  &__time
+    color: $darkGray
+    font-family: ProximaNovaRegular
+    line-height: 1.22
+    @include responsive($screen: mobile)
+      font-size: 16px
+      margin-left: 10px
+      margin-right: 50px
+    @include responsive($screen: tablet)
+      font-size: 14px
+      margin-left: 16px
+    @include responsive($screen: desktop)
+      font-size: 14px
+      margin-left: 16px
+    @include responsive($screen: large-desktop)
+      font-size: 18px
+      margin-left: 20px
+
+  .first-col
+    width: calc( 210/1030*100% )
+    @include responsive($screen: tablet)
+      padding-top: 20px
+    @include responsive($screen: desktop)
+      padding-top: 20px
+    @include responsive($screen: large-desktop)
+      padding-top: 30px
+
+  .second-col
+    align-items: center
+    width: calc( 525/1030*100% )
+    @include responsive($screen: tablet)
+      width: calc( 475/1030*100% )
+      padding-top: 26px
+    @include responsive($screen: desktop)
+      padding-top: 24px
+    @include responsive($screen: large-desktop)
+      padding-top: 34px
+
+  .third-col
+    max-width: fit-content
+    @include responsive($screen: tablet)
+      padding-top: 22px
+    @include responsive($screen: desktop)
+      padding-top: 28px
+    @include responsive($screen: large-desktop)
+      padding-top: 39px
+
+  .fourth-col
+    text-align: end
+    @include responsive($screen: tablet)
+      padding-top: 22px
+    @include responsive($screen: desktop)
+      padding-top: 28px
+    @include responsive($screen: large-desktop)
+      padding-top: 39px
+
+  .clock
+    align-self: center
+    @include responsive($screen: mobile)
+      width: 16px
+    @include responsive($screen: tablet)
+      width: 14px
+    @include responsive($screen: desktop)
+      width: 14px
+    @include responsive($screen: large-desktop)
+      width: 16px
+
+  .job-status
+    line-height: 1.25
+    font-family: ProximaNovaRegular
+    color: $white
+    width: fit-content
+    @include responsive($screen: mobile)
+      line-height: 1.24
+      border-radius: 17.3px
+      padding: 7px 15px
+      font-size: 12px
+      margin-bottom: 15px
+    @include responsive($screen: tablet)
+      border-radius: 18px
+      padding: 8px 14px 6px 14px
+      font-size: 14px
+    @include responsive($screen: desktop)
+      border-radius: 18px
+      padding: 8px 14px 6px 14px
+      font-size: 14px
+    @include responsive($screen: large-desktop)
+      border-radius: 23px
+      padding: 10px 20px 10px 20px
+      font-size: 16px
+
+  .filled-job
+    background-color: $gray
+
+  .open-job
+    background-color: $green
