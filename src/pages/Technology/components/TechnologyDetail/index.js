@@ -1,5 +1,6 @@
 import React from 'react';
-import TabContainer from '../../../../components/Tabs/TechTabs';
+
+import SlideTab from '../../../../components/Tabs/SlideTab';
 
 import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
 import './index.sass';
@@ -21,7 +22,7 @@ const TechnologyDetail = () => {
           the state of the art.
         </p>
         <div className="col-12">
-          <TabContainer />
+          <SlideTab />
         </div>
       </div>
     </section>
