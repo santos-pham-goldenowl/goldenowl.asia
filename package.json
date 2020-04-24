@@ -44,6 +44,7 @@
     "react-multi-carousel": "^2.5.0",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
+    "react-router-sitemap": "^1.2.0",
     "react-scripts": "^3.4.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
@@ -53,7 +54,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "cross-env NODE_ENV=production node ./server/index.js"
+    "start": "cross-env NODE_ENV=production node ./server/index.js",
+    "sitemap": "cross-env SITE_URL='https://goldenowl.asia' node ./server/sitemap/generator.js"
   },
   "eslintConfig": {
     "extends": "react-app"
