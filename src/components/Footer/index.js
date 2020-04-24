@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 import socialIcons from '../../utils/socialIcons';
 
 import go from '../../assets/images/golden_owl.png';
+import vnflag from '../../assets/images/vn.svg'
+import gbflag from '../../assets/images/gb.svg'
+import noflag from '../../assets/images/no.svg'
+import auflag from '../../assets/images/au.svg'
+
 import './index.sass';
 import useMobileWidth from '../../utils/hooks/useMobileWidth';
 
@@ -132,13 +137,13 @@ const Footer = () => {
       <h4 className="footer__top-content-title">Areas we serve</h4>
       <div className="row">
         <div className="col-6 col-md-3 pr-4">
-          <h5 className="d-flex align-items-start">Ho Chi Minh City{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/vn.svg" alt="GO-Vietnam"/></h5>
+          <h5 className="d-flex align-items-start">Ho Chi Minh City<img className="flag ml-2" src={vnflag} alt="GO-Vietnam"/></h5>
           <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
           <p>hello@goldenowl.asia</p>
           <p>(+84) 912 878985</p>
         </div>
         <div className="col-6 col-md-3">
-          <h5 className="d-flex align-items-start">Norway{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/no.svg" alt="Go-Norway"/></h5>
+          <h5 className="d-flex align-items-start">Norway<img className="flag ml-2" src={noflag} alt="Go-Norway"/></h5>
           <p>
             Romemyra 30, 7091            
             <br className="d-block"/>
@@ -147,7 +152,7 @@ const Footer = () => {
           <p>(+47) 95869324</p>
         </div>
         <div className="col-6 col-md-3">
-          <h5 className="d-flex align-items-start">London{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/gb.svg" alt="United Kingdom Flag"/></h5>
+          <h5 className="d-flex align-items-start">London<img className="flag ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
           <p>
             HERTFORDSHIRE OFFICE
             <br />
@@ -158,7 +163,7 @@ const Footer = () => {
           <p>(+0345) 456 0522</p>
         </div>
         <div className="col-6 col-md-3">
-          <h5 className="d-flex align-items-start">Sydney{" "}<img className="flag ml-2" src="https://lipis.github.io/flag-icon-css/flags/4x3/au.svg" alt="GO-Australia"/></h5>
+          <h5 className="d-flex align-items-start">Sydney<img className="flag ml-2" src={auflag} alt="GO-Australia"/></h5>
           <p>
             Suite 8, Level 2, 1 Box Road
             <br />
