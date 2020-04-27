@@ -31,4 +31,4 @@ if (root.hasChildNodes() === true) {
   render(Application, root);
 }
 
-serviceWorker.unregister();
+serviceWorker.register();
