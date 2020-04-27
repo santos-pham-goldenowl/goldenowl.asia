@@ -1,0 +1,81 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+#wrap
+    width: 100%
+    margin: 0 auto
+    margin-top: 10px
+    overflow: hidden
+
+.tab
+    cursor: pointer
+    display: inline-block
+    width: fit-content
+    @include responsive($screen: mobile)
+        padding: 0 8.5px 10px 8.5px
+    @include responsive($screen: tablet)
+        padding: 0 25px 15px 25px
+    @include responsive($screen: desktop)
+        padding: 0 35px 21px 35px
+    @include responsive($screen: large-desktop)
+        padding: 0 50px 30px 50px
+
+.selected
+    border-bottom: 1px solid $yellow
+    p
+        color: $darkGray
+
+#container
+    position: relative
+    width: 500%
+    height: fit-content
+    overflow: hidden
+    clear: left
+
+.box
+    display: inline-block
+    width: 20%
+    margin-left: 2.5%
+    margin-right: 2.5%
+    height: fit-content
+
+#first
+    top: 0px
+    left: 2.5%
+
+#second
+    top: 0px
+    left: 27.5%
+
+#third
+    top: 0px
+    left: 52.5%
+
+#four
+    top: 0px
+    left: 77.5%
+
+#slide
+    transition: transform 2s ease-in-out 0s
+    -moz-transition: -moz-transform 2s ease-in-out 0s
+    -webkit-transition: -webkit-transform 2s ease-in-out 0s
+
+.move-to-second
+    transform: translateX(-27.5%)
+    -moz-transform: translateX(-27.5%)
+    -webkit-transform: translateX(-27.5%)
+
+.move-to-third
+    transform: translateX(-52.5%)
+    -moz-transform: translateX(-52.5%)
+    -webkit-transform: translateX(-52.5%)
+
+.move-to-first
+    transform: translateX(-2.5%)
+    -moz-transform: translateX(-2.5%)
+    -webkit-transform: translateX(-2.5%)
+
+.move-to-four
+    transform: translateX(-77.5%)
+    -moz-transform: translateX(-77.5%)
+    -webkit-transform: translateX(-77.5%)

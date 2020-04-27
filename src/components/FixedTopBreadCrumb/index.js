@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ReadingProgress from '../ReadingProgress';
 
-import home from '../../assets/images/home-icon.png';
+import home from '../../assets/images/home-icon.svg';
 import './index.sass';
 
 const FixedTopBreadCrumb = ({ children, pageContent }) => (

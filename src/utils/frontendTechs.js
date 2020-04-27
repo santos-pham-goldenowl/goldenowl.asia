@@ -1,9 +1,9 @@
-import html from '../assets/images/html.png';
-import css from '../assets/images/css.png';
-import javascript from '../assets/images/javascript.png';
-import react from '../assets/images/react.png';
-import typescript from '../assets/images/typescript.png';
-import angular from '../assets/images/angular.png';
+import html from '../assets/images/technology/FrontEnd/html.svg';
+import css from '../assets/images/technology/FrontEnd/css.svg';
+import javascript from '../assets/images/technology/FrontEnd/javascript.svg';
+import react from '../assets/images/technology/FrontEnd/react.svg';
+import typescript from '../assets/images/technology/FrontEnd/typescript.svg';
+import angular from '../assets/images/technology/FrontEnd/angular.svg';
 
 const FrontEndTechs = [
   {
