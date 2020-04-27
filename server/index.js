@@ -59,3 +59,7 @@ require('@babel/register')({
 
 // Now that the nonsense is over... load up the server entry point
 require('./server');
+
+if (process.env.NODE_ENV === 'production') {
+  require('offline-plugin/runtime').install();
+}
