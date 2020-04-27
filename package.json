@@ -52,7 +52,8 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "webpack": "4.42.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "offline-plugin": "^5.0.7"
   },
   "scripts": {
     "dev": "react-scripts start",
@@ -83,7 +84,6 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.1",
-    "offline-plugin": "^5.0.7"
+    "eslint-plugin-react-hooks": "^2.5.1"
   }
 }
