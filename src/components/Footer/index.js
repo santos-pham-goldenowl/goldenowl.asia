@@ -8,6 +8,7 @@ import vnflag from '../../assets/images/vn.svg'
 import gbflag from '../../assets/images/gb.svg'
 import noflag from '../../assets/images/no.svg'
 import auflag from '../../assets/images/au.svg'
+import sgflag from '../../assets/images/sg.svg'
 
 import './index.sass';
 import useMobileWidth from '../../utils/hooks/useMobileWidth';
@@ -51,8 +52,7 @@ const Footer = () => {
           </div>
           <div className="col-6">
             <div className="footer__contact row">
-              <span className="col-md-6 footer__phone">(+84) 912 878985</span>
-              <span className="col-md-5 footer__email">hello@goldenowl.asia</span>
+              <span className="col-12 footer__phone">(+84) 912 878985</span>
             </div>
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
@@ -91,8 +91,7 @@ const Footer = () => {
         ))}
       </div>
       <div className="footer__contact row">
-        <span className="col-md-6 footer__phone">(+84) 912 878985</span>
-        <span className="col-md-5 footer__email">hello@goldenowl.asia</span>
+        <span className="col-12 footer__phone">(+84) 912 878985</span>
       </div>
     </div>
     <div className="footer__bottom-grid-container">
@@ -134,16 +133,19 @@ const Footer = () => {
   return (
   <footer id="footer" className="footer">
     <div className="footer__top-content-wrapper">
-      <h4 className="footer__top-content-title">Areas we serve</h4>
+      <h4 className="footer__top-content-title">Office locations</h4>
       <div className="row">
-        <div className="col-6 col-md-3 pr-4">
-          <h5 className="d-flex align-items-start">Ho Chi Minh City<img className="flag ml-2" src={vnflag} alt="GO-Vietnam"/></h5>
-          <p>MB Bank Building, 538 Cach Mang Thang Tam Ward 11, District 3</p>
-          <p>hello@goldenowl.asia</p>
+        <div className="col-6 col-md-4 pr-3 pr-md-0">
+          <h5 className="d-flex align-items-start">Ho Chi Minh City<img className="flag shadow-sm ml-2" src={vnflag} alt="GO-Vietnam"/></h5>
+          <p>
+            MB Bank Building, 538 Cach Mang Thang Tam
+            <br/> 
+            Ward 11, District 3
+          </p>
           <p>(+84) 912 878985</p>
         </div>
-        <div className="col-6 col-md-3">
-          <h5 className="d-flex align-items-start">Norway<img className="flag ml-2" src={noflag} alt="Go-Norway"/></h5>
+        <div className="col-6 col-md-4">
+          <h5 className="d-flex align-items-start">Norway<img className="flag shadow-sm ml-2" src={noflag} alt="Go-Norway"/></h5>
           <p>
             Romemyra 30, 7091            
             <br className="d-block"/>
@@ -151,8 +153,8 @@ const Footer = () => {
           </p>
           <p>(+47) 95869324</p>
         </div>
-        <div className="col-6 col-md-3">
-          <h5 className="d-flex align-items-start">London<img className="flag ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
+        <div className="col-6 col-md-4">
+          <h5 className="d-flex align-items-start">London<img className="flag shadow-sm ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
           <p>
             HERTFORDSHIRE OFFICE
             <br />
@@ -162,14 +164,22 @@ const Footer = () => {
           </p>
           <p>(+0345) 456 0522</p>
         </div>
-        <div className="col-6 col-md-3">
-          <h5 className="d-flex align-items-start">Sydney<img className="flag ml-2" src={auflag} alt="GO-Australia"/></h5>
+        <div className="col-6 col-md-4">
+          <h5 className="d-flex align-items-start">Sydney<img className="flag shadow-sm ml-2" src={auflag} alt="GO-Australia"/></h5>
           <p>
             Suite 8, Level 2, 1 Box Road
             <br />
             Taren Point, NSW 2229
           </p>
           <p>(+02) 8212 4222</p>
+        </div>
+        <div className="col-6 col-md-4">
+          <h5 className="d-flex align-items-start">Singapore<img className="flag shadow-sm ml-2" src={sgflag} alt="GO-Australia"/></h5>
+          <p>
+            Block 333A
+            <br />
+            Yishun Street 31 #15-207
+          </p>
         </div>
       </div>
     </div>
