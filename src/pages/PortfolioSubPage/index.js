@@ -4,10 +4,21 @@ import Helmet from 'react-helmet';
 import PortfolioHeader from '../../components/PortfolioHeader';
 import PortfolioInteresting from '../../components/PortfolioInteresting';
 
+import randomProjects from '../../utils/portfolioTabContent'
+
 import companyLogo from '../../assets/images/GoldenOwlLogo.png';
 import './index.sass';
+import { Link } from 'react-router-dom';
 
-const Services = ({ content }) => (
+const PortfolioSubPage = ({ content }) => { 
+  const previousProjectUrl = !!document ? document.referrer.toString().split("/") : '';
+  const filteredProjects = randomProjects.filter(item => !item.content.includes(content.key))
+  previousProjectUrl.includes("portfolio") && filteredProjects.filter(item => item.url !== previousProjectUrl[previousProjectUrl.length - 1])
+  const randomProject = filteredProjects[Math.floor(Math.random()*filteredProjects.length)]
+  const randomProjectText = randomProject.content.split(" – ");
+  const randomProjectUrl = randomProject.url;
+
+  return (
   <section>
     <Helmet>
       <title>{`${content.key} - Golden Owl`}</title>
@@ -15,7 +26,7 @@ const Services = ({ content }) => (
       <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug" name="google-site-verification" />
-      <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
+      <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our PortfolioSubPages include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
       <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." property="og:description" />
       <meta content={companyLogo} property="og:image" />
       <meta name="csrf-param" content="authenticity_token" />
@@ -62,16 +73,18 @@ const Services = ({ content }) => (
             </p>
           </div>
           <div className="col-12">
-            <div className="portfolio-details__next-project">
-              <h3>Up next: Personifi</h3>
-              <p>Where to find the most suitable personal loan</p>
-            </div>
+            <Link to={`/portfolio/${randomProjectUrl}`}>
+              <div className="portfolio-details__next-project">
+                <h3>{`Up next: ${randomProjectText[0]}`}</h3>
+                <p>{randomProjectText[1]}</p>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
       <PortfolioInteresting />
     </div>
   </section>
-);
+);}
 
-export default Services;
+export default PortfolioSubPage;
