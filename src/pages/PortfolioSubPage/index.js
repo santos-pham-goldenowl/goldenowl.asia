@@ -10,8 +10,8 @@ import companyLogo from '../../assets/images/GoldenOwlLogo.png';
 import './index.sass';
 import { Link } from 'react-router-dom';
 
-const PortfolioSubPage = ({ content }) => {
-  const previousProjectUrl = window.document.referrer.toString().split("/");
+const PortfolioSubPage = ({ content }) => { 
+  const previousProjectUrl = !!document ? document.referrer.toString().split("/") : '';
   const filteredProjects = randomProjects.filter(item => !item.content.includes(content.key))
   previousProjectUrl.includes("portfolio") && filteredProjects.filter(item => item.url !== previousProjectUrl[previousProjectUrl.length - 1])
   const randomProject = filteredProjects[Math.floor(Math.random()*filteredProjects.length)]
