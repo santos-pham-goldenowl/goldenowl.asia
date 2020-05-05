@@ -14,19 +14,20 @@ import "./index.sass";
 const PortfolioSubPage = ({ content }) => {
   const [prevProject, setPrevProject] = useLocalStorage("prevProject", "none");
 
+  const filteredRandomProject = [...randomProjects]
+
   // exclude current & previous
-  for (let i = randomProjects.length - 1; i >= 0; i--) {
+  for (let i = filteredRandomProject.length - 1; i >= 0; i--) {
     if (
-      randomProjects[i].content.includes(content.key) ||
-      randomProjects[i].content.includes(prevProject)
+      filteredRandomProject[i].content.includes(content.key) ||
+      filteredRandomProject[i].content.includes(prevProject)
     ) {
-      randomProjects.splice(i, 1);
+      filteredRandomProject.splice(i, 1);
     }
   }
 
   const randomProject =
-    randomProjects[Math.floor(Math.random() * randomProjects.length)];
-  console.log("PortfolioSubPage -> randomProjects", randomProjects);
+    filteredRandomProject[Math.floor(Math.random() * filteredRandomProject.length)];
 
   const randomProjectText = randomProject.content.split(" – ");
   const randomProjectUrl = randomProject.url;

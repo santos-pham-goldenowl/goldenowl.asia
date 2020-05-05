@@ -8,7 +8,7 @@ import './index.sass';
 
 const ServicesDetail = () => (
   <section className="services-detail">
-    <div className="row justify-content-center services-detail__links">
+    <div className="row services-detail__links">
       {objectToArray(ServicesDetailContent).map((content) => (
         <div key={content.key} className="col-12 col-md-4 link-wrapper">
           <Link to={`/services/${content.link}`}>

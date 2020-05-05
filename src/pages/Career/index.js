@@ -32,7 +32,7 @@ const Career = ({ content }) => {
     ) : (
       <div className="job-status open-job">Open</div>
     );
-  
+
   const defaultRowRender = (item) => (
     <tr>
       <td className="first-col">{statusRender(item.filled)}</td>
@@ -44,10 +44,15 @@ const Career = ({ content }) => {
         <p className="d-inline careers__time">{item.time}</p>
       </td>
       <td className="fourth-col">
-        <Link to={`careers/${item.url}`}>View details</Link>
+        <Link
+          to={`careers/${item.url}`}
+          onClick={(e) => item.filled && e.preventDefault()}
+        >
+          View details
+        </Link>
       </td>
     </tr>
-  )
+  );
 
   const mobileRowRender = (item) => (
     <tr>
@@ -56,11 +61,15 @@ const Career = ({ content }) => {
         <p className="careers__job">{item.key}</p>
         <img className="clock" src={clock} alt="GO-clock" />
         <p className="d-inline careers__time">{item.time}</p>
-        <Link to={`careers/${item.url}`}>View details</Link>
+        <Link
+          to={`careers/${item.url}`}
+          onClick={(e) => item.filled && e.preventDefault()}
+        >
+          View details
+        </Link>
       </td>
     </tr>
-  )
-
+  );
 
   return (
     <section className="careers">
@@ -98,12 +107,12 @@ const Career = ({ content }) => {
       <div ref={pageContent} className="container-fluid no-padding">
         <FixedTopHeader />
         <FixedTopBreadCrumb pageContent={pageContent}>
-          <Link to="/services">Careers</Link>
+          <Link to="/careers">Careers</Link>
         </FixedTopBreadCrumb>
         <MainHeader />
         <SubHeader />
         <BreadCrumb pageContent={pageContent}>
-          <Link to="/services">Careers</Link>
+          <Link to="/careers">Careers</Link>
         </BreadCrumb>
         <section className="careers__list">
           <h2 className="careers__title">
@@ -111,7 +120,9 @@ const Career = ({ content }) => {
           </h2>
           <table className="table mb-0">
             <tbody>
-              {objectToArray(mockCareersData).map((item) => isMobile ? mobileRowRender(item) : defaultRowRender(item))}
+              {objectToArray(mockCareersData).map((item) =>
+                isMobile ? mobileRowRender(item) : defaultRowRender(item)
+              )}
             </tbody>
           </table>
         </section>

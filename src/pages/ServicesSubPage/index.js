@@ -58,7 +58,7 @@ const ServicesSubPage = ({ content }) => {
           <p>{content.key}</p>
         </BreadCrumb>
         <section className="service__first-content">
-          <h1>{content.key}</h1>
+          <h1>{!!content.first.title ? content.first.title : content.key}</h1>
           <p className="pb-0"><strong>{content.first.highlight}</strong></p>
           <p>{content.first.content}</p>
         </section>
@@ -78,7 +78,7 @@ const ServicesSubPage = ({ content }) => {
           </div>
         </section>
         <section className="service__second-content">
-          <h2>{content.second.title}</h2>
+          <h1>{content.second.title}</h1>
           <p>{content.second.content}</p>
         </section>
         <section className="service__slogan">
@@ -155,14 +155,14 @@ const ServicesSubPage = ({ content }) => {
             {objectToArray(content.navs).map((image) => (
               <div
                 key={image.title}
-                className="col-12 col-md-6 service__other-service-wrapper"
+                className="col-12 col-md-4 service__other-service-wrapper"
               >
                 <Link
                   className="service__other-service"
                   to={`/services/${image.url}`}
                 >
                   <div className="col-4 col-md-3">
-                    <img src={image.imgUrl} alt={image.title} />
+                    <img id={image.url} src={image.imgUrl} alt={image.title} />
                   </div>
                   <div className="col-8 col-md-9">
                     <h4 className="">{image.title}</h4>

@@ -42,10 +42,12 @@ class FixedTopHeader extends Component {
           <div
             id="fixed-top-services-dropdown" 
             className="dropdown-content"
-            onMouseOver={() => document.getElementById("fixed-top-services-dropdown").classList.add("dropdown-open")}
-            onMouseLeave={() => document.getElementById("fixed-top-services-dropdown").classList.remove("dropdown-open")}
           >
-            <div className="services__items">
+            <div 
+              className="services__items"
+              onMouseOver={() => document.getElementById("fixed-top-services-dropdown").classList.add("dropdown-open")}
+              onMouseLeave={() => document.getElementById("fixed-top-services-dropdown").classList.remove("dropdown-open")}
+            >
               {ServicesData.map((service) => (
                 <Link key={service.link} to={`/services/${service.link}`}>
                   <div className="services__service">
@@ -75,7 +77,7 @@ class FixedTopHeader extends Component {
           </Link>
         </div>
         <div className="fixed-top-header__contact-wrapper d-flex align-items-center justify-content-center">
-          <Link to="/contact-us" className="d-flex align-items-center">
+          <Link to="/contact-us" className="d-flex align-items-center content">
             <h4 className="fixed-top-header__contact-title fixed-top-header__text">
               Contact us
             </h4>

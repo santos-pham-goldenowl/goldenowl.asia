@@ -11,11 +11,14 @@ import PortfolioSubPage from '../pages/PortfolioSubPage';
 import Testimonials from '../pages/Testimonials';
 import Portfolio from '../pages/Portfolio';
 import Blog from '../pages/Blog';
+import Career from "../pages/Career";
+import CareerDetails from "../pages/CareerDetails";
 import NotFound from '../pages/NotFound';
 
 import objectToArray from '../utils/objectToArray';
 import portfolioDetails from '../utils/portfolioDetails';
 import singleServiceDetails from '../utils/singleServiceDetails';
+import mockCareersData from "../utils/mockCareersData";
 
 const index = () => {
   return (
@@ -42,6 +45,15 @@ const index = () => {
           key={service.key}
           path={`/services/${service.url}`}
           component={() => <ServicesSubPage content={service} />}
+        />
+      ))}
+      <Route exact path="/careers" component={Career} />
+      {objectToArray(mockCareersData).map((career) => (
+        <Route
+          exact
+          key={career.key}
+          path={`/careers/${career.url}`}
+          component={() => <CareerDetails content={career} />}
         />
       ))}
       <Route path="*" component={NotFound} />

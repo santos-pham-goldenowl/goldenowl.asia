@@ -14,7 +14,6 @@ const TestTab = () => {
     const tab1 = document.getElementById("tab1");
     const tab2 = document.getElementById("tab2");
     const tab3 = document.getElementById("tab3");
-    const tab4 = document.getElementById("tab4");
 
     function moveToFirst() {
       slide.classList = "move-to-first";
@@ -40,18 +39,9 @@ const TestTab = () => {
       tab3.classList.add("tab", "selected");
     }
 
-    function moveToFour() {
-      slide.classList = "move-to-four";
-      tabs.forEach(function (tile) {
-        tile.classList.remove("selected");
-      });
-      tab4.classList.add("tab", "selected");
-    }
-
     tab1.addEventListener("click", moveToFirst);
     tab2.addEventListener("click", moveToSecond);
     tab3.addEventListener("click", moveToThird);
-    tab4.addEventListener("click", moveToFour);
   }, []);
 
   return (
@@ -65,9 +55,6 @@ const TestTab = () => {
         </div>
         <div id="tab3" className="tab">
           Mobile stack
-        </div>
-        <div id="tab4" className="tab">
-          Platform
         </div>
       </div>
 
@@ -140,31 +127,6 @@ const TestTab = () => {
                     <br />
                     At Golden Owl, we have developers that can truly take
                     advantage from technologies and put it in awesome work.
-                  </p>
-                </div>
-                <div className="col-md-6 ml-auto right-side">
-                  {MobileStackTechs.map((tech) => (
-                    <div key={tech.name} className="tech-tab__logo-wrapper">
-                      <div className="image-wrapper">
-                        <img src={tech.url} alt={tech.name} />
-                      </div>
-                      <p className="tech-tab__logo-name">{tech.name}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          </div>
-          <div id="four tab-content-container" className="box">
-            <section className="tech-tab">
-              <div className="row">
-                <div className="col-md-5">
-                  <h2 className="tab-header-title">Platform</h2>
-                  <p className="tech-tab__description">
-                    Cross-platform is the solution for businesses who want their
-                    product to be released faster with lower budget, considering
-                    sacrificing a little bit of UI in their application. Single
-                    code, multiple platforms. Quite a result, isn’t it?
                   </p>
                 </div>
                 <div className="col-md-6 ml-auto right-side">
