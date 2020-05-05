@@ -151,13 +151,13 @@ const Footer = () => {
           <p>(+84) 2838 4600 98</p>
         </div>
         <div className="col-6 col-md-4">
-          <h5 className="d-flex align-items-start">Norway<img className="flag shadow-sm ml-2" src={noflag} alt="Go-Norway"/></h5>
+          <h5 className="d-flex align-items-start">Australia<img className="flag shadow-sm ml-2" src={auflag} alt="GO-Australia"/></h5>
           <p>
-            Romemyra 30,
-            <br className="d-block"/>
-            7091 Tiller
+            Suite 8, Level 2, 1 Box Road,
+            <br />
+            Taren Point, NSW 2229
           </p>
-          <p>(+47) 9586 9324</p>
+          <p>(+02) 8212 4222</p>
         </div>
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">United Kingdom<img className="flag shadow-sm ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
@@ -171,13 +171,13 @@ const Footer = () => {
           <p>(+0345) 456 0522</p>
         </div>
         <div className="col-6 col-md-4">
-          <h5 className="d-flex align-items-start">Australia<img className="flag shadow-sm ml-2" src={auflag} alt="GO-Australia"/></h5>
+          <h5 className="d-flex align-items-start">Norway<img className="flag shadow-sm ml-2" src={noflag} alt="Go-Norway"/></h5>
           <p>
-            Suite 8, Level 2, 1 Box Road,
-            <br />
-            Taren Point, NSW 2229
+            Romemyra 30,
+            <br className="d-block"/>
+            7091 Tiller
           </p>
-          <p>(+02) 8212 4222</p>
+          <p>(+47) 9586 9324</p>
         </div>
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">Singapore<img className="flag shadow-sm ml-2" src={sgflag} alt="GO-Australia"/></h5>
