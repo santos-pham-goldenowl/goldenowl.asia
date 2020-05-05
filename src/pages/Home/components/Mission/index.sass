@@ -47,6 +47,8 @@
   &__item
     justify-content: flex-start
     display: block
+    position: relative
+    transition: 1s
     &:last-child
       padding-bottom: 0
     @include responsive($screen: mobile)
@@ -57,9 +59,19 @@
       padding-bottom: 42px
     @include responsive($screen: large-desktop)
       padding-bottom: 60px
+    &:hover
+      .mission__arrow
+        position: absolute
+        @include responsive($screen: tablet)
+          left: 6px
+        @include responsive($screen: desktop)
+          left: 8px
+        @include responsive($screen: large-desktop)
+          left: 10px
 
   &__item-title
     line-height: 1.35
+    white-space: nowrap
     @include responsive($screen: mobile)
       font-size: 16px
       padding-bottom: 14px

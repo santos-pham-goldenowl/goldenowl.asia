@@ -29,6 +29,8 @@ const Footer = () => {
               <Link to="/services/ux-ui-design">UX UI design</Link>
               <Link to="/services/project-management">Project management</Link>
               <Link to="/services/development-team">Development team</Link>
+              <Link to="/services/automation-testing">Automation testing</Link>
+              <Link to="/services/it-solutions-consulting">IT solutions consulting</Link>
             </div>
           </div>
           <div className="col-6">
@@ -44,7 +46,7 @@ const Footer = () => {
           <div className="col-6">
             <h3 className="footer__bottom-grid-title">Others</h3>
             <div>
-              {/* <a href="/careers">Careers</a> */}
+              <a href="/careers">Careers</a>
               <Link to="/contact-us">Contact us</Link>
               {/* <a href="/faq">FAQ</a> */}
               {/* <Link to="/blog">Blog</Link> */}
@@ -104,6 +106,8 @@ const Footer = () => {
             <Link to="/services/ux-ui-design">UX UI design</Link>
             <Link to="/services/project-management">Project management</Link>
             <Link to="/services/development-team">Development team</Link>
+            <Link to="/services/automation-testing">Automation testing</Link>
+            <Link to="/services/it-solutions-consulting">IT solutions consulting</Link>
           </div>
         </div>
         <div className="col-md-4 pl-0">
@@ -119,7 +123,7 @@ const Footer = () => {
         <div className="col-md-2 pl-0">
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
-            {/* <a href="/careers">Careers</a> */}
+            <a href="/careers">Careers</a>
             <Link to="/contact-us">Contact us</Link>
             {/* <a href="/faq">FAQ</a> */}
             {/* <Link to="/blog">Blog</Link> */}
@@ -136,38 +140,40 @@ const Footer = () => {
       <h4 className="footer__top-content-title">Office locations</h4>
       <div className="row">
         <div className="col-6 col-md-4 pr-3 pr-md-0">
-          <h5 className="d-flex align-items-start">Ho Chi Minh City<img className="flag shadow-sm ml-2" src={vnflag} alt="GO-Vietnam"/></h5>
+          <h5 className="d-flex align-items-start">Viet Nam<img className="flag shadow-sm ml-2" src={vnflag} alt="GO-Vietnam"/></h5>
           <p>
-            MB Bank Building, 538 Cach Mang Thang Tam
+            MB Bank Building, 538 CMT8
             <br/> 
-            Ward 11, District 3
+            Ward 11, District 3,
+            <br/>
+            Ho Chi Minh City
           </p>
-          <p>(+84) 912 878985</p>
+          <p>(+84) 2838 4600 98</p>
         </div>
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">Norway<img className="flag shadow-sm ml-2" src={noflag} alt="Go-Norway"/></h5>
           <p>
-            Romemyra 30, 7091            
+            Romemyra 30,
             <br className="d-block"/>
-            Tiller
+            7091 Tiller
           </p>
-          <p>(+47) 95869324</p>
+          <p>(+47) 9586 9324</p>
         </div>
         <div className="col-6 col-md-4">
-          <h5 className="d-flex align-items-start">London<img className="flag shadow-sm ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
+          <h5 className="d-flex align-items-start">United Kingdom<img className="flag shadow-sm ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
           <p>
             HERTFORDSHIRE OFFICE
             <br />
-            8 Parkway Porters Wood
+            8 Parkway Porters Wood,
             <br />
             St Albans
           </p>
           <p>(+0345) 456 0522</p>
         </div>
         <div className="col-6 col-md-4">
-          <h5 className="d-flex align-items-start">Sydney<img className="flag shadow-sm ml-2" src={auflag} alt="GO-Australia"/></h5>
+          <h5 className="d-flex align-items-start">Australia<img className="flag shadow-sm ml-2" src={auflag} alt="GO-Australia"/></h5>
           <p>
-            Suite 8, Level 2, 1 Box Road
+            Suite 8, Level 2, 1 Box Road,
             <br />
             Taren Point, NSW 2229
           </p>
@@ -176,10 +182,11 @@ const Footer = () => {
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">Singapore<img className="flag shadow-sm ml-2" src={sgflag} alt="GO-Australia"/></h5>
           <p>
-            Block 333A
+            Block 333A,
             <br />
             Yishun Street 31 #15-207
           </p>
+          <p>(+65) 9672 9784</p>
         </div>
       </div>
     </div>

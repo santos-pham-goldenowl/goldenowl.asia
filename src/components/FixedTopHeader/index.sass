@@ -76,6 +76,7 @@
 
   &__contact-wrapper
     background-color: $darkYellow
+    position: relative
     @include responsive($screen: tablet)
       width: 110px
       height: 32px
@@ -85,6 +86,24 @@
     @include responsive($screen: large-desktop)
       width: 155px
       height: 45px
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 0%
+      height: 100%
+      z-index: 1
+      opacity: 0
+      background-color: #FCCF6A
+      -webkit-transition: all 0.5s
+      -moz-transition: all 0.5s
+      -o-transition: all 0.5s
+      transition: all 0.5s
+    &:hover
+      &::before
+        opacity: 1
+        width: 100%
 
   &__contact-title
     white-space: nowrap
@@ -118,3 +137,7 @@
       height: 22px
     @include responsive($screen: large-desktop)
       height: 32px
+
+  .content
+    position: absolute
+    z-index: 2

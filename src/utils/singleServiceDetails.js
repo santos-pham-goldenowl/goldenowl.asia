@@ -32,6 +32,8 @@ import projectCoverImage from '../assets/images/service/ProjectManagement/cover.
 import developmentCoverImage from '../assets/images/service/DevelopmentTeam/cover.jpg';
 import uiUxCoverImage from '../assets/images/service/UiUx/cover.jpg';
 import webCoverImage from '../assets/images/service/WebDevelopment/cover.jpg';
+import testCoverImage from '../assets/images/service/AutomationTesting/cover.jpg';
+import consultCoverImage from '../assets/images/service/ITSolutionsConsulting/cover.jpg';
 
 // mobile cover import
 import mMobileCoverImage from '../assets/images/service/MobileDevelopment/mCover.png';
@@ -39,6 +41,8 @@ import mProjectCoverImage from '../assets/images/service/ProjectManagement/mCove
 import mDevelopmentCoverImage from '../assets/images/service/DevelopmentTeam/mCover.png';
 import mUiUxCoverImage from '../assets/images/service/UiUx/mCover.png';
 import mWebCoverImage from '../assets/images/service/WebDevelopment/mCover.png';
+import mTestCoverImage from '../assets/images/service/AutomationTesting/mCover.png';
+import mConsultCoverImage from '../assets/images/service/ITSolutionsConsulting/mCover.png';
 
 // below section navigation
 import pageNavs from './otherServices';
@@ -49,6 +53,8 @@ const {
   uiUxDesign,
   projectManagement,
   developmentTeam,
+  automationTesting,
+  itSolutionsConsulting,
 } = pageNavs;
 
 const servicesDetails = {
@@ -323,6 +329,74 @@ const servicesDetails = {
       ],
     },
     navs: webDevelopment,
+  },
+  'Automation testing': {
+    url: 'automation-testing',
+    cover: testCoverImage,
+    mobileCover: mTestCoverImage,
+    first: {
+      title: 'Because untested software is expensive',
+      content: 'You don’t want to suffer reputation losses because of angry comments from unhappy clients, nor waste time on endless technical fixes, do you?',
+    },
+    second: {
+      title: 'Software testing is at the core of quality assurance',
+      content: `At Golden Owl, we take product testing solutions very seriously. Our engineers have two main tasks: ensuring the highest quality of an application and thorough software testing so it doesn’t contain any elements discouraging future users from using it.`,
+    },
+    third: {
+      title: 'How we do that',
+      left: {
+        title: 'Custom automation testing frameworks',
+        content: 'Develop automated test with every major language, framework, tools extensive list of testing devices.',
+      },
+      center: {
+        title: 'From the first builds to the product release',
+        content: `Our team makes sure that bugs are discovered, errors are spotted and the entire product works as planned.`,
+      },
+      right: {
+        title: 'Ongoing Assistance',
+        content: `We support crash analytics, bug debugging and error correction.`,
+      },
+    },
+    fourth: {
+      title: 'Best practices with appropriate tools.',
+      content: 'We apply the best practices, picks appropriate tools, and supervises automated testing. The whole work is based on the list of strict quality checks that the solution must pass in order to move to the next phase and make sure that both developers and clients understand the importance of the QA process.',
+      logos: [],
+    },
+    navs: automationTesting,
+  },
+  'IT Solutions Consulting': {
+    url: 'it-solutions-consulting',
+    cover: consultCoverImage,
+    mobileCover: mConsultCoverImage,
+    first: {
+      title: 'We believe that the future is digital',
+      content: 'Our goal is to help businesses obtain competitive advantages through the adoption of digital transformation by providing engineering and consulting services that foster competitiveness and innovation.',
+    },
+    second: {
+      title: 'Emerge modern technologies with unique solutions',
+      content: `Golden Owl offers a blend of technology knowledge, data mining and analytical tools to help you create and transform applications, processes and operations in line with your unique possibilities.`,
+    },
+    third: {
+      title: 'Our solutions',
+      left: {
+        title: 'Software consulting',
+        content: 'Help you focus on what you really need and align technology, operational and financial objectives.',
+      },
+      center: {
+        title: 'IT solutions consulting',
+        content: `We are here for every of your business stages whether you are going to start, to scale or to be disruptive.`,
+      },
+      right: {
+        title: 'Take of your problems',
+        content: `Enterprise management. Data management & analytics. Ecommerce. Customer loyalty management.`,
+      },
+    },
+    fourth: {
+      title: 'Speed up your business transformation.',
+      content: 'We’d love to assist you through the challenge of finding the right direction for your software development strategy. Partner with us, you can get an actionable plan for improving your current IT solutions for better scalability, performance and cost optimisation.',
+      logos: [],
+    },
+    navs: itSolutionsConsulting,
   },
 };
 
