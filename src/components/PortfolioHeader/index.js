@@ -19,7 +19,9 @@ const Services = () => (
     </Link>
     <div className="ml-auto">
       <p>We are glad to connect —</p>
-      <p className="portfolio-header__email">hello@goldenowl.asia</p>
+      <a href="mailto:hello@goldenowl.asia">
+        <p className="portfolio-header__email">hello@goldenowl.asia</p>
+      </a>
     </div>
   </header>
 );

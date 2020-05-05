@@ -54,7 +54,11 @@ const Footer = () => {
           </div>
           <div className="col-6">
             <div className="footer__contact row">
-              <span className="col-12 footer__phone">(+84) 912 878985</span>
+              <span className="col-12 footer__phone">        
+                <a href="tel:(+84) 912 878 985">
+                  (+84) 912 878 985
+                </a>
+              </span>
             </div>
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
@@ -93,7 +97,11 @@ const Footer = () => {
         ))}
       </div>
       <div className="footer__contact row">
-        <span className="col-12 footer__phone">(+84) 912 878985</span>
+        <span className="col-12 footer__phone">
+          <a href="tel:(+84) 912 878 985">
+            (+84) 912 878 985
+          </a>
+        </span>
       </div>
     </div>
     <div className="footer__bottom-grid-container">
@@ -148,7 +156,11 @@ const Footer = () => {
             <br/>
             Ho Chi Minh City
           </p>
-          <p>(+84) 2838 4600 98</p>
+          <p>
+            <a href="tel:(+84) 2838 4600 98">
+            (+84) 2838 4600 98
+            </a>
+          </p>
         </div>
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">Australia<img className="flag shadow-sm ml-2" src={auflag} alt="GO-Australia"/></h5>
@@ -157,7 +169,11 @@ const Footer = () => {
             <br />
             Taren Point, NSW 2229
           </p>
-          <p>(+02) 8212 4222</p>
+          <p>
+            <a href="tel:(+02) 8212 4222">
+              (+02) 8212 4222
+            </a>
+          </p>
         </div>
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">United Kingdom<img className="flag shadow-sm ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
@@ -168,7 +184,11 @@ const Footer = () => {
             <br />
             St Albans
           </p>
-          <p>(+0345) 456 0522</p>
+          <p>
+            <a href="tel:(+0345) 456 0522">
+              (+0345) 456 0522
+            </a>
+          </p>
         </div>
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">Norway<img className="flag shadow-sm ml-2" src={noflag} alt="Go-Norway"/></h5>
@@ -177,7 +197,11 @@ const Footer = () => {
             <br className="d-block"/>
             7091 Tiller
           </p>
-          <p>(+47) 9586 9324</p>
+          <p>
+            <a href="tel:(+47) 9586 9324">
+              (+47) 9586 9324
+            </a>
+          </p>
         </div>
         <div className="col-6 col-md-4">
           <h5 className="d-flex align-items-start">Singapore<img className="flag shadow-sm ml-2" src={sgflag} alt="GO-Australia"/></h5>
@@ -186,7 +210,11 @@ const Footer = () => {
             <br />
             Yishun Street 31 #15-207
           </p>
-          <p>(+65) 9672 9784</p>
+          <p>
+            <a href="tel:(+65) 9672 9784">          
+              (+65) 9672 9784
+            </a>
+          </p>
         </div>
       </div>
     </div>
