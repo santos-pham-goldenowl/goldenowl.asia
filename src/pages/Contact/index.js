@@ -100,7 +100,7 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-12 col-md-6 p-0 ml-auto">
+              <div className="col-12 col-md-6 p-0 ml-auto overflow-hidden">
                   <iframe
                     src="https://pipedrivewebforms.com/form/d4ad07bce7708484ea5575cea7d07e9a7536351"
                     scrolling="no"
