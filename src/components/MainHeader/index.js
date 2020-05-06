@@ -20,11 +20,6 @@ class MainHeader extends Component {
     win.focus();
   };
 
-  handleMenu = () => {
-    const { showMenu } = this.state;
-    this.setState({ showMenu: !showMenu });
-  };
-
   render() {
     return (
       <header className="main-header">

@@ -16,6 +16,12 @@ import useMobileWidth from '../../utils/hooks/useMobileWidth';
 const Footer = () => {
   const isMobile = useMobileWidth()
 
+  const openPortfolioInNewTab = () => {
+    const win = window.open('/portfolio');
+    win.focus();
+  };
+
+
   const mobileRender = () => (
     <div className="footer__bottom-content-wrapper">
       <img className="d-block" src={go} alt="golden-logo" />
@@ -40,7 +46,7 @@ const Footer = () => {
               <Link to="/services">Services</Link>
               <Link to="/technologies">Technologies</Link>
               <Link to="/testimonial">Testimonials</Link>
-              <Link to="/portfolio">Portfolio</Link>
+              <Link onClick={openPortfolioInNewTab} >Portfolio</Link>
             </div>
           </div>
           <div className="col-6">
@@ -125,7 +131,7 @@ const Footer = () => {
             <Link to="/services">Services</Link>
             <Link to="/technologies">Technologies</Link>
             <Link to="/testimonial">Testimonials</Link>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link onClick={openPortfolioInNewTab} >Portfolio</Link>
           </div>
         </div>
         <div className="col-md-2 pl-0">
