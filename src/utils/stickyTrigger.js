@@ -16,7 +16,7 @@ export default function stickyTrigger(direction) {
           fixedBreadcrumb.classList.add('d-none');
           fixedHeader.classList.add('open');
         }
-      } else fixedHeader.classList.remove('d-none');
+      } else fixedHeader.classList.add('open');
     } else {
       if (fixedBreadcrumb) fixedBreadcrumb.classList.add('d-none');
       fixedHeader.classList.remove('open');
