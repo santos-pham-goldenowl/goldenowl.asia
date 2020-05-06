@@ -40,13 +40,13 @@ const ServicesData = [
   {
     name: 'Automation testing',
     url: test,
-    description: 'Color harmony and convenient UX',
+    description: 'Quality and maintenance',
     link: 'automation-testing',
   },
   {
     name: 'IT solutions consulting',
     url: consult,
-    description: 'Color harmony and convenient UX',
+    description: 'Plan for IT improvement',
     link: 'it-solutions-consulting',
   },
 ];
