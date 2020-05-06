@@ -13,7 +13,7 @@ import './service.sass';
 class FixedTopHeader extends Component {
   render() {
     return (
-      <header id="fixed-top-header" className="fixed-top-header d-none fixed-top">
+      <header id="fixed-top-header" className="fixed-top-header fixed-top">
         <img src={goWhite} className="fixed-top-header__logo mr-auto" alt="..." />
         <div className="d-flex align-items-center fixed-top-header__button">
           <Link to="/">

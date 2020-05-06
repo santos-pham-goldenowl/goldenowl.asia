@@ -17,7 +17,7 @@ const Develop = () => {
   );
 
   const defaultImageRender = () => (
-    <div className="col-md-7 pr-0 ml-auto image-wrapper">
+    <div className="col-md-7 pr-0 ml-auto image-wrapper d-flex flex-column justify-content-center">
       <div className="rectangle" />
       <img className="develop__image" src={code} alt="code" />
     </div>
@@ -31,7 +31,7 @@ const Develop = () => {
         already love
       </h2>
       <div className="row develop__content">
-        <div className="col-12 col-md-4 develop__content-text">
+        <div className="col-12 col-md-4 develop__content-text d-flex flex-column justify-content-center">
           <h3>Are you...</h3>
           <p>
               struggling with digital transformation?

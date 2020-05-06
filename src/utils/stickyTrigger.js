@@ -11,15 +11,15 @@ export default function stickyTrigger(direction) {
       if (fixedBreadcrumb) {
         if (direction === 'down') {
           fixedBreadcrumb.classList.remove('d-none');
-          fixedHeader.classList.add('d-none');
+          fixedHeader.classList.remove('open');
         } else {
           fixedBreadcrumb.classList.add('d-none');
-          fixedHeader.classList.remove('d-none');
+          fixedHeader.classList.add('open');
         }
-      } else fixedHeader.classList.remove('d-none');
+      } else fixedHeader.classList.add('open');
     } else {
       if (fixedBreadcrumb) fixedBreadcrumb.classList.add('d-none');
-      fixedHeader.classList.add('d-none');
+      fixedHeader.classList.remove('open');
     }
   }
 }

@@ -9,8 +9,17 @@
   font-size: 14px
   font-family: ProximaNovaBold
   background-color: $yellow !important
+  transition: top 0.7s cubic-bezier(0.17, 0.04, 0.03, 0.94)
   @include responsive($screen: mobile)
     display: none
+  @include responsive($screen: tablet)
+    top: -32px !important
+  @include responsive($screen: desktop)
+    top: -32px !important
+  @include responsive($screen: large-desktop)
+    top: -45px !important
+  &.open
+    top: 0 !important
 
   &__button, #services-dropdown
     padding-left: 0
@@ -44,11 +53,11 @@
         left: -40px
       &.dropdown-open
         @include responsive($screen: tablet)
-          height: 292px
+          height: 388px
         @include responsive($screen: desktop)
-          height: 390px
+          height: 514px
         @include responsive($screen: large-desktop)
-          height: 490px
+          height: 650px
 
   .services-dropdown-top-block
     width: 100%
