@@ -10,7 +10,7 @@ $mallory-font-path: "../../assets/fonts/mallory"
   overflow-x: hidden
   scroll-behavior: smooth
 
-  > section
+  > div > section
     .container-fluid
       header, .breadcrumb, > section, footer > div
         width: 100%
@@ -139,8 +139,8 @@ input, select
     height: 35px !important
 
 input[type=file]
-    @include responsive($screen: tablet)
-      -webkit-appearance: textfield
+  @include responsive($screen: tablet)
+    -webkit-appearance: textfield
     @include responsive($screen: desktop)
       -webkit-appearance: textfield
     @include responsive($screen: large-desktop)
@@ -282,3 +282,15 @@ label
     height: 140px
     margin-left: 10px
     margin-top: 10px
+
+.fade-enter
+  opacity: 0.01
+  &.fade-enter-active
+    opacity: 1
+    transition: opacity 0.8s ease-in
+
+.fade-exit
+  opacity: 1
+  &.fade-exit-active
+    opacity: 0.01
+    transition: opacity 0.8s ease-in
