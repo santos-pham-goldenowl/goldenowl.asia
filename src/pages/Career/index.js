@@ -18,7 +18,7 @@ import mockCareersData from "../../utils/mockCareersData";
 import clock from "../../assets/images/clock.svg";
 import "./index.sass";
 
-const Career = ({ content }) => {
+const Career = () => {
   const isMobile = useMobileWidth();
 
   const pageContent = createRef();
@@ -45,7 +45,7 @@ const Career = ({ content }) => {
       </td>
       <td className="fourth-col">
         <Link
-          to={`careers/${item.url}`}
+          to={item.filled ? '' : `careers/${item.url}` }
           onClick={(e) => item.filled && e.preventDefault()}
         >
           View details
@@ -62,7 +62,8 @@ const Career = ({ content }) => {
         <img className="clock" src={clock} alt="GO-clock" />
         <p className="d-inline careers__time">{item.time}</p>
         <Link
-          to={`careers/${item.url}`}
+          className={item.filled ? 'text-decoration-none' : ''}
+          to={item.filled ? '' : `careers/${item.url}` }
           onClick={(e) => item.filled && e.preventDefault()}
         >
           View details

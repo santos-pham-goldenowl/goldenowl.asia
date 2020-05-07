@@ -190,7 +190,6 @@
             margin-top: 30px
             margin-bottom: 20px
 
-    &__arrow
     .line
         @include responsive($screen: mobile)
             width: 28px
@@ -209,3 +208,48 @@
             left: 24px
         @include responsive($screen: large-desktop)
             left: 34px
+
+    .validating
+        color: $lightningYellow
+
+    #cv-field
+        position: relative
+
+    #upload-cv
+        opacity: 0
+
+    #file-upload-ui
+        width: calc(100% - 20px)
+        position: absolute
+        display: flex
+        align-items: center
+        font-family: ProximaNovaRegular
+        color: $darkGray !important
+        font-size: 14px !important
+        padding: 0.75rem !important
+        background-color: $white
+        border: solid 1px #e3e3e3
+        height: 50px !important
+        overflow: hidden
+        top: 31px
+
+        span
+            &#upload-button
+                cursor: pointer
+                white-space: nowrap
+                padding: 6px 15px 5px
+                margin-right: 14px
+                color: $darkGray
+                background-color: $softGray
+                border: solid 1px #e2e2e2
+                @include responsive($screen: tablet)
+                    margin-right: 100px
+                @include responsive($screen: desktop)
+                    padding: 6px 7px 5px 8px
+                    margin-right: 7px
+            &#upload-placeholder
+                font-family: ProximaNovaRegular
+                font-size: 14px
+                color: #85868f
+                max-width: 100%
+                white-space: nowrap

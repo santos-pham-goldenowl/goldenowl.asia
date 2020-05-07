@@ -31,7 +31,7 @@ app.use(cors());
 app.use(express.Router().get('/', loader));
 app.use(express.static(path.resolve(__dirname, '../build')));
 
-app.use(express.Router().post('/send-email', (req, res) => {
+app.use(express.Router().post('/send-application', (req, res) => {
   const {
     firstName, lastName, email, phoneNum, company, country, subject, message: goMessage,
   } = req.body;

@@ -133,63 +133,10 @@ input, select
   padding: 0.25rem 0.75rem !important
   border: solid 1px $slightGray !important
   height: 50px !important
-  @include responsive($screen: tablet)
-    height: 25px !important
-  @include responsive($screen: desktop)
-    height: 35px !important
-
-input[type=file]
-  @include responsive($screen: tablet)
-    -webkit-appearance: textfield
-    @include responsive($screen: desktop)
-      -webkit-appearance: textfield
-    @include responsive($screen: large-desktop)
-      padding: 0.6rem 0.75rem !important
-    @include responsive($screen: mobile)
-      padding: 0.6rem 0.75rem !important
-
-input[type=file]::-webkit-file-upload-button
-  @include responsive($screen: tablet)
-    border: none
-    margin: 0
-    padding: 0
-    -webkit-appearance: none
-    width: 0
-  @include responsive($screen: desktop)
-    border: none
-    margin: 0
-    padding: 0
-    -webkit-appearance: none
-    width: 0
-  @include responsive($screen: large-desktop)
-    width: 100px
-    height: 30px
-    text-align: center
-    border: solid 1px #e2e2e2
-    background-color: #f7f7f7
-    margin-right: 15px
-    font-family: ProximaNovaRegular
-    font-size: 14px
-    color: $darkGray
-  @include responsive($screen: mobile)
-    width: 100px
-    height: 30px
-    text-align: center
-    border: solid 1px #e2e2e2
-    background-color: #f7f7f7
-    margin-right: 15px
-    font-family: ProximaNovaRegular
-    font-size: 14px
-    color: $darkGray
 
 label
   line-height: 1.25
-  @include responsive($screen: tablet)
-    margin-bottom: 5px
-  @include responsive($screen: desktop)
-    margin-bottom: 7px
-  @include responsive($screen: large-desktop)
-    margin-bottom: 10px
+  margin-bottom: 10px
 
 .send-wrapper
   @include responsive($screen: mobile)
