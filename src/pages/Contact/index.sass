@@ -89,6 +89,11 @@
         font-size: 20px
         padding-bottom: 38px
 
+      br
+        display: none
+        @include responsive($screen: mobile)
+          display: block
+
   h1
     color: $solidBlack
     @include responsive($screen: mobile)
@@ -107,11 +112,6 @@
       width: 390px
       padding-bottom: 20px
       font-size: 46px
-
-  br
-    display: none
-    @include responsive($screen: mobile)
-      display: block
 
   // .send-rectangle
   //   border: solid 1px $solidBlack
