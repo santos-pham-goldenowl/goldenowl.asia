@@ -59,13 +59,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-6">
-            <div className="footer__contact row">
+            {/* <div className="footer__contact row">
               <span className="col-12 footer__phone">        
                 <a href="tel:(+84) 912 878 985">
                   (+84) 912 878 985
                 </a>
               </span>
-            </div>
+            </div> */}
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
                 <a href={icon.link}>
@@ -102,13 +102,13 @@ const Footer = () => {
           </a>
         ))}
       </div>
-      <div className="footer__contact row">
+      {/* <div className="footer__contact row">
         <span className="col-12 footer__phone">
           <a href="tel:(+84) 912 878 985">
             (+84) 912 878 985
           </a>
         </span>
-      </div>
+      </div> */}
     </div>
     <div className="footer__bottom-grid-container">
       <div className="row footer__bottom-grid-row">
