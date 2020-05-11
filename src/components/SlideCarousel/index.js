@@ -7,17 +7,17 @@ const responsive = {
   desktop: {
     breakpoint: { max: 2560, min: 1366 },
     items: 6,
-    slidesToSlide: 1,
+    slidesToSlide: 6,
   },
   tablet: {
     breakpoint: { max: 1365, min: 768 },
     items: 6,
-    slidesToSlide: 1,
+    slidesToSlide: 6,
   },
   mobile: {
     breakpoint: { max: 767, min: 0 },
     items: 1,
-    slidesToSlide: 1,
+    slidesToSlide: 6,
   },
 };
 
@@ -29,11 +29,14 @@ const SlideCarousel = ({ ...props }) => {
       ssr
       infinite
       keyBoardControl
+      autoPlay
+      autoPlaySpeed={10000}
+      slidesToSlide={6}
       swipeable={false}
       draggable={false}
       showDots={false}
       responsive={responsive}
-      customTransition="all .5"
+      customTransition="all 2s ease-in-out"
       transitionDuration={500}
       containerClass="align-items-center"
       deviceType={deviceType}

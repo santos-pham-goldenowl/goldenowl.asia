@@ -190,24 +190,41 @@
             margin-top: 30px
             margin-bottom: 20px
 
-    .line
-        @include responsive($screen: mobile)
-            width: 28px
-        @include responsive($screen: tablet)
-            width: 18px
-        @include responsive($screen: desktop)
-            width: 24px
-        @include responsive($screen: large-desktop)
-            width: 34px
-    .arrow-right
-        @include responsive($screen: mobile)
-            left: 28px
-        @include responsive($screen: tablet)
-            left: 18px
-        @include responsive($screen: desktop)
-            left: 24px
-        @include responsive($screen: large-desktop)
-            left: 34px
+    .submit-button
+        background-color: $yellow
+        position: relative
+        padding: 25px
+        width: 100%
+        font-weight: bold
+        border-style: hidden
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 0%
+            height: 100%
+            z-index: 1
+            opacity: 0
+            background-color: #FCCF6A
+            -webkit-transition: all 0.8s
+            -moz-transition: all 0.8s
+            -o-transition: all 0.8s
+            transition: all 0.8s
+        &:hover
+            &::before
+                opacity: 1
+                width: 100%
+        &:focus
+            outline: none
+        p
+            position: absolute
+            top: 15px
+            left: 0
+            width: 100%
+            text-align: center
+            z-index: 2
+            color: $white
 
     .validating
         color: $lightningYellow
