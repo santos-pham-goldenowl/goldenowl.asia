@@ -153,7 +153,7 @@ const Footer = () => {
     <div className="footer__top-content-wrapper">
       <h4 className="footer__top-content-title">Office locations</h4>
       <div className="row">
-        <div className="col-6 col-md-4 pr-3 pr-md-0">
+        <div className="col-6 col-md-4 pr-5 pr-md-0">
           <h5 className="d-flex align-items-start">Viet Nam<img className="flag shadow-sm ml-2" src={vnflag} alt="GO-Vietnam"/></h5>
           <p>
             MB Bank Building, 538 CMT8
