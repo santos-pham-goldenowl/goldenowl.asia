@@ -13,7 +13,7 @@ const Explore = () => (
         <h6>THE WORK PROJECT | FEATURES CASE STUDY</h6>
         <Link className="explore__case-study" to="/portfolio/the-work-project">
           <h6>VIEW ALL CASE STUDY</h6>
-          <ArrowRight className="explore__arrow" />
+          <div className="explore__arrow" />
         </Link>
       </div>
       <p className="explore__description">Change your workplace with many beautiful things</p>

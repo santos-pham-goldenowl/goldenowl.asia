@@ -37,6 +37,8 @@
     //   margin-top: 36px
     // @include responsive($screen: large-desktop)
     //   margin-top: 50px
+    &:hover + .explore__arrow
+      right: 0
 
   h6
     @include responsive($screen: tablet)
@@ -71,22 +73,24 @@
       display: none
 
   &__case-study
+    position: relative
     display: flex
+    padding-right: 40px
     h6
       align-self: center
+    &:hover
+      .explore__arrow
+        right: 0
 
   &__arrow
-    .arrow-right
-      @include responsive($screen: tablet)
-        left: 17px
-      @include responsive($screen: desktop)
-        left: 24px
-      @include responsive($screen: large-desktop)
-        left: 34px
-    .line
-      @include responsive($screen: tablet)
-        width: 17px
-      @include responsive($screen: desktop)
-        width: 24px
-      @include responsive($screen: large-desktop)
-        width: 34px
+    top: 5px
+    content: ""
+    margin-top: var(--margin-top)
+    width: 40px
+    height: 8px
+    display: inline-block
+    position: absolute
+    right: 10px
+    background: url('../../assets/images/icon-more-arrow-dark.svg') left center no-repeat
+    -webkit-transition: 0.2s all linear
+    transition: 0.2s all linear
