@@ -15,12 +15,12 @@ const Contact = () => {
       {isMobile ? (
         <p className="contact__phone">
           Or give our friendly team a quick call on <br />{" "}
-          <a href="tel:(+84) 912 878985">(+84) 912 878985</a>
+          <a href="tel:(+84) 2838 4600 98">(+84) 2838 4600 98</a>
         </p>
       ) : (
         <p className="contact__phone">
           Or give our friendly team a quick call on{" "}
-          <a href="tel:(+84) 912 878985">(+84) 912 878985</a>
+          <a href="tel:(+84) 2838 4600 98">(+84) 2838 4600 98</a>
         </p>
       )}
     </section>

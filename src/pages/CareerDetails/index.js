@@ -90,21 +90,28 @@ const ServicesSubPage = ({ content }) => {
   );
 
   const validateUrl = (url) => {
-    var re = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+    const re = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
     return re.test(String(url).toLowerCase());
   }
   
   const validateEmail = (email) => {
-    var re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+    const re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
     return re.test(String(email).toLowerCase());
   };
 
-  const validateFile = () => {
-    var fileInput = document.getElementById('upload-cv');
-    var filePath = fileInput.value;
-    var allowedExtensions = /(\.pdf)$/i;
+  const validateFileExtension = () => {
+    const fileInput = document.getElementById('upload-cv');
+    const filePath = fileInput.value;
+    const allowedExtensions = /(\.pdf)$/i;
     return allowedExtensions.test(String(filePath).toLowerCase());
+  }
 
+  const validateFileSize = () => {
+    const fileInput = document.getElementById('upload-cv');
+    const fileSize = Math.round((fileInput.files.item(0).size / 1024));
+    console.log("validateFileSize -> fileSize", fileSize)
+    
+    return fileSize < 30720;
   }
 
   const formRender = () => (
@@ -171,7 +178,11 @@ const ServicesSubPage = ({ content }) => {
                     return "Required";
                   }
 
-                  if (!validateFile(value)) {
+                  if (!validateFileSize()) {
+                    return "30MB maximum allowed";
+                  }
+
+                  if (!validateFileExtension()) {
                     return "PDF allowed only";
                   }
 
@@ -218,42 +229,22 @@ const ServicesSubPage = ({ content }) => {
               />
             </div>
             {isSubmitting ? (
-              <div className="col-md-12 pr-0">
+              <div className="col-md-12">
                 <button
                   type="submit"
-                  className="send-wrapper w-100 d-flex btn btn-link p-0"
+                  className="submit-button"
                 >
-                  <div className="send-rectangle">
-                    <div className="row h-100">
-                      <div className="col-6 mt-auto text-left">
-                        <p>Submitting...</p>
-                      </div>
-                      <div className="col-6 mt-auto d-flex justify-content-end">
-                        <ArrowRight className="careers-details__arrow" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="send-dashed-border" />
+                  <p>Submitting...</p>
                 </button>
               </div>
             ) : (
-              <div className="col-md-12 pr-0">
+              <div className="col-md-12">
                 <button
                   type="submit"
                   disable={!canSubmit}
-                  className="send-wrapper w-100 d-flex btn btn-link p-0"
+                  className="submit-button"
                 >
-                  <div className="send-rectangle">
-                    <div className="row h-100">
-                      <div className="col-6 mt-auto text-left">
-                        <p>Submit application</p>
-                      </div>
-                      <div className="col-6 mt-auto d-flex justify-content-end">
-                        <ArrowRight className="careers-details__arrow" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="send-dashed-border" />
+                  <p>Submit application</p>
                 </button>
               </div>
             )}
