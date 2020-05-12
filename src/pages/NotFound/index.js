@@ -86,7 +86,7 @@ const NotFound = () => {
         </div>
       </div>
       <Link to="/" className="d-block back-to-home">
-        Go Home
+        <span>Go Home</span>
       </Link>
     </section>
   );
@@ -104,7 +104,7 @@ const NotFound = () => {
             </div>
           </div>
           <Link to="/" className="d-block back-to-home">
-            Go Home
+            <span>Go Home</span>
           </Link>
         </div>
         <div id="not-found-image-wrapper" className="col-12 col-md-7">
