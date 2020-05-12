@@ -31,6 +31,11 @@ const PortfolioSubPage = ({ content }) => {
 
   const randomProjectText = randomProject.content.split(" – ");
   const randomProjectUrl = randomProject.url;
+  const randomProjectThumb = randomProject.thumb;
+
+  const nextProjectBg = { 
+    backgroundImage: `url(${randomProjectThumb})`, 
+  }
 
   return (
     <section>
@@ -115,7 +120,7 @@ const PortfolioSubPage = ({ content }) => {
                 }}
                 to={`/portfolio/${randomProjectUrl}`}
               >
-                <div className="portfolio-details__next-project">
+                <div style={nextProjectBg} className="portfolio-details__next-project">
                   <h3>{`Up next: ${randomProjectText[0]}`}</h3>
                   <p>{randomProjectText[1]}</p>
                 </div>

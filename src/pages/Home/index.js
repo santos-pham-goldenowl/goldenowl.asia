@@ -40,8 +40,6 @@ const Home = () => {
         <meta content={companyLogo} property="og:image" />
         <meta name="csrf-param" content="authenticity_token" />
         <meta name="csrf-token" content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg==" />
-        <link rel="canonical" href="https://goldenowl.asia/" />
-        <link rel="amphtml" href="https://goldenowl.asia/home-amp.html"/>
       </Helmet>
       <div className="container-fluid no-padding">
         <FixedTopHeader />
