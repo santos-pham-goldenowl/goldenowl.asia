@@ -1,7 +1,7 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
+import React from "react";
+import Carousel from "react-multi-carousel";
 
-import 'react-multi-carousel/lib/styles.css';
+import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
   desktop: {
@@ -26,25 +26,40 @@ const SlideCarousel = ({ ...props }) => {
 
   return (
     <Carousel
-      ssr
-      infinite
-      keyBoardControl
+      additionalTransfrom={0}
+      arrows
       autoPlay
       autoPlaySpeed={10000}
-      slidesToSlide={6}
-      swipeable={false}
-      draggable={false}
+      centerMode={false}
+      className=""
+      dotListClass=""
+      draggable
+      focusOnSelect={false}
+      infinite
+      itemClass=""
+      keyBoardControl
+      minimumTouchDrag={80}
+      renderButtonGroupOutside={false}
+      renderDotsOutside={false}
       showDots={false}
+      sliderClass=""
+      slidesToSlide={2}
+      swipeable
+      ssr
       responsive={responsive}
-      customTransition="all 2s ease-in-out"
-      transitionDuration={500}
       containerClass="align-items-center"
-      deviceType={deviceType}
-      dotListClass="custom-dot-list-style"
     >
       {content.map((c) => (
-        <div key={c.name} className="slide-image-wrapper w-100 d-flex justify-content-center">
-          <img id={c.name} className={`logo-${c.name}`} src={c.url} alt={c.name} />
+        <div
+          key={c.name}
+          className="slide-image-wrapper w-100 d-flex justify-content-center"
+        >
+          <img
+            id={c.name}
+            className={`logo-${c.name}`}
+            src={c.url}
+            alt={c.name}
+          />
         </div>
       ))}
     </Carousel>
