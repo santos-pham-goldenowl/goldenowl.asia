@@ -28,8 +28,6 @@ const Contact = () => {
     <section className="contact-us">
       <Helmet>
         <title>Contact Us - Golden Owl</title>
-        <link href="https://www.goldenowl.asia/home/amp" rel="amphtml" />
-        <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta
           content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug"
