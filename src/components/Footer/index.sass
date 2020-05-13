@@ -36,14 +36,11 @@
     @include responsive($screen: large-desktop)
       height: 18px !important
 
-  &__icon-twitter
-    opacity: 0.4
-
   &__icon-facebook
     @include responsive($screen: mobile)
       height: 18px
 
-  &__icon-instagram, &__icon-twitter, , &__icon-linkedin
+  &__icon-instagram, &__icon-twitter, &__icon-linkedin
     @include responsive($screen: mobile)
       height: 16px
 
@@ -64,6 +61,8 @@
       margin-right: 14px
     @include responsive($screen: large-desktop)
       margin-right: 20px
+    &:hover
+      filter: opacity(1) drop-shadow(0 0 0 black)
 
   &__top-content-wrapper
     text-align: left
