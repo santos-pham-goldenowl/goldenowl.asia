@@ -335,7 +335,7 @@ const servicesDetails = {
     cover: testCoverImage,
     mobileCover: mTestCoverImage,
     first: {
-      title: 'Because untested software is expensive',
+      highlight: 'Because untested software is expensive.',
       content: 'You don’t want to suffer reputation losses because of angry comments from unhappy clients, nor waste time on endless technical fixes, do you?',
     },
     second: {
@@ -369,7 +369,7 @@ const servicesDetails = {
     cover: consultCoverImage,
     mobileCover: mConsultCoverImage,
     first: {
-      title: 'We believe that the future is digital',
+      highlight: 'We believe that the future is digital.',
       content: 'Our goal is to help businesses obtain competitive advantages through the adoption of digital transformation by providing engineering and consulting services that foster competitiveness and innovation.',
     },
     second: {
