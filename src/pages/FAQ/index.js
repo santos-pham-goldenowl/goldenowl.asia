@@ -22,30 +22,34 @@ const FAQ = () => {
 
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
+  let updateMenuActiveStatusFunc = () => {
+    console.log('Start func!');
+    const fixedTopElement = document.getElementById("fixed-top-menu") ||  document.getElementById("fixed-top-breadcrumb");
+    const entries = document.querySelectorAll('section[id*="content-"]');
+    let firstIdx = -1;
+    for (let i = 0; i < entries.length; i++) {
+      const entry = entries[i];
+      const id = entry.getAttribute('id');
+      const tocItem = document.querySelector(`nav li a[href="#${id}"]`);
+      tocItem && tocItem.parentElement.classList.remove('active');
+      const elemHeight = entry.clientHeight;
+      if ((entry.getBoundingClientRect().top + window.pageYOffset + elemHeight - fixedTopElement.clientHeight) > window.pageYOffset && firstIdx == -1) {
+        firstIdx = i;
+        tocItem && tocItem.parentElement.classList.add('active');
+      }
+    };
+  }
+
+  let updateMenuStatusActiveDebounce = null;
 
   const tableOfContentQuery = () => {
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        if (id.includes('content-')) {
-          const tocItem = document.querySelector(`nav li a[href="#${id}"]`)
-          
-          if (tocItem) {
-            if (entry.intersectionRatio > 0) {
-              tocItem.parentElement.classList.add('active');
-            } else {
-              tocItem.parentElement.classList.remove('active');
-            }  
-          }
-        }
-      });
-    });
-  
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section);
-    });
-    
+    // console.log('Start scrolling!')
+    // Debounce
+    // if (updateMenuStatusActiveDebounce) {
+    //   clearTimeout(updateMenuStatusActiveDebounce);
+    // }
+    // updateMenuStatusActiveDebounce = setTimeout(updateMenuActiveStatusFunc, 100);
+    updateMenuActiveStatusFunc();    
   }
 
   useEffect(() => {
@@ -57,6 +61,7 @@ const FAQ = () => {
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
     stickyTOCTrigger(isMobile);
+    !isMobile && tableOfContentQuery();
   };
 
   return (
