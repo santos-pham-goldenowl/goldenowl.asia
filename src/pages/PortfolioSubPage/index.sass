@@ -120,8 +120,13 @@
   &__next-project
     background-color: #24272C
     background-repeat: no-repeat
-    background-size: 100%
-    background-position: bottom
+    background-position-x: center
+    background-position-y: center
+    // background-attachment: fixed
+    background-size: auto 100%
+    -webkit-background-size: auto 100%
+    -moz-background-size: auto 100%
+    -o-background-size: auto 100%
     @include responsive($screen: mobile)
       padding: 67.5px 0 67.5px 30px
     @include responsive($screen: tablet)

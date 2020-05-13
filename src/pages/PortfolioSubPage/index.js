@@ -34,7 +34,7 @@ const PortfolioSubPage = ({ content }) => {
   const randomProjectThumb = randomProject.thumb;
 
   const nextProjectBg = { 
-    backgroundImage: `url(${randomProjectThumb})`, 
+    backgroundImage: `url(${randomProjectThumb})`,
   }
 
   return (
