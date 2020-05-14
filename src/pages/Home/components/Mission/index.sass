@@ -83,11 +83,18 @@
     margin-top: 15px
     content: ""
     margin-top: var(--margin-top)
-    width: 40px
     height: 8px
     display: inline-block
     position: absolute
     left: 0
-    background: url('../../../../assets/images/icon-more-arrow-dark.svg') left center no-repeat
+    background: url('../../../../assets/images/icon-more-arrow-dark.svg') right center no-repeat
     -webkit-transition: 0.2s all linear
     transition: 0.2s all linear
+    @include responsive($screen: mobile)
+      width: 40px
+    @include responsive($screen: tablet)
+      width: 30px
+    @include responsive($screen: desktop)
+      width: 36px
+    @include responsive($screen: large-desktop)
+      width: 40px

@@ -86,11 +86,16 @@
     top: 5px
     content: ""
     margin-top: var(--margin-top)
-    width: 40px
     height: 8px
     display: inline-block
     position: absolute
     right: 10px
-    background: url('../../assets/images/icon-more-arrow-dark.svg') left center no-repeat
+    background: url('../../assets/images/icon-more-arrow-dark.svg') right center no-repeat
     -webkit-transition: 0.2s all linear
     transition: 0.2s all linear
+    @include responsive($screen: tablet)
+      width: 28px
+    @include responsive($screen: desktop)
+      width: 28px
+    @include responsive($screen: large-desktop)
+      width: 40px
