@@ -20,6 +20,7 @@ import objectToArray from "../utils/objectToArray";
 import portfolioDetails from "../utils/portfolioDetails";
 import singleServiceDetails from "../utils/singleServiceDetails";
 import mockCareersData from "../utils/mockCareersData";
+import FAQ from "pages/FAQ";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -64,6 +65,7 @@ const AppRoutes = () => {
               component={() => <CareerDetails content={career} />}
             />
           ))}
+          <Route exact path="/faq" component={FAQ} />
           <Route path="*" component={NotFound} />
         </Switch>
       </CSSTransition>
