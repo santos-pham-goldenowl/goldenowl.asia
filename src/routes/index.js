@@ -14,13 +14,13 @@ import Portfolio from "../pages/Portfolio";
 import Blog from "../pages/Blog";
 import Career from "../pages/Career";
 import CareerDetails from "../pages/CareerDetails";
+import FAQ from "../pages/FAQ";
 import NotFound from "../pages/NotFound";
 
 import objectToArray from "../utils/objectToArray";
 import portfolioDetails from "../utils/portfolioDetails";
 import singleServiceDetails from "../utils/singleServiceDetails";
 import mockCareersData from "../utils/mockCareersData";
-import FAQ from "pages/FAQ";
 
 const AppRoutes = () => {
   const location = useLocation();
