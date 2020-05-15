@@ -45,8 +45,9 @@ const AppRoutes = () => {
               component={() => <PortfolioSubPage content={portfolio} />}
             />
           ))}
-          <Route path="/blog" component={Blog} />
-          <Route path="/contact-us" component={Contact} />
+          <Route exact path="/blog" component={Blog} />
+          <Route path="/blog/details" component={Services} />
+          <Route exact path="/contact-us" component={Contact} />
           <Route exact path="/services" component={Services} />
           {objectToArray(singleServiceDetails).map((service) => (
             <Route
