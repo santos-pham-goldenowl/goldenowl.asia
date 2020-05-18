@@ -58,14 +58,10 @@ const AppRoutes = () => {
             />
           ))}
           <Route exact path="/careers" component={Career} />
-          {objectToArray(mockCareersData).map((career) => (
-            <Route
-              exact
-              key={career.key}
-              path={`/careers/${career.url}`}
-              component={() => <CareerDetails content={career} />}
-            />
-          ))}
+          <Route
+            path={`/careers/details`}
+            component={CareerDetails}
+          />
           <Route exact path="/faq" component={FAQ} />
           <Route path="*" component={NotFound} />
         </Switch>

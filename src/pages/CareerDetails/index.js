@@ -1,7 +1,8 @@
-import React, { createRef, useMemo } from "react";
-import { Link } from "react-router-dom";
+import React, { createRef, useMemo, useEffect, useState } from "react";
+import { Link, Redirect } from "react-router-dom";
 import Helmet from "react-helmet";
 import { useForm } from "react-form";
+import parse from "html-react-parser";
 
 import Footer from "../../components/Footer";
 import SubHeader from "../../components/SubHeader";
@@ -11,19 +12,41 @@ import FixedTopHeader from "../../components/FixedTopHeader";
 import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
 import CheckPoint from "../../components/CheckPoint";
 import { InputField } from "../../components/FormInputs";
-import ArrowRight from "../../components/ArrowRight";
+import LoadingScreen from "../../components/LoadingScreen";
 
-import careerDetails from "../../utils/careerDetails";
 import stickyTrigger from "../../utils/stickyTrigger";
-import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
+import { getCareer } from "../../api/careers";
 
 import clock from "../../assets/images/clock.svg";
 import "./index.sass";
 
-const ServicesSubPage = ({ content }) => {
+const CareerDetails = () => {
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
+  const jobId =
+    window && window.location
+      ? window.location.pathname.split("/").slice(-1)[0]
+      : "";
+  const [job, setJob] = useState({});
+  const [loadStatus, setLoadStatus] = useState("init");
+
+  useEffect(() => {
+    getCareer(jobId)
+      .then((res) => {
+        const { data } = res.data;
+
+        console.log(data.data);
+
+        if (data) {
+          setJob({ ...data.data.attributes });
+          setTimeout(() => setLoadStatus("loaded"), 500)
+        }
+      })
+      .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
+  }, []);
+
+  console.log(job);
 
   const defaultValues = useMemo(
     () => ({
@@ -43,8 +66,11 @@ const ServicesSubPage = ({ content }) => {
   } = useForm({
     defaultValues,
     onSubmit: async (values, instance) => {
-
-      console.log("sent!", values, document.getElementById("upload-cv").files[0]);
+      console.log(
+        "sent!",
+        values,
+        document.getElementById("upload-cv").files[0]
+      );
     },
     debugForm: false,
   });
@@ -57,10 +83,13 @@ const ServicesSubPage = ({ content }) => {
       const uploadFileName = upload.value.split("\\");
       const uploadPlaceholder = document.getElementById("upload-placeholder");
 
-      uploadPlaceholder.innerHTML = upload.value ? uploadFileName[uploadFileName.length -1] : "No file chosen"
+      uploadPlaceholder.innerHTML = upload.value
+        ? uploadFileName[uploadFileName.length - 1]
+        : "No file chosen";
 
-      if (upload.value) document.getElementById("upload-button").style.display = "none"
-      else document.getElementById("upload-button").style.display = "block"
+      if (upload.value)
+        document.getElementById("upload-button").style.display = "none";
+      else document.getElementById("upload-button").style.display = "block";
     }
   };
 
@@ -90,29 +119,29 @@ const ServicesSubPage = ({ content }) => {
   );
 
   const validateUrl = (url) => {
-    const re = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/
+    const re = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
     return re.test(String(url).toLowerCase());
-  }
-  
+  };
+
   const validateEmail = (email) => {
     const re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
     return re.test(String(email).toLowerCase());
   };
 
   const validateFileExtension = () => {
-    const fileInput = document.getElementById('upload-cv');
+    const fileInput = document.getElementById("upload-cv");
     const filePath = fileInput.value;
     const allowedExtensions = /(\.pdf)$/i;
     return allowedExtensions.test(String(filePath).toLowerCase());
-  }
+  };
 
   const validateFileSize = () => {
-    const fileInput = document.getElementById('upload-cv');
-    const fileSize = Math.round((fileInput.files.item(0).size / 1024));
-    console.log("validateFileSize -> fileSize", fileSize)
-    
+    const fileInput = document.getElementById("upload-cv");
+    const fileSize = Math.round(fileInput.files.item(0).size / 1024);
+    console.log("validateFileSize -> fileSize", fileSize);
+
     return fileSize < 30720;
-  }
+  };
 
   const formRender = () => (
     <Form>
@@ -230,10 +259,7 @@ const ServicesSubPage = ({ content }) => {
             </div>
             {isSubmitting ? (
               <div className="col-md-12">
-                <button
-                  type="submit"
-                  className="submit-button"
-                >
+                <button type="submit" className="submit-button">
                   <p>Submitting...</p>
                 </button>
               </div>
@@ -255,79 +281,76 @@ const ServicesSubPage = ({ content }) => {
     </Form>
   );
 
-  return (
-    <section className="career-details">
-      <Helmet>
-        <title>Career Details - Golden Owl</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta
-          content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug"
-          name="google-site-verification"
-        />
-        <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
-          name="description"
-        />
-        <meta
-          content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native"
-          property="og:title"
-        />
-        <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
-          property="og:description"
-        />
-        <meta
-          content="http://www.goldenowl.asia/assets/background-home.jpg"
-          property="og:image"
-        />
-        <meta name="csrf-param" content="authenticity_token" />
-        <meta
-          name="csrf-token"
-          content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg=="
-        />
-      </Helmet>
-      <div ref={pageContent} className="container-fluid no-padding">
-        <FixedTopHeader />
-        <FixedTopBreadCrumb pageContent={pageContent}>
-          <Link to="/careers">Careers</Link>
-          <span>/</span>
-          <p>{content.key}</p>
-        </FixedTopBreadCrumb>
-        <MainHeader />
-        <SubHeader />
-        <BreadCrumb pageContent={pageContent}>
-          <Link to="/careers">Careers</Link>
-          <span>/</span>
-          <p>{content.key}</p>
-        </BreadCrumb>
-        <section className="career-details__body">
-          <div className="row">
-            <>
-              <div className="col-12 col-md-3" />
-              <div className="col-12 col-md-6">
-                {statusRender(content.filled)}
-                <span className="d-inline-block">
-                  <img className="clock" src={clock} alt="GO-clock" />
-                </span>
-                <p className="d-inline careers__time">{content.time}</p>
-                <h2 className="career-details__body-title">{content.key}</h2>
-              </div>
-              <div className="col-12 col-md-3" />
-            </>
-            {paragraphRender(careerDetails.first)}
-            {paragraphRender(careerDetails.second)}
-            <div className="col-12">
-              <center>
-                <img
-                  className="cover-image"
-                  src={careerDetails.img}
-                  alt="GO-career"
-                />
-              </center>
-            </div>
-            {paragraphRender(careerDetails.third)}
-            {paragraphRender(careerDetails.fourth)}
-            <div className="col-12 career-details__body-requirements">
+  switch (loadStatus) {
+    case "no-result":
+      return <Redirect to="/not-found" />;
+    case "loaded":
+      return (
+        <section className="career-details">
+          <Helmet>
+            <title>Career Details - Golden Owl</title>
+            <meta
+              content="width=device-width, initial-scale=1"
+              name="viewport"
+            />
+            <meta
+              content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug"
+              name="google-site-verification"
+            />
+            <meta
+              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              name="description"
+            />
+            <meta
+              content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native"
+              property="og:title"
+            />
+            <meta
+              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              property="og:description"
+            />
+            <meta
+              content="http://www.goldenowl.asia/assets/background-home.jpg"
+              property="og:image"
+            />
+            <meta name="csrf-param" content="authenticity_token" />
+            <meta
+              name="csrf-token"
+              content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg=="
+            />
+          </Helmet>
+          <div ref={pageContent} className="container-fluid no-padding">
+            <FixedTopHeader />
+            <FixedTopBreadCrumb pageContent={pageContent}>
+              <Link to="/careers">Careers</Link>
+              <span>/</span>
+              <p>{job.title}</p>
+            </FixedTopBreadCrumb>
+            <MainHeader />
+            <SubHeader />
+            <BreadCrumb pageContent={pageContent}>
+              <Link to="/careers">Careers</Link>
+              <span>/</span>
+              <p>{job.title}</p>
+            </BreadCrumb>
+            <section className="career-details__body">
+              <div className="row">
+                <div className="col-12 col-md-3" />
+                <div className="col-12 col-md-6">
+                  {statusRender(job.status)}
+                  <span className="d-inline-block">
+                    <img className="clock" src={clock} alt="GO-clock" />
+                  </span>
+                  <p className="d-inline careers__time">{job.job_type}</p>
+                  <h2 className="career-details__body-title">{job.title}</h2>
+                </div>
+                <div className="col-12 col-md-3" />
+                <div className="col-12 col-md-3" />
+                <div className="col-12 col-md-6 career-details__body-content">
+                  {job.content ? parse(job.content) : ""}
+                </div>
+                <div className="col-12 col-md-3" />
+                {/* <div className="col-12 career-details__body-requirements">
               <div className="row">
                 <div className="col-12 col-md-2" />
                 <div className="col-12 col-md-8">
@@ -346,14 +369,17 @@ const ServicesSubPage = ({ content }) => {
                 </div>
                 <div className="col-12 col-md-2" />
               </div>
-            </div>
+            </div> */}
+              </div>
+            </section>
+            <section className="career-details__form">{formRender()}</section>
+            <Footer />
           </div>
         </section>
-        <section className="career-details__form">{formRender()}</section>
-        <Footer />
-      </div>
-    </section>
-  );
+      );
+    default:
+      return <LoadingScreen />;  
+  }
 };
 
-export default ServicesSubPage;
+export default CareerDetails;

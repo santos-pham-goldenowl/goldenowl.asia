@@ -56,39 +56,47 @@
             @include responsive($screen: large-desktop)
                 font-size: 16px
 
-    .paragraph-title
-        line-height: 1.5
-        @include responsive($screen: mobile)
-            font-size: 20px
-            margin-top: 20px
-            margin-bottom: 20px
-        @include responsive($screen: tablet)
-            font-size: 14px
-            margin-top: 20px
-            margin-bottom: 12px
-        @include responsive($screen: desktop)
-            font-size: 16px
-            margin-top: 22px
-            margin-bottom: 14px
-        @include responsive($screen: large-desktop)
-            font-size: 24px
-            margin-top: 30px
-            margin-bottom: 20px
-
-    .paragraph-content
-        line-height: 1.67
-        @include responsive($screen: mobile)
-            font-size: 16px
-            margin-bottom: 10px
-        @include responsive($screen: tablet)
-            font-size: 14px
-            margin-bottom: 16px
-        @include responsive($screen: desktop)
-            font-size: 14px
-            margin-bottom: 16px
-        @include responsive($screen: large-desktop)
-            font-size: 18px
-            margin-bottom: 20px
+    &__body-content
+        h1
+            line-height: 1.5
+            @include responsive($screen: mobile)
+                font-size: 20px
+                margin-top: 20px
+                margin-bottom: 20px
+            @include responsive($screen: tablet)
+                font-size: 14px
+                margin-top: 20px
+                margin-bottom: 12px
+            @include responsive($screen: desktop)
+                font-size: 16px
+                margin-top: 22px
+                margin-bottom: 14px
+            @include responsive($screen: large-desktop)
+                font-size: 24px
+                margin-top: 30px
+                margin-bottom: 20px
+        div, strong, em, del, blockquote, pre, li
+            line-height: 1.67
+            @include responsive($screen: mobile)
+                font-size: 16px
+                margin-bottom: 10px
+            @include responsive($screen: tablet)
+                font-size: 14px
+                margin-bottom: 16px
+            @include responsive($screen: desktop)
+                font-size: 14px
+                margin-bottom: 16px
+            @include responsive($screen: large-desktop)
+                font-size: 18px
+                margin-bottom: 20px
+        ul
+            padding-inline-start: 20px
+            li
+                list-style-type: disc
+        ol
+            padding-inline-start: 30px
+            li
+                list-style-type: decimal-leading-zero
 
     &__form
         background-color: $softGray !important

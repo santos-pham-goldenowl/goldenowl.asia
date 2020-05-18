@@ -1,5 +1,5 @@
-import React, { createRef } from "react";
-import { Link } from "react-router-dom";
+import React, { createRef, useEffect, useState } from "react";
+import { Link, Redirect } from "react-router-dom";
 import Helmet from "react-helmet";
 
 import Footer from "../../components/Footer";
@@ -8,21 +8,37 @@ import MainHeader from "../../components/MainHeader";
 import BreadCrumb from "../../components/BreadCrumb";
 import FixedTopHeader from "../../components/FixedTopHeader";
 import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
+import LoadingScreen from "../../components/LoadingScreen";
 
 import stickyTrigger from "../../utils/stickyTrigger";
 import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
-import objectToArray from "../../utils/objectToArray";
-import mockCareersData from "../../utils/mockCareersData";
+
+import { getAllCareers } from "../../api/careers";
 
 import clock from "../../assets/images/clock.svg";
 import "./index.sass";
 
 const Career = () => {
+  const [jobs, setJobs] = useState([]);
+  const [loadStatus, setLoadStatus] = useState("init");
   const isMobile = useMobileWidth();
 
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
+
+  useEffect(() => {
+    getAllCareers()
+      .then((res) => {
+        const { data } = res.data;
+
+        if (data) {
+          setJobs([...data.data]);
+          setTimeout(() => setLoadStatus("loaded"), 500);
+        }
+      })
+      .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
+  }, []);
 
   window.onscroll = () => stickyTrigger(scrollDirection);
 
@@ -35,18 +51,18 @@ const Career = () => {
 
   const defaultRowRender = (item) => (
     <tr>
-      <td className="first-col">{statusRender(item.filled)}</td>
+      <td className="first-col">{statusRender(item.attributes.filled)}</td>
       <td className="second-col">
-        <p className="careers__job">{item.key}</p>
+        <p className="careers__job">{item.attributes.title}</p>
       </td>
       <td className="third-col">
         <img className="clock" src={clock} alt="GO-clock" />
-        <p className="d-inline careers__time">{item.time}</p>
+        <p className="d-inline careers__time">{item.attributes.job_type}</p>
       </td>
       <td className="fourth-col">
         <Link
-          to={item.filled ? '' : `careers/${item.url}` }
-          onClick={(e) => item.filled && e.preventDefault()}
+          to={item.attributes.filled ? "" : `careers/details/${item.id}`}
+          onClick={(e) => item.attributes.filled && e.preventDefault()}
         >
           View details
         </Link>
@@ -57,20 +73,37 @@ const Career = () => {
   const mobileRowRender = (item) => (
     <tr>
       <td>
-        {statusRender(item.filled)}
-        <p className="careers__job">{item.key}</p>
+        {statusRender(item.attributes.filled)}
+        <p className="careers__job">{item.attributes.title}</p>
         <img className="clock" src={clock} alt="GO-clock" />
-        <p className="d-inline careers__time">{item.time}</p>
+        <p className="d-inline careers__time">{item.attributes.job_type}</p>
         <Link
-          className={item.filled ? 'text-decoration-none' : ''}
-          to={item.filled ? '' : `careers/${item.url}` }
-          onClick={(e) => item.filled && e.preventDefault()}
+          className={item.attributes.filled ? "text-decoration-none" : ""}
+          to={item.attributes.filled ? "" : `careers/details/${item.id}`}
+          onClick={(e) => item.attributes.filled && e.preventDefault()}
         >
           View details
         </Link>
       </td>
     </tr>
   );
+
+  const bodyRender = () => {
+    switch (loadStatus) {
+      case "loaded":
+        return (
+          <table className="table mb-0">
+            <tbody>
+              {jobs.map((item) =>
+                isMobile ? mobileRowRender(item) : defaultRowRender(item)
+              )}
+            </tbody>
+          </table>
+        );
+        default:
+          return <LoadingScreen />;
+      }
+  };
 
   return (
     <section className="careers">
@@ -117,13 +150,7 @@ const Career = () => {
           <h2 className="careers__title">
             Careers at Golden Owl. From everything
           </h2>
-          <table className="table mb-0">
-            <tbody>
-              {objectToArray(mockCareersData).map((item) =>
-                isMobile ? mobileRowRender(item) : defaultRowRender(item)
-              )}
-            </tbody>
-          </table>
+          {bodyRender()}
         </section>
         <Footer />
       </div>

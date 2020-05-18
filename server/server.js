@@ -109,6 +109,36 @@ app.use(
   })
 );
 
+app.use(
+  express.Router().get("/get-careers", (req, res) => {
+    axiosInstance
+      .get(`${process.env.REACT_APP_API_URL}/careers`)
+      .then((response) => res.json({ data: response.data }))
+      .catch((error) =>
+        res.json({
+          error: true,
+          message: `Error: ${error}`,
+        })
+      );
+  })
+);
+
+app.use(
+  express.Router().get("/get-career", (req, res) => {
+    const { id } = req.query;
+
+    axiosInstance
+      .get(`${process.env.REACT_APP_API_URL}/careers/${id}`)
+      .then((response) => res.json({ data: response.data }))
+      .catch((error) =>
+        res.json({
+          error: true,
+          message: `Error: ${error}`,
+        })
+      );
+  })
+);
+
 app.use(loader);
 
 // We tell React Loadable to load all required assets and start listening - ROCK AND ROLL!
