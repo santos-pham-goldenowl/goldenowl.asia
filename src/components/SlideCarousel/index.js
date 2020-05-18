@@ -22,7 +22,7 @@ const responsive = {
 };
 
 const SlideCarousel = ({ ...props }) => {
-  const { deviceType, content } = props;
+  const { content } = props;
 
   return (
     <Carousel

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import ArrowRight from '../../../../components/ArrowRight';
-
 import testimonials from '../../../../utils/testimonials';
 import objectToArray from '../../../../utils/objectToArray';
 import useMobileWidth from '../../../../utils/hooks/useMobileWidth';

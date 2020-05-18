@@ -108,7 +108,7 @@ const NotFound = () => {
           </Link>
         </div>
         <div id="not-found-image-wrapper" className="col-12 col-md-7">
-          <img id="not-found-zone" src={img404} />
+          <img id="not-found-zone" alt="GO-404-not-found" src={img404} />
         </div>
       </div>
     </section>

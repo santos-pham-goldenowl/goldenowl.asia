@@ -10,7 +10,6 @@ import MainHeader from "../../components/MainHeader";
 import BreadCrumb from "../../components/BreadCrumb";
 import FixedTopHeader from "../../components/FixedTopHeader";
 import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
-import CheckPoint from "../../components/CheckPoint";
 import { InputField } from "../../components/FormInputs";
 import LoadingScreen from "../../components/LoadingScreen";
 
@@ -44,7 +43,7 @@ const CareerDetails = () => {
         }
       })
       .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
-  }, []);
+  }, [jobId]);
 
   console.log(job);
 
@@ -93,30 +92,12 @@ const CareerDetails = () => {
     }
   };
 
-  const paragraphRender = (item) => (
-    <>
-      <div className="col-12 col-md-3" />
-      <div className="col-12 col-md-6">
-        <h4 className="paragraph-title">{item.title}</h4>
-        <p className="paragraph-content">{item.content}</p>
-      </div>
-      <div className="col-12 col-md-3" />
-    </>
-  );
-
   const statusRender = (filled) =>
     filled ? (
       <div className="job-status filled-job d-inline-block">Job Filled</div>
     ) : (
       <div className="job-status open-job d-inline-block">Open</div>
     );
-
-  const requirementRender = (item) => (
-    <div className="d-flex">
-      <CheckPoint />
-      <p>{item}</p>
-    </div>
-  );
 
   const validateUrl = (url) => {
     const re = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import ArrowRight from '../ArrowRight';
-
 import laptop from '../../assets/images/twp.png';
 import './index.sass';
 

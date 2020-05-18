@@ -102,6 +102,7 @@ const Contact = () => {
                   <iframe
                     src="https://pipedrivewebforms.com/form/d4ad07bce7708484ea5575cea7d07e9a7536351"
                     scrolling="no"
+                    title="GO-contact-form"
                     seamless="seamless"
                   />
               </div>

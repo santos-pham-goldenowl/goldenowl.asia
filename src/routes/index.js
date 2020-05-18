@@ -20,7 +20,6 @@ import NotFound from "../pages/NotFound";
 import objectToArray from "../utils/objectToArray";
 import portfolioDetails from "../utils/portfolioDetails";
 import singleServiceDetails from "../utils/singleServiceDetails";
-import mockCareersData from "../utils/mockCareersData";
 
 const AppRoutes = () => {
   const location = useLocation();

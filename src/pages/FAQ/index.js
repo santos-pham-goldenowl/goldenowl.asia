@@ -1,4 +1,4 @@
-import React, { createRef, useState, useEffect } from "react";
+import React, { createRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 
@@ -23,7 +23,6 @@ const FAQ = () => {
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
   let updateMenuActiveStatusFunc = () => {
-    console.log('Start func!');
     const fixedTopElement = document.getElementById("fixed-top-menu") ||  document.getElementById("fixed-top-breadcrumb");
     const entries = document.querySelectorAll('section[id*="content-"]');
     let firstIdx = -1;
@@ -33,17 +32,16 @@ const FAQ = () => {
       const tocItem = document.querySelector(`nav li a[href="#${id}"]`);
       tocItem && tocItem.parentElement.classList.remove('active');
       const elemHeight = entry.clientHeight;
-      if ((entry.getBoundingClientRect().top + window.pageYOffset + elemHeight - fixedTopElement.clientHeight) > window.pageYOffset && firstIdx == -1) {
+      if ((entry.getBoundingClientRect().top + window.pageYOffset + elemHeight - fixedTopElement.clientHeight) > window.pageYOffset && firstIdx === -1) {
         firstIdx = i;
         tocItem && tocItem.parentElement.classList.add('active');
       }
     };
   }
 
-  let updateMenuStatusActiveDebounce = null;
+  // let updateMenuStatusActiveDebounce = null;
 
   const tableOfContentQuery = () => {
-    // console.log('Start scrolling!')
     // Debounce
     // if (updateMenuStatusActiveDebounce) {
     //   clearTimeout(updateMenuStatusActiveDebounce);

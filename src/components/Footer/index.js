@@ -54,8 +54,8 @@ const Footer = () => {
             <div>
               <a href="/careers">Careers</a>
               <Link to="/contact-us">Contact us</Link>
-              {/* <a href="/faq">FAQ</a> */}
-              {/* <Link to="/blog">Blog</Link> */}
+              <a href="/faq">FAQ</a>
+              <Link to="/blog">Blog</Link>
             </div>
           </div>
           <div className="col-6">
@@ -139,8 +139,8 @@ const Footer = () => {
           <div>
             <a href="/careers">Careers</a>
             <Link to="/contact-us">Contact us</Link>
-            {/* <a href="/faq">FAQ</a> */}
-            {/* <Link to="/blog">Blog</Link> */}
+            <a href="/faq">FAQ</a>
+            <Link to="/blog">Blog</Link>
           </div>
         </div>
       </div>
