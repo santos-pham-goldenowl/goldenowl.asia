@@ -1,0 +1,122 @@
+import React, { useState, useEffect } from "react";
+import { Link, Redirect } from "react-router-dom";
+import Helmet from "react-helmet";
+import parse from "html-react-parser";
+
+import Footer from "../../components/Footer";
+import LoadingScreen from "../../components/LoadingScreen";
+
+import useMobileWidth from "../../utils/hooks/useMobileWidth";
+
+import "./index.sass";
+import companyOgLogo from "../../assets/images/GoldenOwlLogo.png";
+import logo from "../../assets/images/golden_owl.svg";
+import { getBlog } from "../../api/blogs";
+
+const BlogDetails = () => {
+  const isMobile = useMobileWidth();
+
+  const blogId =
+    window && window.location
+      ? window.location.pathname.split("/").slice(-1)[0]
+      : "";
+  const [blog, setBlog] = useState({});
+  const [loadStatus, setLoadStatus] = useState("");
+
+  useEffect(() => {
+    getBlog(blogId)
+      .then((res) => {
+        const { data } = res.data;
+
+        if (data) {
+          setBlog({ ...data.data });
+          setTimeout(() => setLoadStatus("loaded"), 500);
+        }
+      })
+      .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
+  }, [blogId, loadStatus]);
+
+  switch (loadStatus) {
+    case "loaded":
+      return (
+        <section className="blog-details">
+          <Helmet>
+            <title></title>
+            <meta
+              content="width=device-width, initial-scale=1"
+              name="viewport"
+            />
+            <meta
+              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              name="description"
+            />
+            <meta
+              content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native"
+              property="og:title"
+            />
+            <meta
+              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              property="og:description"
+            />
+            <meta content={companyOgLogo} property="og:image" />
+            <meta name="csrf-param" content="authenticity_token" />
+            <meta
+              name="csrf-token"
+              content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg=="
+            />
+          </Helmet>
+          <div className="container-fluid no-padding">
+            <header className="blog-details__header d-flex align-items-center">
+              <img src={logo} className="blog-details__header-logo d-block" />
+              <p>Blog</p>
+              <button className="blog-details__subcribe-button ml-auto">
+                Subcribe to our blog
+              </button>
+            </header>
+            <section className="blog-details__body">
+              <div className="row">
+                <div
+                  className={`col-md-3 blog-details__left-side ${
+                    isMobile ? "d-none" : ""
+                  }`}
+                >
+                  <Link to="/blog">BACK TO BLOG</Link>
+                </div>
+                <div className="col-md-6">
+                  <div className="blog-details__title">
+                    <div className="category d-flex">
+                      <p className="text-uppercase">{blog.type}</p>
+                      <p className="text-uppercase">JAN 31, 2020</p>
+                      <p className="text-uppercase">10 MIN READ</p>
+                    </div>
+                    <h1>{blog.attributes.title}</h1>
+                  </div>
+                  <div className="blog-details__center-content">
+                    {parse(blog.attributes.content)}
+                  </div>
+                </div>
+                <div className="col-md-3 blog-details__right-side text-right">
+                  <p className="blog-details__source">
+                    SOURCE
+                    <br />
+                    <strong>UX Magazine Staff</strong>
+                  </p>
+                  <p className="blog-details__share">
+                    SHARE THIS POST
+                    <br />
+                  </p>
+                </div>
+              </div>
+            </section>
+            <Footer />
+          </div>
+        </section>
+      );
+    case "no-result":
+      return <Redirect to="/not-found" />;
+    default:
+      return <LoadingScreen />;
+  }
+};
+
+export default BlogDetails;

@@ -99,9 +99,25 @@ app.use(
 
     axiosInstance
       .get(`${process.env.REACT_APP_API_URL}/posts?size=${size}`)
-      .then((response) => res.json({ data: response.data }))
+      .then((response) => res.status(200).json({ data: response.data }))
       .catch((error) =>
-        res.json({
+        res.status(404).json({
+          error: true,
+          message: `Error: ${error}`,
+        })
+      );
+  })
+);
+
+app.use(
+  express.Router().get("/get-blog", (req, res) => {
+    const { id } = req.query;
+
+    axiosInstance
+      .get(`${process.env.REACT_APP_API_URL}/posts/${id}`)
+      .then((response) => res.status(200).json({ data: response.data }))
+      .catch((error) =>
+      res.status(404).json({
           error: true,
           message: `Error: ${error}`,
         })
@@ -113,9 +129,9 @@ app.use(
   express.Router().get("/get-careers", (req, res) => {
     axiosInstance
       .get(`${process.env.REACT_APP_API_URL}/careers`)
-      .then((response) => res.json({ data: response.data }))
+      .then((response) => res.status(200).json({ data: response.data }))
       .catch((error) =>
-        res.json({
+        res.status(404).json({
           error: true,
           message: `Error: ${error}`,
         })
@@ -129,9 +145,8 @@ app.use(
 
     axiosInstance
       .get(`${process.env.REACT_APP_API_URL}/careers/${id}`)
-      .then((response) => res.json({ data: response.data }))
-      .catch((error) =>
-        res.json({
+      .then((response) => res.status(200).json({ data: response.data }))
+      .catch((error) => res.status(404).json({
           error: true,
           message: `Error: ${error}`,
         })

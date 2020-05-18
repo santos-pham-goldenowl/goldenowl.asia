@@ -35,8 +35,6 @@ const CareerDetails = () => {
       .then((res) => {
         const { data } = res.data;
 
-        console.log(data.data);
-
         if (data) {
           setJob({ ...data.data.attributes });
           setTimeout(() => setLoadStatus("loaded"), 500)
@@ -44,8 +42,6 @@ const CareerDetails = () => {
       })
       .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
   }, [jobId]);
-
-  console.log(job);
 
   const defaultValues = useMemo(
     () => ({
@@ -331,26 +327,6 @@ const CareerDetails = () => {
                   {job.content ? parse(job.content) : ""}
                 </div>
                 <div className="col-12 col-md-3" />
-                {/* <div className="col-12 career-details__body-requirements">
-              <div className="row">
-                <div className="col-12 col-md-2" />
-                <div className="col-12 col-md-8">
-                  <div className="row">
-                    <div className="col-12 col-md-6">
-                      {careerDetails.requirementLeft.map((item) =>
-                        requirementRender(item)
-                      )}
-                    </div>
-                    <div className="col-12 col-md-6">
-                      {careerDetails.requirementRight.map((item) =>
-                        requirementRender(item)
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-2" />
-              </div>
-            </div> */}
               </div>
             </section>
             <section className="career-details__form">{formRender()}</section>

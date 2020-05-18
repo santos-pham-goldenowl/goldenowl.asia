@@ -12,6 +12,7 @@ import PortfolioSubPage from "../pages/PortfolioSubPage";
 import Testimonials from "../pages/Testimonials";
 import Portfolio from "../pages/Portfolio";
 import Blog from "../pages/Blog";
+import BlogDetails from "../pages/BlogDetails";
 import Career from "../pages/Career";
 import CareerDetails from "../pages/CareerDetails";
 import FAQ from "../pages/FAQ";
@@ -45,6 +46,7 @@ const AppRoutes = () => {
             />
           ))}
           <Route exact path="/blog" component={Blog} />
+          <Route path="/blog/details" component={BlogDetails} />
           <Route path="/blog/details" component={Services} />
           <Route exact path="/contact-us" component={Contact} />
           <Route exact path="/services" component={Services} />
