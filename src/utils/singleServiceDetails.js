@@ -25,6 +25,9 @@ import ai from '../assets/images/service/UiUx/ai.svg';
 import inVision from '../assets/images/service/UiUx/in-vision.svg';
 import ps from '../assets/images/service/UiUx/ps.svg';
 import sketch from '../assets/images/service/UiUx/sketch.svg';
+import seWeb from '../assets/images/service/AutomationTesting/seWeb.svg';
+import seIde from '../assets/images/service/AutomationTesting/seIde.svg';
+import appium from '../assets/images/service/AutomationTesting/appium.svg';
 
 // cover import
 import mobileCoverImage from '../assets/images/service/MobileDevelopment/cover.jpg';
@@ -360,7 +363,20 @@ const servicesDetails = {
     fourth: {
       title: 'Best practices with appropriate tools.',
       content: 'We apply the best practices, picks appropriate tools, and supervises automated testing. The whole work is based on the list of strict quality checks that the solution must pass in order to move to the next phase and make sure that both developers and clients understand the importance of the QA process.',
-      logos: [],
+      logos: [
+        {
+          name: 'selenium web',
+          url: seWeb,
+        },
+        {
+          name: 'selenium ide',
+          url: seIde,
+        },
+        {
+          name: 'appium',
+          url: appium,
+        },
+      ],
     },
     navs: automationTesting,
   },

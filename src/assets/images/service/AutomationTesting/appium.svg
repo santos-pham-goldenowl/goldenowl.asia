@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0.07740625 0.0834108527 31.3569375 0.0834108527 31.3569375 25.8743767 0.07740625 25.8743767"></polygon>
+        <polygon id="path-3" points="1.30910388e-05 0.0152403101 31.2332972 0.0152403101 31.2332972 22.0155039 1.30910388e-05 22.0155039"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Services---Automation-testing-scale" transform="translate(-950.000000, -2132.000000)">
+            <g id="tech" transform="translate(0.000000, 2032.000000)">
+                <g id="3" transform="translate(950.000000, 100.000000)">
+                    <rect id="Rectangle" stroke="#3E403D" x="0.5" y="0.5" width="79" height="79" rx="10"></rect>
+                    <g id="Group-9" transform="translate(20.000000, 20.000000)">
+                        <g id="Group-3" transform="translate(0.156250, 0.071628)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M31.3569375,4.0171938 C26.54725,-0.102806202 15.90475,-2.1435814 7.92928125,3.77130233 C0.44725,8.74789147 0.07740625,17.8443256 0.07740625,17.8443256 C1.351625,22.8209147 6.4081875,27.5936279 16.1513125,25.2685116 C15.0002188,18.5785891 17.2563125,1.65130233 31.3569375,4.0171938" id="Fill-1" fill="#3E403D" mask="url(#mask-2)"></path>
+                        </g>
+                        <g id="Group-6" transform="translate(0.000000, 17.901085)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="Clip-5"></g>
+                            <path d="M26.5031094,2.36764341 C21.2396719,6.70175194 5.21904688,13.3150853 0.233578125,0.0152403101 C-0.957359375,6.20826357 2.34748437,16.5161705 11.4974844,20.4121395 C19.5821719,24.3532248 28.0074844,19.7887287 28.0074844,19.7887287 C31.7137344,16.2054729 33.4040469,9.57741085 26.5031094,2.36764341" id="Fill-4" fill="#393939" mask="url(#mask-4)"></path>
+                        </g>
+                        <path d="M16.9966563,14.1897364 C23.4110313,16.5455504 37.12275,26.7557829 28.0074375,37.6898915 C34.008375,35.6165581 41.0449375,27.683845 39.87025,17.8731473 C39.2679062,8.95531783 31.513375,4.08911628 31.513375,4.08911628 C26.53275,2.69593798 19.8388438,4.65485271 16.9966563,14.1897364" id="Fill-7" fill="#313131"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

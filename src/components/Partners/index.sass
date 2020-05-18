@@ -47,18 +47,15 @@
       color: $smokeGray
     &--left
       left: -17px !important
+      @include responsive($screen: mobile)
+        display: none
     &--right
       right: -17px !important
+      @include responsive($screen: mobile)
+        display: none
 
   .react-multi-carousel-list
     display: flex
-    @include responsive($screen: mobile)
-      display: none !important
-
-  #mobile-display-section
-    display: none
-    @include responsive($screen: mobile)
-      display: flex
 
   [class*='col']
     @include responsive($screen: mobile)

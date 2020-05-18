@@ -3,6 +3,9 @@ import Carousel from "react-multi-carousel";
 
 import "react-multi-carousel/lib/styles.css";
 
+import useMobileWidth from "../../utils/hooks/useMobileWidth";
+import chunkArray from "../../utils/chunkArray";
+
 const responsive = {
   desktop: {
     breakpoint: { max: 2560, min: 1366 },
@@ -17,14 +20,18 @@ const responsive = {
   mobile: {
     breakpoint: { max: 767, min: 0 },
     items: 1,
-    slidesToSlide: 6,
+    slidesToSlide: 1,
   },
 };
 
 const SlideCarousel = ({ ...props }) => {
+  const isMobile = useMobileWidth();
+
   const { content } = props;
 
-  return (
+  const mobileData = chunkArray(content.slice(0), 6);
+
+  const defaultRender = () => (
     <Carousel
       additionalTransfrom={0}
       arrows
@@ -43,7 +50,6 @@ const SlideCarousel = ({ ...props }) => {
       renderDotsOutside={false}
       showDots={false}
       sliderClass=""
-      slidesToSlide={2}
       swipeable
       ssr
       responsive={responsive}
@@ -63,7 +69,46 @@ const SlideCarousel = ({ ...props }) => {
         </div>
       ))}
     </Carousel>
-  );
+  )
+
+  const mobileRender = () => (
+    <Carousel
+      additionalTransfrom={0}
+      arrows
+      autoPlay
+      autoPlaySpeed={5000}
+      centerMode={false}
+      className=""
+      dotListClass=""
+      draggable
+      focusOnSelect={false}
+      infinite
+      itemClass=""
+      keyBoardControl
+      minimumTouchDrag={80}
+      renderButtonGroupOutside={false}
+      renderDotsOutside={false}
+      showDots={false}
+      sliderClass=""
+      swipeable
+      ssr
+      responsive={responsive}
+      containerClass="align-items-center"
+    >
+      {mobileData.map((cGroup) => (
+        <div className="row">
+          {cGroup.map((c) =>
+            <div className="col-6">
+              <img src={c.url} alt={`GO ${c.name}`} id={c.name} />
+            </div>
+          )}        
+        </div>
+      )
+    )}
+    </Carousel>
+  )
+
+  return isMobile ? mobileRender() : defaultRender();
 };
 
 export default SlideCarousel;
