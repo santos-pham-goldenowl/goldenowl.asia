@@ -98,7 +98,7 @@ app.use(
     const { size = 10 } = req.body;
 
     axiosInstance
-      .get(`${process.env.REACT_APP_API_URL}/posts?size=${size}`)
+      .get(`${process.env.API_URL}/posts?size=${size}`)
       .then((response) => res.status(200).json({ data: response.data }))
       .catch((error) =>
         res.status(404).json({
@@ -114,7 +114,7 @@ app.use(
     const { id } = req.query;
 
     axiosInstance
-      .get(`${process.env.REACT_APP_API_URL}/posts/${id}`)
+      .get(`${process.env.API_URL}/posts/${id}`)
       .then((response) => res.status(200).json({ data: response.data }))
       .catch((error) =>
       res.status(404).json({
@@ -128,7 +128,7 @@ app.use(
 app.use(
   express.Router().get("/get-careers", (req, res) => {
     axiosInstance
-      .get(`${process.env.REACT_APP_API_URL}/careers`)
+      .get(`${process.env.API_URL}/careers`)
       .then((response) => res.status(200).json({ data: response.data }))
       .catch((error) =>
         res.status(404).json({
@@ -144,7 +144,7 @@ app.use(
     const { id } = req.query;
 
     axiosInstance
-      .get(`${process.env.REACT_APP_API_URL}/careers/${id}`)
+      .get(`${process.env.API_URL}/careers/${id}`)
       .then((response) => res.status(200).json({ data: response.data }))
       .catch((error) => res.status(404).json({
           error: true,

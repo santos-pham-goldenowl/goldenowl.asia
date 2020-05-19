@@ -9,7 +9,6 @@ import LoadingScreen from "../../components/LoadingScreen";
 
 import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import readTimeCalculator from "../../utils/readTimeCalculator";
-import facebookSdkLoadScript from "../../utils/facebookSdkLoadScript";
 
 import { getBlog } from "../../api/blogs";
 
@@ -115,7 +114,7 @@ const BlogDetails = () => {
                     <br />
                     <div id="social-icons" className="d-flex">
                       <FacebookProvider appId="862143160935909">
-                        <Share href="http://www.facebook.com">
+                        <Share href={window.location.href}>
                         {({ handleClick, loading }) => (
                           <img className="ml-auto" src={fb} alt="GO-facebook-share" id="facebook-sharing" onClick={handleClick}/>
                         )}
