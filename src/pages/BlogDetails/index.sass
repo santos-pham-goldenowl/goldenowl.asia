@@ -6,38 +6,57 @@
   &__header
     @include responsive($screen: mobile)
     @include responsive($screen: tablet)
+      padding-top: 21px
+      margin-bottom: 63px
     @include responsive($screen: desktop)
+      padding-top: 21px
+      margin-bottom: 90px
     @include responsive($screen: large-desktop)
       padding-top: 27px
-      margin-bottom: 125px
+      margin-bottom: 126px
     p
       font-family: ProximaNovaBold
       line-height: 1.25
       @include responsive($screen: mobile)
       @include responsive($screen: tablet)
+        font-size: 14px
       @include responsive($screen: desktop)
+        font-size: 14px
       @include responsive($screen: large-desktop)
         font-size: 16px
 
   &__header-logo
     @include responsive($screen: mobile)
     @include responsive($screen: tablet)
+      margin-right: 35px
+      height: 27px
     @include responsive($screen: desktop)
+      margin-right: 35px
+      height: 27px
     @include responsive($screen: large-desktop)
       margin-right: 40px
+      height: 31px
 
   &__subcribe-button
-    width: 188px
-    height: 45px
     background-color: $white
     border: solid 2px $yellow
     font-family: ProximaNovaBold
     color: $darkGray
     @include responsive($screen: mobile)
     @include responsive($screen: tablet)
+      width: 164px
+      height: 40px
+      font-size: 14px
     @include responsive($screen: desktop)
+      width: 164px
+      height: 40px
+      font-size: 14px
     @include responsive($screen: large-desktop)
       font-size: 16px
+      width: 188px
+      height: 45px
+    &:hover
+      color: $yellow
 
   &__left-side
     a
@@ -45,15 +64,74 @@
       &:hover
         color: $yellow !important
 
+  &__right-side
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      font-size: 14px
+    @include responsive($screen: desktop)
+      font-size: 14px
+    @include responsive($screen: large-desktop)
+      font-size: 16px
+    hr
+      margin-inline-start: auto
+      margin-inline-end: 0px
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        margin-top: 10px
+        margin-bottom: 10px
+        width: 166px
+      @include responsive($screen: desktop)
+        margin-top: 14px
+        margin-bottom: 14px
+        width: 166px
+      @include responsive($screen: large-desktop)
+        margin-top: 20px
+        margin-bottom: 20px
+        width: 190px
+
+  #social-icons
+    img
+      cursor: pointer
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        margin-top: 18px
+        margin-left: 18px
+        width: 26px
+      @include responsive($screen: desktop)
+        margin-top: 18px
+        margin-left: 18px
+        width: 26px
+      @include responsive($screen: large-desktop)
+        margin-top: 20px
+        margin-left: 20px
+        width: 30px
+
   &__source
-    margin-top: 555px
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      margin-top: 278px
+    @include responsive($screen: desktop)
+      margin-top: 388px
+    @include responsive($screen: large-desktop)
+      margin-top: 555px
 
   &__share
-    margin-top: 40px
-    margin-bottom: 150px
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      margin-bottom: 75px
+    @include responsive($screen: desktop)
+      margin-bottom: 105px
+    @include responsive($screen: large-desktop)
+      margin-bottom: 150px
 
   &__center-content
-    padding-bottom: 150px
+    @include responsive($screen: mobile)
+    @include responsive($screen: tablet)
+      padding-bottom: 75px
+    @include responsive($screen: desktop)
+      padding-bottom: 105px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 150px
     h1
       line-height: 1.5
       @include responsive($screen: mobile)
@@ -120,5 +198,13 @@
     h1
       font-family: MalloryBold
       line-height: 1.32
-      font-size: 44px
-      margin-bottom: 30px
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        font-size: 22px
+        margin-bottom: 16px
+      @include responsive($screen: desktop)
+        font-size: 32px
+        margin-bottom: 22px
+      @include responsive($screen: large-desktop)
+        font-size: 44px
+        margin-bottom: 30px

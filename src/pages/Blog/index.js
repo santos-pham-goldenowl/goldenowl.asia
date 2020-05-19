@@ -1,4 +1,5 @@
 import React, { createRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import parse from "html-react-parser";
 
@@ -11,11 +12,11 @@ import FixedTopHeader from "../../components/FixedTopHeader";
 
 import stickyTrigger from "../../utils/stickyTrigger";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
+import readTimeCalculator from "../../utils/readTimeCalculator";
 
 import { getAllBlogs } from "../../api/blogs";
 
 import "./index.sass";
-import { Link } from "react-router-dom";
 
 const Blog = () => {
   const pageContent = createRef();
@@ -28,7 +29,6 @@ const Blog = () => {
     getAllBlogs()
       .then((res) => {
         const { data } = res.data;
-        console.log("Blog -> data", data.data);
 
         if (data) {
           setBlogs([...data.data]);
@@ -37,7 +37,6 @@ const Blog = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(blogs);
   return (
     <section className="blog">
       <Helmet>
@@ -103,7 +102,7 @@ const Blog = () => {
                               <div className="category d-flex">
                                 <p className="text-uppercase">{blog.type}</p>
                                 <p className="text-uppercase">JAN 31, 2020</p>
-                                <p className="text-uppercase">10 MIN READ</p>
+                                <p className="text-uppercase">{readTimeCalculator(blog.attributes.content)}</p>
                               </div>
                               <h4>{blog.attributes.title}</h4>
                               <p>{parse(blog.attributes.content)}</p>
@@ -134,7 +133,7 @@ const Blog = () => {
                               <div className="category category-vertical-small d-flex">
                                 <p>{blog.type}</p>
                                 <p>JAN 31, 2020</p>
-                                <p>10 MIN READ</p>
+                                <p>{readTimeCalculator(blog.attributes.content)}</p>
                               </div>
                               <h4 className="small-item-title">
                                 {blog.attributes.title}
@@ -166,7 +165,7 @@ const Blog = () => {
                               <div className="category category-vertical-big d-flex">
                                 <p>{blog.type}</p>
                                 <p>JAN 31, 2020</p>
-                                <p>10 MIN READ</p>
+                                <p>{readTimeCalculator(blog.attributes.content)}</p>
                               </div>
                               <h4 className="medium-item-title">
                                 {blog.attributes.title}

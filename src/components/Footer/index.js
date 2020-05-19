@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import socialIcons from '../../utils/socialIcons';
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
 
 import go from '../../assets/images/golden_owl.png';
 import vnflag from '../../assets/images/vn.svg'
@@ -11,7 +12,6 @@ import auflag from '../../assets/images/au.svg'
 import sgflag from '../../assets/images/sg.svg'
 
 import './index.sass';
-import useMobileWidth from '../../utils/hooks/useMobileWidth';
 
 const Footer = () => {
   const isMobile = useMobileWidth()
