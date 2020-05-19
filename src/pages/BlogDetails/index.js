@@ -118,7 +118,7 @@ const BlogDetails = () => {
                       <FacebookShareButton hashtag="#GoldenOwlConsulting" className="ml-auto" url={window.location.href}>
                         <img className="ml-auto" src={fb} alt="GO-facebook-share" id="facebook-sharing"/>
                       </FacebookShareButton>
-                      <TwitterShareButton hashtags={["#GoldenOwlConsulting"]} url={window.location.href}>
+                      <TwitterShareButton hashtags={["GoldenOwlConsulting"]} url={window.location.href}>
                         <img src={tw} alt="GO-twitter-share" id="twitter-sharing" />
                       </TwitterShareButton>
                     </div>
