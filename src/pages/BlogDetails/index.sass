@@ -90,20 +90,27 @@
         width: 190px
 
   #social-icons
-    img
-      cursor: pointer
+    button
+      &:focus
+        outline: none
       @include responsive($screen: mobile)
       @include responsive($screen: tablet)
         margin-top: 18px
         margin-left: 18px
-        width: 26px
       @include responsive($screen: desktop)
         margin-top: 18px
         margin-left: 18px
-        width: 26px
       @include responsive($screen: large-desktop)
         margin-top: 20px
         margin-left: 20px
+    img
+      cursor: pointer
+      @include responsive($screen: mobile)
+      @include responsive($screen: tablet)
+        width: 26px
+      @include responsive($screen: desktop)
+        width: 26px
+      @include responsive($screen: large-desktop)
         width: 30px
 
   &__source

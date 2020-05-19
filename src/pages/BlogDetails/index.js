@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import Helmet from "react-helmet";
 import parse from "html-react-parser";
-import { FacebookProvider, Share } from 'react-facebook';
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+} from "react-share";
 
 import Footer from "../../components/Footer";
 import LoadingScreen from "../../components/LoadingScreen";
@@ -71,7 +74,6 @@ const BlogDetails = () => {
               content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg=="
             />
           </Helmet>
-          {parse(facebookSdkLoadScript)}
           <div className="container-fluid no-padding">
             <header className="blog-details__header d-flex align-items-center">
               <img src={logo} className="blog-details__header-logo d-block" />
@@ -113,14 +115,12 @@ const BlogDetails = () => {
                     SHARE THIS POST
                     <br />
                     <div id="social-icons" className="d-flex">
-                      <FacebookProvider appId="862143160935909">
-                        <Share href={window.location.href}>
-                        {({ handleClick, loading }) => (
-                          <img className="ml-auto" src={fb} alt="GO-facebook-share" id="facebook-sharing" onClick={handleClick}/>
-                        )}
-                        </Share>
-                      </FacebookProvider>
-                      <img src={tw} alt="GO-twitter-share" id="twitter-sharing" />
+                      <FacebookShareButton hashtag="#GoldenOwlConsulting" className="ml-auto" url={window.location.href}>
+                        <img className="ml-auto" src={fb} alt="GO-facebook-share" id="facebook-sharing"/>
+                      </FacebookShareButton>
+                      <TwitterShareButton hashtags={["#GoldenOwlConsulting"]} url={window.location.href}>
+                        <img src={tw} alt="GO-twitter-share" id="twitter-sharing" />
+                      </TwitterShareButton>
                     </div>
                   </p>
                 </div>

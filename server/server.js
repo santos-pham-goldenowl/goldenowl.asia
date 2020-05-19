@@ -28,8 +28,6 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(cors());
 
-console.log(process.env.REACT_APP_API_URL);
-
 // Set up homepage, static assets, and capture everything else
 app.use(express.Router().get("/", loader));
 app.use(express.static(path.resolve(__dirname, "../build")));
