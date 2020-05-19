@@ -2,16 +2,21 @@ import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import Helmet from "react-helmet";
 import parse from "html-react-parser";
+import { FacebookProvider, Share } from 'react-facebook';
 
 import Footer from "../../components/Footer";
 import LoadingScreen from "../../components/LoadingScreen";
 
 import useMobileWidth from "../../utils/hooks/useMobileWidth";
+import readTimeCalculator from "../../utils/readTimeCalculator";
+
+import { getBlog } from "../../api/blogs";
 
 import "./index.sass";
 import companyOgLogo from "../../assets/images/GoldenOwlLogo.png";
 import logo from "../../assets/images/golden_owl.svg";
-import { getBlog } from "../../api/blogs";
+import fb from "../../assets/images/facebook.svg";
+import tw from "../../assets/images/twitter.svg";
 
 const BlogDetails = () => {
   const isMobile = useMobileWidth();
@@ -34,6 +39,7 @@ const BlogDetails = () => {
         }
       })
       .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
+    
   }, [blogId, loadStatus]);
 
   switch (loadStatus) {
@@ -68,7 +74,7 @@ const BlogDetails = () => {
           <div className="container-fluid no-padding">
             <header className="blog-details__header d-flex align-items-center">
               <img src={logo} className="blog-details__header-logo d-block" />
-              <p>Blog</p>
+              <p className="">Blog</p>
               <button className="blog-details__subcribe-button ml-auto">
                 Subcribe to our blog
               </button>
@@ -87,7 +93,7 @@ const BlogDetails = () => {
                     <div className="category d-flex">
                       <p className="text-uppercase">{blog.type}</p>
                       <p className="text-uppercase">JAN 31, 2020</p>
-                      <p className="text-uppercase">10 MIN READ</p>
+                      <p className="text-uppercase">{readTimeCalculator(blog.attributes.content)}</p>
                     </div>
                     <h1>{blog.attributes.title}</h1>
                   </div>
@@ -95,15 +101,26 @@ const BlogDetails = () => {
                     {parse(blog.attributes.content)}
                   </div>
                 </div>
-                <div className="col-md-3 blog-details__right-side text-right">
+                <div className="col-md-3 blog-details__right-side d-flex flex-column justify-content-end text-right">
                   <p className="blog-details__source">
                     SOURCE
                     <br />
                     <strong>UX Magazine Staff</strong>
                   </p>
+                  <hr/>
                   <p className="blog-details__share">
                     SHARE THIS POST
                     <br />
+                    <div id="social-icons" className="d-flex">
+                      <FacebookProvider appId="862143160935909">
+                        <Share href={window.location.href}>
+                        {({ handleClick, loading }) => (
+                          <img className="ml-auto" src={fb} alt="GO-facebook-share" id="facebook-sharing" onClick={handleClick}/>
+                        )}
+                        </Share>
+                      </FacebookProvider>
+                      <img src={tw} alt="GO-twitter-share" id="twitter-sharing" />
+                    </div>
                   </p>
                 </div>
               </div>

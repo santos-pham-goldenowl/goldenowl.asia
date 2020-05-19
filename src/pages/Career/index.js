@@ -17,6 +17,7 @@ import useScrollDirection from "../../utils/hooks/useScrollDirection";
 import { getAllCareers } from "../../api/careers";
 
 import clock from "../../assets/images/clock.svg";
+import noData from "../../assets/images/no-data.svg"
 import "./index.sass";
 
 const Career = () => {
@@ -37,7 +38,10 @@ const Career = () => {
           setTimeout(() => setLoadStatus("loaded"), 500);
         }
       })
-      .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
+      .catch((err) => {
+        console.log('err: ', err);
+        setTimeout(() => setLoadStatus("no-result"), 500);
+      });
   }, []);
 
   window.onscroll = () => stickyTrigger(scrollDirection);
@@ -100,8 +104,10 @@ const Career = () => {
             </tbody>
           </table>
         );
-        default:
-          return <LoadingScreen />;
+      case "no-result":
+        return <img className="w-100 d-block" alt="GO-no-data" src={noData} />
+      default:
+        return <LoadingScreen />;
       }
   };
 
