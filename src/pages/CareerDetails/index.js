@@ -166,7 +166,7 @@ const CareerDetails = () => {
               <center>
                 <SentSuccess />
                 <br/>
-                <h5>Your application has been submitted!</h5>
+                <h5>Your job application has been succesfully submitted!</h5>
               </center>
             </div>
             <div className="col-12 col-md-3" />
@@ -180,7 +180,7 @@ const CareerDetails = () => {
               <center>
                 <LoadingScreen />
                 <br/>
-                <h5>Your application is being submitted...</h5>
+                <h5>Your job application is being submitted...</h5>
               </center>
             </div>
             <div className="col-12 col-md-3" />
