@@ -97,6 +97,14 @@
             padding-inline-start: 30px
             li
                 list-style-type: decimal-leading-zero
+        img
+            width: 180%
+            margin-left: -40%
+            @include responsive($screen: mobile)
+                width: 100%
+                margin-left: 0
+        .attachment__name, .attachment__size
+            display: none
 
     &__form
         background-color: $softGray !important
