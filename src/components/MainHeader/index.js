@@ -20,6 +20,11 @@ class MainHeader extends Component {
     win.focus();
   };
 
+  openBlogInNewTab = () => {
+    const win = window.open('/blog');
+    win.focus();
+  };
+
   render() {
     return (
       <header className="main-header">
@@ -42,7 +47,7 @@ class MainHeader extends Component {
               <Link to="/about-us">About Golden Owl</Link>
             </li>
             <li className="main-header__flex-item">
-              <Link to="/blog">Blog</Link>
+              <Link onClick={this.openBlogInNewTab}>Blog</Link>
             </li>
             <li className="main-header__flex-item">
               <Link onClick={this.openPortfolioInNewTab}>Portfolio</Link>
