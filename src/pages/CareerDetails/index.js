@@ -29,7 +29,6 @@ import useScrollDirection from "../../utils/hooks/useScrollDirection";
 import { getCareer, submitApplication } from "../../api/careers";
 
 import clock from "../../assets/images/clock.svg";
-import sent from "../../assets/images/email-sent.svg";
 import "./index.sass";
 
 const CareerDetails = () => {

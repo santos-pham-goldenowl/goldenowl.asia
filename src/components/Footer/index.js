@@ -52,10 +52,10 @@ const Footer = () => {
           <div className="col-6">
             <h3 className="footer__bottom-grid-title">Others</h3>
             <div>
-              <a href="/careers">Careers</a>
+              {/* <Link to="/careers">Careers</Link> */}
               <Link to="/contact-us">Contact us</Link>
-              <a href="/faq">FAQ</a>
-              <Link to="/blog">Blog</Link>
+              {/* <Link to="/faq">FAQ</Link> */}
+              {/* <Link to="/blog">Blog</Link> */}
             </div>
           </div>
           <div className="col-6">
@@ -137,10 +137,10 @@ const Footer = () => {
         <div className="col-md-2 pl-0">
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
-            <a href="/careers">Careers</a>
+            {/* <Link to="/careers">Careers</Link> */}
             <Link to="/contact-us">Contact us</Link>
-            <a href="/faq">FAQ</a>
-            <Link to="/blog">Blog</Link>
+            {/* <Link to="/faq">FAQ</Link> */}
+            {/* <Link to="/blog">Blog</Link> */}
           </div>
         </div>
       </div>
