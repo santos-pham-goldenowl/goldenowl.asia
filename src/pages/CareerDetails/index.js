@@ -29,7 +29,6 @@ import useScrollDirection from "../../utils/hooks/useScrollDirection";
 import { getCareer, submitApplication } from "../../api/careers";
 
 import clock from "../../assets/images/clock.svg";
-import sent from "../../assets/images/email-sent.svg";
 import "./index.sass";
 
 const CareerDetails = () => {
@@ -275,7 +274,7 @@ const CareerDetails = () => {
                   </div>
                   {/* Portfolio URL */}
                   <div className="col-md-12">
-                    <label>Portfolio URL</label>
+                    <label>Portfolio URL*</label>
                     <InputField
                       className="form-control"
                       placeholder="Your portfolio link"

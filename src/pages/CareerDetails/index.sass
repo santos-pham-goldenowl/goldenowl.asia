@@ -248,7 +248,6 @@
         opacity: 0
 
     #file-upload-ui
-        width: calc(100% - 20px)
         position: absolute
         display: flex
         align-items: center
@@ -261,6 +260,11 @@
         height: 50px !important
         overflow: hidden
         top: 32px
+        width: calc(100% - 20px)
+        @include responsive($screen: tablet)
+            width: calc(100% - 10px)
+        @include responsive($screen: desktop)
+            width: calc(100% - 15px)
 
         span
             &#upload-button
