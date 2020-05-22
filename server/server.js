@@ -161,6 +161,22 @@ app.use(
     })
 );
 
+app.use(
+  express
+    .Router()
+    .post("/subcribe", (req, res) => {
+      const { body } = req;
+      const { name, email, type } = body;
+
+      res.status(200).json({ data: {
+        message: 'subcribed',
+        name,
+        email,
+        type
+      } })
+    })
+);
+
 app.use(loader);
 
 // We tell React Loadable to load all required assets and start listening - ROCK AND ROLL!

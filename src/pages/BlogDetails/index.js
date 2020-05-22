@@ -2,22 +2,20 @@ import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import Helmet from "react-helmet";
 import parse from "html-react-parser";
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-} from "react-share";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import Footer from "../../components/Footer";
+import BlogHeader from "../../components/BlogHeader";
 import LoadingScreen from "../../components/LoadingScreen";
 
 import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import readTimeCalculator from "../../utils/readTimeCalculator";
+import replaceAllString from "../../utils/replaceAllString";
 
 import { getBlog } from "../../api/blogs";
 
 import "./index.sass";
 import companyOgLogo from "../../assets/images/GoldenOwlLogo.png";
-import logo from "../../assets/images/golden_owl.svg";
 import fb from "../../assets/images/facebook.svg";
 import tw from "../../assets/images/twitter.svg";
 
@@ -42,7 +40,6 @@ const BlogDetails = () => {
         }
       })
       .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
-    
   }, [blogId, loadStatus]);
 
   switch (loadStatus) {
@@ -75,13 +72,7 @@ const BlogDetails = () => {
             />
           </Helmet>
           <div className="container-fluid no-padding">
-            <header className="blog-details__header d-flex align-items-center">
-              <img src={logo} className="blog-details__header-logo d-block" />
-              <p className="">Blog</p>
-              <button className="blog-details__subcribe-button ml-auto">
-                Subcribe to our blog
-              </button>
-            </header>
+            <BlogHeader />
             <section className="blog-details__body">
               <div className="row">
                 <div
@@ -96,30 +87,51 @@ const BlogDetails = () => {
                     <div className="category d-flex">
                       <p className="text-uppercase">{blog.type}</p>
                       <p className="text-uppercase">JAN 31, 2020</p>
-                      <p className="text-uppercase">{readTimeCalculator(blog.attributes.content)}</p>
+                      <p className="text-uppercase">
+                        {readTimeCalculator(blog.attributes.content)}
+                      </p>
                     </div>
                     <h1>{blog.attributes.title}</h1>
                   </div>
                   <div className="blog-details__center-content">
-                    {parse(blog.attributes.content)}
+                    {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}
                   </div>
                 </div>
-                <div className="col-md-3 blog-details__right-side d-flex flex-column justify-content-end text-right">
+                <div
+                  className={`col-md-3 blog-details__right-side d-flex flex-column justify-content-end ${
+                    !isMobile && "text-right"
+                  }`}
+                >
                   <p className="blog-details__source">
                     SOURCE
                     <br />
                     <strong>UX Magazine Staff</strong>
                   </p>
-                  <hr/>
+                  <hr />
                   <p className="blog-details__share">
                     SHARE THIS POST
                     <br />
                     <div id="social-icons" className="d-flex">
-                      <FacebookShareButton hashtag="#GoldenOwlConsulting" className="ml-auto" url={window.location.href}>
-                        <img className="ml-auto" src={fb} alt="GO-facebook-share" id="facebook-sharing"/>
+                      <FacebookShareButton
+                        hashtag="#GoldenOwlConsulting"
+                        className={!isMobile && "ml-auto"}
+                        url={window.location.href}
+                      >
+                        <img
+                          src={fb}
+                          alt="GO-facebook-share"
+                          id="facebook-sharing"
+                        />
                       </FacebookShareButton>
-                      <TwitterShareButton hashtags={["GoldenOwlConsulting"]} url={window.location.href}>
-                        <img src={tw} alt="GO-twitter-share" id="twitter-sharing" />
+                      <TwitterShareButton
+                        hashtags={["GoldenOwlConsulting"]}
+                        url={window.location.href}
+                      >
+                        <img
+                          src={tw}
+                          alt="GO-twitter-share"
+                          id="twitter-sharing"
+                        />
                       </TwitterShareButton>
                     </div>
                   </p>

@@ -4,14 +4,8 @@ import Helmet from "react-helmet";
 import parse from "html-react-parser";
 
 import Footer from "../../components/Footer";
-import SubHeader from "../../components/SubHeader";
-import MainHeader from "../../components/MainHeader";
-import BreadCrumb from "../../components/BreadCrumb";
-import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
-import FixedTopHeader from "../../components/FixedTopHeader";
+import BlogHeader from "../../components/BlogHeader";
 
-import stickyTrigger from "../../utils/stickyTrigger";
-import useScrollDirection from "../../utils/hooks/useScrollDirection";
 import readTimeCalculator from "../../utils/readTimeCalculator";
 
 import { getAllBlogs } from "../../api/blogs";
@@ -19,11 +13,7 @@ import { getAllBlogs } from "../../api/blogs";
 import "./index.sass";
 
 const Blog = () => {
-  const pageContent = createRef();
-  const scrollDirection = useScrollDirection();
   const [blogs, setBlogs] = useState([]);
-
-  window.onscroll = () => stickyTrigger(scrollDirection);
 
   useEffect(() => {
     getAllBlogs()
@@ -64,16 +54,8 @@ const Blog = () => {
           content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg=="
         />
       </Helmet>
-      <div ref={pageContent} className="container-fluid no-padding">
-        <FixedTopHeader />
-        <FixedTopBreadCrumb pageContent={pageContent}>
-          <p>Blog</p>
-        </FixedTopBreadCrumb>
-        <MainHeader />
-        <SubHeader />
-        <BreadCrumb pageContent={pageContent}>
-          <p>Blog</p>
-        </BreadCrumb>
+      <div className="container-fluid no-padding">
+        <BlogHeader />
         <section className="welcome">
           <div className="welcome__wrapper">
             <h1>Welcome to the Golden Owl blog</h1>

@@ -2,8 +2,9 @@
 @import 'styles/mixins'
 
 .blog
-  .breadcrumb, header, .welcome, .fixed-breadcrumb
+  header, .welcome
     background-color: $slightOrange
+    margin-bottom: 0 !important
 
   .welcome
     @include responsive($screen: mobile)
