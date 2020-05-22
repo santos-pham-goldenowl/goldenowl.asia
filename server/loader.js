@@ -11,7 +11,7 @@ import Helmet from 'react-helmet';
 import Loadable from 'react-loadable';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router-dom';
-import { renderToString } from 'react-dom/server';
+import { renderToStaticNodeStream } from 'react-dom/server';
 
 // Our store, entrypoint, and manifest
 import createStore from '../src/store';
@@ -68,7 +68,7 @@ export default (req, res) => {
         data for that page. We take all that information and compute the appropriate state to send to the user. This is
         then loaded into the correct components and sent as a Promise to be handled below.
       */
-      const htmlBody = renderToString(
+      const htmlBody = renderToStaticNodeStream(
         <Loadable.Capture>
           <Provider store={store}>
             <StaticRouter location={req.url} context={context}>
