@@ -274,7 +274,7 @@ const CareerDetails = () => {
                   </div>
                   {/* Portfolio URL */}
                   <div className="col-md-12">
-                    <label>Portfolio URL</label>
+                    <label>Portfolio URL*</label>
                     <InputField
                       className="form-control"
                       placeholder="Your portfolio link"
