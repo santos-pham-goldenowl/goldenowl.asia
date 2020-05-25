@@ -54,3 +54,15 @@ export function stickyTOCTrigger(isMobile) {
         }
   }}
 }
+
+export function stickyRightButtonTrigger(viewportHeight = 0) {
+    const fixedButton = document.getElementById('fixed-right-button');
+
+    if (fixedButton) {
+      if (window.pageYOffset >= viewportHeight / 2) {
+        fixedButton.classList.add('active');
+      } else {
+        fixedButton.classList.remove('active');
+      }
+    }
+}

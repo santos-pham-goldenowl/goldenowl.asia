@@ -23,6 +23,7 @@ import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
 import { InputField } from "../../components/FormInputs";
 import LoadingScreen from "../../components/LoadingScreen";
 import SentSuccess from "./SentSuccess";
+import JobAlert from "../../components/JobAlert";
 
 import stickyTrigger from "../../utils/stickyTrigger";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
@@ -410,6 +411,7 @@ const CareerDetails = () => {
               {formRender()}
             </section>
             <Footer />
+            <JobAlert />
           </div>
         </section>
       );
