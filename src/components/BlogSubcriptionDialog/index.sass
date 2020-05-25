@@ -1,0 +1,70 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.modal-content
+    background-color: $slightOrange !important
+    border-radius: 0 !important
+    border: none !important
+
+.modal-header, .modal-body, .modal-footer
+    border: none !important
+
+.modal-header
+    padding: 2.3% 6.9% 0 !important
+    .close, span
+        &:focus
+            border: none
+
+.modal-body
+    padding-bottom: 0 !important
+    padding-left: 0 !important
+    padding-right: 0 !important
+    padding-top: 68% !important
+    @include responsive($screen: mobile)
+        padding-top: 120% !important
+        min-height: 500px
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+        padding-top: 95% !important
+
+.blog-dialog
+    &__logo
+        height: 18px
+
+    &__content
+        width: 100%
+        position: absolute
+        top: 10.2%
+        h3
+            @include responsive($screen: mobile)
+                margin-top: 15px
+                font-size: 20px
+            @include responsive($screen: tablet)
+                margin-top: 18px
+                font-size: 18px
+            @include responsive($screen: desktop)
+                margin-top: 18px
+                font-size: 18px
+            @include responsive($screen: large-desktop)
+                margin-top: 28px
+                font-size: 26px
+        p
+            margin-top: 12px
+            font-size: 16px
+            margin-bottom: 20px
+            @include responsive($screen: tablet)
+                font-size: 14px
+            @include responsive($screen: desktop)
+                font-size: 14px
+
+    &__button
+        color: $white
+        background-color: $solidBlack
+        border: none
+        padding: 12px
+        &:hover
+            color: $yellow
+
+    &__input-wrapper
+        @include responsive($screen: mobile)
+            padding-left: 15px
+            padding-right: 15px

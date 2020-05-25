@@ -261,6 +261,8 @@
         overflow: hidden
         top: 32px
         width: calc(100% - 20px)
+        @include responsive($screen: mobile)
+            width: calc(100% - 8px)
         @include responsive($screen: tablet)
             width: calc(100% - 10px)
         @include responsive($screen: desktop)

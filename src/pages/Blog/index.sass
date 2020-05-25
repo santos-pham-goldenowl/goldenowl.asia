@@ -228,6 +228,8 @@
 
   svg
     margin-top: 30px
+    @include responsive($screen: mobile)
+      margin-bottom: 50px
     @include responsive($screen: tablet)
       margin-top: 16px
     @include responsive($screen: desktop)
