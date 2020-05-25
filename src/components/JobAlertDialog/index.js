@@ -7,7 +7,7 @@ import desktopLogo from "../../assets/images/golden_owl.svg";
 import dialog from "../../assets/images/dialog.png";
 import "./index.sass";
 
-const BlogSubcriptionDialog = (props) => {
+const JobAlertDialog = (props) => {
   const [email, setEmail] = useState('');
 
   const validateEmail = (email) => {
@@ -17,7 +17,7 @@ const BlogSubcriptionDialog = (props) => {
 
   const onSubmitClick = () => {
     validateEmail(email) ? 
-    subcribe({ email, type: 'blog' }).then(
+    subcribe({ email, type: 'job' }).then(
       res => {
         props.onHide();
       }
@@ -32,24 +32,24 @@ const BlogSubcriptionDialog = (props) => {
       centered
     >
       <Modal.Header closeButton>
-          <img src={desktopLogo} className="blog-dialog__logo" alt="go-logo" />
+          <img src={desktopLogo} className="job-dialog__logo" alt="go-logo" />
       </Modal.Header>
       <Modal.Body>
-          <div className="blog-dialog__content">
+          <div className="job-dialog__content">
               <div className="row">
                   <div className="offset-lg-3 offset-md-2 col-md-8 col-lg-6 text-center">
                     <img src={dialog} alt="go-mail" className="w-50" />
-                    <h3>Subscribe to Golden Owl blog</h3>
-                    <p>Stay up to date! Get all the latest posts<br/>delivered straight to your inbox</p>
+                    <h3>Subscribe to get Job alerts</h3>
+                    <p>Stay up to date! Get all the latest jobs<br/>delivered straight to your inbox</p>
                     <div className="row">
                       <div className="col-lg-8">
-                        <div className="blog-dialog__input-wrapper">
+                        <div className="job-dialog__input-wrapper">
                           <input placeholder="Your email" onBlur={e => setEmail(e.target.value)} className="w-100 mb-0" />
                         </div>
                       </div>
                       <div className="col-lg-4 pl-lg-0 mt-lg-0 mt-3 d-flex">
-                        <div className="blog-dialog__input-wrapper w-100">
-                          <button onClick={onSubmitClick} className="mr-auto w-100 d-block blog-dialog__button">
+                        <div className="job-dialog__input-wrapper w-100">
+                          <button onClick={onSubmitClick} className="mr-auto w-100 d-block job-dialog__button">
                             Subscribe
                           </button>
                         </div>
@@ -63,4 +63,4 @@ const BlogSubcriptionDialog = (props) => {
   );
 };
 
-export default BlogSubcriptionDialog;
+export default JobAlertDialog;
