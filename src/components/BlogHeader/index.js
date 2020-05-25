@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
+import BlogSubcriptionDialog from "../BlogSubcriptionDialog";
 
 import logo from "../../assets/images/go.png";
 import desktopLogo from "../../assets/images/golden_owl.svg";
@@ -10,6 +12,11 @@ import "./index.sass";
 
 const BlogHeader = () => {
   const isMobile = useMobileWidth();
+  const [dialogStatus, setDialogStatus] = useState(false);
+
+  const openDialog = () => setDialogStatus(true);
+
+  const closeDialog = () => setDialogStatus(false);
 
   return isMobile ? (
     <header className="blog-header d-flex align-items-center">
@@ -22,9 +29,10 @@ const BlogHeader = () => {
           </div>
         </div>
       </Link>
-      <button className="blog-header__subcribe-button ml-auto">
+      <button onClick={openDialog} className="blog-header__subcribe-button ml-auto">
         Subcribe to our blog
       </button>
+      <BlogSubcriptionDialog show={dialogStatus} onHide={closeDialog} />
     </header>
   ) : (
     <header className="blog-header d-flex align-items-center">
@@ -34,9 +42,10 @@ const BlogHeader = () => {
           <p className="">Blog</p>
         </div>
       </Link>
-     <button className="blog-header__subcribe-button ml-auto">
+     <button onClick={openDialog} className="blog-header__subcribe-button ml-auto">
         Subcribe to our blog
       </button>
+      <BlogSubcriptionDialog show={dialogStatus} onHide={closeDialog} />
     </header>
   );
 };

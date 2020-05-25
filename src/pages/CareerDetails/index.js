@@ -26,6 +26,8 @@ import SentSuccess from "./SentSuccess";
 
 import stickyTrigger from "../../utils/stickyTrigger";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
+import replaceAllString from "../../utils/replaceAllString";
+
 import { getCareer, submitApplication } from "../../api/careers";
 
 import clock from "../../assets/images/clock.svg";
@@ -399,7 +401,7 @@ const CareerDetails = () => {
                 <div className="col-12 col-md-3" />
                 <div className="col-12 col-md-3" />
                 <div className="col-12 col-md-6 career-details__body-content">
-                  {job.content ? parse(job.content) : ""}
+                  {job.content ? parse(replaceAllString(job.content, { "<div>": "<p>", "</div>": "</p>" })) : ""}
                 </div>
                 <div className="col-12 col-md-3" />
               </div>

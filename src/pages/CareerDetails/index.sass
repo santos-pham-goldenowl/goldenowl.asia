@@ -75,7 +75,7 @@
                 font-size: 24px
                 margin-top: 30px
                 margin-bottom: 20px
-        div, strong, em, del, blockquote, pre, li
+        p, strong, em, del, blockquote, pre, li
             line-height: 1.67
             @include responsive($screen: mobile)
                 font-size: 16px
@@ -261,6 +261,8 @@
         overflow: hidden
         top: 32px
         width: calc(100% - 20px)
+        @include responsive($screen: mobile)
+            width: calc(100% - 8px)
         @include responsive($screen: tablet)
             width: calc(100% - 10px)
         @include responsive($screen: desktop)

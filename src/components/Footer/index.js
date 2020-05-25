@@ -21,6 +21,11 @@ const Footer = () => {
     win.focus();
   };
 
+  const openBlogInNewTab = () => {
+    const win = window.open('/blog');
+    win.focus();
+  };
+
 
   const mobileRender = () => (
     <div className="footer__bottom-content-wrapper">
@@ -52,10 +57,10 @@ const Footer = () => {
           <div className="col-6">
             <h3 className="footer__bottom-grid-title">Others</h3>
             <div>
-              {/* <Link to="/careers">Careers</Link> */}
+              <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
               {/* <Link to="/faq">FAQ</Link> */}
-              {/* <Link to="/blog">Blog</Link> */}
+              {/* <Link onClick={openBlogInNewTab}>Blog</Link> */}
             </div>
           </div>
           <div className="col-6">
@@ -68,7 +73,7 @@ const Footer = () => {
             </div> */}
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
-                <a href={icon.link}>
+                <Link to={icon.link}>
                   <img
                     key={icon.name}
                     src={icon.url}
@@ -76,7 +81,7 @@ const Footer = () => {
                     alt={icon.name}
                     loading="lazy"
                   />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -91,7 +96,7 @@ const Footer = () => {
       <img className="d-block" src={go} alt="golden-logo" />
       <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
         {socialIcons.map((icon) => (
-          <a href={icon.link}>
+          <Link to={icon.link}>
             <img
               key={icon.name}
               src={icon.url}
@@ -99,7 +104,7 @@ const Footer = () => {
               alt={icon.name}
               loading="lazy"
             />
-          </a>
+          </Link>
         ))}
       </div>
       {/* <div className="footer__contact row">
@@ -137,10 +142,10 @@ const Footer = () => {
         <div className="col-md-2 pl-0">
           <h3 className="footer__bottom-grid-title">Others</h3>
           <div>
-            {/* <Link to="/careers">Careers</Link> */}
+            <Link to="/careers">Careers</Link>
             <Link to="/contact-us">Contact us</Link>
             {/* <Link to="/faq">FAQ</Link> */}
-            {/* <Link to="/blog">Blog</Link> */}
+            {/* <Link onClick={openBlogInNewTab}>Blog</Link> */}
           </div>
         </div>
       </div>
