@@ -19,16 +19,17 @@ const BlogSubcriptionDialog = (props) => {
   };
 
   const onSubmitClick = () => {
-    validateEmail(email) ? 
+    if (validateEmail(email)) 
     subcribe({ email, type: 'blog' }).then(
       res => {
         props.onHide();
+        setEmail('')
       }
     ).catch(err => alert(err))
-    : alert('Invalid email!')
+    else alert('Invalid email!');
   }
-  return (
-    <div className={`blog-dialog ${props.show ? "" : "d-none"}`}>
+  return props.show ? (
+    <div className="blog-dialog">
       <div className="blog-dialog__header">
         <img src={desktopLogo} className="blog-dialog__logo" alt="go-logo" />
         <span className="blog-dialog__header-button ml-auto" onClick={props.onHide}>&#10005;</span>
@@ -55,7 +56,7 @@ const BlogSubcriptionDialog = (props) => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default BlogSubcriptionDialog;
