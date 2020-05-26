@@ -50,12 +50,6 @@ const FAQ = () => {
     updateMenuActiveStatusFunc();    
   }
 
-  useEffect(() => {
-    window.addEventListener('DOMContentLoaded', tableOfContentQuery);
-
-    return () => window.removeEventListener('DOMContentLoaded', tableOfContentQuery);
-  }, [])
-
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
     stickyTOCTrigger(isMobile);
