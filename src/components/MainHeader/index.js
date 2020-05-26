@@ -46,9 +46,9 @@ class MainHeader extends Component {
             <li className="main-header__flex-item">
               <Link to="/about-us">About Golden Owl</Link>
             </li>
-            {/* <li className="main-header__flex-item">
+            <li className="main-header__flex-item">
               <Link onClick={this.openBlogInNewTab}>Blog</Link>
-            </li> */}
+            </li>
             <li className="main-header__flex-item">
               <Link onClick={this.openPortfolioInNewTab}>Portfolio</Link>
             </li>

@@ -60,7 +60,7 @@ const Footer = () => {
               <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
               {/* <Link to="/faq">FAQ</Link> */}
-              {/* <Link onClick={openBlogInNewTab}>Blog</Link> */}
+              <Link onClick={openBlogInNewTab}>Blog</Link>
             </div>
           </div>
           <div className="col-6">
@@ -145,7 +145,7 @@ const Footer = () => {
             <Link to="/careers">Careers</Link>
             <Link to="/contact-us">Contact us</Link>
             {/* <Link to="/faq">FAQ</Link> */}
-            {/* <Link onClick={openBlogInNewTab}>Blog</Link> */}
+            <Link onClick={openBlogInNewTab}>Blog</Link>
           </div>
         </div>
       </div>
