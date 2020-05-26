@@ -58,7 +58,8 @@
     "react-share": "^4.1.0",
     "react-transition-group": "^4.4.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "source-map-explorer": "^2.4.2"
   },
   "scripts": {
     "dev": "react-scripts start",
@@ -66,7 +67,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start": "cross-env NODE_ENV=production node ./server/index.js",
-    "sitemap": "cross-env SITE_URL='https://goldenowl.asia' node ./server/sitemap/generator.js"
+    "sitemap": "cross-env SITE_URL='https://goldenowl.asia' node ./server/sitemap/generator.js",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": "react-app"
