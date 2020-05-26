@@ -32,7 +32,7 @@ const BlogHeader = () => {
       <button onClick={openDialog} className="blog-header__subcribe-button ml-auto">
         Subcribe to our blog
       </button>
-      <BlogSubcriptionDialog show={dialogStatus} onHide={closeDialog} />
+      {/* <BlogSubcriptionDialog show={dialogStatus} onHide={closeDialog} /> */}
     </header>
   ) : (
     <header className="blog-header d-flex align-items-center">
@@ -45,7 +45,7 @@ const BlogHeader = () => {
      <button onClick={openDialog} className="blog-header__subcribe-button ml-auto">
         Subcribe to our blog
       </button>
-      <BlogSubcriptionDialog show={dialogStatus} onHide={closeDialog} />
+      {/* <BlogSubcriptionDialog show={dialogStatus} onHide={closeDialog} /> */}
     </header>
   );
 };

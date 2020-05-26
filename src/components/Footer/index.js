@@ -73,7 +73,7 @@ const Footer = () => {
             </div> */}
             <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
               {socialIcons.map((icon) => (
-                <Link to={icon.link}>
+                <a href={icon.link}>
                   <img
                     key={icon.name}
                     src={icon.url}
@@ -81,7 +81,7 @@ const Footer = () => {
                     alt={icon.name}
                     loading="lazy"
                   />
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -96,7 +96,7 @@ const Footer = () => {
       <img className="d-block" src={go} alt="golden-logo" />
       <div className="footer__social-icons-wrapper d-flex justify-content-start align-items-center">
         {socialIcons.map((icon) => (
-          <Link to={icon.link}>
+          <a href={icon.link}>
             <img
               key={icon.name}
               src={icon.url}
@@ -104,7 +104,7 @@ const Footer = () => {
               alt={icon.name}
               loading="lazy"
             />
-          </Link>
+          </a>
         ))}
       </div>
       {/* <div className="footer__contact row">

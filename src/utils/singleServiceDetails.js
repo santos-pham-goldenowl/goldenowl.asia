@@ -79,7 +79,7 @@ const servicesDetails = {
         content: 'Responsive applications can be complex when you’re writing large, component-based application platforms, and we’re expert at managing and controlling that complexity while maximizing the capabilities of the mobile devices, turning a mobile product into a real business.',
       },
       center: {
-        title: 'Measurable value.',
+        title: 'Measurable value',
         content: 'Agility is the name of the game. Our scrum-based Agile development methodology ensures frequent builds and gives you plenty of time to test and adjust. Our process ensures we build products that create measurable value on time and on budget.',
       },
       right: {
@@ -159,7 +159,7 @@ const servicesDetails = {
       },
     },
     fourth: {
-      title: 'Efficient management with management tool',
+      title: 'Efficient management with management tool.',
       content: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc. All members of the project management team love it and so does our client.',
       logos: [
         {
@@ -214,7 +214,7 @@ const servicesDetails = {
       },
     },
     fourth: {
-      title: 'We are stronger together',
+      title: 'We are stronger together.',
       content: 'Each member of the development team has their own strength and ability, they may still not good at some points and that’s why they always try our best to work together and support each other for the common achievement. Working together makes us stronger and growing faster.',
       logos: [],
     },
