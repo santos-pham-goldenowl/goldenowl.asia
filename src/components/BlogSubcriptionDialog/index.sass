@@ -1,58 +1,84 @@
 @import 'styles/variables'
 @import 'styles/mixins'
 
-.modal-content
-    background-color: $slightOrange !important
-    border-radius: 0 !important
-    border: none !important
-
-.modal-header, .modal-body, .modal-footer
-    border: none !important
-
-.modal-header
-    padding: 2.3% 6.9% 0 !important
-    .close, span
-        &:focus
-            border: none
-
-.modal-body
-    padding: 0 !important
-
 .blog-dialog
+    position: fixed
+    z-index: 9999999999
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: $slightOrange
+    overflow: hidden
+
+    &__header
+        width: 100%
+        display: flex
+        @include responsive($screen: mobile)
+            padding-left: 15px
+            padding-right: 15px
+            padding-top: 20px
+        @include responsive($screen: tablet)
+            padding-left: 50px
+            padding-right: 50px
+            padding-top: 16px
+        @include responsive($screen: desktop)
+            padding-left: 70px
+            padding-right: 70px
+            padding-top: 22px
+        @include responsive($screen: large-desktop)
+            padding-left: $desktopPadding
+            padding-right: $desktopPadding
+            padding-top: 32px
+
+    &__header-button
+        cursor: pointer
+        color: $solidBlack
+        font-size: 20px
+
     &__logo
-        height: 18px
+        @include responsive($screen: mobile)
+            height: 30px
+        @include responsive($screen: tablet)
+            height: 16px
+        @include responsive($screen: desktop)
+            height: 22px
+        @include responsive($screen: large-desktop)
+            height: 32px
 
     &__content
         width: 100%
         @include responsive($screen: mobile)
             padding-top: 50px
-            padding-bottom: 70px
         @include responsive($screen: tablet)
             padding-top: 50px
-            padding-bottom: 70px
         @include responsive($screen: desktop)
             padding-top: 70px
-            padding-bottom: 100px
         @include responsive($screen: large-desktop)
-            padding-top: 70px
-            padding-bottom: 100px
+            padding-top: 100px
+        img
+            padding: 5%
         h3
+            white-space: nowrap
             @include responsive($screen: mobile)
-                margin-top: 15px
-                font-size: 20px
+                margin-top: 34px
+                font-size: 24px
             @include responsive($screen: tablet)
-                margin-top: 18px
-                font-size: 18px
+                margin-top: 30px
+                font-size: 24px
             @include responsive($screen: desktop)
-                margin-top: 18px
-                font-size: 18px
+                margin-top: 34px
+                font-size: 24px
             @include responsive($screen: large-desktop)
-                margin-top: 28px
-                font-size: 26px
+                margin-top: 50px
+                font-size: 34px
         p
-            margin-top: 12px
+            font-family: ProximaNovaRegular !important
+            margin-top: 20px
             font-size: 16px
-            margin-bottom: 20px
+            margin-bottom: 30px
+            @include responsive($screen: mobile)
+                font-size: 16px !important
             @include responsive($screen: tablet)
                 font-size: 14px
             @include responsive($screen: desktop)
@@ -66,7 +92,13 @@
         &:hover
             color: $yellow
 
+    &__button-wrapper
+        padding-right: 15px
+        @include responsive($screen: mobile)
+            margin-top: 15px
+            padding-left: 15px
+
     &__input-wrapper
         @include responsive($screen: mobile)
-            padding-left: 15px
-            padding-right: 15px
+            padding-left: 10px
+            padding-right: 10px

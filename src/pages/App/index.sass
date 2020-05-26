@@ -153,3 +153,15 @@ label
   &.fade-exit-active
     opacity: 0.01
     transition: opacity 0.2s ease-in
+
+.no-data-text
+  font-family: ProximaNovaRegular !important
+  color: $lightGray
+  @include responsive($screen: mobile)
+    font-size: 20px !important
+  @include responsive($screen: tablet)
+    font-size: 18px !important
+  @include responsive($screen: desktop)
+    font-size: 24px !important
+  @include responsive($screen: large-desktop)
+    font-size: 34px !important
