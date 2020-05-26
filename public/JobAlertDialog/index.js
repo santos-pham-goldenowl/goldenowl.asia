@@ -24,25 +24,25 @@ const BlogSubcriptionDialog = (props) => {
     : alert('Invalid email!')
   }
   return (
-    <div className={`blog-dialog ${props.show ? "" : "d-none"}`}>
-      <div className="blog-dialog__header">
-        <img src={desktopLogo} className="blog-dialog__logo" alt="go-logo" />
-        <span className="blog-dialog__header-button ml-auto" onClick={props.onHide}>&#10005;</span>
+    <div className={`job-dialog ${props.show ? "" : "d-none"}`}>
+      <div className="job-dialog__header">
+        <img src={desktopLogo} className="job-dialog__logo" alt="go-logo" />
+        <span className="job-dialog__header-button ml-auto" onClick={props.onHide}>&#10005;</span>
       </div>
-      <div className="blog-dialog__content">
+      <div className="job-dialog__content">
         <div className="row">
             <div className="offset-lg-4 col-lg-4 offset-md-3 col-md-6 text-center">
               <img src={dialog} alt="go-mail" className="w-75" />
-              <h3>Subscribe to Golden Owl blog</h3>
-              <p>Stay up to date! Get all the latest posts<br/>delivered straight to your inbox</p>
+              <h3>Subscribe to get Job alerts</h3>
+              <p>Stay up to date! Get all the latest jobs<br/>delivered straight to your inbox</p>
               <div className="row">
                 <div className="col-md-8">
-                  <div className="blog-dialog__input-wrapper">
+                  <div className="job-dialog__input-wrapper">
                     <input placeholder="Your email" onBlur={e => setEmail(e.target.value)} className="w-100 mb-0" />
                   </div>
                 </div>
-                <div className="d-flex flex-grow-1 blog-dialog__button-wrapper">
-                  <button onClick={onSubmitClick} className="mr-auto w-100 d-block blog-dialog__button">
+                <div className="d-flex flex-grow-1 job-dialog__button-wrapper">
+                  <button onClick={onSubmitClick} className="mr-auto w-100 d-block job-dialog__button">
                     Subscribe
                   </button>
                 </div>

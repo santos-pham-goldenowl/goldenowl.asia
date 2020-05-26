@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Modal } from "react-bootstrap";
 
 import { subcribe } from "../../api/subcribe"
 
@@ -7,7 +6,7 @@ import desktopLogo from "../../assets/images/golden_owl.svg";
 import dialog from "../../assets/images/dialog.png";
 import "./index.sass";
 
-const JobAlertDialog = (props) => {
+const BlogSubcriptionDialog = (props) => {
   const [email, setEmail] = useState('');
 
   const validateEmail = (email) => {
@@ -17,7 +16,7 @@ const JobAlertDialog = (props) => {
 
   const onSubmitClick = () => {
     validateEmail(email) ? 
-    subcribe({ email, type: 'job' }).then(
+    subcribe({ email, type: 'career' }).then(
       res => {
         props.onHide();
       }
@@ -25,42 +24,34 @@ const JobAlertDialog = (props) => {
     : alert('Invalid email!')
   }
   return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-          <img src={desktopLogo} className="job-dialog__logo" alt="go-logo" />
-      </Modal.Header>
-      <Modal.Body>
-          <div className="job-dialog__content">
+    <div className={`job-dialog ${props.show ? "" : "d-none"}`}>
+      <div className="job-dialog__header">
+        <img src={desktopLogo} className="job-dialog__logo" alt="go-logo" />
+        <span className="job-dialog__header-button ml-auto" onClick={props.onHide}>&#10005;</span>
+      </div>
+      <div className="job-dialog__content">
+        <div className="row">
+            <div className="offset-lg-4 col-lg-4 offset-md-3 col-md-6 text-center">
+              <img src={dialog} alt="go-mail" className="w-75" />
+              <h3>Subscribe to get Job alerts</h3>
+              <p>Stay up to date! Get all the latest jobs<br/>delivered straight to your inbox</p>
               <div className="row">
-                  <div className="offset-lg-3 offset-md-2 col-md-8 col-lg-6 text-center">
-                    <img src={dialog} alt="go-mail" className="w-50" />
-                    <h3>Subscribe to get Job alerts</h3>
-                    <p>Stay up to date! Get all the latest jobs<br/>delivered straight to your inbox</p>
-                    <div className="row">
-                      <div className="col-lg-8">
-                        <div className="job-dialog__input-wrapper">
-                          <input placeholder="Your email" onBlur={e => setEmail(e.target.value)} className="w-100 mb-0" />
-                        </div>
-                      </div>
-                      <div className="col-lg-4 pl-lg-0 mt-lg-0 mt-3 d-flex">
-                        <div className="job-dialog__input-wrapper w-100">
-                          <button onClick={onSubmitClick} className="mr-auto w-100 d-block job-dialog__button">
-                            Subscribe
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+                <div className="col-md-8">
+                  <div className="job-dialog__input-wrapper">
+                    <input placeholder="Your email" onBlur={e => setEmail(e.target.value)} className="w-100 mb-0" />
                   </div>
+                </div>
+                <div className="d-flex flex-grow-1 job-dialog__button-wrapper">
+                  <button onClick={onSubmitClick} className="mr-auto w-100 d-block job-dialog__button">
+                    Subscribe
+                  </button>
+                </div>
               </div>
-          </div>
-      </Modal.Body>
-    </Modal>
+            </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default JobAlertDialog;
+export default BlogSubcriptionDialog;
