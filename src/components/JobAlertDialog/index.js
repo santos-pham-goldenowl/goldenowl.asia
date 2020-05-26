@@ -32,7 +32,7 @@ const BlogSubcriptionDialog = (props) => {
       <div className="job-dialog__content">
         <div className="row">
             <div className="offset-lg-4 col-lg-4 offset-md-3 col-md-6 text-center">
-              <img src={dialog} alt="go-mail" className="w-75" />
+              <img src={dialog} alt="go-mail" className="w-50" />
               <h3>Subscribe to get Job alerts</h3>
               <p>Stay up to date! Get all the latest jobs<br/>delivered straight to your inbox</p>
               <div className="row">
@@ -42,7 +42,7 @@ const BlogSubcriptionDialog = (props) => {
                   </div>
                 </div>
                 <div className="d-flex flex-grow-1 job-dialog__button-wrapper">
-                  <button onClick={onSubmitClick} className="mr-auto w-100 d-block job-dialog__button">
+                  <button onClick={onSubmitClick} className="mr-auto w-100 blog-dialog__button">
                     Subscribe
                   </button>
                 </div>
