@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import useMobileWidth from "../../utils/hooks/useMobileWidth";
+
 import { subcribe } from "../../api/subcribe"
 
 import desktopLogo from "../../assets/images/golden_owl.svg";
@@ -8,6 +10,8 @@ import "./index.sass";
 
 const BlogSubcriptionDialog = (props) => {
   const [email, setEmail] = useState('');
+
+  const isMobile = useMobileWidth();
 
   const validateEmail = (email) => {
     const re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
@@ -32,7 +36,7 @@ const BlogSubcriptionDialog = (props) => {
       <div className="blog-dialog__content">
         <div className="row">
             <div className="offset-lg-4 col-lg-4 offset-md-3 col-md-6 text-center">
-              <img src={dialog} alt="go-mail" className="w-50" />
+              <img src={dialog} alt="go-mail" className={isMobile ? "w-75" : "w-50"} />
               <h3>Subscribe to Golden Owl blog</h3>
               <p>Stay up to date! Get all the latest posts<br/>delivered straight to your inbox</p>
               <div className="row">
