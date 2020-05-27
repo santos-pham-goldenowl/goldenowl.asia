@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import { useForm } from "react-form";
 import parse from "html-react-parser";
 import FormData from "form-data";
+
 import {
   LOADING_STATUS,
   LOADED_STATUS,
@@ -25,7 +26,7 @@ import LoadingScreen from "../../components/LoadingScreen";
 import SentSuccess from "./SentSuccess";
 import JobAlert from "../../components/JobAlert";
 
-import stickyTrigger from "../../utils/stickyTrigger";
+import stickyTrigger, { stickyRightButtonTrigger } from "../../utils/stickyTrigger";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
 import replaceAllString from "../../utils/replaceAllString";
 
@@ -107,7 +108,12 @@ const CareerDetails = () => {
     debugForm: false,
   });
 
-  window.onscroll = () => stickyTrigger(scrollDirection);
+  const viewportHeight = window ? window.innerHeight : 0
+
+  window.onscroll = () => {
+    stickyTrigger(scrollDirection);
+    stickyRightButtonTrigger(viewportHeight);
+  }
 
   const onFileUploadChange = (event) => {
     if (window && window.document) {

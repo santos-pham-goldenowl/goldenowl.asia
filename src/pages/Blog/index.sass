@@ -91,26 +91,31 @@
         @include responsive($screen: large-desktop)
           font-size: 34px
           padding-bottom: 10px
-      p
-        p, strong, em, del, blockquote, pre, li
+      div.blog-content
+        p, strong, em, del, blockquote, pre, li, h1
           display: none
-          p
-            &:first-child
-              line-height: 1.69
-              overflow: hidden
-              text-overflow: ellipsis
-              display: -webkit-box
-              -webkit-line-clamp: 5
-              -webkit-box-orient: vertical
-              @include responsive($screen: mobile)
-                line-height: 1.5
-                font-size: 16px
-              @include responsive($screen: tablet)
-                font-size: 14px
-              @include responsive($screen: desktop)
-                font-size: 14px
-              @include responsive($screen: large-desktop)
-                font-size: 16px
+        p
+          &:first-child
+            line-height: 1.69
+            overflow: hidden
+            text-overflow: ellipsis
+            display: -webkit-box
+            -webkit-line-clamp: 5
+            -webkit-box-orient: vertical
+            @include responsive($screen: mobile)
+              line-height: 1.5
+              font-size: 16px
+            @include responsive($screen: tablet)
+              font-size: 14px
+            @include responsive($screen: desktop)
+              font-size: 14px
+            @include responsive($screen: large-desktop)
+              font-size: 16px
+        pre
+          box-shadow: -3px 3px $sweetGray
+          background-color: $smokeGray
+          padding: 3% 5%
+          white-space: break-spaces
 
       .category
         @include responsive($screen: mobile)
