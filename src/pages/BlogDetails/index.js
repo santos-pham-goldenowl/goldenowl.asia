@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import Helmet from "react-helmet";
 import parse from "html-react-parser";
+import moment from "moment";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import Footer from "../../components/Footer";
@@ -86,7 +87,7 @@ const BlogDetails = () => {
                   <div className="blog-details__title">
                     <div className="category d-flex">
                       <p className="text-uppercase">{blog.type}</p>
-                      <p className="text-uppercase">JAN 31, 2020</p>
+                      <p className="text-uppercase">{moment(blog.attributes.created_at).format("MMM DD, YYYY")}</p>
                       <p className="text-uppercase">
                         {readTimeCalculator(blog.attributes.content)}
                       </p>
@@ -98,14 +99,14 @@ const BlogDetails = () => {
                   </div>
                 </div>
                 <div
-                  className={`col-md-3 blog-details__right-side d-flex flex-column justify-content-end ${
+                  className={`col-md-3 blog-details__right-side d-flex flex-column justify-content-start ${
                     !isMobile && "text-right"
                   }`}
                 >
                   <p className="blog-details__source">
                     SOURCE
                     <br />
-                    <strong>UX Magazine Staff</strong>
+                    <strong>{blog.attributes.source}</strong>
                   </p>
                   <hr />
                   <p className="blog-details__share">

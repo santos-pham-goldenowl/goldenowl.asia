@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import parse from "html-react-parser";
+import moment from "moment";
 
 import Footer from "../../components/Footer";
 import LoadDataComponent from "../../components/LoadDataComponent";
@@ -61,13 +62,13 @@ const Blog = () => {
                       <div className="col-md-4 wide-blog">
                         <div className="category d-flex">
                           <p className="text-uppercase">{blog.type}</p>
-                          <p className="text-uppercase">JAN 31, 2020</p>
+                          <p className="text-uppercase">{moment(blog.attributes.created_at).format("MMM DD, YYYY")}</p>
                           <p className="text-uppercase">
                             {readTimeCalculator(blog.attributes.content)}
                           </p>
                         </div>
                         <h4>{blog.attributes.title}</h4>
-                        <p>{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</p>
+                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
                       </div>
                     </div>
                   </Link>
@@ -91,13 +92,13 @@ const Blog = () => {
                       <div className="d-block">
                         <div className="category category-vertical-small d-flex">
                           <p>{blog.type}</p>
-                          <p>JAN 31, 2020</p>
+                          <p>{moment(blog.attributes.created_at).format("MMM DD, YYYY")}</p>
                           <p>{readTimeCalculator(blog.attributes.content)}</p>
                         </div>
                         <h4 className="small-item-title">
                           {blog.attributes.title}
                         </h4>
-                        <p>{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</p>
+                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
                       </div>
                     </div>
                   </Link>
@@ -120,15 +121,15 @@ const Blog = () => {
                       <div className="d-block">
                         <div className="category category-vertical-big d-flex">
                           <p>{blog.type}</p>
-                          <p>JAN 31, 2020</p>
+                          <p>{moment(blog.attributes.created_at).format("MMM DD, YYYY")}</p>
                           <p>{readTimeCalculator(blog.attributes.content)}</p>
                         </div>
                         <h4 className="medium-item-title">
                           {blog.attributes.title}
                         </h4>
-                        <p className="medium-item-content">
+                        <div className="blog-content medium-item-content">
                           {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}
-                        </p>
+                        </div>
                       </div>
                     </div>
                   </Link>

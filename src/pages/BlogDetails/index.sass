@@ -93,20 +93,12 @@
       line-height: 1.5
       @include responsive($screen: mobile)
         font-size: 20px
-        margin-top: 20px
-        margin-bottom: 20px
       @include responsive($screen: tablet)
         font-size: 14px
-        margin-top: 20px
-        margin-bottom: 12px
       @include responsive($screen: desktop)
         font-size: 16px
-        margin-top: 22px
-        margin-bottom: 14px
       @include responsive($screen: large-desktop)
         font-size: 24px
-        margin-top: 30px
-        margin-bottom: 20px
     p, strong, em, del, blockquote, pre, li
       max-width: 100%
       text-overflow: ellipsis
@@ -114,24 +106,27 @@
       line-height: 1.67
       @include responsive($screen: mobile)
         font-size: 16px
-        margin-bottom: 10px
         @include responsive($screen: tablet)
           font-size: 14px
-          margin-bottom: 16px
         @include responsive($screen: desktop)
           font-size: 14px
-          margin-bottom: 16px
         @include responsive($screen: large-desktop)
           font-size: 18px
-          margin-bottom: 20px
     ul
+      margin-top: 15px
       padding-inline-start: 20px
       li
         list-style-type: disc
     ol
+      margin-top: 15px
       padding-inline-start: 30px
       li
         list-style-type: decimal-leading-zero
+    pre
+      box-shadow: -3px 3px $sweetGray
+      background-color: $smokeGray
+      padding: 3% 5%
+      white-space: break-spaces
 
   &__title
     .category
