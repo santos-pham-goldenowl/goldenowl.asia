@@ -1,4 +1,4 @@
-import React, { createRef, useEffect } from "react";
+import React, { createRef } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 

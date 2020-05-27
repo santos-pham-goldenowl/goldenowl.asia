@@ -42,7 +42,6 @@ const CareerDetails = () => {
     window && window.location
       ? window.location.pathname.split("/").slice(-1)[0]
       : "";
-  const [cv, setCv] = useState(null);
   const [job, setJob] = useState({});
   const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
   const [formStatus, setFormStatus] = useState("");
@@ -73,8 +72,6 @@ const CareerDetails = () => {
     }),
     []
   );
-
-  const setSubmitCv = (event) => setCv();
 
   const {
     Form,
@@ -128,8 +125,6 @@ const CareerDetails = () => {
       if (upload.value)
         document.getElementById("upload-button").style.display = "none";
       else document.getElementById("upload-button").style.display = "block";
-
-      setSubmitCv(event);
     }
   };
 
