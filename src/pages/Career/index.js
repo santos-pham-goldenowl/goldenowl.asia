@@ -11,7 +11,9 @@ import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
 import LoadDataComponent from "../../components/LoadDataComponent";
 import JobAlert from "../../components/JobAlert";
 
-import stickyTrigger, { stickyRightButtonTrigger } from "../../utils/stickyTrigger";
+import stickyTrigger, {
+  stickyRightButtonTrigger,
+} from "../../utils/stickyTrigger";
 import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
 
@@ -51,12 +53,12 @@ const Career = () => {
       });
   }, []);
 
-  const viewportHeight = window ? window.innerHeight : 0
+  const viewportHeight = window ? window.innerHeight : 0;
 
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
     stickyRightButtonTrigger(viewportHeight);
-  }
+  };
 
   const statusRender = (status) =>
     status === OPEN_JOB_STATUS ? (
@@ -66,7 +68,7 @@ const Career = () => {
     );
 
   const defaultRowRender = (item) => (
-    <tr>
+    <tr onClick={() => window.location.href = `/careers/details/${item.id}`}>
       <td className="first-col">{statusRender(item.attributes.status)}</td>
       <td className="second-col">
         <p className="careers__job">{item.attributes.title}</p>
@@ -98,7 +100,7 @@ const Career = () => {
   );
 
   const mobileRowRender = (item) => (
-    <tr>
+    <tr onClick={() => window.location.href= `/careers/details/${item.id}`}>
       <td>
         {statusRender(item.attributes.status)}
         <p className="careers__job">{item.attributes.title}</p>
@@ -126,14 +128,14 @@ const Career = () => {
   );
 
   const bodyRender = () => (
-          <table className="table mb-0">
-            <tbody>
-              {jobs.map((item) =>
-                isMobile ? mobileRowRender(item) : defaultRowRender(item)
-              )}
-            </tbody>
-          </table>
-        );
+    <table className="table mb-0">
+      <tbody>
+        {jobs.map((item) =>
+          isMobile ? mobileRowRender(item) : defaultRowRender(item)
+        )}
+      </tbody>
+    </table>
+  );
 
   return (
     <section className="careers">
