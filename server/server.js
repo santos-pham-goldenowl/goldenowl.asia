@@ -106,7 +106,7 @@ app.use(
       const { firstName, lastName, email, url, reason, job } = body;
 
       fs.readFile(file.path, (err, data) => {
-      console.log("data", data)
+        console.log("data", data);
         const msg = {
           to: process.env.HR_ADDRESS,
           from: process.env.FROM_ADDRESS,
@@ -138,14 +138,14 @@ app.use(
               filename: `${lastName}-CV.pdf`,
               type: "application/pdf",
               disposition: "attachment",
-              content: data.toString('base64'),
-              content_id: 'cvfile'
+              content: data.toString("base64"),
+              content_id: "cvfile",
             },
           ],
         };
         sgMail.send(msg).then(
           () => {
-            fs.unlinkSync(file.path)
+            fs.unlinkSync(file.path);
             res.status(200).json({
               message: "Message sent!",
             });
@@ -162,18 +162,43 @@ app.use(
 );
 
 app.use(
-  express
-    .Router()
-    .post("/subcribe", (req, res) => {
-      const { body } = req;
-      const { email, type } = body;
+  express.Router().post("/subcribe", (req, res) => {
+    const { body } = req;
+    const { email, type } = body;
 
-      res.status(200).json({ data: {
-        message: 'subcribed',
+    const name = email.split("@")[0];
+
+    console.log(
+      "--------------------------------------------------------------------------------",
+      name,
+      email,
+      type,
+      "\n--------------------------------------------------------------------------------",
+      )
+
+    axiosInstance
+      .post(`${process.env.API_URL}/subscriptions`, {
+        name,
         email,
-        type
-      } })
-    })
+        type,
+      })
+      .then((response) => {
+        if (response)
+          res.status(200).json({
+            data: {
+              message: "Submitted!",
+            },
+          });
+      })
+      .catch((err) =>
+        res.status(404).json({
+          data: {
+            error: true,
+            message: `Error: ${err || error}`,
+          },
+        })
+      );
+  })
 );
 
 app.use(loader);

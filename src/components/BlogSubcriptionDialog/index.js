@@ -20,7 +20,7 @@ const BlogSubcriptionDialog = (props) => {
 
   const onSubmitClick = () => {
     if (validateEmail(email)) 
-    subcribe({ email, type: 'blog' }).then(
+    subcribe({ email, type: 'post' }).then(
       res => {
         props.onHide();
         setEmail('')
