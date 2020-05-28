@@ -168,14 +168,6 @@ app.use(
 
     const name = email.split("@")[0];
 
-    console.log(
-      "--------------------------------------------------------------------------------",
-      name,
-      email,
-      type,
-      "\n--------------------------------------------------------------------------------",
-      )
-
     axiosInstance
       .post(`${process.env.API_URL}/subscriptions`, {
         name,
