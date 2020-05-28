@@ -49,15 +49,16 @@ const Blog = () => {
             case 0:
               return (
                 <div key={blog.attributes.title} className="col-md-12">
-                  <Link exact to={`/blog/details/${blog.id}`}>
                     <div className="row blogs__item">
                       <div className="col-12 col-md-8 d-block">
-                        <div
-                          style={{
-                            backgroundImage: `url(${blog.attributes.image})`,
-                          }}
-                          className="blogs__item-image"
-                        />
+                        <Link exact to={`/blog/details/${blog.id}`}>
+                          <div
+                            style={{
+                              backgroundImage: `url(${blog.attributes.image})`,
+                            }}
+                            className="blogs__item-image"
+                          />
+                        </Link>
                       </div>
                       <div className="col-md-4 wide-blog">
                         <div className="category d-flex">
@@ -67,11 +68,12 @@ const Blog = () => {
                             {readTimeCalculator(blog.attributes.content)}
                           </p>
                         </div>
-                        <h4>{blog.attributes.title}</h4>
+                        <Link exact to={`/blog/details/${blog.id}`}>
+                          <h4>{blog.attributes.title}</h4>
+                        </Link>
                         <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
                       </div>
                     </div>
-                  </Link>
                 </div>
               );
             case 1:
@@ -79,15 +81,16 @@ const Blog = () => {
             case 3:
               return (
                 <div key={blog.attributes.title} className="col-12 col-md-4">
-                  <Link exact to={`/blog/details/${blog.id}`}>
                     <div className="blogs__item">
                       <div className="d-block">
+                        <Link exact to={`/blog/details/${blog.id}`}>
                         <div
                           style={{
                             backgroundImage: `url(${blog.attributes.image})`,
                           }}
                           className="blogs__item-image"
                         />
+                        </Link>
                       </div>
                       <div className="d-block">
                         <div className="category category-vertical-small d-flex">
@@ -95,13 +98,14 @@ const Blog = () => {
                           <p>{moment(blog.attributes.created_at).format("MMM DD, YYYY")}</p>
                           <p>{readTimeCalculator(blog.attributes.content)}</p>
                         </div>
-                        <h4 className="small-item-title">
-                          {blog.attributes.title}
-                        </h4>
+                        <Link exact to={`/blog/details/${blog.id}`}>
+                          <h4 className="small-item-title">
+                            {blog.attributes.title}
+                          </h4>
+                        </Link>
                         <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
                       </div>
                     </div>
-                  </Link>
                 </div>
               );
             case 4:
@@ -111,12 +115,14 @@ const Blog = () => {
                   <Link exact to={`/blog/details/${blog.id}`}>
                     <div className="blogs__item">
                       <div className="d-block">
-                        <div
-                          style={{
-                            backgroundImage: `url(${blog.attributes.image})`,
-                          }}
-                          className="blogs__item-image"
-                        />
+                        <Link exact to={`/blog/details/${blog.id}`}>
+                          <div
+                            style={{
+                              backgroundImage: `url(${blog.attributes.image})`,
+                            }}
+                            className="blogs__item-image"
+                          />
+                        </Link>
                       </div>
                       <div className="d-block">
                         <div className="category category-vertical-big d-flex">
@@ -124,9 +130,11 @@ const Blog = () => {
                           <p>{moment(blog.attributes.created_at).format("MMM DD, YYYY")}</p>
                           <p>{readTimeCalculator(blog.attributes.content)}</p>
                         </div>
-                        <h4 className="medium-item-title">
-                          {blog.attributes.title}
-                        </h4>
+                        <Link exact to={`/blog/details/${blog.id}`}>
+                          <h4 className="medium-item-title">
+                            {blog.attributes.title}
+                          </h4>
+                        </Link>
                         <div className="blog-content medium-item-content">
                           {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}
                         </div>

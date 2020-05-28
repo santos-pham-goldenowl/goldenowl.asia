@@ -68,10 +68,10 @@ const Career = () => {
     );
 
   const defaultRowRender = (item) => (
-    <tr onClick={() => window.location.href = `/careers/details/${item.id}`}>
+    <tr>
       <td className="first-col">{statusRender(item.attributes.status)}</td>
-      <td className="second-col">
-        <p className="careers__job">{item.attributes.title}</p>
+      <td className="second-col" onClick={() => window.location.href = `/careers/details/${item.id}`}>
+        <p className="careers__job pointable">{item.attributes.title}</p>
       </td>
       <td className="third-col">
         <img className="clock" src={clock} alt="GO-clock" />
@@ -100,8 +100,8 @@ const Career = () => {
   );
 
   const mobileRowRender = (item) => (
-    <tr onClick={() => window.location.href= `/careers/details/${item.id}`}>
-      <td>
+    <tr>
+      <td className="pointable" onClick={() => window.location.href= `/careers/details/${item.id}`}>
         {statusRender(item.attributes.status)}
         <p className="careers__job">{item.attributes.title}</p>
         <img className="clock" src={clock} alt="GO-clock" />
