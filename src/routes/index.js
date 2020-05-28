@@ -1,26 +1,85 @@
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import Loadable from "react-loadable";
 
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import Services from "../pages/Services";
-import ServicesSubPage from "../pages/ServicesSubPage";
-import Technology from "../pages/Technology";
-import PortfolioSubPage from "../pages/PortfolioSubPage";
-import Testimonials from "../pages/Testimonials";
-import Portfolio from "../pages/Portfolio";
-import Blog from "../pages/Blog";
-import BlogDetails from "../pages/BlogDetails";
-import Career from "../pages/Career";
-import CareerDetails from "../pages/CareerDetails";
-import FAQ from "../pages/FAQ";
+import LoadingScreen from "../components/LoadingScreen";
+import Home from "../pages/Home"
 import NotFound from "../pages/NotFound";
 
 import objectToArray from "../utils/objectToArray";
 import portfolioDetails from "../utils/portfolioDetails";
 import singleServiceDetails from "../utils/singleServiceDetails";
+
+const Loading = ({ pastDelay, error }) => {
+  return !pastDelay && error ? <NotFound /> : <LoadingScreen />;
+};
+
+const About = Loadable({
+  loader: () => import("../pages/About"),
+  loading: Loading,
+  delay: 1300,
+});
+const Contact = Loadable({
+  loader: () => import("../pages/Contact"),
+  loading: Loading,
+  delay: 1300,
+});
+const Services = Loadable({
+  loader: () => import("../pages/Services"),
+  loading: Loading,
+  delay: 1300,
+});
+const ServicesSubPage = Loadable({
+  loader: () => import("../pages/ServicesSubPage"),
+  loading: Loading,
+  delay: 1300,
+});
+const Technology = Loadable({
+  loader: () => import("../pages/Technology"),
+  loading: Loading,
+  delay: 1300,
+});
+const PortfolioSubPage = Loadable({
+  loader: () => import("../pages/PortfolioSubPage"),
+  loading: Loading,
+  delay: 1300,
+});
+const Testimonials = Loadable({
+  loader: () => import("../pages/Testimonials"),
+  loading: Loading,
+  delay: 1300,
+});
+const Portfolio = Loadable({
+  loader: () => import("../pages/Portfolio"),
+  loading: Loading,
+  delay: 1300,
+});
+const Blog = Loadable({
+  loader: () => import("../pages/Blog"),
+  loading: Loading,
+  delay: 1300,
+});
+const BlogDetails = Loadable({
+  loader: () => import("../pages/BlogDetails"),
+  loading: Loading,
+  delay: 1300,
+});
+const Career = Loadable({
+  loader: () => import("../pages/Career"),
+  loading: Loading,
+  delay: 1300,
+});
+const CareerDetails = Loadable({
+  loader: () => import("../pages/CareerDetails"),
+  loading: Loading,
+  delay: 1300,
+});
+const FAQ = Loadable({
+  loader: () => import("../pages/FAQ"),
+  loading: Loading,
+  delay: 1300,
+});
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -59,10 +118,7 @@ const AppRoutes = () => {
             />
           ))}
           <Route exact path="/careers" component={Career} />
-          <Route
-            path={`/careers/details`}
-            component={CareerDetails}
-          />
+          <Route path={`/careers/details`} component={CareerDetails} />
           <Route exact path="/faq" component={FAQ} />
           <Route path="*" component={NotFound} />
         </Switch>

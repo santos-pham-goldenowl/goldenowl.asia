@@ -68,8 +68,11 @@ export default (req, res) => {
         data for that page. We take all that information and compute the appropriate state to send to the user. This is
         then loaded into the correct components and sent as a Promise to be handled below.
       */
+
+      let modules = [];
+
       const htmlBody = renderToString(
-        <Loadable.Capture>
+        <Loadable.Capture report={moduleName => modules.push(moduleName)}>
           <Provider store={store}>
             <StaticRouter location={req.url} context={context}>
               <App />
