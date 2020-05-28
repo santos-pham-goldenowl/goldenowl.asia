@@ -23,7 +23,8 @@ const BlogSubcriptionDialog = (props) => {
       subcribe({ email, type: 'career' }).then(
         res => {
           props.onHide();
-          setEmail('')
+          setEmail('');
+          alert("Perfect! Thank you for your subscription.");
         }
       ).catch(err => alert(err))
     else alert('Invalid email!')
