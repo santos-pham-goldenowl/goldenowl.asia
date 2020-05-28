@@ -18,7 +18,7 @@ const JobAlert = () => {
                 <img src={bell} className="job-alert-icon" />
                 Job alert
             </button>
-            {/* <JobAlertDialog show={dialogStatus} onHide={closeDialog} /> */}
+            <JobAlertDialog show={dialogStatus} onHide={closeDialog} />
         </>
     );
 };

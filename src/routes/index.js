@@ -4,6 +4,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Loadable from "react-loadable";
 
 import LoadingScreen from "../components/LoadingScreen";
+import Home from "../pages/Home"
 import NotFound from "../pages/NotFound";
 
 import objectToArray from "../utils/objectToArray";
@@ -14,11 +15,6 @@ const Loading = ({ pastDelay, error }) => {
   return !pastDelay && error ? <NotFound /> : <LoadingScreen />;
 };
 
-const Home = Loadable({
-  loader: () => import("../pages/Home"),
-  loading: Loading,
-  delay: 1300,
-});
 const About = Loadable({
   loader: () => import("../pages/About"),
   loading: Loading,
