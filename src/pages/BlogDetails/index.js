@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, Redirect } from "react-router-dom";
 import Helmet from "react-helmet";
 import parse from "html-react-parser";
-import moment from "moment";
+import format from "date-fns/format";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 import Footer from "../../components/Footer";
@@ -87,7 +87,7 @@ const BlogDetails = () => {
                   <div className="blog-details__title">
                     <div className="category d-flex">
                       <p className="text-uppercase">{blog.type}</p>
-                      <p className="text-uppercase">{moment(blog.attributes.created_at).format("MMM DD, YYYY")}</p>
+                      <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y' )}</p>
                       <p className="text-uppercase">
                         {readTimeCalculator(blog.attributes.content)}
                       </p>

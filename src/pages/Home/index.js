@@ -1,27 +1,34 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Loadable from "react-loadable";
 
-import Footer from '../../components/Footer';
 import Explore from '../../components/Explore';
-import Contact from '../../components/Contact';
-import Partners from '../../components/Partners';
-import SubHeader from '../../components/SubHeader';
-import MainHeader from '../../components/MainHeader';
-import FixedTopHeader from '../../components/FixedTopHeader';
 
 import Quote from './components/Quote';
 import Missions from './components/Mission';
-import Feedback from './components/Feedback';
-import Archieves from './components/Archieves';
-import Introduction from './components/Introduction';
-import Technologies from './components/Technologies';
-import CompanyQuality from './components/CompanyQualities';
+import LoadingScreen from "../../components/LoadingScreen";
 
 import stickyTrigger from '../../utils/stickyTrigger';
 import useScrollDirection from '../../utils/hooks/useScrollDirection';
 
 import companyLogo from '../../assets/images/GoldenOwlLogo.png';
 import './index.sass';
+
+const Loading = ({ pastDelay, error }) => {
+  return !pastDelay && error ? null : <LoadingScreen />;
+};
+
+const SubHeader = Loadable({ loader: () => import('../../components/SubHeader'), loading: Loading, delay: 1300});
+const MainHeader = Loadable({ loader: () => import('../../components/MainHeader'), loading: Loading, delay: 1300});
+const FixedTopHeader = Loadable({ loader: () => import('../../components/FixedTopHeader'), loading: Loading, delay: 1300});
+const Feedback = Loadable({ loader: () => import('./components/Feedback'), loading: Loading, delay: 1300});
+const Archieves = Loadable({ loader: () => import('./components/Archieves'), loading: Loading, delay: 1300});
+const Introduction = Loadable({ loader: () => import('./components/Introduction'), loading: Loading, delay: 1300});
+const Technologies = Loadable({ loader: () => import('./components/Technologies'), loading: Loading, delay: 1300});
+const CompanyQuality = Loadable({ loader: () => import('./components/CompanyQualities'), loading: Loading, delay: 1300});
+const Contact = Loadable({ loader: () => import('../../components/Contact'), loading: Loading, delay: 1300});
+const Partners = Loadable({ loader: () => import('../../components/Partners'), loading: Loading, delay: 1300});
+const Footer = Loadable({ loader: () => import('../../components/Footer'), loading: Loading, delay: 1300});
 
 const Home = () => {
   const scrollDirection = useScrollDirection();

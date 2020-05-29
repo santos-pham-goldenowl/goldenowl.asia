@@ -397,7 +397,7 @@ const CareerDetails = () => {
                   <span className="d-inline-block">
                     <img className="clock" src={clock} alt="GO-clock" />
                   </span>
-                  <p className="d-inline careers__time">{job.job_type}</p>
+                  <p className="d-inline careers-details__time">{job.job_type}</p>
                   <h2 className="career-details__body-title">{job.title}</h2>
                 </div>
                 <div className="col-12 col-md-3" />
