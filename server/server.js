@@ -172,7 +172,7 @@ app.use(
       .post(`${process.env.API_URL}/subscriptions`, {
         name,
         email,
-        type,
+        subscription_type: type,
       })
       .then((response) => {
         if (response)
