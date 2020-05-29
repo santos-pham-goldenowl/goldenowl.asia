@@ -48,7 +48,7 @@ const BlogSubcriptionDialog = (props) => {
                   </div>
                 </div>
                 <div className="d-flex flex-grow-1 job-dialog__button-wrapper">
-                  <button onClick={onSubmitClick} className="mr-auto w-100 blog-dialog__button">
+                  <button onClick={onSubmitClick} className="mr-auto w-100 job-dialog__button">
                     Subscribe
                   </button>
                 </div>
