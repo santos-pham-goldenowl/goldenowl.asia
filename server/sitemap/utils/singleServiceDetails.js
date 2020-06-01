@@ -14,4 +14,10 @@ export default {
   'Web development': {
     url: 'web-development',
   },
+  'Automation-testing': {
+    url: 'automation-testing',
+  },
+  'IT solutions consulting': {
+    url: 'it-solutions-consulting',
+  },
 };

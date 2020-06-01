@@ -121,7 +121,6 @@
           height: 28px
         @include responsive($screen: large-desktop)
           height: 40px
-    .arrow-wrapper
       @include responsive($screen: mobile)
         padding-left: 10px
       @include responsive($screen: tablet)
@@ -131,22 +130,39 @@
       @include responsive($screen: large-desktop)
         padding-left: 15px
 
+  .case-study
+    position: relative
+    &:hover
+      .case-study__arrow
+        @include responsive($screen: mobile)
+          left: 140px
+        @include responsive($screen: tablet)
+          left: 140px
+        @include responsive($screen: desktop)
+          left: 140px
+        @include responsive($screen: large-desktop)
+          left: 200px
+
   .case-study__arrow
-    .line
-      @include responsive($screen: mobile)
-        width: 23px
-      @include responsive($screen: tablet)
-        width: 18px
-      @include responsive($screen: desktop)
-        width: 24px
-      @include responsive($screen: large-desktop)
-        width: 34px
-    .arrow-right
-      @include responsive($screen: mobile)
-        left: 23px
-      @include responsive($screen: tablet)
-        left: 18px
-      @include responsive($screen: desktop)
-        left: 24px
-      @include responsive($screen: large-desktop)
-        left: 34px
+    margin-top: 15px
+    content: ""
+    margin-top: var(--margin-top)
+    width: 40px
+    height: 8px
+    display: inline-block
+    position: absolute
+    background: url('../../../../assets/images/icon-more-arrow-dark.svg') right center no-repeat
+    -webkit-transition: 0.2s all linear
+    transition: 0.2s all linear
+    @include responsive($screen: mobile)
+      left: 125px
+      width: 28px
+    @include responsive($screen: tablet)
+      left: 125px
+      width: 28px
+    @include responsive($screen: desktop)
+      left: 125px
+      width: 28px
+    @include responsive($screen: large-desktop)
+      left: 185px
+      width: 40px

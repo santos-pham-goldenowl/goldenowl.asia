@@ -16,8 +16,14 @@
     padding-top: 100px
     padding-bottom: 80px
 
+  a
+    display: inline-block
+
   &__email
     color: $yellow
+    width: fit-content
+    &:hover
+      text-decoration: underline
 
   h3
     font-weight: bold
@@ -47,3 +53,6 @@
     @include responsive($screen: large-desktop)
       padding-top: 6px
       font-size: 18px
+    a
+      &:hover
+        color: $yellow !important

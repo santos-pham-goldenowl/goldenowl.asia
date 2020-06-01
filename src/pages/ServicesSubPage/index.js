@@ -33,10 +33,7 @@ const ServicesSubPage = ({ content }) => {
     <section className="service">
       <Helmet>
         <title>{`${capitalizeWords(content.key)} - Golden Owl`}</title>
-        <link href="https://www.goldenowl.asia/home/amp" rel="amphtml" />
-        <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug" name="google-site-verification" />
         <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
         <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." property="og:description" />
         <meta content={companyLogo} property="og:image" />
@@ -58,7 +55,7 @@ const ServicesSubPage = ({ content }) => {
           <p>{content.key}</p>
         </BreadCrumb>
         <section className="service__first-content">
-          <h1>{content.key}</h1>
+          <h1>{!!content.first.title ? content.first.title : content.key}</h1>
           <p className="pb-0"><strong>{content.first.highlight}</strong></p>
           <p>{content.first.content}</p>
         </section>
@@ -78,7 +75,7 @@ const ServicesSubPage = ({ content }) => {
           </div>
         </section>
         <section className="service__second-content">
-          <h2>{content.second.title}</h2>
+          <h1>{content.second.title}</h1>
           <p>{content.second.content}</p>
         </section>
         <section className="service__slogan">
@@ -155,14 +152,14 @@ const ServicesSubPage = ({ content }) => {
             {objectToArray(content.navs).map((image) => (
               <div
                 key={image.title}
-                className="col-12 col-md-6 service__other-service-wrapper"
+                className="col-12 col-md-4 service__other-service-wrapper"
               >
                 <Link
                   className="service__other-service"
                   to={`/services/${image.url}`}
                 >
                   <div className="col-4 col-md-3">
-                    <img src={image.imgUrl} alt={image.title} />
+                    <img id={image.url} src={image.imgUrl} alt={image.title} />
                   </div>
                   <div className="col-8 col-md-9">
                     <h4 className="">{image.title}</h4>

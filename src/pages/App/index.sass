@@ -10,7 +10,7 @@ $mallory-font-path: "../../assets/fonts/mallory"
   overflow-x: hidden
   scroll-behavior: smooth
 
-  > section
+  > div > section
     .container-fluid
       header, .breadcrumb, > section, footer > div
         width: 100%
@@ -62,18 +62,22 @@ h1, h2, h3, h4, h5, h6
 @font-face
   src: url("#{$proxima-font-path}/ProximaNova-Regular.otf")
   font-family: ProximaNovaRegular
+  font-display: fallback
 
 @font-face
   src: url("#{$proxima-font-path}/Proxima Nova Bold.otf")
   font-family: ProximaNovaBold
+  font-display: fallback
 
 @font-face
   src: url("#{$mallory-font-path}/Mallory Compact Medium.ttf")
   font-family: MalloryMedium
+  font-display: fallback
 
 @font-face
   src: url("#{$mallory-font-path}/Mallory Bold.ttf")
   font-family: MalloryBold
+  font-display: fallback
 
 h1, h2, h3
   font-family: MalloryBold
@@ -85,8 +89,11 @@ h6
   font-family: ProximaNovaRegular
   color: $darkGray
 
-p, span
+p, span, li
   font-family: ProximaNovaRegular
+
+li
+  margin-bottom: 10px
 
 .arrow-down
   margin-left: 5px
@@ -133,152 +140,31 @@ input, select
   padding: 0.25rem 0.75rem !important
   border: solid 1px $slightGray !important
   height: 50px !important
-  @include responsive($screen: tablet)
-    height: 25px !important
-  @include responsive($screen: desktop)
-    height: 35px !important
-
-input[type=file]
-    @include responsive($screen: tablet)
-      -webkit-appearance: textfield
-    @include responsive($screen: desktop)
-      -webkit-appearance: textfield
-    @include responsive($screen: large-desktop)
-      padding: 0.6rem 0.75rem !important
-    @include responsive($screen: mobile)
-      padding: 0.6rem 0.75rem !important
-
-input[type=file]::-webkit-file-upload-button
-  @include responsive($screen: tablet)
-    border: none
-    margin: 0
-    padding: 0
-    -webkit-appearance: none
-    width: 0
-  @include responsive($screen: desktop)
-    border: none
-    margin: 0
-    padding: 0
-    -webkit-appearance: none
-    width: 0
-  @include responsive($screen: large-desktop)
-    width: 100px
-    height: 30px
-    text-align: center
-    border: solid 1px #e2e2e2
-    background-color: #f7f7f7
-    margin-right: 15px
-    font-family: ProximaNovaRegular
-    font-size: 14px
-    color: $darkGray
-  @include responsive($screen: mobile)
-    width: 100px
-    height: 30px
-    text-align: center
-    border: solid 1px #e2e2e2
-    background-color: #f7f7f7
-    margin-right: 15px
-    font-family: ProximaNovaRegular
-    font-size: 14px
-    color: $darkGray
 
 label
   line-height: 1.25
-  @include responsive($screen: tablet)
-    margin-bottom: 5px
-  @include responsive($screen: desktop)
-    margin-bottom: 7px
-  @include responsive($screen: large-desktop)
-    margin-bottom: 10px
+  margin-bottom: 10px
 
-.send-wrapper
-  @include responsive($screen: mobile)
-    margin-right: -2.5px
-  @include responsive($screen: tablet)
-    margin-right: -7px
-  @include responsive($screen: desktop)
-    margin-right: -10px
-  &:hover, &:focus
-    .send-rectangle
-      border: none
-      background-color: $yellow
-    .send-dashed-border
-      border: dashed 1px $yellow
+.fade-enter
+  opacity: 0.01
+  &.fade-enter-active
+    opacity: 1
+    transition: opacity 0.2s ease-in
 
-.send-rectangle
-  border: solid 1px $solidBlack
-  background-color: $white
-  position: absolute
-  top: 0
-  width: 100%
-  @include responsive($screen: mobile)
-    width: calc(100% - 10px)
-    height: 100px
-  @include responsive($screen: tablet)
-    width: calc( 100% - 11px )
-    left: 5px
-    height: 78px
-  @include responsive($screen: desktop)
-    width: calc( 100% - 14px )
-    left: 7.5px
-    height: 98px
-  @include responsive($screen: large-desktop)
-    width: calc( 100% - 20px )
-    left: 10px
-    height: 140px
-  p
-    color: $solidBlack
-    @include responsive($screen: mobile)
-      font-size: 14px
-      padding-bottom: 15px
-      padding-left: 15px
-    @include responsive($screen: tablet)
-      font-size: 10px
-      padding-bottom: 8px
-      padding-left: 8px
-    @include responsive($screen: desktop)
-      font-size: 14px
-      padding-bottom: 11px
-      padding-left: 11px
-    @include responsive($screen: large-desktop)
-      font-size: 16px
-      padding-bottom: 15px
-      padding-left: 15px
-  .arrow-wrapper
-    background-color: transparent
-    @include responsive($screen: mobile)
-      padding-right: 15px
-      padding-bottom: 18.4px
-    @include responsive($screen: tablet)
-      padding-right: 8px
-      padding-bottom: 11px
-    @include responsive($screen: desktop)
-      padding-right: 11px
-      padding-bottom: 14px
-    @include responsive($screen: large-desktop)
-      padding-right: 15px
-      padding-bottom: 20px
+.fade-exit
+  opacity: 1
+  &.fade-exit-active
+    opacity: 0.01
+    transition: opacity 0.2s ease-in
 
-.send-dashed-border
-  border-radius: 4px
-  border: dashed 1px $solidBlack
-  width: 100%
+.no-data-text
+  font-family: ProximaNovaRegular !important
+  color: $lightGray
   @include responsive($screen: mobile)
-    height: 100px
-    margin-left: 10px
-    margin-right: -7px
-    margin-top: 10px
+    font-size: 20px !important
   @include responsive($screen: tablet)
-    height: 78px
-    margin-left: 6px
-    margin-top: 6px
-    margin-right: -2px !important
+    font-size: 18px !important
   @include responsive($screen: desktop)
-    height: 98px
-    margin-left: 7px
-    margin-top: 7px
-    margin-right: -3px !important
+    font-size: 24px !important
   @include responsive($screen: large-desktop)
-    height: 140px
-    margin-left: 10px
-    margin-top: 10px
+    font-size: 34px !important

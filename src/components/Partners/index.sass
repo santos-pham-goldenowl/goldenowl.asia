@@ -46,19 +46,16 @@
     &::before, &::after
       color: $smokeGray
     &--left
-      left: 0 !important
+      left: -17px !important
+      @include responsive($screen: mobile)
+        display: none
     &--right
-      right: 0 !important
+      right: -17px !important
+      @include responsive($screen: mobile)
+        display: none
 
   .react-multi-carousel-list
     display: flex
-    @include responsive($screen: mobile)
-      display: none !important
-
-  #mobile-display-section
-    display: none
-    @include responsive($screen: mobile)
-      display: flex
 
   [class*='col']
     @include responsive($screen: mobile)
@@ -68,8 +65,6 @@
   img
     object-fit: contain
     width: 100%
-
-  img#assured, img#mywork
     @include responsive($screen: mobile)
       height: 28px
     @include responsive($screen: tablet)
@@ -79,7 +74,7 @@
     @include responsive($screen: large-desktop)
       height: 28px
 
-  img#candy
+  #candy
     @include responsive($screen: mobile)
       height: 24px
     @include responsive($screen: tablet)
@@ -89,7 +84,7 @@
     @include responsive($screen: large-desktop)
       height: 28px
 
-  img#finda
+  #finda
     @include responsive($screen: mobile)
       height: 28px
     @include responsive($screen: tablet)
@@ -99,7 +94,7 @@
     @include responsive($screen: large-desktop)
       height: 30px
 
-  img#luxe
+  #luxe, #connectAJob, #zetya
     @include responsive($screen: mobile)
       height: 40px
     @include responsive($screen: tablet)
@@ -109,7 +104,7 @@
     @include responsive($screen: large-desktop)
       height: 40px
 
-  img#gig
+  #gig, #theWorkProject
     @include responsive($screen: mobile)
       height: 40px
     @include responsive($screen: tablet)

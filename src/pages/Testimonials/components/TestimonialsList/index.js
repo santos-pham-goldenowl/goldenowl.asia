@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import ArrowRight from '../../../../components/ArrowRight';
-
 import testimonials from '../../../../utils/testimonials';
 import objectToArray from '../../../../utils/objectToArray';
 import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
@@ -33,7 +31,7 @@ const TestimonialsList = () => {
           <Link to={`/portfolio/${item.url}`}>
             <p className="case-study d-flex align-items-center">
               VIEW CASE STUDY
-              <ArrowRight className="case-study__arrow" />
+              <div className="case-study__arrow" />
             </p>
           </Link>
         </div>
@@ -62,7 +60,7 @@ const TestimonialsList = () => {
           <Link to={`/portfolio/${item.url}`}>
             <p className="case-study d-flex align-items-center">
               VIEW CASE STUDY
-              <ArrowRight className="case-study__arrow" />
+              <div className="case-study__arrow" />
             </p>
           </Link>
         </div>
@@ -84,7 +82,7 @@ const TestimonialsList = () => {
           <Link to={`/portfolio/${item.url}`}>
             <p className="case-study d-flex align-items-center">
               VIEW CASE STUDY
-              <ArrowRight className="case-study__arrow" />
+              <div className="case-study__arrow" />
             </p>
           </Link>
         </div>

@@ -25,6 +25,9 @@ import ai from '../assets/images/service/UiUx/ai.svg';
 import inVision from '../assets/images/service/UiUx/in-vision.svg';
 import ps from '../assets/images/service/UiUx/ps.svg';
 import sketch from '../assets/images/service/UiUx/sketch.svg';
+import seWeb from '../assets/images/service/AutomationTesting/seWeb.svg';
+import seIde from '../assets/images/service/AutomationTesting/seIde.svg';
+import appium from '../assets/images/service/AutomationTesting/appium.svg';
 
 // cover import
 import mobileCoverImage from '../assets/images/service/MobileDevelopment/cover.jpg';
@@ -32,6 +35,8 @@ import projectCoverImage from '../assets/images/service/ProjectManagement/cover.
 import developmentCoverImage from '../assets/images/service/DevelopmentTeam/cover.jpg';
 import uiUxCoverImage from '../assets/images/service/UiUx/cover.jpg';
 import webCoverImage from '../assets/images/service/WebDevelopment/cover.jpg';
+import testCoverImage from '../assets/images/service/AutomationTesting/cover.jpg';
+import consultCoverImage from '../assets/images/service/ITSolutionsConsulting/cover.jpg';
 
 // mobile cover import
 import mMobileCoverImage from '../assets/images/service/MobileDevelopment/mCover.png';
@@ -39,6 +44,8 @@ import mProjectCoverImage from '../assets/images/service/ProjectManagement/mCove
 import mDevelopmentCoverImage from '../assets/images/service/DevelopmentTeam/mCover.png';
 import mUiUxCoverImage from '../assets/images/service/UiUx/mCover.png';
 import mWebCoverImage from '../assets/images/service/WebDevelopment/mCover.png';
+import mTestCoverImage from '../assets/images/service/AutomationTesting/mCover.png';
+import mConsultCoverImage from '../assets/images/service/ITSolutionsConsulting/mCover.png';
 
 // below section navigation
 import pageNavs from './otherServices';
@@ -49,6 +56,8 @@ const {
   uiUxDesign,
   projectManagement,
   developmentTeam,
+  automationTesting,
+  itSolutionsConsulting,
 } = pageNavs;
 
 const servicesDetails = {
@@ -70,7 +79,7 @@ const servicesDetails = {
         content: 'Responsive applications can be complex when you’re writing large, component-based application platforms, and we’re expert at managing and controlling that complexity while maximizing the capabilities of the mobile devices, turning a mobile product into a real business.',
       },
       center: {
-        title: 'Measurable value.',
+        title: 'Measurable value',
         content: 'Agility is the name of the game. Our scrum-based Agile development methodology ensures frequent builds and gives you plenty of time to test and adjust. Our process ensures we build products that create measurable value on time and on budget.',
       },
       right: {
@@ -150,7 +159,7 @@ const servicesDetails = {
       },
     },
     fourth: {
-      title: 'Efficient management with management tool',
+      title: 'Efficient management with management tool.',
       content: 'The project management team here has gained so much convenience and success thanks to management tools such as Trello, Slack, etc. All members of the project management team love it and so does our client.',
       logos: [
         {
@@ -205,7 +214,7 @@ const servicesDetails = {
       },
     },
     fourth: {
-      title: 'We are stronger together',
+      title: 'We are stronger together.',
       content: 'Each member of the development team has their own strength and ability, they may still not good at some points and that’s why they always try our best to work together and support each other for the common achievement. Working together makes us stronger and growing faster.',
       logos: [],
     },
@@ -323,6 +332,87 @@ const servicesDetails = {
       ],
     },
     navs: webDevelopment,
+  },
+  'Automation testing': {
+    url: 'automation-testing',
+    cover: testCoverImage,
+    mobileCover: mTestCoverImage,
+    first: {
+      highlight: 'Because untested software is expensive.',
+      content: 'You don’t want to suffer reputation losses because of angry comments from unhappy clients, nor waste time on endless technical fixes, do you?',
+    },
+    second: {
+      title: 'Software testing is at the core of quality assurance',
+      content: `At Golden Owl, we take product testing solutions very seriously. Our engineers have two main tasks: ensuring the highest quality of an application and thorough software testing so it doesn’t contain any elements discouraging future users from using it.`,
+    },
+    third: {
+      title: 'How we do that',
+      left: {
+        title: 'Custom automation testing frameworks',
+        content: 'Develop automated test with every major language, framework, tools extensive list of testing devices.',
+      },
+      center: {
+        title: 'From the first builds to the product release',
+        content: `Our team makes sure that bugs are discovered, errors are spotted and the entire product works as planned.`,
+      },
+      right: {
+        title: 'Ongoing Assistance',
+        content: `We support crash analytics, bug debugging and error correction.`,
+      },
+    },
+    fourth: {
+      title: 'Best practices with appropriate tools.',
+      content: 'We apply the best practices, picks appropriate tools, and supervises automated testing. The whole work is based on the list of strict quality checks that the solution must pass in order to move to the next phase and make sure that both developers and clients understand the importance of the QA process.',
+      logos: [
+        {
+          name: 'selenium web',
+          url: seWeb,
+        },
+        {
+          name: 'selenium ide',
+          url: seIde,
+        },
+        {
+          name: 'appium',
+          url: appium,
+        },
+      ],
+    },
+    navs: automationTesting,
+  },
+  'IT Solutions Consulting': {
+    url: 'it-solutions-consulting',
+    cover: consultCoverImage,
+    mobileCover: mConsultCoverImage,
+    first: {
+      highlight: 'We believe that the future is digital.',
+      content: 'Our goal is to help businesses obtain competitive advantages through the adoption of digital transformation by providing engineering and consulting services that foster competitiveness and innovation.',
+    },
+    second: {
+      title: 'Emerge modern technologies with unique solutions',
+      content: `Golden Owl offers a blend of technology knowledge, data mining and analytical tools to help you create and transform applications, processes and operations in line with your unique possibilities.`,
+    },
+    third: {
+      title: 'Our solutions',
+      left: {
+        title: 'Software consulting',
+        content: 'Help you focus on what you really need and align technology, operational and financial objectives.',
+      },
+      center: {
+        title: 'IT solutions consulting',
+        content: `We are here for every of your business stages whether you are going to start, to scale or to be disruptive.`,
+      },
+      right: {
+        title: 'Take of your problems',
+        content: `Enterprise management. Data management & analytics. Ecommerce. Customer loyalty management.`,
+      },
+    },
+    fourth: {
+      title: 'Speed up your business transformation.',
+      content: 'We’d love to assist you through the challenge of finding the right direction for your software development strategy. Partner with us, you can get an actionable plan for improving your current IT solutions for better scalability, performance and cost optimisation.',
+      logos: [],
+    },
+    navs: itSolutionsConsulting,
   },
 };
 

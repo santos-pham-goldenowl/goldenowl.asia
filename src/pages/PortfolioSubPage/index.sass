@@ -119,6 +119,14 @@
 
   &__next-project
     background-color: #24272C
+    background-repeat: no-repeat
+    background-position-x: center
+    background-position-y: center
+    // background-attachment: fixed
+    background-size: cover
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
     @include responsive($screen: mobile)
       padding: 67.5px 0 67.5px 30px
     @include responsive($screen: tablet)
@@ -147,7 +155,7 @@
         font-size: 14px
         line-height: 1.21
       @include responsive($screen: tablet)
-        font-size: 12px
+        font-size: 14px
       @include responsive($screen: desktop)
         font-size: 14px
       @include responsive($screen: large-desktop)
@@ -178,7 +186,7 @@
       line-height: 1.57
       width: 65.8% !important
     @include responsive($screen: tablet)
-      font-size: 12px
+      font-size: 14px
       width: 264px !important
       margin-right: 85px
       margin-left: 42px

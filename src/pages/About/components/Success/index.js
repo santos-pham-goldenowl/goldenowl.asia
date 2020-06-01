@@ -2,14 +2,10 @@
 
 import React from 'react';
 
-import useMobileWidth from '../../../../utils/hooks/useMobileWidth';
-
 import map from '../../../../assets/images/map.svg';
 import './index.sass';
 
 const Success = () => {
-  const isMobile = useMobileWidth();
-
   return (
     <section className="success">
       <div className="row success__main">

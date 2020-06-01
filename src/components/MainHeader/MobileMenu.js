@@ -18,6 +18,11 @@ const MobileMenu = () => {
     win.focus();
   };
 
+  const openBlogInNewTab = () => {
+    const win = window.open("/blog");
+    win.focus();
+  };
+
   const toggleMenuState = () => {
     setState(!state);
   };
@@ -101,9 +106,14 @@ const MobileMenu = () => {
             >
               About Golden Owl
             </Link>
-            {/* <Link onClick={() => closeAllMenu('/blog')} className="d-flex" to="/blog">
+            <Link onClick={() => {
+              closeAllMenu('/blog');
+              openBlogInNewTab();
+              }}
+              className="d-flex"
+              >
               Blog
-            </Link> */}
+            </Link>
             <Link
               onClick={() => {
                 closeAllMenu("/portfolio");

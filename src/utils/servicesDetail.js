@@ -6,6 +6,8 @@ import service2 from '../assets/images/service/illustration-02.png';
 import service3 from '../assets/images/service/illustration-03.png';
 import service4 from '../assets/images/service/illustration-04.png';
 import service5 from '../assets/images/service/illustration-05.png';
+import service6 from '../assets/images/service/illustration-06.png';
+import service7 from '../assets/images/service/illustration-07.png';
 
 export const ServicesDetailContent = {
   'Web Development': {
@@ -32,6 +34,16 @@ export const ServicesDetailContent = {
     url: service5,
     content: <p>We own more than 50 professional developers who help build <span className="d-inline-block">full-stack</span> solutions for clients in several platforms.</p>,
     link: 'development-team',
+  },
+  'Automation testing': {
+    url: service7,
+    content: <p>Our engineers validate both created functionalities and non-functional requirements (performance, usability, security testing, etc.), so the developers immediately know what needs to be fixed, rewritten or improved.</p>,
+    link: 'automation-testing',
+  },
+  'IT solutions consulting': {
+    url: service6,
+    content: <p>Our consultants are enthousiast in helping businesses to scale up rapidly, significantly improve the system’s speed and become much more agile in responding to market needs. Just ask us!</p>,
+    link: 'it-solutions-consulting',
   },
 };
 

@@ -3,7 +3,6 @@ import { Switch, Route } from 'react-router-dom';
 
 import portfolioDetails from './utils/portfolioDetails';
 import singleServiceDetails from './utils/singleServiceDetails';
-import mockCareersData from './utils/mockCareersData';
 import objectToArray from '../../src/utils/objectToArray';
 
 export default (
@@ -33,14 +32,7 @@ export default (
       ))
     }
     <Route path="/careers" />
-    {
-      objectToArray(mockCareersData).map((career) => (
-        <Route
-          key={career.key}
-          path={`/careers/${career.url}`}
-        />
-      ))
-    }
+    <Route path={`/careers/details`} />
     <Route path="/faq" />
     <Route path="" />
   </Switch>

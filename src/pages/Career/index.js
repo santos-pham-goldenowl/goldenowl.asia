@@ -1,4 +1,4 @@
-import React, { createRef } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 
@@ -8,66 +8,139 @@ import MainHeader from "../../components/MainHeader";
 import BreadCrumb from "../../components/BreadCrumb";
 import FixedTopHeader from "../../components/FixedTopHeader";
 import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
+import LoadDataComponent from "../../components/LoadDataComponent";
+import JobAlert from "../../components/JobAlert";
 
-import stickyTrigger from "../../utils/stickyTrigger";
+import stickyTrigger, {
+  stickyRightButtonTrigger,
+} from "../../utils/stickyTrigger";
 import useMobileWidth from "../../utils/hooks/useMobileWidth";
 import useScrollDirection from "../../utils/hooks/useScrollDirection";
-import objectToArray from "../../utils/objectToArray";
-import mockCareersData from "../../utils/mockCareersData";
+
+import {
+  LOADING_STATUS,
+  LOADED_STATUS,
+  NO_RESULT_STATUS,
+  OPEN_JOB_STATUS,
+} from "../../constant";
+
+import { getAllCareers } from "../../api/careers";
 
 import clock from "../../assets/images/clock.svg";
 import "./index.sass";
 
-const Career = ({ content }) => {
+const Career = () => {
+  const [jobs, setJobs] = useState([]);
+  const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
   const isMobile = useMobileWidth();
 
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
 
-  window.onscroll = () => stickyTrigger(scrollDirection);
+  useEffect(() => {
+    getAllCareers()
+      .then((res) => {
+        const { data } = res.data;
 
-  const statusRender = (filled) =>
-    filled ? (
-      <div className="job-status filled-job">Job Filled</div>
+        if (data) setJobs([...data.data]);
+
+        if (data.data.length)
+          setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
+        else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      })
+      .catch((err) => {
+        setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      });
+  }, []);
+
+  const viewportHeight = window ? window.innerHeight : 0;
+
+  window.onscroll = () => {
+    stickyTrigger(scrollDirection);
+    stickyRightButtonTrigger(viewportHeight);
+  };
+
+  const statusRender = (status) =>
+    status === OPEN_JOB_STATUS ? (
+      <div className="job-status open-job">{status}</div>
     ) : (
-      <div className="job-status open-job">Open</div>
+      <div className="job-status filled-job">{status}</div>
     );
-  
+
   const defaultRowRender = (item) => (
     <tr>
-      <td className="first-col">{statusRender(item.filled)}</td>
-      <td className="second-col">
-        <p className="careers__job">{item.key}</p>
+      <td className="first-col">{statusRender(item.attributes.status)}</td>
+      <td className="second-col" onClick={() => window.location.href = `/careers/details/${item.id}`}>
+        <p className="careers__job pointable">{item.attributes.title}</p>
       </td>
       <td className="third-col">
         <img className="clock" src={clock} alt="GO-clock" />
-        <p className="d-inline careers__time">{item.time}</p>
+        <p className="d-inline careers__time">{item.attributes.job_type}</p>
       </td>
       <td className="fourth-col">
-        <Link to={`careers/${item.url}`}>View details</Link>
+        <Link
+          className={
+            item.attributes.status !== OPEN_JOB_STATUS
+              ? "text-decoration-none"
+              : ""
+          }
+          to={
+            item.attributes.status !== OPEN_JOB_STATUS
+              ? ""
+              : `careers/details/${item.id}`
+          }
+          onClick={(e) =>
+            item.attributes.status !== OPEN_JOB_STATUS && e.preventDefault()
+          }
+        >
+          View details
+        </Link>
       </td>
     </tr>
-  )
+  );
 
   const mobileRowRender = (item) => (
     <tr>
-      <td>
-        {statusRender(item.filled)}
-        <p className="careers__job">{item.key}</p>
+      <td className="pointable" onClick={() => window.location.href= `/careers/details/${item.id}`}>
+        {statusRender(item.attributes.status)}
+        <p className="careers__job">{item.attributes.title}</p>
         <img className="clock" src={clock} alt="GO-clock" />
-        <p className="d-inline careers__time">{item.time}</p>
-        <Link to={`careers/${item.url}`}>View details</Link>
+        <p className="d-inline careers__time">{item.attributes.job_type}</p>
+        <Link
+          className={
+            item.attributes.status !== OPEN_JOB_STATUS
+              ? "text-decoration-none"
+              : ""
+          }
+          to={
+            item.attributes.status !== OPEN_JOB_STATUS
+              ? ""
+              : `careers/details/${item.id}`
+          }
+          onClick={(e) =>
+            item.attributes.status !== OPEN_JOB_STATUS && e.preventDefault()
+          }
+        >
+          View details
+        </Link>
       </td>
     </tr>
-  )
+  );
 
+  const bodyRender = () => (
+    <table className="table mb-0">
+      <tbody>
+        {jobs.map((item) =>
+          isMobile ? mobileRowRender(item) : defaultRowRender(item)
+        )}
+      </tbody>
+    </table>
+  );
 
   return (
     <section className="careers">
       <Helmet>
         <title>Career - Golden Owl</title>
-        <link href="https://www.goldenowl.asia/home/amp" rel="amphtml" />
-        <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta
           content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug"
@@ -98,22 +171,19 @@ const Career = ({ content }) => {
       <div ref={pageContent} className="container-fluid no-padding">
         <FixedTopHeader />
         <FixedTopBreadCrumb pageContent={pageContent}>
-          <Link to="/services">Careers</Link>
+          <Link to="/careers">Careers</Link>
         </FixedTopBreadCrumb>
         <MainHeader />
         <SubHeader />
         <BreadCrumb pageContent={pageContent}>
-          <Link to="/services">Careers</Link>
+          <Link to="/careers">Careers</Link>
         </BreadCrumb>
         <section className="careers__list">
           <h2 className="careers__title">
             Careers at Golden Owl. From everything
           </h2>
-          <table className="table mb-0">
-            <tbody>
-              {objectToArray(mockCareersData).map((item) => isMobile ? mobileRowRender(item) : defaultRowRender(item))}
-            </tbody>
-          </table>
+          <LoadDataComponent loadStatus={loadStatus} component={bodyRender()} />
+          <JobAlert />
         </section>
         <Footer />
       </div>

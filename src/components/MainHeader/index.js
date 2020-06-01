@@ -20,9 +20,9 @@ class MainHeader extends Component {
     win.focus();
   };
 
-  handleMenu = () => {
-    const { showMenu } = this.state;
-    this.setState({ showMenu: !showMenu });
+  openBlogInNewTab = () => {
+    const win = window.open('/blog');
+    win.focus();
   };
 
   render() {
@@ -46,9 +46,9 @@ class MainHeader extends Component {
             <li className="main-header__flex-item">
               <Link to="/about-us">About Golden Owl</Link>
             </li>
-            {/* <li className="main-header__flex-item">
-              <Link to="/blog">Blog</Link>
-            </li> */}
+            <li className="main-header__flex-item">
+              <Link onClick={this.openBlogInNewTab}>Blog</Link>
+            </li>
             <li className="main-header__flex-item">
               <Link onClick={this.openPortfolioInNewTab}>Portfolio</Link>
             </li>

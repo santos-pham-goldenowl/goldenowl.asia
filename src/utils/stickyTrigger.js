@@ -11,15 +11,15 @@ export default function stickyTrigger(direction) {
       if (fixedBreadcrumb) {
         if (direction === 'down') {
           fixedBreadcrumb.classList.remove('d-none');
-          fixedHeader.classList.add('d-none');
+          fixedHeader.classList.remove('open');
         } else {
           fixedBreadcrumb.classList.add('d-none');
-          fixedHeader.classList.remove('d-none');
+          fixedHeader.classList.add('open');
         }
-      } else fixedHeader.classList.remove('d-none');
+      } else fixedHeader.classList.add('open');
     } else {
       if (fixedBreadcrumb) fixedBreadcrumb.classList.add('d-none');
-      fixedHeader.classList.add('d-none');
+      fixedHeader.classList.remove('open');
     }
   }
 }
@@ -36,10 +36,6 @@ export function stickyTOCTrigger(isMobile) {
       const stickyBot = stickyBotTrigger.getBoundingClientRect().top + window.scrollY - document.getElementById('footer').offsetHeight / 2 - stickyBotTrigger.offsetHeight;
 
       const toc = document.getElementById('toc');
-
-      console.log(window.pageYOffset >= stickyTop && window.pageYOffset < stickyBot)
-      console.log(window.pageYOffset, stickyTop, stickyBot)
-
       
       if (window.pageYOffset >= stickyTop && window.pageYOffset < stickyBot) 
         {
@@ -57,4 +53,16 @@ export function stickyTOCTrigger(isMobile) {
           tocContainer.classList.remove('justify-content-between')
         }
   }}
+}
+
+export function stickyRightButtonTrigger(viewportHeight = 0) {
+    const fixedButton = document.getElementById('fixed-right-button');
+
+    if (fixedButton) {
+      if (window.pageYOffset >= viewportHeight / 2) {
+        fixedButton.classList.add('active');
+      } else {
+        fixedButton.classList.remove('active');
+      }
+    }
 }

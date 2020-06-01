@@ -47,6 +47,8 @@
   &__item
     justify-content: flex-start
     display: block
+    position: relative
+    transition: 1s
     &:last-child
       padding-bottom: 0
     @include responsive($screen: mobile)
@@ -57,9 +59,13 @@
       padding-bottom: 42px
     @include responsive($screen: large-desktop)
       padding-bottom: 60px
+    &:hover
+      .missions__arrow
+        left: 15px
 
   &__item-title
     line-height: 1.35
+    white-space: nowrap
     @include responsive($screen: mobile)
       font-size: 16px
       padding-bottom: 14px
@@ -74,21 +80,21 @@
       padding-bottom: 19px
 
   &__arrow
-    .line
-      @include responsive($screen: mobile)
-        width: 28px
-      @include responsive($screen: tablet)
-        width: 17px
-      @include responsive($screen: desktop)
-        width: 24px
-      @include responsive($screen: large-desktop)
-        width: 34px
-    .arrow-right
-      @include responsive($screen: mobile)
-        left: 28px
-      @include responsive($screen: tablet)
-        left: 17px
-      @include responsive($screen: desktop)
-        left: 24px
-      @include responsive($screen: large-desktop)
-        left: 34px
+    margin-top: 15px
+    content: ""
+    margin-top: var(--margin-top)
+    height: 8px
+    display: inline-block
+    position: absolute
+    left: 0
+    background: url('../../../../assets/images/icon-more-arrow-dark.svg') right center no-repeat
+    -webkit-transition: 0.2s all linear
+    transition: 0.2s all linear
+    @include responsive($screen: mobile)
+      width: 40px
+    @include responsive($screen: tablet)
+      width: 30px
+    @include responsive($screen: desktop)
+      width: 36px
+    @include responsive($screen: large-desktop)
+      width: 40px

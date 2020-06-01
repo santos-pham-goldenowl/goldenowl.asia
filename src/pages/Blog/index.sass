@@ -2,8 +2,9 @@
 @import 'styles/mixins'
 
 .blog
-  .breadcrumb, header, .welcome, .fixed-breadcrumb
+  header, .welcome
     background-color: $slightOrange
+    margin-bottom: 0 !important
 
   .welcome
     @include responsive($screen: mobile)
@@ -90,17 +91,31 @@
         @include responsive($screen: large-desktop)
           font-size: 34px
           padding-bottom: 10px
-      p
-        line-height: 1.69
-        @include responsive($screen: mobile)
-          line-height: 1.5
-          font-size: 16px
-        @include responsive($screen: tablet)
-          font-size: 14px
-        @include responsive($screen: desktop)
-          font-size: 14px
-        @include responsive($screen: large-desktop)
-          font-size: 16px
+      div.blog-content
+        p, strong, em, del, blockquote, pre, li, h1, img, .attachment__name, .attachment__size, br
+          display: none
+        p
+          &:first-child
+            line-height: 1.69
+            overflow: hidden
+            text-overflow: ellipsis
+            display: -webkit-box
+            -webkit-line-clamp: 5
+            -webkit-box-orient: vertical
+            @include responsive($screen: mobile)
+              line-height: 1.5
+              font-size: 16px
+            @include responsive($screen: tablet)
+              font-size: 14px
+            @include responsive($screen: desktop)
+              font-size: 14px
+            @include responsive($screen: large-desktop)
+              font-size: 16px
+        pre
+          box-shadow: -3px 3px $sweetGray
+          background-color: $smokeGray
+          padding: 3% 5%
+          white-space: break-spaces
 
       .category
         @include responsive($screen: mobile)
@@ -114,6 +129,7 @@
           padding-bottom: 20px
         p
           color: #85868f
+          text-transform: uppercase
           &:last-child
             padding-right: 0
           @include responsive($screen: mobile)
@@ -132,9 +148,10 @@
 
     &__item-image
       width: 100%
-      @include responsive($screen: mobile)
-        margin: 0 -15px
-        width: calc( 100% + 30px )
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center
+      padding-top: calc(425/815 * 100%)
 
   .row
     @include responsive($screen: tablet)
@@ -211,3 +228,12 @@
       font-size: 14px !important
     @include responsive($screen: large-desktop)
       font-size: 20px !important
+
+  .no-data-text
+    margin-top: 30px
+    @include responsive($screen: mobile)
+      margin-bottom: 50px
+    @include responsive($screen: tablet)
+      margin-top: 16px
+    @include responsive($screen: desktop)
+      margin-top: 22px

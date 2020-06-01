@@ -27,13 +27,13 @@
             margin-bottom: 10px
         @include responsive($screen: tablet)
             font-size: 22px
-            margin-bottom: 10px
+            margin-bottom: 16px
         @include responsive($screen: desktop)
             font-size: 30px
-            margin-bottom: 14px
+            margin-bottom: 22px
         @include responsive($screen: large-desktop)
             font-size: 44px
-            margin-bottom: 20px
+            margin-bottom: 30px
 
     &__body-requirements
         @include responsive($screen: mobile)
@@ -56,39 +56,47 @@
             @include responsive($screen: large-desktop)
                 font-size: 16px
 
-    .paragraph-title
-        line-height: 1.5
-        @include responsive($screen: mobile)
-            font-size: 20px
-            margin-top: 20px
-            margin-bottom: 20px
-        @include responsive($screen: tablet)
-            font-size: 14px
-            margin-top: 20px
-            margin-bottom: 12px
-        @include responsive($screen: desktop)
-            font-size: 16px
-            margin-top: 22px
-            margin-bottom: 14px
-        @include responsive($screen: large-desktop)
-            font-size: 24px
-            margin-top: 30px
-            margin-bottom: 20px
-
-    .paragraph-content
-        line-height: 1.67
-        @include responsive($screen: mobile)
-            font-size: 16px
-            margin-bottom: 10px
-        @include responsive($screen: tablet)
-            font-size: 14px
-            margin-bottom: 16px
-        @include responsive($screen: desktop)
-            font-size: 14px
-            margin-bottom: 16px
-        @include responsive($screen: large-desktop)
-            font-size: 18px
-            margin-bottom: 20px
+    &__body-content
+        white-space: normal
+        h1
+            line-height: 1.5
+            @include responsive($screen: mobile)
+                font-size: 20px
+            @include responsive($screen: tablet)
+                font-size: 14px
+            @include responsive($screen: desktop)
+                font-size: 16px
+            @include responsive($screen: large-desktop)
+                font-size: 24px
+        p, strong, em, del, blockquote, pre, li
+            line-height: 1.67
+            @include responsive($screen: mobile)
+                font-size: 16px
+            @include responsive($screen: tablet)
+                font-size: 14px
+            @include responsive($screen: desktop)
+                font-size: 14px
+            @include responsive($screen: large-desktop)
+                font-size: 18px
+        ul
+            margin-top: 15px
+            padding-inline-start: 20px
+            li
+                list-style-type: disc
+        ol
+            margin-top: 15px
+            padding-inline-start: 30px
+            li
+                list-style-type: decimal-leading-zero
+        img
+            width: 100%
+        .attachment__name, .attachment__size
+            display: none
+        pre
+            box-shadow: -3px 3px $sweetGray
+            background-color: $smokeGray
+            padding: 3% 5%
+            white-space: break-spaces
 
     &__form
         background-color: $softGray !important
@@ -190,22 +198,89 @@
             margin-top: 30px
             margin-bottom: 20px
 
-    &__arrow
-    .line
+    .submit-button
+        background-color: $yellow
+        position: relative
+        padding: 25px
+        width: 100%
+        font-weight: bold
+        border-style: hidden
+        &:before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 0%
+            height: 100%
+            z-index: 1
+            opacity: 0
+            background-color: #FCCF6A
+            -webkit-transition: all 0.8s
+            -moz-transition: all 0.8s
+            -o-transition: all 0.8s
+            transition: all 0.8s
+        &:hover
+            &::before
+                opacity: 1
+                width: 100%
+        &:focus
+            outline: none
+        p
+            position: absolute
+            top: 15px
+            left: 0
+            width: 100%
+            text-align: center
+            z-index: 2
+            color: $white
+
+    .validating
+        color: $lightningYellow
+
+    #cv-field
+        position: relative
+
+    #upload-cv
+        opacity: 0
+
+    #file-upload-ui
+        position: absolute
+        display: flex
+        align-items: center
+        font-family: ProximaNovaRegular
+        color: $darkGray !important
+        font-size: 14px !important
+        padding: 0.75rem !important
+        background-color: $white
+        border: solid 1px #e3e3e3
+        height: 50px !important
+        overflow: hidden
+        top: 32px
+        width: calc(100% - 20px)
         @include responsive($screen: mobile)
-            width: 28px
+            width: calc(100% - 8px)
         @include responsive($screen: tablet)
-            width: 18px
+            width: calc(100% - 10px)
         @include responsive($screen: desktop)
-            width: 24px
-        @include responsive($screen: large-desktop)
-            width: 34px
-    .arrow-right
-        @include responsive($screen: mobile)
-            left: 28px
-        @include responsive($screen: tablet)
-            left: 18px
-        @include responsive($screen: desktop)
-            left: 24px
-        @include responsive($screen: large-desktop)
-            left: 34px
+            width: calc(100% - 15px)
+
+        span
+            &#upload-button
+                cursor: pointer
+                white-space: nowrap
+                padding: 6px 15px 5px
+                margin-right: 14px
+                color: $darkGray
+                background-color: $softGray
+                border: solid 1px #e2e2e2
+                @include responsive($screen: tablet)
+                    margin-right: 100px
+                @include responsive($screen: desktop)
+                    padding: 6px 7px 5px 8px
+                    margin-right: 7px
+            &#upload-placeholder
+                font-family: ProximaNovaRegular
+                font-size: 14px
+                color: #85868f
+                max-width: 100%
+                white-space: nowrap

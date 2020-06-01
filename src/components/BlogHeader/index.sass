@@ -1,0 +1,78 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.blog-header
+    @include responsive($screen: mobile)
+        margin-bottom: 30px
+        padding-top: 17px
+    @include responsive($screen: tablet)
+        padding-top: 21px
+        margin-bottom: 63px
+    @include responsive($screen: desktop)
+        padding-top: 21px
+        margin-bottom: 90px
+    @include responsive($screen: large-desktop)
+        padding-top: 27px
+        margin-bottom: 126px
+
+    p
+        font-family: ProximaNovaBold
+        line-height: 1.25
+        @include responsive($screen: mobile)
+            font-family: ProximaNovaRegular
+            line-height: 1.5
+            color: $slightBlack
+            font-size: 12px
+        @include responsive($screen: tablet)
+            font-size: 14px
+        @include responsive($screen: desktop)
+            font-size: 14px
+        @include responsive($screen: large-desktop)
+            font-size: 16px
+
+    &__logo
+        align-self: center
+        @include responsive($screen: mobile)
+            max-height: 28.8px
+            padding-right: 12.4px
+        @include responsive($screen: tablet)
+            margin-right: 35px
+            height: 27px
+        @include responsive($screen: desktop)
+            margin-right: 35px
+            height: 27px
+        @include responsive($screen: large-desktop)
+            margin-right: 40px
+            height: 31px
+
+    &__logo-text
+        p
+            @include responsive($screen: mobile)
+                font-size: 8px
+        img
+            @include responsive($screen: mobile)
+                max-height: 10.3px
+
+    &__subcribe-button
+        background-color: transparent
+        border: solid 2px $yellow
+        font-family: ProximaNovaBold
+        color: $darkGray
+        @include responsive($screen: mobile)
+            width: 164px
+            height: 40px
+            font-size: 14px
+        @include responsive($screen: tablet)
+            width: 164px
+            height: 40px
+            font-size: 14px
+        @include responsive($screen: desktop)
+            width: 164px
+            height: 40px
+            font-size: 14px
+        @include responsive($screen: large-desktop)
+            font-size: 16px
+            width: 188px
+            height: 45px
+        &:hover
+            color: $yellow

@@ -9,8 +9,17 @@
   font-size: 14px
   font-family: ProximaNovaBold
   background-color: $yellow !important
+  transition: top 0.7s cubic-bezier(0.17, 0.04, 0.03, 0.94)
   @include responsive($screen: mobile)
     display: none
+  @include responsive($screen: tablet)
+    top: -32px !important
+  @include responsive($screen: desktop)
+    top: -32px !important
+  @include responsive($screen: large-desktop)
+    top: -45px !important
+  &.open
+    top: 0 !important
 
   &__button, #services-dropdown
     padding-left: 0
@@ -24,14 +33,6 @@
   .dropdown
     position: relative
     display: inline-block
-    &:hover
-      .dropdown-content
-        @include responsive($screen: tablet)
-          height: 292px
-        @include responsive($screen: desktop)
-          height: 390px
-        @include responsive($screen: large-desktop)
-          height: 490px
 
     &-content
       height: 0
@@ -50,6 +51,27 @@
       @include responsive($screen: large-desktop)
         padding-top: 30px
         left: -40px
+      &.dropdown-open
+        @include responsive($screen: tablet)
+          height: 389px
+        @include responsive($screen: desktop)
+          height: 515px
+        @include responsive($screen: large-desktop)
+          height: 651px
+
+  .services-dropdown-top-block
+    width: 100%
+    display: block
+    background-color: transparent
+    @include responsive($screen: tablet)
+      height: 16px
+      margin-bottom: -16px
+    @include responsive($screen: desktop)
+      height: 21px
+      margin-bottom: -21px
+    @include responsive($screen: large-desktop)
+      height: 30px
+      margin-bottom: -30px
 
   .no-hover-text-decoration
     &:hover, &:focus
@@ -63,6 +85,7 @@
 
   &__contact-wrapper
     background-color: $darkYellow
+    position: relative
     @include responsive($screen: tablet)
       width: 110px
       height: 32px
@@ -72,6 +95,24 @@
     @include responsive($screen: large-desktop)
       width: 155px
       height: 45px
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 0%
+      height: 100%
+      z-index: 1
+      opacity: 0
+      background-color: #FCCF6A
+      -webkit-transition: all 0.5s
+      -moz-transition: all 0.5s
+      -o-transition: all 0.5s
+      transition: all 0.5s
+    &:hover
+      &::before
+        opacity: 1
+        width: 100%
 
   &__contact-title
     white-space: nowrap
@@ -105,3 +146,7 @@
       height: 22px
     @include responsive($screen: large-desktop)
       height: 32px
+
+  .content
+    position: absolute
+    z-index: 2

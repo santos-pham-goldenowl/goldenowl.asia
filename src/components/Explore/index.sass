@@ -31,12 +31,14 @@
   &__image
     width: 100%
     display: block
-    @include responsive($screen: tablet)
-      margin-top: 26px
-    @include responsive($screen: desktop)
-      margin-top: 36px
-    @include responsive($screen: large-desktop)
-      margin-top: 50px
+    // @include responsive($screen: tablet)
+    //   margin-top: 26px
+    // @include responsive($screen: desktop)
+    //   margin-top: 36px
+    // @include responsive($screen: large-desktop)
+    //   margin-top: 50px
+    &:hover + .explore__arrow
+      right: 0
 
   h6
     @include responsive($screen: tablet)
@@ -71,22 +73,29 @@
       display: none
 
   &__case-study
+    position: relative
     display: flex
+    padding-right: 40px
     h6
       align-self: center
+    &:hover
+      .explore__arrow
+        right: 0
 
   &__arrow
-    .arrow-right
-      @include responsive($screen: tablet)
-        left: 17px
-      @include responsive($screen: desktop)
-        left: 24px
-      @include responsive($screen: large-desktop)
-        left: 34px
-    .line
-      @include responsive($screen: tablet)
-        width: 17px
-      @include responsive($screen: desktop)
-        width: 24px
-      @include responsive($screen: large-desktop)
-        width: 34px
+    top: 5px
+    content: ""
+    margin-top: var(--margin-top)
+    height: 8px
+    display: inline-block
+    position: absolute
+    right: 10px
+    background: url('../../assets/images/icon-more-arrow-dark.svg') right center no-repeat
+    -webkit-transition: 0.2s all linear
+    transition: 0.2s all linear
+    @include responsive($screen: tablet)
+      width: 28px
+    @include responsive($screen: desktop)
+      width: 28px
+    @include responsive($screen: large-desktop)
+      width: 40px

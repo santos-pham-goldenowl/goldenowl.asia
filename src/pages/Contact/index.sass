@@ -89,6 +89,11 @@
         font-size: 20px
         padding-bottom: 38px
 
+      br
+        display: none
+        @include responsive($screen: mobile)
+          display: block
+
   h1
     color: $solidBlack
     @include responsive($screen: mobile)
@@ -107,11 +112,6 @@
       width: 390px
       padding-bottom: 20px
       font-size: 46px
-
-  br
-    display: none
-    @include responsive($screen: mobile)
-      display: block
 
   // .send-rectangle
   //   border: solid 1px $solidBlack
@@ -198,18 +198,21 @@
     @include responsive($screen: large-desktop)
       font-size: 16px
 
-  .success-message, .validating
+  .success-message
     color: $lightningYellow
 
   .error
     color: red
 
-.modal-logo
-  width: 10%
-  display: inline-block
+  .modal-logo
+    width: 10%
+    display: inline-block
 
-iframe
-  height: 652px
-  border: none
-  overflow: visible
-  width: 100% !important
+  iframe
+    margin-top: -40px
+    height: 652px
+    border: none
+    overflow: visible
+    width: 100% !important
+    @include responsive($screen: mobile)
+      margin-top: -30px

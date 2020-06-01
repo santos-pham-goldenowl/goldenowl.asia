@@ -1,0 +1,170 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.blog-details
+  &__left-side
+    a
+      color: $darkGray
+      &:hover
+        color: $yellow !important
+
+  &__right-side
+    @include responsive($screen: tablet)
+      font-size: 14px
+    @include responsive($screen: desktop)
+      font-size: 14px
+    @include responsive($screen: large-desktop)
+      font-size: 16px
+    hr
+      margin-inline-start: auto
+      margin-inline-end: 0px
+      @include responsive($screen: mobile)
+        margin-top: 20px
+        margin-bottom: 20px
+        width: 100%
+      @include responsive($screen: tablet)
+        margin-top: 10px
+        margin-bottom: 10px
+        width: 166px
+      @include responsive($screen: desktop)
+        margin-top: 14px
+        margin-bottom: 14px
+        width: 166px
+      @include responsive($screen: large-desktop)
+        margin-top: 20px
+        margin-bottom: 20px
+        width: 190px
+
+  #social-icons
+    button
+      &:focus
+        outline: none
+      @include responsive($screen: mobile)
+        margin-top: 20px
+        margin-right: 20px
+      @include responsive($screen: tablet)
+        margin-top: 18px
+        margin-left: 18px
+      @include responsive($screen: desktop)
+        margin-top: 18px
+        margin-left: 18px
+      @include responsive($screen: large-desktop)
+        margin-top: 20px
+        margin-left: 20px
+    img
+      cursor: pointer
+      @include responsive($screen: mobile)
+        width: 24px
+      @include responsive($screen: tablet)
+        width: 26px
+      @include responsive($screen: desktop)
+        width: 26px
+      @include responsive($screen: large-desktop)
+        width: 30px
+
+  &__source
+    @include responsive($screen: mobile)
+      margin-top: 30px
+    @include responsive($screen: tablet)
+      margin-top: 278px
+    @include responsive($screen: desktop)
+      margin-top: 388px
+    @include responsive($screen: large-desktop)
+      margin-top: 555px
+
+  &__share
+    @include responsive($screen: mobile)
+      margin-bottom: 50px
+    @include responsive($screen: tablet)
+      margin-bottom: 75px
+    @include responsive($screen: desktop)
+      margin-bottom: 105px
+    @include responsive($screen: large-desktop)
+      margin-bottom: 150px
+
+  &__center-content
+    @include responsive($screen: tablet)
+      padding-bottom: 75px
+    @include responsive($screen: desktop)
+      padding-bottom: 105px
+    @include responsive($screen: large-desktop)
+      padding-bottom: 150px
+    h1
+      line-height: 1.5
+      @include responsive($screen: mobile)
+        font-size: 20px
+      @include responsive($screen: tablet)
+        font-size: 14px
+      @include responsive($screen: desktop)
+        font-size: 16px
+      @include responsive($screen: large-desktop)
+        font-size: 24px
+    p, strong, em, del, blockquote, pre, li
+      max-width: 100%
+      text-overflow: ellipsis
+      overflow: hidden
+      line-height: 1.67
+      @include responsive($screen: mobile)
+        font-size: 16px
+        @include responsive($screen: tablet)
+          font-size: 14px
+        @include responsive($screen: desktop)
+          font-size: 14px
+        @include responsive($screen: large-desktop)
+          font-size: 18px
+    ul
+      margin-top: 15px
+      padding-inline-start: 20px
+      li
+        list-style-type: disc
+    ol
+      margin-top: 15px
+      padding-inline-start: 30px
+      li
+        list-style-type: decimal-leading-zero
+    .attachment__name, .attachment__size
+      display: none
+    pre
+      box-shadow: -3px 3px $sweetGray
+      background-color: $smokeGray
+      padding: 3% 5%
+      white-space: break-spaces
+
+  &__title
+    .category
+      p
+        font-family: ProximaNovaRegular
+        color: #85868f
+        text-transform: uppercase
+        margin-bottom: 10px
+        &:last-child
+          padding-right: 0
+        @include responsive($screen: mobile)
+          font-size: 12px
+          line-height: 1.25
+          padding-right: 40px
+        @include responsive($screen: tablet)
+          font-size: 14px
+          padding-right: 16px
+        @include responsive($screen: desktop)
+          font-size: 14px
+          padding-right: 20px
+        @include responsive($screen: large-desktop)
+          font-size: 16px
+          padding-right: 30px
+    h1
+      font-family: MalloryBold
+      line-height: 1.32
+      @include responsive($screen: mobile)
+        line-height: 1.34
+        font-size: 24px
+        margin-bottom: 20px
+      @include responsive($screen: tablet)
+        font-size: 22px
+        margin-bottom: 16px
+      @include responsive($screen: desktop)
+        font-size: 32px
+        margin-bottom: 22px
+      @include responsive($screen: large-desktop)
+        font-size: 44px
+        margin-bottom: 30px

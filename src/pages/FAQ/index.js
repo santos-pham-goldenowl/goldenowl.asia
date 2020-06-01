@@ -1,4 +1,4 @@
-import React, { createRef, useState, useEffect } from "react";
+import React, { createRef } from "react";
 import { Link } from "react-router-dom";
 import Helmet from "react-helmet";
 
@@ -22,49 +22,44 @@ const FAQ = () => {
 
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
-
-  const tableOfContentQuery = () => {
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        const id = entry.target.getAttribute('id');
-        if (id.includes('content-')) {
-          const tocItem = document.querySelector(`nav li a[href="#${id}"]`)
-          
-          if (tocItem) {
-            if (entry.intersectionRatio > 0) {
-              tocItem.parentElement.classList.add('active');
-            } else {
-              tocItem.parentElement.classList.remove('active');
-            }  
-          }
-        }
-      });
-    });
-  
-    document.querySelectorAll('section[id]').forEach((section) => {
-      observer.observe(section);
-    });
-    
+  let updateMenuActiveStatusFunc = () => {
+    const fixedTopElement = document.getElementById("fixed-top-menu") ||  document.getElementById("fixed-top-breadcrumb");
+    const entries = document.querySelectorAll('section[id*="content-"]');
+    let firstIdx = -1;
+    for (let i = 0; i < entries.length; i++) {
+      const entry = entries[i];
+      const id = entry.getAttribute('id');
+      const tocItem = document.querySelector(`nav li a[href="#${id}"]`);
+      tocItem && tocItem.parentElement.classList.remove('active');
+      const elemHeight = entry.clientHeight;
+      if ((entry.getBoundingClientRect().top + window.pageYOffset + elemHeight - fixedTopElement.clientHeight) > window.pageYOffset && firstIdx === -1) {
+        firstIdx = i;
+        tocItem && tocItem.parentElement.classList.add('active');
+      }
+    };
   }
 
-  useEffect(() => {
-    window.addEventListener('DOMContentLoaded', tableOfContentQuery);
+  // let updateMenuStatusActiveDebounce = null;
 
-    return () => window.removeEventListener('DOMContentLoaded', tableOfContentQuery);
-  }, [])
+  const tableOfContentQuery = () => {
+    // Debounce
+    // if (updateMenuStatusActiveDebounce) {
+    //   clearTimeout(updateMenuStatusActiveDebounce);
+    // }
+    // updateMenuStatusActiveDebounce = setTimeout(updateMenuActiveStatusFunc, 100);
+    updateMenuActiveStatusFunc();    
+  }
 
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
     stickyTOCTrigger(isMobile);
+    !isMobile && tableOfContentQuery();
   };
 
   return (
     <section className="faq">
       <Helmet>
         <title>FAQ - Golden Owl</title>
-        <link href="https://www.goldenowl.asia/home/amp" rel="amphtml" />
-        <link href="https://www.goldenowl.asia/home/home" rel="canonical" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta
           content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug"

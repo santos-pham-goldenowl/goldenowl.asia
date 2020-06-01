@@ -1,6 +1,6 @@
-import facebook from '../assets/images/facebook-f-brands.svg';
+import facebook from '../assets/images/facebook-f-brands.png';
 import twitter from '../assets/images/twitter-128.png';
-import linkedin from '../assets/images/linkedin-in-brands.svg';
+import linkedin from '../assets/images/linkedin-in-brands.png';
 
 const socialIcons = [
   {
