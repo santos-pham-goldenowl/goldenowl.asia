@@ -75,6 +75,24 @@
         padding-top: 42px
       @include responsive($screen: large-desktop)
         padding-top: 60px
+      strong
+        font-weight: normal
+        line-height: 1.69
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-line-clamp: 5
+        -webkit-box-orient: vertical
+        font-family: 'ProximaNovaRegular'
+        @include responsive($screen: mobile)
+          line-height: 1.5
+          font-size: 16px
+        @include responsive($screen: tablet)
+          font-size: 14px
+        @include responsive($screen: desktop)
+          font-size: 14px
+        @include responsive($screen: large-desktop)
+          font-size: 16px
       h4
         font-family: MalloryBold
         line-height: 1.48
@@ -92,10 +110,11 @@
           font-size: 34px
           padding-bottom: 10px
       div.blog-content
-        p, strong, em, del, blockquote, pre, li, h1, img, .attachment__name, .attachment__size, br
+        p, pre, h1, em, blockquote, img, .attachment__name, .attachment__size, br, ol, li, ul
           display: none
         p
           &:first-child
+            font-weight: normal
             line-height: 1.69
             overflow: hidden
             text-overflow: ellipsis

@@ -71,7 +71,7 @@ const Blog = () => {
                         <Link exact to={`/blog/details/${blog.id}`}>
                           <h4>{blog.attributes.title}</h4>
                         </Link>
-                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
+                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<strong>","</del>":"</strong>","<h1>":"<strong>","</h1>":"</strong>","<blockquote>":"<strong>","</blockquote>":"</strong>","<em>":"<strong>","</em>":"</strong>","<pre>":"<strong>","</pre>":"</strong>","<ol>":"<strong>","</ol>":"</strong>","<li>":"<strong>","</li>":"</strong>","<ul>":"<strong>","</ul>":"</strong>"}))}</div>
                       </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ const Blog = () => {
                             {blog.attributes.title}
                           </h4>
                         </Link>
-                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
+                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<strong>","</del>":"</strong>","<h1>":"<strong>","</h1>":"</strong>","<blockquote>":"<strong>","</blockquote>":"</strong>","<em>":"<strong>","</em>":"</strong>","<pre>":"<strong>","</pre>":"</strong>","<ol>":"<strong>","</ol>":"</strong>","<li>":"<strong>","</li>":"</strong>","<ul>":"<strong>","</ul>":"</strong>"}))}</div>
                       </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@ const Blog = () => {
                           </h4>
                         </Link>
                         <div className="blog-content medium-item-content">
-                          {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}
+                        {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<strong>","</del>":"</strong>","<h1>":"<strong>","</h1>":"</strong>","<blockquote>":"<strong>","</blockquote>":"</strong>","<em>":"<strong>","</em>":"</strong>","<pre>":"<strong>","</pre>":"</strong>","<ol>":"<strong>","</ol>":"</strong>","<li>":"<strong>","</li>":"</strong>","<ul>":"<strong>","</ul>":"</strong>"}))}
                         </div>
                       </div>
                     </div>
