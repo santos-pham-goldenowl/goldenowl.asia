@@ -4,6 +4,7 @@
 .faq
   header, &__opening, .breadcrumb, .fixed-breadcrumb
     background-color: $slightOrange
+   
 
   &__opening
     @include responsive($screen: mobile)
@@ -120,6 +121,7 @@
     background-color: $softGray
 
   &__content-panel-header
+    
     &:hover
       cursor: pointer
     @include responsive($screen: mobile)
@@ -251,3 +253,41 @@
       top: 50px
       left: $desktopPadding
       width: calc( 400/1240 * 100% )
+.panel 
+  height: fit-content
+  width: fit-content
+  overflow: hidden
+  
+.prevpanel
+  width: 0px
+  height: 0px
+  transition: height 0.2s ease-out
+.faq__content-panel-body
+  transition: height 0.5s
+// .slideInDown
+//  -webkit-animation-name: slideInDown
+//  animation-name: slideInDown
+//  -webkit-animation-duration: 80ms
+//  animation-duration: 80ms
+//  -webkit-animation-fill-mode: both
+//  animation-fill-mode: both
+
+@-webkit-keyframes slideInDown 
+ 0% 
+ -webkit-transform: translateY(-100%)
+ transform: translateY(-100%)
+ visibility: visible
+ 
+ 100% 
+ -webkit-transform: translateY(0)
+ transform: translateY(0)
+ 
+@keyframes slideInDown 
+ 0% 
+ -webkit-transform: translateY(-100%)
+ transform: translateY(-100%)
+ visibility: visible
+ 
+ 100% 
+ -webkit-transform: translateY(0)
+ transform: translateY(0)

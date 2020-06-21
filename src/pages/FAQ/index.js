@@ -15,7 +15,7 @@ import useScrollDirection from "../../utils/hooks/useScrollDirection";
 
 import companyLogo from "../../assets/images/GoldenOwlLogo.png";
 import "./index.sass";
-import contentRender from "./mockPanelsRender"
+import ContentRender from "./mockPanelsRender"
 
 const FAQ = () => {
   const isMobile = useMobileWidth();
@@ -113,7 +113,7 @@ const FAQ = () => {
               <div id="toc-sticky-bot-trigger" className="faq__toc-sticky-bot-trigger align-self-end"/>
             </div>}
             <div className="col-md-8">
-              <div className="faq__content-body">{contentRender()}</div>
+              <div className="faq__content-body">{ContentRender()}</div>
             </div>
           </div>
         </section>
