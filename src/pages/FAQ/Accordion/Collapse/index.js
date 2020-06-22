@@ -1,7 +1,7 @@
 import React, {useEffect,useState}from 'react';
 import PropTypes from 'prop-types';
 //import  {TransitionGroup} from 'react-transition-group';
-import {Animated} from "react-animated-css";
+
 
 import { useAccordionContext } from '../hooks';
 import "../../index.sass";
