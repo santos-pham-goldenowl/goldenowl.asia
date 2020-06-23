@@ -4,7 +4,7 @@
 .blog-details
   &__left-side
     a
-      color: $darkGray
+      color: #007bff !important;
       &:hover
         color: $yellow !important
 
@@ -99,10 +99,25 @@
         font-size: 16px
       @include responsive($screen: large-desktop)
         font-size: 24px
-    p, strong, em, del, blockquote, pre, li
+    p, strong, em, del, blockquote, pre
       max-width: 100%
       text-overflow: ellipsis
       overflow: hidden
+      line-height: 1.67
+      @include responsive($screen: mobile)
+        font-size: 16px
+        @include responsive($screen: tablet)
+          font-size: 14px
+        @include responsive($screen: desktop)
+          font-size: 14px
+        @include responsive($screen: large-desktop)
+          font-size: 18px
+          font-size: 24px
+    a
+      color: #007bff !important
+    li
+      max-width: 100%
+      text-overflow: ellipsis
       line-height: 1.67
       @include responsive($screen: mobile)
         font-size: 16px

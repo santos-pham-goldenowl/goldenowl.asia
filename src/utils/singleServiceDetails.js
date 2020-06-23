@@ -202,7 +202,7 @@ const servicesDetails = {
       title: 'Simple and powerful',
       left: {
         title: 'Technology experts',
-        content: 'We’re proud of our full-stack technology. Our reliable team of software engineers delivers cutting-edge software solutions on top of .NET, Ruby, Java, React, employing high-level development practices of cloud automation, blockchain, and artificial intelligence.',
+        content: 'We’re proud of our full-stack technology. Our reliable team of software engineers delivers cutting-edge software solutions on top of Ruby on Rails, JavaScript, React, employing high-level development practices of cloud automation, blockchain, and artificial intelligence.',
       },
       right: {
         title: 'Disciplined team',
