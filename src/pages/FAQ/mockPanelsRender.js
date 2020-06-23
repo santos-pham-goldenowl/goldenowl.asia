@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AccordionRender from './Accordion';
 import {
   Accordion,
 } from 'react-accessible-accordion';
@@ -17,3 +18,6 @@ const contentRender = () =>
  
 
 export default contentRender;
+
+
+
