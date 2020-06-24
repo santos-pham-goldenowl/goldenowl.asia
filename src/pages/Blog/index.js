@@ -20,6 +20,7 @@ import {
 import { getAllBlogs } from "../../api/blogs";
 
 import "./index.sass";
+import { da } from "date-fns/locale";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -29,7 +30,6 @@ const Blog = () => {
     getAllBlogs()
       .then((res) => {
         const { data } = res.data;
-
         if (data) setBlogs([...data.data]);
 
         if (data.data.length)
@@ -71,7 +71,7 @@ const Blog = () => {
                         <Link exact to={`/blog/details/${blog.id}`}>
                           <h4>{blog.attributes.title}</h4>
                         </Link>
-                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
+                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<em>","</del>":"</em>","<h1>":"<em>","</h1>":"</em>","<blockquote>":"<em>","</blockquote>":"</em>","<pre>":"<em>","</pre>":"</em>","<ol>":"<em>","</ol>":"</em>","<li>":"<em>","</li>":"</em>","<ul>":"<em>","</ul>":"</em>","<strong>":"<em>","</strong>":"</em>"}))}</div>
                       </div>
                     </div>
                 </div>
@@ -103,8 +103,8 @@ const Blog = () => {
                             {blog.attributes.title}
                           </h4>
                         </Link>
-                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}</div>
-                      </div>
+                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<em>","</del>":"</em>","<h1>":"<em>","</h1>":"</em>","<blockquote>":"<em>","</blockquote>":"</em>","<pre>":"<em>","</pre>":"</em>","<ol>":"<em>","</ol>":"</em>","<li>":"<em>","</li>":"</em>","<ul>":"<em>","</ul>":"</em>","<strong>":"<em>","</strong>":"</em>"}))}</div>
+                       </div>
                     </div>
                 </div>
               );
@@ -136,8 +136,8 @@ const Blog = () => {
                           </h4>
                         </Link>
                         <div className="blog-content medium-item-content">
-                          {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}
-                        </div>
+                        {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<em>","</del>":"</em>","<h1>":"<em>","</h1>":"</em>","<blockquote>":"<em>","</blockquote>":"</em>","<pre>":"<em>","</pre>":"</em>","<ol>":"<em>","</ol>":"</em>","<li>":"<em>","</li>":"</em>","<ul>":"<em>","</ul>":"</em>","<strong>":"<em>","</strong>":"</em>"}))}
+                         </div>
                       </div>
                     </div>
                   </Link>
