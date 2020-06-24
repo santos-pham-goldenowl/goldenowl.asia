@@ -275,7 +275,7 @@ const servicesDetails = {
     cover: webCoverImage,
     mobileCover: mWebCoverImage,
     first: {
-      content: 'With dozens of successful website development projects, we are confident to help you identify your challenges, to give you a clear and rational tangible solution that fits your needs. Our reliable team of software engineers delivers cutting-edge software solutions on top of .NET, Ruby, Java, React, employing high-level development practices of cloud automation, blockchain, and artificial intelligence.',
+      content: 'With dozens of successful website development projects, we are confident to help you identify your challenges, to give you a clear and rational tangible solution that fits your needs. Our reliable team of software engineers delivers cutting-edge software solutions on top of Ruby on Rails, JavaScript, React, employing high-level development practices of cloud automation, blockchain, and artificial intelligence.',
     },
     second: {
       title: 'What to expect',
