@@ -20,15 +20,18 @@ const BlogHeader = () => {
 
   return isMobile ? (
     <header className="blog-header d-flex align-items-center">
-      <Link to="/blog">
         <div className="d-flex">
           <img className="blog-header__logo" src={logo} alt="go-logo" />
           <div className="blog-header__logo-text flex-column">
+          <Link to="/">
             <img src={companyName} alt="go" />
+            </Link>
+            <Link to="/blog">
             <p className="mt-auto">Blog</p>
+            </Link>
+           
           </div>
         </div>
-      </Link>
       <button onClick={openDialog} className="blog-header__subcribe-button ml-auto">
         Subcribe to our blog
       </button>
@@ -36,12 +39,14 @@ const BlogHeader = () => {
     </header>
   ) : (
     <header className="blog-header d-flex align-items-center">
-      <Link to="/blog">
         <div className="d-flex align-items-center">
-          <img src={desktopLogo} className="blog-header__logo d-block" />
-          <p className="">Blog</p>
+        <Link to="/">
+        <img src={desktopLogo} className="blog-header__logo d-block" />
+            </Link>
+            <Link to="/blog">
+            <p className="">Blog</p>
+            </Link>
         </div>
-      </Link>
      <button onClick={openDialog} className="blog-header__subcribe-button ml-auto">
         Subcribe to our blog
       </button>
