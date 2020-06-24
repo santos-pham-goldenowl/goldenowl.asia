@@ -30,7 +30,6 @@ const Blog = () => {
     getAllBlogs()
       .then((res) => {
         const { data } = res.data;
-        console.log(data);
         if (data) setBlogs([...data.data]);
 
         if (data.data.length)
@@ -48,7 +47,6 @@ const Blog = () => {
         {blogs.map((blog, index) => {
           switch (index % 6) {
             case 0:
-              console.log('run 0');
               return (
                 <div key={blog.attributes.title} className="col-md-12">
                     <div className="row blogs__item">
@@ -79,11 +77,8 @@ const Blog = () => {
                 </div>
               );
             case 1:
-              console.log('run 1');
             case 2:
-              console.log('run 2');
             case 3:
-              console.log('run 3');
               return (
                 <div key={blog.attributes.title} className="col-12 col-md-4">
                     <div className="blogs__item">
@@ -114,9 +109,7 @@ const Blog = () => {
                 </div>
               );
             case 4:
-              console.log('run 4');
             case 5:
-              console.log('run 5');
               return (
                 <div key={blog.attributes.title} className="col-12 col-md-6">
                   <Link exact to={`/blog/details/${blog.id}`}>
