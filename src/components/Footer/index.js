@@ -6,7 +6,7 @@ import useMobileWidth from '../../utils/hooks/useMobileWidth';
 
 import go from '../../assets/images/golden_owl.png';
 import vnflag from '../../assets/images/vn.svg'
-import gbflag from '../../assets/images/gb.svg'
+import usflag from '../../assets/images/us.svg'
 import noflag from '../../assets/images/no.svg'
 import auflag from '../../assets/images/au.svg'
 import sgflag from '../../assets/images/sg.svg'
@@ -187,17 +187,15 @@ const Footer = () => {
           </p>
         </div>
         <div className="col-6 col-md-4">
-          <h5 className="d-flex align-items-start">United Kingdom<img className="flag shadow-sm ml-2" src={gbflag} alt="United Kingdom Flag"/></h5>
+          <h5 className="d-flex align-items-start">United States<img className="flag shadow-sm ml-2" src={usflag} alt="United States Flag"/></h5>
           <p>
-            HERTFORDSHIRE OFFICE
+          4 Park Ave Apt 21A New York, 
             <br />
-            8 Parkway Porters Wood,
-            <br />
-            St Albans
+            New York 10016
           </p>
           <p>
-            <a href="tel:(+0345) 456 0522">
-              (+0345) 456 0522
+            <a href="tel:(+1) 509 714 2248">
+            (+1) 509 714 2248
             </a>
           </p>
         </div>

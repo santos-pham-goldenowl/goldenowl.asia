@@ -106,7 +106,6 @@ app.use(
       const { firstName, lastName, email, url, reason, job } = body;
 
       fs.readFile(file.path, (err, data) => {
-        console.log("data", data);
         const msg = {
           to: process.env.HR_ADDRESS,
           from: process.env.FROM_ADDRESS,
