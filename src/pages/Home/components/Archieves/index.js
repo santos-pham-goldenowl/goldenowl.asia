@@ -5,14 +5,17 @@ import archieves from '../../../../utils/archives';
 import objectToArray from '../../../../utils/objectToArray';
 
 import './index.sass';
+
 let check =0;
+
 const Archieves = () => {
   const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
-  console.log(check);
+
   useEffect(() => {
    check=0;
   }, []);
+
   useEffect(() => {
     const onScroll = e => {
       setScrollTop(e.target.documentElement.scrollTop);
@@ -22,10 +25,12 @@ const Archieves = () => {
       setScrolling(true);
       check=1;
     }
+
     window.addEventListener("scroll", onScroll);
    
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
+
   return (
     <section className="archieves d-block" id="numanimate">
       <div className="row justify-content-center">
