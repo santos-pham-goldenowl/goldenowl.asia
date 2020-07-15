@@ -22,22 +22,29 @@ class SubHeader extends Component {
             <Link
               className="d-flex align-items-center no-hover-text-decoration"
               to="/services"
-              onMouseOver={() => document.getElementById("services-dropdown").classList.add("dropdown-open")}
-              onMouseLeave={() => document.getElementById("services-dropdown").classList.remove("dropdown-open")}
-              >
+              onMouseOver={() => document.getElementById('services-dropdown').classList.add('dropdown-open')}
+              onMouseLeave={() => document.getElementById('services-dropdown').classList.remove('dropdown-open')}
+              onFocus={() => document.getElementById('services-dropdown').classList.add('dropdown-open')}
+              onBlur={() => document.getElementById('services-dropdown').classList.remove('dropdown-open')}
+            >
               <h4 className="sub-header__text">Services</h4>
               <img className="arrow-down" src={arrowDown} alt="arrow-down" />
             </Link>
-            <div 
+            <div
               className="services-dropdown-top-block"
-              onMouseOver={() => document.getElementById("services-dropdown").classList.add("dropdown-open")}
-              onMouseLeave={() => document.getElementById("services-dropdown").classList.remove("dropdown-open")} />
+              onMouseOver={() => document.getElementById('services-dropdown').classList.add('dropdown-open')}
+              onMouseLeave={() => document.getElementById('services-dropdown').classList.remove('dropdown-open')}
+              onFocus={() => document.getElementById('services-dropdown').classList.add('dropdown-open')}
+              onBlur={() => document.getElementById('services-dropdown').classList.remove('dropdown-open')}
+            />
           </div>
           <div id="services-dropdown" className="dropdown-content">
-            <div 
+            <div
               className="services__items"
-              onMouseOver={() => document.getElementById("services-dropdown").classList.add("dropdown-open")}
-              onMouseLeave={() => document.getElementById("services-dropdown").classList.remove("dropdown-open")}  
+              onMouseOver={() => document.getElementById('services-dropdown').classList.add('dropdown-open')}
+              onMouseLeave={() => document.getElementById('services-dropdown').classList.remove('dropdown-open')}
+              onFocus={() => document.getElementById('services-dropdown').classList.add('dropdown-open')}
+              onBlur={() => document.getElementById('services-dropdown').classList.remove('dropdown-open')}
             >
               {ServicesData.map((service) => (
                 <Link key={service.link} to={`/services/${service.link}`}>

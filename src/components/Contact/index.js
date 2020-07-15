@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import useMobileWidth from "../../utils/hooks/useMobileWidth";
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
 
-import "./index.sass";
+import './index.sass';
 
 const Contact = () => {
   const isMobile = useMobileWidth();
@@ -14,12 +14,16 @@ const Contact = () => {
       </a>
       {isMobile ? (
         <p className="contact__phone">
-          Or give our friendly team a quick call on <br />{" "}
+          Or give our friendly team a quick call on
+          {' '}
+          <br />
+          {' '}
           <a href="tel:(+84) 2838 4600 98">(+84) 2838 4600 98</a>
         </p>
       ) : (
         <p className="contact__phone">
-          Or give our friendly team a quick call on{" "}
+          Or give our friendly team a quick call on
+          {' '}
           <a href="tel:(+84) 2838 4600 98">(+84) 2838 4600 98</a>
         </p>
       )}

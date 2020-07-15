@@ -37,7 +37,7 @@ export default {
   'Riaz Ladha': {
     avatar: riaz,
     main: 'They have great communication and problem-solving skills',
-    details: `"Partnering with the Golden Owl Consulting team is definitely a good choice. I just came to them with an idea and they provide me with a detailed roadmap to achieve my vision. There isn't a language barrier to overcome, and everyone is proactive, helpful, and ethical. No need to mention their attention to detail, productivity and creativity.”`,
+    details: '"Partnering with the Golden Owl Consulting team is definitely a good choice. I just came to them with an idea and they provide me with a detailed roadmap to achieve my vision. There isn\'t a language barrier to overcome, and everyone is proactive, helpful, and ethical. No need to mention their attention to detail, productivity and creativity.”',
     companyLogo: gig,
     title: 'CO - FOUNDER & ADVISORY OF GIG TO GIG',
     url: 'gig',

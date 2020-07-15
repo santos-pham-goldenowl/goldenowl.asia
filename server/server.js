@@ -161,7 +161,7 @@ app.use(
 );
 
 app.use(
-  express.Router().post("/subcribe", (req, res) => {
+  express.Router().post("/subscribe", (req, res) => {
     const { body } = req;
     const { email, type } = body;
 

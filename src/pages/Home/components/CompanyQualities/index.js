@@ -16,12 +16,13 @@ const CompanyQualities = () => (
         <h5>Trustworthy & Professional</h5>
         <div className="d-flex">
           <p>
-            Golden Owl is one of the leading outsourcing software development companies in Vietnam. 
+            Golden Owl is one of the leading outsourcing software development companies in Vietnam.
           </p>
         </div>
         <div className="d-flex">
           <p className="bottom-line">
-            By collaborating with us, you can save time to focus on planning and operating your core business. We bring professional manners into the project. 
+            By collaborating with us, you can save time to focus on planning and operating your core business.
+            We bring professional manners into the project.
           </p>
         </div>
       </div>
@@ -31,11 +32,15 @@ const CompanyQualities = () => (
           Flexibility & Transparency
         </h5>
         <div className="d-flex">
-          <p>Our strengths lie in solid expertise of a wide range of technologies and the team flexibility to fit clients needs.</p>
+          <p>
+            Our strengths lie in solid expertise of a wide range of technologies and the team flexibility to fit clients
+            needs.
+          </p>
         </div>
         <div className="d-flex">
           <p className="bottom-line">
-            Each and every step of our work is always kept transparent with our clients from the beginning to the end. Our working process lets clients to track and know exactly where the team is at any point.
+            Each and every step of our work is always kept transparent with our clients from the beginning to the end.
+            Our working process lets clients to track and know exactly where the team is at any point.
           </p>
         </div>
       </div>
@@ -49,7 +54,9 @@ const CompanyQualities = () => (
         </div>
         <div className="d-flex">
           <p className="bottom-line">
-            Clients choosing us know that their final deliverables will be incredible, high-performing products. From complex systems and infrastructures to creative development projects, we have done it all with a game-changing spirit and willingness to go extra miles to help.
+            Clients choosing us know that their final deliverables will be incredible, high-performing products.
+            From complex systems and infrastructures to creative development projects, we have done it all with a
+            game-changing spirit and willingness to go extra miles to help.
           </p>
         </div>
       </div>

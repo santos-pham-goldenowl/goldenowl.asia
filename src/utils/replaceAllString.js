@@ -1,9 +1,10 @@
 const allReplace = (originalString, obj) => {
-    var retStr = originalString;
-    for (var x in obj) {
-        retStr = retStr.replace(new RegExp(x, 'g'), obj[x]);
-    }
-    return retStr;
+  let retStr = originalString;
+  Object.keys(obj).forEach((key) => {
+    retStr = retStr.replace(new RegExp(key, 'g'), obj[key]);
+  });
+
+  return retStr;
 };
 
 export default allReplace;

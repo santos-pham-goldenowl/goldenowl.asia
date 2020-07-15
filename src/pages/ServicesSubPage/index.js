@@ -18,6 +18,8 @@ import useScrollDirection from '../../utils/hooks/useScrollDirection';
 import coverPlaceholder from '../../assets/images/service/cover-min.png';
 import mCoverPlaceholder from '../../assets/images/service/mCover-min.png';
 
+import { HEADER_DESCRIPTION } from '../../constant';
+
 import companyLogo from '../../assets/images/GoldenOwlLogo.png';
 import './index.sass';
 
@@ -34,8 +36,9 @@ const ServicesSubPage = ({ content }) => {
       <Helmet>
         <title>{`${capitalizeWords(content.key)} - Golden Owl`}</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
-        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." property="og:description" />
+        <meta content={HEADER_DESCRIPTION} name="description" />
+        <meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
+        <meta content={HEADER_DESCRIPTION} property="og:description" />
         <meta content={companyLogo} property="og:image" />
         <meta name="csrf-param" content="authenticity_token" />
         <meta name="csrf-token" content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg==" />
@@ -55,7 +58,7 @@ const ServicesSubPage = ({ content }) => {
           <p>{content.key}</p>
         </BreadCrumb>
         <section className="service__first-content">
-          <h1>{!!content.first.title ? content.first.title : content.key}</h1>
+          <h1>{content.first.title ? content.first.title : content.key}</h1>
           <p className="pb-0"><strong>{content.first.highlight}</strong></p>
           <p>{content.first.content}</p>
         </section>

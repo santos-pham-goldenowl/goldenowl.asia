@@ -44,9 +44,9 @@ const Quote = () => {
       quote: '“If you do build a great EXPERIENCE, customer tell each other about that.”',
       name: 'Jeff Bezos',
       job: 'CEO of Amazon',
-    }
+    },
 
-  ]
+  ];
 
   return (
     <section className="quote">
@@ -79,7 +79,7 @@ const Quote = () => {
                     {`${item.job}.`}
                   </div>
                 </div>
-  
+
               ))
             }
           </Carousel>

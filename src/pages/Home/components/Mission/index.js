@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import bg from "../../../../assets/images/bg.svg";
-import "./index.sass";
+import bg from '../../../../assets/images/bg.svg';
+import './index.sass';
 
 const Missions = () => {
   const sectionStyle = {
     backgroundImage: `url(${bg})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "bottom",
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'bottom',
   };
 
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ScrollToTop from '../../components/ScrollToTop';
-import AppRoutes from '../../routes'
+import AppRoutes from '../../routes';
 
 import './index.sass';
 

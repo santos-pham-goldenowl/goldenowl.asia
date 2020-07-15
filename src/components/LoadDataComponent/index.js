@@ -1,7 +1,7 @@
-import React from "react";
-import LoadingScreen from "../LoadingScreen";
+import React from 'react';
+import LoadingScreen from '../LoadingScreen';
 
-import { LOADED_STATUS, NO_RESULT_STATUS } from "../../constant";
+import { LOADED_STATUS, NO_RESULT_STATUS } from '../../constant';
 
 const LoadDataComponent = ({ loadStatus, component }) => {
   switch (loadStatus) {

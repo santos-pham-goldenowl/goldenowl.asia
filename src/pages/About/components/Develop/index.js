@@ -34,20 +34,20 @@ const Develop = () => {
         <div className="col-12 col-md-4 develop__content-text d-flex flex-column justify-content-center">
           <h3>Are you...</h3>
           <p>
-              struggling with digital transformation?
-              <br/>
-              build MVP for a groundbreaking idea?
-              <br/>
-              looking for a distributed team?
-              <br/>
-              offset costs of hiring local engineers?
-              <br/>
-              looking for extra workforce for in-house projects with tight deadlines?
-              <br/>
-              <br />
-              <strong>We are here to help!</strong>
-              <br />
-              Just drop us a message and we will contact you back to make your idea possible!
+            struggling with digital transformation?
+            <br />
+            build MVP for a groundbreaking idea?
+            <br />
+            looking for a distributed team?
+            <br />
+            offset costs of hiring local engineers?
+            <br />
+            looking for extra workforce for in-house projects with tight deadlines?
+            <br />
+            <br />
+            <strong>We are here to help!</strong>
+            <br />
+            Just drop us a message and we will contact you back to make your idea possible!
           </p>
         </div>
         {isMobile ? mobileImageRender() : defaultImageRender() }

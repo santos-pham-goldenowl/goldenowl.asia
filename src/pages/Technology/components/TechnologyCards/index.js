@@ -8,7 +8,8 @@ const TechnologyCards = () => (
         <div className="technology-cards__card text-center">
           <h4>Optimal solutions</h4>
           <p>
-            We understand that your growth is key to our, and therefore our mission is not just to deliver what we are ordered to, but also to advise and search for more optimal solutions for your business.
+            We understand that your growth is key to our, and therefore our mission is not just to deliver what we are
+            ordered to, but also to advise and search for more optimal solutions for your business.
           </p>
         </div>
       </div>

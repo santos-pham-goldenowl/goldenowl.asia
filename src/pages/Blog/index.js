@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import Helmet from "react-helmet";
-import parse from "html-react-parser";
-import format from "date-fns/format";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Helmet from 'react-helmet';
+import parse from 'html-react-parser';
+import format from 'date-fns/format';
 
-import Footer from "../../components/Footer";
-import LoadDataComponent from "../../components/LoadDataComponent";
-import BlogHeader from "../../components/BlogHeader";
+import Footer from '../../components/Footer';
+import LoadDataComponent from '../../components/LoadDataComponent';
+import BlogHeader from '../../components/BlogHeader';
 
-import readTimeCalculator from "../../utils/readTimeCalculator";
-import replaceAllString from "../../utils/replaceAllString";
+import readTimeCalculator from '../../utils/readTimeCalculator';
+import replaceAllString from '../../utils/replaceAllString';
 
 import {
   LOADING_STATUS,
   LOADED_STATUS,
   NO_RESULT_STATUS,
-} from "../../constant";
+  HEADER_DESCRIPTION,
+} from '../../constant';
 
-import { getAllBlogs } from "../../api/blogs";
+import { getAllBlogs } from '../../api/blogs';
 
-import "./index.sass";
-import { da } from "date-fns/locale";
+import './index.sass';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -32,131 +32,191 @@ const Blog = () => {
         const { data } = res.data;
         if (data) setBlogs([...data.data]);
 
-        if (data.data.length)
-          setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
+        if (data.data.length) setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
         else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
       })
       .catch((err) => {
+        console.log(err);
         setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
       });
   }, []);
 
-  const blogRender = () =>
-    blogs && (
-      <div className="row">
-        {blogs.map((blog, index) => {
-          switch (index % 6) {
-            case 0:
-              return (
-                <div key={blog.attributes.title} className="col-md-12">
-                    <div className="row blogs__item">
-                      <div className="col-12 col-md-8 d-block">
-                        <Link exact to={`/blog/details/${blog.id}`}>
-                          <div
-                            style={{
-                              backgroundImage: `url(${blog.attributes.image})`,
-                            }}
-                            className="blogs__item-image"
-                          />
-                        </Link>
-                      </div>
-                      <div className="col-md-4 wide-blog">
-                        <div className="category d-flex">
-                          <p className="text-uppercase">{blog.type}</p>
-                          <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y' )}</p>
-                          <p className="text-uppercase">
-                            {readTimeCalculator(blog.attributes.content)}
-                          </p>
-                        </div>
-                        <Link exact to={`/blog/details/${blog.id}`}>
-                          <h4>{blog.attributes.title}</h4>
-                        </Link>
-                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<em>","</del>":"</em>","<h1>":"<em>","</h1>":"</em>","<blockquote>":"<em>","</blockquote>":"</em>","<pre>":"<em>","</pre>":"</em>","<ol>":"<em>","</ol>":"</em>","<li>":"<em>","</li>":"</em>","<ul>":"<em>","</ul>":"</em>","<strong>":"<em>","</strong>":"</em>"}))}</div>
-                      </div>
-                    </div>
-                </div>
-              );
-            case 1:
-            case 2:
-            case 3:
-              return (
-                <div key={blog.attributes.title} className="col-12 col-md-4">
-                    <div className="blogs__item">
-                      <div className="d-block">
-                        <Link exact to={`/blog/details/${blog.id}`}>
-                        <div
-                          style={{
-                            backgroundImage: `url(${blog.attributes.image})`,
-                          }}
-                          className="blogs__item-image"
-                        />
-                        </Link>
-                      </div>
-                      <div className="d-block">
-                        <div className="category category-vertical-small d-flex">
-                          <p>{blog.type}</p>
-                          <p>{format(new Date(blog.attributes.created_at), 'MMM d, y' )}</p>
-                          <p>{readTimeCalculator(blog.attributes.content)}</p>
-                        </div>
-                        <Link exact to={`/blog/details/${blog.id}`}>
-                          <h4 className="small-item-title">
-                            {blog.attributes.title}
-                          </h4>
-                        </Link>
-                        <div className="blog-content">{parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<em>","</del>":"</em>","<h1>":"<em>","</h1>":"</em>","<blockquote>":"<em>","</blockquote>":"</em>","<pre>":"<em>","</pre>":"</em>","<ol>":"<em>","</ol>":"</em>","<li>":"<em>","</li>":"</em>","<ul>":"<em>","</ul>":"</em>","<strong>":"<em>","</strong>":"</em>"}))}</div>
-                       </div>
-                    </div>
-                </div>
-              );
-            case 4:
-            case 5:
-              return (
-                <div key={blog.attributes.title} className="col-12 col-md-6">
+  const blogRender = () => blogs && (
+  <div className="row">
+    {blogs.map((blog, index) => {
+      switch (index % 6) {
+        case 0:
+          return (
+            <div key={blog.attributes.title} className="col-md-12">
+              <div className="row blogs__item">
+                <div className="col-12 col-md-8 d-block">
                   <Link exact to={`/blog/details/${blog.id}`}>
-                    <div className="blogs__item">
-                      <div className="d-block">
-                        <Link exact to={`/blog/details/${blog.id}`}>
-                          <div
-                            style={{
-                              backgroundImage: `url(${blog.attributes.image})`,
-                            }}
-                            className="blogs__item-image"
-                          />
-                        </Link>
-                      </div>
-                      <div className="d-block">
-                        <div className="category category-vertical-big d-flex">
-                          <p>{blog.type}</p>
-                          <p>{format(new Date(blog.attributes.created_at), 'MMM d, y' )}</p>
-                          <p>{readTimeCalculator(blog.attributes.content)}</p>
-                        </div>
-                        <Link exact to={`/blog/details/${blog.id}`}>
-                          <h4 className="medium-item-title">
-                            {blog.attributes.title}
-                          </h4>
-                        </Link>
-                        <div className="blog-content medium-item-content">
-                        {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>","<del>":"<em>","</del>":"</em>","<h1>":"<em>","</h1>":"</em>","<blockquote>":"<em>","</blockquote>":"</em>","<pre>":"<em>","</pre>":"</em>","<ol>":"<em>","</ol>":"</em>","<li>":"<em>","</li>":"</em>","<ul>":"<em>","</ul>":"</em>","<strong>":"<em>","</strong>":"</em>"}))}
-                         </div>
-                      </div>
-                    </div>
+                    <div
+                      style={{
+                        backgroundImage: `url(${blog.attributes.image})`,
+                      }}
+                      className="blogs__item-image"
+                    />
                   </Link>
                 </div>
-              );
-            default:
-              break;
-          }
-          return <div />;
-        })}
-      </div>
-    );
+                <div className="col-md-4 wide-blog">
+                  <div className="category d-flex">
+                    <p className="text-uppercase">{blog.type}</p>
+                    <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
+                    <p className="text-uppercase">
+                      {readTimeCalculator(blog.attributes.content)}
+                    </p>
+                  </div>
+                  <Link exact to={`/blog/details/${blog.id}`}>
+                    <h4>{blog.attributes.title}</h4>
+                  </Link>
+                  <div className="blog-content">
+                    {parse(replaceAllString(blog.attributes.content, {
+                      '<div>': '<p>',
+                      '</div>': '</p>',
+                      '<del>': '<em>',
+                      '</del>': '</em>',
+                      '<h1>': '<em>',
+                      '</h1>': '</em>',
+                      '<blockquote>': '<em>',
+                      '</blockquote>': '</em>',
+                      '<pre>': '<em>',
+                      '</pre>': '</em>',
+                      '<ol>': '<em>',
+                      '</ol>': '</em>',
+                      '<li>': '<em>',
+                      '</li>': '</em>',
+                      '<ul>': '<em>',
+                      '</ul>': '</em>',
+                      '<strong>': '<em>',
+                      '</strong>': '</em>',
+                    }))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        case 1:
+        case 2:
+        case 3:
+          return (
+            <div key={blog.attributes.title} className="col-12 col-md-4">
+              <div className="blogs__item">
+                <div className="d-block">
+                  <Link exact to={`/blog/details/${blog.id}`}>
+                    <div
+                      style={{
+                        backgroundImage: `url(${blog.attributes.image})`,
+                      }}
+                      className="blogs__item-image"
+                    />
+                  </Link>
+                </div>
+                <div className="d-block">
+                  <div className="category category-vertical-small d-flex">
+                    <p>{blog.type}</p>
+                    <p>{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
+                    <p>{readTimeCalculator(blog.attributes.content)}</p>
+                  </div>
+                  <Link exact to={`/blog/details/${blog.id}`}>
+                    <h4 className="small-item-title">
+                      {blog.attributes.title}
+                    </h4>
+                  </Link>
+                  <div className="blog-content">
+                    {parse(replaceAllString(blog.attributes.content, {
+                      '<div>': '<p>',
+                      '</div>': '</p>',
+                      '<del>': '<em>',
+                      '</del>': '</em>',
+                      '<h1>': '<em>',
+                      '</h1>': '</em>',
+                      '<blockquote>': '<em>',
+                      '</blockquote>': '</em>',
+                      '<pre>': '<em>',
+                      '</pre>': '</em>',
+                      '<ol>': '<em>',
+                      '</ol>': '</em>',
+                      '<li>': '<em>',
+                      '</li>': '</em>',
+                      '<ul>': '<em>',
+                      '</ul>': '</em>',
+                      '<strong>': '<em>',
+                      '</strong>': '</em>',
+                    }))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        case 4:
+        case 5:
+          return (
+            <div key={blog.attributes.title} className="col-12 col-md-6">
+              <Link exact to={`/blog/details/${blog.id}`}>
+                <div className="blogs__item">
+                  <div className="d-block">
+                    <Link exact to={`/blog/details/${blog.id}`}>
+                      <div
+                        style={{
+                          backgroundImage: `url(${blog.attributes.image})`,
+                        }}
+                        className="blogs__item-image"
+                      />
+                    </Link>
+                  </div>
+                  <div className="d-block">
+                    <div className="category category-vertical-big d-flex">
+                      <p>{blog.type}</p>
+                      <p>{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
+                      <p>{readTimeCalculator(blog.attributes.content)}</p>
+                    </div>
+                    <Link exact to={`/blog/details/${blog.id}`}>
+                      <h4 className="medium-item-title">
+                        {blog.attributes.title}
+                      </h4>
+                    </Link>
+                    <div className="blog-content medium-item-content">
+                      {parse(replaceAllString(blog.attributes.content, {
+                        '<div>': '<p>',
+                        '</div>': '</p>',
+                        '<del>': '<em>',
+                        '</del>': '</em>',
+                        '<h1>': '<em>',
+                        '</h1>': '</em>',
+                        '<blockquote>': '<em>',
+                        '</blockquote>': '</em>',
+                        '<pre>': '<em>',
+                        '</pre>': '</em>',
+                        '<ol>': '<em>',
+                        '</ol>': '</em>',
+                        '<li>': '<em>',
+                        '</li>': '</em>',
+                        '<ul>': '<em>',
+                        '</ul>': '</em>',
+                        '<strong>': '<em>',
+                        '</strong>': '</em>',
+                      }))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          );
+        default:
+          break;
+      }
+      return <div />;
+    })}
+  </div>
+  );
   return (
     <section className="blog">
       <Helmet>
         <title>Blog - Golden Owl</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+          content={HEADER_DESCRIPTION}
           name="description"
         />
         <meta
@@ -164,7 +224,7 @@ const Blog = () => {
           property="og:title"
         />
         <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+          content={HEADER_DESCRIPTION}
           property="og:description"
         />
         <meta

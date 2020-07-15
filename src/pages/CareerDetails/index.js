@@ -1,9 +1,11 @@
-import React, { createRef, useMemo, useEffect, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
-import Helmet from "react-helmet";
-import { useForm } from "react-form";
-import parse from "html-react-parser";
-import FormData from "form-data";
+import React, {
+  createRef, useMemo, useEffect, useState,
+} from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import Helmet from 'react-helmet';
+import { useForm } from 'react-form';
+import parse from 'html-react-parser';
+import FormData from 'form-data';
 
 import {
   LOADING_STATUS,
@@ -13,38 +15,38 @@ import {
   SENT_FORM_STATUS,
   NOT_SENT_FORM_STATUS,
   SENDING_FORM_STATUS,
-} from "../../constant";
+  HEADER_DESCRIPTION,
+} from '../../constant';
 
-import Footer from "../../components/Footer";
-import SubHeader from "../../components/SubHeader";
-import MainHeader from "../../components/MainHeader";
-import BreadCrumb from "../../components/BreadCrumb";
-import FixedTopHeader from "../../components/FixedTopHeader";
-import FixedTopBreadCrumb from "../../components/FixedTopBreadCrumb";
-import { InputField } from "../../components/FormInputs";
-import LoadingScreen from "../../components/LoadingScreen";
-import SentSuccess from "./SentSuccess";
-import JobAlert from "../../components/JobAlert";
+import Footer from '../../components/Footer';
+import SubHeader from '../../components/SubHeader';
+import MainHeader from '../../components/MainHeader';
+import BreadCrumb from '../../components/BreadCrumb';
+import FixedTopHeader from '../../components/FixedTopHeader';
+import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
+import { InputField } from '../../components/FormInputs';
+import LoadingScreen from '../../components/LoadingScreen';
+import SentSuccess from './SentSuccess';
+import JobAlert from '../../components/JobAlert';
 
-import stickyTrigger, { stickyRightButtonTrigger } from "../../utils/stickyTrigger";
-import useScrollDirection from "../../utils/hooks/useScrollDirection";
-import replaceAllString from "../../utils/replaceAllString";
+import stickyTrigger, { stickyRightButtonTrigger } from '../../utils/stickyTrigger';
+import useScrollDirection from '../../utils/hooks/useScrollDirection';
+import replaceAllString from '../../utils/replaceAllString';
 
-import { getCareer, submitApplication } from "../../api/careers";
+import { getCareer, submitApplication } from '../../api/careers';
 
-import clock from "../../assets/images/clock.svg";
-import "./index.sass";
+import clock from '../../assets/images/clock.svg';
+import './index.sass';
 
 const CareerDetails = () => {
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
-  const jobId =
-    window && window.location
-      ? window.location.pathname.split("/").slice(-1)[0]
-      : "";
+  const jobId = window && window.location
+    ? window.location.pathname.split('/').slice(-1)[0]
+    : '';
   const [job, setJob] = useState({});
   const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
-  const [formStatus, setFormStatus] = useState("");
+  const [formStatus, setFormStatus] = useState('');
 
   useEffect(() => {
     getCareer(jobId)
@@ -63,14 +65,14 @@ const CareerDetails = () => {
 
   const defaultValues = useMemo(
     () => ({
-      firstName: "",
-      lastName: "",
-      email: "",
-      url: "",
+      firstName: '',
+      lastName: '',
+      email: '',
+      url: '',
       cv: null,
-      reason: "",
+      reason: '',
     }),
-    []
+    [],
   );
 
   const {
@@ -79,23 +81,26 @@ const CareerDetails = () => {
   } = useForm({
     defaultValues,
     onSubmit: async (values, instance) => {
-      setFormStatus(SENDING_FORM_STATUS)
+      setFormStatus(SENDING_FORM_STATUS);
 
       const cvForm = new FormData();
 
-      cvForm.append("firstName", values.firstName);
-      cvForm.append("lastName", values.lastName);
-      cvForm.append("email", values.email);
-      cvForm.append("url", values.url);
-      cvForm.append("cvFile", document.getElementById("upload-cv").files[0]);
-      cvForm.append("reason", values.reason);
-      cvForm.append("job", job.title);
+      cvForm.append('firstName', values.firstName);
+      cvForm.append('lastName', values.lastName);
+      cvForm.append('email', values.email);
+      cvForm.append('url', values.url);
+      cvForm.append('cvFile', document.getElementById('upload-cv').files[0]);
+      cvForm.append('reason', values.reason);
+      cvForm.append('job', job.title);
 
       submitApplication(cvForm)
         .then((res) => {
           const { data } = res;
-          instance.reset();
-          setTimeout(() => setFormStatus(SENT_FORM_STATUS), 500);
+
+          if (data) {
+            instance.reset();
+            setTimeout(() => setFormStatus(SENT_FORM_STATUS), 500);
+          }
         })
         .catch((error) => {
           setTimeout(() => setFormStatus(NOT_SENT_FORM_STATUS), 500);
@@ -105,55 +110,53 @@ const CareerDetails = () => {
     debugForm: false,
   });
 
-  const viewportHeight = window ? window.innerHeight : 0
+  const viewportHeight = window ? window.innerHeight : 0;
 
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
     stickyRightButtonTrigger(viewportHeight);
-  }
+  };
 
-  const onFileUploadChange = (event) => {
+  const onFileUploadChange = () => {
     if (window && window.document) {
-      const upload = window.document.getElementById("upload-cv");
-      const uploadFileName = upload.value.split("\\");
-      const uploadPlaceholder = document.getElementById("upload-placeholder");
+      const upload = window.document.getElementById('upload-cv');
+      const uploadFileName = upload.value.split('\\');
+      const uploadPlaceholder = document.getElementById('upload-placeholder');
 
       uploadPlaceholder.innerHTML = upload.value
         ? uploadFileName[uploadFileName.length - 1]
-        : "No file chosen";
+        : 'No file chosen';
 
-      if (upload.value)
-        document.getElementById("upload-button").style.display = "none";
-      else document.getElementById("upload-button").style.display = "block";
+      if (upload.value) document.getElementById('upload-button').style.display = 'none';
+      else document.getElementById('upload-button').style.display = 'block';
     }
   };
 
-  const statusRender = (status) =>
-    status === OPEN_JOB_STATUS ? (
-      <div className="job-status open-job d-inline-block">{status}</div>
-    ) : (
-      <div className="job-status filled-job d-inline-block">{status}</div>
-    );
+  const statusRender = (status) => (status === OPEN_JOB_STATUS ? (
+    <div className="job-status open-job d-inline-block">{status}</div>
+  ) : (
+    <div className="job-status filled-job d-inline-block">{status}</div>
+  ));
 
   const validateUrl = (url) => {
-    const re = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
+    const re = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w.-]+)+[\w\-._~:/?#[\]@!$&'()*+,;=.]+$/;
     return re.test(String(url).toLowerCase());
   };
 
   const validateEmail = (email) => {
-    const re = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+    const re = /^[a-z][a-z0-9_.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
     return re.test(String(email).toLowerCase());
   };
 
   const validateFileExtension = () => {
-    const fileInput = document.getElementById("upload-cv");
+    const fileInput = document.getElementById('upload-cv');
     const filePath = fileInput.value;
     const allowedExtensions = /(\.pdf)$/i;
     return allowedExtensions.test(String(filePath).toLowerCase());
   };
 
   const validateFileSize = () => {
-    const fileInput = document.getElementById("upload-cv");
+    const fileInput = document.getElementById('upload-cv');
     const fileSize = Math.round(fileInput.files.item(0).size / 1024);
 
     return fileSize < 30720;
@@ -168,13 +171,13 @@ const CareerDetails = () => {
             <div className="col-12 col-md-6">
               <center>
                 <SentSuccess />
-                <br/>
+                <br />
                 <h5>Your job application has been succesfully submitted!</h5>
               </center>
             </div>
             <div className="col-12 col-md-3" />
           </div>
-        )
+        );
       case SENDING_FORM_STATUS:
         return (
           <div className="row">
@@ -182,13 +185,13 @@ const CareerDetails = () => {
             <div className="col-12 col-md-6">
               <center>
                 <LoadingScreen />
-                <br/>
+                <br />
                 <h5>Your job application is being submitted...</h5>
               </center>
             </div>
             <div className="col-12 col-md-3" />
           </div>
-        )
+        );
       default:
         return (
           <Form id="application-form">
@@ -203,7 +206,7 @@ const CareerDetails = () => {
                       className="form-control"
                       placeholder="Your first name"
                       field="firstName"
-                      validate={(value) => (!value ? "Required" : false)}
+                      validate={(value) => (!value ? 'Required' : false)}
                     />
                   </div>
                   {/* Last Name */}
@@ -213,7 +216,7 @@ const CareerDetails = () => {
                       className="form-control"
                       placeholder="Your last name"
                       field="lastName"
-                      validate={(value) => (!value ? "Required" : false)}
+                      validate={(value) => (!value ? 'Required' : false)}
                     />
                   </div>
                   {/* Email */}
@@ -225,16 +228,14 @@ const CareerDetails = () => {
                       field="email"
                       placeholder="Your email"
                       validate={async (value) => {
-                        await new Promise((resolve) =>
-                          setTimeout(resolve, 1000)
-                        );
+                        await new Promise((resolve) => setTimeout(resolve, 1000));
 
                         if (!value) {
-                          return "Required";
+                          return 'Required';
                         }
 
                         if (!validateEmail(value)) {
-                          return "Invalid email address";
+                          return 'Invalid email address';
                         }
 
                         return false;
@@ -250,20 +251,18 @@ const CareerDetails = () => {
                       id="upload-cv"
                       placeholder="No file chosen"
                       validate={async (value) => {
-                        await new Promise((resolve) =>
-                          setTimeout(resolve, 1000)
-                        );
+                        await new Promise((resolve) => setTimeout(resolve, 1000));
 
                         if (!value) {
-                          return "Required";
+                          return 'Required';
                         }
 
                         if (!validateFileSize()) {
-                          return "30MB maximum allowed";
+                          return '30MB maximum allowed';
                         }
 
                         if (!validateFileExtension()) {
-                          return "PDF allowed only";
+                          return 'PDF allowed only';
                         }
 
                         return false;
@@ -271,7 +270,7 @@ const CareerDetails = () => {
                       field="cv"
                       onChange={(e) => onFileUploadChange(e)}
                     />
-                    <label id="file-upload-ui" for="upload-cv">
+                    <label id="file-upload-ui" htmlFor="upload-cv">
                       <span id="upload-button">Choose file</span>
                       <span id="upload-placeholder">No file chosen</span>
                     </label>
@@ -284,16 +283,14 @@ const CareerDetails = () => {
                       placeholder="Your portfolio link"
                       field="url"
                       validate={async (value) => {
-                        await new Promise((resolve) =>
-                          setTimeout(resolve, 1000)
-                        );
+                        await new Promise((resolve) => setTimeout(resolve, 1000));
 
                         if (!value) {
-                          return "Required";
+                          return 'Required';
                         }
 
                         if (!validateUrl(value)) {
-                          return "Invalid URL";
+                          return 'Invalid URL';
                         }
 
                         return false;
@@ -307,7 +304,7 @@ const CareerDetails = () => {
                       className="form-control"
                       placeholder="Overview in the few words"
                       field="reason"
-                      validate={(value) => (!value ? "Required" : false)}
+                      validate={(value) => (!value ? 'Required' : false)}
                     />
                   </div>
                   {isSubmitting ? (
@@ -354,7 +351,7 @@ const CareerDetails = () => {
               name="google-site-verification"
             />
             <meta
-              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              content={HEADER_DESCRIPTION}
               name="description"
             />
             <meta
@@ -362,7 +359,7 @@ const CareerDetails = () => {
               property="og:title"
             />
             <meta
-              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              content={HEADER_DESCRIPTION}
               property="og:description"
             />
             <meta
@@ -403,7 +400,7 @@ const CareerDetails = () => {
                 <div className="col-12 col-md-3" />
                 <div className="col-12 col-md-3" />
                 <div className="col-12 col-md-6 career-details__body-content">
-                  {job.content ? parse(replaceAllString(job.content, { "<div>": "<p>", "</div>": "</p>" })) : ""}
+                  {job.content ? parse(replaceAllString(job.content, { '<div>': '<p>', '</div>': '</p>' })) : ''}
                 </div>
                 <div className="col-12 col-md-3" />
               </div>

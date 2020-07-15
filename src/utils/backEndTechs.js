@@ -13,8 +13,8 @@ const BackEndTechs = [
   },
   {
     name: 'Ruby on Rails',
-    url: ror
-  }
+    url: ror,
+  },
 ];
 
 export default BackEndTechs;

@@ -7,14 +7,6 @@ import arrowDown from '../../assets/images/chevron-down-solid.svg';
 import './index.sass';
 
 class MainHeader extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      showMenu: false,
-    };
-  }
-
   openPortfolioInNewTab = () => {
     const win = window.open('/portfolio');
     win.focus();

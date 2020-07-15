@@ -1,18 +1,16 @@
-import React from "react";
+import React from 'react';
 
 import './index.sass';
 
-const index = () => {
-  return (
-    <div class="success-checkmark">
-      <div class="check-icon">
-        <span class="icon-line line-tip"></span>
-        <span class="icon-line line-long"></span>
-        <div class="icon-circle"></div>
-        <div class="icon-fix"></div>
-      </div>
+const index = () => (
+  <div className="success-checkmark">
+    <div className="check-icon">
+      <span className="icon-line line-tip" />
+      <span className="icon-line line-long" />
+      <div className="icon-circle" />
+      <div className="icon-fix" />
     </div>
-  );
-};
+  </div>
+);
 
 export default index;

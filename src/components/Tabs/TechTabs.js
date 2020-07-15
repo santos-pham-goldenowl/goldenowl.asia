@@ -23,8 +23,10 @@ class TabContainer extends Component {
               <div className="col-md-5">
                 <h2 className="tab-header-title">Front-end</h2>
                 <p className="tech-tab__description">
-                When talking of front-end development, it’s about transferring the code into the look.  
-                Each and every technology we use has different advantages that serve best to different goals. However there is a common between them: They are used and trusted by the biggest and most innovative companies for making high-performance and supremely scalable applications and software.
+                  When talking of front-end development, it’s about transferring the code into the look.
+                  Each and every technology we use has different advantages that serve best to different goals. 
+                  However there is a common between them: They are used and trusted by the biggest and most innovative 
+                  companies for making high-performance and supremely scalable applications and software.
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
@@ -51,8 +53,9 @@ class TabContainer extends Component {
                 <h2 className="tab-header-title">Back-end</h2>
                 <p className="tech-tab__description">
                   Back-end developers are responsible for the stability of your product.
-                  <br/>
-                  We offer the best solutions to ensure your website or mobile app run smoothly even when it is executing multiple actions. And don’t forget the security! We’ve got your back!
+                  <br />
+                  We offer the best solutions to ensure your website or mobile app run smoothly even when it is 
+                  executing multiple actions. And don’t forget the security! We’ve got your back!
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
@@ -78,9 +81,11 @@ class TabContainer extends Component {
               <div className="col-md-5">
                 <h2 className="tab-header-title">Mobile stack</h2>
                 <p className="tech-tab__description">
-                  Any software company can build mobile apps with basic components using the same tools. However, the challenge is to actually succeed and create a quality product.
-                  <br/> 
-                  At Golden Owl, we have developers that can truly take advantage from technologies and put it in awesome work.
+                  Any software company can build mobile apps with basic components using the same tools. However, the 
+                  challenge is to actually succeed and create a quality product.
+                  <br />
+                  At Golden Owl, we have developers that can truly take advantage from technologies and put it in 
+                  awesome work.
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">
@@ -106,7 +111,9 @@ class TabContainer extends Component {
               <div className="col-md-5">
                 <h2 className="tab-header-title">Platform</h2>
                 <p className="tech-tab__description">
-                  Cross-platform is the solution for businesses who want their product to be released faster with lower budget, considering sacrificing a little bit of UI in their application. Single code, multiple platforms. Quite a result, isn’t it?
+                  Cross-platform is the solution for businesses who want their product to be released faster with lower 
+                  budget, considering sacrificing a little bit of UI in their application. Single code, multiple 
+                  platforms. Quite a result, isn’t it?
                 </p>
               </div>
               <div className="col-md-6 ml-auto right-side">

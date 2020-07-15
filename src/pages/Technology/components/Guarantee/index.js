@@ -5,7 +5,7 @@ import './index.sass';
 const Guarantee = () => (
   <section className="guarantee">
     <div className="row">
-    <h3 className="d-block w-100 text-center">Our guarantees</h3>
+      <h3 className="d-block w-100 text-center">Our guarantees</h3>
       <div className="col-md-4">
         <h5>High quality product</h5>
         <div className="d-flex guarantee__line">
@@ -47,7 +47,7 @@ const Guarantee = () => (
         <div className="d-flex guarantee__line">
           <CheckPoint />
           <p>
-          Endurance: error, increase of users
+            Endurance: error, increase of users
           </p>
         </div>
         <br />

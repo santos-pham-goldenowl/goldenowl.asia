@@ -1,11 +1,11 @@
-import React from "react";
-import { useField, splitFormProps } from "react-form";
+import React from 'react';
+import { useField, splitFormProps } from 'react-form';
 
 const SelectField = (props) => {
   const [field, fieldOptions, { options, ...rest }] = splitFormProps(props);
 
   const {
-    value = "",
+    value = '',
     setValue,
     meta: { error, isTouched },
   } = useField(field, fieldOptions);
@@ -33,19 +33,21 @@ const InputField = React.forwardRef((props, ref) => {
   const [field, fieldOptions, rest] = splitFormProps(props);
 
   const {
-    meta: { error, isTouched, isValidating, message },
+    meta: {
+      error, isTouched, isValidating, message,
+    },
     getInputProps,
   } = useField(field, fieldOptions);
 
+  const messageRenderer = () => {
+    if (isValidating) return <em className="validating">Validating...</em>;
+    if (isTouched && error) return <em className="error">{error}</em>;
+    return message ? <em>{message}</em> : null;
+  }
+
   return (
     <>
-      {isValidating ? (
-        <em className="validating">Validating...</em>
-      ) : isTouched && error ? (
-        <em className="error">{error}</em>
-      ) : message ? (
-        <em>{message}</em>
-      ) : null}
+      {messageRenderer()}
       <input {...getInputProps({ ref, ...rest })} />
     </>
   );
@@ -55,19 +57,21 @@ const InputTextArea = React.forwardRef((props, ref) => {
   const [field, fieldOptions, rest] = splitFormProps(props);
 
   const {
-    meta: { error, isTouched, isValidating, message },
+    meta: {
+      error, isTouched, isValidating, message,
+    },
     getInputProps,
   } = useField(field, fieldOptions);
 
+  const messageRenderer = () => {
+    if (isValidating) return <em className="validating">Validating...</em>;
+    if (isTouched && error) return <em className="error">{error}</em>;
+    return message ? <em>{message}</em> : null;
+  }
+
   return (
     <>
-      {isValidating ? (
-        <em className="validating">Validating...</em>
-      ) : isTouched && error ? (
-        <em className="error">{error}</em>
-      ) : message ? (
-        <em>{message}</em>
-      ) : null}
+      {messageRenderer()}
       <textarea {...getInputProps({ ref, ...rest })} />
     </>
   );

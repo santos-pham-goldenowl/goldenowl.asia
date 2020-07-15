@@ -1,41 +1,42 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Link } from 'react-router-dom';
 
-import PortfolioHeader from "../../components/PortfolioHeader";
-import PortfolioInteresting from "../../components/PortfolioInteresting";
+import PortfolioHeader from '../../components/PortfolioHeader';
+import PortfolioInteresting from '../../components/PortfolioInteresting';
 
-import randomProjects from "../../utils/portfolioTabContent";
-import useLocalStorage from "../../utils/hooks/useLocalStorage";
+import randomProjects from '../../utils/portfolioTabContent';
+import useLocalStorage from '../../utils/hooks/useLocalStorage';
 
-import companyLogo from "../../assets/images/GoldenOwlLogo.png";
-import "./index.sass";
+import { HEADER_DESCRIPTION } from '../../constant';
+
+import companyLogo from '../../assets/images/GoldenOwlLogo.png';
+import './index.sass';
 
 const PortfolioSubPage = ({ content }) => {
-  const [prevProject, setPrevProject] = useLocalStorage("prevProject", "none");
+  const [prevProject, setPrevProject] = useLocalStorage('prevProject', 'none');
 
-  const filteredRandomProject = [...randomProjects]
+  const filteredRandomProject = [...randomProjects];
 
   // exclude current & previous
-  for (let i = filteredRandomProject.length - 1; i >= 0; i--) {
+  for (let i = filteredRandomProject.length - 1; i >= 0; i - 1) {
     if (
-      filteredRandomProject[i].content.includes(content.key) ||
-      filteredRandomProject[i].content.includes(prevProject)
+      filteredRandomProject[i].content.includes(content.key)
+      || filteredRandomProject[i].content.includes(prevProject)
     ) {
       filteredRandomProject.splice(i, 1);
     }
   }
 
-  const randomProject =
-    filteredRandomProject[Math.floor(Math.random() * filteredRandomProject.length)];
+  const randomProject = filteredRandomProject[Math.floor(Math.random() * filteredRandomProject.length)];
 
-  const randomProjectText = randomProject.content.split(" – ");
+  const randomProjectText = randomProject.content.split(' – ');
   const randomProjectUrl = randomProject.url;
   const randomProjectThumb = randomProject.thumb;
 
-  const nextProjectBg = { 
+  const nextProjectBg = {
     backgroundImage: `url(${randomProjectThumb})`,
-  }
+  };
 
   return (
     <section>
@@ -47,7 +48,7 @@ const PortfolioSubPage = ({ content }) => {
           name="google-site-verification"
         />
         <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our PortfolioSubPages include web development, mobile development, head hunting and more."
+          content={HEADER_DESCRIPTION}
           name="description"
         />
         <meta
@@ -55,7 +56,7 @@ const PortfolioSubPage = ({ content }) => {
           property="og:title"
         />
         <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+          content={HEADER_DESCRIPTION}
           property="og:description"
         />
         <meta content={companyLogo} property="og:image" />
@@ -95,10 +96,10 @@ const PortfolioSubPage = ({ content }) => {
             </div>
             {content.img.map((image, index) => (
               <div
-                className={`${image.col > 4 ? "col-12" : "col-6"} col-md-${
+                className={`${image.col > 4 ? 'col-12' : 'col-6'} col-md-${
                   image.col
                 } portfolio-details__image`}
-                key={`${content.key}-${index}`}
+                key={`${content.key}${index * -1}`}
               >
                 <img
                   src={image.src}

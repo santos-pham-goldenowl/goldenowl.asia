@@ -1,34 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
-import Helmet from "react-helmet";
-import parse from "html-react-parser";
-import format from "date-fns/format";
-import { FacebookShareButton, TwitterShareButton } from "react-share";
+import React, { useState, useEffect } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import Helmet from 'react-helmet';
+import parse from 'html-react-parser';
+import format from 'date-fns/format';
+import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
-import Footer from "../../components/Footer";
-import BlogHeader from "../../components/BlogHeader";
-import LoadingScreen from "../../components/LoadingScreen";
+import Footer from '../../components/Footer';
+import BlogHeader from '../../components/BlogHeader';
+import LoadingScreen from '../../components/LoadingScreen';
 
-import useMobileWidth from "../../utils/hooks/useMobileWidth";
-import readTimeCalculator from "../../utils/readTimeCalculator";
-import replaceAllString from "../../utils/replaceAllString";
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
+import readTimeCalculator from '../../utils/readTimeCalculator';
+import replaceAllString from '../../utils/replaceAllString';
 
-import { getBlog } from "../../api/blogs";
+import { getBlog } from '../../api/blogs';
 
-import "./index.sass";
-import companyOgLogo from "../../assets/images/GoldenOwlLogo.png";
-import fb from "../../assets/images/facebook.svg";
-import tw from "../../assets/images/twitter.svg";
+import { HEADER_DESCRIPTION } from '../../constant';
+
+import './index.sass';
+import companyOgLogo from '../../assets/images/GoldenOwlLogo.png';
+import fb from '../../assets/images/facebook.svg';
+import tw from '../../assets/images/twitter.svg';
 
 const BlogDetails = () => {
   const isMobile = useMobileWidth();
 
-  const blogId =
-    window && window.location
-      ? window.location.pathname.split("/").slice(-1)[0]
-      : "";
+  const blogId = window && window.location
+    ? window.location.pathname.split('/').slice(-1)[0]
+    : '';
   const [blog, setBlog] = useState({});
-  const [loadStatus, setLoadStatus] = useState("");
+  const [loadStatus, setLoadStatus] = useState('');
 
   useEffect(() => {
     getBlog(blogId)
@@ -37,24 +38,24 @@ const BlogDetails = () => {
 
         if (data) {
           setBlog({ ...data.data });
-          setTimeout(() => setLoadStatus("loaded"), 500);
+          setTimeout(() => setLoadStatus('loaded'), 500);
         }
       })
-      .catch(() => setTimeout(() => setLoadStatus("no-result"), 500));
+      .catch(() => setTimeout(() => setLoadStatus('no-result'), 500));
   }, [blogId, loadStatus]);
 
   switch (loadStatus) {
-    case "loaded":
+    case 'loaded':
       return (
         <section className="blog-details">
           <Helmet>
-            <title></title>
+            <title />
             <meta
               content="width=device-width, initial-scale=1"
               name="viewport"
             />
             <meta
-              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              content={HEADER_DESCRIPTION}
               name="description"
             />
             <meta
@@ -62,7 +63,7 @@ const BlogDetails = () => {
               property="og:title"
             />
             <meta
-              content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+              content={HEADER_DESCRIPTION}
               property="og:description"
             />
             <meta content={companyOgLogo} property="og:image" />
@@ -78,7 +79,7 @@ const BlogDetails = () => {
               <div className="row">
                 <div
                   className={`col-md-3 blog-details__left-side ${
-                    isMobile ? "d-none" : ""
+                    isMobile ? 'd-none' : ''
                   }`}
                 >
                   <Link to="/blog">BACK TO BLOG</Link>
@@ -87,7 +88,7 @@ const BlogDetails = () => {
                   <div className="blog-details__title">
                     <div className="category d-flex">
                       <p className="text-uppercase">{blog.type}</p>
-                      <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y' )}</p>
+                      <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
                       <p className="text-uppercase">
                         {readTimeCalculator(blog.attributes.content)}
                       </p>
@@ -95,12 +96,12 @@ const BlogDetails = () => {
                     <h1>{blog.attributes.title}</h1>
                   </div>
                   <div className="blog-details__center-content">
-                    {parse(replaceAllString(blog.attributes.content, { "<div>": "<p>", "</div>": "</p>" }))}
+                    {parse(replaceAllString(blog.attributes.content, { '<div>': '<p>', '</div>': '</p>' }))}
                   </div>
                 </div>
                 <div
                   className={`col-md-3 blog-details__right-side d-flex flex-column justify-content-start ${
-                    !isMobile && "text-right"
+                    !isMobile && 'text-right'
                   }`}
                 >
                   <p className="blog-details__source">
@@ -115,7 +116,7 @@ const BlogDetails = () => {
                     <div id="social-icons" className="d-flex">
                       <FacebookShareButton
                         hashtag="#GoldenOwlConsulting"
-                        className={!isMobile && "ml-auto"}
+                        className={!isMobile && 'ml-auto'}
                         url={window.location.href}
                       >
                         <img
@@ -125,7 +126,7 @@ const BlogDetails = () => {
                         />
                       </FacebookShareButton>
                       <TwitterShareButton
-                        hashtags={["GoldenOwlConsulting"]}
+                        hashtags={['GoldenOwlConsulting']}
                         url={window.location.href}
                       >
                         <img
@@ -143,7 +144,7 @@ const BlogDetails = () => {
           </div>
         </section>
       );
-    case "no-result":
+    case 'no-result':
       return <Redirect to="/not-found" />;
     default:
       return <LoadingScreen />;

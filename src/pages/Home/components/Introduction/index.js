@@ -16,7 +16,7 @@ const Introduction = () => {
             <strong>Business needs bespoke software.</strong>
             <br />
             <br />
-            Since 2015, we’ve helped our clients harness the power of digital innovation through software in a variety of industries such as SaaS, ecommerce, legal, real estate,... 
+            Since 2015, we’ve helped our clients harness the power of digital innovation through software in a variety of industries such as SaaS, ecommerce, legal, real estate,...
             <br />
             <br />
             Whether your need is to build a new software from scratch or to accelerate digital transformation, our experts are always ready to provide you with the deep consulting and right technology match.

@@ -6,17 +6,17 @@ const socialIcons = [
   {
     name: 'linkedin',
     url: linkedin,
-    link: "https://www.linkedin.com/company/golden-owl-consulting/"
+    link: 'https://www.linkedin.com/company/golden-owl-consulting/',
   },
   {
     name: 'facebook',
     url: facebook,
-    link: "https://www.facebook.com/goldenowl.asia/"
+    link: 'https://www.facebook.com/goldenowl.asia/',
   },
   {
     name: 'twitter',
     url: twitter,
-    link: "https://twitter.com/goldenowlasia?lang=en"
+    link: 'https://twitter.com/goldenowlasia?lang=en',
   },
 ];
 
