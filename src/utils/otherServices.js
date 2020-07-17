@@ -99,7 +99,7 @@ const pageNavs = {
     developNav,
     uiUxNav,
     testNav,
-  }
+  },
 };
 
 export default pageNavs;

@@ -25,44 +25,46 @@ export default function stickyTrigger(direction) {
 }
 
 export function stickyTOCTrigger(isMobile) {
-  if (!isMobile) {  
-    const stickyTopTrigger = document.getElementById('toc-sticky-top-trigger')
-    const stickyBotTrigger = document.getElementById('toc-sticky-bot-trigger')
+  if (!isMobile) {
+    const stickyTopTrigger = document.getElementById('toc-sticky-top-trigger');
+    const stickyBotTrigger = document.getElementById('toc-sticky-bot-trigger');
 
-    const tocContainer = document.getElementById('toc-container')
+    const tocContainer = document.getElementById('toc-container');
 
     if (stickyTopTrigger && stickyBotTrigger) {
-      const stickyTop = stickyTopTrigger.getBoundingClientRect().top + window.scrollY - stickyTopTrigger.offsetHeight*2;
-      const stickyBot = stickyBotTrigger.getBoundingClientRect().top + window.scrollY - document.getElementById('footer').offsetHeight / 2 - stickyBotTrigger.offsetHeight;
+      const stickyTop = stickyTopTrigger.getBoundingClientRect().top + window.scrollY - stickyTopTrigger.offsetHeight * 2;
+      const stickyBot = stickyBotTrigger.getBoundingClientRect().top
+      + window.scrollY
+      - document.getElementById('footer').offsetHeight / 2
+      - stickyBotTrigger.offsetHeight;
 
       const toc = document.getElementById('toc');
-      
-      if (window.pageYOffset >= stickyTop && window.pageYOffset < stickyBot) 
-        {
-          toc.classList.add('fixed-toc');
-          toc.classList.remove('mt-auto', 'mb-auto');
-          tocContainer.classList.add('justify-content-between')
+
+      if (window.pageYOffset >= stickyTop && window.pageYOffset < stickyBot) {
+        toc.classList.add('fixed-toc');
+        toc.classList.remove('mt-auto', 'mb-auto');
+        tocContainer.classList.add('justify-content-between');
       } else if (window.pageYOffset < stickyTop) {
-          toc.classList.remove('fixed-toc', 'mt-auto');
-          toc.classList.add('mb-auto');
-          tocContainer.classList.remove('justify-content-between')
-        } 
-        else if (window.pageYOffset >= stickyBot) {
-          toc.classList.remove('fixed-toc', 'mb-auto');
-          toc.classList.add('mt-auto');
-          tocContainer.classList.remove('justify-content-between')
-        }
-  }}
+        toc.classList.remove('fixed-toc', 'mt-auto');
+        toc.classList.add('mb-auto');
+        tocContainer.classList.remove('justify-content-between');
+      } else if (window.pageYOffset >= stickyBot) {
+        toc.classList.remove('fixed-toc', 'mb-auto');
+        toc.classList.add('mt-auto');
+        tocContainer.classList.remove('justify-content-between');
+      }
+    }
+  }
 }
 
 export function stickyRightButtonTrigger(viewportHeight = 0) {
-    const fixedButton = document.getElementById('fixed-right-button');
+  const fixedButton = document.getElementById('fixed-right-button');
 
-    if (fixedButton) {
-      if (window.pageYOffset >= viewportHeight / 2) {
-        fixedButton.classList.add('active');
-      } else {
-        fixedButton.classList.remove('active');
-      }
+  if (fixedButton) {
+    if (window.pageYOffset >= viewportHeight / 2) {
+      fixedButton.classList.add('active');
+    } else {
+      fixedButton.classList.remove('active');
     }
+  }
 }

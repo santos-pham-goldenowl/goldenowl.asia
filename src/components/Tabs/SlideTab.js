@@ -1,47 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
-import FrontEndTechs from "../../utils/frontendTechs";
-import BackEndTechs from "../../utils/backEndTechs";
-import MobileStackTechs from "../../utils/mobileTechs";
+import FrontEndTechs from '../../utils/frontendTechs';
+import BackEndTechs from '../../utils/backEndTechs';
+import MobileStackTechs from '../../utils/mobileTechs';
 
-import "./index.sass";
-import "./slideTab.sass";
+import './index.sass';
+import './slideTab.sass';
 
 const TestTab = () => {
   useEffect(() => {
-    const slide = document.getElementById("slide");
-    const tabs = document.querySelectorAll(".tab");
-    const tab1 = document.getElementById("tab1");
-    const tab2 = document.getElementById("tab2");
-    const tab3 = document.getElementById("tab3");
+    const slide = document.getElementById('slide');
+    const tabs = document.querySelectorAll('.tab');
+    const tab1 = document.getElementById('tab1');
+    const tab2 = document.getElementById('tab2');
+    const tab3 = document.getElementById('tab3');
 
     function moveToFirst() {
-      slide.classList = "move-to-first";
-      tabs.forEach(function (tile) {
-        tile.classList.remove("selected");
+      slide.classList = 'move-to-first';
+      tabs.forEach((tile) => {
+        tile.classList.remove('selected');
       });
-      tab1.classList.add("tab", "selected");
+      tab1.classList.add('tab', 'selected');
     }
 
     function moveToSecond() {
-      slide.classList = "move-to-second";
-      tabs.forEach(function (tile) {
-        tile.classList.remove("selected");
+      slide.classList = 'move-to-second';
+      tabs.forEach((tile) => {
+        tile.classList.remove('selected');
       });
-      tab2.classList.add("tab", "selected");
+      tab2.classList.add('tab', 'selected');
     }
 
     function moveToThird() {
-      slide.classList = "move-to-third";
-      tabs.forEach(function (tile) {
-        tile.classList.remove("selected");
+      slide.classList = 'move-to-third';
+      tabs.forEach((tile) => {
+        tile.classList.remove('selected');
       });
-      tab3.classList.add("tab", "selected");
+      tab3.classList.add('tab', 'selected');
     }
 
-    tab1.addEventListener("click", moveToFirst);
-    tab2.addEventListener("click", moveToSecond);
-    tab3.addEventListener("click", moveToThird);
+    tab1.addEventListener('click', moveToFirst);
+    tab2.addEventListener('click', moveToSecond);
+    tab3.addEventListener('click', moveToThird);
   }, []);
 
   return (

@@ -57,8 +57,8 @@ export default [
     url: 'referral-candy',
   },
   {
-    content: 'GIG – Job is not a big deal', 
-    isWhite: true, 
+    content: 'GIG – Job is not a big deal',
+    isWhite: true,
     img: img2,
     thumb: thumb2,
     url: 'gig',

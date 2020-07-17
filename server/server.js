@@ -1,20 +1,20 @@
 // Express requirements
-import bodyParser from "body-parser";
-import compression from "compression";
-import express from "express";
-import morgan from "morgan";
-import path from "path";
-import cors from "cors";
-import Loadable from "react-loadable";
-import cookieParser from "cookie-parser";
-import sgMail from "@sendgrid/mail";
-import loader from "./loader";
-import multer from "multer";
-import fs from "fs";
+import bodyParser from 'body-parser';
+import compression from 'compression';
+import express from 'express';
+import morgan from 'morgan';
+import path from 'path';
+import cors from 'cors';
+import Loadable from 'react-loadable';
+import cookieParser from 'cookie-parser';
+import sgMail from '@sendgrid/mail';
+import multer from 'multer';
+import fs from 'fs';
+import loader from './loader';
 
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: 'uploads/' });
 
-require("dotenv").config();
+require('dotenv').config();
 
 // Sendgrid init with api key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -22,88 +22,82 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 // Create our express app using the port optionally specified
 const app = express();
 const PORT = process.env.PORT || 3000;
-const axiosInstance = require("axios").default;
+const axiosInstance = require('axios').default;
 
 // Compress, parse, log, and raid the cookie jar
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(morgan("dev"));
+app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(cors());
 
 // Set up homepage, static assets, and capture everything else
-app.use(express.Router().get("/", loader));
-app.use(express.static(path.resolve(__dirname, "../build")));
+app.use(express.Router().get('/', loader));
+app.use(express.static(path.resolve(__dirname, '../build')));
 
 app.use(
-  express.Router().get("/get-blogs", (req, res) => {
+  express.Router().get('/get-blogs', (req, res) => {
     const { size = 10 } = req.body;
 
     axiosInstance
       .get(`${process.env.API_URL}/posts?size=${size}`)
       .then((response) => res.status(200).json({ data: response.data }))
-      .catch((error) =>
-        res.status(404).json({
-          error: true,
-          message: `Error: ${error}`,
-        })
-      );
-  })
+      .catch((error) => res.status(404).json({
+        error: true,
+        message: `Error: ${error}`,
+      }));
+  }),
 );
 
 app.use(
-  express.Router().get("/get-blog", (req, res) => {
+  express.Router().get('/get-blog', (req, res) => {
     const { id } = req.query;
 
     axiosInstance
       .get(`${process.env.API_URL}/posts/${id}`)
       .then((response) => res.status(200).json({ data: response.data }))
-      .catch((error) =>
-        res.status(404).json({
-          error: true,
-          message: `Error: ${error}`,
-        })
-      );
-  })
+      .catch((error) => res.status(404).json({
+        error: true,
+        message: `Error: ${error}`,
+      }));
+  }),
 );
 
 app.use(
-  express.Router().get("/get-careers", (req, res) => {
+  express.Router().get('/get-careers', (req, res) => {
     axiosInstance
       .get(`${process.env.API_URL}/careers`)
       .then((response) => res.status(200).json({ data: response.data }))
-      .catch((error) =>
-        res.status(404).json({
-          error: true,
-          message: `Error: ${error}`,
-        })
-      );
-  })
+      .catch((error) => res.status(404).json({
+        error: true,
+        message: `Error: ${error}`,
+      }));
+  }),
 );
 
 app.use(
-  express.Router().get("/get-career", (req, res) => {
+  express.Router().get('/get-career', (req, res) => {
     const { id } = req.query;
 
     axiosInstance
       .get(`${process.env.API_URL}/careers/${id}`)
       .then((response) => res.status(200).json({ data: response.data }))
-      .catch((error) =>
-        res.status(404).json({
-          error: true,
-          message: `Error: ${error}`,
-        })
-      );
-  })
+      .catch((error) => res.status(404).json({
+        error: true,
+        message: `Error: ${error}`,
+      }));
+  }),
 );
 
 app.use(
   express
     .Router()
-    .post("/submit-application", upload.single("cvFile"), (req, res) => {
+    .post('/submit-application', upload.single('cvFile'), (req, res) => {
       const { body, file } = req;
-      const { firstName, lastName, email, url, reason, job } = body;
+      const {
+        firstName, lastName, email, url, reason, job,
+      } = body;
 
       fs.readFile(file.path, (err, data) => {
         const msg = {
@@ -135,10 +129,10 @@ app.use(
           attachments: [
             {
               filename: `${lastName}-CV.pdf`,
-              type: "application/pdf",
-              disposition: "attachment",
-              content: data.toString("base64"),
-              content_id: "cvfile",
+              type: 'application/pdf',
+              disposition: 'attachment',
+              content: data.toString('base64'),
+              content_id: 'cvfile',
             },
           ],
         };
@@ -146,7 +140,7 @@ app.use(
           () => {
             fs.unlinkSync(file.path);
             res.status(200).json({
-              message: "Message sent!",
+              message: 'Message sent!',
             });
           },
           (error) => {
@@ -154,18 +148,18 @@ app.use(
               error: true,
               message: `Error: ${err || error}`,
             });
-          }
+          },
         );
       });
-    })
+    }),
 );
 
 app.use(
-  express.Router().post("/subcribe", (req, res) => {
+  express.Router().post('/subscribe', (req, res) => {
     const { body } = req;
     const { email, type } = body;
 
-    const name = email.split("@")[0];
+    const name = email.split('@')[0];
 
     axiosInstance
       .post(`${process.env.API_URL}/subscriptions`, {
@@ -174,22 +168,21 @@ app.use(
         subscription_type: type,
       })
       .then((response) => {
-        if (response)
+        if (response) {
           res.status(200).json({
             data: {
-              message: "Submitted!",
+              message: 'Submitted!',
             },
           });
+        }
       })
-      .catch((err) =>
-        res.status(404).json({
-          data: {
-            error: true,
-            message: `Error: ${err || error}`,
-          },
-        })
-      );
-  })
+      .catch((err) => res.status(404).json({
+        data: {
+          error: true,
+          message: `Error: ${err || error}`,
+        },
+      }));
+  }),
 );
 
 app.use(loader);
@@ -200,19 +193,19 @@ Loadable.preloadAll().then(() => {
 });
 
 // Handle the bugs somehow
-app.on("error", (error) => {
-  if (error.syscall !== "listen") {
+app.on('error', (error) => {
+  if (error.syscall !== 'listen') {
     throw error;
   }
 
-  const bind = typeof PORT === "string" ? `Pipe ${PORT}` : `Port ${PORT}`;
+  const bind = typeof PORT === 'string' ? `Pipe ${PORT}` : `Port ${PORT}`;
 
   switch (error.code) {
-    case "EACCES":
+    case 'EACCES':
       console.error(`${bind} requires elevated privileges`);
       process.exit(1);
       break;
-    case "EADDRINUSE":
+    case 'EADDRINUSE':
       console.error(`${bind} is already in use`);
       process.exit(1);
       break;

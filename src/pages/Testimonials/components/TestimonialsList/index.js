@@ -41,12 +41,12 @@ const TestimonialsList = () => {
 
   const defaultView = () => objectToArray(testimonials).map((item, index) => (index % 2 === 0 ? (
     <div key={item.key} className="row testimonials-list__item">
-      <div className="col-md-6">
+      <div className="col-md-6" data-aos="fade-right">
         <div>
           <img className="w-100" src={item.avatar} alt="some pic" />
         </div>
       </div>
-      <div className="ml-auto col-md-6">
+      <div className="ml-auto col-md-6" data-aos="fade-left">
         <div className="testimonials-list__item-text">
           <h4>
             {item.key}
@@ -68,7 +68,7 @@ const TestimonialsList = () => {
     </div>
   ) : (
     <div key={item.key} className="row testimonials-list__item">
-      <div className="ml-auto col-md-6">
+      <div className="ml-auto col-md-6" data-aos="fade-right">
         <div>
           <h4>
             {item.key}
@@ -87,7 +87,7 @@ const TestimonialsList = () => {
           </Link>
         </div>
       </div>
-      <div className="col-md-6 d-flex justify-content-end">
+      <div className="col-md-6 d-flex justify-content-end" data-aos="fade-left">
         <div>
           <img className="w-100" src={item.avatar} alt="some pic" />
         </div>

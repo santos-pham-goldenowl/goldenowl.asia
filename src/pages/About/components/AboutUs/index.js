@@ -14,16 +14,20 @@ const AboutUs = () => {
 
   return (
     <section className="about-us" style={sectionStyle}>
-      <div className="about-us__left-side">
+      <div className="about-us__left-side" data-aos="fade-right">
         <h2>A team of experts</h2>
         <p>
-          We are Golden Owl - a well-established agile software outsourcing company who builds successful, scalable products that empower your business. Started in 2015 as a Vietnam - Singapore joint-venture, now we are expanding and operating in Vietnam, Singapore, Australia and Norway.
+          We are Golden Owl - a well-established agile software outsourcing company who builds successful,
+          scalable products that empower your business. Started in 2015 as a Vietnam - Singapore joint-venture,
+          now we are expanding and operating in Vietnam, Singapore, Australia and Norway.
           <br />
           <br />
-          Our work focuses on innovative, time-tested software development solutions. You can always count on our expertise, effective communication and our commitment to your projects.
+          Our work focuses on innovative, time-tested software development solutions.
+          You can always count on our expertise, effective communication and our commitment
+          to your projects.
         </p>
       </div>
-      <div className="about-us__right-side">
+      <div className="about-us__right-side" data-aos="fade-left">
         <img src={research} alt="research" loading="lazy" />
       </div>
     </section>

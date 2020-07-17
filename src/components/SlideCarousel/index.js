@@ -1,10 +1,10 @@
-import React from "react";
-import Carousel from "react-multi-carousel";
+import React from 'react';
+import Carousel from 'react-multi-carousel';
 
-import "react-multi-carousel/lib/styles.css";
+import 'react-multi-carousel/lib/styles.css';
 
-import useMobileWidth from "../../utils/hooks/useMobileWidth";
-import chunkArray from "../../utils/chunkArray";
+import useMobileWidth from '../../utils/hooks/useMobileWidth';
+import chunkArray from '../../utils/chunkArray';
 
 const responsive = {
   desktop: {
@@ -69,7 +69,7 @@ const SlideCarousel = ({ ...props }) => {
         </div>
       ))}
     </Carousel>
-  )
+  );
 
   const mobileRender = () => (
     <Carousel
@@ -97,16 +97,15 @@ const SlideCarousel = ({ ...props }) => {
     >
       {mobileData.map((cGroup) => (
         <div className="row">
-          {cGroup.map((c) =>
+          {cGroup.map((c) => (
             <div className="col-6">
               <img src={c.url} alt={`GO ${c.name}`} id={c.name} />
             </div>
-          )}        
+          ))}
         </div>
-      )
-    )}
+      ))}
     </Carousel>
-  )
+  );
 
   return isMobile ? mobileRender() : defaultRender();
 };

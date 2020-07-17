@@ -44,14 +44,14 @@ const Quote = () => {
       quote: '“If you do build a great EXPERIENCE, customer tell each other about that.”',
       name: 'Jeff Bezos',
       job: 'CEO of Amazon',
-    }
+    },
 
-  ]
+  ];
 
   return (
     <section className="quote">
       <div className="row">
-        <div className="col-md-5">
+        <div className="col-md-5" data-aos="fade-right">
           <Carousel
             ssr
             infinite
@@ -79,13 +79,13 @@ const Quote = () => {
                     {`${item.job}.`}
                   </div>
                 </div>
-  
+
               ))
             }
           </Carousel>
         </div>
         <div className="col-md-7">
-          <img src={isMobile ? mobileWork : work} alt="work" loading="lazy" />
+          <img src={isMobile ? mobileWork : work} alt="work" loading="lazy" data-aos="fade-left" />
         </div>
       </div>
     </section>

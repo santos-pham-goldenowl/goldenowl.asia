@@ -1,41 +1,45 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Helmet from 'react-helmet';
+// import { Link } from 'react-router-dom';
 
-import PortfolioHeader from "../../components/PortfolioHeader";
-import PortfolioInteresting from "../../components/PortfolioInteresting";
+import PortfolioHeader from '../../components/PortfolioHeader';
+import PortfolioInteresting from '../../components/PortfolioInteresting';
 
-import randomProjects from "../../utils/portfolioTabContent";
-import useLocalStorage from "../../utils/hooks/useLocalStorage";
+// import randomProjects from '../../utils/portfolioTabContent';
+// import useLocalStorage from '../../utils/hooks/useLocalStorage';
+import aosItemDirection from '../../utils/aosItemDirection';
 
-import companyLogo from "../../assets/images/GoldenOwlLogo.png";
-import "./index.sass";
+import { HEADER_DESCRIPTION } from '../../constant';
 
+import companyLogo from '../../assets/images/GoldenOwlLogo.png';
+import './index.sass';
+
+// temporarily disable next project link - the reason cause loading crash
 const PortfolioSubPage = ({ content }) => {
-  const [prevProject, setPrevProject] = useLocalStorage("prevProject", "none");
+  // const [prevProject, setPrevProject] = useLocalStorage('prevProject', 'none');
 
-  const filteredRandomProject = [...randomProjects]
+  // const filteredRandomProject = [...randomProjects];
 
-  // exclude current & previous
-  for (let i = filteredRandomProject.length - 1; i >= 0; i--) {
-    if (
-      filteredRandomProject[i].content.includes(content.key) ||
-      filteredRandomProject[i].content.includes(prevProject)
-    ) {
-      filteredRandomProject.splice(i, 1);
-    }
-  }
+  // // exclude current & previous
+  // for (let i = filteredRandomProject.length - 1; i >= 0; i - 1) {
+  //   if (
+  //     filteredRandomProject[i].content.includes(content.key)
+  //   || filteredRandomProject[i].content.includes(prevProject)
+  //   ) {
+  //     filteredRandomProject.splice(i, 1);
+  //   }
+  // }
 
-  const randomProject =
-    filteredRandomProject[Math.floor(Math.random() * filteredRandomProject.length)];
+  // const randomProject = filteredRandomProject[Math.floor(Math.random() * filteredRandomProject.length)];
 
-  const randomProjectText = randomProject.content.split(" – ");
-  const randomProjectUrl = randomProject.url;
-  const randomProjectThumb = randomProject.thumb;
+  // const randomProjectText = randomProject.content.split(' – ');
+  // const randomProjectUrl = randomProject.url;
+  // const randomProjectThumb = randomProject.thumb;
 
-  const nextProjectBg = { 
-    backgroundImage: `url(${randomProjectThumb})`,
-  }
+  // eslint-disable-next-line no-unused-vars
+  const nextProjectBg = {
+    // backgroundImage: `url(${randomProjectThumb})`,
+  };
 
   return (
     <section>
@@ -47,7 +51,7 @@ const PortfolioSubPage = ({ content }) => {
           name="google-site-verification"
         />
         <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our PortfolioSubPages include web development, mobile development, head hunting and more."
+          content={HEADER_DESCRIPTION}
           name="description"
         />
         <meta
@@ -55,7 +59,7 @@ const PortfolioSubPage = ({ content }) => {
           property="og:title"
         />
         <meta
-          content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more."
+          content={HEADER_DESCRIPTION}
           property="og:description"
         />
         <meta content={companyLogo} property="og:image" />
@@ -68,24 +72,24 @@ const PortfolioSubPage = ({ content }) => {
       <div className="container-fluid no-padding">
         <PortfolioHeader />
         <section className="portfolio-details">
-          <h1>{content.key}</h1>
+          <h1 data-aos="fade-right">{content.key}</h1>
           <div className="row">
-            <div className="col-12 portfolio-details__cover">
+            <div className="col-12 portfolio-details__cover" data-aos="fade-left">
               <img
                 src={content.cover}
                 alt={`${content.key} cover`}
-                loading="lazy"
+                loading="eager"
               />
             </div>
             <div className="col-12 portfolio-details__first-paragraph d-flex align-items-start">
-              <h3 className="portfolio-details__item-title">Overview</h3>
-              <p className="portfolio-details__item-content">
+              <h3 className="portfolio-details__item-title" data-aos="fade-right">Overview</h3>
+              <p className="portfolio-details__item-content" data-aos="fade-left">
                 {content.overview}
               </p>
             </div>
             <div className="col-12 portfolio-details__second-paragraph d-flex align-items-start">
-              <h3 className="portfolio-details__item-title">Technologies</h3>
-              <ul className="portfolio-details__item-content no-margin-bottom">
+              <h3 className="portfolio-details__item-title" data-aos="fade-right">Technologies</h3>
+              <ul className="portfolio-details__item-content no-margin-bottom" data-aos="fade-left">
                 {content.techs.map((item) => (
                   <li key={item} className="d-flex">
                     <p>{item}</p>
@@ -95,10 +99,12 @@ const PortfolioSubPage = ({ content }) => {
             </div>
             {content.img.map((image, index) => (
               <div
-                className={`${image.col > 4 ? "col-12" : "col-6"} col-md-${
+                className={`${image.col > 4 ? 'col-12' : 'col-6'} col-md-${
                   image.col
                 } portfolio-details__image`}
-                key={`${content.key}-${index}`}
+                key={`${content.key}${index * -1}`}
+                data-aos={aosItemDirection(index)}
+                data-aos-anchor-placement="top-center"
               >
                 <img
                   src={image.src}
@@ -107,25 +113,25 @@ const PortfolioSubPage = ({ content }) => {
                 />
               </div>
             ))}
-            <div className="col-md-12 portfolio-details__third-paragraph d-flex align-items-start">
+            <div className="col-md-12 portfolio-details__third-paragraph d-flex align-items-start" data-aos="fade-right">
               {content.brief.title}
-              <p className="portfolio-details__item-content">
+              <p className="portfolio-details__item-content" data-aos="fade-left">
                 {content.brief.description}
               </p>
             </div>
-            <div className="col-12">
+            {/* <div className="col-12">
               <Link
                 onClick={() => {
                   setPrevProject(content.key);
                 }}
                 to={`/portfolio/${randomProjectUrl}`}
               >
-                <div style={nextProjectBg} className="portfolio-details__next-project">
+                <div style={nextProjectBg} className="portfolio-details__next-project" data-aos="flip-right">
                   <h3>{`Up next: ${randomProjectText[0]}`}</h3>
                   <p>{randomProjectText[1]}</p>
                 </div>
               </Link>
-            </div>
+            </div> */}
           </div>
         </section>
         <PortfolioInteresting />

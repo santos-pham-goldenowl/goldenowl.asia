@@ -17,6 +17,8 @@ import TestimonialsStats from './components/TestimonialsStats';
 import stickyTrigger from '../../utils/stickyTrigger';
 import useScrollDirection from '../../utils/hooks/useScrollDirection';
 
+import { HEADER_DESCRIPTION } from '../../constant';
+
 import companyLogo from '../../assets/images/GoldenOwlLogo.png';
 import './index.sass';
 
@@ -31,8 +33,9 @@ const Testimonials = () => {
       <Helmet>
         <title>Testimonials - Golden Owl</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." name="description" /><meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
-        <meta content="Golden Owl - We do Ruby on Rails, NodeJS, ReactJS and React Native. We follow Agile &amp; TDD practice and cool softwares like Github, Basecamp, Slack in our daily work to provide best communication and transparency to clients. Our services include web development, mobile development, head hunting and more." property="og:description" />
+        <meta content={HEADER_DESCRIPTION} name="description" />
+        <meta content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native" property="og:title" />
+        <meta content={HEADER_DESCRIPTION} property="og:description" />
         <meta content={companyLogo} property="og:image" />
         <meta name="csrf-param" content="authenticity_token" />
         <meta name="csrf-token" content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg==" />

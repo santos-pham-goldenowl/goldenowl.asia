@@ -89,7 +89,7 @@ const partnersLogo = [
   {
     name: 'zetya',
     url: zetya,
-  },  
+  },
 ];
 
 export default partnersLogo;

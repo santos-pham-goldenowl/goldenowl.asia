@@ -137,7 +137,7 @@ const servicesDetails = {
     mobileCover: mProjectCoverImage,
     first: {
       highlight: 'To make you feel like we work as your in-house team.',
-      content: `No matter what, you can't create an amazing software product without the collaboration between the business side and technical side.`,
+      content: 'No matter what, you can\'t create an amazing software product without the collaboration between the business side and technical side.',
     },
     second: {
       title: 'With our project managers, you can sleep well – you are in good hands.',
@@ -192,7 +192,7 @@ const servicesDetails = {
     mobileCover: mDevelopmentCoverImage,
     first: {
       highlight: 'Our work is about impactful products.',
-      content: `Building software is a complex process. That’s why you shouldn't try to tackle it alone.`,
+      content: 'Building software is a complex process. That’s why you shouldn\'t try to tackle it alone.',
     },
     second: {
       title: 'We value professionals and teamwork to boost efficiency and productivity',
@@ -210,7 +210,7 @@ const servicesDetails = {
       },
       center: {
         title: 'Enhance team spirit',
-        content: `Before joining a commercial project, all developers must undergo internal training to learn work procedures and processes.\n Our standpoint is that when you’re good at something, you have a responsibility to share the know-how with others. Knowledge and support are shared across the team so that people can learn, develop and get promoted faster.`,
+        content: 'Before joining a commercial project, all developers must undergo internal training to learn work procedures and processes.\n Our standpoint is that when you’re good at something, you have a responsibility to share the know-how with others. Knowledge and support are shared across the team so that people can learn, develop and get promoted faster.',
       },
     },
     fourth: {
@@ -232,7 +232,7 @@ const servicesDetails = {
       content: 'We ensure a consistent brand experience in all interactions with the user, from the look & feel of the various platforms, to the content and the communication between brand and customer.',
     },
     third: {
-      title: "How we do that: Step by step",
+      title: 'How we do that: Step by step',
       left: {
         title: 'UX Design & Testing',
         content: 'We design, make prototypes and test design concepts to ensure that users achieve their goals smoothly.',
@@ -279,7 +279,7 @@ const servicesDetails = {
     },
     second: {
       title: 'What to expect',
-      content: `We not only deliver great quality, but we strive to deliver it in the timescales that align with your expectations. It is as important to us as it is to you that website is delivered properly, on time and on budget.`,
+      content: 'We not only deliver great quality, but we strive to deliver it in the timescales that align with your expectations. It is as important to us as it is to you that website is delivered properly, on time and on budget.',
 
     },
     third: {
@@ -290,7 +290,7 @@ const servicesDetails = {
       },
       center: {
         title: 'Clear communication',
-        content: `Why are our clients so pleased working with our team? We believe it’s because of our interaction and communication style. Language boundaries don't exist in our dictionary. Our project managers don’t speak tech to clients, we speak your language and we live our core values by keeping it clear, simple but effective.`,
+        content: 'Why are our clients so pleased working with our team? We believe it’s because of our interaction and communication style. Language boundaries don\'t exist in our dictionary. Our project managers don’t speak tech to clients, we speak your language and we live our core values by keeping it clear, simple but effective.',
       },
       right: {
         title: 'Long term relationships',
@@ -343,7 +343,7 @@ const servicesDetails = {
     },
     second: {
       title: 'Software testing is at the core of quality assurance',
-      content: `At Golden Owl, we take product testing solutions very seriously. Our engineers have two main tasks: ensuring the highest quality of an application and thorough software testing so it doesn’t contain any elements discouraging future users from using it.`,
+      content: 'At Golden Owl, we take product testing solutions very seriously. Our engineers have two main tasks: ensuring the highest quality of an application and thorough software testing so it doesn’t contain any elements discouraging future users from using it.',
     },
     third: {
       title: 'How we do that',
@@ -353,11 +353,11 @@ const servicesDetails = {
       },
       center: {
         title: 'From the first builds to the product release',
-        content: `Our team makes sure that bugs are discovered, errors are spotted and the entire product works as planned.`,
+        content: 'Our team makes sure that bugs are discovered, errors are spotted and the entire product works as planned.',
       },
       right: {
         title: 'Ongoing Assistance',
-        content: `We support crash analytics, bug debugging and error correction.`,
+        content: 'We support crash analytics, bug debugging and error correction.',
       },
     },
     fourth: {
@@ -390,7 +390,7 @@ const servicesDetails = {
     },
     second: {
       title: 'Emerge modern technologies with unique solutions',
-      content: `Golden Owl offers a blend of technology knowledge, data mining and analytical tools to help you create and transform applications, processes and operations in line with your unique possibilities.`,
+      content: 'Golden Owl offers a blend of technology knowledge, data mining and analytical tools to help you create and transform applications, processes and operations in line with your unique possibilities.',
     },
     third: {
       title: 'Our solutions',
@@ -400,11 +400,11 @@ const servicesDetails = {
       },
       center: {
         title: 'IT solutions consulting',
-        content: `We are here for every of your business stages whether you are going to start, to scale or to be disruptive.`,
+        content: 'We are here for every of your business stages whether you are going to start, to scale or to be disruptive.',
       },
       right: {
         title: 'Take of your problems',
-        content: `Enterprise management. Data management & analytics. Ecommerce. Customer loyalty management.`,
+        content: 'Enterprise management. Data management & analytics. Ecommerce. Customer loyalty management.',
       },
     },
     fourth: {

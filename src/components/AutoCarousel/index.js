@@ -31,73 +31,79 @@ const AutoCarousel = (props) => {
   const mobileData = props.content.slice(0);
 
   const defaultItemRender = (data) => (
-    <Carousel
-      ssr
-      infinite
-      autoPlay
-      showDots
-      keyBoardControl
-      swipeable={false}
-      draggable={false}
-      responsive={responsive}
-      autoPlaySpeed={10000}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
-      deviceType={data.deviceType}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      {data.content.map((c) => (
-        <div key={c.name} className="auto-carousel h-100 d-flex flex-column">
-          <p>{`"${c.content}"`}</p>
-          <div className="feedback__client-wrapper mt-auto">
-            <img src={c.url} alt="study" loading="lazy" />
-            <p className="auto-carousel__name-company">
-              <span>{c.name}</span>
-              ,{" "}
-              {c.project}
-            </p>
+    <div data-aos="zoom-in">
+      <Carousel
+        ssr
+        infinite
+        autoPlay
+        showDots
+        keyBoardControl
+        swipeable={false}
+        draggable={false}
+        responsive={responsive}
+        autoPlaySpeed={10000}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
+        deviceType={data.deviceType}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+        {data.content.map((c) => (
+          <div key={c.name} className="auto-carousel h-100 d-flex flex-column">
+            <p>{`"${c.content}"`}</p>
+            <div className="feedback__client-wrapper mt-auto">
+              <img src={c.url} alt="study" loading="lazy" />
+              <p className="auto-carousel__name-company">
+                <span>{c.name}</span>
+                ,
+                {' '}
+                {c.project}
+              </p>
+            </div>
           </div>
-        </div>
-      ))}
-    </Carousel>
+        ))}
+      </Carousel>
+    </div>
   );
 
   const mobileItemRender = (data) => (
-    <Carousel
-      ssr
-      infinite
-      autoPlay
-      swipeable
-      showDots
-      keyBoardControl
-      draggable={false}
-      responsive={responsive}
-      autoPlaySpeed={15000}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
-      deviceType={data.deviceType}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      {chunkArray(mobileData, 3).map((cGroup) => (
-        <div key={cGroup.name} className="auto-carousel">
-          {cGroup.map((c) => (
-            <div className="mobile-micro-item">
-              <p>{`"${c.content}"`}</p>
-              <div className="feedback__client-wrapper">
-                <img src={c.url} alt="study" loading="lazy" />
-                <p className="auto-carousel__name-company">
-                  <span>{c.name}</span>
-                  ,{" "}
-                  {c.project}
-                </p>
+    <div>
+      <Carousel
+        ssr
+        infinite
+        autoPlay
+        swipeable
+        showDots
+        keyBoardControl
+        draggable={false}
+        responsive={responsive}
+        autoPlaySpeed={15000}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={['tablet', 'mobile', 'desktop']}
+        deviceType={data.deviceType}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+        {chunkArray(mobileData, 3).map((cGroup) => (
+          <div key={cGroup.name} className="auto-carousel">
+            {cGroup.map((c) => (
+              <div className="mobile-micro-item">
+                <p>{`"${c.content}"`}</p>
+                <div className="feedback__client-wrapper">
+                  <img src={c.url} alt="study" loading="lazy" />
+                  <p className="auto-carousel__name-company">
+                    <span>{c.name}</span>
+                    ,
+                    {' '}
+                    {c.project}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      ))}
-    </Carousel>
+            ))}
+          </div>
+        ))}
+      </Carousel>
+    </div>
   );
 
   return isMobile ? mobileItemRender(props) : defaultItemRender(props);

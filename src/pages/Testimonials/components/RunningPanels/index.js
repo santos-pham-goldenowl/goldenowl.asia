@@ -57,7 +57,7 @@ const RunningPanels = () => (
       transitionDuration={3000}
     >
       {firstRow.map((item, index) => (
-        <div key={`logo-${index}`} className="m-auto">
+        <div key={`logo${index * -1}`} className="m-auto">
           <img className="running-panels-logo" src={item} alt={`logo-${index}`} />
         </div>
       ))}
@@ -114,7 +114,7 @@ const RunningPanels = () => (
       transitionDuration={3000}
     >
       {secondRow.map((item, index) => (
-        <div key={`logo-${index}`} className="m-auto">
+        <div key={`logo${index * -1}`} className="m-auto">
           <img className="running-panels-logo rotated" src={item} alt={`logo-${index}`} />
         </div>
       ))}

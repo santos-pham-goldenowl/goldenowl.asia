@@ -114,7 +114,7 @@
               font-size: 14px
             @include responsive($screen: large-desktop)
               font-size: 16px
-          display: none
+              display: none
         em
           &:first-child
             font-style: normal
@@ -176,6 +176,11 @@
       background-size: cover
       background-position: center
       padding-top: calc(425/815 * 100%)
+      &:hover
+        transform: scale(1.05)
+      &.big
+        &:hover
+          transform: scale(1.025)
 
   .row
     @include responsive($screen: tablet)
