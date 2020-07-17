@@ -7,7 +7,7 @@ import './index.sass';
 const Contact = () => {
   const isMobile = useMobileWidth();
   return (
-    <section className="contact">
+    <section className="contact" data-aos="fade-right">
       <h3>Get in touch via email</h3>
       <a href="mailto:hello@goldenowl.asia">
         <h3 className="text-xl contact__email">hello@goldenowl.asia</h3>

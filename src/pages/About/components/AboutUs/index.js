@@ -14,7 +14,7 @@ const AboutUs = () => {
 
   return (
     <section className="about-us" style={sectionStyle}>
-      <div className="about-us__left-side">
+      <div className="about-us__left-side" data-aos="fade-right">
         <h2>A team of experts</h2>
         <p>
           We are Golden Owl - a well-established agile software outsourcing company who builds successful,
@@ -27,7 +27,7 @@ const AboutUs = () => {
           to your projects.
         </p>
       </div>
-      <div className="about-us__right-side">
+      <div className="about-us__right-side" data-aos="fade-left">
         <img src={research} alt="research" loading="lazy" />
       </div>
     </section>

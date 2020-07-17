@@ -8,10 +8,10 @@ import './index.sass';
 
 const CompanyQualities = () => (
   <section className="qualities">
-    <h3 className="qualities__title">Why clients choose us</h3>
-    <p className="qualities__highlights">Because it’s good to work with good people!</p>
+    <h3 className="qualities__title" data-aos="flip-up">Why clients choose us</h3>
+    <p className="qualities__highlights" data-aos="flip-up">Because it’s good to work with good people!</p>
     <div className="row">
-      <div className="col-12 col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block" data-aos="fade-down">
         <img src={companyQuality1} alt="Golden Owl Asia" />
         <h5>Trustworthy & Professional</h5>
         <div className="d-flex">
@@ -26,7 +26,7 @@ const CompanyQualities = () => (
           </p>
         </div>
       </div>
-      <div className="col-12 col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block" data-aos="fade-up">
         <img src={companyQuality2} alt="Key success" />
         <h5>
           Flexibility & Transparency
@@ -44,7 +44,7 @@ const CompanyQualities = () => (
           </p>
         </div>
       </div>
-      <div className="col-12 col-md-4 qualities__items d-block">
+      <div className="col-12 col-md-4 qualities__items d-block" data-aos="fade-down">
         <img src={companyQuality3} alt="We create" />
         <h5>Compliance & Commitment</h5>
         <div id="need-line-break" className="d-flex">

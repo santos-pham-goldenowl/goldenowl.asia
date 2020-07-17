@@ -67,7 +67,7 @@ const Contact = () => {
         <section className="contact-form">
           <div className="contact-form__wrapper">
             <div className="row">
-              <div className="col-md-5">
+              <div className="col-md-5" data-aos="fade-right">
                 {isMobile ? (
                   <h1>
                     Chat with our
@@ -104,7 +104,7 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-12 col-md-6 p-0 ml-auto overflow-hidden">
+              <div className="col-12 col-md-6 p-0 ml-auto overflow-hidden" data-aos="fade-left">
                 <iframe
                   src="https://pipedrivewebforms.com/form/d4ad07bce7708484ea5575cea7d07e9a7536351"
                   scrolling="no"

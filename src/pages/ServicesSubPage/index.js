@@ -14,6 +14,7 @@ import stickyTrigger from '../../utils/stickyTrigger';
 import capitalizeWords from '../../utils/capitalizeWords';
 import useMobileWidth from '../../utils/hooks/useMobileWidth';
 import useScrollDirection from '../../utils/hooks/useScrollDirection';
+import aosItemDirection from '../../utils/aosItemDirection';
 
 import coverPlaceholder from '../../assets/images/service/cover-min.png';
 import mCoverPlaceholder from '../../assets/images/service/mCover-min.png';
@@ -57,7 +58,7 @@ const ServicesSubPage = ({ content }) => {
           <span>/</span>
           <p>{content.key}</p>
         </BreadCrumb>
-        <section className="service__first-content">
+        <section className="service__first-content" data-aos="fade-right">
           <h1>{content.first.title ? content.first.title : content.key}</h1>
           <p className="pb-0"><strong>{content.first.highlight}</strong></p>
           <p>{content.first.content}</p>
@@ -68,6 +69,7 @@ const ServicesSubPage = ({ content }) => {
             <img
               src={isMobile ? content.mobileCover : content.cover}
               alt={`GO-${content.key}-cover`}
+              data-aos="fade-left"
             />
           </div>
           <div className="invisible placeholder-wrapper">
@@ -77,36 +79,35 @@ const ServicesSubPage = ({ content }) => {
             />
           </div>
         </section>
-        <section className="service__second-content">
+        <section className="service__second-content" data-aos="fade-right">
           <h1>{content.second.title}</h1>
           <p>{content.second.content}</p>
         </section>
         <section className="service__slogan">
-          <h2>{content.third.title}</h2>
+          <h2 data-aos="flip-up">{content.third.title}</h2>
           <div className="row">
             <div className="col-12 col-md-4">
-              <div className="service__slogan-item">
+              <div className="service__slogan-item" data-aos="flip-left">
                 <h3>{content.third.left.title}</h3>
                 <p>{content.third.left.content}</p>
               </div>
             </div>
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-4" data-aos="flip-right">
               <div className="service__slogan-item">
                 <h3>{content.third.center.title}</h3>
                 <p>{content.third.center.content}</p>
               </div>
             </div>
             <div className="col-12 col-md-4">
-              <div className="service__slogan-item no-border">
+              <div className="service__slogan-item no-border" data-aos="flip-left">
                 <h3>{content.third.right.title}</h3>
                 <p>{content.third.right.content}</p>
               </div>
             </div>
           </div>
-          {/* <Link onClick={openPortfolioInNewTab}><strong>See how we developed our projects</strong></Link> */}
         </section>
         <section className="service__third-content">
-          <div id="rectangle" className="service__yellow-rectangle d-flex ">
+          <div id="rectangle" className="service__yellow-rectangle d-flex " data-aos="fade-right">
             <div className="service__yellow-rectangle__text">
               <h3>{content.fourth.title}</h3>
               <p>{content.fourth.content}</p>
@@ -150,12 +151,13 @@ const ServicesSubPage = ({ content }) => {
           </div>
         </section>
         <section className="service__other-services-container">
-          <h3 className="service__other-services-title">Other services</h3>
+          <h3 className="service__other-services-title" data-aos="fade-left">Other services</h3>
           <div className="row">
-            {objectToArray(content.navs).map((image) => (
+            {objectToArray(content.navs).map((image, index) => (
               <div
                 key={image.title}
                 className="col-12 col-md-4 service__other-service-wrapper"
+                data-aos={aosItemDirection(index)}
               >
                 <Link
                   className="service__other-service"

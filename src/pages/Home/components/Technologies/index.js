@@ -10,7 +10,7 @@ const Technologies = () => {
   const isMobile = useMobileWidth();
 
   return (
-    <section className="technologies">
+    <section className="technologies" data-aos="fade-left">
       <h3 className="technologies__title heading-base">Technologies we use</h3>
       <div className="row">
         {technologiesLogo.map((logo, index) => (

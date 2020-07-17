@@ -5,8 +5,8 @@ import './index.sass';
 const Guarantee = () => (
   <section className="guarantee">
     <div className="row">
-      <h3 className="d-block w-100 text-center">Our guarantees</h3>
-      <div className="col-md-4">
+      <h3 className="d-block w-100 text-center" data-aos="flip-up">Our guarantees</h3>
+      <div className="col-md-4" data-aos="fade-up">
         <h5>High quality product</h5>
         <div className="d-flex guarantee__line">
           <CheckPoint />
@@ -23,7 +23,7 @@ const Guarantee = () => (
           <p>High degree of stability</p>
         </div> */}
       </div>
-      <div className="col-md-4">
+      <div className="col-md-4" data-aos="fade-down">
         <h5 id="middle-title">
           Valuable solutions that fit your need
         </h5>
@@ -42,7 +42,7 @@ const Guarantee = () => (
           <p>Save your time & money without dropping the quality</p>
         </div>
       </div>
-      <div className="col-md-4">
+      <div className="col-md-4" data-aos="fade-up">
         <h5>Maintenance and Improvement</h5>
         <div className="d-flex guarantee__line">
           <CheckPoint />

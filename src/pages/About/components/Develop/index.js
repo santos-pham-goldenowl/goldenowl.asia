@@ -17,7 +17,7 @@ const Develop = () => {
   );
 
   const defaultImageRender = () => (
-    <div className="col-md-7 pr-0 ml-auto image-wrapper d-flex flex-column justify-content-center">
+    <div className="col-md-7 pr-0 ml-auto image-wrapper d-flex flex-column justify-content-center" data-aos="fade-left">
       <div className="rectangle" />
       <img className="develop__image" src={code} alt="code" />
     </div>
@@ -25,13 +25,13 @@ const Develop = () => {
 
   return (
     <section className="develop">
-      <h2 className="develop__title">
+      <h2 className="develop__title" data-aos="flip-up">
         Develop with tools you
         <br />
         already love
       </h2>
       <div className="row develop__content">
-        <div className="col-12 col-md-4 develop__content-text d-flex flex-column justify-content-center">
+        <div className="col-12 col-md-4 develop__content-text d-flex flex-column justify-content-center" data-aos="fade-right">
           <h3>Are you...</h3>
           <p>
             struggling with digital transformation?

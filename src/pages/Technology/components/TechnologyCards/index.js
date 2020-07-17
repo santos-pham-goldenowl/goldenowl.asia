@@ -5,7 +5,7 @@ const TechnologyCards = () => (
   <section className="technology-cards">
     <div className="row">
       <div className="col-md-6">
-        <div className="technology-cards__card text-center">
+        <div className="technology-cards__card text-center" data-aos="flip-left">
           <h4>Optimal solutions</h4>
           <p>
             We understand that your growth is key to our, and therefore our mission is not just to deliver what we are
@@ -14,7 +14,7 @@ const TechnologyCards = () => (
         </div>
       </div>
       <div className="col-md-6">
-        <div className="technology-cards__card text-center">
+        <div className="technology-cards__card text-center" data-aos="flip-right">
           <h4>Custom solutions</h4>
           <p>
             We listen to your ideas and create custom software solutions from the ground up, designed especially for your business.

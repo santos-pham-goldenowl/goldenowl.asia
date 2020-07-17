@@ -6,7 +6,7 @@ import './index.sass';
 
 const Explore = () => (
   <section className="explore">
-    <div className="explore__card">
+    <div className="explore__card" data-aos="flip-left">
       <div className="explore__top-content">
         <h6>THE WORK PROJECT | FEATURES CASE STUDY</h6>
         <Link className="explore__case-study" to="/portfolio/the-work-project">

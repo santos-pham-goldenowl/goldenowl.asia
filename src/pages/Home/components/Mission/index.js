@@ -15,7 +15,7 @@ const Missions = () => {
   return (
     <section className="missions" style={sectionStyle}>
       <div className="row">
-        <div className="col-12 col-md-5 pr-md-0">
+        <div className="col-12 col-md-5 pr-md-0" data-aos="fade-right">
           <h3 className="missions__title">Hello! We're Golden Owl</h3>
           <p>
             If you’re looking for a software company to transform your business
@@ -35,21 +35,22 @@ const Missions = () => {
         <div className="col-12 col-md-6 ml-auto pr-0">
           <div className="row">
             <div className="col-6">
-              <Link className="missions__item" to="/services/web-development">
+              <Link className="missions__item" to="/services/web-development" data-aos="fade-up">
                 <h3 className="missions__item-title">Web development</h3>
                 <div className="missions__arrow" />
               </Link>
-              <Link className="missions__item" to="/services/ux-ui-design">
+              <Link className="missions__item" to="/services/ux-ui-design" data-aos="fade-up">
                 <h3 className="missions__item-title">UX UI design</h3>
                 <div className="missions__arrow" />
               </Link>
-              <Link className="missions__item" to="/services/development-team">
+              <Link className="missions__item" to="/services/development-team" data-aos="fade-up">
                 <h3 className="missions__item-title">Development team</h3>
                 <div className="missions__arrow" />
               </Link>
               <Link
                 className="missions__item"
                 to="/services/it-solutions-consulting"
+                data-aos="fade-up"
               >
                 <h3 className="missions__item-title">
                   IT solutions consulting
@@ -61,6 +62,7 @@ const Missions = () => {
               <Link
                 className="missions__item"
                 to="/services/mobile-development"
+                data-aos="fade-up"
               >
                 <h3 className="missions__item-title">Mobile development</h3>
                 <div className="missions__arrow" />
@@ -68,6 +70,7 @@ const Missions = () => {
               <Link
                 className="missions__item"
                 to="/services/project-management"
+                data-aos="fade-up"
               >
                 <h3 className="missions__item-title">Project management</h3>
                 <div className="missions__arrow" />
@@ -75,6 +78,7 @@ const Missions = () => {
               <Link
                 className="missions__item"
                 to="/services/automation-testing"
+                data-aos="fade-up"
               >
                 <h3 className="missions__item-title">Automation testing</h3>
                 <div className="missions__arrow" />

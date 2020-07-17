@@ -23,7 +23,7 @@ const ServicesDescription = () => {
   return (
     <section className="services-description" style={sectionStyle}>
       <div className="row">
-        <div className="col-md-5">
+        <div className="col-md-5" data-aos="fade-right">
           <h2 className="services-description__title">Services</h2>
           <p className="">
             We provide software solutions, mostly about website and mobile applications for a wide variety of fields, from finance to commerce and so on. We are proud of being very selective and have one of the best full-stacked developer training programs in Ho Chi Minh City.
@@ -32,7 +32,7 @@ const ServicesDescription = () => {
             Lots of clients come to us to receive best service and they have been besides us for a very long time. From the beginning when building a platform to maintenance process, we do them all with perfect result.
           </p>
         </div>
-        <div className="col-md-6 ml-auto">
+        <div className="col-md-6 ml-auto" data-aos="fade-left">
           <img src={isMobile ? servicesMobile : present} alt="present" />
         </div>
       </div>

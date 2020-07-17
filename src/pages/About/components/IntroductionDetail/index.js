@@ -8,7 +8,7 @@ import './index.sass';
 const IntroductionDetail = () => (
   <section className="introduction-detail">
     <div className="row">
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6" data-aos="fade-right">
         <h3 className="introduction-detail__title">
           We make your idea happen
         </h3>
@@ -21,7 +21,7 @@ const IntroductionDetail = () => (
           </p>
         </div>
       </div>
-      <div className="col-12 col-md-5 ml-auto">
+      <div className="col-12 col-md-5 ml-auto" data-aos="fade-left">
         <div className="img-wrapper">
           <img src={working} alt="working" loading="lazy" />
         </div>

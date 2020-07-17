@@ -8,7 +8,7 @@ const StatsSummary = () => (
   <section className="stats-summary">
     <div className="row">
       <div className="col-md-6">
-        <div className="stats-summary__image-wrapper">
+        <div className="stats-summary__image-wrapper" data-aos="fade-right" data-aos-duration={500}>
           <img
             className="w-100"
             src={surfWeb}
@@ -16,7 +16,7 @@ const StatsSummary = () => (
           />
         </div>
       </div>
-      <div className="ml-auto col-md-6">
+      <div className="ml-auto col-md-6" data-aos="fade-left" data-aos-duration={500}>
         <div className="stats-summary__paragraph">
           <p>
             Thanks to valuable reviews from our clients, we can be confident that our efforts bring desired results.

@@ -8,12 +8,12 @@ import './index.sass';
 const Success = () => (
   <section className="success">
     <div className="row success__main">
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6" data-aos="fade-right">
         <h1 className="success__main-title">
           What we’ve achieved so far
         </h1>
       </div>
-      <div className="col-12 col-md-6 success__main-description">
+      <div className="col-12 col-md-6 success__main-description" data-aos="fade-left">
         <p>
           As a bespoke software development company we have delivered a vast range of applications that have made a significant difference in their business.
           <br />
@@ -23,7 +23,7 @@ const Success = () => (
       </div>
     </div>
     <div className="row success__sum">
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6" data-aos="fade-up">
         <h3>
           {/* {isMobile ? 'Our company' : '30+ mobile apps' } */}
           30+ mobile apps
@@ -34,7 +34,7 @@ const Success = () => (
         </p>
       </div>
 
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6" data-aos="fade-up">
         <h3>
           45+ websites
           {/* What make us unique */}
@@ -44,7 +44,7 @@ const Success = () => (
         </p>
       </div>
       <div className="col-12 col-md-6" />
-      <div className="col-12 col-md-6">
+      <div className="col-12 col-md-6" data-aos="fade-up">
         <h3>
           7 countries
         </h3>

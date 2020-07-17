@@ -51,7 +51,7 @@ const Quote = () => {
   return (
     <section className="quote">
       <div className="row">
-        <div className="col-md-5">
+        <div className="col-md-5" data-aos="fade-right">
           <Carousel
             ssr
             infinite
@@ -85,7 +85,7 @@ const Quote = () => {
           </Carousel>
         </div>
         <div className="col-md-7">
-          <img src={isMobile ? mobileWork : work} alt="work" loading="lazy" />
+          <img src={isMobile ? mobileWork : work} alt="work" loading="lazy" data-aos="fade-left" />
         </div>
       </div>
     </section>

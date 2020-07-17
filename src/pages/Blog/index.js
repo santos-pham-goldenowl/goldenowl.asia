@@ -10,6 +10,7 @@ import BlogHeader from '../../components/BlogHeader';
 
 import readTimeCalculator from '../../utils/readTimeCalculator';
 import replaceAllString from '../../utils/replaceAllString';
+import aosItemDirection from '../../utils/aosItemDirection';
 
 import {
   LOADING_STATUS,
@@ -49,17 +50,17 @@ const Blog = () => {
           return (
             <div key={blog.attributes.title} className="col-md-12">
               <div className="row blogs__item">
-                <div className="col-12 col-md-8 d-block">
+                <div className="col-12 col-md-8 d-block" data-aos="fade-right">
                   <Link exact to={`/blog/details/${blog.id}`}>
                     <div
                       style={{
                         backgroundImage: `url(${blog.attributes.image})`,
                       }}
-                      className="blogs__item-image"
+                      className="blogs__item-image big"
                     />
                   </Link>
                 </div>
-                <div className="col-md-4 wide-blog">
+                <div className="col-md-4 wide-blog" data-aos="fade-left">
                   <div className="category d-flex">
                     <p className="text-uppercase">{blog.type}</p>
                     <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
@@ -100,7 +101,7 @@ const Blog = () => {
         case 2:
         case 3:
           return (
-            <div key={blog.attributes.title} className="col-12 col-md-4">
+            <div key={blog.attributes.title} className="col-12 col-md-4" data-aos={aosItemDirection(index)}>
               <div className="blogs__item">
                 <div className="d-block">
                   <Link exact to={`/blog/details/${blog.id}`}>
@@ -152,7 +153,7 @@ const Blog = () => {
         case 4:
         case 5:
           return (
-            <div key={blog.attributes.title} className="col-12 col-md-6">
+            <div key={blog.attributes.title} className="col-12 col-md-6" data-aos={aosItemDirection(index, 'fade')}>
               <Link exact to={`/blog/details/${blog.id}`}>
                 <div className="blogs__item">
                   <div className="d-block">
