@@ -1,12 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import PortfolioHeader from '../../components/PortfolioHeader';
 import PortfolioInteresting from '../../components/PortfolioInteresting';
 
-// import randomProjects from '../../utils/portfolioTabContent';
-// import useLocalStorage from '../../utils/hooks/useLocalStorage';
+import randomProjects from '../../utils/portfolioTabContent';
+import useLocalStorage from '../../utils/hooks/useLocalStorage';
 import aosItemDirection from '../../utils/aosItemDirection';
 
 import { HEADER_DESCRIPTION } from '../../constant';
@@ -14,31 +14,20 @@ import { HEADER_DESCRIPTION } from '../../constant';
 import companyLogo from '../../assets/images/GoldenOwlLogo.png';
 import './index.sass';
 
-// temporarily disable next project link - the reason cause loading crash
 const PortfolioSubPage = ({ content }) => {
-  // const [prevProject, setPrevProject] = useLocalStorage('prevProject', 'none');
+  const [prevProject, setPrevProject] = useLocalStorage('prevProject', 'none');
 
-  // const filteredRandomProject = [...randomProjects];
+  // exclude current & previous
+  const filteredRandomProject = [...randomProjects].filter((p) => !p.content.includes(content.key) && !p.content.includes(prevProject));
 
-  // // exclude current & previous
-  // for (let i = filteredRandomProject.length - 1; i >= 0; i - 1) {
-  //   if (
-  //     filteredRandomProject[i].content.includes(content.key)
-  //   || filteredRandomProject[i].content.includes(prevProject)
-  //   ) {
-  //     filteredRandomProject.splice(i, 1);
-  //   }
-  // }
+  const randomProject = filteredRandomProject[Math.floor(Math.random() * filteredRandomProject.length)];
 
-  // const randomProject = filteredRandomProject[Math.floor(Math.random() * filteredRandomProject.length)];
+  const randomProjectText = randomProject.content.split(' – ');
+  const randomProjectUrl = randomProject.url;
+  const randomProjectThumb = randomProject.thumb;
 
-  // const randomProjectText = randomProject.content.split(' – ');
-  // const randomProjectUrl = randomProject.url;
-  // const randomProjectThumb = randomProject.thumb;
-
-  // eslint-disable-next-line no-unused-vars
   const nextProjectBg = {
-    // backgroundImage: `url(${randomProjectThumb})`,
+    backgroundImage: `url(${randomProjectThumb})`,
   };
 
   return (
@@ -119,19 +108,19 @@ const PortfolioSubPage = ({ content }) => {
                 {content.brief.description}
               </p>
             </div>
-            {/* <div className="col-12">
+            <div className="col-12">
               <Link
                 onClick={() => {
                   setPrevProject(content.key);
                 }}
                 to={`/portfolio/${randomProjectUrl}`}
               >
-                <div style={nextProjectBg} className="portfolio-details__next-project" data-aos="flip-right">
+                <div style={nextProjectBg} className="portfolio-details__next-project" data-aos="fade-up">
                   <h3>{`Up next: ${randomProjectText[0]}`}</h3>
                   <p>{randomProjectText[1]}</p>
                 </div>
               </Link>
-            </div> */}
+            </div>
           </div>
         </section>
         <PortfolioInteresting />
