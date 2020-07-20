@@ -4,7 +4,6 @@
 const md5File = require('md5-file');
 const path = require('path');
 const fs = require('fs');
-const offlinePlugin = require('offline-plugin/runtime');
 
 // CSS styles will be imported on load and that complicates matters... ignore those bad boys!
 const ignoreStyles = require('ignore-styles');
@@ -60,19 +59,3 @@ require('@babel/register')({
 
 // Now that the nonsense is over... load up the server entry point
 require('./server');
-
-if (process.env.NODE_ENV === 'production') {
-  offlinePlugin.install({
-    onUpdating: () => { },
-    onUpdateReady: () => {
-      // Tells to new SW to take control immediately
-      // eslint-disable-next-line no-undef
-      runtime.applyUpdate();
-    },
-    onUpdated: () => {
-      // Reload the webpage to load into the new version
-      window.location.reload();
-    },
-    onUpdateFailed: () => { },
-  });
-}
