@@ -52,10 +52,10 @@ app.use(
 
 app.use(
   express.Router().get('/get-blog', (req, res) => {
-    const { id } = req.query;
+    const { slug } = req.query;
 
     axiosInstance
-      .get(`${process.env.API_URL}/posts/${id}`)
+      .get(`${process.env.API_URL}/posts/${slug}`)
       .then((response) => res.status(200).json({ data: response.data }))
       .catch((error) => res.status(404).json({
         error: true,

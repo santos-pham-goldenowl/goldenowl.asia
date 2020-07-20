@@ -51,7 +51,7 @@ const Blog = () => {
             <div key={blog.attributes.title} className="col-md-12">
               <div className="row blogs__item">
                 <div className="col-12 col-md-8 d-block" data-aos="fade-right">
-                  <Link exact to={`/blog/details/${blog.id}`}>
+                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                     <div
                       style={{
                         backgroundImage: `url(${blog.attributes.image})`,
@@ -68,7 +68,7 @@ const Blog = () => {
                       {readTimeCalculator(blog.attributes.content)}
                     </p>
                   </div>
-                  <Link exact to={`/blog/details/${blog.id}`}>
+                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                     <h4>{blog.attributes.title}</h4>
                   </Link>
                   <div className="blog-content">
@@ -104,7 +104,7 @@ const Blog = () => {
             <div key={blog.attributes.title} className="col-12 col-md-4" data-aos={aosItemDirection(index)}>
               <div className="blogs__item">
                 <div className="d-block">
-                  <Link exact to={`/blog/details/${blog.id}`}>
+                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                     <div
                       style={{
                         backgroundImage: `url(${blog.attributes.image})`,
@@ -119,7 +119,7 @@ const Blog = () => {
                     <p>{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
                     <p>{readTimeCalculator(blog.attributes.content)}</p>
                   </div>
-                  <Link exact to={`/blog/details/${blog.id}`}>
+                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                     <h4 className="small-item-title">
                       {blog.attributes.title}
                     </h4>
@@ -154,10 +154,10 @@ const Blog = () => {
         case 5:
           return (
             <div key={blog.attributes.title} className="col-12 col-md-6" data-aos={aosItemDirection(index, 'fade')}>
-              <Link exact to={`/blog/details/${blog.id}`}>
+              <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                 <div className="blogs__item">
                   <div className="d-block">
-                    <Link exact to={`/blog/details/${blog.id}`}>
+                    <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                       <div
                         style={{
                           backgroundImage: `url(${blog.attributes.image})`,
@@ -172,7 +172,7 @@ const Blog = () => {
                       <p>{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
                       <p>{readTimeCalculator(blog.attributes.content)}</p>
                     </div>
-                    <Link exact to={`/blog/details/${blog.id}`}>
+                    <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                       <h4 className="medium-item-title">
                         {blog.attributes.title}
                       </h4>
