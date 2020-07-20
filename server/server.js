@@ -121,7 +121,9 @@ app.use(
             </head>
             <body>
               <h3>Hi Admin,</h3>
-              <p class="opening">A candidate whose name is&nbsp;${`${firstName} ${lastName}`}&nbsp;sent you a message with the reason to hire him/her:</p>
+              <p class="opening">
+                A candidate whose name is&nbsp;${`${firstName} ${lastName}`}&nbsp;sent you a message with the reason to hire him/her:
+              </p>
               <p class="message-section">&nbsp;&nbsp;<em>${reason}</em></p>
               <p class="candidate-info"><u>Candidate's portfolio:</u>&nbsp;${url}</p>
               <p class="candidate-info"><u>Candidate's email:</u>&nbsp;${email}</p>
@@ -179,7 +181,7 @@ app.use(
       .catch((err) => res.status(404).json({
         data: {
           error: true,
-          message: `Error: ${err || error}`,
+          message: `Error: ${err}`,
         },
       }));
   }),

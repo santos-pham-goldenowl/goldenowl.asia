@@ -1,27 +1,20 @@
-const es2015 = require("babel-preset-es2015");
-const presetReact = require("babel-preset-react");
-require("babel-register")({
+const es2015 = require('babel-preset-es2015');
+const presetReact = require('babel-preset-react');
+const Sitemap = require('react-router-sitemap').default;
+
+require('babel-register')({
   presets: [es2015, presetReact],
 });
 
-const router = require("../src/routes").default;
-const Sitemap = require("react-router-sitemap").default;
+const router = require('../src/routes').default;
 
-require.extensions[".css"] = () => {
-  return null;
-};
+require.extensions['.css'] = () => null;
 
-require.extensions[".png"] = () => {
-  return null;
-};
+require.extensions['.png'] = () => null;
 
-require.extensions[".svg"] = () => {
-  return null;
-};
+require.extensions['.svg'] = () => null;
 
-require.extensions[".jpg"] = () => {
-  return null;
-};
+require.extensions['.jpg'] = () => null;
 
 const filterConfig = {
   isValid: false,
@@ -32,8 +25,8 @@ function generateSitemap() {
   return (
     new Sitemap(router())
       .filterPaths(filterConfig)
-      .build("http://goldenowl.asia")
-      .save("../public/sitemap.xml")
+      .build('http://goldenowl.asia')
+      .save('../public/sitemap.xml')
   );
 }
 
