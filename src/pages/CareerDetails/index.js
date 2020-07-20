@@ -41,7 +41,7 @@ import './index.sass';
 const CareerDetails = () => {
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
-  const jobId = window && window.location
+  const jobSlug = window && window.location
     ? window.location.pathname.split('/').slice(-1)[0]
     : '';
   const [job, setJob] = useState({});
@@ -49,7 +49,7 @@ const CareerDetails = () => {
   const [formStatus, setFormStatus] = useState('');
 
   useEffect(() => {
-    getCareer(jobId)
+    getCareer(jobSlug)
       .then((res) => {
         const { data } = res.data;
 
@@ -61,7 +61,7 @@ const CareerDetails = () => {
         }
       })
       .catch(() => setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 500));
-  }, [jobId]);
+  }, [jobSlug]);
 
   const defaultValues = useMemo(
     () => ({

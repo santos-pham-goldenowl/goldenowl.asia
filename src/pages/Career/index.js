@@ -73,7 +73,7 @@ const Career = () => {
   const defaultRowRender = (item) => (
     <tr>
       <td className="first-col">{statusRender(item.attributes.status)}</td>
-      <td className="second-col" onClick={() => { window.location.href = `/careers/details/${item.id}`; }}>
+      <td className="second-col" onClick={() => { window.location.href = `/careers/details/${item.attributes.slug}`; }}>
         <p className="careers__job pointable">{item.attributes.title}</p>
       </td>
       <td className="third-col">
@@ -81,7 +81,7 @@ const Career = () => {
         <p className="d-inline careers__time">{item.attributes.job_type}</p>
       </td>
       <td className="fourth-col">
-        <Link to={`careers/details/${item.id}`}>
+        <Link to={`careers/details/${item.attributes.slug}`}>
           View details
         </Link>
       </td>
@@ -90,12 +90,12 @@ const Career = () => {
 
   const mobileRowRender = (item) => (
     <tr>
-      <td className="pointable" onClick={() => { window.location.href = `/careers/details/${item.id}`; }}>
+      <td className="pointable" onClick={() => { window.location.href = `/careers/details/${item.attributes.slug}`; }}>
         {statusRender(item.attributes.status)}
         <p className="careers__job">{item.attributes.title}</p>
         <img className="clock" src={clock} alt="GO-clock" />
         <p className="d-inline careers__time">{item.attributes.job_type}</p>
-        <Link to={`careers/details/${item.id}`}>
+        <Link to={`careers/details/${item.attributes.slug}`}>
           View details
         </Link>
       </td>
