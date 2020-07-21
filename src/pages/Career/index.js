@@ -43,7 +43,10 @@ const Career = () => {
       .then((res) => {
         const { data } = res.data;
 
-        if (data) setJobs([...data.data]);
+        if (data) {
+          const sortedData = [...data.data].sort((a, b) => b.attributes.status.localeCompare(a.attributes.status));
+          setJobs([...sortedData]);
+        }
 
         if (data.data.length) setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
         else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
@@ -70,7 +73,7 @@ const Career = () => {
   const defaultRowRender = (item) => (
     <tr>
       <td className="first-col">{statusRender(item.attributes.status)}</td>
-      <td className="second-col" onClick={() => { window.location.href = `/careers/details/${item.id}`; }}>
+      <td className="second-col" onClick={() => { window.location.href = `/careers/details/${item.attributes.slug}`; }}>
         <p className="careers__job pointable">{item.attributes.title}</p>
       </td>
       <td className="third-col">
@@ -78,19 +81,7 @@ const Career = () => {
         <p className="d-inline careers__time">{item.attributes.job_type}</p>
       </td>
       <td className="fourth-col">
-        <Link
-          className={
-            item.attributes.status !== OPEN_JOB_STATUS
-              ? 'text-decoration-none'
-              : ''
-          }
-          to={
-            item.attributes.status !== OPEN_JOB_STATUS
-              ? ''
-              : `careers/details/${item.id}`
-          }
-          onClick={(e) => item.attributes.status !== OPEN_JOB_STATUS && e.preventDefault()}
-        >
+        <Link to={`careers/details/${item.attributes.slug}`}>
           View details
         </Link>
       </td>
@@ -99,24 +90,12 @@ const Career = () => {
 
   const mobileRowRender = (item) => (
     <tr>
-      <td className="pointable" onClick={() => { window.location.href = `/careers/details/${item.id}`; }}>
+      <td className="pointable" onClick={() => { window.location.href = `/careers/details/${item.attributes.slug}`; }}>
         {statusRender(item.attributes.status)}
         <p className="careers__job">{item.attributes.title}</p>
         <img className="clock" src={clock} alt="GO-clock" />
         <p className="d-inline careers__time">{item.attributes.job_type}</p>
-        <Link
-          className={
-            item.attributes.status !== OPEN_JOB_STATUS
-              ? 'text-decoration-none'
-              : ''
-          }
-          to={
-            item.attributes.status !== OPEN_JOB_STATUS
-              ? ''
-              : `careers/details/${item.id}`
-          }
-          onClick={(e) => item.attributes.status !== OPEN_JOB_STATUS && e.preventDefault()}
-        >
+        <Link to={`careers/details/${item.attributes.slug}`}>
           View details
         </Link>
       </td>

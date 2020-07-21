@@ -32,7 +32,7 @@ export default (
       ))
     }
     <Route path="/careers" />
-    <Route path={`/careers/details`} />
+    <Route path="/careers/details" />
     <Route path="/faq" />
     <Route path="" />
   </Switch>

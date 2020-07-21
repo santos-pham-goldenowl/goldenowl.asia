@@ -25,14 +25,14 @@ import tw from '../../assets/images/twitter.svg';
 const BlogDetails = () => {
   const isMobile = useMobileWidth();
 
-  const blogId = window && window.location
+  const blogSlug = window && window.location
     ? window.location.pathname.split('/').slice(-1)[0]
     : '';
   const [blog, setBlog] = useState({});
   const [loadStatus, setLoadStatus] = useState('');
 
   useEffect(() => {
-    getBlog(blogId)
+    getBlog(blogSlug)
       .then((res) => {
         const { data } = res.data;
 
@@ -42,7 +42,7 @@ const BlogDetails = () => {
         }
       })
       .catch(() => setTimeout(() => setLoadStatus('no-result'), 500));
-  }, [blogId, loadStatus]);
+  }, [blogSlug, loadStatus]);
 
   switch (loadStatus) {
     case 'loaded':
