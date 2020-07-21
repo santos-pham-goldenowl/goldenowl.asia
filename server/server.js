@@ -54,10 +54,17 @@ app.use(
   express.Router().get('/get-blog', (req, res) => {
     const { slug } = req.query;
 
-    axiosInstance
-      .get(`${process.env.API_URL}/posts/${slug}`)
-      .then((response) => res.status(200).json({ data: response.data }))
-      .catch((error) => res.status(404).json({
+    const getDetails = axiosInstance.get(`${process.env.API_URL}/posts/${slug}`);
+    const getRelated = axiosInstance.get(`${process.env.API_URL}/posts/${slug}/related-posts`);
+
+    axiosInstance.all([getDetails, getRelated])
+      .then(axiosInstance.spread((...response) => {
+        const detailsResponse = response[0];
+        const relatedResponse = response[1];
+
+        res.status(200).json({ data: detailsResponse.data, related: relatedResponse.data });
+      }))
+      .catch((error) => res.status(500).json({
         error: true,
         message: `Error: ${error}`,
       }));
