@@ -42,7 +42,7 @@ const BlogDetails = () => {
         }
       })
       .catch(() => setTimeout(() => setLoadStatus('no-result'), 500));
-  }, [blogSlug, loadStatus]);
+  }, [blogSlug]);
 
   switch (loadStatus) {
     case 'loaded':
