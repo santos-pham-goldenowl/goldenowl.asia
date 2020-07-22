@@ -8,7 +8,7 @@ import MainHeader from '../../components/MainHeader';
 import BreadCrumb from '../../components/BreadCrumb';
 import FixedTopHeader from '../../components/FixedTopHeader';
 import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
-import contentRender from './mockPanelsRender';
+import contentRender from './components/PanelRender/mockPanelsRender';
 
 import stickyTrigger, { stickyTOCTrigger } from '../../utils/stickyTrigger';
 import useMobileWidth from '../../utils/hooks/useMobileWidth';
