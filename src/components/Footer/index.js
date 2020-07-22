@@ -59,7 +59,7 @@ const Footer = () => {
             <div>
               <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
-              {/* <Link to="/faq">FAQ</Link> */}
+              <Link to="/faq">FAQ</Link>
               <Link onClick={openBlogInNewTab}>Blog</Link>
             </div>
           </div>
@@ -144,7 +144,7 @@ const Footer = () => {
             <div>
               <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
-              {/* <Link to="/faq">FAQ</Link> */}
+              <Link to="/faq">FAQ</Link>
               <Link onClick={openBlogInNewTab}>Blog</Link>
             </div>
           </div>

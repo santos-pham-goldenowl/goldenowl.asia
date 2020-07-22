@@ -1,18 +1,43 @@
-import React from 'react';
-import {
-  Accordion,
-} from 'react-accessible-accordion';
-import AccordionRender from './Accordion';
+import React, { useState } from 'react';
+import parse from 'html-react-parser';
 
+import { Accordion, Card } from 'react-bootstrap';
 
-const contentRender = () => [...new Array(6).keys()].map((item) => (
-  <section id={`content-${item + 1}`}>
-    <Accordion className="faq__content-item">
-      <h3 className="faq__content-item-header">{`Content ${item + 1}`}</h3>
-      <AccordionRender />
-    </Accordion>
-  </section>
+import objectToArray from '../../utils/objectToArray';
+
+const MockFAQRender = ({ eventKey, question, answer }) => {
+  const [panelStatus, setPanelStatus] = useState(false);
+
+  return (
+    <Card className="faq__content-panel">
+      <Accordion.Toggle
+        className="faq__content-panel-header border-bottom-0"
+        onClick={() => setPanelStatus(!panelStatus)}
+        as={Card.Header}
+        eventKey={eventKey}
+      >
+        <div className="d-flex align-items-center">
+          <span className="faq__content-panel-status">
+            <strong>{panelStatus ? '✖' : '✚'}</strong>
+          </span>
+          <p className="faq__question">{question}</p>
+        </div>
+      </Accordion.Toggle>
+      <Accordion.Collapse className eventKey={eventKey}>
+        <Card.Body className="faq__content-panel-body">
+          <p className="faq__answer">
+            {parse(answer)}
+          </p>
+        </Card.Body>
+      </Accordion.Collapse>
+    </Card>
+  );
+};
+
+const contentRender = (content) => objectToArray(content).map((item) => (
+  <Accordion className="faq__content-item" id={item.key}>
+    <MockFAQRender eventKey={item.key} question={item.q} answer={item.a} />
+  </Accordion>
 ));
-
 
 export default contentRender;
