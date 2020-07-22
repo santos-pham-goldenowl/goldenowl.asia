@@ -1,0 +1,25 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.related-blog
+    &-image
+        width: 100%
+        padding-top: calc(425/815 * 100%)
+        background-position: center center
+        background-size: cover
+        box-shadow: 4px 4px 9px 0 rgba(224, 224, 224, 0.5)
+
+    &-title
+        margin: 10px 0
+        font-size: 20px
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box !important
+        -webkit-line-clamp: 2
+        -webkit-box-orient: vertical
+
+    &-readtime
+        text-align: right
+        margin-left: 10px
+        color: #85868f
+        font-size: 12px

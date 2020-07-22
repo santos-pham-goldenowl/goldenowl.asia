@@ -8,6 +8,7 @@ import { FacebookShareButton, TwitterShareButton } from 'react-share';
 import Footer from '../../components/Footer';
 import BlogHeader from '../../components/BlogHeader';
 import LoadingScreen from '../../components/LoadingScreen';
+import RelatedBlog from './components/RelatedBlog';
 
 import useMobileWidth from '../../utils/hooks/useMobileWidth';
 import readTimeCalculator from '../../utils/readTimeCalculator';
@@ -29,20 +30,22 @@ const BlogDetails = () => {
     ? window.location.pathname.split('/').slice(-1)[0]
     : '';
   const [blog, setBlog] = useState({});
+  const [relatedBlog, setRelatedBlog] = useState([]);
   const [loadStatus, setLoadStatus] = useState('');
 
   useEffect(() => {
     getBlog(blogSlug)
       .then((res) => {
-        const { data } = res.data;
+        const { data, related } = res.data;
 
         if (data) {
           setBlog({ ...data.data });
+          setRelatedBlog([...related.data]);
           setTimeout(() => setLoadStatus('loaded'), 500);
         }
       })
       .catch(() => setTimeout(() => setLoadStatus('no-result'), 500));
-  }, [blogSlug, loadStatus]);
+  }, [blogSlug]);
 
   switch (loadStatus) {
     case 'loaded':
@@ -139,6 +142,11 @@ const BlogDetails = () => {
                   </p>
                 </div>
               </div>
+            </section>
+            <section className="related-blogs">
+              <ul className="row">
+                {relatedBlog.map((r) => <RelatedBlog content={r} />)}
+              </ul>
             </section>
             <Footer />
           </div>
