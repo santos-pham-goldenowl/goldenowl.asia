@@ -8,55 +8,55 @@ import MainHeader from '../../components/MainHeader';
 import BreadCrumb from '../../components/BreadCrumb';
 import FixedTopHeader from '../../components/FixedTopHeader';
 import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
+import contentRender from './mockPanelsRender';
 
 import stickyTrigger, { stickyTOCTrigger } from '../../utils/stickyTrigger';
 import useMobileWidth from '../../utils/hooks/useMobileWidth';
 import useScrollDirection from '../../utils/hooks/useScrollDirection';
-
+import faqData from '../../utils/faqData';
 import { HEADER_DESCRIPTION } from '../../constant';
 
 import companyLogo from '../../assets/images/GoldenOwlLogo.png';
 import './index.sass';
-import contentRender from './mockPanelsRender';
 
 const FAQ = () => {
   const isMobile = useMobileWidth();
 
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
-  const updateMenuActiveStatusFunc = () => {
-    const fixedTopElement = document.getElementById('fixed-top-menu') || document.getElementById('fixed-top-breadcrumb');
-    const entries = document.querySelectorAll('section[id*="content-"]');
-    let firstIdx = -1;
-    for (let i = 0; i < entries.length; i + 1) {
-      const entry = entries[i];
-      const id = entry.getAttribute('id');
-      const tocItem = document.querySelector(`nav li a[href="#${id}"]`);
-      tocItem && tocItem.parentElement.classList.remove('active');
-      const elemHeight = entry.clientHeight;
-      if ((entry.getBoundingClientRect().top + window.pageYOffset + elemHeight - fixedTopElement.clientHeight)
-      > window.pageYOffset && firstIdx === -1) {
-        firstIdx = i;
-        tocItem && tocItem.parentElement.classList.add('active');
-      }
-    }
-  };
+  // const updateMenuActiveStatusFunc = () => {
+  //   const fixedTopElement = document.getElementById('fixed-top-menu') || document.getElementById('fixed-top-breadcrumb');
+  //   const entries = document.querySelectorAll('section[id*="content-"]');
+  //   let firstIdx = -1;
+  //   for (let i = 0; i < entries.length; i + 1) {
+  //     const entry = entries[i];
+  //     const id = entry.getAttribute('id');
+  //     const tocItem = document.querySelector(`nav li a[href="#${id}"]`);
+  //     tocItem && tocItem.parentElement.classList.remove('active');
+  //     const elemHeight = entry.clientHeight;
+  //     if ((entry.getBoundingClientRect().top + window.pageYOffset + elemHeight - fixedTopElement.clientHeight)
+  //     > window.pageYOffset && firstIdx === -1) {
+  //       firstIdx = i;
+  //       tocItem && tocItem.parentElement.classList.add('active');
+  //     }
+  //   }
+  // };
 
   // let updateMenuStatusActiveDebounce = null;
 
-  const tableOfContentQuery = () => {
-    // Debounce
-    // if (updateMenuStatusActiveDebounce) {
-    //   clearTimeout(updateMenuStatusActiveDebounce);
-    // }
-    // updateMenuStatusActiveDebounce = setTimeout(updateMenuActiveStatusFunc, 100);
-    updateMenuActiveStatusFunc();
-  };
+  // const tableOfContentQuery = () => {
+  // Debounce
+  // if (updateMenuStatusActiveDebounce) {
+  //   clearTimeout(updateMenuStatusActiveDebounce);
+  // }
+  // updateMenuStatusActiveDebounce = setTimeout(updateMenuActiveStatusFunc, 100);
+  //   updateMenuActiveStatusFunc();
+  // };
 
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
     stickyTOCTrigger(isMobile);
-    !isMobile && tableOfContentQuery();
+    // !isMobile && tableOfContentQuery();
   };
 
   return (
@@ -103,7 +103,8 @@ const FAQ = () => {
         </section>
         <section className="faq__content">
           <div className="row">
-            {isMobile || (
+            {/* Temporarily disable table of content */}
+            {/* {isMobile || (
             <div id="toc-container" className="col-md-4 d-flex flex-column">
               <div id="toc-sticky-top-trigger" className="faq__toc-sticky-top-trigger align-self-start" />
               <div id="toc" className="faq__toc-wrapper mb-auto">
@@ -120,9 +121,9 @@ const FAQ = () => {
               </div>
               <div id="toc-sticky-bot-trigger" className="faq__toc-sticky-bot-trigger align-self-end" />
             </div>
-            )}
-            <div className="col-md-8">
-              <div className="faq__content-body">{contentRender()}</div>
+            )} */}
+            <div className="col-12">
+              <div className="faq__content-body">{contentRender(faqData)}</div>
             </div>
           </div>
         </section>
