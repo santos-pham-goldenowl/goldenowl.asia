@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import parse from 'html-react-parser';
 import format from 'date-fns/format';
+import compareDesc from 'date-fns/compareDesc';
 
 import Footer from '../../components/Footer';
 import LoadDataComponent from '../../components/LoadDataComponent';
@@ -31,7 +32,7 @@ const Blog = () => {
     getAllBlogs()
       .then((res) => {
         const { data } = res.data;
-        if (data) setBlogs([...data.data]);
+        if (data) setBlogs([...data.data].sort((a, b) => compareDesc(new Date(a.attributes.created_at), new Date(b.attributes.created_at))));
 
         if (data.data.length) setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
         else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
