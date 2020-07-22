@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import parse from 'html-react-parser';
 
 import { Accordion, Card } from 'react-bootstrap';
+import Cross from '../Cross';
+import Plus from '../Plus';
 
-import objectToArray from '../../utils/objectToArray';
+import objectToArray from '../../../../utils/objectToArray';
 
 const MockFAQRender = ({ eventKey, question, answer }) => {
   const [panelStatus, setPanelStatus] = useState(false);
@@ -18,7 +20,7 @@ const MockFAQRender = ({ eventKey, question, answer }) => {
       >
         <div className="d-flex align-items-center">
           <span className="faq__content-panel-status">
-            <strong>{panelStatus ? '✖' : '✚'}</strong>
+            {panelStatus ? <Cross /> : <Plus />}
           </span>
           <p className="faq__question">{question}</p>
         </div>

@@ -12,12 +12,10 @@ const TestimonialsList = () => {
 
   const mobileView = () => objectToArray(testimonials).map((item) => (
     <div key={item.key} className="row testimonials-list__item">
-      <div className="col-12">
-        <div>
-          <img className="w-100" src={item.avatar} alt="some pic" />
-        </div>
+      <div className="col-12" data-aos="fade-right">
+        <img className="w-100" src={item.avatar} alt="some pic" />
       </div>
-      <div className="ml-auto col-12">
+      <div className="ml-auto col-12" data-aos="fade-left">
         <div className="testimonials-list__item-text">
           <h4>
             {item.key}
