@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, createRef } from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import parse from 'html-react-parser';
 import format from 'date-fns/format';
 import compareDesc from 'date-fns/compareDesc';
 
+import BreadCrumb from '../../components/BreadCrumb';
+import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
 import Footer from '../../components/Footer';
 import LoadDataComponent from '../../components/LoadDataComponent';
 import BlogHeader from '../../components/BlogHeader';
@@ -12,6 +14,8 @@ import BlogHeader from '../../components/BlogHeader';
 import readTimeCalculator from '../../utils/readTimeCalculator';
 import replaceAllString from '../../utils/replaceAllString';
 import aosItemDirection from '../../utils/aosItemDirection';
+import stickyTrigger from '../../utils/stickyTrigger';
+import useScrollDirection from '../../utils/hooks/useScrollDirection';
 
 import {
   LOADING_STATUS,
@@ -42,6 +46,13 @@ const Blog = () => {
         setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
       });
   }, []);
+
+  const pageContent = createRef();
+  const scrollDirection = useScrollDirection();
+
+  window.onscroll = () => {
+    stickyTrigger(scrollDirection);
+  };
 
   const blogRender = () => blogs && (
   <div className="row">
@@ -239,8 +250,15 @@ const Blog = () => {
           content="TdCfVtfoL4PbYbE7oJMWiiM/8pGrMTiGoHOSDR5SnWS76hsk9b6nMmeMSr8my4ILM288ym8oPwbE1dLlwuogbg=="
         />
       </Helmet>
-      <div className="container-fluid no-padding">
+      <div ref={pageContent} className="container-fluid no-padding">
         <BlogHeader />
+        <FixedTopBreadCrumb pageContent={pageContent}>
+          <Link to="/blog">Blog</Link>
+        </FixedTopBreadCrumb>
+        <BreadCrumb pageContent={pageContent}>
+          <Link to="/blog">Blog</Link>
+        </BreadCrumb>
+
         <section className="welcome">
           <div className="welcome__wrapper">
             <h1>Welcome to the Golden Owl blog</h1>

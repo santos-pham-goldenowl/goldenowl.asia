@@ -246,7 +246,7 @@ const CareerDetails = () => {
                   <div id="cv-field" className="col-12 col-md-6">
                     <label>CV Upload*</label>
                     <InputField
-                      className="d-block"
+                      className="d-none"
                       type="file"
                       id="upload-cv"
                       placeholder="No file chosen"

@@ -14,19 +14,19 @@ export default {
   },
   q4: {
     q: 'How do you price your service?',
-    a: "It depends on the circumstance of the project, the features of the products and client&rsquo;s requirements.<br />If you&rsquo;re looking for accurate estimates on the cost of building a website or application, there are few questions that would need clarified first.&nbsp;We have a range for our monthly and hourly pricing of our services. You can also <a href='https://goldenowl.asia/contact-us'>contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;",
+    a: "It depends on the circumstance of the project, the features of the products and client&rsquo;s requirements. If you&rsquo;re looking for accurate estimates on the cost of building a website or application, there are few questions that would need clarified first.&nbsp;We have a range for our monthly and hourly pricing of our services. You can also <a href='https://goldenowl.asia/contact-us'>contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;",
   },
   q5: {
     q: 'If your development resources are located overseas, will there be a local project manager in my country?',
-    a: 'We have representatives in many country but we don&rsquo;t have manager oversea<br />We are well-known for our skillful project managers, we set rules and follow them strictly to be able to reach the most possible significant output of every project. Local project managers can be flexible depending on the agreement between our clients and Golden Owl.',
+    a: 'We have representatives in many country but we don&rsquo;t have manager oversea. We are well-known for our skillful project managers, we set rules and follow them strictly to be able to reach the most possible significant output of every project. Local project managers can be flexible depending on the agreement between our clients and Golden Owl.',
   },
   q6: {
     q: 'What would be the average timeline and budget for a website/ application?',
-    a: 'The complexity of projects vary widely so there is no typical timeline or budget<br />There is no specific timeline for a digital project, this will vary widely based on the complexity of the project. If you&rsquo;re looking for accurate estimates on the time or cost of building a website or application, there are few questions that would need clarified first.&nbsp;<br />We have a range for our monthly and hourly pricing of our services. You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;',
+    a: 'The complexity of projects vary widely so there is no typical timeline or budget. There is no specific timeline for a digital project, this will vary widely based on the complexity of the project. If you&rsquo;re looking for accurate estimates on the time or cost of building a website or application, there are few questions that would need clarified first.&nbsp;. We have a range for our monthly and hourly pricing of our services. You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;',
   },
   q7: {
     q: 'Do you only work remotely? Can you come on-site?',
-    a: 'We have representatives that can possibly meet client but not always<br />We have representatives in countries ready to meet clients on specific occasions, our production team is fixable in offices.<br />You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> in case you have specific requests for assistance.',
+    a: 'We have representatives that can possibly meet client but not always. We have representatives in countries ready to meet clients on specific occasions, our production team is fixable in offices.<br />You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> in case you have specific requests for assistance.',
   },
   q8: {
     q: 'How do you handle communications and meetings?',
@@ -38,34 +38,34 @@ export default {
   },
   q10: {
     q: 'What is meant by Agile software development?',
-    a: "You can research this<br />Every of our projects is strictly executed following agile software development.&nbsp;<br />What is it: It alludes to programming improvement systems focused round the possibility of iterative turn of events, it refers to a group of development processes. These processes share some basic characteristics but do have certain subtle differences among themselves.<br />Agile methodology's advantages: A definitive incentive in Agile improvement is that it empowers developers to react to changes quicker and better, with more prominent quality and predictability.<br />We can have a link to an article about Agile software development on our site.",
+    a: "Every of our projects is strictly executed following agile software development. What is it: It alludes to programming improvement systems focused round the possibility of iterative turn of events, it refers to a group of development processes. These processes share some basic characteristics but do have certain subtle differences among themselves. Agile methodology's advantages: A definitive incentive in Agile improvement is that it empowers developers to react to changes quicker and better, with more prominent quality and predictability.",
   },
   q11: {
     q: 'What if I come to you with a product that I want to improve?',
-    a: 'We have many projects like this, there is no trouble doing it.<br />Golden Owl most famous projects include built-from-scratch projects and also the revamped ones. We have no troubles dealing with the improvement requests, as long as the required documents are provided accordingly. To find out more about the service, <a href="https://goldenowl.asia/contact-us">chat with us now.&nbsp;</a>',
+    a: 'We have many projects like this, there is no trouble doing it. Golden Owl most famous projects include built-from-scratch projects and also the revamped ones. We have no troubles dealing with the improvement requests, as long as the required documents are provided accordingly. To find out more about the service, <a href="https://goldenowl.asia/contact-us">chat with us now.&nbsp;</a>',
   },
   q12: {
     q: 'What control do we have over the project?',
-    a: 'Clients make the requirements they want and follow our work. They may make some changes.<br />Our clients are always welcomed to contribute comments for greater teamwork and outcome of the projects. The changes will be executed under the scope agreed by both parties under the signed contract.',
+    a: 'Clients make the requirements they want and follow our work. They may make some changes. Our clients are always welcomed to contribute comments for greater teamwork and outcome of the projects. The changes will be executed under the scope agreed by both parties under the signed contract.',
   },
   q13: {
     q: 'We like the idea, but we are still unsure. Can we do a MVP Project?',
-    a: 'Yes.<br />Golden Owl ensures our clients get the best out of their investment. MVP (Minimum Viable Product) is one of the ways how it works. We always welcome our clients to test the idea before they actually invest a big amount of money into it. Golden Owl even offers consultancy contributions to make the idea even grow out of the box.&nbsp;',
+    a: 'Yes. Golden Owl ensures our clients get the best out of their investment. MVP (Minimum Viable Product) is one of the ways how it works. We always welcome our clients to test the idea before they actually invest a big amount of money into it. Golden Owl even offers consultancy contributions to make the idea even grow out of the box.&nbsp;',
   },
   q14: {
     q: 'How much does a MVP cost?',
-    a: 'There&rsquo;s no particular price for this. It depends on the&nbsp; complexity of the project<br />Even for a MVP, there are still specific questions that would need clarified to have a properly accurate budget.&nbsp;<br />We have a range for our monthly and hourly pricing of our services. You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;',
+    a: 'There&rsquo;s no particular price for this. It depends on the&nbsp; complexity of the project. Even for a MVP, there are still specific questions that would need clarified to have a properly accurate budget.&nbsp;<br />We have a range for our monthly and hourly pricing of our services. You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;',
   },
   q15: {
     q: 'How can we log support calls with you?',
-    a: 'The contact form on website<br />We are available <a href="https://goldenowl.asia/contact-us">here</a> with the experienced team always ready at your disposal.',
+    a: 'We are available <a href="https://goldenowl.asia/contact-us">here</a> with the experienced team always ready at your disposal.',
   },
   q16: {
     q: 'What industries do you offer IT services?',
-    a: 'All kind of industry<br />We don\'t have any specific industries of clients,<a href="https://goldenowl.asia/portfolio"> our clients </a>come from any industries, we have a large team who are experienced and skilled to help you regardless of your products. <a href="https://goldenowl.asia/contact-us">Chat with them</a> right now to get assistance.',
+    a: 'All kind of industry. We don\'t have any specific industries of clients,<a href="https://goldenowl.asia/portfolio"> our clients </a>come from any industries, we have a large team who are experienced and skilled to help you regardless of your products. <a href="https://goldenowl.asia/contact-us">Chat with them</a> right now to get assistance.',
   },
   q17: {
     q: 'Will I own the source code?',
-    a: 'It depends on the deal.<br />Source code will be agreed under terms in contract, we will always make sure our clients have all the support and help they need under no circumstances.&nbsp;',
+    a: 'It depends on the deal. Source code will be agreed under terms in contract, we will always make sure our clients have all the support and help they need under no circumstances.&nbsp;',
   },
 };
