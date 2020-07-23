@@ -24,7 +24,8 @@ const BlogSubcriptionDialog = (props) => {
     if (validateEmail(email)) {
       subscribe({ email, type: 'post' }).then(
         (res) => {
-          const { success } = res;
+          const { data } = res.data;
+          const { success } = data;
 
           if (success) {
             onHide();

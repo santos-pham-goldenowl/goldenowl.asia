@@ -113,7 +113,7 @@ const Career = () => {
   return (
     <section className="careers">
       <Helmet>
-        <title>Career - Golden Owl</title>
+        <title>Careers - Golden Owl</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta
           content="N_qR6-efA-BOE-NPwuBG69fmJ-UG_wDHG34i4ixSlug"
