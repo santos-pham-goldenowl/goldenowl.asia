@@ -13,16 +13,6 @@ const MobileMenu = () => {
   const [state, setState] = useState(false);
   const [subMenuState, setSubMenuState] = useState(false);
 
-  const openPortfolioInNewTab = () => {
-    const win = window.open('/portfolio');
-    win.focus();
-  };
-
-  const openBlogInNewTab = () => {
-    const win = window.open('/blog');
-    win.focus();
-  };
-
   const toggleMenuState = () => {
     setState(!state);
   };
@@ -109,18 +99,20 @@ const MobileMenu = () => {
             <Link
               onClick={() => {
                 closeAllMenu('/blog');
-                openBlogInNewTab();
               }}
               className="d-flex"
+              to="/blog"
+              target="_blank"
             >
               Blog
             </Link>
             <Link
               onClick={() => {
                 closeAllMenu('/portfolio');
-                openPortfolioInNewTab();
               }}
               className="d-flex"
+              to="/portfolio"
+              target="_blank"
             >
               Portfolio
             </Link>

@@ -17,7 +17,7 @@ import './index.sass';
 const Portfolio = () => {
   const projectRender = (data) => data.map((item, index) => (
     <div key={item.url} className="col-md-6">
-      <Link to={`/portfolio/${item.url}`}>
+      <Link to={`/portfolio/${item.url}`} target="_blank">
         <div
           className="portfolio__tab__card"
           data-aos={aosItemDirection(index)}

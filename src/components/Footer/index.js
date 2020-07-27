@@ -16,17 +16,6 @@ import './index.sass';
 const Footer = () => {
   const isMobile = useMobileWidth();
 
-  const openPortfolioInNewTab = () => {
-    const win = window.open('/portfolio');
-    win.focus();
-  };
-
-  const openBlogInNewTab = () => {
-    const win = window.open('/blog');
-    win.focus();
-  };
-
-
   const mobileRender = () => (
     <div className="footer__bottom-content-wrapper">
       <img className="d-block" src={go} alt="golden-logo" />
@@ -51,7 +40,7 @@ const Footer = () => {
               <Link to="/services">Services</Link>
               <Link to="/technologies">Technologies</Link>
               <Link to="/testimonial">Testimonials</Link>
-              <Link onClick={openPortfolioInNewTab}>Portfolio</Link>
+              <Link to="/portfolio" target="_blank">Portfolio</Link>
             </div>
           </div>
           <div className="col-6">
@@ -60,7 +49,7 @@ const Footer = () => {
               <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
               <Link to="/faq">FAQ</Link>
-              <Link onClick={openBlogInNewTab}>Blog</Link>
+              <Link to="/blog" target="_blank">Blog</Link>
             </div>
           </div>
           <div className="col-6">
@@ -136,7 +125,7 @@ const Footer = () => {
               <Link to="/services">Services</Link>
               <Link to="/technologies">Technologies</Link>
               <Link to="/testimonial">Testimonials</Link>
-              <Link onClick={openPortfolioInNewTab}>Portfolio</Link>
+              <Link to="/portfolio" target="_blank">Portfolio</Link>
             </div>
           </div>
           <div className="col-md-2 pl-0">
@@ -145,7 +134,7 @@ const Footer = () => {
               <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
               <Link to="/faq">FAQ</Link>
-              <Link onClick={openBlogInNewTab}>Blog</Link>
+              <Link to="/blog" target="_blank">Blog</Link>
             </div>
           </div>
         </div>
