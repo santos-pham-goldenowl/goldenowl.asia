@@ -107,12 +107,12 @@ const BlogDetails = () => {
                     !isMobile && 'text-right'
                   }`}
                 >
-                  <p className="blog-details__source">
+                  {/* <p className="blog-details__source">
                     SOURCE
                     <br />
                     <strong>{blog.attributes.source}</strong>
                   </p>
-                  <hr />
+                  <hr /> */}
                   <p className="blog-details__share">
                     SHARE THIS POST
                     <br />

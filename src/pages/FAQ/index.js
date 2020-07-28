@@ -8,7 +8,7 @@ import MainHeader from '../../components/MainHeader';
 import BreadCrumb from '../../components/BreadCrumb';
 import FixedTopHeader from '../../components/FixedTopHeader';
 import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
-import contentRender from './components/PanelRender/mockPanelsRender';
+import FAQPanels from './components/FAQPanels';
 
 import stickyTrigger, { stickyTOCTrigger } from '../../utils/stickyTrigger';
 import useMobileWidth from '../../utils/hooks/useMobileWidth';
@@ -123,7 +123,7 @@ const FAQ = () => {
             </div>
             )} */}
             <div className="col-12">
-              <div className="faq__content-body">{contentRender(faqData)}</div>
+              <div className="faq__content-body"><FAQPanels content={faqData} /></div>
             </div>
           </div>
         </section>

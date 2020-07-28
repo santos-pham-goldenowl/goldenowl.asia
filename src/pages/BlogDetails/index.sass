@@ -76,10 +76,13 @@
       margin-bottom: 50px
     @include responsive($screen: tablet)
       margin-bottom: 75px
+      margin-top: 278px
     @include responsive($screen: desktop)
       margin-bottom: 105px
+      margin-top: 388px
     @include responsive($screen: large-desktop)
       margin-bottom: 150px
+      margin-top: 555px
 
   &__center-content
     @include responsive($screen: tablet)
@@ -90,12 +93,7 @@
       padding-bottom: 150px
     h1
       line-height: 1.5
-      @include responsive($screen: mobile)
-        font-size: 20px
-      @include responsive($screen: tablet)
-        font-size: 14px
-      @include responsive($screen: desktop)
-        font-size: 16px
+      font-size: 20px
       @include responsive($screen: large-desktop)
         font-size: 24px
     p, strong, em, del, blockquote, pre
@@ -103,15 +101,9 @@
       text-overflow: ellipsis
       overflow: hidden
       line-height: 1.67
-      @include responsive($screen: mobile)
-        font-size: 16px
-        @include responsive($screen: tablet)
-          font-size: 14px
-        @include responsive($screen: desktop)
-          font-size: 14px
-        @include responsive($screen: large-desktop)
-          font-size: 18px
-          font-size: 24px
+      font-size: 16px
+      @include responsive($screen: large-desktop)
+        font-size: 18px
     a
       color: #007bff !important
     li
@@ -143,6 +135,9 @@
       background-color: $smokeGray
       padding: 3% 5%
       white-space: break-spaces
+    img
+      width: 100%
+      height: auto
 
   &__title
     .category

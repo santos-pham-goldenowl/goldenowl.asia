@@ -26,11 +26,11 @@ export default {
   },
   q7: {
     q: 'Do you only work remotely? Can you come on-site?',
-    a: 'We have representatives that can possibly meet client but not always. We have representatives in countries ready to meet clients on specific occasions, our production team is fixable in offices.<br />You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> in case you have specific requests for assistance.',
+    a: 'We have representatives that can possibly meet client but not always. We have representatives in countries ready to meet clients on specific occasions, our production team is fixable in offices. You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> in case you have specific requests for assistance.',
   },
   q8: {
     q: 'How do you handle communications and meetings?',
-    a: 'We use many different channels to communicate with clients including those required by them. The point is we make sure clients have support constantly.<br />We are flexible for choices of communications, we have no limitations, as long as our clients have support as soon as possible and as convenient as possible when they need it.<br />Some of our most favorite official channels should be Slack, Gmail, Hangouts, Skype, etc.',
+    a: 'We use many different channels to communicate with clients including those required by them. The point is we make sure clients have support constantly. We are flexible for choices of communications, we have no limitations, as long as our clients have support as soon as possible and as convenient as possible when they need it. Some of our most favorite official channels should be Slack, Gmail, Hangouts, Skype, etc.',
   },
   q9: {
     q: 'How do you handle change requests?',
@@ -38,7 +38,7 @@ export default {
   },
   q10: {
     q: 'What is meant by Agile software development?',
-    a: "Every of our projects is strictly executed following agile software development. What is it: It alludes to programming improvement systems focused round the possibility of iterative turn of events, it refers to a group of development processes. These processes share some basic characteristics but do have certain subtle differences among themselves. Agile methodology's advantages: A definitive incentive in Agile improvement is that it empowers developers to react to changes quicker and better, with more prominent quality and predictability.",
+    a: "Every of our projects is strictly executed following agile software development. It alludes to programming improvement systems focused round the possibility of iterative turn of events, it refers to a group of development processes. These processes share some basic characteristics but do have certain subtle differences among themselves. Agile methodology's advantages: A definitive incentive in Agile improvement is that it empowers developers to react to changes quicker and better, with more prominent quality and predictability.",
   },
   q11: {
     q: 'What if I come to you with a product that I want to improve?',
@@ -54,7 +54,7 @@ export default {
   },
   q14: {
     q: 'How much does a MVP cost?',
-    a: 'There&rsquo;s no particular price for this. It depends on the&nbsp; complexity of the project. Even for a MVP, there are still specific questions that would need clarified to have a properly accurate budget.&nbsp;<br />We have a range for our monthly and hourly pricing of our services. You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;',
+    a: 'There&rsquo;s no particular price for this. It depends on the&nbsp; complexity of the project. Even for a MVP, there are still specific questions that would need clarified to have a properly accurate budget. We have a range for our monthly and hourly pricing of our services. You can also <a href="https://goldenowl.asia/contact-us">contact us online</a> to speak with one of our experienced strategists about your plan.&nbsp;',
   },
   q15: {
     q: 'How can we log support calls with you?',

@@ -19,9 +19,7 @@ const MockFAQRender = ({ eventKey, question, answer }) => {
         eventKey={eventKey}
       >
         <div className="d-flex align-items-center">
-          <span className="faq__content-panel-status">
-            {panelStatus ? <Cross /> : <Plus />}
-          </span>
+          {panelStatus ? <Cross /> : <Plus />}
           <p className="faq__question">{question}</p>
         </div>
       </Accordion.Toggle>
@@ -36,7 +34,7 @@ const MockFAQRender = ({ eventKey, question, answer }) => {
   );
 };
 
-const contentRender = (content) => objectToArray(content).map((item) => (
+const contentRender = ({ content }) => objectToArray(content).map((item) => (
   <Accordion className="faq__content-item" id={item.key}>
     <MockFAQRender eventKey={item.key} question={item.q} answer={item.a} />
   </Accordion>
