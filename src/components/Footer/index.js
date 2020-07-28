@@ -46,11 +46,11 @@ const Footer = () => {
           <div className="col-6">
             <h3 className="footer__bottom-grid-title">Others</h3>
             <div>
+              {/* <Link to="/activity">Activity</Link> */}
               <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
               <Link to="/faq">FAQ</Link>
               <Link to="/blog" target="_blank">Blog</Link>
-              <Link to="/activity">Activity</Link>
             </div>
           </div>
           <div className="col-6">
@@ -132,11 +132,11 @@ const Footer = () => {
           <div className="col-md-2 pl-0">
             <h3 className="footer__bottom-grid-title">Others</h3>
             <div>
+              {/* <Link to="/activity">Activity</Link> */}
               <Link to="/careers">Careers</Link>
               <Link to="/contact-us">Contact us</Link>
               <Link to="/faq">FAQ</Link>
               <Link to="/blog" target="_blank">Blog</Link>
-              <Link to="/activity">Activity</Link>
             </div>
           </div>
         </div>

@@ -32,10 +32,7 @@ export default (
       ))
     }
     <Route path="/careers" />
-    <Route path="/careers/details" />
     <Route path="/faq" />
     <Route exact path="/activity" />
-    <Route path="/activity/details" />
-    <Route path="" />
   </Switch>
 );
