@@ -105,7 +105,7 @@ app.use(
     .post('/submit-application', upload.single('cvFile'), (req, res) => {
       const { body, file } = req;
       const {
-        firstName, lastName, email, url, reason, job,
+        fullName, email, job,
       } = body;
 
       fs.readFile(file.path, (err, data) => {
@@ -131,15 +131,13 @@ app.use(
             <body>
               <h3>Hi Admin,</h3>
               <p class="opening">
-                A candidate whose name is&nbsp;${`${firstName} ${lastName}`}&nbsp;sent you a message with the reason to hire him/her:
+                A candidate whose name is&nbsp;${`${fullName}`}&nbsp;sent you a job application.
               </p>
-              <p class="message-section">&nbsp;&nbsp;<em>${reason}</em></p>
-              <p class="candidate-info"><u>Candidate's portfolio:</u>&nbsp;${url}</p>
               <p class="candidate-info"><u>Candidate's email:</u>&nbsp;${email}</p>
             </body>`,
           attachments: [
             {
-              filename: `${lastName}-CV.pdf`,
+              filename: `${fullName}-CV.pdf`,
               type: 'application/pdf',
               disposition: 'attachment',
               content: data.toString('base64'),

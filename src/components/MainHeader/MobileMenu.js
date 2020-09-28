@@ -116,6 +116,15 @@ const MobileMenu = () => {
             >
               Portfolio
             </Link>
+            <Link
+                onClick={() => {
+                  closeAllMenu('/careers');
+                }}
+                className="d-flex"
+                to="/careers"
+              >
+                Careers
+            </Link>
           </div>
           <Link
             onClick={() => closeAllMenu('/contact-us')}
