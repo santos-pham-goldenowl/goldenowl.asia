@@ -106,7 +106,7 @@ const Contact = () => {
               </div>
               <div className="col-12 col-md-6 p-0 ml-auto overflow-hidden" data-aos="fade-left">
                 <iframe
-                  src="https://pipedrivewebforms.com/form/d4ad07bce7708484ea5575cea7d07e9a7536351"
+                  src="https://forms.teamwave.com/tw16294-549890c2df614a369947f1e1e742807e-33002form"
                   scrolling="no"
                   title="GO-contact-form"
                   seamless="seamless"
