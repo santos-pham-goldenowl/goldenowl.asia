@@ -47,7 +47,7 @@ const CompanyQualities = () => (
       <div className="col-12 col-md-4 qualities__items d-block" data-aos="fade-down">
         <img src={companyQuality3} alt="We create" />
         <h5>Compliance & Commitment</h5>
-        <div id="need-line-break" className="d-flex">
+        <div className="d-flex">
           <p>
             We follow all the legal procedures of trading with our clients to make sure that no one has to face any legal issue.
           </p>
