@@ -3,7 +3,7 @@
 
 .intro
   text-align: center
-  background-color: $slightOrange
+  
   @include responsive($screen: mobile)
     padding: 42px 0
   @include responsive($screen: tablet)
@@ -12,22 +12,25 @@
     padding: 58px 0
   @include responsive($screen: large-desktop)
     padding: 82px 0
-
   .row
+    background-color: $slightOrange
     @include responsive($screen: tablet)
       margin: 0 -12px 0 -13px !important
     @include responsive($screen: desktop)
+    
       margin: 0 -17px 0 -18px !important
     @include responsive($screen: large-desktop)
       margin: 0 -25px !important
 
   [class*='col-']
+    @include responsive($screen: mobile)
+      padding: 10px 12px 10px 13px !important
     @include responsive($screen: tablet)
-      padding: 0 12px 0 13px !important
+      padding: 10px 12px 10px 13px !important
     @include responsive($screen: desktop)
-      padding: 0 17px 0 18px !important
+      padding: 15px 17px 15px 18px !important
     @include responsive($screen: large-desktop)
-      padding: 0 25px !important
+      padding: 58px 60px !important
 
   &__items
     text-align: left
@@ -37,7 +40,7 @@
       @include responsive($screen: mobile)
         max-width: 345px
         font-size: 30px
-        line-height: 2.125
+        line-height: 1.25
         margin-bottom: 34px
         margin-left: auto
         margin-right: auto
@@ -70,4 +73,16 @@
         margin-bottom: 30px
     p.bottom-line
       margin-bottom: 0
-
+    video
+      @include responsive($screen: mobile)
+        width: 100%
+        height: auto
+      @include responsive($screen: tablet)
+        width: 100%
+        height: auto
+      @include responsive($screen: desktop)
+        width: 100%
+        height: 300px
+      @include responsive($screen: large-desktop)
+        width: 100%
+        height: 300px

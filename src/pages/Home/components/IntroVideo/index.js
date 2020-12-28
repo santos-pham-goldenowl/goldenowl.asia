@@ -37,7 +37,7 @@ const IntroVideo = () => {
         </div>
         <div className="col-12 col-md-6 intro__items d-block" data-aos="fade-up">
           <VisibilitySensor onChange={(visible) => setIsVisible(visible)}>
-            <video width="600" height="300" loop ref={videoRef} controls>
+            <video loop ref={videoRef} controls>
               <source src={videoIntro} type="video/mp4" />
             </video>
           </VisibilitySensor>
