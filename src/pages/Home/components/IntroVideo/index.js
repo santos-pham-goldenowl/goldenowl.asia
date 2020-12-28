@@ -10,10 +10,12 @@ const IntroVideo = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (isVisible) {
-      videoRef.current.play();
-    } else if (videoRef.current.play) {
-      videoRef.current.pause();
+    if (videoRef.current) {
+      if (isVisible) {
+        videoRef.current.play();
+      } else {
+        videoRef.current.pause();
+      }
     }
   }, [isVisible]);
 
@@ -36,7 +38,7 @@ const IntroVideo = () => {
           </div>
         </div>
         <div className="col-12 col-md-6 intro__items d-block" data-aos="fade-up">
-          <VisibilitySensor onChange={(visible) => setIsVisible(visible)}>
+          <VisibilitySensor onChange={setIsVisible}>
             <video loop ref={videoRef} controls>
               <source src={videoIntro} type="video/mp4" />
             </video>
