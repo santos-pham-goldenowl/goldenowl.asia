@@ -29,15 +29,15 @@
   p
     line-height: 1.5
     @include responsive($screen: mobile)
-      font-size: 16px
+      font-size: 22px
       line-height: 1.5
       padding-bottom: 30px
     @include responsive($screen: tablet)
-      font-size: 14px
+      font-size: 20px
     @include responsive($screen: desktop)
-      font-size: 14px
+      font-size: 20px
     @include responsive($screen: large-desktop)
-      font-size: 18px
+      font-size: 26px
 
   &__items-wrapper
     padding-left: 103px !important
@@ -78,7 +78,26 @@
     @include responsive($screen: large-desktop)
       font-size: 26px
       padding-bottom: 19px
-
+  &__item-description
+    @include responsive($screen: mobile)
+      font-size: 14px !important
+      max-width: 200px
+      line-height: 1.25
+      margin-bottom: auto
+      margin-left: auto
+      margin-right: auto
+    @include responsive($screen: tablet)
+      font-size: 14px !important
+      max-width: 200px
+      margin-bottom: 17px
+    @include responsive($screen: desktop)
+      font-size: 16px !important
+      max-width: 210px
+      margin-bottom: 23px
+    @include responsive($screen: large-desktop)
+      font-size: 20px !important
+      max-width: 275px
+      margin-bottom: 34px
   &__arrow
     margin-top: 15px
     content: ""
@@ -98,3 +117,8 @@
       width: 36px
     @include responsive($screen: large-desktop)
       width: 40px
+  &__space
+    @include responsive($screen: desktop)
+      margin-top: 25px
+    @include responsive($screen: large-desktop)
+      margin-top: 32px
