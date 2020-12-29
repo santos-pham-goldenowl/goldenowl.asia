@@ -8,6 +8,7 @@ import videoIntro from '../../../../assets/videos/intro.mp4';
 const IntroVideo = () => {
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  console.log('🚀 ~ file: index.js ~ line 11 ~ IntroVideo ~ isVisible', isVisible);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -39,7 +40,7 @@ const IntroVideo = () => {
         </div>
         <div className="col-12 col-md-6 intro__items d-block" data-aos="fade-up">
           <VisibilitySensor onChange={setIsVisible}>
-            <video loop ref={videoRef} controls>
+            <video loop ref={videoRef} controls muted>
               <source src={videoIntro} type="video/mp4" />
             </video>
           </VisibilitySensor>
