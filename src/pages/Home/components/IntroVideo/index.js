@@ -8,7 +8,6 @@ import videoIntro from '../../../../assets/videos/intro.mp4';
 const IntroVideo = () => {
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-  console.log('🚀 ~ file: index.js ~ line 11 ~ IntroVideo ~ isVisible', isVisible);
 
   useEffect(() => {
     if (videoRef.current) {
