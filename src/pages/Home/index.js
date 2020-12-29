@@ -26,6 +26,7 @@ const Archieves = Loadable({ loader: () => import('./components/Archieves'), loa
 const Introduction = Loadable({ loader: () => import('./components/Introduction'), loading: Loading, delay: 1300 });
 const Technologies = Loadable({ loader: () => import('./components/Technologies'), loading: Loading, delay: 1300 });
 const CompanyQuality = Loadable({ loader: () => import('./components/CompanyQualities'), loading: Loading, delay: 1300 });
+const IntroVideo = Loadable({ loader: () => import('./components/IntroVideo'), loading: Loading, delay: 1300 });
 const Contact = Loadable({ loader: () => import('../../components/Contact'), loading: Loading, delay: 1300 });
 const Partners = Loadable({ loader: () => import('../../components/Partners'), loading: Loading, delay: 1300 });
 const Footer = Loadable({ loader: () => import('../../components/Footer'), loading: Loading, delay: 1300 });
@@ -55,6 +56,7 @@ const Home = () => {
         <Missions />
         <Introduction />
         <CompanyQuality />
+        <IntroVideo />
         <Archieves />
         <Feedback />
         <hr style={{
