@@ -1,0 +1,73 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.categories
+  &__items
+    background-color: $white
+    box-shadow: 10px 10px 20px -15px rgba(160, 160, 160, 0.5)
+    border: solid 0.5px rgba(160, 160, 160, 0.2)
+    @include responsive($screen: tablet)
+      padding: 17px !important
+      width: 150px
+      border-radius: 5px
+    @include responsive($screen: desktop)
+      padding: 21px !important
+      width: 188px
+      border-radius: 7px
+    @include responsive($screen: large-desktop)
+      padding: 12px !important
+      width: 240px
+      border-radius: 10px
+
+  &__arrow-wrapper
+    display: flex
+    align-items: center
+    @include responsive($screen: tablet)
+      padding-right: 25px
+      height: 28px
+    @include responsive($screen: desktop)
+      padding-right: 32px
+      height: 35px
+    @include responsive($screen: large-desktop)
+      padding-right: 45px
+      height: 50px
+
+  &__icon-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: left
+    padding-right: 10px
+    @include responsive($screen: tablet)
+      width: 28px
+    @include responsive($screen: desktop)
+      width: 35px
+    @include responsive($screen: large-desktop)
+      width: 50px
+    img
+      max-width: 75%
+      max-height: 75%
+
+  &__category-description-wrapper
+    text-align: left
+    p, h4
+      line-height: 1.25
+      @include responsive($screen: tablet)
+        font-size: 12px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 16px
+
+  &__category
+    display: flex
+    &:hover
+      background-color: $white
+      font-weight: bold
+      border-radius: 6px
+    @include responsive($screen: tablet)
+      padding: 6px 6px
+    @include responsive($screen: desktop)
+      padding: 7px 7px
+    @include responsive($screen: large-desktop)
+      padding: 10px 12px

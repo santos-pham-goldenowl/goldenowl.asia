@@ -97,6 +97,8 @@ li
 
 .arrow-down
   margin-left: 5px
+  @include responsive($screen: mobile)
+    height: 7px
   @include responsive($screen: tablet)
     height: 5px
   @include responsive($screen: desktop)
