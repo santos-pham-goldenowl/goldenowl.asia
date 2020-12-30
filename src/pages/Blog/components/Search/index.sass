@@ -1,0 +1,32 @@
+@import 'styles/variables'
+@import 'styles/mixins'
+
+.search
+  background-color: $white !important
+  &__icon-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: left
+    @include responsive($screen: tablet)
+      width: 28px
+    @include responsive($screen: desktop)
+      width: 30px
+    @include responsive($screen: large-desktop)
+      width: 35px
+
+  &__text
+    text-align: left
+    &:hover
+      cursor: pointer
+    p, h4
+      line-height: 1.25
+      @include responsive($screen: tablet)
+        font-size: 10px
+      @include responsive($screen: desktop)
+        font-size: 14px
+      @include responsive($screen: large-desktop)
+        font-size: 20px
+  &__box
+    display: flex
+
