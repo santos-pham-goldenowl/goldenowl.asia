@@ -3,6 +3,8 @@
 
 .sub-header
   background-color: $white !important
+  @include responsive($screen: mobile)
+    display: none
   display: flex
   padding: 0
   justify-content: flex-start
@@ -10,7 +12,7 @@
   position: relative
   font-size: 14px
   font-family: ProximaNovaBold
-
+  margin-top: 15px
   .no-bootstrap-arrow
     &:after
       content: none
@@ -25,7 +27,8 @@
       padding-right: 36px
     @include responsive($screen: large-desktop)
       padding-right: 50px
-
+    &:hover
+      cursor: pointer
   .dropdown
     position: relative
     display: inline-block
@@ -52,11 +55,11 @@
         left: -40px
       &.dropdown-open
         @include responsive($screen: tablet)
-          height: auto
+          height: 450
         @include responsive($screen: desktop)
-          height: auto
+          height: 500
         @include responsive($screen: large-desktop)
-          height: auto
+          height: 651
 
   .categories-dropdown-top-block
     width: 100%

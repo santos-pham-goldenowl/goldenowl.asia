@@ -3,6 +3,8 @@
 
 .search
   background-color: $white !important
+  @include responsive($screen: mobile)
+    display: none
   &__icon-wrapper
     @include responsive($screen: tablet)
       width: 28px
@@ -25,18 +27,60 @@
         font-size: 20px
   &__box
     position: relative
-   
-    margin-left: 160px
+    display: flex
+    align-items: center
+    
 
+img.icon-search
+  margin-right: 5px
+  position: absolute
+  right: 100px
+  top: calc( 50% - 20px )
+  transition: right 0.4s linear
+  @include responsive($screen: mobile)
+    height: 17px
+  @include responsive($screen: tablet)
+    height: 15px
+  @include responsive($screen: desktop)
+    height: 17px
+  @include responsive($screen: large-desktop)
+    height: 20px
 
 input.search-box-blog
+  margin-left: auto
+  @include responsive($screen: tablet)
+    font-size: 16px !important
+  @include responsive($screen: desktop)
+    font-size: 17px !important
+  @include responsive($screen: large-desktop)
+    font-size: 20px !important
   border: none !important
   padding-left: 30px !important
-  width: 50px
-  transition: width 0.4s linear;
+  width: 120px
+  transition: width 0.4s linear
   &:focus
     outline-color: transparent !important
     border-bottom: solid #252427 1px !important 
-    width: 200px
-    margin-left: 0px
-    transition: width 0.4s linear
+    width: 100%
+    ~ img.icon-search
+      right: calc( 100% - 20px )
+    ~ div.tag-remove
+      &::before
+        content: 'x'
+        margin-bottom: 10px
+        color: #000
+        font-weight: 300
+        @include responsive($screen: tablet)
+          font-size: 16px !important
+          top: calc( 50% - 20px )
+        @include responsive($screen: desktop)
+          font-size: 17px !important
+          top: calc( 50% - 22px )
+        @include responsive($screen: large-desktop)
+          font-size: 20px !important
+          top: calc( 50% - 25px )
+        font-family: ProximaNovaBold
+        position: absolute
+        right: 2px
+      &:hover
+        cursor: pointer

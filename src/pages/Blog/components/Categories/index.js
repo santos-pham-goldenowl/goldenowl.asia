@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import arrowDown from '../../../../assets/images/chevron-down-solid.svg';
 import categories from '../../../../utils/blogCategories';
@@ -11,7 +10,7 @@ const Categories = () => (
   <header id="sub-header" className="sub-header">
     <div className="dropdown">
       <div className="align-items-center sub-header__button">
-        <Link
+        <div
           className="d-flex align-items-center no-hover-text-decoration"
           onMouseOver={() => document.getElementById('categories-dropdown')
                 && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
@@ -24,7 +23,7 @@ const Categories = () => (
         >
           <h4 className="sub-header__text">All categories</h4>
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
-        </Link>
+        </div>
         <div
           className="categories-dropdown-top-block"
           onMouseOver={() => document.getElementById('categories-dropdown')
@@ -50,13 +49,13 @@ const Categories = () => (
                 && document.getElementById('categories-dropdown').classList.remove('dropdown-open')}
         >
           {categories.map((category) => (
-            <Link key={category.name}>
+            <div key={category.name}>
               <div className="categories__category">
                 <div className="categories__category-description-wrapper">
                   <p>{category.name}</p>
                 </div>
               </div>
-            </Link>
+            </div>
 
           ))}
         </div>
