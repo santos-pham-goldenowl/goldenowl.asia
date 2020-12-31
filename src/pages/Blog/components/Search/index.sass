@@ -4,10 +4,6 @@
 .search
   background-color: $white !important
   &__icon-wrapper
-    display: flex
-    align-items: center
-    justify-content: center
-    text-align: left
     @include responsive($screen: tablet)
       width: 28px
     @include responsive($screen: desktop)
@@ -28,5 +24,19 @@
       @include responsive($screen: large-desktop)
         font-size: 20px
   &__box
-    display: flex
+    position: relative
+   
+    margin-left: 160px
 
+
+input.search-box-blog
+  border: none !important
+  padding-left: 30px !important
+  width: 50px
+  transition: width 0.4s linear;
+  &:focus
+    outline-color: transparent !important
+    border-bottom: solid #252427 1px !important 
+    width: 200px
+    margin-left: 0px
+    transition: width 0.4s linear
