@@ -12,6 +12,8 @@ const Categories = () => (
       <div className="align-items-center sub-header__button">
         <div
           className="d-flex align-items-center no-hover-text-decoration"
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex="0"
           onMouseOver={() => document.getElementById('categories-dropdown')
                 && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
           onMouseLeave={() => document.getElementById('categories-dropdown')

@@ -3,9 +3,9 @@
 
 .sub-header
   background-color: $white !important
-  @include responsive($screen: mobile)
-    display: none
   display: flex
+  @include responsive($screen: mobile)
+    max-width: 200px
   padding: 0
   justify-content: flex-start
   align-items: center
@@ -42,7 +42,7 @@
       background-color: transparent
       z-index: 10
       @include responsive($screen: mobile)
-        padding-top: 10px
+        padding-top: 5px
         left: -21px
       @include responsive($screen: tablet)
         padding-top: 10px
@@ -54,12 +54,14 @@
         padding-top: 20px
         left: -40px
       &.dropdown-open
+        @include responsive($screen: mobile)
+          height: 400px
         @include responsive($screen: tablet)
-          height: 450
+          height: 450px
         @include responsive($screen: desktop)
-          height: 500
+          height: 500px
         @include responsive($screen: large-desktop)
-          height: 651
+          height: 651px
 
   .categories-dropdown-top-block
     width: 100%

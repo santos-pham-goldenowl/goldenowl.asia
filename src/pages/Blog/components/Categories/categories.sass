@@ -6,6 +6,10 @@
     background-color: $white
     box-shadow: 10px 10px 20px -15px rgba(160, 160, 160, 0.5)
     border: solid 0.5px rgba(160, 160, 160, 0.2)
+    @include responsive($screen: mobile)
+      padding: 17px !important
+      width: 150px
+      border-radius: 5px
     @include responsive($screen: tablet)
       padding: 17px !important
       width: 150px
@@ -22,6 +26,9 @@
   &__arrow-wrapper
     display: flex
     align-items: center
+    @include responsive($screen: mobile)
+      padding-right: 25px
+      height: 28px
     @include responsive($screen: tablet)
       padding-right: 25px
       height: 28px
@@ -38,6 +45,8 @@
     justify-content: center
     text-align: left
     padding-right: 10px
+    @include responsive($screen: mobile)
+      width: 28px
     @include responsive($screen: tablet)
       width: 28px
     @include responsive($screen: desktop)
@@ -52,10 +61,12 @@
     text-align: left
     p, h4
       line-height: 1.25
-      @include responsive($screen: tablet)
-        font-size: 12px
-      @include responsive($screen: desktop)
+      @include responsive($screen: mobile)
         font-size: 14px
+      @include responsive($screen: tablet)
+        font-size: 14px
+      @include responsive($screen: desktop)
+        font-size: 16px
       @include responsive($screen: large-desktop)
         font-size: 16px
 
@@ -65,6 +76,8 @@
       background-color: $white
       font-weight: bold
       border-radius: 6px
+    @include responsive($screen: mobile)
+      padding: 5px 5px
     @include responsive($screen: tablet)
       padding: 6px 6px
     @include responsive($screen: desktop)

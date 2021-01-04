@@ -4,7 +4,7 @@
 .search
   background-color: $white !important
   @include responsive($screen: mobile)
-    display: none
+    margin-left: 10px
   &__icon-wrapper
     @include responsive($screen: tablet)
       width: 28px
@@ -29,25 +29,33 @@
     position: relative
     display: flex
     align-items: center
+    @include responsive($screen: mobile)
+      margin-left: 14px
+      margin-top: 10px
     
 
 img.icon-search
   margin-right: 5px
   position: absolute
-  right: 100px
   top: calc( 50% - 20px )
   transition: right 0.4s linear
   @include responsive($screen: mobile)
     height: 17px
   @include responsive($screen: tablet)
+    right: 100px
     height: 15px
   @include responsive($screen: desktop)
+    right: 100px
     height: 17px
   @include responsive($screen: large-desktop)
+    right: 100px
     height: 20px
 
 input.search-box-blog
   margin-left: auto
+  @include responsive($screen: mobile)
+    margin-left: 0 !important
+    font-size: 15px !important
   @include responsive($screen: tablet)
     font-size: 16px !important
   @include responsive($screen: desktop)
@@ -70,6 +78,9 @@ input.search-box-blog
         margin-bottom: 10px
         color: #000
         font-weight: 300
+        @include responsive($screen: mobile)
+          font-size: 16px !important
+          top: calc( 50% - 18px )
         @include responsive($screen: tablet)
           font-size: 16px !important
           top: calc( 50% - 20px )
