@@ -54,6 +54,16 @@
       @include responsive($screen: large-desktop)
         font-size: 20px
 
+  .filter
+    @include responsive($screen: mobile)
+      padding: 10px 0 10px 0px
+    @include responsive($screen: tablet)
+      padding: 40px 0 18px 6px
+    @include responsive($screen: desktop)
+      padding: 50px 0 36px 5px
+    @include responsive($screen: large-desktop)
+      padding: 79px 0 49px 105px !important
+
   .blogs
     @include responsive($screen: mobile)
       padding-bottom: 10px
