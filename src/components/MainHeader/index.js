@@ -34,6 +34,9 @@ class MainHeader extends Component {
             <li className="main-header__flex-item">
               <Link to="/portfolio" target="_blank">Portfolio</Link>
             </li>
+            <li className="main-header__flex-item">
+              <Link to="/careers">Careers</Link>
+            </li>
             <li className="d-none main-header__flex-item font-bold">
               <span>English</span>
               <img

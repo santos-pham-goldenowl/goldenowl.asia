@@ -85,12 +85,9 @@ const CareerDetails = () => {
 
       const cvForm = new FormData();
 
-      cvForm.append('firstName', values.firstName);
-      cvForm.append('lastName', values.lastName);
+      cvForm.append('fullName', values.fullName);
       cvForm.append('email', values.email);
-      cvForm.append('url', values.url);
       cvForm.append('cvFile', document.getElementById('upload-cv').files[0]);
-      cvForm.append('reason', values.reason);
       cvForm.append('job', job.title);
 
       submitApplication(cvForm)
@@ -200,22 +197,12 @@ const CareerDetails = () => {
               <div className="col-12 col-md-6">
                 <div className="row">
                   {/* First Name */}
-                  <div className="col-12 col-md-6">
-                    <label>First name*</label>
+                  <div className="col-12">
+                    <label>Full name*</label>
                     <InputField
                       className="form-control"
-                      placeholder="Your first name"
-                      field="firstName"
-                      validate={(value) => (!value ? 'Required' : false)}
-                    />
-                  </div>
-                  {/* Last Name */}
-                  <div className="col-12 col-md-6">
-                    <label>Last name*</label>
-                    <InputField
-                      className="form-control"
-                      placeholder="Your last name"
-                      field="lastName"
+                      placeholder="Your full name"
+                      field="fullName"
                       validate={(value) => (!value ? 'Required' : false)}
                     />
                   </div>
@@ -274,38 +261,6 @@ const CareerDetails = () => {
                       <span id="upload-button">Choose file</span>
                       <span id="upload-placeholder">No file chosen</span>
                     </label>
-                  </div>
-                  {/* Portfolio URL */}
-                  <div className="col-md-12">
-                    <label>Portfolio URL*</label>
-                    <InputField
-                      className="form-control"
-                      placeholder="Your portfolio link"
-                      field="url"
-                      validate={async (value) => {
-                        await new Promise((resolve) => setTimeout(resolve, 1000));
-
-                        if (!value) {
-                          return 'Required';
-                        }
-
-                        if (!validateUrl(value)) {
-                          return 'Invalid URL';
-                        }
-
-                        return false;
-                      }}
-                    />
-                  </div>
-                  {/* Reason */}
-                  <div className="col-md-12">
-                    <label>Why you are right for this role*</label>
-                    <InputField
-                      className="form-control"
-                      placeholder="Overview in the few words"
-                      field="reason"
-                      validate={(value) => (!value ? 'Required' : false)}
-                    />
                   </div>
                   {isSubmitting ? (
                     <div className="col-md-12">

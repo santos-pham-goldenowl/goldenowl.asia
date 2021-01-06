@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React, { createRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 
@@ -23,6 +23,27 @@ const Contact = () => {
   const isMobile = useMobileWidth();
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
+
+  // useEffect(() => {
+  //   const script = document.createElement("script")
+
+  //   script.type = "text/javascript";
+  //   script.src="https://forms.teamwave.com/static/js/webform-1.0.js";
+
+  //   const iframeForm = document.getElementById("contact-form-iframe");
+
+  //   iframeForm.appendChild(script);
+  // }, [])
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://forms.teamwave.com/static/js/webform-1.0.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
 
   window.onscroll = () => stickyTrigger(scrollDirection);
 
@@ -105,12 +126,15 @@ const Contact = () => {
                 </div>
               </div>
               <div className="col-12 col-md-6 p-0 ml-auto overflow-hidden" data-aos="fade-left">
+                {/* <div dangerouslySetInnerHTML={{__html: '<div style="text-align: center;" class="tw-webforms" data-src="https://forms.teamwave.com/tw16294-549890c2df614a369947f1e1e742807e-33002form"></div>'}} /> */}
                 <iframe
-                  src="https://pipedrivewebforms.com/form/d4ad07bce7708484ea5575cea7d07e9a7536351"
+                  id="contact-form-iframe"
+                  src="https://forms.teamwave.com/tw16294-549890c2df614a369947f1e1e742807e-33002form"
                   scrolling="no"
                   title="GO-contact-form"
                   seamless="seamless"
                 />
+                {/* <script type="text/javascript" src="https://forms.teamwave.com/static/js/webform-1.0.js"></script> */}
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ import videoIntro from '../../../../assets/videos/intro.mp4';
 const IntroVideo = () => {
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-  console.log('🚀 ~ file: index.js ~ line 11 ~ IntroVideo ~ isVisible', isVisible);
+
 
   useEffect(() => {
     if (videoRef.current) {
@@ -24,17 +24,16 @@ const IntroVideo = () => {
     <section className="intro">
       <div className="row">
         <div className="col-12 col-md-6 intro__items d-block" data-aos="fade-down">
-          <h5>In a world of technology, people makes the difference</h5>
+          <h5>In a world of technology, people make the difference</h5>
           <div className="d-flex">
             <p>
-              Caught on camera are the coding moments of talented and passionate developers.
-              You will also find our best projects demos at the end of the video.
+              Caught on camera are the hard-working moments of passionate developers.
+              Some of their notable end-products are also shown at the end of the video.
             </p>
           </div>
           <div className="d-flex">
             <p className="bottom-line">
-              At Golden Owl, our clients' satisfaction is always our
-              first priority!
+              We strive to ensure your satisfaction, which is always our first priority!
             </p>
           </div>
         </div>

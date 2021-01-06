@@ -1,48 +1,48 @@
 /* eslint-disable  max-len */
 
-import raja from '../assets/images/feedback/Raja.jpg';
-import drDidin from '../assets/images/feedback/DrDidin.png';
-import willBeebe from '../assets/images/feedback/WillBeebe.jpg';
-import tinkerbox from '../assets/images/feedback/Tinkerbox.png';
-import congLuu from '../assets/images/feedback/CongLuu.png';
-import nhiemNguyen from '../assets/images/feedback/NhiemNguyen.png';
+import patrickLef from '../assets/images/feedback/PatrickLef.png';
+import jacobThomas from '../assets/images/feedback/JacobThomas.png';
+import ericFitzgerald from '../assets/images/feedback/EricFitzgerald.png';
+import samHon from '../assets/images/feedback/SamHon.png';
+import emilyY from '../assets/images/feedback/EmilyY.png';
+import sky from '../assets/images/feedback/Sky.png';
 
 const feedback = [
   {
-    name: 'Raja',
-    project: 'Idea burn',
-    url: raja,
-    content: 'GoldenOwl have proven to be an extremely cost effective and professional resource. We have been particularly impressed with the speed of implementation, dedication & quality of the product development. So that we can see the company as our long-term technology partner.',
+    name: 'Patrick Lef',
+    project: 'CTO at Collabs',
+    url: patrickLef,
+    content: 'We’ve been happily working with Golden Owl since Jan 20 2018. You can count on them to have the expertise you need. Their senior full stack developers really take the time to nail down the architecture before moving forward. Their timely responses and ability to provide solutions are both really impressive.',
   },
   {
-    name: 'Dr. Didin Permadi',
-    project: 'Asian Institute of Technology',
-    url: drDidin,
-    content: 'We are glad to use of one of the masterpiece products from Goldenowl inc. The software is really useful to overcome a problems of treating big data produced from air quality modeling simulation. I am very surprise of the high quality of the software which is unique and effective to fulfill the need to process a big environmental data. It is a miracle in IT development and we, scientist can benefit a lot from their products.',
+    name: 'Jacob Thomas',
+    project: 'Director at Delegate Connect',
+    url: jacobThomas,
+    content: 'Golden Owl is a very reliable partner. They became like an extension of our business and never felt like a vendor.',
   },
   {
-    name: 'Will Beebe',
-    project: 'Project PC crawler',
-    url: willBeebe,
-    content: 'Golden Owl has been a stable, consistent, and strong contributor to our company and I\'m looking forward to working with them much more in the future.',
+    name: 'Eric Fitzgerald',
+    project: 'Founder & CEO at Cheer Me',
+    url: ericFitzgerald,
+    content: 'GI would recommend Golden Owl 100%. They surprised us with their speed and brought really talented people to help us out. We appreciate their knowledge, engagement, and dedication.',
   },
   {
-    name: 'Cong Luu',
-    project: 'Instaplus',
-    url: congLuu,
-    content: 'GoldenOwl is the right partner with good teams, we worked with some other outsourced companies, but only with Golden Owl we feel confident with our project. Also we choose Goldenowl for it price/rate, it really beats others.',
+    name: 'Sam Hon',
+    project: 'CTO at Silicon Jungles',
+    url: samHon,
+    content: 'They deliver on their promises and have a great business acumen for fast-paced product development. We are very happy with how the project was handled and completed successfully.',
   },
   {
-    name: 'Nhiem Nguyen',
-    project: 'Project Iadoa, US',
-    url: nhiemNguyen,
-    content: 'GoldenOwl is very knowledgeable in Ruby on Rails and especially in Spree. My requirements weren\'t clear at first but they asked questions and then delivered a quality application. Easy to work with and highly recommended.',
+    name: 'Emily Y',
+    project: 'Senior Marketing Coordinator at The Work Project',
+    url: emilyY,
+    content: 'The thing that impressed us the most is the level of their involvement in the project. They were communicative and kept us updated. They are really easy to work with, and they’ve guided me as someone with no experience in this arena.',
   },
   {
-    name: 'Tinkerbox',
-    project: 'Tinkerbox',
-    url: tinkerbox,
-    content: 'Justin have been a delight to work with. His team was fast to respond and deliver.',
+    name: 'Sky Pay',
+    project: 'Co-founder & CTO at BiiB',
+    url: sky,
+    content: 'Golden Owl is one of the best IT consulting and software development company we have worked with so far. This team really took the time to learn our business model and came up with innovative ideas to save us money. They really think out of the box to suggest the best possible solutions based on our business model.',
   },
 ];
 

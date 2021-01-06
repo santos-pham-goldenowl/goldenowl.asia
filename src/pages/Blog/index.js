@@ -10,6 +10,8 @@ import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
 import Footer from '../../components/Footer';
 import LoadDataComponent from '../../components/LoadDataComponent';
 import BlogHeader from '../../components/BlogHeader';
+import Categories from './components/Categories/index';
+import Search from './components/Search/index';
 
 import readTimeCalculator from '../../utils/readTimeCalculator';
 import replaceAllString from '../../utils/replaceAllString';
@@ -263,6 +265,18 @@ const Blog = () => {
           <div className="welcome__wrapper">
             <h1>Welcome to the Golden Owl blog</h1>
             <p>Thoughts, stories and ideas.</p>
+          </div>
+        </section>
+        <section>
+          <div className="filter">
+            <div className="row">
+              <div className="col-12 col-md-9 d-block">
+                <Categories />
+              </div>
+              <div className="col-12 col-md-3 d-block">
+                <Search />
+              </div>
+            </div>
           </div>
         </section>
         <section className="blogs">
