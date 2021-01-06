@@ -24,7 +24,7 @@ const feedback = [
     name: 'Eric Fitzgerald',
     project: 'Founder & CEO at Cheer Me',
     url: ericFitzgerald,
-    content: 'GI would recommend Golden Owl 100%. They surprised us with their speed and brought really talented people to help us out. We appreciate their knowledge, engagement, and dedication.',
+    content: 'I would recommend Golden Owl 100%. They surprised us with their speed and brought really talented people to help us out. We appreciate their knowledge, engagement, and dedication.',
   },
   {
     name: 'Sam Hon',
@@ -33,7 +33,7 @@ const feedback = [
     content: 'They deliver on their promises and have a great business acumen for fast-paced product development. We are very happy with how the project was handled and completed successfully.',
   },
   {
-    name: 'Emily Y',
+    name: 'Emily Y.',
     project: 'Senior Marketing Coordinator at The Work Project',
     url: emilyY,
     content: 'The thing that impressed us the most is the level of their involvement in the project. They were communicative and kept us updated. They are really easy to work with, and they’ve guided me as someone with no experience in this arena.',
