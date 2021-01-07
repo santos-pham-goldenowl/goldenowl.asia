@@ -3,7 +3,7 @@
 import patrickLef from '../assets/images/feedback/PatrickLef.png';
 import jacobThomas from '../assets/images/feedback/JacobThomas.png';
 import ericFitzgerald from '../assets/images/feedback/EricFitzgerald.png';
-import samHon from '../assets/images/feedback/SamHon.png';
+import antony from '../assets/images/feedback/Antony.png';
 import emilyY from '../assets/images/feedback/EmilyY.png';
 import sky from '../assets/images/feedback/Sky.png';
 
@@ -27,9 +27,9 @@ const feedback = [
     content: 'I would recommend Golden Owl 100%. They surprised us with their speed and brought really talented people to help us out. We appreciate their knowledge, engagement, and dedication.',
   },
   {
-    name: 'Sam Hon',
-    project: 'CTO at Silicon Jungles',
-    url: samHon,
+    name: 'Antony Woodcock',
+    project: 'Co-Founder and CEO at GIG',
+    url: antony,
     content: 'They deliver on their promises and have a great business acumen for fast-paced product development. We are very happy with how the project was handled and completed successfully.',
   },
   {
