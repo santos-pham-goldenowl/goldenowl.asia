@@ -36,6 +36,7 @@ const Search = ({
         alt="search-icon"
       />
       <input
+        autoComplete="off"
         className="search-box__input"
         placeholder="Search"
         name="search"
@@ -44,12 +45,14 @@ const Search = ({
         onChange={onChange}
         onKeyPress={onKeyPress}
       />
-      <img
-        onClick={handleClear}
-        className="search-box__icon--close"
-        src={iconSearch}
-        alt="close-icon"
-      />
+      {value && (
+        <img
+          onClick={handleClear}
+          className="search-box__icon--close"
+          src={iconSearch}
+          alt="close-icon"
+        />
+      )}
     </div>
   );
 };

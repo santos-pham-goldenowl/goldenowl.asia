@@ -10,6 +10,8 @@
   overflow: hidden
   transition: width 400ms linear
   width: 92px
+  @include responsive($screen: mobile)
+    margin-top: 8px
   &__icon
     &--search
       height: 16px
@@ -38,7 +40,7 @@
   &.focus
     border-color: $haiti
     @include responsive($screen: mobile)
-      width: 207px
+      width: 270px
     @include responsive($screen: tablet)
       width: 207px
     @include responsive($screen: desktop)
