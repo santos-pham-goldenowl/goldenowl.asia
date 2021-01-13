@@ -102,6 +102,9 @@ const Blog = () => {
       if (valueSearch !== '') {
         setLoadStatus(LOADING_STATUS);
         handleCallApiSearchListBlog(valueSearch);
+      } else {
+        setLoadStatus(LOADING_STATUS);
+        handleCallApiGetListBlog();
       }
     }
   };
