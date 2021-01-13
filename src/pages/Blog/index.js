@@ -35,7 +35,7 @@ const Blog = () => {
   const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
   const [valueSearch, setValueSearch] = useState('');
 
-  useEffect(() => {
+  const handleCallApiGetListBlog = () => {
     getAllBlogs()
       .then((res) => {
         const { data } = res.data;
@@ -56,6 +56,33 @@ const Blog = () => {
         console.log(err);
         setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
       });
+  };
+
+  const handleCallApiSearchListBlog = (value) => {
+    searchListBlog(value)
+      .then((res) => {
+        const { data } = res.data;
+        if (data) {
+          setBlogs(
+            [...data.data].sort((a, b) => compareDesc(
+              new Date(a.attributes.created_at),
+              new Date(b.attributes.created_at),
+            )),
+          );
+        }
+
+        if (data.data.length) {
+          setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
+        } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      })
+      .catch((err) => {
+        console.log(err);
+        setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      });
+  };
+
+  useEffect(() => {
+    handleCallApiGetListBlog();
   }, []);
 
   const pageContent = createRef();
@@ -74,26 +101,7 @@ const Blog = () => {
     if (e.key === 'Enter') {
       if (valueSearch !== '') {
         setLoadStatus(LOADING_STATUS);
-        searchListBlog(valueSearch)
-          .then((res) => {
-            const { data } = res.data;
-            if (data) {
-              setBlogs(
-                [...data.data].sort((a, b) => compareDesc(
-                  new Date(a.attributes.created_at),
-                  new Date(b.attributes.created_at),
-                )),
-              );
-            }
-
-            if (data.data.length) {
-              setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
-            } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
-          })
-          .catch((err) => {
-            console.log(err);
-            setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
-          });
+        handleCallApiSearchListBlog(valueSearch);
       }
     }
   };
@@ -101,26 +109,7 @@ const Blog = () => {
   const handleClearSearch = () => {
     setLoadStatus(LOADING_STATUS);
     setValueSearch('');
-    getAllBlogs()
-      .then((res) => {
-        const { data } = res.data;
-        if (data) {
-          setBlogs(
-            [...data.data].sort((a, b) => compareDesc(
-              new Date(a.attributes.created_at),
-              new Date(b.attributes.created_at),
-            )),
-          );
-        }
-
-        if (data.data.length) {
-          setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
-        } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
-      })
-      .catch((err) => {
-        console.log(err);
-        setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
-      });
+    handleCallApiGetListBlog();
   };
 
   const blogRender = () => blogs && (

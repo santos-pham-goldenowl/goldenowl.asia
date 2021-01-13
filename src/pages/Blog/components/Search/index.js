@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 import iconSearch from '../../../../assets/images/search.png';
+import iconClose from '../../../../assets/images/close.svg';
 
 import './index.sass';
 
@@ -49,7 +50,7 @@ const Search = ({
         <img
           onClick={handleClear}
           className="search-box__icon--close"
-          src={iconSearch}
+          src={iconClose}
           alt="close-icon"
         />
       )}
