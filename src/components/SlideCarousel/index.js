@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 
@@ -55,7 +56,7 @@ const SlideCarousel = ({ ...props }) => {
       responsive={responsive}
       containerClass="align-items-center"
     >
-      {content.map((c) => (
+      {content.map((c, idx) => (
         <div
           key={c.name}
           className="slide-image-wrapper w-100 d-flex justify-content-center"
@@ -95,10 +96,10 @@ const SlideCarousel = ({ ...props }) => {
       responsive={responsive}
       containerClass="align-items-center"
     >
-      {mobileData.map((cGroup) => (
-        <div className="row">
-          {cGroup.map((c) => (
-            <div className="col-6">
+      {mobileData.map((cGroup, idx) => (
+        <div key={idx} className="row">
+          {cGroup.map((c, idxC) => (
+            <div key={idxC} className="col-6">
               <img src={c.url} alt={`GO ${c.name}`} id={c.name} />
             </div>
           ))}

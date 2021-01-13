@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -117,13 +118,13 @@ const MobileMenu = () => {
               Portfolio
             </Link>
             <Link
-                onClick={() => {
-                  closeAllMenu('/careers');
-                }}
-                className="d-flex"
-                to="/careers"
-              >
-                Careers
+              onClick={() => {
+                closeAllMenu('/careers');
+              }}
+              className="d-flex"
+              to="/careers"
+            >
+              Careers
             </Link>
           </div>
           <Link
@@ -137,7 +138,11 @@ const MobileMenu = () => {
         </div>
       </div>
       {/* Sub-Menu content */}
-      <div className={`${subMenuState ? 'mobile-menu-open ' : ''}mobile-menu sub-menu`}>
+      <div
+        className={`${
+          subMenuState ? 'mobile-menu-open ' : ''
+        }mobile-menu sub-menu`}
+      >
         <div className="mobile-menu__header">
           <div
             className="mobile-menu__back d-flex"
@@ -155,8 +160,9 @@ const MobileMenu = () => {
         </div>
         <div className="mobile-menu__content">
           <div className="mobile-menu__primary-link">
-            {ServicesData.map((item) => (
+            {ServicesData.map((item, idx) => (
               <Link
+                key={idx}
                 onClick={() => closeAllMenu(`/services/${item.link}`)}
                 to={`/services/${item.link}`}
               >

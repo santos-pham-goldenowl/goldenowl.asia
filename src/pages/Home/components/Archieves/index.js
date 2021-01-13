@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from 'react';
 import AnimatedNumber from 'animated-number-react';
 
@@ -40,41 +41,35 @@ const Archieves = () => {
         </p>
       </div>
       <div className="archieves__main-content row">
-        {objectToArray(archieves).map((item) => (
-          <div className="col-6 col-md-2 d-block archieves__item">
+        {objectToArray(archieves).map((item, idx) => (
+          <div key={idx} className="col-6 col-md-2 d-block archieves__item">
             <center>
-              {scrolling === true
-                ? (
-                  <>
-                    <h2 transform="rotate(-15 150 150) translate(500,100)">
-                      <AnimatedNumber
-                        style={{
-                          transition: '0.8s ease-out',
-                          transitionProperty:
-                           'background-color, color, opacity',
-                        }}
-                        frameStyle={(perc) => (
-                          perc === 100 ? {} : { opacity: 0.25 }
-                        )}
-                        duration={3000}
-                        value={item.number}
-                        className="number"
-                        component="text"
-                        formatValue={(n) => `${Number(n).toFixed(0)}`}
-                      />
+              {scrolling === true ? (
+                <>
+                  <h2 transform="rotate(-15 150 150) translate(500,100)">
+                    <AnimatedNumber
+                      style={{
+                        transition: '0.8s ease-out',
+                        transitionProperty: 'background-color, color, opacity',
+                      }}
+                      frameStyle={(perc) => (perc === 100 ? {} : { opacity: 0.25 })}
+                      duration={3000}
+                      value={item.number}
+                      className="number"
+                      component="text"
+                      formatValue={(n) => `${Number(n).toFixed(0)}`}
+                    />
 
-                      <sup>{item.unit}</sup>
-                    </h2>
-                    <p>{item.key}</p>
-                  </>
-                )
-                : (
-                  <>
-                    <h2>{0}</h2>
-                    <p>{item.key}</p>
-                  </>
-                )}
-
+                    <sup>{item.unit}</sup>
+                  </h2>
+                  <p>{item.key}</p>
+                </>
+              ) : (
+                <>
+                  <h2>{0}</h2>
+                  <p>{item.key}</p>
+                </>
+              )}
             </center>
           </div>
         ))}
