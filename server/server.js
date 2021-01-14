@@ -38,10 +38,10 @@ app.use(express.static(path.resolve(__dirname, '../build')));
 
 app.use(
   express.Router().get('/get-blogs', (req, res) => {
-    const { size = 10 } = req.query;
+    const { size = 10, page = 1 } = req.query;
 
     axiosInstance
-      .get(`${process.env.API_URL}/posts?size=${size}`)
+      .get(`${process.env.API_URL}/posts?size=${size}&page=${page}`)
       .then((response) => res.status(200).json({
         data: response.data,
       }))
@@ -54,11 +54,11 @@ app.use(
 
 app.use(
   express.Router().get('/get-list-blog-by-category', (req, res) => {
-    const { size = 10, id } = req.query;
+    const { size = 10, id, page = 1 } = req.query;
 
     axiosInstance
       .get(
-        `${process.env.API_URL}/post-categories/${id}/filter-post-by-category?size=${size}`,
+        `${process.env.API_URL}/post-categories/${id}/filter-post-by-category?size=${size}&page=${page}`,
       )
       .then((response) => res.status(200).json({
         data: response.data,
@@ -114,10 +114,12 @@ app.use(
 
 app.use(
   express.Router().get('/search-list-blog', (req, res) => {
-    const { size = 10, search } = req.query;
+    const { size = 10, search, page = 1 } = req.query;
 
     axiosInstance
-      .get(`${process.env.API_URL}/posts?search=${search}&size=${size}`)
+      .get(
+        `${process.env.API_URL}/posts?search=${search}&size=${size}&page${page}`,
+      )
       .then((response) => res.status(200).json({
         data: response.data,
       }))

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, createRef } from 'react';
 import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
@@ -37,9 +38,12 @@ import './index.sass';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
+  const [nextPage, setNextPage] = useState(null);
   const [currentCategory, setCurrentCategory] = useState('all');
   const [listCategory, setListCategory] = useState({});
+
   const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
+
   const [valueSearch, setValueSearch] = useState('');
 
   const formatListBlogCategory = (data) => Object.fromEntries(
@@ -52,8 +56,10 @@ const Blog = () => {
     ]),
   );
 
-  const handleCallApiGetListBlog = () => {
-    getAllBlogs()
+  const getNextPageFromLink = (link) => link.split('page=')[1];
+
+  const handleCallApiGetListBlog = (page = 1) => {
+    getAllBlogs(page)
       .then((res) => {
         const { data } = res.data;
         if (data) {
@@ -62,6 +68,11 @@ const Blog = () => {
               new Date(a.attributes.created_at),
               new Date(b.attributes.created_at),
             )),
+          );
+          setNextPage(
+            data.links.next_page_url
+              ? getNextPageFromLink(data.links.next_page_url)
+              : null,
           );
         }
 
@@ -88,8 +99,8 @@ const Blog = () => {
       });
   };
 
-  const handleCallApiGetListBlogByCategory = (id) => {
-    getListBlogByCategory(id)
+  const handleCallApiGetListBlogByCategory = (id, page = 1) => {
+    getListBlogByCategory(id, page)
       .then((res) => {
         const { data } = res.data;
         if (data) {
@@ -98,6 +109,11 @@ const Blog = () => {
               new Date(a.attributes.created_at),
               new Date(b.attributes.created_at),
             )),
+          );
+          setNextPage(
+            data.links.next_page_url
+              ? getNextPageFromLink(data.links.next_page_url)
+              : null,
           );
         }
 
@@ -111,8 +127,8 @@ const Blog = () => {
       });
   };
 
-  const handleCallApiSearchListBlog = (value) => {
-    searchListBlog(value)
+  const handleCallApiSearchListBlog = (value, page = 1) => {
+    searchListBlog(value, page)
       .then((res) => {
         const { data } = res.data;
         if (data) {
@@ -121,6 +137,11 @@ const Blog = () => {
               new Date(a.attributes.created_at),
               new Date(b.attributes.created_at),
             )),
+          );
+          setNextPage(
+            data.links.next_page_url
+              ? getNextPageFromLink(data.links.next_page_url)
+              : null,
           );
         }
 
@@ -131,6 +152,35 @@ const Blog = () => {
       .catch((err) => {
         console.log(err);
         setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      });
+  };
+
+  const handleLoadMoreBlog = () => {
+    getAllBlogs(nextPage)
+      .then((res) => {
+        const { data } = res.data;
+        if (data) {
+          setBlogs([
+            ...blogs,
+            ...[...data.data].sort((a, b) => compareDesc(
+              new Date(a.attributes.created_at),
+              new Date(b.attributes.created_at),
+            )),
+          ]);
+          setNextPage(
+            data.links.next_page_url
+              ? getNextPageFromLink(data.links.next_page_url)
+              : null,
+          );
+        }
+
+        // if (data.data.length) {
+        //   setTimeout(() => setLoadStatus(LOADED_STATUS), 500)
+        // } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000)
+      })
+      .catch((err) => {
+        console.log(err);
+        // setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000)
       });
   };
 
@@ -140,7 +190,6 @@ const Blog = () => {
 
   useEffect(() => {
     handleCallApiGetListBlogCategory();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const pageContent = createRef();
@@ -393,6 +442,7 @@ const Blog = () => {
     })}
   </div>
   );
+
   return (
     <section className="blog">
       <Helmet>
@@ -431,27 +481,26 @@ const Blog = () => {
         </section>
         <section>
           <div className="filter">
-            {/* <div className="row"> */}
-            {/* <div className="col-12 col-md-9 d-block"> */}
             <Categories
               listCategory={listCategory}
               currentCategory={currentCategory}
               onChange={handleChangeBlogCategory}
             />
-            {/* </div> */}
-            {/* <div className="col-12 col-md-3 d-block"> */}
             <Search
               value={valueSearch}
               onChange={handleChangeSearch}
               onClear={handleClearSearch}
               onKeyPress={handlePressKeySearch}
             />
-            {/* </div> */}
-            {/* </div> */}
           </div>
         </section>
         <section className="blogs">
           <LoadDataComponent loadStatus={loadStatus} component={blogRender()} />
+          {nextPage && (
+            <button type="button" onClick={handleLoadMoreBlog}>
+              Test load more
+            </button>
+          )}
         </section>
         <Footer />
       </div>
