@@ -42,6 +42,16 @@ const Blog = () => {
   const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
   const [valueSearch, setValueSearch] = useState('');
 
+  const formatListBlogCategory = (data) => Object.fromEntries(
+    data.map((elm) => [
+      elm[0],
+      {
+        id: elm[0],
+        name: elm[1],
+      },
+    ]),
+  );
+
   const handleCallApiGetListBlog = () => {
     getAllBlogs()
       .then((res) => {
@@ -64,16 +74,6 @@ const Blog = () => {
         setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
       });
   };
-
-  const formatListBlogCategory = (data) => Object.fromEntries(
-    data.map((elm) => [
-      elm[0],
-      {
-        id: elm[0],
-        name: elm[1],
-      },
-    ]),
-  );
 
   const handleCallApiGetListBlogCategory = () => {
     getListBlogCategory()
