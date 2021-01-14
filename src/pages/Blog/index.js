@@ -26,17 +26,70 @@ import {
   HEADER_DESCRIPTION,
 } from '../../constant';
 
-import { getAllBlogs, searchListBlog } from '../../api/blogs';
+import {
+  getAllBlogs,
+  searchListBlog,
+  getListBlogCategory,
+  getListBlogByCategory,
+} from '../../api/blogs';
 
 import './index.sass';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
+  const [currentCategory, setCurrentCategory] = useState('all');
+  const [listCategory, setListCategory] = useState({});
   const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
   const [valueSearch, setValueSearch] = useState('');
 
   const handleCallApiGetListBlog = () => {
     getAllBlogs()
+      .then((res) => {
+        const { data } = res.data;
+        if (data) {
+          setBlogs(
+            [...data.data].sort((a, b) => compareDesc(
+              new Date(a.attributes.created_at),
+              new Date(b.attributes.created_at),
+            )),
+          );
+        }
+
+        if (data.data.length) {
+          setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
+        } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      })
+      .catch((err) => {
+        console.log(err);
+        setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      });
+  };
+
+  const formatListBlogCategory = (data) => Object.fromEntries(
+    data.map((elm) => [
+      elm[0],
+      {
+        id: elm[0],
+        name: elm[1],
+      },
+    ]),
+  );
+
+  const handleCallApiGetListBlogCategory = () => {
+    getListBlogCategory()
+      .then((res) => {
+        const { data } = res.data;
+        if (data) {
+          setListCategory(formatListBlogCategory(data.data));
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleCallApiGetListBlogByCategory = (id) => {
+    getListBlogByCategory(id)
       .then((res) => {
         const { data } = res.data;
         if (data) {
@@ -85,6 +138,11 @@ const Blog = () => {
     handleCallApiGetListBlog();
   }, []);
 
+  useEffect(() => {
+    handleCallApiGetListBlogCategory();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const pageContent = createRef();
   const scrollDirection = useScrollDirection();
 
@@ -99,11 +157,11 @@ const Blog = () => {
 
   const handlePressKeySearch = (e) => {
     if (e.key === 'Enter') {
+      setLoadStatus(LOADING_STATUS);
+      setCurrentCategory('all');
       if (valueSearch !== '') {
-        setLoadStatus(LOADING_STATUS);
         handleCallApiSearchListBlog(valueSearch);
       } else {
-        setLoadStatus(LOADING_STATUS);
         handleCallApiGetListBlog();
       }
     }
@@ -113,6 +171,19 @@ const Blog = () => {
     setLoadStatus(LOADING_STATUS);
     setValueSearch('');
     handleCallApiGetListBlog();
+  };
+
+  const handleChangeBlogCategory = (id) => {
+    if (currentCategory !== id) {
+      setCurrentCategory(id);
+      setValueSearch('');
+      setLoadStatus(LOADING_STATUS);
+      if (id !== 'all') {
+        handleCallApiGetListBlogByCategory(id);
+      } else {
+        handleCallApiGetListBlog();
+      }
+    }
   };
 
   const blogRender = () => blogs && (
@@ -362,7 +433,11 @@ const Blog = () => {
           <div className="filter">
             {/* <div className="row"> */}
             {/* <div className="col-12 col-md-9 d-block"> */}
-            <Categories />
+            <Categories
+              listCategory={listCategory}
+              currentCategory={currentCategory}
+              onChange={handleChangeBlogCategory}
+            />
             {/* </div> */}
             {/* <div className="col-12 col-md-3 d-block"> */}
             <Search
