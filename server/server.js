@@ -53,19 +53,58 @@ app.use(
 );
 
 app.use(
+  express.Router().get('/get-list-blog-by-category', (req, res) => {
+    const { size = 10, id } = req.query;
+
+    axiosInstance
+      .get(
+        `${process.env.API_URL}/post-categories/${id}/filter-post-by-category?size=${size}`,
+      )
+      .then((response) => res.status(200).json({
+        data: response.data,
+      }))
+      .catch((error) => res.status(404).json({
+        error: true,
+        message: `Error: ${error}`,
+      }));
+  }),
+);
+
+app.use(
+  express.Router().get('/get-list-blog-category', (req, res) => {
+    axiosInstance
+      .get(`${process.env.API_URL}/post-categories/category-list`)
+      .then((response) => res.status(200).json({
+        data: response.data,
+      }))
+      .catch((error) => res.status(404).json({
+        error: true,
+        message: `Error: ${error}`,
+      }));
+  }),
+);
+
+app.use(
   express.Router().get('/get-blog', (req, res) => {
     const { slug } = req.query;
 
     const getDetails = axiosInstance.get(`${process.env.API_URL}/posts/${slug}`);
-    const getRelated = axiosInstance.get(`${process.env.API_URL}/posts/${slug}/related-posts`);
+    const getRelated = axiosInstance.get(
+      `${process.env.API_URL}/posts/${slug}/related-posts`,
+    );
 
-    axiosInstance.all([getDetails, getRelated])
-      .then(axiosInstance.spread((...response) => {
-        const detailsResponse = response[0];
-        const relatedResponse = response[1];
+    axiosInstance
+      .all([getDetails, getRelated])
+      .then(
+        axiosInstance.spread((...response) => {
+          const detailsResponse = response[0];
+          const relatedResponse = response[1];
 
-        res.status(200).json({ data: detailsResponse.data, related: relatedResponse.data });
-      }))
+          res
+            .status(200)
+            .json({ data: detailsResponse.data, related: relatedResponse.data });
+        }),
+      )
       .catch((error) => res.status(500).json({
         error: true,
         message: `Error: ${error}`,
@@ -120,9 +159,7 @@ app.use(
     .Router()
     .post('/submit-application', upload.single('cvFile'), (req, res) => {
       const { body, file } = req;
-      const {
-        fullName, email, job,
-      } = body;
+      const { fullName, email, job } = body;
 
       fs.readFile(file.path, (err, data) => {
         const msg = {
