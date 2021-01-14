@@ -9,7 +9,7 @@ const Introduction = () => {
   const isMobile = useMobileWidth();
   return (
     <section className="introduction">
-      <div className>
+      <div>
         <div className={`${isMobile ? 'w-100' : 'w-50'} ml-auto`} data-aos="fade-left">
           <h3 className="introduction__title">What are you looking for?</h3>
           <p className="introduction__text">

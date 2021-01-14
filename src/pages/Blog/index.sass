@@ -55,14 +55,18 @@
         font-size: 20px
 
   .filter
+    display: flex
+    justify-content: space-between
+    align-items: center
     @include responsive($screen: mobile)
       padding: 10px 0 10px 0px
+      flex-wrap: wrap
     @include responsive($screen: tablet)
-      padding: 40px 0 18px 6px
+      padding: 40px 6px 18px 6px
     @include responsive($screen: desktop)
-      padding: 50px 0 36px 5px
+      padding: 50px 5px 36px 5px
     @include responsive($screen: large-desktop)
-      padding: 79px 0 49px 105px !important
+      padding: 79px 105px 49px 105px !important
 
   .blogs
     @include responsive($screen: mobile)

@@ -7,21 +7,29 @@ import './index.sass';
 import './categories.sass';
 
 const Categories = () => (
-  <header id="sub-header" className="sub-header">
+  <header className="sub-header-category">
     <div className="dropdown">
       <div className="align-items-center sub-header__button">
         <div
-          className="d-flex align-items-center no-hover-text-decoration"
-          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          className="d-flex align-items-center no-hover-text-decoration no-outline"
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
           tabIndex="0"
           onMouseOver={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.add('dropdown-open')}
           onMouseLeave={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.remove('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.remove('dropdown-open')}
           onFocus={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.add('dropdown-open')}
           onBlur={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.remove('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.remove('dropdown-open')}
         >
           <h4 className="sub-header__text">All categories</h4>
           <img className="arrow-down" src={arrowDown} alt="arrow-down" />
@@ -29,26 +37,42 @@ const Categories = () => (
         <div
           className="categories-dropdown-top-block"
           onMouseOver={() => document.getElementById('categories-dropdown')
-                  && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.add('dropdown-open')}
           onMouseLeave={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.remove('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.remove('dropdown-open')}
           onFocus={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.add('dropdown-open')}
           onBlur={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.remove('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.remove('dropdown-open')}
         />
       </div>
       <div id="categories-dropdown" className="dropdown-content">
         <div
           className="categories__items"
           onMouseOver={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.add('dropdown-open')}
           onMouseLeave={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.remove('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.remove('dropdown-open')}
           onFocus={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.add('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.add('dropdown-open')}
           onBlur={() => document.getElementById('categories-dropdown')
-                && document.getElementById('categories-dropdown').classList.remove('dropdown-open')}
+              && document
+                .getElementById('categories-dropdown')
+                .classList.remove('dropdown-open')}
         >
           {categories.map((category) => (
             <div key={category.name}>
@@ -58,7 +82,6 @@ const Categories = () => (
                 </div>
               </div>
             </div>
-
           ))}
         </div>
       </div>

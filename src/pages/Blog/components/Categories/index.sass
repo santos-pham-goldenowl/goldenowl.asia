@@ -1,22 +1,23 @@
 @import 'styles/variables'
 @import 'styles/mixins'
 
-.sub-header
+.sub-header-category
   background-color: $white !important
   display: flex
   @include responsive($screen: mobile)
-    max-width: 200px
-  padding: 0
+    width: 100%!important
+  padding: 0!important
   justify-content: flex-start
   align-items: center
   position: relative
   font-size: 14px
   font-family: ProximaNovaBold
-  margin-top: 15px
+  width: auto!important
   .no-bootstrap-arrow
     &:after
       content: none
-
+  .no-outline
+    outline: 0
   &__button, #categories-dropdown
     padding-left: 0
     @include responsive($screen: mobile)
@@ -84,7 +85,7 @@
   h4
     margin-top: 0
     margin-bottom: 0
-    color: $darkGray
+    color: $haiti
 
   &__contact-wrapper
     position: relative

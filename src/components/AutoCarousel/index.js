@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 
@@ -84,10 +85,10 @@ const AutoCarousel = (props) => {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
       >
-        {chunkArray(mobileData, 3).map((cGroup) => (
-          <div key={cGroup.name} className="auto-carousel">
-            {cGroup.map((c) => (
-              <div className="mobile-micro-item">
+        {chunkArray(mobileData, 3).map((cGroup, idx) => (
+          <div key={idx} className="auto-carousel">
+            {cGroup.map((c, idxC) => (
+              <div key={idxC} className="mobile-micro-item">
                 <p>{`"${c.content}"`}</p>
                 <div className="feedback__client-wrapper">
                   <img src={c.url} alt="study" loading="lazy" />

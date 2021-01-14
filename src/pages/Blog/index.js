@@ -26,27 +26,63 @@ import {
   HEADER_DESCRIPTION,
 } from '../../constant';
 
-import { getAllBlogs } from '../../api/blogs';
+import { getAllBlogs, searchListBlog } from '../../api/blogs';
 
 import './index.sass';
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loadStatus, setLoadStatus] = useState(LOADING_STATUS);
+  const [valueSearch, setValueSearch] = useState('');
 
-  useEffect(() => {
+  const handleCallApiGetListBlog = () => {
     getAllBlogs()
       .then((res) => {
         const { data } = res.data;
-        if (data) setBlogs([...data.data].sort((a, b) => compareDesc(new Date(a.attributes.created_at), new Date(b.attributes.created_at))));
+        if (data) {
+          setBlogs(
+            [...data.data].sort((a, b) => compareDesc(
+              new Date(a.attributes.created_at),
+              new Date(b.attributes.created_at),
+            )),
+          );
+        }
 
-        if (data.data.length) setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
-        else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+        if (data.data.length) {
+          setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
+        } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
       })
       .catch((err) => {
         console.log(err);
         setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
       });
+  };
+
+  const handleCallApiSearchListBlog = (value) => {
+    searchListBlog(value)
+      .then((res) => {
+        const { data } = res.data;
+        if (data) {
+          setBlogs(
+            [...data.data].sort((a, b) => compareDesc(
+              new Date(a.attributes.created_at),
+              new Date(b.attributes.created_at),
+            )),
+          );
+        }
+
+        if (data.data.length) {
+          setTimeout(() => setLoadStatus(LOADED_STATUS), 500);
+        } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      })
+      .catch((err) => {
+        console.log(err);
+        setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000);
+      });
+  };
+
+  useEffect(() => {
+    handleCallApiGetListBlog();
   }, []);
 
   const pageContent = createRef();
@@ -54,6 +90,29 @@ const Blog = () => {
 
   window.onscroll = () => {
     stickyTrigger(scrollDirection);
+  };
+
+  const handleChangeSearch = (e) => {
+    const { value } = e.target;
+    setValueSearch(value);
+  };
+
+  const handlePressKeySearch = (e) => {
+    if (e.key === 'Enter') {
+      if (valueSearch !== '') {
+        setLoadStatus(LOADING_STATUS);
+        handleCallApiSearchListBlog(valueSearch);
+      } else {
+        setLoadStatus(LOADING_STATUS);
+        handleCallApiGetListBlog();
+      }
+    }
+  };
+
+  const handleClearSearch = () => {
+    setLoadStatus(LOADING_STATUS);
+    setValueSearch('');
+    handleCallApiGetListBlog();
   };
 
   const blogRender = () => blogs && (
@@ -64,7 +123,10 @@ const Blog = () => {
           return (
             <div key={blog.attributes.title} className="col-md-12">
               <div className="row blogs__item">
-                <div className="col-12 col-md-8 d-block" data-aos="fade-right">
+                <div
+                  className="col-12 col-md-8 d-block"
+                  data-aos="fade-right"
+                >
                   <Link exact to={`/blog/details/${blog.attributes.slug}`}>
                     <div
                       style={{
@@ -77,7 +139,12 @@ const Blog = () => {
                 <div className="col-md-4 wide-blog" data-aos="fade-left">
                   <div className="category d-flex">
                     <p className="text-uppercase">{blog.type}</p>
-                    <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
+                    <p className="text-uppercase">
+                      {format(
+                        new Date(blog.attributes.created_at),
+                        'MMM d, y',
+                      )}
+                    </p>
                     <p className="text-uppercase">
                       {readTimeCalculator(blog.attributes.content)}
                     </p>
@@ -86,113 +153,8 @@ const Blog = () => {
                     <h4>{blog.attributes.title}</h4>
                   </Link>
                   <div className="blog-content">
-                    {parse(replaceAllString(blog.attributes.content, {
-                      '<div>': '<p>',
-                      '</div>': '</p>',
-                      '<del>': '<em>',
-                      '</del>': '</em>',
-                      '<h1>': '<em>',
-                      '</h1>': '</em>',
-                      '<blockquote>': '<em>',
-                      '</blockquote>': '</em>',
-                      '<pre>': '<em>',
-                      '</pre>': '</em>',
-                      '<ol>': '<em>',
-                      '</ol>': '</em>',
-                      '<li>': '<em>',
-                      '</li>': '</em>',
-                      '<ul>': '<em>',
-                      '</ul>': '</em>',
-                      '<strong>': '<em>',
-                      '</strong>': '</em>',
-                    }))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        case 1:
-        case 2:
-        case 3:
-          return (
-            <div key={blog.attributes.title} className="col-12 col-md-4" data-aos={aosItemDirection(index)}>
-              <div className="blogs__item">
-                <div className="d-block">
-                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                    <div
-                      style={{
-                        backgroundImage: `url(${blog.attributes.image})`,
-                      }}
-                      className="blogs__item-image"
-                    />
-                  </Link>
-                </div>
-                <div className="d-block">
-                  <div className="category category-vertical-small d-flex">
-                    <p>{blog.type}</p>
-                    <p>{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
-                    <p>{readTimeCalculator(blog.attributes.content)}</p>
-                  </div>
-                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                    <h4 className="small-item-title">
-                      {blog.attributes.title}
-                    </h4>
-                  </Link>
-                  <div className="blog-content">
-                    {parse(replaceAllString(blog.attributes.content, {
-                      '<div>': '<p>',
-                      '</div>': '</p>',
-                      '<del>': '<em>',
-                      '</del>': '</em>',
-                      '<h1>': '<em>',
-                      '</h1>': '</em>',
-                      '<blockquote>': '<em>',
-                      '</blockquote>': '</em>',
-                      '<pre>': '<em>',
-                      '</pre>': '</em>',
-                      '<ol>': '<em>',
-                      '</ol>': '</em>',
-                      '<li>': '<em>',
-                      '</li>': '</em>',
-                      '<ul>': '<em>',
-                      '</ul>': '</em>',
-                      '<strong>': '<em>',
-                      '</strong>': '</em>',
-                    }))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        case 4:
-        case 5:
-          return (
-            <div key={blog.attributes.title} className="col-12 col-md-6" data-aos={aosItemDirection(index, 'fade')}>
-              <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                <div className="blogs__item">
-                  <div className="d-block">
-                    <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                      <div
-                        style={{
-                          backgroundImage: `url(${blog.attributes.image})`,
-                        }}
-                        className="blogs__item-image"
-                      />
-                    </Link>
-                  </div>
-                  <div className="d-block">
-                    <div className="category category-vertical-big d-flex">
-                      <p>{blog.type}</p>
-                      <p>{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
-                      <p>{readTimeCalculator(blog.attributes.content)}</p>
-                    </div>
-                    <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                      <h4 className="medium-item-title">
-                        {blog.attributes.title}
-                      </h4>
-                    </Link>
-                    <div className="blog-content medium-item-content">
-                      {parse(replaceAllString(blog.attributes.content, {
+                    {parse(
+                      replaceAllString(blog.attributes.content, {
                         '<div>': '<p>',
                         '</div>': '</p>',
                         '<del>': '<em>',
@@ -211,7 +173,142 @@ const Blog = () => {
                         '</ul>': '</em>',
                         '<strong>': '<em>',
                         '</strong>': '</em>',
-                      }))}
+                      }),
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        case 1:
+        case 2:
+        case 3:
+          return (
+            <div
+              key={blog.attributes.title}
+              className="col-12 col-md-4"
+              data-aos={aosItemDirection(index)}
+            >
+              <div className="blogs__item">
+                <div className="d-block">
+                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
+                    <div
+                      style={{
+                        backgroundImage: `url(${blog.attributes.image})`,
+                      }}
+                      className="blogs__item-image"
+                    />
+                  </Link>
+                </div>
+                <div className="d-block">
+                  <div className="category category-vertical-small d-flex">
+                    <p>{blog.type}</p>
+                    <p>
+                      {format(
+                        new Date(blog.attributes.created_at),
+                        'MMM d, y',
+                      )}
+                    </p>
+                    <p>{readTimeCalculator(blog.attributes.content)}</p>
+                  </div>
+                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
+                    <h4 className="small-item-title">
+                      {blog.attributes.title}
+                    </h4>
+                  </Link>
+                  <div className="blog-content">
+                    {parse(
+                      replaceAllString(blog.attributes.content, {
+                        '<div>': '<p>',
+                        '</div>': '</p>',
+                        '<del>': '<em>',
+                        '</del>': '</em>',
+                        '<h1>': '<em>',
+                        '</h1>': '</em>',
+                        '<blockquote>': '<em>',
+                        '</blockquote>': '</em>',
+                        '<pre>': '<em>',
+                        '</pre>': '</em>',
+                        '<ol>': '<em>',
+                        '</ol>': '</em>',
+                        '<li>': '<em>',
+                        '</li>': '</em>',
+                        '<ul>': '<em>',
+                        '</ul>': '</em>',
+                        '<strong>': '<em>',
+                        '</strong>': '</em>',
+                      }),
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        case 4:
+        case 5:
+          return (
+            <div
+              key={blog.attributes.title}
+              className="col-12 col-md-6"
+              data-aos={aosItemDirection(index, 'fade')}
+            >
+              <Link exact to={`/blog/details/${blog.attributes.slug}`}>
+                <div className="blogs__item">
+                  <div className="d-block">
+                    <Link
+                      exact
+                      to={`/blog/details/${blog.attributes.slug}`}
+                    >
+                      <div
+                        style={{
+                          backgroundImage: `url(${blog.attributes.image})`,
+                        }}
+                        className="blogs__item-image"
+                      />
+                    </Link>
+                  </div>
+                  <div className="d-block">
+                    <div className="category category-vertical-big d-flex">
+                      <p>{blog.type}</p>
+                      <p>
+                        {format(
+                          new Date(blog.attributes.created_at),
+                          'MMM d, y',
+                        )}
+                      </p>
+                      <p>{readTimeCalculator(blog.attributes.content)}</p>
+                    </div>
+                    <Link
+                      exact
+                      to={`/blog/details/${blog.attributes.slug}`}
+                    >
+                      <h4 className="medium-item-title">
+                        {blog.attributes.title}
+                      </h4>
+                    </Link>
+                    <div className="blog-content medium-item-content">
+                      {parse(
+                        replaceAllString(blog.attributes.content, {
+                          '<div>': '<p>',
+                          '</div>': '</p>',
+                          '<del>': '<em>',
+                          '</del>': '</em>',
+                          '<h1>': '<em>',
+                          '</h1>': '</em>',
+                          '<blockquote>': '<em>',
+                          '</blockquote>': '</em>',
+                          '<pre>': '<em>',
+                          '</pre>': '</em>',
+                          '<ol>': '<em>',
+                          '</ol>': '</em>',
+                          '<li>': '<em>',
+                          '</li>': '</em>',
+                          '<ul>': '<em>',
+                          '</ul>': '</em>',
+                          '<strong>': '<em>',
+                          '</strong>': '</em>',
+                        }),
+                      )}
                     </div>
                   </div>
                 </div>
@@ -230,18 +327,12 @@ const Blog = () => {
       <Helmet>
         <title>Blog - Golden Owl</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta
-          content={HEADER_DESCRIPTION}
-          name="description"
-        />
+        <meta content={HEADER_DESCRIPTION} name="description" />
         <meta
           content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native"
           property="og:title"
         />
-        <meta
-          content={HEADER_DESCRIPTION}
-          property="og:description"
-        />
+        <meta content={HEADER_DESCRIPTION} property="og:description" />
         <meta
           content="http://www.goldenowl.asia/assets/background-home.jpg"
           property="og:image"
@@ -269,14 +360,19 @@ const Blog = () => {
         </section>
         <section>
           <div className="filter">
-            <div className="row">
-              <div className="col-12 col-md-9 d-block">
-                <Categories />
-              </div>
-              <div className="col-12 col-md-3 d-block">
-                <Search />
-              </div>
-            </div>
+            {/* <div className="row"> */}
+            {/* <div className="col-12 col-md-9 d-block"> */}
+            <Categories />
+            {/* </div> */}
+            {/* <div className="col-12 col-md-3 d-block"> */}
+            <Search
+              value={valueSearch}
+              onChange={handleChangeSearch}
+              onClear={handleClearSearch}
+              onKeyPress={handlePressKeySearch}
+            />
+            {/* </div> */}
+            {/* </div> */}
           </div>
         </section>
         <section className="blogs">

@@ -38,7 +38,7 @@ app.use(express.static(path.resolve(__dirname, '../build')));
 
 app.use(
   express.Router().get('/get-blogs', (req, res) => {
-    const { size = 10 } = req.body;
+    const { size = 10 } = req.query;
 
     axiosInstance
       .get(`${process.env.API_URL}/posts?size=${size}`)
@@ -67,6 +67,22 @@ app.use(
         res.status(200).json({ data: detailsResponse.data, related: relatedResponse.data });
       }))
       .catch((error) => res.status(500).json({
+        error: true,
+        message: `Error: ${error}`,
+      }));
+  }),
+);
+
+app.use(
+  express.Router().get('/search-list-blog', (req, res) => {
+    const { size = 10, search } = req.query;
+
+    axiosInstance
+      .get(`${process.env.API_URL}/posts?search=${search}&size=${size}`)
+      .then((response) => res.status(200).json({
+        data: response.data,
+      }))
+      .catch((error) => res.status(404).json({
         error: true,
         message: `Error: ${error}`,
       }));

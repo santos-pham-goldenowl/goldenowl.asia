@@ -1,97 +1,51 @@
 @import 'styles/variables'
 @import 'styles/mixins'
 
-.search
-  background-color: $white !important
+.search-box
+  outline: 0
+  display: flex
+  align-items: center
+  border-bottom: 1px solid transparent
+  padding-bottom: 2px
+  overflow: hidden
+  transition: width 400ms linear
+  width: 92px
   @include responsive($screen: mobile)
-    margin-left: 10px
-  &__icon-wrapper
-    @include responsive($screen: tablet)
-      width: 28px
-    @include responsive($screen: desktop)
-      width: 30px
-    @include responsive($screen: large-desktop)
-      width: 35px
-
-  &__text
-    text-align: left
-    &:hover
+    margin-top: 8px
+  &__icon
+    &--search
+      height: 16px
+      padding-right: 15px
+    &--close
+      height: 10px
+      padding-left: 15px
       cursor: pointer
-    p, h4
-      line-height: 1.25
-      @include responsive($screen: tablet)
-        font-size: 10px
-      @include responsive($screen: desktop)
-        font-size: 14px
-      @include responsive($screen: large-desktop)
-        font-size: 20px
-  &__box
-    position: relative
-    display: flex
-    align-items: center
+      opacity: 0
+      transition-delay: 400ms
+  &__input
+    border: 0!important
+    outline: 0!important
+    padding: 0!important
+    height: auto!important
+    margin-bottom: 0!important
+    color: $haiti!important
     @include responsive($screen: mobile)
-      margin-left: 14px
-      margin-top: 10px
-    
-
-img.icon-search
-  margin-right: 5px
-  position: absolute
-  top: calc( 50% - 20px )
-  transition: right 0.4s linear
-  @include responsive($screen: mobile)
-    height: 17px
-  @include responsive($screen: tablet)
-    right: 100px
-    height: 15px
-  @include responsive($screen: desktop)
-    right: 100px
-    height: 17px
-  @include responsive($screen: large-desktop)
-    right: 100px
-    height: 20px
-
-input.search-box-blog
-  margin-left: auto
-  @include responsive($screen: mobile)
-    margin-left: 0 !important
-    font-size: 15px !important
-  @include responsive($screen: tablet)
-    font-size: 16px !important
-  @include responsive($screen: desktop)
-    font-size: 17px !important
-  @include responsive($screen: large-desktop)
-    font-size: 20px !important
-  border: none !important
-  padding-left: 30px !important
-  width: 120px
-  transition: width 0.4s linear
-  &:focus
-    outline-color: transparent !important
-    border-bottom: solid #252427 1px !important 
-    width: 100%
-    ~ img.icon-search
-      right: calc( 100% - 20px )
-    ~ div.tag-remove
-      &::before
-        content: 'x'
-        margin-bottom: 10px
-        color: #000
-        font-weight: 300
-        @include responsive($screen: mobile)
-          font-size: 16px !important
-          top: calc( 50% - 18px )
-        @include responsive($screen: tablet)
-          font-size: 16px !important
-          top: calc( 50% - 20px )
-        @include responsive($screen: desktop)
-          font-size: 17px !important
-          top: calc( 50% - 22px )
-        @include responsive($screen: large-desktop)
-          font-size: 20px !important
-          top: calc( 50% - 25px )
-        font-family: ProximaNovaBold
-        position: absolute
-        right: 2px
-      &:hover
-        cursor: pointer
+      font-size: 20px !important
+    @include responsive($screen: tablet)
+      font-size: 14px !important
+    @include responsive($screen: desktop)
+      font-size: 14px !important
+    @include responsive($screen: large-desktop)
+      font-size: 20px !important
+  &.focus
+    border-color: $haiti
+    @include responsive($screen: mobile)
+      width: 270px
+    @include responsive($screen: tablet)
+      width: 207px
+    @include responsive($screen: desktop)
+      width: 207px
+    @include responsive($screen: large-desktop)
+      width: 270px
+    .search-box__icon--close
+      opacity: 1
