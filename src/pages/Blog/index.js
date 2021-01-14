@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, createRef } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import parse from 'html-react-parser';
@@ -13,6 +14,7 @@ import LoadDataComponent from '../../components/LoadDataComponent';
 import BlogHeader from '../../components/BlogHeader';
 import Categories from './components/Categories/index';
 import Search from './components/Search/index';
+import LoadingScreen from '../../components/LoadingScreen';
 
 import readTimeCalculator from '../../utils/readTimeCalculator';
 import replaceAllString from '../../utils/replaceAllString';
@@ -25,6 +27,9 @@ import {
   LOADED_STATUS,
   NO_RESULT_STATUS,
   HEADER_DESCRIPTION,
+  ALL_BLOGS,
+  SEARCH_BLOG,
+  FILTER_BLOG,
 } from '../../constant';
 
 import {
@@ -39,6 +44,8 @@ import './index.sass';
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [nextPage, setNextPage] = useState(null);
+  const [typeGet, setTypeGet] = useState(ALL_BLOGS);
+
   const [currentCategory, setCurrentCategory] = useState('all');
   const [listCategory, setListCategory] = useState({});
 
@@ -156,32 +163,77 @@ const Blog = () => {
   };
 
   const handleLoadMoreBlog = () => {
-    getAllBlogs(nextPage)
-      .then((res) => {
-        const { data } = res.data;
-        if (data) {
-          setBlogs([
-            ...blogs,
-            ...[...data.data].sort((a, b) => compareDesc(
-              new Date(a.attributes.created_at),
-              new Date(b.attributes.created_at),
-            )),
-          ]);
-          setNextPage(
-            data.links.next_page_url
-              ? getNextPageFromLink(data.links.next_page_url)
-              : null,
-          );
-        }
-
-        // if (data.data.length) {
-        //   setTimeout(() => setLoadStatus(LOADED_STATUS), 500)
-        // } else setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000)
-      })
-      .catch((err) => {
-        console.log(err);
-        // setTimeout(() => setLoadStatus(NO_RESULT_STATUS), 1000)
-      });
+    switch (typeGet) {
+      case FILTER_BLOG:
+        getListBlogByCategory(currentCategory, nextPage)
+          .then((res) => {
+            const { data } = res.data;
+            if (data) {
+              setBlogs([
+                ...blogs,
+                ...[...data.data].sort((a, b) => compareDesc(
+                  new Date(a.attributes.created_at),
+                  new Date(b.attributes.created_at),
+                )),
+              ]);
+              setNextPage(
+                data.links.next_page_url
+                  ? getNextPageFromLink(data.links.next_page_url)
+                  : null,
+              );
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+        break;
+      case SEARCH_BLOG:
+        searchListBlog(valueSearch, nextPage)
+          .then((res) => {
+            const { data } = res.data;
+            if (data) {
+              setBlogs([
+                ...blogs,
+                ...[...data.data].sort((a, b) => compareDesc(
+                  new Date(a.attributes.created_at),
+                  new Date(b.attributes.created_at),
+                )),
+              ]);
+              setNextPage(
+                data.links.next_page_url
+                  ? getNextPageFromLink(data.links.next_page_url)
+                  : null,
+              );
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+        break;
+      default:
+        getAllBlogs(nextPage)
+          .then((res) => {
+            const { data } = res.data;
+            if (data) {
+              setBlogs([
+                ...blogs,
+                ...[...data.data].sort((a, b) => compareDesc(
+                  new Date(a.attributes.created_at),
+                  new Date(b.attributes.created_at),
+                )),
+              ]);
+              setNextPage(
+                data.links.next_page_url
+                  ? getNextPageFromLink(data.links.next_page_url)
+                  : null,
+              );
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+        break;
+    }
   };
 
   useEffect(() => {
@@ -207,10 +259,13 @@ const Blog = () => {
   const handlePressKeySearch = (e) => {
     if (e.key === 'Enter') {
       setLoadStatus(LOADING_STATUS);
+
       setCurrentCategory('all');
       if (valueSearch !== '') {
+        setTypeGet(SEARCH_BLOG);
         handleCallApiSearchListBlog(valueSearch);
       } else {
+        setTypeGet(ALL_BLOGS);
         handleCallApiGetListBlog();
       }
     }
@@ -218,6 +273,7 @@ const Blog = () => {
 
   const handleClearSearch = () => {
     setLoadStatus(LOADING_STATUS);
+    setTypeGet(ALL_BLOGS);
     setValueSearch('');
     handleCallApiGetListBlog();
   };
@@ -227,6 +283,7 @@ const Blog = () => {
       setCurrentCategory(id);
       setValueSearch('');
       setLoadStatus(LOADING_STATUS);
+      setTypeGet(FILTER_BLOG);
       if (id !== 'all') {
         handleCallApiGetListBlogByCategory(id);
       } else {
@@ -236,145 +293,23 @@ const Blog = () => {
   };
 
   const blogRender = () => blogs && (
-  <div className="row">
-    {blogs.map((blog, index) => {
-      switch (index % 6) {
-        case 0:
-          return (
-            <div key={blog.attributes.title} className="col-md-12">
-              <div className="row blogs__item">
-                <div
-                  className="col-12 col-md-8 d-block"
-                  data-aos="fade-right"
-                >
-                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                    <div
-                      style={{
-                        backgroundImage: `url(${blog.attributes.image})`,
-                      }}
-                      className="blogs__item-image big"
-                    />
-                  </Link>
-                </div>
-                <div className="col-md-4 wide-blog" data-aos="fade-left">
-                  <div className="category d-flex">
-                    <p className="text-uppercase">{blog.type}</p>
-                    <p className="text-uppercase">
-                      {format(
-                        new Date(blog.attributes.created_at),
-                        'MMM d, y',
-                      )}
-                    </p>
-                    <p className="text-uppercase">
-                      {readTimeCalculator(blog.attributes.content)}
-                    </p>
-                  </div>
-                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                    <h4>{blog.attributes.title}</h4>
-                  </Link>
-                  <div className="blog-content">
-                    {parse(
-                      replaceAllString(blog.attributes.content, {
-                        '<div>': '<p>',
-                        '</div>': '</p>',
-                        '<del>': '<em>',
-                        '</del>': '</em>',
-                        '<h1>': '<em>',
-                        '</h1>': '</em>',
-                        '<blockquote>': '<em>',
-                        '</blockquote>': '</em>',
-                        '<pre>': '<em>',
-                        '</pre>': '</em>',
-                        '<ol>': '<em>',
-                        '</ol>': '</em>',
-                        '<li>': '<em>',
-                        '</li>': '</em>',
-                        '<ul>': '<em>',
-                        '</ul>': '</em>',
-                        '<strong>': '<em>',
-                        '</strong>': '</em>',
-                      }),
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        case 1:
-        case 2:
-        case 3:
-          return (
-            <div
-              key={blog.attributes.title}
-              className="col-12 col-md-4"
-              data-aos={aosItemDirection(index)}
-            >
-              <div className="blogs__item">
-                <div className="d-block">
-                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                    <div
-                      style={{
-                        backgroundImage: `url(${blog.attributes.image})`,
-                      }}
-                      className="blogs__item-image"
-                    />
-                  </Link>
-                </div>
-                <div className="d-block">
-                  <div className="category category-vertical-small d-flex">
-                    <p>{blog.type}</p>
-                    <p>
-                      {format(
-                        new Date(blog.attributes.created_at),
-                        'MMM d, y',
-                      )}
-                    </p>
-                    <p>{readTimeCalculator(blog.attributes.content)}</p>
-                  </div>
-                  <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                    <h4 className="small-item-title">
-                      {blog.attributes.title}
-                    </h4>
-                  </Link>
-                  <div className="blog-content">
-                    {parse(
-                      replaceAllString(blog.attributes.content, {
-                        '<div>': '<p>',
-                        '</div>': '</p>',
-                        '<del>': '<em>',
-                        '</del>': '</em>',
-                        '<h1>': '<em>',
-                        '</h1>': '</em>',
-                        '<blockquote>': '<em>',
-                        '</blockquote>': '</em>',
-                        '<pre>': '<em>',
-                        '</pre>': '</em>',
-                        '<ol>': '<em>',
-                        '</ol>': '</em>',
-                        '<li>': '<em>',
-                        '</li>': '</em>',
-                        '<ul>': '<em>',
-                        '</ul>': '</em>',
-                        '<strong>': '<em>',
-                        '</strong>': '</em>',
-                      }),
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        case 4:
-        case 5:
-          return (
-            <div
-              key={blog.attributes.title}
-              className="col-12 col-md-6"
-              data-aos={aosItemDirection(index, 'fade')}
-            >
-              <Link exact to={`/blog/details/${blog.attributes.slug}`}>
-                <div className="blogs__item">
-                  <div className="d-block">
+  <InfiniteScroll
+    dataLength={blogs.length}
+    next={handleLoadMoreBlog}
+    hasMore={!!nextPage}
+    loader={<LoadingScreen />}
+  >
+    <div className="row">
+      {blogs.map((blog, index) => {
+        switch (index % 6) {
+          case 0:
+            return (
+              <div key={blog.attributes.title} className="col-md-12">
+                <div className="row blogs__item">
+                  <div
+                    className="col-12 col-md-8 d-block"
+                    data-aos="fade-right"
+                  >
                     <Link
                       exact
                       to={`/blog/details/${blog.attributes.slug}`}
@@ -383,30 +318,30 @@ const Blog = () => {
                         style={{
                           backgroundImage: `url(${blog.attributes.image})`,
                         }}
-                        className="blogs__item-image"
+                        className="blogs__item-image big"
                       />
                     </Link>
                   </div>
-                  <div className="d-block">
-                    <div className="category category-vertical-big d-flex">
-                      <p>{blog.type}</p>
-                      <p>
+                  <div className="col-md-4 wide-blog" data-aos="fade-left">
+                    <div className="category d-flex">
+                      <p className="text-uppercase">{blog.type}</p>
+                      <p className="text-uppercase">
                         {format(
                           new Date(blog.attributes.created_at),
                           'MMM d, y',
                         )}
                       </p>
-                      <p>{readTimeCalculator(blog.attributes.content)}</p>
+                      <p className="text-uppercase">
+                        {readTimeCalculator(blog.attributes.content)}
+                      </p>
                     </div>
                     <Link
                       exact
                       to={`/blog/details/${blog.attributes.slug}`}
                     >
-                      <h4 className="medium-item-title">
-                        {blog.attributes.title}
-                      </h4>
+                      <h4>{blog.attributes.title}</h4>
                     </Link>
-                    <div className="blog-content medium-item-content">
+                    <div className="blog-content">
                       {parse(
                         replaceAllString(blog.attributes.content, {
                           '<div>': '<p>',
@@ -432,17 +367,159 @@ const Blog = () => {
                     </div>
                   </div>
                 </div>
-              </Link>
-            </div>
-          );
-        default:
-          break;
-      }
-      return <div />;
-    })}
-  </div>
+              </div>
+            );
+          case 1:
+          case 2:
+          case 3:
+            return (
+              <div
+                key={blog.attributes.title}
+                className="col-12 col-md-4"
+                data-aos={aosItemDirection(index)}
+              >
+                <div className="blogs__item">
+                  <div className="d-block">
+                    <Link
+                      exact
+                      to={`/blog/details/${blog.attributes.slug}`}
+                    >
+                      <div
+                        style={{
+                          backgroundImage: `url(${blog.attributes.image})`,
+                        }}
+                        className="blogs__item-image"
+                      />
+                    </Link>
+                  </div>
+                  <div className="d-block">
+                    <div className="category category-vertical-small d-flex">
+                      <p>{blog.type}</p>
+                      <p>
+                        {format(
+                          new Date(blog.attributes.created_at),
+                          'MMM d, y',
+                        )}
+                      </p>
+                      <p>{readTimeCalculator(blog.attributes.content)}</p>
+                    </div>
+                    <Link
+                      exact
+                      to={`/blog/details/${blog.attributes.slug}`}
+                    >
+                      <h4 className="small-item-title">
+                        {blog.attributes.title}
+                      </h4>
+                    </Link>
+                    <div className="blog-content">
+                      {parse(
+                        replaceAllString(blog.attributes.content, {
+                          '<div>': '<p>',
+                          '</div>': '</p>',
+                          '<del>': '<em>',
+                          '</del>': '</em>',
+                          '<h1>': '<em>',
+                          '</h1>': '</em>',
+                          '<blockquote>': '<em>',
+                          '</blockquote>': '</em>',
+                          '<pre>': '<em>',
+                          '</pre>': '</em>',
+                          '<ol>': '<em>',
+                          '</ol>': '</em>',
+                          '<li>': '<em>',
+                          '</li>': '</em>',
+                          '<ul>': '<em>',
+                          '</ul>': '</em>',
+                          '<strong>': '<em>',
+                          '</strong>': '</em>',
+                        }),
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          case 4:
+          case 5:
+            return (
+              <div
+                key={blog.attributes.title}
+                className="col-12 col-md-6"
+                data-aos={aosItemDirection(index, 'fade')}
+              >
+                <Link exact to={`/blog/details/${blog.attributes.slug}`}>
+                  <div className="blogs__item">
+                    <div className="d-block">
+                      <Link
+                        exact
+                        to={`/blog/details/${blog.attributes.slug}`}
+                      >
+                        <div
+                          style={{
+                            backgroundImage: `url(${blog.attributes.image})`,
+                          }}
+                          className="blogs__item-image"
+                        />
+                      </Link>
+                    </div>
+                    <div className="d-block">
+                      <div className="category category-vertical-big d-flex">
+                        <p>{blog.type}</p>
+                        <p>
+                          {format(
+                            new Date(blog.attributes.created_at),
+                            'MMM d, y',
+                          )}
+                        </p>
+                        <p>{readTimeCalculator(blog.attributes.content)}</p>
+                      </div>
+                      <Link
+                        exact
+                        to={`/blog/details/${blog.attributes.slug}`}
+                      >
+                        <h4 className="medium-item-title">
+                          {blog.attributes.title}
+                        </h4>
+                      </Link>
+                      <div className="blog-content medium-item-content">
+                        {parse(
+                          replaceAllString(blog.attributes.content, {
+                            '<div>': '<p>',
+                            '</div>': '</p>',
+                            '<del>': '<em>',
+                            '</del>': '</em>',
+                            '<h1>': '<em>',
+                            '</h1>': '</em>',
+                            '<blockquote>': '<em>',
+                            '</blockquote>': '</em>',
+                            '<pre>': '<em>',
+                            '</pre>': '</em>',
+                            '<ol>': '<em>',
+                            '</ol>': '</em>',
+                            '<li>': '<em>',
+                            '</li>': '</em>',
+                            '<ul>': '<em>',
+                            '</ul>': '</em>',
+                            '<strong>': '<em>',
+                            '</strong>': '</em>',
+                          }),
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            );
+          default:
+            break;
+        }
+        return <div />;
+      })}
+    </div>
+  </InfiniteScroll>
   );
 
+  console.log(nextPage);
   return (
     <section className="blog">
       <Helmet>
@@ -496,11 +573,6 @@ const Blog = () => {
         </section>
         <section className="blogs">
           <LoadDataComponent loadStatus={loadStatus} component={blogRender()} />
-          {nextPage && (
-            <button type="button" onClick={handleLoadMoreBlog}>
-              Test load more
-            </button>
-          )}
         </section>
         <Footer />
       </div>

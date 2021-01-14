@@ -118,7 +118,7 @@ app.use(
 
     axiosInstance
       .get(
-        `${process.env.API_URL}/posts?search=${search}&size=${size}&page${page}`,
+        `${process.env.API_URL}/posts?search=${search}&size=${size}&page=${page}`,
       )
       .then((response) => res.status(200).json({
         data: response.data,
