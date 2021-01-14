@@ -298,6 +298,7 @@ const Blog = () => {
     next={handleLoadMoreBlog}
     hasMore={!!nextPage}
     loader={<LoadingScreen />}
+    initialScrollY={null}
   >
     <div className="row">
       {blogs.map((blog, index) => {
@@ -519,7 +520,6 @@ const Blog = () => {
   </InfiniteScroll>
   );
 
-  console.log(nextPage);
   return (
     <section className="blog">
       <Helmet>
