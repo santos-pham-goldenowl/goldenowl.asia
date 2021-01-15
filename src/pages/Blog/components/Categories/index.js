@@ -86,6 +86,7 @@ const Categories = ({ listCategory, currentCategory, onChange }) => {
                 </div>
               </div>
             </div>
+
             {Object.values(listCategory).map((category) => (
               <div key={category.id} onClick={() => onChange(category.id)}>
                 <div className="categories__category">
