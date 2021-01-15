@@ -6,6 +6,9 @@ import Helmet from 'react-helmet';
 import parse from 'html-react-parser';
 import format from 'date-fns/format';
 import compareDesc from 'date-fns/compareDesc';
+import {
+  FacebookProvider, Comments, Share, Like,
+} from 'react-facebook';
 
 import BreadCrumb from '../../components/BreadCrumb';
 import FixedTopBreadCrumb from '../../components/FixedTopBreadCrumb';
@@ -573,6 +576,15 @@ const Blog = () => {
         </section>
         <section className="blogs">
           <LoadDataComponent loadStatus={loadStatus} component={blogRender()} />
+          <FacebookProvider appId="157910032524691">
+            <Comments href="https://goldenowl.asia/" showFaces />
+            <Like
+              href="https://goldenowl.asia/"
+              colorScheme="dark"
+              showFaces
+              share
+            />
+          </FacebookProvider>
         </section>
         <Footer />
       </div>
