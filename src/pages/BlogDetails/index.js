@@ -4,6 +4,9 @@ import Helmet from 'react-helmet';
 import parse from 'html-react-parser';
 import format from 'date-fns/format';
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
+import {
+  FacebookProvider, Comments, Like, Profile,
+} from 'react-facebook';
 
 import Footer from '../../components/Footer';
 import BlogHeader from '../../components/BlogHeader';
@@ -57,18 +60,12 @@ const BlogDetails = () => {
               content="width=device-width, initial-scale=1"
               name="viewport"
             />
-            <meta
-              content={HEADER_DESCRIPTION}
-              name="description"
-            />
+            <meta content={HEADER_DESCRIPTION} name="description" />
             <meta
               content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native"
               property="og:title"
             />
-            <meta
-              content={HEADER_DESCRIPTION}
-              property="og:description"
-            />
+            <meta content={HEADER_DESCRIPTION} property="og:description" />
             <meta content={companyOgLogo} property="og:image" />
             <meta name="csrf-param" content="authenticity_token" />
             <meta
@@ -91,7 +88,12 @@ const BlogDetails = () => {
                   <div className="blog-details__title">
                     <div className="category d-flex">
                       <p className="text-uppercase">{blog.type}</p>
-                      <p className="text-uppercase">{format(new Date(blog.attributes.created_at), 'MMM d, y')}</p>
+                      <p className="text-uppercase">
+                        {format(
+                          new Date(blog.attributes.created_at),
+                          'MMM d, y',
+                        )}
+                      </p>
                       <p className="text-uppercase">
                         {readTimeCalculator(blog.attributes.content)}
                       </p>
@@ -99,7 +101,12 @@ const BlogDetails = () => {
                     <h1>{blog.attributes.title}</h1>
                   </div>
                   <div className="blog-details__center-content">
-                    {parse(replaceAllString(blog.attributes.content, { '<div>': '<p>', '</div>': '</p>' }))}
+                    {parse(
+                      replaceAllString(blog.attributes.content, {
+                        '<div>': '<p>',
+                        '</div>': '</p>',
+                      }),
+                    )}
                   </div>
                 </div>
                 <div
@@ -145,9 +152,34 @@ const BlogDetails = () => {
             </section>
             <section className="related-blogs">
               <ul className="row">
-                {relatedBlog.map((r) => <RelatedBlog content={r} />)}
+                {relatedBlog.map((r) => (
+                  <RelatedBlog content={r} />
+                ))}
               </ul>
+              <br />
+              <br />
+              <FacebookProvider appId="157910032524691">
+                <Like href={window.location} colorScheme="dark" mobile />
+                <Comments
+                  href={window.location}
+                  showFaces
+                  mobile
+                  orderBy="reverse_time"
+                />
+                <Profile>
+                  {({ loading, profile }) => {
+                    console.log(loading, profile);
+                    return (
+                      <div>
+                        {profile.picture}
+                        {profile.name}
+                      </div>
+                    );
+                  }}
+                </Profile>
+              </FacebookProvider>
             </section>
+
             <Footer />
           </div>
         </section>
