@@ -162,7 +162,6 @@ const BlogDetails = () => {
                   href={window.location}
                   showFaces
                   mobile
-                  orderBy="reverse_time"
                 />
               </FacebookProvider>
             </section>
