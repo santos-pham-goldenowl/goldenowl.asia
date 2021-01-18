@@ -4,9 +4,7 @@ import Helmet from 'react-helmet';
 import parse from 'html-react-parser';
 import format from 'date-fns/format';
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
-import {
-  FacebookProvider, Comments, Like, Profile,
-} from 'react-facebook';
+import { FacebookProvider, Comments, Like } from 'react-facebook';
 
 import Footer from '../../components/Footer';
 import BlogHeader from '../../components/BlogHeader';
@@ -166,17 +164,6 @@ const BlogDetails = () => {
                   mobile
                   orderBy="reverse_time"
                 />
-                <Profile>
-                  {({ loading, profile }) => {
-                    console.log(loading, profile);
-                    return (
-                      <div>
-                        {profile.picture}
-                        {profile.name}
-                      </div>
-                    );
-                  }}
-                </Profile>
               </FacebookProvider>
             </section>
 
