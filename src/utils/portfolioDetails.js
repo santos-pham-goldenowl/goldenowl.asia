@@ -7,7 +7,8 @@ export default {
   Collabs: {
     url: 'collabs',
     cover: pImages.collabsCover,
-    overview: 'Collabs is the platform that allows organizations to discover millions of influencers, create campaigns, communicate, schedule, approve content, execute, pay commissions to several influencers with one click & analyze the results. In short - it tremendously cuts down on overhead, removes the middlemen & executes campaigns more efficiently than ever!',
+    overview:
+      'Collabs is the platform that allows organizations to discover millions of influencers, create campaigns, communicate, schedule, approve content, execute, pay commissions to several influencers with one click & analyze the results. In short - it tremendously cuts down on overhead, removes the middlemen & executes campaigns more efficiently than ever!',
     techs: ['React Native', 'Ruby on Rails'],
     img: [
       { src: pImages.collabs0, col: 12 },
@@ -19,11 +20,7 @@ export default {
       { src: pImages.collabs6, col: 4 },
     ],
     brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          Our effort
-        </h3>
-      ),
+      title: <h3 className="portfolio-details__item-title">Our effort</h3>,
       description:
         'With all the effort, Golden Owl’s team spent days and nights making the project successful. Our client and users do experience and they are all pleased with it.',
     },
@@ -31,7 +28,8 @@ export default {
   'Connect A Job': {
     cover: pImages.connectajobCover,
     url: 'connect-a-job',
-    overview: 'ConnectaJob represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.',
+    overview:
+      'ConnectaJob represents intelligent job management workflows which is one of the emerging trends in this modern world. The platform has been diligently developed and carefully crafted to ensure the right balance of rigour and simplicity. CAJ commits to delivering innovation and excellence in facilities services.',
     techs: ['Angular JS (FE)', 'Ruby on Rails (BE)'],
     img: [
       { src: pImages.connectajob1, col: 4 },
@@ -55,13 +53,15 @@ export default {
           workflow
         </h3>
       ),
-      description: 'Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product.',
+      description:
+        'Connect a Job is proud to be one of the latest trends in job management for recruiters. The developer team has built the platform by all effort and passion, and hope to bring the client the best product.',
     },
   },
   'Find a Wealth Manager': {
     cover: pImages.findAWealthManagerCover,
     url: 'find-a-wealth-manager',
-    overview: 'A platform uses smart technology combined with human expertise to get users direct access to the best professionals from the leading ﬁrms who commit to best practice and better value fees. Golden Owl has helped maintain this site with bug ﬁxing using Ruby on Rails technology.',
+    overview:
+      'A platform uses smart technology combined with human expertise to get users direct access to the best professionals from the leading ﬁrms who commit to best practice and better value fees. Golden Owl has helped maintain this site with bug ﬁxing using Ruby on Rails technology.',
     techs: ['Responsive UI', 'Ruby on Rails'],
     img: [
       { src: pImages.findAWealthManager1, col: 12 },
@@ -121,8 +121,15 @@ export default {
   GIG: {
     cover: pImages.gigCover,
     url: 'gig',
+    customer: {
+      country: 'United Kingdom',
+      program: 'Our top engineers specializing in PHP',
+      timeline: 'Oct 2017 - present',
+      industry: 'Human Resource - HR',
+      website: 'www.gigtogig.co.uk/',
+    },
     overview:
-      "GIG connects job seeker and job provider by posting job and apply to the job; For Provider side, it supports provider's accountant to manage timesheet, invoices. We have helped build this project for years and we are continuing working with client to update features.",
+      'GIG connects part-time job seekers and job providers through job postings and job applications, specializing in Hospitality, Events, Warehousing & Logistics. For the recruiter’s side, GIG supports their accountant to manage timesheet invoices. We have helped build this project for years and we are continuing working with GIG for future maintenance and updates.',
     techs: ['PHP Caravel', 'AWS', 'Responsive UI', 'Cordova'],
     img: [
       { src: pImages.gig1, col: 12 },
@@ -131,19 +138,39 @@ export default {
       { src: pImages.gig4, col: 6 },
       { src: pImages.gig5, col: 12 },
       { src: pImages.gig6, col: 12 },
+      'features',
       { src: pImages.gig7, col: 4 },
       { src: pImages.gig8, col: 4 },
       { src: pImages.gig9, col: 4 },
     ],
-    brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          Perfect assistant
-        </h3>
-      ),
-      description:
-        'GIG provides job seeks as well as recruiters a great portal where they can meet the demand of each other. Having all useful features, this website has brough lots of benefits for both roles.',
-    },
+    // brief: {
+    //   title: (
+    //     <h3 className="portfolio-details__item-title">Perfect assistant</h3>
+    //   ),
+    //   description:
+    //     'GIG provides job seeks as well as recruiters a great portal where they can meet the demand of each other. Having all useful features, this website has brough lots of benefits for both roles.',
+    // },
+    challenges: [
+      'It is not just a search feature for job titles but also an AI adopted search tool to think humanly and match the best gig results with each personal search.',
+      'High volume and wide variety of HR data',
+      'Data security is always a concern of HR activities. As companies and job seekers enter their financial & hiring informations, we need to keep the information safe from potential cyber-theft',
+      'Based on the demand from the client, we have some complex business requirements for the webapp.',
+    ],
+    result: [
+      'Gig is so happy with the outcome that they continue to work with us through their maintaining and updating process until now',
+      'Gig is the largest on demand flexible shift working platform in the UK – providing a fair and transparent platform.',
+      'Gig is now staffing some of the biggest hotel chains in Glasgow and Edinburgh, as well as events such as The Stirling Marathon, Scottish Premier league football games, The Six Nations rugby finals and music events such as Rolling Stones, TRNSMT, Spice Girls, Pink and more!',
+      'More business collaboration opportunities: Recently GIG joined forces with WiHTL, an influential collaborative community of leaders across the Hospitality, Travel and Leisure sector to help people redeploy their redundant staff so that they have the best possible opportunities to continue to work where they are needed.',
+    ],
+    features: [
+      'Candidate profile page: Showcasing not only their work experience and qualifications, but also reviews from employers, favourite providers, as well as the number of shifts they’ve completed.',
+      'GIG Bank - for employees to manage paycheck, what they earned, owed and archived',
+      'Notifications including a streamlined direct messaging system between candidates and gig providers',
+      'The hub - not only a place for searching and filtering shifts but also for checking in on upcoming and even live shifts as well, so the seekers can categorise their confirmed, upcoming, applied for shifts in one place.',
+      'Improved AI algorithms, making it easier to search and apply for the specially wanted gigs',
+      'Seeker Signal - so that the availability of seekers will be known within 24 hours',
+      'Timesheet invoice management for providers',
+    ],
   },
   Mosendo: {
     cover: pImages.mosendoCover,
@@ -172,11 +199,7 @@ export default {
       { src: pImages.mosendo11, col: 12 },
     ],
     brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          High security
-        </h3>
-      ),
+      title: <h3 className="portfolio-details__item-title">High security</h3>,
       description:
         'The priority thing that we focus on when starting the project is the security. We promise to protect our clients’ information by the most up-to-date technology in the app.',
     },
@@ -195,11 +218,7 @@ export default {
       { src: pImages.myWork5, col: 12 },
     ],
     brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          Great journey
-        </h3>
-      ),
+      title: <h3 className="portfolio-details__item-title">Great journey</h3>,
       description:
         'Working with MyWork has been a great journey since we treasure this long-term relationship, especially in this emerging age where technology is expanding at such an accelerating pace.',
     },
@@ -223,12 +242,9 @@ export default {
       { src: pImages.briidge10, col: 12 },
     ],
     brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          Our achievement
-        </h3>
-      ),
-      description: 'Building networking is not an easy task, all members in GOLDEN OWL thought and deliberated with each other about how to build this app usefully. We spend much time and high efforts in building BRIIDGE. And now, we gain success!! We have created the whole IOS, Android app, and admin webpage as well as the whole project which lasts for years. Our clients are satisfied with our product and continue cooperating with us.',
+      title: <h3 className="portfolio-details__item-title">Our achievement</h3>,
+      description:
+        'Building networking is not an easy task, all members in GOLDEN OWL thought and deliberated with each other about how to build this app usefully. We spend much time and high efforts in building BRIIDGE. And now, we gain success!! We have created the whole IOS, Android app, and admin webpage as well as the whole project which lasts for years. Our clients are satisfied with our product and continue cooperating with us.',
     },
   },
   Personifi: {
@@ -263,26 +279,55 @@ export default {
     },
   },
   'Referral Candy': {
+    customer: {
+      country: 'Singapore',
+      program: 'Our top engineers specializing in Ruby on Rails',
+      timeline: '2015',
+      industry: 'Affiliate Marketing',
+    },
     cover: pImages.referralCandyCover,
     url: 'referral-candy',
     overview:
-      "It is a Reward customers system by sharing user's store with their friends, the paid for who they had referred to/ introduce to, increase their advocates by using a promotion program. We have developed it in 2015 in several months and Client is very happy with our work.",
-    techs: ['Online Payment', 'Ruby on Rails'],
+      "ReferralCandy is a system or the refer-a-friend plugin for Shopify stores that grows your e-commerce sales through word-of-mouth marketing. It is also regarded as a customer reward system with functions to share the user's stores with their friends, then getting paid for people they had referred to/ introduced to, and increased their advocates by using a promotion program.",
+    techs: ['Ruby on Rails'],
+    challenges: [
+      'Affiliate Marketing is a new category at that time, we needed to do more research in terms of technology to optimize the functions of the system and meet the requirement of the market.',
+      'According to the demand of our client, this is a complex business model with various functions.',
+      'The system needs to be customized to each customer of ReferralCandy.',
+      'The system needs to handle a large number of users’ accounts.',
+      'Security is always a concern of online business. Because of the characteristics of this industry, users need to register online and the number of online members can get huge to a point where it would be hard to control. Therefore, we need to find a way to minimize the risk of privacy threats.',
+    ],
     img: [
       { src: pImages.referralCandy1, col: 12 },
       { src: pImages.referralCandy2, col: 12 },
       { src: pImages.referralCandy3, col: 12 },
+      'features',
       { src: pImages.referralCandy4, col: 12 },
     ],
-    brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          Marketing success
-        </h3>
-      ),
-      description:
-        'Marketing is a very important step in running a business. The more people know your business, the more money you earn. Therefore, Referral Candy is build to increase the productivity of marketing programs.',
-    },
+    // brief: {
+    //   title: (
+    //     <h3 className="portfolio-details__item-title">Marketing success</h3>
+    //   ),
+    //   description:
+    //     'Marketing is a very important step in running a business. The more people know your business, the more money you earn. Therefore, Referral Candy is build to increase the productivity of marketing programs.',
+    // },
+    features: [
+      'Seamless integration with each Shopify store',
+      'Connection to marketing apps',
+      'Complete automation for referral program',
+      'Data-driven insights reports',
+      'The best brand experience for customers (boost sales, mobile-first experience, easy to use customization, full flexibility for developers (HTML & CSS editing)',
+      'Promotion for referral programs across several marketing channels (email, landing page, newsletters,etc.)',
+      'Access to best-in-class support',
+      'We use technology and build customized Reward options that help users choose from cash rewards, store discounts or custom gifts.',
+      'We create user-friendly designs which help them to connect easily to eCommerce and other marketing platforms.',
+      'We also build a system which allows users to view the analytics and insights like the industry benchmarks and top referrers.',
+    ],
+    result: [
+      'ReferralCandy has been used widely for over 30,000 online stores and counting.',
+      '<b>Nathan Kleiner</b> - CEO of Critical Pass - one of ReferralCandy successful customers showed his happiness with the system and reported that he had been using ReferralCandy for years and it helped his business capitalize on word of mouth referrals. More specifically, Critical Pass’ referral program has generated 24 times ROI, and accounts for 10.42% of revenues and 10.05% of orders.',
+      'Top ReferralCandy’s retailers made 26% more sales from referrals last month.',
+    ],
   },
   'The Work Project': {
     cover: pImages.twpCover,
@@ -305,9 +350,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="portfolio-details__item-title">
-          A helpful platform
-        </h3>
+        <h3 className="portfolio-details__item-title">A helpful platform</h3>
       ),
       description:
         'Some magazines like Forbes, Wallpaper, etc. have complimented THE WORK PROJECT as a popular program for helping and supporting to change and design workplace.',
@@ -316,27 +359,54 @@ export default {
   Bid4Skill: {
     cover: pImages.bid4SkillCover,
     url: 'bid-4-skill',
+    customer: {
+      country: 'Singapore',
+      program: 'Our top engineers specializing in Ruby on Rails and Reactjs',
+      timeline: 'Apr 2017 to Apr 2019',
+      industry: 'Marketplace',
+      website: 'https://www.crunchbase.com/organization/bid4skill',
+    },
     overview:
-      'Among the more than 500 trainers on the platform several specializes in public speaking, providing training to every kind need at a high quality. Especially if you struggle to find any providers who are able or willing to do the exact training you want them to do, Bid4skill might be the training provider you are looking for.',
+      'Bid4skill is a selective network of the best independent experts in the training and coaching industry across North America, Europe, and APAC. A B2B marketing platform for professional learners and training providers to bid and apply for a suitable range of price that matches their requirements and needs. This site is similar to Upwork and could be popular in the future. We have helped build project from scratch using Ruby on Rails and Reactjs.',
     techs: ['Ruby on Rails', 'React JS', 'AWS', 'PostgreSQL'],
     img: [
       { src: pImages.bid4Skill1, col: 12 },
       { src: pImages.bid4Skill2, col: 12 },
+      'features',
       { src: pImages.bid4Skill3, col: 12 },
     ],
-    brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          We have launched the
-          {' '}
-          <br />
-          {' '}
-          project with all passion
-        </h3>
-      ),
-      description:
-        'Golden Owl launched the product, built a transparent workflow and makes updates frequently until it has a big scale. We operated with a high level of efficiency, transparency, responsiveness, attended to client needs and delivered truly sets them apart.',
-    },
+    // brief: {
+    //   title: (
+    //     <h3 className="portfolio-details__item-title">
+    //       We have launched the
+    //       {' '}
+    //       <br />
+    //       {' '}
+    //       project with all passion
+    //     </h3>
+    //   ),
+    //   description:
+    //     'Golden Owl launched the product, built a transparent workflow and makes updates frequently until it has a big scale. We operated with a high level of efficiency, transparency, responsiveness, attended to client needs and delivered truly sets them apart.',
+    // },
+    challenges: [
+      'The platform and services are equipped for businesses and HR professionals to use instantly',
+      'The system needs to handle a large number of users’ accounts and inventories while maintaining a great user experience',
+      'Security is always a concern of online business. Because of the characteristics of this industry, users need to register online and the number of online members can get huge to a point where it would be hard to control. Therefore, we need to find a way to minimize the risk of privacy threats.',
+      'Based on the customer requirement. This is a complex business request',
+    ],
+    features: [
+      'Easy interaction and extension of offers to interested companies.',
+      'A search tool with high customization to save time searching, reach out to only providers that matter, in one go.',
+      'Feature for learners to post a request, bid prices, and the system automatically suggests the 3 most suitable offers for the deal.',
+      'Registration tools for millions of learners, trainers, and coaches online.',
+      'An inventory to store a massive amount of information.',
+      'The best user experience for customers.',
+      'Payments to be made to the trainers instantly',
+    ],
+    result: [
+      'Bid4Skill are disrupting the search process in a 90-Billion-dollar training industry by revamping the search process for new trainers and coaches that Learning & Development (L&D) professionals',
+      'What would typically take 3 weeks for search, Bid4Skill has now brought that process down to just 3 days – making it a platform like no others.',
+    ],
   },
   BrdgePay: {
     cover: pImages.brdgePayCover,
@@ -378,9 +448,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="portfolio-details__item-title">
-          A legal assistant
-        </h3>
+        <h3 className="portfolio-details__item-title">A legal assistant</h3>
       ),
       description:
         'Everything related to the legal field needs a very careful and professional assistant. If you need any advice or legal paperwork, Corpzap is the one you need.',
@@ -481,9 +549,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="portfolio-details__item-title">
-          As a helpful platform
-        </h3>
+        <h3 className="portfolio-details__item-title">As a helpful platform</h3>
       ),
       description:
         'We have built a CMS platform for service providers to manage their customers whenever there is urgent demand from users. HOMEHUB will be an effective with everybody so that it could help them move home easier and comfortably.',
@@ -531,9 +597,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="portfolio-details__item-title">
-          A way to be famous
-        </h3>
+        <h3 className="portfolio-details__item-title">A way to be famous</h3>
       ),
       description:
         'Users’ stories would be more interesting and well-known due to Narratrs. Users now can become more famous and are able to earn money from this platform.',
@@ -614,9 +678,7 @@ export default {
     ],
     brief: {
       title: (
-        <h3 className="portfolio-details__item-title">
-          Open a new world
-        </h3>
+        <h3 className="portfolio-details__item-title">Open a new world</h3>
       ),
       description:
         'Thanks to Open the app, users can talk to each other not only just one but also a group. More ideas and more opinions would be shared widely.',
@@ -625,8 +687,15 @@ export default {
   'The Luxe Nomad': {
     cover: pImages.theLuxeNomadCover,
     url: 'the-luxe-nomad',
+    customer: {
+      country: 'Singapore',
+      program: 'Our top engineers specializing in Ruby on Rails and PostgreSQL',
+      timeline: '2012',
+      industry: 'Hospitality',
+      website: 'https://theluxenomad.com/',
+    },
     overview:
-      "The Luxe Nomad is an Asia-Paciﬁc's leading luxury villa and hotel booking portal where users can book before going on a trip. The site is famous in Malaysia with a lot of users' views per day. My team has built it using Ruby on Rails with a good core of technology.",
+      "The Luxe Nomad is an Asia-Pacific's leading luxury villa and hotel booking portal that offers exclusive deals, travel tips and insider guides for members. In order to meet the demands; using Ruby on Rails and PostgreSQL; we have built a website focusing on the 24/7 segment, boasting a curated list of luxury villas, hotels and resorts to complete any traveller’s dream to escape daily life at anytime and at the best available rates.",
     techs: [
       'Responsive UI',
       'Siteminder',
@@ -638,17 +707,31 @@ export default {
       { src: pImages.theLuxeNomad1, col: 12 },
       { src: pImages.theLuxeNomad2, col: 12 },
       { src: pImages.theLuxeNomad3, col: 12 },
+      'features',
       { src: pImages.theLuxeNomad4, col: 4 },
       { src: pImages.theLuxeNomad5, col: 4 },
       { src: pImages.theLuxeNomad6, col: 4 },
     ],
-    brief: {
-      title: (
-        <h3 className="portfolio-details__item-title">
-          Handful site
-        </h3>
-      ),
-      description: 'The Luxe Nomad is bringing lots of opportunities for travellers to find the most suitable and comfortable accommodation for their vacation. No matter where they go, they will always have the greatest time.',
-    },
+    // brief: {
+    //   title: <h3 className="portfolio-details__item-title">Handful site</h3>,
+    //   description:
+    //     'The Luxe Nomad is bringing lots of opportunities for travellers to find the most suitable and comfortable accommodation for their vacation. No matter where they go, they will always have the greatest time.',
+    // },
+    challenges: [
+      'Storing numerous detailed datas in types of images, texts and icons about each of hundreds of destinations all over Asia Pacific.',
+      'A complex search engine that allows sorting for staying duration, area, number of bedrooms, accommodation type & rates.',
+      'Web UI: Seamless navigation throughout the site despite the huge load of datas & contents.',
+    ],
+    result: [
+      'The Luxe Nomad is now Asia-Pacific’s leading luxury villa booking portal and management company, getting featured in Elle, Bloomberg, Vogue, CNN, Bazaar, Esquire and South China Morning Post. The company has raised about 1.5 million Singapore dollars ($1 million) in three rounds of funding to date, and counts.',
+      'They now have a network of 1,500 properties in 33 destinations around the world - 800 villas and 700 hotels - and four years in business. As of 2019, the Luxe Nomad has a team of nearly 100 and has expanded to include villa management in its repertoire.',
+    ],
+    features: [
+      'Social media log-in into a live chat box - Ensuring potential customers can always communicate their queries with customer service.',
+      'An enquiring form that is linked to the back-end system.',
+      'Impeccable web UI - a smooth, luxury and consistent branding experience.',
+      'A cloud storage for hundreds of hotels & villas inventory in detail.',
+      'A search engine that can filter out destinations that match the requirements of viewers on rates, staying duration, city/area, number of people and bedrooms.',
+    ],
   },
 };
