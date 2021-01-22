@@ -18,7 +18,7 @@ const PortfolioSubPage = ({ content }) => {
   const [prevProject, setPrevProject] = useLocalStorage('prevProject', 'none');
 
   // exclude current & previous
-  const filteredRandomProject = [...randomProjects].filter(
+  const filteredRandomProject = randomProjects.filter(
     (p) => !p.content.includes(content.key) && !p.content.includes(prevProject),
   );
 
