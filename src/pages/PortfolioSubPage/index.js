@@ -163,7 +163,7 @@ const PortfolioSubPage = ({ content }) => {
                 >
                   {content.techs.map((item) => (
                     <li key={item} className="d-flex">
-                      <p>{`${item}`}</p>
+                      <p>{item}</p>
                     </li>
                   ))}
                 </ul>
