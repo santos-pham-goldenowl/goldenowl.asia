@@ -414,7 +414,7 @@ export default {
     ],
     result: [
       'ReferralCandy has been used widely for over 30,000 online stores and counting.',
-      '<b>Nathan Kleiner</b> - CEO of Critical Pass - one of ReferralCandy successful customers showed his happiness with the system and reported that he had been using ReferralCandy for years and it helped his business capitalize on word of mouth referrals. More specifically, Critical Pass’ referral program has generated 24 times ROI, and accounts for 10.42% of revenues and 10.05% of orders.',
+      'Nathan Kleiner - CEO of Critical Pass - one of ReferralCandy successful customers showed his happiness with the system and reported that he had been using ReferralCandy for years and it helped his business capitalize on word of mouth referrals. More specifically, Critical Pass’ referral program has generated 24 times ROI, and accounts for 10.42% of revenues and 10.05% of orders.',
       'Top ReferralCandy’s retailers made 26% more sales from referrals last month.',
     ],
   },

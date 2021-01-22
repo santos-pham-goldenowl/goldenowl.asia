@@ -214,13 +214,13 @@ const PortfolioSubPage = ({ content }) => {
                   className="portfolio-details__item-title"
                   data-aos="fade-right"
                 >
-                  Features
+                  Final results
                 </h3>
                 <ul
                   className="portfolio-details__item-content no-margin-bottom"
                   data-aos="fade-left"
                 >
-                  {content.challenges.map((item) => (
+                  {content.result.map((item) => (
                     <li key={item} className="d-flex">
                       <p>{item}</p>
                     </li>
