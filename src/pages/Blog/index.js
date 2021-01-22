@@ -298,7 +298,7 @@ const Blog = () => {
     next={handleLoadMoreBlog}
     hasMore={!!nextPage}
     loader={<LoadingScreen />}
-    initialScrollY={null}
+    style={{ overflow: 'hidden' }}
   >
     <div className="row">
       {blogs.map((blog, index) => {
