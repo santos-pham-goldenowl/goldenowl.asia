@@ -2,7 +2,9 @@ const fs = require('fs');
 const axiosInstance = require('axios').default;
 
 axiosInstance
-  .get('https://admin-panel-goldenowl.herokuapp.com/api/v1/posts')
+  .get(
+    'https://admin-panel-goldenowl.herokuapp.com/api/v1/posts?size=999999999999999',
+  )
   .then((response) => {
     const listBlog = response.data.data;
 
