@@ -60,32 +60,32 @@ const PortfolioSubPage = ({ content }) => {
         <PortfolioHeader />
         <section className="portfolio-details">
           <h1 data-aos="fade-right">{content.key}</h1>
-          {JSON.stringify(content.customer) !== '{}' && content.customer && (
+          {Object.keys(content.customer).length !== 0 && content.customer && (
             <div className="portfolio-details__customer">
               <p>
                 <span>Client’s Country:</span>
-                {' '}
+                &nbsp;
                 {content.customer.country}
               </p>
               <p>
                 <span>Engineers involved in this program:</span>
-                {' '}
+                &nbsp;
                 {content.customer.program}
               </p>
               <p>
                 <span>Timeline:</span>
-                {' '}
+                &nbsp;
                 {content.customer.timeline}
               </p>
               <p>
                 <span>Industry:</span>
-                {' '}
+                &nbsp;
                 {content.customer.industry}
               </p>
               {content.customer.website && (
                 <p>
                   <span>Website:</span>
-                  {' '}
+                  &nbsp;
                   <a
                     href={content.customer.website}
                     rel="noopener noreferrer"
