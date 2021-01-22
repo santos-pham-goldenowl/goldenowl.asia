@@ -47,7 +47,7 @@ const BlogDetails = () => {
       })
       .catch(() => setTimeout(() => setLoadStatus('no-result'), 500));
   }, [blogSlug]);
-  console.log(blog);
+
   switch (loadStatus) {
     case 'loaded':
       return (

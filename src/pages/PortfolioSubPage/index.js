@@ -149,16 +149,25 @@ const PortfolioSubPage = ({ content }) => {
               >
                 Technologies
               </h3>
-              <ul
-                className="portfolio-details__item-content no-margin-bottom"
-                data-aos="fade-left"
-              >
-                {content.techs.map((item) => (
-                  <li key={item} className="d-flex">
-                    <p>{`${item}`}</p>
-                  </li>
-                ))}
-              </ul>
+              {typeof content.techs === 'string' ? (
+                <p
+                  className="portfolio-details__item-content"
+                  data-aos="fade-left"
+                >
+                  {content.techs}
+                </p>
+              ) : (
+                <ul
+                  className="portfolio-details__item-content no-margin-bottom"
+                  data-aos="fade-left"
+                >
+                  {content.techs.map((item) => (
+                    <li key={item} className="d-flex">
+                      <p>{`${item}`}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
             {content.img.map((image, index) => (
               <Fragment key={`${content.key}${index * -1}`}>
