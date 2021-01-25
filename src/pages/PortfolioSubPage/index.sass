@@ -31,6 +31,22 @@
       font-size: 60px
       padding-bottom: 80px
 
+  &__customer
+    span
+      font-family: ProximaNovaBold
+    @include responsive($screen: mobile)
+      margin-top: -15px
+      padding-bottom: 30px
+    @include responsive($screen: tablet)
+      margin-top: -21px
+      padding-bottom: 42px
+    @include responsive($screen: desktop)
+      margin-top: -28px
+      padding-bottom: 57px
+    @include responsive($screen: large-desktop)
+      margin-top: -40px
+      padding-bottom: 80px
+
   .row
     @include responsive($screen: tablet)
       margin: 0 -10px !important

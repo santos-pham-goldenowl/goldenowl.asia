@@ -53,16 +53,13 @@ const BlogDetails = () => {
       return (
         <section className="blog-details">
           <Helmet>
-            <title />
+            <title>{blog?.attributes?.title || 'Blog - Golden Owl'}</title>
             <meta
               content="width=device-width, initial-scale=1"
               name="viewport"
             />
             <meta content={HEADER_DESCRIPTION} name="description" />
-            <meta
-              content="Golden Owl - Ruby on Rails, NodeJS, ReactJS and React Native"
-              property="og:title"
-            />
+            <meta content={blog?.attributes?.title} property="og:title" />
             <meta content={HEADER_DESCRIPTION} property="og:description" />
             <meta content={companyOgLogo} property="og:image" />
             <meta name="csrf-param" content="authenticity_token" />
@@ -158,11 +155,7 @@ const BlogDetails = () => {
               <br />
               <FacebookProvider appId="157910032524691">
                 <Like href={window.location} colorScheme="dark" mobile />
-                <Comments
-                  href={window.location}
-                  showFaces
-                  mobile
-                />
+                <Comments href={window.location} showFaces mobile />
               </FacebookProvider>
             </section>
 
