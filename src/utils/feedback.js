@@ -15,6 +15,12 @@ const feedback = [
     content: 'Golden Own Consulting Ltd is keen on submitting deliverables on time in order to help the client meet their project goals within the timeframe. They work hard and exhibit skills that ease up the overall process for both parties. The client commends them for their promptness and coding skills.',
   },
   {
+    name: 'Sky Pay',
+    project: 'Co-founder & CTO at BiiB',
+    url: sky,
+    content: 'Golden Owl Consulting was able to fix the sports IT firm’s backend server problems within three months. Their other tasks have also been completed on schedule. The client commends the quality of their work and their ability to communicate well.',
+  },
+  {
     name: 'Jacob Thomas',
     project: 'Director at Delegate Connect',
     url: jacobThomas,
@@ -37,12 +43,6 @@ const feedback = [
     project: 'Senior Marketing Coordinator at The Work Project',
     url: emilyY,
     content: 'The thing that impressed us the most is the level of their involvement in the project. They were communicative and kept us updated. They are really easy to work with, and they’ve guided me as someone with no experience in this arena.',
-  },
-  {
-    name: 'Sky Pay',
-    project: 'Co-founder & CTO at BiiB',
-    url: sky,
-    content: 'Golden Owl Consulting was able to fix the sports IT firm’s backend server problems within three months. Their other tasks have also been completed on schedule. The client commends the quality of their work and their ability to communicate well.',
   },
 ];
 
