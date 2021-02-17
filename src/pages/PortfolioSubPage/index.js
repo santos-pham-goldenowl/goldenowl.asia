@@ -148,7 +148,7 @@ const PortfolioSubPage = ({ content }) => {
                 className="portfolio-details__item-title"
                 data-aos="fade-right"
               >
-                Technologies
+                Technology solutions
               </h3>
               {typeof content.techs === 'string' ? (
                 <p
@@ -193,7 +193,7 @@ const PortfolioSubPage = ({ content }) => {
                       className="portfolio-details__item-title"
                       data-aos="fade-right"
                     >
-                      Features
+                      Core features
                     </h3>
                     <ul
                       className="portfolio-details__item-content no-margin-bottom"
